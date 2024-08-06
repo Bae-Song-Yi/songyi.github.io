@@ -1,0 +1,947 @@
+.Wrap{
+    /* background: #F6F1ED; */
+    background: #F6F1ED;
+}
+
+.Wrap::before{
+    content: '';
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #F6F1ED url(../img/login_bg.png)no-repeat center;
+    background-size: cover;
+}
+
+.container{
+    margin: auto;
+}
+
+.container article{
+    padding: 0 6.25%;
+    position: relative;
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.text-wrap{
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.text-wrap h6{
+    color: #222;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.48px;
+    margin-bottom: 4px;
+}
+
+.text-wrap h3{
+    color: #222;
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 56px;
+    letter-spacing: -0.96px;
+}
+
+.text-wrap p{
+    color: #222;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: -0.48px;
+    margin-top: 16px;
+}
+
+.text-wrap .qr-code{
+    margin-top: 80px;
+}
+
+.text-wrap .qr-code img{
+    width: 100px;
+}
+
+.text-wrap .qr-code span{
+    color: #222;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: -0.32px;
+    display: block;
+    margin-top: 16px;
+}
+
+.right-area{
+    max-width: 480px;
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    right: 110px;
+}
+
+/*로그인*/
+.cafe-login{
+    background: #F6F1ED url(../img/login_bg.png)no-repeat center;
+    background-size: cover;
+}
+
+.cafe-login .right-area{
+    height: 100%;
+    padding: 0 20px;
+}
+
+.cafe-login form{
+    padding-top: 40px;
+}
+
+.cafe-login legend {
+    margin-bottom: 32px;
+}
+
+.cafe-login legend span{
+    color: #F76E33;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: -0.4px;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.cafe-login legend b{
+    color: #222;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 44px;
+    letter-spacing: -0.72px;
+    display: block;
+}
+
+.cafe-login fieldset{
+    width: 100%;
+}
+
+.cafe-login fieldset input{
+    width: 100%;
+    border: 1px solid #DDD;
+    height: 56px;
+    padding: 10px 16px 10px 46px;
+    font-family: Pretendard;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.32px;
+    background: url(../img/icon_email.png)no-repeat 16px center;
+    background-size: 24px;
+}
+
+.cafe-login fieldset input::placeholder{
+    color: #AAA;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.cafe-login fieldset input.email{
+    border-radius: 6px 6px 0px 0px;
+}
+
+.cafe-login fieldset input.pwd{
+    border-radius: 0 0 6px 6px;
+    border-top: none;
+}
+
+.cafe-login button{
+    border-radius: 6px;
+    background: #F76E33;
+    height: 56px;
+    padding: 10px;
+    color: #FFF;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 24px;
+    letter-spacing: -0.36px;
+    border: none;
+    width: 100%;
+    margin-top: 24px;
+}
+
+.cafe-login .checkbox{
+    width: 100%;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cafe-login .checkbox input{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    border: 1px solid #DDD;
+    cursor: pointer;
+}
+
+.cafe-login .checkbox input:checked{
+    background: #F76E33 url(../img/icon_check_wt.png) no-repeat center;
+    background-size: 24px;
+    border: 1px solid #F76E33;
+}
+
+.cafe-login .checkbox label{
+    color: #222;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: -0.28px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.cafe-login .cafe-noti{
+    margin-top: 56px;
+    border-radius: 6px;
+    background: linear-gradient(0deg, #F8F6EF 0%, #F8F6EF 100%), linear-gradient(0deg, #F8F0EF 0%, #F8F0EF 100%), linear-gradient(0deg, #F9F3F1 0%, #F9F3F1 100%), linear-gradient(0deg, #F3E6E4 0%, #F3E6E4 100%), linear-gradient(0deg, #FCF2EE 0%, #FCF2EE 100%), #FFFBF9;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cafe-login .cafe-noti .icon{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    background: #fff url(../img/icon_noti.png) no-repeat center;
+    background-size: 12px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.cafe-login .cafe-noti .txt{
+    color: #A9A5A4;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: -0.28px;
+}
+
+.cafe-login .cafe-noti .txt i{
+    color: #333;
+}
+
+.cafe-login .cafe-noti li{
+    text-indent: -34px;
+    padding-left: 34px;
+}
+
+
+.cafe-login .contactus-txt{
+    color: #AAA;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: -0.26px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    width: calc(100% - 40px);
+    width: -webkit-calc(100% - 40px);
+    width: -moz-calc(100% - 40px);
+    width: -o-calc(100% - 40px);
+}
+
+/*예약하기*/
+
+.cafe-reservation article{
+    position: relative;
+}
+
+.cafe-reservation .top-area{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px 12px;
+    border-bottom: 1px solid #EEE;
+    background: #FFF;
+}
+
+.cafe-reservation .top-area .tit{
+    color: #222;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: -0.4px;
+    padding: 14px 0;
+}
+
+.cafe-reservation .top-area img{
+    width: 24px;
+}
+
+.cafe-reservation .apply-wrap{
+    position: fixed;
+    bottom: 0;
+    max-width: 480px;
+    width: 100%;
+    padding: 0 20px 0;
+    margin-bottom: 16px;
+    border-top: 1px solid #EEE;
+    background: #FFF;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.06);
+}
+
+.cafe-reservation .ctrl-month{
+    text-align: center;
+}
+
+.cafe-reservation .ctrl-month span{
+    cursor: pointer;
+    color: #222;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -0.36px;
+}
+
+.cafe-reservation .ctrl-month img{
+    width: 24px;
+}
+
+.cafe-reservation .ctrl-month .prev{
+    padding-right: 8px;
+}
+
+.cafe-reservation .ctrl-month .next{
+    padding-left: 8px;
+}
+
+.cafe-reservation .tab{
+    border-radius: 6px;
+    background: #F2F2F2;
+    padding: 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 14px 0 12px;
+}
+
+.cafe-reservation .tab li{
+    width: 33.3%;
+}
+
+.cafe-reservation .tab a{
+    display: block;
+    border-radius: 4px;
+    padding: 0px 20px;
+    color: #AAA;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.32px;
+    line-height: 38px;
+}
+
+.cafe-reservation .tab a.on{
+    color: #222;
+    border: 1px solid #DDD;
+    background: #FFF;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.10);
+}
+
+.cafe-reservation .lunch-order .day-wrap{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 6px;
+    border: 1px solid #DDD;
+    margin-bottom: 12px;
+    position: relative;
+    padding: 10px 0;
+    height: 44px;
+    cursor: pointer;
+}
+
+.cafe-reservation .lunch-order .day-wrap.on{
+    border: 1px solid #222;
+}
+
+.cafe-reservation .lunch-order .day-wrap span{
+    display: block;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    white-space: wrap;
+    text-overflow: ellipsis;
+    padding: 0 16px;
+    background: url(../img/icon_down.png)no-repeat right center;
+    background-size: 16px;
+    background-position-x: calc(100% - 18px);
+    background-position-x: -webkit-calc(100% - 18px);
+    background-position-x: -moz-calc(100% - 18px);
+    background-position-x: -o-calc(100% - 18px);
+    height: 100%;
+}
+
+.cafe-reservation .lunch-order .day-wrap b{
+    font-weight: 500;
+}
+
+.cafe-reservation .lunch-order .day-wrap i{
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.cafe-reservation .lunch-order .calendar-btn{
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.cafe-reservation .lunch-order .calendar-btn.on{
+    background: #F2F2F2;
+    mix-blend-mode: darken;
+}
+
+.cafe-reservation .lunch-order .calendar-btn img{
+    width: 24px;
+}
+
+.cafe-reservation .calendar th{
+    color: #222;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.28px;
+}
+
+.cafe-reservation .calendar .week span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    height: 48px;
+    border-bottom: 1px solid #eee;
+}
+
+.cafe-reservation .calendar td{
+    color: #222;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: -0.32px;
+    height: 48px;
+    padding: 3px 0;
+    text-align: center;
+}
+
+.cafe-reservation .calendar td span{
+    display: block;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    border-radius: 100%;
+    cursor: pointer;
+    text-align: center;
+    margin: auto;
+}
+
+.cafe-reservation .calendar td.other-month,
+.cafe-reservation .calendar td.sat,
+.cafe-reservation .calendar td.sun{
+    color: #CCC;
+    background: #fff!important;
+}
+
+.cafe-reservation .calendar td.next-month{
+    color: #CCC;
+}
+
+.cafe-reservation .calendar td.sat,
+.cafe-reservation .calendar td.sun{
+     pointer-events: none;
+}
+
+.cafe-reservation .calendar td.other-month span,
+.cafe-reservation .calendar td.sat span,
+.cafe-reservation .calendar td.sun span{
+    background: #fff!important;
+    color: #CCC!important;
+}
+
+.cafe-reservation .calendar td.sun img{
+    width: 24px;
+}
+
+.cafe-reservation .calendar td.on{
+    position: relative;
+}
+
+.cafe-reservation .calendar td.on span{
+    background: #F76E33;
+    color: #fff;
+}
+
+.cafe-reservation .calendar td.today span{
+    position: relative;
+    border: 1px solid #F76E33;
+}
+
+.cafe-reservation .calendar td.today.on span{
+    background: #F76E33;
+    color: #fff;;
+}
+
+.cafe-reservation .calendar .one-week td span{
+    width: 100%;
+    border-radius: 0;
+    border: none;
+}
+
+.cafe-reservation .calendar .one-week td.on span{
+    background: #F89569;
+}
+
+.cafe-reservation .calendar td.on span::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 90%;
+    z-index: -1;
+}
+
+.cafe-reservation .calendar td.first,
+.cafe-reservation .calendar td.last{
+    background: transparent!important;
+}
+
+.cafe-reservation .calendar .one-week td.first.on span,
+.cafe-reservation .calendar .one-week td.last.on span{
+    border-radius: 100%;
+    width: 48px;
+    background: #F76E33;
+}
+
+.cafe-reservation .calendar td.first span::after{
+    background: #F89569;
+    border-radius: 50px 0 0 50px;
+    left: 6px;
+    height: 48px;
+}
+
+.cafe-reservation .calendar td.last span::after{
+    background: #F89569;
+    border-radius: 0 50px 50px 0;
+    left: auto;
+    right: 6px;
+    height: 48px;
+}
+
+
+.cafe-reservation .calendar td .day-month{
+    display: none;
+}
+
+.cafe-reservation .lunch-order span{
+    color: #222;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: -0.32px;
+}
+
+.cafe-reservation .lunch-order span i::after{
+    content: ',';
+    margin-right: 4px;
+}
+
+.cafe-reservation .lunch-order span i:last-child::after{
+    display: none;
+}
+
+.cafe-reservation .lunch-order .menu{
+    margin: 12px  0 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cafe-reservation .lunch-order .menu li{
+    margin-right: 2.3%;
+}
+
+.cafe-reservation .lunch-order .menu li:last-child{
+    margin-right: 0;
+}
+
+.cafe-reservation .lunch-order .menu .rice,
+.cafe-reservation .lunch-order .menu .salad{
+    width: 26%;
+}
+
+.cafe-reservation .lunch-order .menu .sandwich{
+    width: 43.3%;
+}
+
+.cafe-reservation .lunch-order .menu a{
+    display: block;
+    width: 100%;
+    color: #222;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.32px;
+    border-radius: 6px;
+    border: 1px solid #CCC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 52px;
+}
+
+.cafe-reservation .lunch-order .menu a.on{
+    border: 1px solid #F76E33;
+    background: #FCF2EE;
+    color: #F76E33;
+    font-weight: 700;
+}
+
+.cafe-reservation .lunch-order .menu li:last-child a{
+    margin-right: 0;
+}
+
+.cafe-reservation .apply-menu-detail{
+    margin-top: 20px;
+    color: #888;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -0.32px;
+    border-radius: 6px;
+    position: relative;
+    text-align: center;
+}
+
+.cafe-reservation .apply-menu-detail b{
+    display: block;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.cafe-reservation .apply-menu-detail img{
+    width: calc(100% - 40px);
+    width: -webkit-calc(100% - 40px);
+    width: -moz-calc(100% - 40px);
+    width: -o-calc(100% - 40px);
+}
+
+.cafe-reservation .apply-menu-detail div{
+    height: 100%;
+    position: relative;
+}
+
+.cafe-reservation .apply-menu-detail div::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 8px;
+    background: #F2F2F2;
+}
+
+.cafe-reservation .apply-menu-detail div:last-child::after{
+    display: none;
+}
+
+.cafe-reservation .apply-menu-detail .menu-check{
+    position: absolute;
+    right: 50px;
+    top: 0;
+    width: 44px;
+}
+
+.cafe-reservation .apply-menu-detail .menu-check.mon{
+    transform: translateY(80px);
+}
+
+.cafe-reservation .apply-menu-detail .menu-check.tue{
+    transform: translateY(180px);
+}
+
+.cafe-reservation .apply-menu-detail .menu-check.wed{
+    transform: translateY(280px);
+}
+
+.cafe-reservation .apply-menu-detail .menu-check.thu{
+    transform: translateY(370px);
+}
+
+.cafe-reservation .apply-menu-detail .menu-check.fri{
+    transform: translateY(460px);
+}
+
+.cafe-reservation .lunch-order .apply-btn{
+    border-radius: 6px;
+    background: #DDD;
+    color: #FFF;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 24px;
+    letter-spacing: -0.36px;
+    width: 100%;
+    height: 52px;
+    padding: 0px 20px;
+    border: none;
+}
+
+.cafe-reservation .lunch-order .apply-btn.on{
+    background: #F76E33;
+}
+
+.cafe-reservation .bottom-menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #EEE;
+    position: fixed;
+    max-width: 480px;
+    width: 100%;
+    bottom: 0;
+    background: #fff;
+    z-index: 1;
+    padding-top: 8.5px;
+}
+
+.cafe-reservation .bottom-menu a{
+    width: 33.3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cafe-reservation .bottom-menu .img{
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.cafe-reservation .bottom-menu .img.regi{
+    background-image: url(../img/icon_bottom_m1.png);
+}
+
+.cafe-reservation .bottom-menu .img.list{
+    background-image: url(../img/icon_bottom_m2.png);
+}
+
+.cafe-reservation .bottom-menu .img.state{
+    background-image: url(../img/icon_bottom_m3.png);
+}
+
+.cafe-reservation .bottom-menu a.on .img.regi{
+    background-image: url(../img/icon_bottom_m1_on.png);
+}
+
+.cafe-reservation .bottom-menu a.on .img.list{
+    background-image: url(../img/icon_bottom_m2_on.png);
+}
+
+.cafe-reservation .bottom-menu a.on .img.state{
+    background-image: url(../img/icon_bottom_m3_on.png);
+}
+
+
+.cafe-reservation .bottom-menu span{
+    color: #767676;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 15px;
+    letter-spacing: -0.33px;
+    padding-bottom: 4.67px;
+}
+
+.cafe-reservation .bottom-menu a.on span{
+    color: #222;
+}
+
+/*캘린더 팝업*/
+.calendar-popup{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.calendar-popup .calendar-data{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    max-width: 480px;
+    width: 89.4%;
+    border-radius: 6px;
+}
+
+.calendar-popup .calendar{
+    padding: 14px 20px 0;
+}
+
+.calendar-popup .btns{
+    margin-top: 16px;
+    border-top: 1px solid #DDD;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.calendar-popup .btns a{
+    width: 100px;
+    text-align: center;
+    color: #888;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.32px;
+    padding: 17.5px 0;
+    border-right: 1px solid #eee;
+}
+
+.calendar-popup .btns button{
+    width: calc(100% - 100px);
+    width: -webkit-calc(100% - 100px);
+    width: -moz-calc(100% - 100px);
+    width: -o-calc(100% - 100px);
+    color: #222;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.32px;
+    border: none;
+    background: none;
+    padding: 17.5px 0;
+}
+
+/* ------- */
+
+/* @media all and (max-width: 1280px){
+    .cafe-login{
+        background: url(../img/login_bg_tablet.png)no-repeat center;
+        background-size: cover;
+    }
+
+    .cafe-login .text-wrap{
+        display: none;
+    }
+
+    .cafe-login .right-area{
+        margin: auto;
+    }
+} */
+
+@media all and (max-width: 1000px){
+    .container article{
+        justify-content: center;
+        padding: 0;
+    }
+
+    .text-wrap{
+        display: none;
+    }
+
+    .right-area{
+        position: static;
+    }
+
+    .cafe-reservation .apply-wrap{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .cafe-reservation .bottom-menu{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
