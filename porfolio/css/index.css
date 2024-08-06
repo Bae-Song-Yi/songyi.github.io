@@ -296,6 +296,11 @@ header h1 a{
     transition: all 0.5s;
     font-weight: 500;
     letter-spacing: 0.1em;
+    margin-bottom: 30px;
+}
+
+.work-sec .review:last-child{
+    margin-bottom: 0;
 }
 
 .work-sec .review img{   
@@ -409,6 +414,7 @@ header h1 a{
     top: 0;
     height: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 500px;
@@ -706,16 +712,24 @@ header h1 a{
     }
 
     .work-sec .list li .review-area {
-        top: auto;
-        bottom: 18px;
         height: auto;
         width: auto;
+        position: static;
+        flex-direction: row;
+        margin-bottom: 0;
+        margin-top: 40px;
+        justify-content: space-between;
     }
 
     .work-sec .review{
         font-size: 16px;
-        width: auto;
-        right: 20px;
+        width: 100%;
+        margin-bottom: 0;
+        margin-right: 20px;
+    }
+
+    .work-sec .review:last-child{
+        margin-right: 0;
     }
 
     .work-sec .review img{
@@ -756,14 +770,9 @@ header h1 a{
         width: 150px;
     }
 
-
-
-
-
-
-
-
-
+    .cursor .img-wrap{
+        display: none;
+    }
 
     
 }
