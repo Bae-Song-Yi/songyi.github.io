@@ -171,12 +171,16 @@ ul > li:before {
     }
     
     h1 {
-      font-size: 3rem;
+      font-size: 2rem;
     }
 
     h4 {
         font-size: 1.5rem;
     }
+
+  section{
+    padding: 0 1.1rem;
+  }
 
     .big-paragraph {
         font-size: 1.5rem;
