@@ -1,0 +1,489 @@
+/*Header*/
+header{
+    padding: 0 48px;
+    position: relative;
+    z-index: 2;
+}
+
+header .gnb{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 48px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+header h1 img{
+    width: 100px;
+}
+
+header .util a{
+    display: inline-block;
+    color: #222;
+    font-family: Noto Sans KR;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.26px;
+    margin-left: 24px;
+}
+
+header .util .search img{
+    width: 24px;
+}
+
+header .lnb{
+    position: fixed;
+    left: 0;
+    padding-left: 48px;
+    margin-top: 70px;
+    /* width: 8.07vw; */
+}
+
+header .lnb a{
+    display: block;
+    color: #222;
+    font-family: Inter;
+    font-size: 32px;
+    /* font-size: 3.2rem; */
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.96px;
+    margin-bottom: 4px;
+}
+
+.main{
+    position: relative;
+    margin-top: 24px;
+    z-index: 1;
+}
+
+.main > section{
+    padding-top: 120px;
+    position: relative;
+}
+
+.main article{
+    margin-left: 10.4%;
+    padding-left: 152px;
+    padding-right: 48px;
+}
+
+.main article .title{
+    color: #222;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.96px;
+    margin-bottom: 24px;
+    position: relative
+}
+
+.main article .more{
+    position: absolute;
+    right: 48px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #222;
+    text-align: right;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.48px;
+    padding-right: 16px;
+    background: url(../img/icon_right.png) no-repeat right center;
+    background-size: 12px;
+}
+
+.intro-poster{
+    padding-top: 0!important;
+    padding-bottom: 100px;
+    position: relative;
+}
+
+.intro-poster::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(255, 242, 130, 0.00) 0%, #FFF282 87.5%);
+    z-index: -1;
+}
+
+.intro-poster article{
+    height: 100%;
+}
+
+.intro-poster article > div{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.intro-poster .poster-wrap{
+    width: 28.87%;
+    margin-left: 1.6%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.intro-poster .poster-wrap.left{
+    width: 39%;
+    margin-left: 0;
+    height: 100%;
+}
+
+.intro-poster .poster{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    padding: 2.084vw;
+}
+
+.intro-poster .poster::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    background: #000;
+}
+
+.intro-poster .poster .title{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 1.5vw;
+    font-weight: 700;
+    line-height: 34px;
+    letter-spacing: -0.84px;
+    position: relative;
+    z-index: 1;
+    display: block;
+}
+
+.intro-poster .poster .name{
+    color: #FFF;
+    font-family: Noto Sans KR;
+    font-size: 0.834vw;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: -0.48px;
+    position: relative;
+    z-index: 1;
+    display: block;
+}
+
+.intro-poster .poster-wrap.left .poster{
+    height: 100%;
+}
+
+.intro-poster .poster-wrap.center .poster:first-child{
+    height: 63.46%;
+}
+
+.intro-poster .poster-wrap.center .poster:last-child{
+    height: calc(100% - 63.46% - 24px);
+    height: -webkit-calc(100% - 63.46% - 24px);
+    height: -moz-calc(100% - 63.46% - 24px);
+    height: -o-calc(100% - 63.46% - 24px);
+
+}
+
+.intro-poster .poster-wrap.right .poster:first-child{
+    height: calc(100% - 63.46% - 24px);
+    height: -webkit-calc(100% - 63.46% - 24px);
+    height: -moz-calc(100% - 63.46% - 24px);
+    height: -o-calc(100% - 63.46% - 24px);
+}
+
+.intro-poster .poster-wrap.right .poster:last-child{
+    height: 63.46%;
+}
+
+/*진행중인 전시*/
+.now-exhibition {
+    position: relative;
+    padding-bottom: 120px;
+}
+
+.now-exhibition ul{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: baseline;
+}
+
+.now-exhibition li{
+    width: 49.1%;
+    margin-right: 1.8%;
+}
+
+.now-exhibition li:last-child{
+    margin-right: 0;
+}
+
+.now-exhibition li .thumb{
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+    padding: 24px;
+}
+
+.now-exhibition .thumb .date{
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 36px;
+    padding: 0px 14px 1px 14px;
+    background: #111;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.48px;
+}
+
+.now-exhibition .thumb .type{
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 36px;
+    padding: 0px 14px 1px 14px;
+    color: #222;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.48px;
+    border: 1.6px solid #222;
+}
+
+.now-exhibition .thumb .type.fair{
+    background: #fff;
+}
+
+.now-exhibition .thumb .type.exhibition{
+    background: #FFF382;;
+}
+
+.now-exhibition li .name{
+    display: block;
+    color: #222;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.72px;
+    margin-top: 24px;
+}
+
+.now-exhibition li p{
+    color: #777;
+    font-size: 16px;
+    line-height: normal;
+    letter-spacing: -0.48px;
+    margin-top: 4px;
+}
+
+/*이달의 큐레이션*/
+.curation{
+    padding-bottom: 100px;
+}
+
+/*눈길이 가는 작품*/
+.work{
+    padding-bottom: 120px;
+}
+
+.work ul{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.work li{
+    width: 23.6%;
+    margin-right: 1.8%;
+}
+
+.work li:last-child{
+    margin-right: 0;
+}
+
+.work li .img{
+    padding: 32px;
+    border-radius: 10px;
+    background: #F8F8F8;
+    height: 361px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.work li .img img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.work li .writer{
+    display: block;
+    color: #222;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -0.48px;
+    margin-top: 16px;
+}
+
+.work li .text{
+    color: #AAA;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -0.48px;
+    display: block;
+}
+
+.work li .price{
+    color: #222;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -0.54px;
+    display: block;
+    margin-top: 8px;
+}
+
+/*주목할 아티스트*/
+.artist{
+    height: 100vh;
+    padding-bottom: 140px;
+    background: linear-gradient(180deg, rgba(255, 242, 130, 0.00) 0%, #FFF282 32.8%);
+}
+
+.artist article{
+    position: relative;
+    height: 100%;
+}
+
+.artist ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.artist .bubble{
+    /* position: absolute; */
+    width: 216px;
+    height: 216px;
+    border-radius: 100%;
+    background: #3498db;
+}
+
+.artist .bubble img{
+    width: 100%;
+}
+
+/*알립니다*/
+.notice{
+    padding-bottom: 140px;
+}
+
+.notice table{
+    border-top: 1px solid #333;
+}
+
+.notice table td{
+    padding: 20px 0;
+    border-bottom: 1px solid #DDD;
+    text-align: left;
+}
+
+.notice table td span{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.notice .noti-type span{
+    color: #777;
+    font-family: Noto Sans KR;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.54px;
+}
+
+.notice .noti-tit span{
+    color: #222;
+    font-family: Noto Sans KR;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.54px;
+}
+
+.notice .noti-tit i.fix{
+    display: inline-block;
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    background: #FFF382;
+    border: 1px solid #222;
+    margin-right: 8px;
+}
+
+.notice .noti-tit a{
+    display: inline-block;
+    vertical-align: middle;
+    width: 97%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.notice .noti-date span{
+    color: #222;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.54px;
+}
+
+.notice table tr:hover span{
+    background: #EEE;
+}
+
+.notice table tr:hover .noti-date span{
+    background-image: url(../img/icon_arrow.png);
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-position-y: center;
+    background-position-x: calc(100% - 2px);
+    background-position-x: -webkit-calc(100% - 2px);
+    background-position-x: -moz-calc(100% - 2px);
+    background-position-x: -o-calc(100% - 2px);
+}
+
+

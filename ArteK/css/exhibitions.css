@@ -1,0 +1,2174 @@
+
+/* Exhibitions(Common) */
+.exhibitions .left-wrap{
+    width: 24.57%;
+    margin-right: 9.3%;
+}
+
+.exhibitions .right-wrap{
+    width: calc(100% - 33.87%);
+    width: -webkit-calc(100% - 33.87%);
+    width: -moz-calc(100% - 33.87%);
+    width: -o-calc(100% - 33.87%);
+}
+
+.exhibitions .exhibition-tab{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 50px;
+    width: 100%;
+    padding: 10px 48px;
+}
+
+.exhibitions .exhibition-tab.fix{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 73.4px;
+    margin: 0;
+    background: rgba(255, 255, 255, 0.80);
+    z-index: 3;
+}
+
+.exhibitions .exhibition-tab a{
+    border-radius: 8px;
+    background: var(--color-gray-ddd);
+    padding: 0px 16px;
+    color: var(--color-gray-888);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    margin-right: 8px;
+    transition: all 0.3s;
+}
+
+.exhibitions .exhibition-tab a:last-child{
+    margin-right: 0;
+}
+
+.exhibitions .exhibition-tab a.on{
+    background: var(--color-default);
+    color: var(--color-white);
+    font-weight: 700;
+}
+
+.exhibitions .exhibition-tab a:not(.on):hover{
+    background: var(--color-gray-aaa);
+    color: var(--color-gray-444);
+}
+
+.exhibitions .top-poster{
+    position: relative;
+    padding-bottom: 20px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.exhibitions .top-poster ul{
+    display: flex;
+    align-items: center;
+    max-width: 1920px;
+    width: 100%;
+    margin: auto;
+    padding: 0 48px;
+    height: 620px;
+}
+
+.exhibitions .top-poster li{
+    width: auto;
+    height: 100%;
+    margin-right: 8px;
+    border-radius: 4px;
+}
+
+.exhibitions .top-poster li a{
+    display: block;
+    height: 100%;
+}
+
+.exhibitions .top-poster img{
+    height: 100%;
+}
+
+.exhibitions .top-poster .cursor{
+    width: 72px;
+    height: 72px;
+    border-radius: 100%;
+    background: rgba(34, 34, 34, 0.80);
+    color: var(--color-white);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: -0.36px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    z-index: 1;
+}
+
+.exhibitions .top-poster ul:hover + .cursor{
+    display: flex;
+}
+
+.exhibitions .top-poster .custom-scrollbar{
+    top: auto;
+    bottom: 0;
+    background: var(--color-gray-f2f2f2);
+}
+
+.exhibitions .top-poster .swiper-pagination-progressbar-fill{
+    background: var(--color-gray-444);
+}
+
+/* List Paging */
+.exhibitions .list-paging{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.exhibitions .list-paging div{
+    display: flex;
+    align-items: center;
+}
+
+.exhibitions .list-paging div:last-child img{
+    transform: rotate(180deg);
+}
+
+.exhibitions .list-paging .arrow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: 1px solid var(--color-gray-ddd);
+    margin-right: 8px;
+}
+
+.exhibitions .list-paging .arrow img{
+    width: 12px;
+}
+
+.exhibitions .list-paging ul{
+    margin: 0 32px 0 26px;
+    display: flex;
+    align-items: center;
+}
+
+.exhibitions .list-paging li a{
+    color: var(--color-default);
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.32px;
+    display: block;
+    margin-right: 32px;
+}
+
+.exhibitions .list-paging li:last-child a{
+    margin-right: 0;
+}
+
+.exhibitions .list-paging li a.on{
+    font-weight: 700;
+    border-bottom: 2px solid var(--color-default);
+}
+
+/* Exhibitions > Overview > overview  */
+.overview-sec article{
+    margin-bottom: 120px;
+}
+
+.overview-sec article{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    flex-wrap: wrap;
+}
+
+.overview-sec .exhibition-info .name{
+    display: block;
+    color: var(--color-default);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 52px;
+    letter-spacing: -0.8px;
+    margin-bottom: 20px;
+}
+
+.overview-sec .exhibition-info .state{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.32px;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 3px;
+}
+
+.overview-sec .exhibition-info .state.ongoing{
+    color: #3760C0;
+}
+
+.overview-sec .exhibition-info dl{
+    margin-top: 48px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.overview-sec .exhibition-info dt{
+    color: var(--color-gray-aaa);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -0.32px;
+    margin-bottom: 6px;
+}
+
+.overview-sec .exhibition-info dd{
+    color: var(--color-gray-444);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.32px;
+    width: calc(100% - 32px);
+    width: -webkit-calc(100% - 32px);
+    width: -moz-calc(100% - 32px);
+    width: -o-calc(100% - 32px);
+    padding-left: 24px;
+    margin-bottom: 6px;
+}
+
+.overview-sec .right-wrap .exhibition-tab{
+    margin: 40px 0 60px;
+}
+
+.overview-sec .text-wrap p{
+    color: var(--color-default);
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: -0.36px;
+}
+
+.overview-sec .exhibition-inner-slide{
+    margin: 40px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.overview-sec .exhibition-inner-slide img{
+    width: 100%;
+}
+
+.overview-sec .exhibition-inner-slide .paging{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-top: 8px;
+    color: var(--color-gray-ccc);
+    font-size: 32px;
+    line-height: 44px;
+    letter-spacing: -0.64px;
+}
+
+.overview-sec .exhibition-inner-slide .paging .swiper-pagination-current{
+    color: var(--color-default);
+}
+
+.overview-sec .exhibition-inner-slide .control a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    z-index: 1;
+    background: rgba(34, 34, 34, 0.80);
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.overview-sec .exhibition-inner-slide .control a img{
+    width: 24px;
+}
+
+.overview-sec .exhibition-inner-slide .control a.prev{
+    left: 16px;
+}
+
+.overview-sec .exhibition-inner-slide .control a.next{
+    right: 16px;
+}
+
+.overview-sec .exhibition-inner-slide .control a.next img{
+    transform: rotate(180deg);
+}
+
+.overview-sec .exhibition-inner-slide:hover .control a{
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+/* Exhibitions > Overview > artworks  */
+.overview-sec .artworks {
+    margin-bottom: 40px
+}
+
+.overview-sec .area-tit{
+    display: inline-block;
+    color: var(--color-default);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 52px;
+    letter-spacing: -0.8px;
+    background: url(../img/icon/icon_arrow.png) no-repeat right center;
+    background-size: 24px;
+    padding-right: 32px;
+}
+
+.overview-sec .work-grid-type li{
+    margin-right: 1.4%;
+    width: 23.9%;
+    margin-bottom: 80px;
+}
+
+.overview-sec .work-grid-type li:nth-child(4n){
+    margin-right: 0;
+}
+
+.overview-sec .work-grid-type .img{
+    height: 340px;
+    padding: 16.81% 11.21%;
+}
+
+/* Exhibitions > Overview > artist */
+.overview-sec .artist .right-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid var(--color-gray-ddd);
+    border-bottom: 1px solid var(--color-gray-ddd);
+    padding: 24px 0;
+}
+
+.overview-sec .artist dl{
+    display: flex;
+    align-items: center;
+}
+
+.overview-sec .artist dt{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overview-sec .artist dt img{
+    width: 100%;
+}
+
+.overview-sec .artist dd{
+    display: flex;
+    flex-direction: column;
+    margin-left: 24px;
+}
+
+.overview-sec .artist dd b{
+    color: var(--color-default);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.48px;
+}
+
+.overview-sec .artist dd span{
+    color: var(--color-default);
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.32px;
+    margin-top: 2px;
+}
+
+.overview-sec .artist .detail-btn{
+    border-radius: 500px;
+    background: var(--color-default);
+    height: 48px;
+    line-height: 48px;
+    padding: 0px 20px;
+    color: var(--color-white);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.32px;
+}
+
+.overview-sec .bottom-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overview-sec .bottom-btn a{
+    border-radius: 500px;
+    border: 1px solid var(--color-default);
+    background: var(--color-white);
+    padding: 10px 24px;
+    color: var(--color-default);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.36px;
+    margin-right: 16px;
+    width: 214px;
+    text-align: center;
+}
+
+.overview-sec .bottom-btn a:last-child{
+    margin-right: 0;
+}
+
+.overview-sec .bottom-btn a img{
+    width: 24px;
+    vertical-align: bottom;
+}
+
+/* Exhibitions > Marketplace  */
+.marketplace-sec .search-form > div{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+}
+
+.marketplace-sec .search-form .search-word{
+    width: 26.21%;
+    position: relative;
+    border-radius: 4px;
+    border: 1px solid var(--color-gray-ccc);
+    overflow: hidden;
+}
+
+.marketplace-sec .search-form .search-word input{
+    width: calc(100% - 32px);
+    width: -webkit-calc(100% - 32px);
+    width: -moz-calc(100% - 32px);
+    width: -o-calc(100% - 32px);
+}
+
+.marketplace-sec .search-form .dropbox{
+    border-radius: 4px;
+    border: 1px solid var(--color-gray-ccc);
+    height: 48px;
+    padding: 0px 16px;
+    width: 205px;
+    margin: 0 8px;
+}
+
+.marketplace-sec .search-form .dropbox .now{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.28px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    background: url(../img/icon/icon_arrow_down.png)no-repeat right center;
+    background-size: 16px;
+    cursor: pointer;
+}
+
+.marketplace-sec .search-form .dropbox-inner{
+    display: none;
+}
+
+.marketplace-sec .search-form .filter{
+    width: 205px;
+    height: 48px;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: 1px solid var(--color-gray-ccc);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.marketplace-sec .search-form .filter span{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.28px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.marketplace-sec .search-form .filter img{
+    width: 20px;
+}
+
+.marketplace-sec .work-grid-type li{
+    width: 15.9%;
+    margin-right: 0.9%;
+    margin-bottom: 64px;
+}
+
+.marketplace-sec .work-grid-type li:nth-child(6n){
+    margin-right: 0%;
+}
+
+.marketplace-sec .work-grid-type .img{
+    height: 340px;
+    padding: 16.71% 11.14%;
+}
+
+/* Exhibitions > Artwork  */
+.artwork-sec .search-form{
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto 20px;
+    padding: 0 48px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.artwork-sec .search-form .total{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.32px;
+    position: absolute;
+    left: 48px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.artwork-sec .search-form b{
+    font-weight: 400;
+}
+
+.artwork-sec .search-form select{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.32px;
+    border: none;
+}
+
+.artwork-sec .search-form .input-text{
+    border-radius: 4px;
+    border: 1px solid var(--color-gray-ccc);
+    height: 48px;
+    padding: 0px 16px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.32px;
+    margin-left: 32px;
+}
+
+.artwork-sec .search-form .input-text::placeholder{
+    color: var(--color-gray-aaa);
+    font-family: Pretendard;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.32px;
+}
+
+.artwork-sec .search-form button{
+    position: absolute;
+    right: 64px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background: url(../img/icon/icon_search.png) no-repeat center;
+    background-size: cover;
+    border: none;
+    text-indent: -999999999px;
+}
+
+.artwork-sec .work-grid-type li{
+    margin-right: 1%;
+    width: 19.2%;
+    margin-bottom: 80px;
+}
+
+.artwork-sec .work-grid-type li:nth-child(5n){
+    margin-right: 0;
+}
+
+.artwork-sec .work-grid-type .img{
+    padding: 16.23% 9.28%;
+    height: 412px;
+}
+
+/* Exhibitions > Artist  */
+.artist-sec article{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    flex-wrap: wrap;
+}
+
+.artist-sec .left-wrap {
+    height: 100vh;
+}
+
+.artist-sec .left-wrap ul.mo{
+    display: none;
+}
+
+.artist-sec .left-wrap ul{
+    position: sticky;
+    top: 110px;
+}
+
+.artist-sec .left-wrap li{
+    margin-bottom: 24px;
+}
+
+.artist-sec .left-wrap li:last-child{
+    margin-bottom: 0;
+}
+
+.artist-sec .left-wrap .focus-ctrl{
+    color: var(--color-gray-aaa);
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: -0.36px;
+    display: block;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--color-gray-ddd);  
+}
+
+.artist-sec .left-wrap .focus-ctrl::before{
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    border: 2px solid var(--color-gray-aaa);
+    margin-right: 16px;
+    display: inline-block;
+    vertical-align: middle;    
+}
+
+.artist-sec .left-wrap .focus-ctrl.on{
+    color: var(--color-default);
+    font-weight: 700;
+    border-bottom: none;
+}
+
+.artist-sec .left-wrap .focus-ctrl.on::before{
+    background: var(--color-default);
+    border-color: var(--color-default);;
+}
+
+.artist-sec .follow.mo{
+    display: none;
+}
+
+.artist-sec .follow{
+    padding: 10.72% 8.93% 12.5%;
+    border: 1px solid var(--color-default);
+    border-radius: 6px;
+    display: none;
+}
+
+.artist-sec .follow dt{
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.artist-sec .follow dt img{
+    width: 100%;
+}
+
+.artist-sec .follow dd b{
+    color: var(--color-default);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.48px;
+    margin-bottom: 2px;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.artist-sec .follow dd i{
+    color: var(--color-default);
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.32px;  
+    display: block;
+    text-align: center;  
+}
+
+.artist-sec .follow a{
+    height: 48px;
+    padding: 0px 20px;
+    background: var(--color-default);
+    border-radius: 48px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.32px;    
+    margin-top: 32px;
+}
+
+.artist-sec .follow a img{
+    -webkit-filter: brightness(0) invert(1); 
+    filter: brightness(0) invert(1);
+    width: 16px;
+    margin-left: 6px;
+}
+
+.artist-sec .right-wrap .info-tit{
+    color: var(--color-default);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.48px;    
+    margin-bottom: 24px;
+    display: block;
+}
+
+.artist-sec .right-wrap .artist-info{
+    margin-top: 160px;
+}
+
+.artist-sec .right-wrap .artist-info:first-child{
+    margin-top: 0;
+}
+
+.artist-sec .artist-intro{
+    padding-bottom: 48px;
+    border-bottom: 1px solid var(--color-gray-ddd);
+}
+
+.artist-sec .artist-intro div{
+    color: var(--color-default);
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: -0.36px;
+}
+
+.artist-sec .history{
+    margin: 100px 0;
+    position: relative;
+}
+
+.artist-sec .history .info-tit{
+    margin-top: 48px;
+}
+
+.artist-sec .history dl{
+    margin-bottom: 4px;
+}
+
+.artist-sec .history dt{
+    color: var(--color-gray-aaa);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: -0.36px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 48px;
+}
+
+.artist-sec .history dd{
+    color: var(--color-default);
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: -0.36px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.artist-sec .history .more-btn{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    color: var(--color-default);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.32px;
+    width: 100%;
+    height: 56px;
+    line-height: 56px;
+    padding: 0 24px;
+    background: var(--color-white);
+    border-bottom: 1px solid var(--color-gray-ddd);
+}
+
+.artist-sec .history .more-btn::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -40px;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(0deg, var(--color-white) 0%, rgba(255, 255, 255, 0.00) 100%);
+}
+
+.artist-sec .history .more-btn img{
+    width: 16px;
+    margin-left: 6px;
+}
+
+.artist-sec .artwork-slide-wrap{
+    overflow: hidden;
+}
+
+.artist-sec .work-grid-type{
+    flex-wrap: nowrap;
+}
+
+.artist-sec .work-grid-type .img{
+    height: 340px;
+    padding: 16.81% 11.21%;
+}
+
+/* Exhibitions All */
+.exhibition-list-sec .sub-top .search-form{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.exhibition-list-sec .search-word{
+    width: 478px;
+    border-radius: 4px;
+    border: 1px solid var(--color-gray-ccc);
+    height: 48px;
+    padding-right: 16px;
+    overflow: hidden;
+    position: relative;
+}
+
+.exhibition-list-sec .search-word input{
+    width: calc(100% - 8px);
+    width: -webkit-calc(100% - 8px);
+    width: -moz-calc(100% - 8px);
+    width: -o-calc(100% - 8px);
+}
+
+.exhibition-list-sec .calendar-wrap .range-date{
+    display: none;
+}
+
+.exhibition-list-sec .calendar-btn{
+    display: block;
+    border-radius: 4px;
+    border: 1px solid var(--color-gray-ccc);
+    width: 48px;
+    height: 48px;
+    background: url(../img/icon/icon_calendar.png) no-repeat center;
+    background-size: 24px;
+    margin-left: 8px;
+}
+
+.exhibition-list-sec .calendar-btn.on{
+    background-image: url(../img/icon/icon_calendar_on.png);
+}
+
+.exhibition-list-sec .calendar-wrap button{
+    display: block;
+    border-radius: 4px;
+    border: 1px solid var(--color-gray-ccc);
+    width: 48px;
+    height: 48px;
+    background: url(../img/icon/icon_calendar.png) no-repeat center;
+    background-size: 24px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.exhibition-list-sec .calendar-content{
+    position: absolute;
+    border-radius: 10px;
+    background: var(--color-gray-f8f8f8);
+    width: 29.56%;
+    top: 0;
+    right: 0;
+    margin-top: 72px;
+    display: none;
+    padding: 2.22%;
+}
+
+.exhibition-list-sec .calendar-content .flatpickr{
+    opacity: 0;
+    position: absolute;
+}
+
+/* --flatpickr 초기화-- */
+.exhibition-list-sec .flatpickr-day.inRange,
+.exhibition-list-sec .flatpickr-day.prevMonthDay.inRange,
+.exhibition-list-sec .flatpickr-day.nextMonthDay.inRange,
+.exhibition-list-sec .flatpickr-day.today.inRange,
+.exhibition-list-sec .flatpickr-day.today:hover,
+.exhibition-list-sec .flatpickr-day.today:focus,
+.exhibition-list-sec .flatpickr-day.prevMonthDay.today.inRange,
+.exhibition-list-sec .flatpickr-day.nextMonthDay.today.inRange,
+.exhibition-list-sec .flatpickr-day:hover,
+.exhibition-list-sec .flatpickr-day.startRange:hover,
+.exhibition-list-sec .flatpickr-day.endRange:hover,
+.exhibition-list-sec .flatpickr-day.prevMonthDay:hover,
+.exhibition-list-sec .flatpickr-day.nextMonthDay:hover,
+.exhibition-list-sec .flatpickr-day:focus,
+.exhibition-list-sec .flatpickr-day.startRange:focus,
+.exhibition-list-sec .flatpickr-day.endRange:focus,
+.exhibition-list-sec .flatpickr-day.prevMonthDay:focus,
+.exhibition-list-sec .flatpickr-day.nextMonthDay:focus,
+.exhibition-list-sec .flatpickr-day.selected.endRange,
+.exhibition-list-sec .flatpickr-day.startRange.endRange,
+.exhibition-list-sec .flatpickr-day.endRange.endRange,
+.exhibition-list-sec .flatpickr-day.selected.startRange,
+.exhibition-list-sec .flatpickr-day.startRange,
+.exhibition-list-sec .flatpickr-day.selected.nextMonthDay,
+.exhibition-list-sec .flatpickr-day.startRange.nextMonthDay,
+.exhibition-list-sec .flatpickr-day.endRange.nextMonthDay,
+.exhibition-list-sec .flatpickr-day.selected.startRange + .endRange:not(:nth-child(7n+1)),
+.exhibition-list-sec .flatpickr-day.startRange.startRange + .endRange:not(:nth-child(7n+1)),
+.exhibition-list-sec .flatpickr-day.endRange.startRange + .endRange:not(:nth-child(7n+1)){
+    border-radius: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+    color: var(--color-default);
+}
+/* --//flatpickr 초기화-- */
+
+.exhibition-list-sec .flatpickr-day:hover::before,
+.exhibition-list-sec .flatpickr-day.inRange::before,
+.exhibition-list-sec .flatpickr-day.prevMonthDay.inRange::before,
+.exhibition-list-sec .flatpickr-day.nextMonthDay.inRange::before,
+.exhibition-list-sec .flatpickr-day.today.inRange::before,
+.exhibition-list-sec .flatpickr-day.startRange:focus::before,
+.exhibition-list-sec .flatpickr-day.endRange:focus::before,
+.exhibition-list-sec .flatpickr-day.selected.startRange::before,
+.exhibition-list-sec .flatpickr-day.selected.endRange::before,
+.exhibition-list-sec .flatpickr-day.startRange.startRange::before,
+.exhibition-list-sec .flatpickr-day.endRange.startRange::before{
+    border-radius: 0;
+    background: rgba(172, 198, 242, 0.40);
+}
+
+.exhibition-list-sec .flatpickr-calendar{
+    width: 100%;
+    background-color: var(--color-gray-f8f8f8);
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.exhibition-list-sec .flatpickr-current-month{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.exhibition-list-sec .flatpickr-current-month .numInputWrapper{
+    pointer-events: none;
+    width: 50px;
+}
+
+.exhibition-list-sec .flatpickr-months .flatpickr-prev-month svg,
+.exhibition-list-sec .flatpickr-months .flatpickr-next-month svg{
+    width: 0;
+    height: 0;
+}
+
+.exhibition-list-sec .flatpickr-months .flatpickr-prev-month{
+    background: url(../img/icon/icon_arrow.png)no-repeat center;
+    background-size: 20px;
+    transform: rotate(-180deg);
+}
+
+.exhibition-list-sec .flatpickr-months .flatpickr-next-month{
+    background: url(../img/icon/icon_arrow.png)no-repeat center;
+    background-size: 20px;
+}
+
+.exhibition-list-sec .flatpickr-current-month input.cur-year{
+    padding: 0;
+    color: var(--color-default);
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: -0.4px;
+}
+
+.exhibition-list-sec .flatpickr-current-month span.cur-month::before{
+    content: '.';
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.exhibition-list-sec .flatpickr-current-month span.cur-month{
+    margin-left: 0;
+    display: flex;
+    align-items: center;
+}
+
+.exhibition-list-sec .flatpickr-rContainer{
+    width: 100%;
+}
+
+.exhibition-list-sec .flatpickr-weekdays{
+    height: 44px;
+}
+
+.exhibition-list-sec .flatpickr-days,
+.exhibition-list-sec .dayContainer{
+    min-width: auto;
+    max-width: none;
+    width: 100%;
+    display: block;
+}
+
+.exhibition-list-sec .flatpickr-weekdaycontainer span{
+    color: var(--color-default);
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -0.28px;
+}
+
+.exhibition-list-sec .dayContainer{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    justify-items: center;
+}
+
+.exhibition-list-sec .dayContainer span{
+    color: var(--color-default);
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.32px;
+    width: 100%;
+    min-width: auto;
+    max-width: none;
+    margin-top: 0;
+    height: 48px;
+    line-height: 48px;
+    background: none;
+    border: none;
+}
+
+.exhibition-list-sec .dayContainer span::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 32px;
+    z-index: -1;
+}
+
+.exhibition-list-sec .flatpickr-day.selected.endRange::before{
+    width: calc(100% - 20px);
+}
+.exhibition-list-sec .flatpickr-day.selected.endRange::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 32px;
+    height: 32px;
+    background: #ACC6F2;
+    z-index: -1;
+}
+
+.exhibition-list-sec .flatpickr-day.today::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 32px;
+    height: 32px;
+    border: 2px solid #2D60D7;
+    z-index: -1;
+}
+
+
+
+.exhibition-list-sec .calendar-content .bottom-tool{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+.exhibition-list-sec .calendar-content .bottom-tool .reset{
+    display: flex;
+    align-items: center;
+    border-radius: 500px;
+    border: 1px solid var(--color-gray-ddd);
+    padding: 8px 16px 8px 12px;
+    color: var(--color-gray-888);
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.28px;
+    text-align: center;
+}
+
+.exhibition-list-sec .calendar-content .bottom-tool .reset img{
+    width: 16px;
+    margin-right: 4px;
+}
+
+.exhibition-list-sec .calendar-content .bottom-tool .label{
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.28px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.exhibition-list-sec .calendar-content .bottom-tool .label::before{
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 1px;
+    background: #ACC6F2;
+    margin-right: 8px;
+}
+
+.exhibition-list-sec article.on .card-type-list{
+    width: calc(100% - 33.95%);
+    width: -webkit-calc(100% - 33.95%);
+    width: -moz-calc(100% - 33.95%);
+    width: -o-calc(100% - 33.95%);
+    grid-template-columns: repeat(2, 1fr);
+    transition: all 0.5s;
+}
+
+.exhibition-list-sec article{
+    margin-bottom: 84px;
+}
+
+.exhibition-list-sec article.closed{
+    margin-bottom: 0;
+}
+
+.exhibition-list-sec .layer-tit{
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 34px;
+    letter-spacing: -0.56px;
+    margin-bottom: 24px;
+}
+
+
+
+
+
+
+@media all and (max-width: 1600px){
+    /* Exhibitions All */
+    .exhibition-list-sec .dayContainer span{
+        height: 2.5rem;
+        line-height: 2.5rem;
+        font-size: 14px;
+    }
+
+    .exhibition-list-sec .dayContainer span::before{
+        height: 1.667rem;
+    }
+
+    .exhibition-list-sec .flatpickr-day.selected.endRange::after{
+        width: 1.667rem;
+        height: 1.667rem;
+    }
+
+    .exhibition-list-sec .flatpickr-day.today::after{
+        width: 1.667rem;
+        height: 1.667rem;
+    }
+
+    /* Exhibitions > Overview */
+    .overview-sec .work-grid-type .img{
+        height: 17.71rem;
+    }
+
+    /* Exhibitions > Artwork  */
+    .artwork-sec .work-grid-type .img{
+        height: 21.46rem;
+    }
+
+    /* Exhibitions > Marketplace  */
+    .marketplace-sec .work-grid-type .img{
+        height: 21.25rem;
+    }  
+
+    /* Exhibitions > Artist  */
+    .artist-sec .work-grid-type .img {
+        height: 21.25rem;
+        padding: 16.81% 11.21%;
+    }
+}
+
+@media all and (max-width: 1420px){
+    /* Marketplace */
+    .marketplace-sec .work-grid-type li {
+        width: 19.2%;
+    }
+
+    .marketplace-sec .work-grid-type li:nth-child(6n) {
+        margin-right: 0.9%;
+    }
+
+    .marketplace-sec .work-grid-type li:nth-child(5n) {
+        margin-right: 0;
+    }
+}
+
+@media all and (max-width: 1280px){
+    .exhibitions .top-poster ul{
+        padding: 0 20px;
+    }
+
+    .overview-sec .exhibition-info .name{
+        font-size: 33px;
+        line-height: 48px;
+    } 
+
+    .overview-sec .area-tit{
+        font-size: 33px;
+        line-height: 48px;
+    }
+
+    /* Exhibitions > Artwork  */
+    .artwork-sec .search-form{
+        padding: 0 20px;
+    }
+
+    .artwork-sec .work-grid-type li{
+        width: 24.2%;
+    }
+    
+    .artwork-sec .work-grid-type li:nth-child(5n){
+        margin-right: 1%;
+    }
+
+    .artwork-sec .work-grid-type li:nth-child(4n){
+        margin-right: 0;
+    }
+
+    .artwork-sec .work-grid-type .img {
+        height: 28rem;
+    }
+
+    /* Exhibitions > Artist */
+    .artist-sec .follow dd b {
+        font-size: 22px;
+        line-height: 28px;
+        letter-spacing: -0.44px;
+    }
+    
+    .artist-sec .right-wrap .artist-info {
+        margin-top: 80px;
+    }
+
+    .artist-sec .history{
+        margin: 80px 0;
+    }
+
+}
+
+@media all and (max-width: 1024px){
+    /* Exhibitions All */
+    .exhibition-list-sec article.on .card-type-list{
+        grid-template-columns: repeat(1, 1fr);   
+        width: calc(100% - 45%);
+        width: -webkit-calc(100% - 45%);
+        width: -moz-calc(100% - 45%);
+        width: -o-calc(100% - 45%);
+    }
+
+    .exhibition-list-sec .calendar-content{
+        width: 40%;
+    }
+    
+    .exhibition-list-sec .dayContainer span::before{
+        height: 2.2rem;
+    }
+
+    .exhibition-list-sec .flatpickr-day.selected.endRange::after{
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+
+    .exhibition-list-sec .flatpickr-day.today::after{
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+}
+
+@media all and (max-width: 1000px){
+    .exhibitions .top-poster ul:hover + .cursor{
+        display: none;
+    }
+    
+    .exhibitions .left-wrap{
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .exhibitions .right-wrap{
+        width: 100%;
+    }
+
+    .overview-sec .text-wrap {
+        margin-top: 48px;
+    }
+
+    .overview-sec .exhibition-inner-slide .paging{
+        justify-content: center;
+    }
+
+    .overview-sec .area-tit{
+        margin-bottom: 16px;
+        display: block;
+    }
+
+    /* Exhibitions All */
+    .exhibition-list-sec article.on .card-type-list{
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .exhibition-list-sec .calendar-content{
+        z-index: 1;
+        max-width: 420px;
+        width: calc(100% - 40px);
+        width: -webkit-calc(100% - 40px);
+        width: -moz-calc(100% - 40px);
+        width: -o-calc(100% - 40px);
+        right: 0;
+    }
+
+    .exhibition-list-sec .dayContainer span{
+        height: 40px;
+        line-height: 40px;
+        font-size: 14px;
+    }
+
+    .exhibition-list-sec .dayContainer span::before{
+        height: 32px;
+    }
+
+    .exhibition-list-sec .flatpickr-day.selected.endRange::after{
+        width: 32px;
+        height: 32px;
+    }
+
+    .exhibition-list-sec .flatpickr-day.today::after{
+        width: 32px;
+        height: 32px;
+    }
+
+
+
+
+
+
+
+
+    /* Exhibitions > Marketplace  */
+    .marketplace-sec .maket-tab{
+        margin-top: 0;
+    }
+
+    .marketplace-sec .search-form {
+        margin-bottom: 20px;
+    }
+
+    .marketplace-sec .work-grid-type li {
+        width: 24.3%;
+    }
+
+    .marketplace-sec .work-grid-type li:nth-child(6n) {
+        margin-right: 0.9%;
+    }
+
+    .marketplace-sec .work-grid-type li:nth-child(5n) {
+        margin-right: 0.9%;
+    }
+
+    .marketplace-sec .work-grid-type li:nth-child(4n) {
+        margin-right: 0;
+    }
+
+    .marketplace-sec .work-grid-type .img{
+        height: 26.25rem;
+    }
+
+    .overview-sec .work-grid-type .img {
+        height: 30rem;
+    }
+
+    /* Exhibitions > Artist */
+    .artist-sec .left-wrap ul.pc{
+        margin-bottom: 48px;
+    }
+
+    .artist-sec .work-grid-type .img {
+        height: 27.25rem;
+    }
+}
+
+@media all and (max-width: 820px){
+    /* Exhibitions All */
+    .exhibition-list-sec .sub-top .search-form{
+        flex-direction: column-reverse;
+        align-items: start;
+    }
+
+    .exhibition-list-sec .search-word{
+        display: none;
+    }
+
+    .exhibition-list-sec .calendar-wrap {
+        width: 100%;
+        position: relative;
+    }
+
+    .exhibition-list-sec .calendar-wrap .range-date{
+        display: block;
+        border-top: 1px solid var(--color-gray-ddd);
+        border-bottom: 1px solid var(--color-gray-ddd);
+        height: 48px;
+        padding: 0px 20px;
+    }
+
+    .exhibition-list-sec .calendar-wrap .range-date i{
+        color: var(--color-gray-aaa);
+        font-size: 14px;
+        line-height: 48px;
+        letter-spacing: -0.28px;
+    }
+
+    .exhibition-list-sec .calendar-btn{
+        margin-left: 0;
+        position: absolute;
+        right: 20px;
+        top: 6px;
+        width: 36px;
+        height: 36px;
+        background-color: var(--color-gray-f2f2f2);
+        border: none
+    }
+
+    .exhibition-list-sec .calendar-content .flatpickr{
+        opacity: 1;
+        position: static;
+    }
+    
+
+    .exhibition-list-sec .calendar-content{
+        right: 20px;
+        margin-top: 48px;
+    }
+
+    .exhibition-list-sec .layer-tit{
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 30px;
+        letter-spacing: -0.48px;
+        margin-bottom: 20px;
+    }
+
+    .exhibition-list-sec article{
+        margin-bottom: 80px;
+    }
+
+    /* Exhibitions > Marketplace  */
+    .marketplace-sec .maket-tab{
+        margin: 0;
+        border-top: none;
+        padding: 0 20px;
+    }
+
+    .marketplace-sec .maket-tab a{
+        margin-right: 24px;
+        padding: 12px 0;
+    }
+
+    .marketplace-sec .search-form {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: start;
+        margin-bottom: 24px;
+    }
+
+    .marketplace-sec .search-form > div{
+        justify-content: start;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--color-gray-ddd);
+        padding: 0 20px;
+    }
+
+    .marketplace-sec .search-form .search-word{
+        display: none;
+    }
+
+    .marketplace-sec .search-form .dropbox{
+        border: none;
+        padding: 0;
+        width: auto;
+        margin: 0 8px;
+    }
+
+    .marketplace-sec .search-form .dropbox .now{
+        font-size: 13px;
+        line-height: 19px;
+        letter-spacing: -0.26px;
+        padding-right: 22px;
+        background-size: 14px;
+    }
+
+    .marketplace-sec .search-form .dropbox-inner{
+        display: none;
+    }
+
+    .marketplace-sec .search-form .filter{
+        width: auto;
+        padding: 0;
+        border: none;
+    }
+
+    .marketplace-sec .search-form .filter span{
+        font-size: 13px;
+        line-height: 19px;
+        letter-spacing: -0.26px;
+        margin-right: 6px;
+    }
+
+    .marketplace-sec .search-form .filter img{
+        width: 16px;
+    }
+}
+
+@media all and (max-width: 720px){
+    /* Exhibitions(Common) */
+    .exhibitions .exhibition-tab {
+        margin: 0 0 32px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .exhibitions .exhibition-tab.fix{
+        top: 56px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .exhibitions .exhibition-tab a{
+        border-radius: 6px;
+        width: 33.3%;
+        height: 40px;
+        margin-right: 4px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: -0.32px;
+    }
+
+    .exhibitions .left-wrap{
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .exhibitions .right-wrap{
+        width: 100%;
+        margin-top: 56px;
+    }
+
+    .exhibitions .top-poster{
+        padding-bottom: 4px;
+    }
+
+    .exhibitions .top-poster ul{
+        padding: 0;
+        height: 101vw;
+    }
+
+    .exhibitions .top-poster li{
+        margin-right: 0;
+        border-radius: 0;
+    }
+
+    /* Exhibitions > Overview > overview  */
+    .overview-sec article{
+        margin-bottom: 48px;
+    }
+
+    .overview-sec .exhibition-info .name{
+        font-size: 28px;
+        line-height: 38px;
+        letter-spacing: -0.56px;
+        margin-bottom: 12px;
+    }
+
+    .overview-sec .exhibition-info .state{
+        font-size: 14px;
+        line-height: normal;
+        letter-spacing: -0.28px;
+        text-underline-offset: 5px;
+    }
+
+    .overview-sec .exhibition-info dl {
+        margin-top: 32px;
+    }
+    
+    .overview-sec .exhibition-info dt {
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: -0.28px;
+        margin-bottom: 4px;
+    }
+
+    .overview-sec .exhibition-info dd {
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: -0.28px;
+        width: calc(100% - 47px);
+        width: -webkit-calc(100% - 47px);
+        width: -moz-calc(100% - 47px);
+        width: -o-calc(100% - 47px);
+        margin-bottom: 4px;
+    }
+
+    .overview-sec .text-wrap p {
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: -0.32px;
+    }
+
+    .overview-sec .exhibition-inner-slide {
+        margin: 24px 0;
+    }
+
+    .overview-sec .exhibition-inner-slide .paging{
+        justify-content: center;
+    }
+
+    .overview-sec .exhibition-inner-slide .paging li {
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: -0.4px;
+    }
+
+    .exhibitions .overview-sec .right-wrap{
+        padding-bottom: 48px;
+        border-bottom: 1px solid var(--color-gray-ccc);
+    }
+
+    /* Exhibitions > Overview > artworks  */
+    .exhibitions .artworks .right-wrap{
+        padding-bottom: 0;
+        margin-top: 0;
+        border-bottom: none;
+    }
+
+    .overview-sec .area-tit{
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: -0.48px;
+        background-size: 16px;
+        padding-right: 20px;
+    }
+
+    .overview-sec .work-grid-type li{
+        margin-right: 1.2%;
+        width: 49.4%;
+        margin-bottom: 48px;
+    }
+    
+    .overview-sec .work-grid-type li:nth-child(4n){
+        margin-right: 1.2%;
+    }
+
+    .overview-sec .work-grid-type li:nth-child(2n){
+        margin-right: 0;
+    }
+
+    .overview-sec .work-grid-type .img {
+        height: 51.2rem;
+    }
+
+    /* Exhibitions > Overview > artists */
+    .overview-sec .artist{
+        margin-bottom: 80px;
+    }
+
+    .overview-sec .artist .right-wrap{
+        display: block;
+        padding: 0;
+        margin-top: 24px;
+    }
+
+    .overview-sec .artist dt {
+        width: 60px;
+        height: 60px;
+    }
+
+    .overview-sec .artist dl{
+        padding: 16px 0;
+    }
+
+    .overview-sec .artist dd{
+        margin-left: 16px;
+    }
+
+    .overview-sec .artist dd b {
+        font-size: 22px;
+        line-height: 28px;
+        letter-spacing: -0.44px;
+    }
+
+    .overview-sec .artist dd span {
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: -0.28px;
+    }
+
+    .overview-sec .artist .detail-btn {
+        display: inline-block;
+        height: 40px;
+        line-height: 40px;
+        padding: 0px 20px;
+        margin-top: 20px;
+        display: none;
+    }
+
+    .overview-sec .bottom-btn a {
+        padding: 10px;
+        width: 158px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 8px;
+    }
+
+    .overview-sec .bottom-btn a img{
+        margin-left: 8px;
+    }
+
+    .overview-sec .bottom-btn .share-btn{
+        text-indent: -9999px;
+        width: 56px;
+        height: 56px;
+        border-radius: 100%;
+        padding: 0;
+    }
+
+    .overview-sec .bottom-btn .share-btn img{
+        margin-left: 0;
+    }
+
+    /* Exhibitions > Marketplace  */
+    .marketplace-sec .work-grid-type{
+        margin-bottom: 0;
+    }
+
+    .marketplace-sec .work-grid-type .price{
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 21px;
+        letter-spacing: -0.32px;
+    }
+
+    .marketplace-sec .paging{
+        display: none;
+    }
+
+    .marketplace-sec .loading{
+        display: flex;
+        margin: auto;
+        width: 40px;
+        margin-bottom: 80px;
+        opacity: 1;
+        transition: all 0.5s;
+        position: relative;
+        z-index: 1;
+    }
+
+    .marketplace-sec .loading.on{
+        opacity: 0;
+        transition: all 0.5s;
+        z-index: -1;
+        display: none;
+    }
+
+    .marketplace-sec .work-grid-type li {
+        width: 48.8%;
+        margin-right: 2.4%;
+        margin-bottom: 48px;
+
+    }
+
+    .marketplace-sec .work-grid-type li:nth-child(6n) {
+        margin-right: 2.4%;
+    }
+
+    .marketplace-sec .work-grid-type li:nth-child(5n) {
+        margin-right: 2.4%;
+    }
+
+    .marketplace-sec .work-grid-type li:nth-child(4n) {
+        margin-right: 2.4%;
+    }
+
+    .marketplace-sec .work-grid-type li:nth-child(2n) {
+        margin-right: 0;
+    }
+
+    .marketplace-sec .work-grid-type .img{
+        height: 51.2rem;
+    }
+
+    .marketplace-sec .work-grid-type .icon-wish {
+        right: 8px;
+        top: auto;
+        bottom: 0;
+        transform: translateY(39px);
+        width: 20px;
+        height: 19px;
+    }
+
+    .marketplace-sec .list-paging{
+        display: none;
+    }
+
+    /* Exhibitions > Artists  */
+    .exhibitions .artist-sec .exhibition-tab{
+        padding-top: 8px;
+        padding-bottom: 8px;
+        margin: 0;
+        background: var(--color-white);
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .exhibitions .artist-sec .exhibition-tab.fix{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .artist-sec .left-wrap{
+        position: relative;
+    }
+
+    .artist-sec .left-wrap.fix{
+        position: fixed;
+        width: 100%;
+        padding: 0 20px;
+        top: 112px;
+        left: 0;
+        background: var(--color-white);
+        z-index: 2;
+    }
+
+    .artist-sec .left-wrap::after{
+        content: '';
+        position: absolute;
+        right: 0px;
+        width: 80px;
+        height: 56px;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.80) 9.63%, var(--color-white) 17.5%);
+    }
+
+    .artist-sec .left-wrap.noneBg::after{
+        display: none;
+    }
+
+    .artist-sec .left-wrap ul.pc{
+        display: none;
+    }
+
+    .artist-sec .left-wrap ul.mo{
+        display: flex;
+        align-items: center;
+        padding: 8px 0;
+        height: 56px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: var(--color-white);
+        width: 100%;
+        overflow: hidden;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .artist-sec .left-wrap ul.mo::-webkit-scrollbar {
+        display: none;
+    }
+
+    .artist-sec .left-wrap.fix ul{
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-right: 60px;
+    }
+
+    .artist-sec .left-wrap ul.on{
+        height: auto;
+        min-height: 56px;
+        border-bottom: 1px solid var(--color-gray-ddd);
+        white-space: normal;
+        flex-wrap: wrap;
+    }
+
+    .artist-sec .left-wrap.fix ul.on{
+        overflow: inherit;
+    }
+
+    .artist-sec .left-wrap li{
+        margin-bottom: 0;
+        margin-right: 5.9%;
+        padding: 8px 0;
+    }
+
+    .artist-sec .left-wrap .focus-ctrl {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.32px;
+        padding: 0;
+        border-bottom: none;
+    }
+
+    .artist-sec .left-wrap li:first-child .focus-ctrl{
+        padding-top: 0;
+    }
+
+    .artist-sec .left-wrap .focus-ctrl::before {
+        width: 10px;
+        height: 10px;
+        margin-right: 6px;
+    }
+
+    .artist-sec .left-wrap .mo-more-btn{
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        border: 1px solid var(--color-gray-eee);
+        background: var(--color-white) url(../img/icon/icon_arrow_down.png) no-repeat center 60%;
+        background-size: 16px;
+        position: absolute;
+        right: 0;
+        top: 28px;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+
+    .artist-sec .left-wrap.fix .mo-more-btn{
+        right: 20px;
+    }
+
+    .artist-sec .mo.follow{
+        display: block!important;
+        padding: 32px 20px;
+        border-radius: 8px;
+        margin-bottom: 48px;
+    }
+
+    .artist-sec .follow dt{
+        width: 100px;
+        height: 100px;
+    }
+
+    .artist-sec .follow a{
+        margin-top: 20px;
+    }
+
+    .artist-sec .right-wrap .info-tit {
+        font-size: 22px;
+        line-height: 28px;
+        letter-spacing: -0.28px;
+        margin-bottom: 16px;
+    }
+
+    .artist-sec .artist-intro{
+        padding-bottom: 40px;
+    }
+
+    .artist-sec .artist-intro div {
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: -0.32px;
+    }
+
+    .artist-sec .history dt {
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: -0.32px;
+        margin-right: 16px;
+    }
+
+    .artist-sec .history dd {
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: -0.32px;
+    }
+
+    .artist-sec .history .info-tit {
+        margin-top: 40px;
+    }
+
+    .artist-sec .work-grid-type .img {
+        height: 42.67rem;
+        padding: 15.22% 12.18%;
+    }
+
+    /* Exhibitions > Artwork  */
+    .artwork-sec .exhibition-tab{
+        width: calc(100% - 40px);
+        width: -webkit-calc(100% - 40px);
+        width: -moz-calc(100% - 40px);
+        width: -o-calc(100% - 40px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .artwork-sec .search-form{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: end;
+        padding: 0;
+    }
+
+    .artwork-sec .search-form .search-word{
+        width: 100%;
+        position: relative;
+    }
+
+    .artwork-sec .search-form .input-text{
+        margin-left: 0;
+        width: 100%;
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+    }
+
+    .artwork-sec .search-form button{
+        right: 20px;
+    }
+
+    .artwork-sec .search-form .total{
+        transform: translateY(0);
+        top: auto;
+        bottom: 0;
+        left: 20px;
+    }
+
+    .artwork-sec .search-form select{
+        margin-right: 20px;
+        margin-top: 16px;
+    }
+
+    .artwork-sec .list-paging{
+        display: none;
+    }
+
+    .artwork-sec .work-grid-type li{
+        width: 49.4%;
+        margin-right: 1.2%;
+        margin-bottom: 48px;
+    }
+    
+    .artwork-sec .work-grid-type li:nth-child(5n){
+        margin-right: 1.2%;
+    }
+
+    .artwork-sec .work-grid-type li:nth-child(4n){
+        margin-right: 1.2%;
+    }
+
+    .artwork-sec .work-grid-type li:nth-child(2n){
+        margin-right: 0;
+    }
+
+    .artwork-sec .work-grid-type .img {
+        height: 51.2rem;
+        padding: 12.09% 9.67%;
+    }
+
+    .exhibition-list-sec article.on .card-type-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

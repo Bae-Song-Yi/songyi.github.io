@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스토리</title>
+    <link href="https://fonts.cdnfonts.com/css/helvetica-neue-55" rel="stylesheet">
+    <link rel="stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.9/static/pretendard.css" />
+    <link rel="stylesheet" type="text/css" href="css/font/NotoSansKR.css">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" type="text/css" href="css/palette.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/swiper.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/stories.css">
+    <script src="javascript/jquery.min.js"></script>
+    <script src="javascript/swiper.js"></script>
+    <script src="javascript/common.js" defer></script>
+</head>
+<body>
+    <div id="wrap">
+        <!--Header-->
+        <header>
+            <h1><a href="#"><img src="img/logo.png"></a></h1>
+            <a href="#" class="back-btn"><img src="img/icon/icon_arrow.png"></a>
+            <nav>
+                <ul>
+                    <li><a href="#">Exhibitions</a></li>
+                    <li><a href="#">Art Fair</a></li>
+                    <li><a href="#">Marketplace</a></li>
+                    <li><a href="#">Artists</a></li>
+                    <li><a href="#">Story</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+            <div class="util">
+                <a href="#" class="login">Login</a>
+                <a href="#" class="join">Join</a>
+                <a href="#" class="search"></a>
+                <a href="#" class="mo-menu"><img src="img/B/icon_menu.png"></a>
+            </div>
+
+            <!-- 검색폼 -->
+            <div class="search-comp search-form-wrap">
+                <div class="input-area">
+                    <input type="text" placeholder="Search by artist name or artwork tilte">
+                    <a href="#" class="input-remove" style="display: none;"></a>
+                </div>
+                <div class="init-form">
+                    <dl class="recent-search">
+                        <dt>Recent Searches <a href="#" class="remove-btn">Delete All</a></dt>
+                        <dd>
+                            <span>캔디스 주<a href="#" class="icon"><img src="img/icon/icon_close.png"></a></span>
+                            <span>이선근<a href="#" class="icon"><img src="img/icon/icon_close.png"></a></span>
+                            <span>개인전<a href="#" class="icon"><img src="img/icon/icon_close.png"></a></span>
+                        </dd>
+
+                        <!-- 데이터 없을경우 -->
+                        <dd class="no-data" style="display: none;">No recent searches found.</dd>
+                        <!--// 데이터 없을경우 -->
+                    </dl>
+                    <dl class="recommend-search">
+                        <dt>Recommended Searches</dt>
+                        <dd>
+                            <span>캔디스 주</span>
+                            <span>이선근</span>
+                            <span>Time</span>
+                            <span>이정우</span>
+                            <span>완벽한 차원</span>
+                            <span>개인전</span>
+                            <span>한소</span>
+                            <span>데이비드 호크니</span>
+                            <span>서안나</span>
+                        </dd>
+
+                        <!-- 데이터 없을경우 -->
+                        <dd class="no-data" style="display: none;">No recent searches found.</dd>
+                        <!--// 데이터 없을경우 -->
+                    </dl>
+                </div>
+
+                <div class="result-form" style="display: none;">
+                    <ul class="category">
+                        <li class="item">
+                            <a href="#"> 
+                                <span class="name">캔 디스주</span><b class="type">Artists</b>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="#"> 
+                                <span class="name">캔 디스주</span><b class="type">Category</b>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="list">
+                        <li class="item"><a href="#"> <span>검색 자동완성은 이렇게 보여집니다</span></a></li>
+                        <li class="item"><a href="#"> <span>검색 ctrl(command) + alt + enter로 인터랙션 확인해 보세요</span></a></li>
+                    </ul>
+
+                    <!-- 데이터 없을경우 -->
+                    <dd class="no-data" style="display: none;">No recent searches found.</dd>
+                    <!--// 데이터 없을경우 -->
+                </div>
+            </div>
+            <!-- //검색폼 -->
+        </header>
+        <!--//Header-->
+
+        <!-- 모바일 BottomMenu -->
+        <div class="bottom-menu-wrap">
+            <nav class="menu-compt">
+                <a href="#" class="home">
+                    <i class="icon"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#" class="search">
+                    <i class="icon"></i>
+                    <span>Search</span>
+                </a>
+                <a href="#" class="exhibitions">
+                    <i class="icon"></i>
+                    <span>Exhibitions</span>
+                </a>
+                <a href="#" class="marketplace">
+                    <i class="icon"></i>
+                    <span>Marketplace</span>
+                </a>
+                <a href="#" class="my">
+                    <i class="icon"></i>
+                    <span>My</span>
+                </a>
+            </nav>
+        </div>
+        <!--// 모바일 BottomMenu -->
+        
+        <div id="container" class="sub stories-sec">
+            <section>
+                <div class="sub-top">
+                    <h2 class="sub-tit">Stories</h2>
+                    <ul class="common-top-tab">
+                        <li><a href="#" class="all on" data-link="all">All</a></li>
+                        <li><a href="#" class="blog" data-link="blog">Blog</a></li>
+                        <li><a href="#" class="insta" data-link="insta">Instagram</a></li>
+                        <li><a href="#" class="newsletter" data-link="newsletter">Newsletters</a></li>
+                        <li><a href="#" class="press" data-link="press">Press</a></li>
+                    </ul>
+                    <div class="list-filter">
+                        <a href="#" class="vertical on"></a>
+                        <a href="#" class="horizontal"></a>
+                    </div>
+                </div>
+                <article>
+                    <ul>
+                        <li>
+                            <i class="sns-type blog">Blog</i>
+                            <div class="thumb"><img src="img/sample/stories1.png"></div>
+                            <div class="info-wrap">
+                                <a href="#" class="text">
+                                    하지훈, 허승희, 박서희 《곁: 일상으로부터》
+                                </a>
+                                <span class="date">24.06.07 FRI - 24.06.24 MON</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="sns-type insta">Instagram</i>
+                            <div class="thumb"><img src="img/sample/stories1.png"></div>
+                            <div class="info-wrap">
+                                <a href="#" class="text">
+                                    글로리어스의 중심이 되는 인물인 파이와 조이 곁에는 종종 "Running late"라는 이름을 가진 말 캐릭터가 등장합니다.🐴
+                                </a>
+                                <span class="date">24.06.07 FRI - 24.06.24 MON</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="sns-type newsletter">Newsletter</i>
+                            <div class="thumb"><img src="img/sample/stories1.png"></div>
+                            <div class="info-wrap">
+                                <a href="#" class="text">파이와 조이의 주변 곳곳에 놓인 시계들은 대부분 바늘을 지니고 있어 특정한 시간을 가리키는 것처럼 보인다. 그렇다면 이 특정한 시간이 지칭하는 것은 무엇일까? 파이가 말을 타고 움직이는 순간, 공존하는 존재들이 한 자...</a>
+                                <span class="date">24.06.07 FRI - 24.06.24 MON</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="sns-type press">Press</i>
+                            <div class="thumb"><img src="img/sample/stories1.png"></div>
+                            <div class="info-wrap">
+                                <a href="#" class="text">
+                                    박서희 작가에게 도자기는 제작 과정에서 들인 수고와 노력이 결과물에 고스란히 드러나는 정직한 사물입니다. 
+                                    조선백자를 
+                                </a>
+                                <span class="date">24.06.07 FRI - 24.06.24 MON</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="sns-type insta">Instagram</i>
+                            <div class="thumb"><img src="img/sample/stories1.png"></div>
+                            <div class="info-wrap">
+                                <a href="#" class="text">
+                                    박서희 작가에게 도자기는 제작 과정에서 들인 수고와 노력이 결과물에 고스란히 드러나는 정직한 사물입니다. 
+                                    조선백자를 현대적으로 재해석한 작업을 이어오고 있는 작가는 전통 성형기법인
+                                </a>
+                                <span class="date">24.06.07 FRI - 24.06.24 MON</span>
+                            </div>
+                        </li>
+                        <li style="display: none">
+                            <i class="sns-type newsletter">Newsletter</i>
+                            <div class="thumb"><img src="img/sample/stories1.png"></div>
+                            <div class="info-wrap">
+                                <a href="#" class="text">
+                                    박서희 작가에게 도자기는 제작 과정에서 들인 수고와 노력이 결과물에 고스란히 드러나는 정직한 사물입니다. 
+                                    조선백자를 현대적으로 재해석한 작업을 이어오고 있는 작가는 전통 성형기법인 물레성형 기법으로 도자기를
+                                </a>
+                                <span class="date">24.06.07 FRI - 24.06.24 MON</span>
+                            </div>
+                        </li>
+
+                        <li style="display: none">
+                            <i class="sns-type insta">Instagram</i>
+                            <div class="thumb"><img src="img/sample/stories1.png"></div>
+                            <div class="info-wrap">
+                                <a href="#" class="text">
+                                    박서희 작가에게 도자기는 제작 과정에서 들인 수고와 노력이 결과물에 고스란히 드러나는 정직한 사물입니다. 
+                                    조선백자를 현대적으로 재해석한 작업을 이어오고 있는 작가는 전통 성형기법인 물레성형 기법으로 도자기를
+                                    박서희 작가에게 도자기는 제작 과정에서 들인 수고와 노력이 결과물에 고스란히 드러나는 정직한 사물입니다. 
+                                    조선백자를 현대적으로 재해석한 작업을 이어오고 있는 작가는 전통 성형기법인 물레성형 기법으로 도자기를
+                                </a>
+                                <span class="date">24.06.07 FRI - 24.06.24 MON</span>
+                            </div>
+                        </li>
+                        <li style="display: none">
+                            <i class="sns-type press">Press</i>
+                            <div class="thumb"><img src="img/sample/stories1.png"></div>
+                            <div class="info-wrap">
+                                <a href="#" class="text">박서희 작가에게 도자기는 제작 과정</a>
+                                <span class="date">24.06.07 FRI - 24.06.24 MON</span>
+                            </div>
+                        </li>
+                        <li style="display: none">
+                            <i class="sns-type press">Press</i>
+                            <div class="thumb"><img src="img/sample/stories1.png"></div>
+                            <div class="info-wrap">
+                                <a href="#" class="text">박서희 작가에게 </a>
+                                <span class="date">24.06.07 FRI - 24.06.24 MON</span>
+                            </div>
+                        </li>
+                        <li style="display: none">
+                            <i class="sns-type blog">Blog</i>
+                            <div class="thumb"><img src="img/sample/stories1.png"></div>
+                            <div class="info-wrap">
+                                <a href="#" class="text">
+                                    박서희 작가에게 도자기는 제작 과정에서 들인 수고와 노력이 결과물에 고스란히 드러나는 정직한 사물입니다. 
+                                    조선백자를 현대적으로 재해석한 작업을 이어오고 있는 작가는 전통 성형기법인 물레성형 기법으로 도자기를
+                                    박서희 작가에게 도자기는 제작 과정에서 들인 수고와 노력이 결과물에 고스란히 드러나는 정직한 사물입니다. 
+                                </a>
+                                <span class="date">24.06.07 FRI - 24.06.24 MON</span>
+                            </div>
+                        </li>
+                        <li style="display: none">
+                            <i class="sns-type insta">Instagram</i>
+                            <div class="thumb"><img src="img/sample/stories1.png"></div>
+                            <div class="info-wrap">
+                                <a href="#" class="text">박서희 작가에게 도자기는 제작 과정에서 들인 수고와 노력이 결과물에 고스란히 드러나는 정직한 사물입니다. </a>
+                                <span class="date">24.06.07 FRI - 24.06.24 MON</span>
+                            </div>
+                        </li>
+
+                        <li style="display: none">
+                            <i class="sns-type blog">Blog</i>
+                            <div class="thumb"><img src="img/sample/stories1.png"></div>
+                            <div class="info-wrap">
+                                <a href="#" class="text">하지훈, 허승희, 박서희 《곁: 일상으로부터》</a>
+                                <span class="date">24.06.07 FRI - 24.06.24 MON</span>
+                            </div>
+                        </li>
+                        <li style="display: none">
+                            <i class="sns-type insta">Instagram</i>
+                            <div class="thumb"><img src="img/sample/stories1.png"></div>
+                            <div class="info-wrap">
+                                <a href="#" class="text">글로리어스의 중심이 되는 인물인 파이와 조이 곁에는 종종 "Running late"라는 이름을 가진 말 캐릭터가 등장합니다.🐴</a>
+                                <span class="date">24.06.07 FRI - 24.06.24 MON</span>
+                            </div>
+                        </li>
+                        <li style="display: none">
+                            <i class="sns-type newsletter">Newsletter</i>
+                            <div class="thumb"><img src="img/sample/stories1.png"></div>
+                            <div class="info-wrap">
+                                <a href="#" class="text">파이와 조이의 주변 곳곳에 놓인 시계들은 대부분 바늘을 지니고 있어 특정한 시간을 가리키는 것처럼 보인다. 그렇다면 이 특정한 시간이 지칭하는 것은 무엇일까? 파이가 말을 타고 움직이는 순간, 공존하는 존재들이 한 자...</a>
+                                <span class="date">24.06.07 FRI - 24.06.24 MON</span>
+                            </div>
+                        </li>
+                        <li style="display: none">
+                            <i class="sns-type press">Press</i>
+                            <div class="thumb"><img src="img/sample/stories1.png"></div>
+                            <div class="info-wrap">
+                                <a href="#" class="text">박서희 작가에게 도자기는 제작 과정에서 들인 수고와 노력이 결과물에 고스란히 드러나는 정직한 사물입니다. 조선백자를 </a>
+                                <span class="date">24.06.07 FRI - 24.06.24 MON</span>
+                            </div>
+                        </li>
+                        <li style="display: none">
+                            <i class="sns-type blog">Blog</i>
+                            <div class="thumb"><img src="img/sample/stories1.png"></div>
+                            <div class="info-wrap">
+                                <a href="#" class="text">
+                                    박서희 작가에게 도자기는 제작 과정에서 들인 수고와 노력이 결과물에 고스란히 드러나는 정직한 사물입니다. 
+                                    조선백자를 현대적으로 재해석한 작업을 이어오고 있는 작가는 전통 성형기법인
+                                </a>
+                                <span class="date">24.06.07 FRI - 24.06.24 MON</span>
+                            </div>
+                        </li>
+                        <li style="display: none">
+                            <i class="sns-type blog">Blog</i>
+                            <div class="thumb"><img src="img/sample/stories1.png"></div>
+                            <div class="info-wrap">
+                                <a href="#" class="text">
+                                    박서희 작가에게 도자기는 제작 과정에서 들인 수고와 노력이 결과물에 고스란히 드러나는 정직한 사물입니다. 
+                                    조선백자를 현대적으로 재해석한 작업을 이어오고 있는 작가는 전통 성형기법인 물레성형 기법으로 도자기를
+                                </a>
+                                <span class="date">24.06.07 FRI - 24.06.24 MON</span>
+                            </div>
+                        </li>
+
+                        <li style="display: none">
+                            <i class="sns-type blog">Blog</i>
+                            <div class="thumb"><img src="img/sample/stories1.png"></div>
+                            <div class="info-wrap">
+                                <a href="#" class="text">
+                                    박서희 작가에게 도자기는 제작 과정에서 들인 수고와 노력이 결과물에 고스란히 드러나는 정직한 사물입니다. 
+                                    조선백자를 현대적으로 재해석한 작업을 이어오고 있는 작가는 전통 성형기법인 물레성형 기법으로 도자기를
+                                    박서희 작가에게 도자기는 제작 과정에서 들인 수고와 노력이 결과물에 고스란히 드러나는 정직한 사물입니다. 
+                                    조선백자를 현대적으로 재해석한 작업을 이어오고 있는 작가는 전통 성형기법인 물레성형 기법으로 도자기를
+                                </a>
+                                <span class="date">24.06.07 FRI - 24.06.24 MON</span>
+                            </div>
+                            
+                        </li>
+                        <li style="display: none">
+                            <i class="sns-type blog">Blog</i>
+                            <div class="thumb"><img src="img/sample/stories1.png"></div>
+                            <div class="info-wrap">
+                                <a href="#" class="text">박서희 작가에게 도자기는 제작 과정</a>
+                                <span class="date">24.06.07 FRI - 24.06.24 MON</span>
+                            </div>
+                        </li>
+                        <li style="display: none">
+                            <i class="sns-type blog">Blog</i>
+                            <div class="thumb"><img src="img/sample/stories1.png"></div>
+                            <div class="info-wrap">
+                                <a href="#" class="text">박서희 작가에게 </a>
+                                <span class="date">24.06.07 FRI - 24.06.24 MON</span>
+                            </div>
+                        </li>
+                        <li style="display: none">
+                            <i class="sns-type blog">Blog</i>
+                            <div class="thumb"><img src="img/sample/stories1.png"></div>
+                            <div class="info-wrap">
+                                <a href="#" class="text">
+                                    박서희 작가에게 도자기는 제작 과정에서 들인 수고와 노력이 결과물에 고스란히 드러나는 정직한 사물입니다. 
+                                    조선백자를 현대적으로 재해석한 작업을 이어오고 있는 작가는 전통 성형기법인 물레성형 기법으로 도자기를
+                                    박서희 작가에게 도자기는 제작 과정에서 들인 수고와 노력이 결과물에 고스란히 드러나는 정직한 사물입니다. 
+                                </a>
+                                <span class="date">24.06.07 FRI - 24.06.24 MON</span>
+                            </div>
+                        </li>
+                        <li style="display: none">
+                            <i class="sns-type blog">Blog</i>
+                            <div class="thumb"><img src="img/sample/stories1.png"></div>
+                            <div class="info-wrap">
+                                <a href="#" class="text">박서희 작가에게 도자기는 제작 과정에서 들인 수고와 노력이 결과물에 고스란히 드러나는 정직한 사물입니다. </a>
+                                <span class="date">24.06.07 FRI - 24.06.24 MON</span>
+                            </div>
+                        </li>
+                        <li style="display: none">
+                            <i class="sns-type newsletter">Newsletter</i>
+                            <div class="thumb"><img src="img/sample/stories1.png"></div>
+                            <div class="info-wrap">
+                                <a href="#" class="text">박서희 작가에게 도자기는 제작 과정에서 들인 수고와 노력이 결과물에 고스란히 드러나는 정직한 사물입니다. </a>
+                                <span class="date">24.06.07 FRI - 24.06.24 MON</span>
+                            </div>
+                        </li>
+                        <li style="display: none">
+                            <i class="sns-type newsletter">Newsletter</i>
+                            <div class="thumb"><img src="img/sample/stories1.png"></div>
+                            <div class="info-wrap">
+                                <a href="#" class="text">박서희 작가에게 도자기는 제작 과정에서 들인 수고와 노력이 결과물에 고스란히 드러나는 정직한 사물입니다. </a>
+                                <span class="date">24.06.07 FRI - 24.06.24 MON</span>
+                            </div>
+                        </li>
+                        <li style="display: none">
+                            <i class="sns-type newsletter">Newsletter</i>
+                            <div class="thumb"><img src="img/sample/stories1.png"></div>
+                            <div class="info-wrap">
+                                <a href="#" class="text">박서희 작가에게 도자기는 제작 과정에서 들인 수고와 노력이 결과물에 고스란히 드러나는 정직한 사물입니다. </a>
+                                <span class="date">24.06.07 FRI - 24.06.24 MON</span>
+                            </div>
+                        </li>
+                        <li style="display: none">
+                            <i class="sns-type newsletter">Newsletter</i>
+                            <div class="thumb"><img src="img/sample/stories1.png"></div>
+                            <div class="info-wrap">
+                                <a href="#" class="text">박서희 작가에게 도자기는 제작 과정에서 들인 수고와 노력이 결과물에 고스란히 드러나는 정직한 사물입니다. </a>
+                                <span class="date">24.06.07 FRI - 24.06.24 MON</span>
+                            </div>
+                        </li>
+                        <li style="display: none">
+                            <i class="sns-type newsletter">Newsletter</i>
+                            <div class="thumb"><img src="img/sample/stories1.png"></div>
+                            <div class="info-wrap">
+                                <a href="#" class="text">박서희 작가에게 도자기는 제작 과정에서 들인 수고와 노력이 결과물에 고스란히 드러나는 정직한 사물입니다. </a>
+                                <span class="date">24.06.07 FRI - 24.06.24 MON</span>
+                            </div>
+                        </li>
+                        <li style="display: none">
+                            <i class="sns-type newsletter">Newsletter</i>
+                            <div class="thumb"><img src="img/sample/stories1.png"></div>
+                            <div class="info-wrap">
+                                <a href="#" class="text">박서희 작가에게 도자기는 제작 과정에서 들인 수고와 노력이 결과물에 고스란히 드러나는 정직한 사물입니다. </a>
+                                <span class="date">24.06.07 FRI - 24.06.24 MON</span>
+                            </div>
+                        </li>
+                        <li style="display: none">
+                            <i class="sns-type newsletter">Newsletter</i>
+                            <div class="thumb"><img src="img/sample/stories1.png"></div>
+                            <div class="info-wrap">
+                                <a href="#" class="text">박서희 작가에게 도자기는 제작 과정에서 들인 수고와 노력이 결과물에 고스란히 드러나는 정직한 사물입니다. </a>
+                                <span class="date">24.06.07 FRI - 24.06.24 MON</span>
+                            </div>
+                        </li>
+                        <li style="display: none">
+                            <i class="sns-type newsletter">Newsletter</i>
+                            <div class="thumb"><img src="img/sample/stories1.png"></div>
+                            <div class="info-wrap">
+                                <a href="#" class="text">박서희 작가에게 도자기는 제작 과정에서 들인 수고와 노력이 결과물에 고스란히 드러나는 정직한 사물입니다. </a>
+                                <span class="date">24.06.07 FRI - 24.06.24 MON</span>
+                            </div>
+                        </li>
+                        <li style="display: none">
+                            <i class="sns-type newsletter">Newsletter</i>
+                            <div class="thumb"><img src="img/sample/stories1.png"></div>
+                            <div class="info-wrap">
+                                <a href="#" class="text">박서희 작가에게 도자기는 제작 과정에서 들인 수고와 노력이 결과물에 고스란히 드러나는 정직한 사물입니다. </a>
+                                <span class="date">24.06.07 FRI - 24.06.24 MON</span>
+                            </div>
+                        </li>
+                        <li style="display: none">
+                            <i class="sns-type newsletter">Newsletter</i>
+                            <div class="thumb"><img src="img/sample/stories1.png"></div>
+                            <div class="info-wrap">
+                                <a href="#" class="text">박서희 작가에게 도자기는 제작 과정에서 들인 수고와 노력이 결과물에 고스란히 드러나는 정직한 사물입니다. </a>
+                                <span class="date">24.06.07 FRI - 24.06.24 MON</span>
+                            </div>
+                        </li>
+                        <li style="display: none">
+                            <i class="sns-type newsletter">Newsletter</i>
+                            <div class="thumb"><img src="img/sample/stories1.png"></div>
+                            <div class="info-wrap">
+                                <a href="#" class="text">박서희 작가에게 도자기는 제작 과정에서 들인 수고와 노력이 결과물에 고스란히 드러나는 정직한 사물입니다. </a>
+                                <span class="date">24.06.07 FRI - 24.06.24 MON</span>
+                            </div>
+                        </li>
+                        <li style="display: none">
+                            <i class="sns-type newsletter">Newsletter</i>
+                            <div class="thumb"><img src="img/sample/stories1.png"></div>
+                            <div class="info-wrap">
+                                <a href="#" class="text">박서희 작가에게 도자기는 제작 과정에서 들인 수고와 노력이 결과물에 고스란히 드러나는 정직한 사물입니다. </a>
+                                <span class="date">24.06.07 FRI - 24.06.24 MON</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="icon-loading" style="display: none;">
+                        <img src="img/icon/icon_loading.png">
+                    </div>
+                </article>
+            </section>
+
+            <a href="#" class="scrl-top"><img src="img/icon/icon_arrow1.png"></a>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <article>
+                <div class="arete-letter">
+                    <form>
+                        <legend>아르떼레터 구독하기</legend>
+                        <p>전시와 작가, 기획경매, 작품에 대한 다양한 콘텐츠를 흥미롭고 신선하게 소개합니다.</p>
+                        <fieldset>
+                            <input type="text" placeholder="이름">
+                            <input type="text" placeholder="이메일">
+                            <button><img src="img/icon/icon_arrow1.png"></button>
+                        </fieldset>
+                        <ul class="checkbox">
+                            <li>
+                                <input type="checkbox">
+                                <label>(필수) <a href="#">개인정보 수집 및 이용</a>에 동의합니다.</label>
+                            </li>
+                            <li>
+                                <input type="checkbox">
+                                <label>(선택) <a href="#">광고성 정보 수신</a>에 동의합니다.</label>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+                <div class="company-info">
+                    <a href="#" class="info-more">arte k</a>
+                    <dl>
+                        <dt>Address</dt>
+                        <dd>2F 26, Apgujeong-ro 42-gil, Gangnamgu, Seoul</dd>
+                    </dl>
+                    <dl class="center">
+                        <dt>Phone</dt>
+                        <dd>+82 02-6203-0101</dd>
+                        <dt>E-mail</dt>
+                        <dd>artist@k-auction.com</dd>
+                        <dt>Kakao</dt>
+                        <dd>arte_k</dd>
+                    </dl>
+                    <dl>
+                        <dt>Opening Hour</dt>
+                        <dd>Mon to Sun 9:30 – 6:30</dd>
+                    </dl>
+                    <div class="family-site">
+                        <span>Family Site</span>
+                        <a href="#"><img src="img/icon/icon_plus.png"></a>
+                    </div>
+                    <div class="sns">
+                        <a href="#"><img src="img/icon/icon_insta.png"></a>
+                        <a href="#"><img src="img/icon/icon_youtube.png"></a>
+                        <a href="#"><img src="img/icon/icon_facebook.png"></a>
+                    </div>
+                    <p class="copyright">arte k © 2023 All Rights Reserved.</p>
+                </div>
+            </article>
+        </footer>
+        <!-- //Footer -->
+    </div>
+
+    <script>
+        function masonryLayout() {
+            const masonryContainerStyle = getComputedStyle(
+                document.querySelector(".stories-sec article ul")
+            );
+            const columnGap = parseInt(
+                masonryContainerStyle.getPropertyValue("column-gap")
+            );
+            const autoRows = parseInt(
+                masonryContainerStyle.getPropertyValue("grid-auto-rows")
+            );
+
+            document.querySelectorAll(".stories-sec article li").forEach((elt) => {
+                elt.style.gridRowEnd = `span ${Math.ceil(
+                    elt.scrollHeight / autoRows + columnGap / autoRows
+                )}`;
+            });
+        }
+
+        masonryLayout();
+        window.addEventListener("resize", masonryLayout);
+
+        $(document).ready(function(){
+            let tabData = '';
+            const tabItem = $('.stories-sec .common-top-tab a')
+            function infiniteData(tabaData){
+                tabItem.each(function(){
+                    if($(this).hasClass('on') === true){
+                        tabData = $(this).attr('data-link');
+                    }
+                });
+            }
+
+            tabItem.click(function(){
+                const clickTabData = $(this).attr('data-link');
+
+                tabItem.removeClass('on');
+                $(this).addClass('on');
+                $('.stories-sec article li').hide();
+
+                if(clickTabData === 'all'){
+                    $('.stories-sec article li:lt(10)').fadeIn();
+                }else{
+                    $(`.stories-sec .sns-type.${clickTabData}`).parent('li:lt(10)').fadeIn();
+                }
+
+                masonryLayout();
+                
+               return false;
+            })
+
+            function infiniteScrl(){
+                $(window).scroll(function () {
+                    infiniteData();
+
+                    const storiesAllHidden = $('.stories-sec article li:hidden');
+                    const storiesOtherDataHidden = $(`.stories-sec .sns-type.${tabData}`).parent('li:hidden');
+
+                    const iconLoad = $('.stories-sec .icon-loading');
+                    const windowWD = $(window).width();
+
+                    if ($(window).scrollTop() + $(window).height() >= $(document).height() - $('footer').outerHeight()) {
+                        
+                        if(tabData === 'all'){
+                            setTimeout(function(){
+                                iconLoad.stop().fadeOut();
+                                storiesAllHidden.slice(0, 5).fadeIn();
+                                masonryLayout();
+                                
+                            }, 700)   
+                            
+                            if(storiesAllHidden.length == 0){
+                                iconLoad.stop().fadeOut();
+                            }else{
+                                iconLoad.stop().fadeIn();
+                            }
+                        }else{
+                            setTimeout(function(){
+                                iconLoad.stop().fadeOut();
+                                storiesOtherDataHidden.slice(0, 5).fadeIn();
+                                masonryLayout();
+                            }, 700)  
+
+                            if(storiesOtherDataHidden.length == 0){
+                                iconLoad.stop().fadeOut();
+                            }else{
+                                iconLoad.stop().fadeIn();
+                            }
+                        }
+                    }else{
+                        return false;
+                    }
+                });
+            }
+
+            infiniteScrl();
+
+            const listFilterItem = $('.stories-sec .list-filter a');
+            listFilterItem.click(function(){
+                listFilterItem.removeClass('on');
+                $(this).addClass('on');
+                $('.stories-sec article ul').toggleClass('horizantal', listFilterItem.filter('.horizontal').hasClass('on'));
+                return false;
+            })
+        })
+    </script>
+</body>
+</html>

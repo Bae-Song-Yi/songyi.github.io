@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아트웍_작품상세</title>
+    <link href="https://fonts.cdnfonts.com/css/helvetica-neue-55" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.9/static/pretendard.css" />
+    <link rel="stylesheet" type="text/css" href="css/font/NotoSansKR.css">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" type="text/css" href="css/palette.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/swiper.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/artworks.css">
+    <script src="javascript/jquery.min.js"></script>
+    <script src="javascript/swiper.js"></script>
+    <script src="javascript/common.js" defer></script>
+    <script src="javascript/artworks.js" defer></script>
+</head>
+<body>
+    <div id="wrap">
+        <!--Header-->
+        <header>
+            <h1><a href="#"><img src="img/logo.png"></a></h1>
+            <a href="#" class="back-btn"><img src="img/icon/icon_arrow.png"></a>
+            <nav>
+                <ul>
+                    <li><a href="#">Exhibitions</a></li>
+                    <li><a href="#">Art Fair</a></li>
+                    <li><a href="#">Marketplace</a></li>
+                    <li><a href="#">Artists</a></li>
+                    <li><a href="#">Story</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+            <div class="util">
+                <a href="#" class="login">Login</a>
+                <a href="#" class="join">Join</a>
+                <a href="#" class="search"></a>
+                <a href="#" class="mo-menu"><img src="img/B/icon_menu.png"></a>
+            </div>
+
+            <!-- 검색폼 -->
+            <div class="search-comp search-form-wrap">
+                <div class="input-area">
+                    <input type="text" placeholder="Search by artist name or artwork tilte">
+                    <a href="#" class="input-remove" style="display: none;"></a>
+                </div>
+                <div class="init-form">
+                    <dl class="recent-search">
+                        <dt>Recent Searches <a href="#" class="remove-btn">Delete All</a></dt>
+                        <dd>
+                            <span>캔디스 주<a href="#" class="icon"><img src="img/icon/icon_close.png"></a></span>
+                            <span>이선근<a href="#" class="icon"><img src="img/icon/icon_close.png"></a></span>
+                            <span>개인전<a href="#" class="icon"><img src="img/icon/icon_close.png"></a></span>
+                        </dd>
+
+                        <!-- 데이터 없을경우 -->
+                        <dd class="no-data" style="display: none;">No recent searches found.</dd>
+                        <!--// 데이터 없을경우 -->
+                    </dl>
+                    <dl class="recommend-search">
+                        <dt>Recommended Searches</dt>
+                        <dd>
+                            <span>캔디스 주</span>
+                            <span>이선근</span>
+                            <span>Time</span>
+                            <span>이정우</span>
+                            <span>완벽한 차원</span>
+                            <span>개인전</span>
+                            <span>한소</span>
+                            <span>데이비드 호크니</span>
+                            <span>서안나</span>
+                        </dd>
+
+                        <!-- 데이터 없을경우 -->
+                        <dd class="no-data" style="display: none;">No recent searches found.</dd>
+                        <!--// 데이터 없을경우 -->
+                    </dl>
+                </div>
+
+                <div class="result-form" style="display: none;">
+                    <ul class="category">
+                        <li class="item">
+                            <a href="#"> 
+                                <span class="name">캔 디스주</span><b class="type">Artists</b>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="#"> 
+                                <span class="name">캔 디스주</span><b class="type">Category</b>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="list">
+                        <li class="item"><a href="#"> <span>검색 자동완성은 이렇게 보여집니다</span></a></li>
+                        <li class="item"><a href="#"> <span>검색 ctrl(command) + alt + enter로 인터랙션 확인해 보세요</span></a></li>
+                    </ul>
+
+                    <!-- 데이터 없을경우 -->
+                    <dd class="no-data" style="display: none;">No recent searches found.</dd>
+                    <!--// 데이터 없을경우 -->
+                </div>
+            </div>
+            <!-- //검색폼 -->
+        </header>
+        <!--//Header-->
+
+        <!-- 모바일 BottomMenu -->
+        <div class="bottom-menu-wrap">
+            <nav class="menu-compt">
+                <a href="#" class="home">
+                    <i class="icon"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#" class="search">
+                    <i class="icon"></i>
+                    <span>Search</span>
+                </a>
+                <a href="#" class="exhibitions">
+                    <i class="icon"></i>
+                    <span>Exhibitions</span>
+                </a>
+                <a href="#" class="marketplace">
+                    <i class="icon"></i>
+                    <span>Marketplace</span>
+                </a>
+                <a href="#" class="my">
+                    <i class="icon"></i>
+                    <span>My</span>
+                </a>
+            </nav>
+        </div>
+        <!--// 모바일 BottomMenu -->
+        
+        <div id="container" class="sub artworks">
+            <div class="breadcrumb">
+                <ul>
+                    <li class="home"><img src="img/icon/icon_home.png"></li>
+                    <li>Artworks</li>
+                    <li class="now">Spotlight</li>
+                </ul>
+            </div>
+
+            <section>
+                <article>
+                    <div class="left-area">
+                        <div class="mb-100">
+                            <div class="work-gallery">
+                                <div class="vertical-slide-wrap">
+                                    <ul class="swiper-wrapper">
+                                        <li class="swiper-slide on"><a href="#"><img src="img/sample/spotlight2.png"></a></li>
+                                        <li class="swiper-slide"><a href="#"><img src="img/sample/spotlight5.png"></a></li>
+                                        <li class="swiper-slide"><a href="#"><img src="img/sample/spotlight3.png"></a></li>
+                                        <li class="swiper-slide"><a href="#"><img src="img/sample/spotlight4.png"></a></li>
+                                    </ul>
+                                </div>
+    
+                                <div class="gallery-slide-wrap">
+                                    <div>
+                                        <ul class="swiper-wrapper">
+                                            <li class="swiper-slide"><a href="#"><img src="img/sample/spotlight2.png"></a></li>
+                                            <li class="swiper-slide"><a href="#"><img src="img/sample/spotlight5.png"></a></li>
+                                            <li class="swiper-slide"><a href="#"><img src="img/sample/spotlight3.png"></a></li>
+                                            <li class="swiper-slide"><a href="#"><img src="img/sample/spotlight4.png"></a></li>
+                                        </ul>
+    
+                                        <div class="control">
+                                            <a href="#" class="prev"><img src="img/icon/icon_slide_arrow_black.png"></a>
+                                            <a href="#" class="next"><img src="img/icon/icon_slide_arrow_black.png"></a>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <button class="scale-btn"><img src="img/icon/icon_scale.png"></button>
+                            </div>
+                            <div class="fix-menu">
+                                <div>
+                                    <div class="work-info">
+                                        <dl>
+                                            <dt>
+                                                <img src="img/sample/spotlight1.png">
+                                            </dt>
+                                            <dd>
+                                                <b class="title">Love Reflection : 관계의 미학</b>
+                                                <span class="period">23.10.07(토) - 23.12.10(일)</span>
+                                            </dd>
+                                        </dl>
+                                        
+                                        <div class="detail-info">
+                                            <div>
+                                                <a href="#" class="name">캔디스 주 <img src="img/icon/icon_arrow.png"></a>
+                                                <i class="birth">b.1983</i>
+                                            </div>
+                                            <div>
+                                                <p class="work-name">Love Reflection 22_02</p>
+                                                <b class="price">2,500,000원</b>
+                                                <span>캔버스에 유채, 아크릴</span>
+                                                <span>60.6 X 72.7cm (20호) ㅣ 2022</span>
+                                                <span>작품 번호 A001234567890</span>
+                                                <div class="icon-btns">
+                                                    <a href="#" class="share"><img src="img/icon/icon_share.png"></a>
+                                                    <a href="#" class="wish-btn"><img src="img/icon/icon_wish.png"></a>
+                                                </div>
+                                                <a href="#" class="kakao-inquiry"><img src="img//icon/icon_sns.png"> 카카오톡으로 구매 문의</a>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                    <ul class="accordion-menu">
+                                        <li>
+                                            <a href="#">Purchase Guide</a>
+                                            <div class="text">
+                                                실물을 반드시 확인한 후 구매 바랍니다. 실물을 확인하지 않아 발생되는 문제에 대한 책임은 구매자에게 있습니다. 컨디션 리포트는 작품을 대상으로 하며 액자, 족자, 병풍, 케이스, 좌대 등 구성품의 상태는 포함하지 않습니다. 또한, 제작된 후 오랜 시간이 경과된 작품에서 확인되는 자연적인 노화와 손상, 오염에 대한 별도의 언급이 없을 수도 있습니다. 컨디션 리포트에 기술된 내용은 작품의 상태에 대한 당사의 주관적 견해이며, 구매자에게 도움을 주기 위한 참고사항으로만 제공됩니다. 온라인에 게시된 작품 이미지는 컨디션 리포트의 일부로서 상태를 확인할 수 있으나 실제 색상 및 밝기와 다르게 보일 수 있고, 컨디션 리포트에 명시되지 않거나 작품 이미지에 표시되지 않은 다른 손상, 복원, 변형이 작품에 있을 수 있습니다. 이와 같은 유의사항을 확인하시고 신중히 구매해 주길 바랍니다.
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="#">Delivery Information</a>
+                                            <div class="text">
+                                                실물을 반드시 확인한 후 구매 바랍니다. 실물을 확인하지 않아 발생되는 문제에 대한 책임은 구매자에게 있습니다. 컨디션 리포트는 작품을 대상으로 하며 액자, 족자, 병풍, 케이스, 좌대 등 구성품의 상태는 포함하지 않습니다. 또한, 제작된 후 오랜 시간이 경과된 작품에서 확인되는 자연적인 노화와 손상, 오염에 대한 별도의 언급이 없을 수도 있습니다. 컨디션 리포트에 기술된 내용은 작품의 상태에 대한 당사의 주관적 견해이며, 구매자에게 도움을 주기 위한 참고사항으로만 제공됩니다. 온라인에 게시된 작품 이미지는 컨디션 리포트의 일부로서 상태를 확인할 수 있으나 실제 색상 및 밝기와 다르게 보일 수 있고, 컨디션 리포트에 명시되지 않거나 작품 이미지에 표시되지 않은 다른 손상, 복원, 변형이 작품에 있을 수 있습니다. 이와 같은 유의사항을 확인하시고 신중히 구매해 주길 바랍니다.
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="#">Exchange and Return</a>
+                                            <div class="text">
+                                                실물을 반드시 확인한 후 구매 바랍니다. 실물을 확인하지 않아 발생되는 문제에 대한 책임은 구매자에게 있습니다. 컨디션 리포트는 작품을 대상으로 하며 액자, 족자, 병풍, 케이스, 좌대 등 구성품의 상태는 포함하지 않습니다. 또한, 제작된 후 오랜 시간이 경과된 작품에서 확인되는 자연적인 노화와 손상, 오염에 대한 별도의 언급이 없을 수도 있습니다. 컨디션 리포트에 기술된 내용은 작품의 상태에 대한 당사의 주관적 견해이며, 구매자에게 도움을 주기 위한 참고사항으로만 제공됩니다. 온라인에 게시된 작품 이미지는 컨디션 리포트의 일부로서 상태를 확인할 수 있으나 실제 색상 및 밝기와 다르게 보일 수 있고, 컨디션 리포트에 명시되지 않거나 작품 이미지에 표시되지 않은 다른 손상, 복원, 변형이 작품에 있을 수 있습니다. 이와 같은 유의사항을 확인하시고 신중히 구매해 주길 바랍니다.
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="#">Artwork Inquiry</a>
+                                            <div class="text">
+                                                실물을 반드시 확인한 후 구매 바랍니다. 실물을 확인하지 않아 발생되는 문제에 대한 책임은 구매자에게 있습니다. 컨디션 리포트는 작품을 대상으로 하며 액자, 족자, 병풍, 케이스, 좌대 등 구성품의 상태는 포함하지 않습니다. 또한, 제작된 후 오랜 시간이 경과된 작품에서 확인되는 자연적인 노화와 손상, 오염에 대한 별도의 언급이 없을 수도 있습니다. 컨디션 리포트에 기술된 내용은 작품의 상태에 대한 당사의 주관적 견해이며, 구매자에게 도움을 주기 위한 참고사항으로만 제공됩니다. 온라인에 게시된 작품 이미지는 컨디션 리포트의 일부로서 상태를 확인할 수 있으나 실제 색상 및 밝기와 다르게 보일 수 있고, 컨디션 리포트에 명시되지 않거나 작품 이미지에 표시되지 않은 다른 손상, 복원, 변형이 작품에 있을 수 있습니다. 이와 같은 유의사항을 확인하시고 신중히 구매해 주길 바랍니다.
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    
+                                    <a href="#" class="inquiry-btn">Detailed Inquiry <img src="img/icon/icon_arrow_gray.png"></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Artwork Information -->
+                        <div class="mb-100 work-desc">
+                            <h5 class="layer-tit">Artwork Information</h5>
+                            <div class="description">
+                                LIFE 시리즈: 에너지 장과 형태의 공명
+                                <br><br>
+                                인간은 끊임없이 자신의 존재의 본질을 탐구하는 데 몰두하며, 과학과 기술의 놀라운 발전은 인류 문명을 변화시키며 더욱 발전시켜 간다. 인공지능, 생명공학 등의 기술 발전의 선봉에서 인간은 물리성과 비물리성, 유기체와 기계, 그리고 금속과 같은 전혀 다른 분야 사이의 경계가 희미해지는 세계에 서 있다. 이러한 현상에 대해 앤디 클라크(Andy Clark) 같은 철학자는 기술은 우리 인간의 정신과 신체의 확장이며, 유기적 생명과 기술의 병합은 그 근본에서부터 인간을 인간으로 만들어주는 본질적 특성이라고 선언한다. 인간은 자연적으로 탄생하는 존재이면서 인공적으로 만들어지는 존재이기 때문이다. 
+                                이러한 관점에 영감을 받아, 작품에서는 중첩되고 서로 얽힌 금속 재질의 고리(Chain)를 통해 생명과 인위적인 요소 사이에서 모호해진 경계를 나타내려 한다. 그리고 더 나아가 현대 사회의 생명과 인공적인 것들 사이의 균형을 찾으려는 노력을 상징한다.
+                                <br><br>
+                                인간은 끊임없이 자신의 존재의 본질을 탐구하는 데 몰두하며, 과학과 기술의 놀라운 발전은 인류 문명을 변화시키며 더욱 발전시켜 간다. 인공지능, 생명공학 등의 기술 발전의 선봉에서 인간은 물리성과 비물리성, 유기체와 기계, 그리고 금속과 같은 전혀 다른 분야 사이의 경계가 희미해지는 세계에 서 있다. 이러한 현상에 대해 앤디 클라크(Andy Clark) 같은 철학자는 기술은 우리 인간의 정신과 신체의 확장이며, 유기적 생명과 기술의 병합은 그 근본에서부터 인간을 인간으로 만들어주는 본질적 특성이라고 선언한다. 인간은 자연적으로 탄생하는 존재이면서 인공적으로 만들어지는 존재이기 때문이다. 
+                                이러한 관점에 영감을 받아, 작품에서는 중첩되고 서로 얽힌 금속 재질의 고리(Chain)를 통해 생명과 인위적인 요소 사이에서 모호해진 경계를 나타내려 한다. 그리고 더 나아가 현대 사회의 생명과 인공적인 것들 사이의 균형을 찾으려는 노력을 상징한다.
+                                
+                                <img src="img/sample/spotlight2.png">
+                                <img src="img/sample/spotlight4.png">
+                            </div>
+                            <a href="#" class="toggle-btn"><span>View more</span> <img src="img/icon/icon_arrow_down.png"></a>
+                        </div>
+                        <!-- //Artwork Information -->
+                        
+                        <!-- Artist Introduction -->
+                        <div class="mb-100 writer-intro">
+                            <h5 class="layer-tit">Artist Introduction</h5>
+                            <div>
+                                <dl>
+                                    <dt><img src="img/sample/artist.png"></dt>
+                                    <dd>
+                                        <b>캔디스 주</b>
+                                        <i>b.1983</i>
+                                    </dd>
+                                    <dd><a href="#">Detailed View</a></dd>
+                                </dl>
+                                <div class="description">
+                                    캔디스 주 작가는 자신이 생각하는 관계의 형상을 금속성을 가진 형체를 통해 표현합니다. 작업 속 반짝이는 금속들은 때로는 반으로 나누어져 단절되어 있기도 하고, 때때로 여러 개가 다양한 모습으로 연결되거나 연쇄적으로 모여 아름다운 형상을 이루기도 합니다.
+                                    멀리서 볼수록 명암이 두드러지고 뚜렷하게 보이는 이 금속들은 작업을 마주하며 다가갈수록 희미하고 경계를 구분지을 수 없는 무수한 선의 집합과 함께 서로가 비친 얽혀진 선들로 표현되어 있는데요. 수많은 선들은 서로를 잇고 경계를 지우며 아름답게 빛나는 하나의 관계의 모습들로 완성되어집니다.
+                                    <br><br>
+                                    제 그림은 금속의 반사 능력(Reflection)을 활용하여 관계(Relationship)와 그 사이의 상호 연결된 경계(Interconnect Boundary)를 표현한 작품입니다. 작품에는 서로 다른 금속 조각들이 상호 작용하며, 이들 사이의 경계는 서로 반사되어 얽혀있는 듯한 공간을 구현합니다. 이러한 구성을 통해 관계의 복잡한 역동성과 경계의 희미함을 그려내고자 합니다.
+                                    즉, 남성/여성, 백인/흑인, 정상인/비정상인, 자아/타자 등의 인간 내에서의 이분법과 타자화를 비판 • 해체하는 데에서 더 나아가, 인간/기계, 인간/생물, 인간/비인간 등의 경계에 대해 질문을 하는 작업을 하고 있습니다.
+                                </div>
+                                <a href="#" class="toggle-btn"><span>View more</span> <img src="img/icon/icon_arrow_down.png"></a>
+                            </div>
+                        </div>
+                        <!-- //Artist Introduction -->
+
+                        <!-- Other Artworks by the Artist -->
+                        <div class="work-grid-type">
+                            <h5 class="layer-tit">Other Artworks by the Artist<a href="#" class="more-btn"> View all</a></h5>
+                            <div class="list-slide-wrap">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide">
+                                        <a href="#" class="img">
+                                            <img src="img/sample/overview2.png">
+                                            <i class="icon-wish"></i>
+                                        </a>
+                                        <span class="name">김물길</span>
+                                        <p class="work-tit">Green Curtain</p>
+                                        <b class="price">360,000원</b>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#" class="img">
+                                            <img src="img/sample/overview2.png">
+                                            <i class="icon-wish"></i>
+                                        </a>
+                                        <span class="name">김물길</span>
+                                        <p class="work-tit">Green Curtain</p>
+                                        <b class="price">360,000원</b>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#" class="img">
+                                            <img src="img/sample/overview2.png">
+                                            <i class="icon-wish"></i>
+                                        </a>
+                                        <span class="name">김물길</span>
+                                        <p class="work-tit">Green Curtain</p>
+                                        <b class="price">360,000원</b>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#" class="img">
+                                            <img src="img/sample/overview2.png">
+                                            <i class="icon-wish"></i>
+                                        </a>
+                                        <span class="name">김물길</span>
+                                        <p class="work-tit">Green Curtain</p>
+                                        <b class="price">360,000원</b>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#" class="img">
+                                            <img src="img/sample/overview2.png">
+                                            <i class="icon-wish"></i>
+                                        </a>
+                                        <span class="name">김물길</span>
+                                        <p class="work-tit">Green Curtain</p>
+                                        <b class="price">360,000원</b>
+                                    </li>
+                                </ul>
+
+                                <div class="scroll-bar"></div>
+                            </div>
+                        </div>
+                        <!-- //Other Artworks by the Artist -->
+                    </div>
+                </article>
+            </section>
+
+            <a href="#" class="scrl-top"><img src="img/icon/icon_arrow1.png"></a>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <article>
+                <div class="arete-letter">
+                    <form>
+                        <legend>아르떼레터 구독하기</legend>
+                        <p>전시와 작가, 기획경매, 작품에 대한 다양한 콘텐츠를 흥미롭고 신선하게 소개합니다.</p>
+                        <fieldset>
+                            <input type="text" placeholder="이름">
+                            <input type="text" placeholder="이메일">
+                            <button><img src="img/icon/icon_arrow1.png"></button>
+                        </fieldset>
+                        <ul class="checkbox">
+                            <li>
+                                <input type="checkbox">
+                                <label>(필수) <a href="#">개인정보 수집 및 이용</a>에 동의합니다.</label>
+                            </li>
+                            <li>
+                                <input type="checkbox">
+                                <label>(선택) <a href="#">광고성 정보 수신</a>에 동의합니다.</label>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+                <div class="company-info">
+                    <a href="#" class="info-more">arte k</a>
+                    <dl>
+                        <dt>Address</dt>
+                        <dd>2F 26, Apgujeong-ro 42-gil, Gangnamgu, Seoul</dd>
+                    </dl>
+                    <dl class="center">
+                        <dt>Phone</dt>
+                        <dd>+82 02-6203-0101</dd>
+                        <dt>E-mail</dt>
+                        <dd>artist@k-auction.com</dd>
+                        <dt>Kakao</dt>
+                        <dd>arte_k</dd>
+                    </dl>
+                    <dl>
+                        <dt>Opening Hour</dt>
+                        <dd>Mon to Sun 9:30 – 6:30</dd>
+                    </dl>
+                    <div class="family-site">
+                        <span>Family Site</span>
+                        <a href="#"><img src="img/icon/icon_plus.png"></a>
+                    </div>
+                    <div class="sns">
+                        <a href="#"><img src="img/icon/icon_insta.png"></a>
+                        <a href="#"><img src="img/icon/icon_youtube.png"></a>
+                        <a href="#"><img src="img/icon/icon_facebook.png"></a>
+                    </div>
+                    <p class="copyright">arte k © 2023 All Rights Reserved.</p>
+                </div>
+            </article>
+        </footer>
+        <!-- //Footer -->
+    </div>
+</body>
+</html>
