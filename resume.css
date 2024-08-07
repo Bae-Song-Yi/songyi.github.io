@@ -51,10 +51,6 @@ a {
   transition: color 0.3s ease;
 }
 
-a:hover {
-  color: #F76E33;
-}
-
 h1 {
   font-size: 4rem;
   line-height: 1.3;
