@@ -375,6 +375,7 @@ header h1 a{
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     counter-reset: number;
+    margin-top: 100px;
 }
 
 .work-sec .list li .mo-img{
@@ -674,6 +675,10 @@ header h1 a{
         font-size: 40px;
     }
 
+    .work-sec .list{
+        margin-top: 40px
+    }
+
     .work-sec .list li{
         padding: 60px 10px 50px;
     }
@@ -703,7 +708,7 @@ header h1 a{
 
     .work-sec .list .desc {
         font-size: 14px;
-        margin-top: 14px;
+        margin-top: 24px;
         line-height: 1.7;
     }
 
@@ -717,7 +722,7 @@ header h1 a{
         position: static;
         flex-direction: row;
         margin-bottom: 0;
-        margin-top: 40px;
+        margin-top: 60px;
         justify-content: space-between;
     }
 
