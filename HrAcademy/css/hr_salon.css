@@ -1,0 +1,59 @@
+﻿@charset "utf-8";
+.hrSalonTop{height:920px;background:url(../images/hr_salon_top_bg_1920.png) no-repeat center center;background-size:cover;position:relative;margin-bottom:50px}
+.hrSalonTop > article{text-align:center;padding-top:140px}
+.hrSalonTop .flex-viewport{overflow:hidden}
+.hrSalonTop .hr_logo p{display:block;font-size:20px;line-height:30px;color:#fff;font-weight:300;margin-bottom:50px}
+.hrSalonTop .hr_logo p b{font-weight:700}
+.hrSalonTop .hr_logo img.for_mo{display:none}
+.hrSalonTop img.mal{margin-bottom:20px}
+.hrSalonTop .ban1 .info{width:469px;margin:0 auto;color:#fff}
+.hrSalonTop .ban1 .text{font-size:18px;line-height:28px;font-weight:300}
+.hrSalonTop .ban1 .tit{margin:20px 0;font-size:18px;font-weight:700;line-height:27px}
+.hrSalonTop .ban2 .text{font-size:18px;line-height:28px;font-weight:300;color:#fff}
+.hrSalonTop .ban2 ol{width: 100.6666%;margin-left: -.6666%;margin-top: 15px;display:inline-block}
+.hrSalonTop .ban2 ol li{float:left;width:16%;margin-left:.6666%;background: rgba(0,0,0,.5);border-radius:10px;padding:20px;text-align:left}
+.hrSalonTop .ban2 .tit span{display: block;color: #f8ac49;font-size: 14px;font-weight: 300;}
+.hrSalonTop .ban2 .tit div{color: #fff;font-size:18px;padding:0 0 20px;height:112px;overflow: hidden;line-height:25px;font-weight:300}
+.hrSalonTop .ban2 .desc{border-top: 1px solid rgba(255,255,255,.2);padding: 10px 0 0;color:#fff}
+.hrSalonTop .ban2 .desc span{font-size:14px;font-weight:300}
+.hrSalonTop .ban2 .desc b{font-weight:500}
+.hrSalonTop .ban3 .info{color:#fff}
+.hrSalonTop .ban3 .tit{font-size:18px;line-height:28px;font-weight:700}
+.hrSalonTop .ban3 .tit.yellow{color:#ffae3e;margin-bottom:20px}
+.hrSalonTop .ban3 .text{font-size:18px;line-height:27px;margin-bottom:20px;font-weight:300}
+.hrSalonTop .ban3 .text i{font-style:italic}
+.hrSalonTop .flex-control-nav{width:100%;position:absolute;left:0;bottom:70px}
+.hrSalonTop .flex-control-nav li{display:inline-block;width:40px;height:4px;margin:0 5px}
+.hrSalonTop .flex-control-nav span{display:none}
+.hrSalonTop .flex-control-nav a{display:block;height:4px;background:rgba(255,255,255,0.4);cursor:pointer}
+.hrSalonTop .flex-control-nav a.flex-active{background:#ffae3e}
+@media all and (max-width:1024px) {
+    .hrSalonTop{height:920px;background:url(../images/hr_salon_top_bg_1024.png) no-repeat center center;background-size:cover}
+    .hrSalonTop .ban2 ol{padding:0 20px}
+    .hrSalonTop .ban3 .info{padding:0 20px}
+}
+@media all and (max-width:768px) {
+    .hrSalonTop{height:780px;background:url(../images/hr_salon_top_bg_768.png) no-repeat center center;background-size:cover;margin-bottom:40px}
+    .hrSalonTop > article{padding-top:90px}
+    .hrSalonTop .hr_logo img.for_mo{display:inline}
+    .hrSalonTop .hr_logo img.for_pc{display:none}
+    .hrSalonTop .hr_logo p{font-size:16px;line-height:22px;margin-bottom:15px}
+    .hrSalonTop img.mal{margin-bottom:10px;max-width:100%}
+    .hrSalonTop .ban1 .info{width:352px}
+    .hrSalonTop .ban1 .text{font-size:15px;line-height:22px}
+    .hrSalonTop .ban1 .tit{font-size:15px;line-height:20px;margin:15px 0}
+    .hrSalonTop .ban2 .text{font-size:15px;line-height:22px}
+    .hrSalonTop .ban2 ol{width:100.3333%;margin-left: -.3333%;}
+    .hrSalonTop .ban2 ol li{padding:10px;width:33%;margin-left:.3333%;margin-top:.3333%}
+    .hrSalonTop .ban2 .tit span{font-size: 13px;}
+    .hrSalonTop .ban2 .tit div{font-size:14px;line-height: 20px;height: 60px;padding-bottom: 10px;}
+    .hrSalonTop .ban2 .desc span{font-size:13px}
+    .hrSalonTop .ban3 .tit{font-size:15px;line-height:22px}
+    .hrSalonTop .ban3 .tit.yellow{color:#ffae3e;margin-bottom:15px}
+    .hrSalonTop .ban3 .text{font-size:15px;line-height:25px;margin-bottom:15px}
+}
+@media all and (max-width:520px) {
+    .hrSalonTop{margin-bottom:20px}
+    .hrSalonTop > article{padding-top:120px}
+    .hrSalonTop .ban1 .info{width:100%;padding:0 20px}
+}

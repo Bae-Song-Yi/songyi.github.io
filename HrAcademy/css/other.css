@@ -1,0 +1,443 @@
+﻿@charset "utf-8";
+/*회사소개(공통)*/
+.company.sub .topBanner .tab li{width:20%}
+.company h3.p_tit{text-align:center;line-height:1;font-size:40px;color:#000;width:100%;display:inline-block;margin-bottom:40px;margin-top:10px}
+.company .centerLink{width:100%;display:inline-block;margin-bottom:30px}
+.company .centerLink a{width:50%;float:left;text-align:center;border:1px solid #e9e9e9;line-height:50px;font-size:16px}
+.company .centerLink a.on{border-bottom:2px solid #ffae3e;color:#ffae3e;font-weight:700}
+.company .depMenu > ul{display:none!important}
+.company h3.p_tit_mo{display:none}
+/*회사소개 - About us*/
+.aboutUs .topTitle{height:668px;background:url(../images/img_about_1920.jpg) no-repeat center center;background-size:cover;position:relative}
+.aboutUs .topTitle > div{width:100%;position:absolute;text-align:center;top:50%;left:0;transform:translateY(-50%)}
+.aboutUs .topTitle h5{width:290px;height:138px;text-indent:-9999px;background:url(../images/logo_white_b.png) no-repeat center center;display:inline-block}
+.aboutUs .topTitle p{width:100%;display:inline-block}
+.aboutUs .topTitle p.b_text{font-size:42px;line-height:60px;color:#fff;font-weight:800;margin:30px 0 25px 0}
+.aboutUs .topTitle p.b_text span{color:#ffae3e}
+.aboutUs .topTitle p.s_text{color:#fff;font-size:18px;line-height:26px}
+.aboutUs .topTitle p.s_text span{color:#ffae3e}
+.aboutUs .topTitle p.s_text.t2{margin:15px 0 20px 0}
+.aboutUs .topTitle p.s_text.t3{margin-bottom:20px;font-size:22px;font-weight:700}
+.aboutUs .introduce{text-align:center}
+.aboutUs .introduce p{width:100%;display:inline-block;color:#373737}
+.aboutUs .introduce p.img_tit1{margin:80px 0 30px 0;height:60px;background:url(../images/about_us_text1_pc.png) no-repeat center center;text-indent:-9999px}
+.aboutUs .introduce p.text{font-size:18px;line-height:26px}
+.aboutUs .introduce p.text span{color:#ffae3e}
+.aboutUs .introduce p.text.t5{margin:40px 0 45px 0}
+.aboutUs .introduce p.text.t5 br{display:none}
+.aboutUs .ballon{width:100%;display:inline-block}
+.aboutUs .ballon li{display:inline-block}
+.aboutUs .ballon li:first-child{float:left}
+.aboutUs .ballon li:last-child{float:right}
+.aboutUs .ballon li img.tablet,
+.aboutUs .ballon li img.mobile{display:none}
+.aboutUs .introduce p.img_tit2{margin-top:82px;height:60px;background:url(../images/about_us_text2_pc.png) no-repeat center center;text-indent:-9999px}
+.aboutUs .introduce p.text.t6{margin:30px 0}
+.aboutUs .tile_pc{width:100%;display:inline-block;position:relative;line-height:0}
+.aboutUs .tile_pc .left{width:66.66%;float:left}
+.aboutUs .tile_pc .left > ul{width:100%;display:inline-block}
+.aboutUs .tile_pc .left > ul li{width:50%;float:left}
+.aboutUs .tile_pc a{display:block;line-height:0;box-shadow:-1px -1px 4px rgba(0,0,0,0.25);position:relative}
+.aboutUs .tile_pc a:before{content:'';width:0;height:0;border-top:0 solid transparent;border-left:40px solid #ffae3e;border-bottom:40px solid transparent;position:absolute;top:50%;box-shadow:-4px -4px 4px rgba(0,0,0,0.25)}
+.aboutUs .tile_pc .bx1 a:before{left:-20px;transform:translateY(-50%) rotate(-45deg)}
+.aboutUs .tile_pc .bx2 a:before{right:-20px;transform:translateY(-50%) rotate(-225deg)}
+.aboutUs .tile_pc .bx4 a:before{left:-20px;transform:translateY(-50%) rotate(-45deg)}
+.aboutUs .tile_pc img{width:100%}
+.aboutUs .tile_pc .right{width:33.33%;float:left}
+.aboutUs .tile_pc .right img{width:100%}
+.aboutUs .tile_pc .bottom{width:100%;display:inline-block}
+.aboutUs .tile_pc .bottom ul{width:100%;display:inline-block}
+.aboutUs .tile_pc .bottom img{width:100%}
+.aboutUs .tile_pc .bottom ul li:first-child{width:66.66%;float:left}
+.aboutUs .tile_pc .bottom ul li:last-child{width:33.33%;float:left}
+.aboutUs .tile_pc img.tablet{display:none}
+.aboutUs .tile_mo{display:none}
+.aboutUs .mateStory{background:#f5f5f5}
+.aboutUs .mateStory h5{margin:50px 0;font-size:40px;line-height:58px;font-weight:500;width:100%;display:inline-block;text-align:center;color:#000}
+.aboutUs .mateStory h5 span{display:block}
+.aboutUs .mateStory h5 br{display:none}
+.aboutUs .mateStory ul.area{width:103%;display:inline-block}
+.aboutUs .mateStory ul.area > li{width:30.3333%;float:left;margin-right:3%;margin-bottom:3%;border:1px solid #e9e9e9;background:#fff}
+.aboutUs .mateStory ul.area > li:nth-child(3n){margin-right:0}
+.aboutUs .mateStory ul.area > li a{display:block;color:#3c3a39}
+.aboutUs .mateStory .thumb{height:260px;position:relative;background-position:center center;background-repeat:no-repeat;background-size:cover}
+.aboutUs .mateStory .tit{min-height:52px;padding:0 20px;margin:17px 0;font-size:18px;line-height:26px;letter-spacing:-1px}
+.aboutUs .mateStory .tit b{font-size:14px;color:#9e9e9e;font-weight:normal}
+.aboutUs .mateStory .text{padding:0 20px;margin-bottom:20px;height:46px;font-size:16px;color:#52504f;line-height:24px;letter-spacing:-1px;overflow:hidden;display:block; display:-webkit-box;text-overflow:ellipsis;-ms-text-overflow:ellipsis;-webkit-box-orient:vertical;-webkit-line-clamp:2;}
+.aboutUs .mateStory .review_name{padding:20px;font-size:18px;line-height:26px;color:#ffae3e;text-decoration:underline;padding-bottom:0;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+.aboutUs .mateStory .review_tit{padding:20px 20px 13px 20px;padding-top:0;font-size:18px;font-weight:700;color:#3c3a39}
+.aboutUs .mateStory .review_text{padding:0 20px;margin-bottom:20px;color:#52504f;font-size:16px;line-height:24px;overflow:hidden;display:block;display:-webkit-box;text-overflow:ellipsis;-ms-text-overflow:ellipsis;-webkit-box-orient:vertical;-webkit-line-clamp:3;}
+.aboutUs .mateStory .review_score{padding:20px}
+.aboutUs .mateStory .review_score .star{width:20px;height:20px;display:inline-block;vertical-align:middle;background:url(../images/icon_star_line_20.png) no-repeat}
+.aboutUs .mateStory .review_score .star.on{vertical-align:middle;background:url(../images/icon_star_fill_20.png) no-repeat}
+.aboutUs .mateStory .date{padding:0 20px;line-height:52px;position:relative;font-size:16px;color:#52504f;border-top:1px solid #e9e9e9}
+.aboutUs .mateStory .date i{position:absolute; top:0; right:0; display:block; width:52px; height:52px; background:url(../images/gallery_view_ico.png) no-repeat center;  transition:all .3s;-webkit-transition:all .3s; }
+.aboutUs .mateStory .date.review{color:#9e9e9e}
+.aboutUs .mateStory .date.review span{margin-right:5px}
+.aboutUs .mateStory ul.area > li a:hover .date i{background:#f8ac49 url(../images/arrow_white2.png) no-repeat center;}
+.aboutUs .mateStory .btn{text-align:center;margin:13px 0 50px 0;width:100%;display:inline-block}
+.aboutUs .mateStory .btn a{display:inline-block;width:280px;line-height:40px;border-radius:8px;background:#ffae3e;color:#fff;font-size:16px;font-weight:500}
+.aboutUs .add_link article h5{margin:40px 0;font-size:40px;line-height:58px;font-weight:500;width:100%;display:inline-block;text-align:center;color:#000}
+.aboutUs .add_link .down_link{width:100%;display:inline-block;margin-bottom:50px}
+.aboutUs .add_link .down_link a{width:590px;height:207px;position:relative;background:#434343;color:#fff}
+.aboutUs .add_link .down_link a:first-child{float:left}
+.aboutUs .add_link .down_link a:last-child{float:right}
+.aboutUs .add_link .down_link a p{position:absolute;left:0;top:50%;transform:translateY(-50%);width:100%;text-align:center}
+.aboutUs .add_link .down_link a span{display:block;text-align:center;font-size:14px;line-height:16px;margin-top:32px}
+.aboutUs .add_link .down_link a span img{margin-right:5px;vertical-align:bottom}
+.aboutUs .add_link .sns{height:330px;background:url(../images/about_banner_bottom.png) no-repeat center center;background-size:cover;position:relative}
+.aboutUs .add_link .sns:before{content:'';position:absolute;left:50%;transform:translateX(-50%);top:0;width:186px;height:50px;background:url(../images/about_arrow_1920.png)}
+.aboutUs .add_link .sns > div{width:100%;position:absolute;left:0;top:50%;transform:translateY(-50%);text-align:center}
+.aboutUs .add_link .sns h5{margin-bottom:40px;font-size:40px;line-height:58px;font-weight:700;width:100%;display:inline-block;text-align:center;color:#ffae3e}
+.aboutUs .add_link .sns ul{display:inline-block}
+.aboutUs .add_link .sns li{display:inline-block;margin:0 13px}
+.aboutUs .add_link .sns a{width:77px;height:77px;position:relative;border-radius:100%;display:inline-block;text-indent:-9999px}
+.aboutUs .add_link .sns a.youtube{background:#fff url(../images/icon_fixbanner_facebook.png) no-repeat center center}
+.aboutUs .add_link .sns a.facebook{background:#fff url(../images/icon_fixbanner_youtube.png) no-repeat center center}
+.aboutUs .add_link .sns a.kakao{background:#fff url(../images/icon_kakao.png) no-repeat center center}
+.aboutUs .add_link .sns a.blog{background:#fff url(../images/icon_blog.png) no-repeat center center}
+/*회사소개 - 오시는길*/
+.address img.tablet,
+.address img.mobile{display:none}
+.address .map{margin:-30px auto 0 auto!important}
+.address .map >img{width:100%} 
+.address .map div{width:100%;display:inline-block;margin-top:30px}
+.address .map ul{width:50%;float:left;height:190px;position:relative}
+.address .map ul:first-child{padding-right:40px}
+.address .map ul:last-child{border-left:1px solid #e9e9e9;padding-left:40px}
+.address .map li.tit{font-size:20px;line-height:29px;margin-bottom:30px;font-weight:700;color:#000}
+.address .map li.text{font-size:16px;line-height:23px;color:#373737}
+.address .map li.btn{position:absolute;width:100%;bottom:0;left:0}
+.address .map ul:last-child li.btn{padding-left:40px}
+.address .map a{width:175px;line-height:43px;border:1px solid #ffae3e;display:inline-block;text-align:center;color:#ffae3e;font-size:16px;font-weight:700}
+.address .part{margin-top:80px!important}
+.address h5.part_tit{font-size:40px;line-height:58px;font-weight:700;margin-bottom:30px;text-align:center;color:#000}
+.address .part ul{width:100%;display:inline-block}
+.address .part li{width:50%;float:left}
+.address .part li.left{padding-right:10px}
+.address .part li.right{padding-left:10px}
+.address .part img{width:100%}
+.address .part .text{width:100%;display:block;text-align:center;font-size:16px;line-height:23px;color:#373737;margin-top:20px}
+/*Contact Us(공통)*/
+.contactUs.sub .topBanner .tab li{width:20%}
+.contactUs h3.p_tit{text-align:center;line-height:1;font-size:40px;color:#000;width:100%;display:inline-block;margin-bottom:40px;margin-top:10px}
+.contactUs .centerLink{width:100%;display:inline-block;margin-bottom:30px}
+.contactUs .centerLink a{width:33.33%;float:left;text-align:center;border:1px solid #e9e9e9;line-height:50px;font-size:16px}
+.contactUs .centerLink a.on{border-bottom:2px solid #ffae3e;color:#ffae3e;font-weight:700}
+.contactUs .depMenu > ul{display:none!important}
+.contactUs h3.p_tit_mo{display:none}
+/*Contact Us - 카카오 플친*/
+.kakaoPlus .topImage{margin:-30px auto 0 auto!important}
+.kakaoPlus .area{width:100%;position:relative;background:#ffd205;height:900px;} 
+.kakaoPlus .area > div{width:100%;position:absolute;left:0;top:50%;transform:translateY(-50%);text-align:center}
+.kakaoPlus .topImage > div p{width:100%;display:inline-block}
+.kakaoPlus .topImage .hr_logo{margin:28px 0 18px 0}
+.kakaoPlus .topImage .copy1{font-size:26px;line-height:38px;color:#2a1c0b;font-weight:700;margin-bottom:50px}
+.kakaoPlus .topImage .copy2{font-size:46px;line-height:67px;color:#2a1c0b;font-weight:400}
+.kakaoPlus .topImage .copy2 b{font-weight:700}
+.kakaoPlus .topImage .copy3{font-size:62px;line-height:90px;color:#2a1c0b;font-weight:400}
+.kakaoPlus .topImage .copy3 b{font-weight:700}
+.kakaoPlus .topImage .ballon{margin-top:25px;height:190px;background:url(../images/kakaoballon_b.png) no-repeat center center;font-size:20px;padding-top:63px;line-height:29px;color:#373737}
+.kakaoPlus .topImage img.mobile{display:none}
+.kakaoPlus .step{text-align:center}
+.kakaoPlus .step h5{width:100%;display:inline-block;font-weight:400;font-size:30px;line-height:55px;color:#2a1c0b;margin:40px auto 50px auto}
+.kakaoPlus .step h5 b{height:55px;font-weight:700;padding-left:65px;background:url(../images/icon_kakao_55.png) no-repeat left center;display:inline-block}
+.kakaoPlus .step ul{width:100%;display:inline-block}
+.kakaoPlus .step li{display:inline-block}
+.kakaoPlus .step li:first-child{float:left}
+.kakaoPlus .step li:last-child{float:right}
+.kakaoPlus .step li span{display:block;font-size:16px;line-height:23px;color:#3c3a39;margin-top:20px}
+.kakaoPlus .step img.tablet,
+.kakaoPlus .step img.mobile{display:none}
+/*Contact Us - 위탁교육 문의*/
+.consignment .info{margin:-30px auto 80px auto!important;text-align:center}
+.consignment div.top_text{font-size:18px;line-height:26px;color:#3c3a39;margin-bottom:90px}
+.consignment .slogan{height:214px;position:relative}
+.consignment .slogan i{position:absolute;left:50%;transform:translateX(-50%);top:-50px}
+.consignment .slogan i img.mobile{display:none}
+.consignment .slogan > div{width:100%;position:absolute;left:0;bottom:35px}
+.consignment .slogan h5{font-size:40px;line-height:54px;font-weight:700;color:#ffae3e;margin-bottom:10px}
+.consignment .slogan p{font-size:18px;color:#fff;line-height:26px;font-weight:300}
+.consignment .info h6{font-size:22px;font-weight:700;color:#52504f;margin:40px 0 20px 0}
+.consignment .info h6 span{color:#ffae3e}
+.consignment .info p.s_text{font-size:18px;line-height:26px;color:#52504f;margin-bottom:15px}
+.consignment .info ul.tags{margin:5px 0}
+.consignment .info ul.tags li{display:inline-block;margin:5px 4px}
+.consignment .info ul.tags li span{display:inline-block;padding:9px 10px;border:1px solid #e9e9e9;border-radius:4px;font-size:16px;color:#52504f}
+.consignment .info .btns{margin-top:35px}
+.consignment .info .btns a{display:inline-block;width:300px;text-align:center;line-height:55px;color:#fff;border-radius:4px;font-size:18px;font-weight:700;margin:0 8px}
+.consignment .info .btns a img{margin-right:8px}
+.consignment .info .btns a.btn1{background:#ffae3e}
+.consignment .info .btns a.btn2{background:#373737}
+.consignment .info.part2{margin:130px auto 80px auto!important}
+.consignment .part1 .slogan{background:url(../images/edu_banner_1_1920.png) no-repeat center center;background-size:cover}
+.consignment .part2 .slogan{background:url(../images/edu_banner_2_1920.png) no-repeat center center;background-size:cover}
+.consignment .enterAsk{line-height:1;background:#ebe9e9;display:none}
+.consignment .enterAsk form{width:1200px;margin:0 auto;display:inline-block}
+.consignment .enterAsk h5{font-size:30px;line-height:43px;font-weight:700;color:#000;margin:60px 0 50px}
+.consignment .enterAsk th{width:180px;padding:10px 0;font-size:16px;font-weight:400;color:#3c3a39;text-align:left;line-height:23px}
+.consignment .enterAsk th i{color:#ffae3e}
+.consignment .enterAsk td{padding:10px 0;text-align:left}
+.consignment .enterAsk input[type="text"]{width:220px;height:35px;padding:7px 10px;background:#fff;border:none}
+.consignment .enterAsk .cal_select{}
+.consignment .enterAsk .cal_select .date{display:inline-block;position:relative}
+.consignment .enterAsk .cal_select button{position:absolute;border:none;right:5px;top:50%;transform:translateY(-50%);width:26px;height:26px;text-indent:-9999px;background:url(../images/img_calendar_32.png)}
+.consignment .enterAsk .cal_select span{display:inline-block;margin:0 10px}
+.consignment .enterAsk .cal_select span.yellow_text{color:#EB972A;font-size:16px;font-weight:400}
+.consignment .enterAsk .place input[type="text"]{width:100%}
+.consignment .enterAsk textarea{height:100px;width:100%;border:none;padding:15px 10px;border:none;resize:none;background:#fff;font-size:16px}
+.consignment .enterAsk button.refresh{width:120px;height:35px;background:#bdbdbd;border-radius:6px;color:#fff;border:none;margin:0 10px;font-weight:700}
+.consignment .enterAsk .btn_area{margin:35px 0 40px 0}
+.consignment .enterAsk .btn_area button{width:330px;height:55px;border:none;color:#fff;background:#3c3a39;border-radius:6px;font-size:20px;font-weight:700}
+
+/*Contact Us - 강사지원*/
+.partnership .imgArea{margin:-30px auto 0 auto!important;text-align:center}
+.partnership img.tablet,
+.partnership img.mobile{display:none}
+@media all and (max-width:1024px) {
+    /*회사소개(공통)*/
+    .company h3.p_tit{font-size:30px;margin-bottom:35px}
+    .company .centerLink {padding:0 20px}
+    /*회사소개 - About us*/
+    .aboutUs .topTitleWrap{padding:0 20px}
+    .aboutUs .topTitle{background:url(../images/img_about_1024.jpg) no-repeat center center;background-size:cover}
+    .aboutUs .introduce p.img_tit1{margin:50px 0 20px 0;height:40px;background:url(../images/about_us_text1_tablet.png) no-repeat center center}
+    .aboutUs .introduce p.text.t2{margin:20px 0 0 0}
+    .aboutUs .introduce p.text.t5{margin:23px 0 43px 0}
+    .aboutUs .ballon{display:table}
+    .aboutUs .ballon li{display:table-cell;width:33.33%;padding:0 10px}
+    .aboutUs .ballon li img{width:100%}
+    .aboutUs .ballon li:first-child{float:none;padding-left:20px}
+    .aboutUs .ballon li:nth-child(2){padding:0 15px}
+    .aboutUs .ballon li:last-child{float:none;padding-right:20px}
+    .aboutUs .ballon li img.pc,
+    .aboutUs .ballon li img.mobile{display:none}
+    .aboutUs .ballon li img.tablet{display:inline}
+    .aboutUs .introduce p.img_tit2{margin-top:50px;height:40px;background:url(../images/about_us_text2_tablet.png) no-repeat center center;text-indent:-9999px}
+    .aboutUs .introduce p.text.t6{margin:20px 0 30px 0}
+    .aboutUs .tile_pc{padding:0 20px}
+    .aboutUs .tile_pc img.tablet{display:block}
+    .aboutUs .tile_pc img.pc{display:none}
+    .aboutUs .mateStory h5{font-size:30px;line-height:44px;margin:50px 0 80px 0}
+    .aboutUs .mateStory > article{padding:0 20px}
+    .aboutUs .mateStory .thumb{height:331px}
+    .aboutUs .mateStory ul.area{width:100%}
+    .aboutUs .mateStory ul.area > li{width:47%}
+    .aboutUs .mateStory ul.area > li:nth-child(3n){margin-right:auto}
+    .aboutUs .mateStory ul.area > li:nth-child(odd){margin-right:3%}
+    .aboutUs .mateStory ul.area > li:nth-child(even){margin-right:0}
+    .aboutUs .add_link article{padding:0 20px;margin:0!important}
+    .aboutUs .add_link article h5{font-size:30px;line-height:44px;margin:30px 0}
+    .aboutUs .add_link .down_link a{width:49%}
+    .aboutUs .add_link .sns{background:url(../images/about_banner_bottom_1024.png) no-repeat center center;background-size:cover}
+    .aboutUs .add_link .sns:before{width:100px;height:50px;background:url(../images/about_arrow_1024.png)}
+    .aboutUs .add_link .sns h5{margin-bottom:40px;font-size:30px;line-height:43px}
+    /*회사소개 - 오시는길*/
+    .address img.pc,
+    .address img.mobile{display:none}
+    .address img.tablet{display:block}
+    .address .map{padding:0 20px;margin:35px auto 0!important}
+    .address .map li.tit{margin-bottom:18px}
+    .address .map ul{height:196px}
+    .address .part{padding:0 20px}
+    .address h5.part_tit{font-size:30px;line-height:43px}
+    /*Contact Us(공통)*/
+    .contactUs h3.p_tit{font-size:30px;margin-bottom:35px}
+    .contactUs .centerLink {padding:0 20px}
+    /*Contact Us - 카카오 플친*/
+    .kakaoPlus .step{padding:0 10px}
+    .kakaoPlus .step h5{margin:15px auto 30px auto}
+    .kakaoPlus .step li{width:33.33%;padding:0 10px;float:left}
+    .kakaoPlus .step li:first-child{float:left}
+    .kakaoPlus .step li:last-child{float:left}
+    .kakaoPlus .step li img{width:100%;max-width:314px}
+    .kakaoPlus .step img.pc,
+    .kakaoPlus .step img.mobile{display:none}
+    .kakaoPlus .step img.tablet{display:inline-block}
+    /*Contact Us - 위탁교육 문의*/
+    .consignment .info{padding:0 20px}
+    .consignment .part1 .slogan{background:url(../images/edu_banner_1_1024.png) no-repeat center center;background-size:cover}
+    .consignment .part2 .slogan{background:url(../images/edu_banner_2_1024.png) no-repeat center center;background-size:cover}
+    .consignment .enterAsk form{width:100%;padding:0 20px}
+    .consignment .enterAsk th{width:150px}
+    .consignment .enterAsk .cal_select span.yellow_text{margin:15px 0 0 0}
+    /*Contact Us - 강사지원*/
+    .partnership .imgArea{margin:-30px auto 0 auto!important;text-align:center}
+    .partnership img.pc,
+    .partnership img.mobile{display:none}
+    .partnership img.tablet{display:inline-block;max-width:984px;width:100%}
+}
+@media all and (max-width:768px) {
+    /*회사소개(공통)*/
+    .company h3.p_tit{display:none}
+    .company h3.p_tit_mo{display:block;padding:0 20px;text-align:center;font-size:25px;margin:25px 0}
+    .company.sub .topBanner .tab li{width:100%}
+    /*회사소개 - About us*/
+    .aboutUs .mateStory .thumb{height:504px}
+    .aboutUs .mateStory ul.area > li{width:100%;margin-bottom:15px}
+    .aboutUs .mateStory ul.area > li:nth-child(odd){margin-right:0}
+    .aboutUs .mateStory ul.area > li:nth-child(even){margin-right:0}
+    /*Contact Us(공통)*/
+    .contactUs.sub .topBanner .tab li{width:100%}
+    .contactUs h3.p_tit{display:none}
+    .contactUs h3.p_tit_mo{display:block;padding:0 20px;text-align:center;font-size:25px;margin:25px 0}
+    /*Contact Us - 카카오 플친*/
+    .kakaoPlus .topImage{margin:0 auto!important;padding:0 20px}
+    /*Contact Us - 위탁교육 문의*/
+    .consignment .info{margin:0 auto!important}
+    .consignment .info.part1{margin:0 0 30px 0!important}
+    .consignment .info.part2{margin:80px auto 30px auto!important}
+    .consignment .enterAsk th{width:130px}
+    .consignment .enterAsk input[type="text"]{width:180px}
+    .consignment .enterAsk h5{font-size:24px;line-height:34px;margin:20px 0 15px 0}
+    .consignment .enterAsk th{display:inline-block;width:30%}
+    .consignment .enterAsk td{display:inline-block;width:70%}
+    .consignment .enterAsk input[type="text"]{width:100%}
+    .consignment .enterAsk .cal_select input[type="text"]{width:150px}
+    .consignment .enterAsk td.auto input[type="text"]{width:120px}
+    .consignment .info .btns a.btn1{margin-bottom:10px}
+    /*Contact Us - 강사지원*/
+    .partnership .imgArea{margin:0 auto!important;text-align:center}
+}
+@media all and (max-width:520px) {
+    /*회사소개(공통)*/
+    .company .centerLink a{font-size:12px}
+    /*회사소개 - About us*/
+    .aboutUs .topTitle{height:495px;background:url(../images/img_about_375.jpg) no-repeat center center;background-size:cover}
+    .aboutUs .topTitle > div{padding:0 20px}
+    .aboutUs .topTitle h5{width:106px;height:50px;background:url(../images/logo_white_m.png) no-repeat center center;display:inline-block}
+    .aboutUs .topTitle p.b_text{font-size:28px;line-height:40px;margin:20px 0 18px 0}
+    .aboutUs .topTitle p.s_text{font-size:15px;line-height:21px}
+    .aboutUs .topTitle p.s_text.t2{margin:20px 0}
+    .aboutUs .topTitle p.s_text.t3{margin-bottom:30px;font-size:20px}
+    .aboutUs .introduce{padding:0 20px}
+    .aboutUs .introduce p.img_tit1{margin:20px 0;height:67px;background:url(../images/about_us_text1_mobile.png) no-repeat center center}
+    .aboutUs .introduce p.text{font-size:16px;line-height:23px}
+    .aboutUs .introduce p.text.t2{margin-bottom:20px}
+    .aboutUs .introduce p.text.t2 b{display:block}
+    .aboutUs .introduce p.text.t3{margin-bottom:20px}
+    .aboutUs .introduce p.text.t3 b{display:block}
+    .aboutUs .introduce p.text.t4 b{display:block}
+    .aboutUs .introduce p.text.t5{margin:29px 0 57px 0}
+    .aboutUs .introduce p.text.t5 br{display:block}
+    .aboutUs .ballon{display:block}
+    .aboutUs .ballon li{display:block;width:100%;padding:0 20px;margin-bottom:30px}
+    .aboutUs .ballon li:first-child{float:none;padding-left:20px}
+    .aboutUs .ballon li:nth-child(2){padding:0 20px}
+    .aboutUs .ballon li:last-child{float:none;padding-right:20px;margin-bottom:0}
+    .aboutUs .ballon li img.pc,
+    .aboutUs .ballon li img.tablet{display:none}
+    .aboutUs .ballon li img.mobile{display:inline;max-width:335px}
+    .aboutUs .introduce p.img_tit2{height:69px;background:url(../images/about_us_text2_mobile.png) no-repeat center center;text-indent:-9999px}
+    .aboutUs .introduce p.text.t6{margin:20px 0}
+    .aboutUs .tile_pc{display:none}
+    .aboutUs .tile_mo{display:block}
+    .aboutUs .tile_mo ul{width:100%;display:inline-block}
+    .aboutUs .tile_mo ul.bx2{width:50%;float:left}
+    .aboutUs .tile_mo ul.bx2 li{width:100%;float:left}
+    .aboutUs .tile_mo ul.bx3{width:50%;float:left}
+    .aboutUs .tile_mo ul.bx3 li{width:100%}
+    .aboutUs .tile_mo ul li{width:50%;float:left}
+    .aboutUs .tile_mo img{width:100%}
+    .aboutUs .tile_mo a{display:block;line-height:0;box-shadow:-1px -1px 4px rgba(0,0,0,0.25);position:relative}
+    .aboutUs .tile_mo a:before{content:'';width:0;height:0;border-top:0 solid transparent;border-left:24px solid #ffae3e;border-bottom:24px solid transparent;position:absolute;top:50%;box-shadow:-4px -4px 4px rgba(0,0,0,0.25)}
+    .aboutUs .tile_mo .bx1 a:before{left:-12px;transform:translateY(-50%) rotate(-45deg)}
+    .aboutUs .tile_mo .bx2 a:before{right:inherit;left:50%;transform:translate(-50%,0) rotate(-135deg);top:inherit;bottom:-12px}
+    .aboutUs .tile_mo .bx4 a:before{left:-12px;transform:translateY(-50%) rotate(-45deg)}
+    .aboutUs .mateStory h5{font-size:24px;line-height:35px;margin:50px 0 20px 0}
+    .aboutUs .mateStory h5 br{display:block}
+    .aboutUs .mateStory .thumb{height:231px}
+    .aboutUs .mateStory .text{height:69px;-webkit-line-clamp:3;}
+    .aboutUs .mateStory .btn{text-align:center;margin:5px 0 50px 0}
+    .aboutUs .add_link .down_link a:first-child,
+    .aboutUs .add_link .down_link a:last-child{float:none;display:block;width:100%}
+    .aboutUs .add_link .down_link a:first-child{margin-bottom:10px}
+    .aboutUs .add_link .sns{background:url(../images/about_banner_bottom_375.png) no-repeat center center;background-size:cover}
+    .aboutUs .add_link .sns:before{width:186px;height:50px;background:url(../images/about_arrow_375.png)}
+    .aboutUs .add_link .sns h5{margin-bottom:29px;font-size:24px;line-height:34px}
+    .aboutUs .add_link .sns h5 span{display:block}
+    .aboutUs .add_link .sns li{margin:0 4px}
+    .aboutUs .add_link .sns a{width:60px;height:60px}
+    .aboutUs .add_link .sns a.youtube{background:#fff url(../images/svg/icon_fixbanner_facebook.svg) no-repeat center center}
+    .aboutUs .add_link .sns a.facebook{background:#fff url(../images/svg/icon_fixbanner_youtube.svg) no-repeat center center}
+    .aboutUs .add_link .sns a.kakao{background:#fff url(../images/svg/icon_kakao.svg) no-repeat center center}
+    .aboutUs .add_link .sns a.blog{background:#fff url(../images/svg/icon_blog2.svg) no-repeat center center}
+    /*회사소개 - 오시는길*/
+    .address img.tablet,
+    .address img.pc{display:none}
+    .address img.mobile{display:block;margin:auto;max-width:335px}
+    .address .map{margin:0 auto!important}
+    .address .map ul{width:100%;height:auto}
+    .address .map ul:first-child{padding-right:0}
+    .address .map ul:last-child{border-left:none;padding-left:0}
+    .address .map li.tit{margin-bottom:20px}
+    .address .map li.btn{position:static;margin-top:18px}
+    .address .map ul:last-child{margin-top:25px}
+    .address .map ul:last-child li.btn{padding-left:0;}
+    .address .part{margin-top:40px!important}
+    .address h5.part_tit{font-size:24px;line-height:35px;margin-bottom:20px}
+    .address .part li{width:100%}
+    .address .part li.left{margin-bottom:20px;padding-right:0}
+    .address .part li.right{padding-left:0}
+    /*Contact Us(공통)*/
+    .contactUs .centerLink a{font-size:12px}
+    /*Contact Us - 카카오 플친*/
+    .kakaoPlus .area{height:500px;}
+    .kakaoPlus .topImage .hr_logo{margin:20px 0 10px 0}
+    .kakaoPlus .topImage img.pc{display:none}
+    .kakaoPlus .topImage img.mobile{display:inline}
+    .kakaoPlus .topImage .copy1{font-size:20px;line-height:29px;margin-bottom:30px}
+    .kakaoPlus .topImage .copy2{font-size:23px;line-height:33px}
+    .kakaoPlus .topImage .copy3{font-size:28px;line-height:40px}
+    .kakaoPlus .topImage .ballon{margin-top:20px;height:141px;background:url(../images/kakaoballon_m.png) no-repeat center center;font-size:16px;padding-top:45px;line-height:23px}
+    .kakaoPlus .step h5{font-size:18px;line-height:35px;margin:5px auto 20px auto}
+    .kakaoPlus .step h5 b{height:35px;padding-left:40px;background:url(../images/svg/icon_kakao_35.svg) no-repeat left center}
+    .kakaoPlus .step{padding:0 20px}
+    .kakaoPlus .step li{width:100%;margin-bottom:30px}
+    .kakaoPlus .step li:last-child{margin-bottom:0}
+    .kakaoPlus .step img{max-width:335px}
+    .kakaoPlus .step img.tablet,
+    .kakaoPlus .step img.pc{display:none}
+    .kakaoPlus .step img.mobile{display:inline}
+    /*Contact Us - 위탁교육 문의*/
+    .consignment div.top_text{font-size:16px;line-height:23px;margin-bottom:60px}
+    .consignment .slogan > div{bottom:0;top:66px}
+    .consignment .slogan h5{font-size:24px;line-height:35px}
+    .consignment .slogan p{font-size:16px;line-height:23px;padding:0 3.2%}
+    .consignment .info h6{font-size:20px;line-height:28px}
+    .consignment .info p.s_text{font-size:16px;line-height:23px}
+    .consignment .info.part1 ul.tags{width:100%;display:inline-block}
+    .consignment .info.part1 ul.tags li{width:50%;float:left;margin:4px 0}
+    .consignment .info.part1 ul.tags li:nth-child(odd){text-align:right;padding-right:5px}
+    .consignment .info.part1 ul.tags li:nth-child(even){text-align:left;padding-left:5px}
+    .consignment .info ul.tags li span{display:inline-block;padding:9px 10px;font-size:14px}
+    .consignment .info .btns a{width:100%;margin:0;margin-bottom:10px;line-height:50px;font-size:16px;font-weight:500}
+    .consignment .part1 .slogan{background:url(../images/edu_banner_1_375.png) no-repeat center center;background-size:cover}
+    .consignment .part2 .slogan{background:url(../images/edu_banner_2_375.png) no-repeat center center;background-size:cover}
+    .consignment .part2 ul.tags.pc{display:none}
+    .consignment .part2 ul.tags.mobile{display:inline-block}
+    .consignment .enterAsk th{font-size:13px;width:100px}
+    .consignment .enterAsk td{font-size:13px;width:calc(100% - 100px);}
+    .consignment .enterAsk textarea{font-size:13px}
+    .consignment .enterAsk button.refresh{width:95px}
+    .consignment .enterAsk .cal_select input[type="text"]{width:110px}
+    .consignment .enterAsk .cal_select span.yellow_text{font-size:13px;}
+    .consignment .enterAsk td.auto input[type="text"]{width:100%;margin-top:5px}
+    .consignment .enterAsk .btn_area button{width:calc(100% - 40px);font-size:18px;height:50px}
+    /*Contact Us - 강사지원*/
+    .partnership .imgArea{margin:0 auto!important;text-align:center}
+    .partnership img.pc,
+    .partnership img.tablet{display:none}
+    .partnership img.mobile{display:inline-block;max-width:335px;width:100%}
+}
+@media all and (max-width:394px) {
+    .consignment .enterAsk .cal_select input[type="text"]{width:80px}
+}
+@media all and (max-width:335px) {
+    .consignment .enterAsk .cal_select input[type="text"]{width:70px}
+    .consignment .enterAsk .cal_select span{margin:0 5px}
+}
+@media all and (max-width:320px) {
+    .consignment .enterAsk .cal_select input[type="text"]{width:73px}
+    .consignment .enterAsk button.refresh{margin:0}
+}

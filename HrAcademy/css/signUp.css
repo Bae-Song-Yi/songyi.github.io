@@ -1,0 +1,108 @@
+﻿@charset "utf-8";
+.signUpPopup{width:100%;display:block;position:relative;max-width:995px;margin:0 auto}
+.signUpPopup *{box-sizing:border-box}
+.signUpPopup .topTitle{width:100%;height:51px;overflow:hidden;background:#3c3a39;display:inline-block;color:#fff;font-weight:500}
+.signUpPopup .topTitle span{width:128px;line-height:51px;max-width:128px;padding-top:0;float:left;padding-right:21px;vertical-align:middle;padding-left:40px;font-size:18px;background:#ffae3e url(../images/sign_up_tit_bg.png) no-repeat right center}
+.signUpPopup .topTitle p{width:calc(100% - 128px);line-height:51px;float:left;vertical-align:middle;font-size:20px;padding:0 20px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+.signUpPopup .state{padding:20px 30px 36px 30px;width:100%;display:inline-block}
+.signUpPopup .state > div{border:1px solid #ccc;border-radius:4px;width:456px;height:100px;position:relative;padding:19px 19px 0 19px}
+.signUpPopup .state h5{font-size:18px;line-height:30px;color:#3c3a39}
+.signUpPopup .state h5 img{vertical-align:sub;margin-right:10px}
+.signUpPopup .state .graph{width:100%;position:absolute;padding:0 19px;left:0;bottom:20px}
+.signUpPopup .state .graph p{text-align:right;font-size:16px}
+.signUpPopup .state .graph p span{font-size:28px;font-weight:700}
+.signUpPopup .state .graph .progress{width:100%;height:10px;background:#eaeaea;border-radius:10px;border:1px solid #eaeaea;position:relative;overflow:hidden}
+.signUpPopup .state .graph .progress span{height:8px;border-radius:10px;display:inline-block;position:absolute;left:0;top:0}
+.signUpPopup .state .box1{float:left}
+.signUpPopup .state .box1 .graph p{color:#2076de}
+.signUpPopup .state .box1 .graph .progress span{background:#2076de}
+.signUpPopup .state .box2{float:right}
+.signUpPopup .state .box2 .graph p{color:#ea274c}
+.signUpPopup .state .box2 .graph .progress span{background:#ea274c}
+.signUpPopup .list{padding:0 20px;width:100%;max-height:512px;display:inline-block;overflow-y:auto}
+.signUpPopup .list h6{width:100%;display:inline-block;padding:0 10px;font-size:15px;line-height:30px;margin-bottom:15px;font-weight:normal}
+.signUpPopup .list h6 b{font-weight:700;padding-left:31px;background:url(../images/icon_my_class_subtitle.png) no-repeat left center;margin-right:10px;padding-right:10px;position:relative}
+.signUpPopup .list h6 b:after{content:'';width:1px;height:12px;background:#eee;position:absolute;right:0;top:50%;transform:translateY(-50%)}
+.signUpPopup .list li > div.screen{height:268px;padding:20px}
+.signUpPopup .list li > div.screen p.c_name{padding:0 0 20px 0;border-bottom:none;margin-top:20px}
+.signUpPopup .list li > div.screen dl{margin-top:0}
+.signUpPopup .list li > div.screen .c_no{font-size:15px;line-height:32px;position:relative;width:100%;display:inline-block;padding-bottom:20px;border-bottom:1px solid #eee;text-align:left}
+.signUpPopup .list li > div.screen .c_no i{width:43px;line-height:26px;font-size:12px;font-weight:500;position:absolute;right:0;top:2px;text-align:center;border-radius:3px}
+.signUpPopup .list li > div.screen .c_no i.attend{color:#2684b9;border:1px solid #2684b9}
+.signUpPopup .list li > div.screen .c_no i.absence{color:#ec3a3a;border:1px solid #ec3a3a}
+.signUpPopup .list li > div.screen .btn{bottom:20px;padding:0 20px}
+.signUpPopup .list li > div.screen dt{line-height:16px}
+.signUpPopup .list li > div.screen dd{line-height:16px}
+
+.signUpPopup .list ul{width:100%;display:inline-block}
+.signUpPopup .list li{width:33.33%;float:left;padding:0 10px;margin-bottom:20px;text-align:center}
+.signUpPopup .list li > div{width:298px;height:236px;border:1px solid #eee;border-radius:4px;position:relative;display:inline-block;padding:14px}
+.signUpPopup .list p.c_name{position:relative;font-size:18px;line-height:28px;font-weight:700;text-align:left;padding:0 60px 15px 0;border-bottom:1px solid #eee;color:#52504f}
+.signUpPopup .list p.c_name i{position:absolute;right:0;top:7px;font-weight:300;color:#f7a130;line-height:24px;border:1px solid #f7a130;font-size:12px;padding:0 10px;border-radius:4px}
+.signUpPopup .list dl{width:100%;display:inline-block;color:#999;margin-top:12px}
+.signUpPopup .list dt{width:50%;height:24px;float:left;font-size:14px;line-height:16px;text-align:left;line-height:24px}
+.signUpPopup .list dt img{margin-right:3px}
+.signUpPopup .list dd{width:50%;height:24px;float:right;font-size:14px;line-height:16px;text-align:left;line-height:24px}
+.signUpPopup .list .btn{width:100%;position:absolute;left:0;bottom:14px;text-align:right;padding:0 14px}
+.signUpPopup .list .btn a{display:inline-block;width:112px;line-height:32px;text-align:center;background:#f7a130;color:#fff;font-size:14px;border-radius:4px}
+.signUpPopup .list .btn i{float:left}
+.signUpPopup .btnArea{text-align:center;margin-top:10px;margin-bottom:30px}
+.signUpPopup .btnArea a{width:62px;line-height:30px;display:inline-block;color:#fff;background:#757575}
+/*학습*/
+.hrLearningVideo{width:100%;display:block;position:relative;max-width:995px;margin:0 auto}
+.hrLearningVideo *{box-sizing:border-box}
+.hrLearningVideo .top_bar{width:100%;height:51px;overflow:hidden;background:#3c3a39;display:inline-block;color:#fff;font-weight:500}
+.hrLearningVideo .top_bar span{width:128px;line-height:51px;max-width:128px;padding-top:0;float:left;padding-right:21px;vertical-align:middle;padding-left:40px;font-size:18px;background:#ffae3e url(../images/sign_up_tit_bg.png) no-repeat right center}
+.hrLearningVideo .top_bar p{width:calc(100% - 128px);line-height:51px;float:left;vertical-align:middle;font-size:20px;padding:0 20px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+.hrLearningVideo .video{background:#000;width: 100%;height: 500px;}
+.hrLearningVideo.cyber_con h3{font-size:18px;line-height:28px;text-align:left!important;font-weight:700;padding-bottom:10px!important;border-bottom:1px solid #959595}
+.hrLearningVideo.cyber_con .btn_alignC{width: 100%;display: inline-block;text-align:center;margin-top: 10px;}
+.hrLearningVideo.cyber_con .btn_alignC a{display:inline-block;}
+.hrLearningVideo.cyber_con .btn_alignC a:first-child{border:1px solid #757575;color:#fff;background:#757575;padding: 5px 15px 5px 15px;}
+.hrLearningVideo.cyber_con .btn_alignC a:nth-child(2){background:#fff;border:1px solid #757575;color:#757575;padding: 5px 15px 5px 15px;}
+@media all and (max-width:1024px) {
+    .signUpPopup{max-width:860px}
+    .signUpPopup .state > div{width:390px;padding:19px 19px 0 19px}
+    .signUpPopup .list{max-height:795px}
+    .signUpPopup .list li{width:50%}
+    .signUpPopup .list li > div{width:100%;height:245px}
+    .signUpPopup .list p.c_name{padding:0 60px 24px 0}
+    .signUpPopup .list p.c_name i{top:0}
+    .signUpPopup .list dl{margin-top:16px}
+    .signUpPopup .list dd{text-align:right}
+    .signUpPopup .list .btn{bottom:20px}
+}
+@media all and (max-width:768px) {
+    .signUpPopup{max-width:100%}
+    .signUpPopup .state{padding:20px 20px 36px 20px}
+    .signUpPopup .state > div{width:100%;padding:19px 19px 0 19px}
+    .signUpPopup .state .box1{margin-bottom:15px}
+    .signUpPopup .list{max-height:none;padding:0 10px}
+    .signUpPopup .list li{width:50%}
+    .signUpPopup .list li > div{width:100%;height:245px}
+    .signUpPopup .list p.c_name{padding:0 60px 24px 0}
+    .signUpPopup .list p.c_name i{top:0}
+    .signUpPopup .list dl{margin-top:16px}
+    .signUpPopup .list dd{text-align:right}
+    .signUpPopup .list .btn{bottom:20px}
+}
+@media all and (max-width:520px) {
+    .signUpPopup .topTitle{table-layout:fixed}
+    .signUpPopup .topTitle span{width:100px;height:45px;padding-right:21px;padding-left:30px;font-size:14px}
+    .signUpPopup .topTitle p{height:45px;font-size:16px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+    .signUpPopup .state > div{height:113px;position:relative;padding:14px 14px 0 14px}
+    .signUpPopup .state h5{font-size:16px}
+    .signUpPopup .state .graph{padding:0 14px;bottom:14px}
+    .signUpPopup .state .graph p{font-size:14px}
+    .signUpPopup .state .graph p span{font-size:24px}
+    .signUpPopup .list li{width:100%}
+    .signUpPopup .list li > div{height:auto}
+    .signUpPopup .list .btn{position:static;padding:0;margin-top:25px}
+    .signUpPopup .list h6 b{padding-left:35px}
+    .signUpPopup .list li > div.screen{height:auto}
+    .signUpPopup .list li > div.screen .btn{padding:0}
+    .hrLearningVideo .top_bar{height:45px}
+    .hrLearningVideo .top_bar span{width:100px;height:45px;padding-right:21px;padding-left:30px;font-size:14px}
+    .hrLearningVideo .top_bar p{height:45px;font-size:16px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+    .hrLearningVideo .video{height:300px}
+}
