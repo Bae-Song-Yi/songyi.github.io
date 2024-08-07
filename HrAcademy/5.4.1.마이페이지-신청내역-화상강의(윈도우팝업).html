@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>HR아카데미</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/signUp.css" />
+    <script type="text/javascript" src="scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.progress span').each(function(){
+                var progressBarWidth = $(this).parent('div').prev('p').children('span').text();
+                $(this).css({'width' : progressBarWidth + '%'});
+            });
+            $('.signUpPopup .list p.c_name span').each(function () {
+                var length = 22;
+                $(this).each(function () {
+                    if ($(this).text().length >= length) {
+                        $(this).text($(this).text().substr(0, length) + '...');
+                    }
+                })
+            })
+        });
+    </script>
+</head>
+<body>
+    <div class="signUpPopup">
+        <!--Top Title-->
+        <div class="topTitle">
+            <span>학습</span>
+            <p>HR,데이터를 통해 심리를 듣다</p>
+        </div>
+        <!--//Top Title-->
+        <!--state-->
+        <div class="state">
+            <!--나의 진도율-->
+            <div class="box1">
+                <h5><img src="images/icon_my_class_myprogress_22.png"/>나의 진도율</h5>
+                <div class="graph">
+                    <p><span>50</span>%</p>
+                    <div class="progress"><span></span></div>
+                </div>
+            </div>
+            <!--//나의 진도율-->
+            <!--이수 진도율-->
+            <div class="box2">
+                <h5><img src="images/icon_my_class_complete_22.png"/>이수 진도율</h5>
+                <div class="graph">
+                    <p><span>19</span>%</p>
+                    <div class="progress"><span></span></div>
+                </div>
+            </div>
+            <!--//이수 진도율-->
+        </div>
+        <!--//state-->
+        <!--List-->
+        <div class="list">
+            <h6><b>1일차</b>2021-09-01</h6>
+            <ul>
+                <!--Set-->
+                <li>
+                    <div class="screen">
+                        <p class="c_no">1교시<i class="attend">출석</i></p>
+                        <p class="c_name"><span>HR,데이터를 통해 심리를 듣다_1차시</span></p>
+                        <dl>
+                            <dt><img src="images/icon_list_time.png"/>학습시간</dt>
+                            <dd>10:00 ~ 11:00</dd>
+                        </dl>
+                        <div class="btn">
+                            <i><img src="images/icon_my_class_go.png"/></i>
+                            <a href="#">입장하기</a>
+                        </div>
+                    </div>
+                </li>
+                <!--//Set-->
+                <!--Set-->
+                <li>
+                    <div class="screen">
+                        <p class="c_no">1교시<i class="absence">결석</i></p>
+                        <p class="c_name"><span>HR,데이터를 통해 심리를 듣다_1차시</span></p>
+                        <dl>
+                            <dt><img src="images/icon_list_time.png"/>학습시간</dt>
+                            <dd>10:00 ~ 11:00</dd>
+                        </dl>
+                        <div class="btn">
+                            <i><img src="images/icon_my_class_go.png"/></i>
+                            <a href="#">입장하기</a>
+                        </div>
+                    </div>
+                </li>
+                <!--//Set-->
+            </ul>
+        </div>
+        <!--//List-->
+        <!--Button-->
+        <div class="btnArea">
+            <a href="#">닫기</a>
+        </div>
+        <!--//Button-->
+    </div>
+</body>
+</html>
