@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.892 25.199" xml:space="preserve">
+<g>
+	<defs>
+		<rect id="SVGID_1_" width="33.891" height="25.199"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<polyline style="clip-path:url(#SVGID_2_);fill:none;stroke:#005DFF;stroke-width:5;stroke-miterlimit:10;" points="1.907,10.05,11.657,21.551 32.157,1.8"/>
+</g>
+</svg>
