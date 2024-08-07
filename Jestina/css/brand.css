@@ -1,374 +1,1780 @@
-﻿@charset "utf-8";
+@charset "utf-8";
+
 /*공통*/
-.brand .subTop{position:absolute;left:0;top:0;z-index:5}
-.brand .location li{color:#fff}
-.brand .location li .dep2List{width:195px}
-.brand .location li > a{color:#fff}
-.brand .location li::after{background:url(/images/common/icon_location_arrow_w.svg) no-repeat}
-.brand .location li span.now{color:#fff}
-.brand .location li span.now::after{background:url(/images/common/icon_location_arrow2_w.svg) no-repeat}
-.brand .location li:first-child a{background: url(/images/common/icon_home_w.svg) no-repeat;}
-.brand .brandVisual{background-repeat:no-repeat;background-size:cover;padding-bottom:0}
-.brandVisual > article{position:relative}
-.brandVisual .textWrap{width:615px;position:absolute;left:0;top:45%;transform:translateY(-50%);color:#fff}
-.brandVisual .textWrap h5{font-size:48px;font-weight:500;text-transform:uppercase;opacity:0}
-.brandVisual .textWrap span{font-size:16px;display:block;line-height:1.6;margin-top:35px;opacity:0}
-.brandVisual .textWrap a{font-weight:500;color:#fff;padding-bottom:5px;border-bottom:1px solid #fff;margin-top:50px;display:inline-block;opacity:0}
-.brand .moTextWrap{display:none}
+.brand .subTop {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5
+}
+
+.brand .location li {
+    color: #fff
+}
+
+.brand .location li .dep2List {
+    width: 195px
+}
+
+.brand .location li>a {
+    color: #fff
+}
+
+.brand .location li::after {
+    background: url(../images/common/icon_location_arrow_w.svg) no-repeat
+}
+
+.brand .location li span.now {
+    color: #fff
+}
+
+.brand .location li span.now::after {
+    background: url(../images/common/icon_location_arrow2_w.svg) no-repeat
+}
+
+.brand .location li:first-child a {
+    background: url(../images/common/icon_home_w.svg) no-repeat;
+}
+
+.brand .brandVisual {
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 0
+}
+
+.brandVisual>article {
+    position: relative
+}
+
+.brandVisual .textWrap {
+    width: 615px;
+    position: absolute;
+    left: 0;
+    top: 45%;
+    transform: translateY(-50%);
+    color: #fff
+}
+
+.brandVisual .textWrap h5 {
+    font-size: 48px;
+    font-weight: 500;
+    text-transform: uppercase;
+    opacity: 0
+}
+
+.brandVisual .textWrap span {
+    font-size: 16px;
+    display: block;
+    line-height: 1.6;
+    margin-top: 35px;
+    opacity: 0
+}
+
+.brandVisual .textWrap a {
+    font-weight: 500;
+    color: #fff;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #fff;
+    margin-top: 50px;
+    display: inline-block;
+    opacity: 0
+}
+
+.brand .moTextWrap {
+    display: none
+}
+
 /*J.ESTINA JEWELRY*/
-.jewelry .brandVisual .commImgArea{background-repeat:no-repeat;background-size:cover;position:absolute;top:0;width:100%;height:100%;background-position:right center;z-index:-1;}
-.jewelry .brandVisual .commImgArea img.forPC{width:0;height:0;opacity:0}
-.jewelry .brandVisual .commImgArea img.forMobile{width:0;height:0;opacity:0}
+.jewelry .brandVisual .commImgArea {
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: right center;
+    z-index: -1;
+}
+
+.jewelry .brandVisual .commImgArea img.forPC {
+    width: 0;
+    height: 0;
+    opacity: 0
+}
+
+.jewelry .brandVisual .commImgArea img.forMobile {
+    width: 0;
+    height: 0;
+    opacity: 0
+}
+
 /*J.ESTINA HANDBAG*/
-/* .handbag .brandVisual{background-image: url(/images/brand_visual_handbag.jpg);background-position:right center} */
-.handbag .brandVisual .commImgArea{background-repeat:no-repeat;background-size:cover;position:absolute;top:0;width:100%;height:100%;background-position:right center;z-index:-1;}
-.handbag .brandVisual .commImgArea img.forPC{width:0;height:0;opacity:0}
-.handbag .brandVisual .commImgArea img.forMobile{width:0;height:0;opacity:0}
+/* .handbag .brandVisual{background-image: url(../images/brand_visual_handbag.jpg);background-position:right center} */
+.handbag .brandVisual .commImgArea {
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: right center;
+    z-index: -1;
+}
+
+.handbag .brandVisual .commImgArea img.forPC {
+    width: 0;
+    height: 0;
+    opacity: 0
+}
+
+.handbag .brandVisual .commImgArea img.forMobile {
+    width: 0;
+    height: 0;
+    opacity: 0
+}
+
 /*ROMANSON*/
-.romanson.brand .location li:first-child a{background: url(/images/common/icon_home.svg) no-repeat;}
-.romanson .content{padding-bottom:80px}
-.romanson .subTop{position:static}
-.romanson .location li{color:#767676}
-.romanson .location li > a{color:#767676}
-.romanson .location li::after{background:url(/images/common/icon_location_arrow.svg) no-repeat}
-.romanson .location li span.now{color:#101010}
-.romanson .location li span.now::after{background:url(/images/common/icon_location_arrow2.svg) no-repeat}
-.romanson .location li .dep2List{background:#fff}
-.romanson .topVisual{height:400px}
-.romanson .topVisual .commImgArea{background-repeat:no-repeat;background-size:cover;position:absolute;top:0;width:100%;height:100%;background-position:center center;z-index:-1;}
-.romanson .topVisual .commImgArea img.forPC{width:0;height:0;opacity:0}
-.romanson .topVisual .commImgArea img.forMobile{width:0;height:0;opacity:0}
-.romanson .topText{text-align:center;padding:100px 0 87px 0;position:relative;margin-top:-75px}
-.romanson .topText h5{margin-bottom:15px;font-size:28px;font-weight:500;margin-top:75px}
-.romanson .topText span.text{display:block;font-size:16px;color:#767676;line-height:1.6;margin-top:68px}
-.romanson .topText a.mallLink{display:inline-block;margin-top:52px;font-weight:500;color:#767676;padding-bottom:5px;border-bottom:1px solid #767676;text-transform:uppercase}
-.romanson .topText dl{width:150px;position:absolute;top:0;overflow:hidden;z-index:5;right:0}
-.romanson .topText dl.fix{position:fixed}
-.romanson .topText dt{width:150px;height:150px;position:relative;background:#2d2d2d;cursor:pointer}
-.romanson .topText dt span{width:100%;position:absolute;left:0;top:50%;transform:translateY(-50%);text-align:center;color:#fff;padding-bottom:30px}
-.romanson .topText dt span::before{content:'';width:12px;height:12px;position:absolute;bottom:0;left:50%;margin-left:-6px;background:url(/images/icon_history_arrow.svg) no-repeat center bottom;transition:all .4s;-webkit-transition:all .4s;content:'';}
-.romanson .topText dt.on span::before{-ms-transform:rotate(180deg);-webkit-transform:rotate(180deg);transform:rotate(180deg);}
-.romanson .topText dt b{display:block;font-size:12px;color:#ffb2b8;font-weight:400;margin-bottom:5px}
-.romanson .topText dd{width:100%;max-height:300px;border:1px solid #e0e0e0;background:#fff;overflow-y:auto;display:none}
-.romanson .topText dd::-webkit-scrollbar{width:7px}
-.romanson .topText dd::-webkit-scrollbar-track{background:#fff;border-radius:5px}
-.romanson .topText dd::-webkit-scrollbar-thumb{background:#ccc;border-radius:5px}
-.romanson .topText dd::-webkit-scrollbar-thumb:hover{background:#999;border-radius:5px}
-.romanson .topText dd a{display:block;line-height:32px;text-align:center}
+.romanson.brand .location li:first-child a {
+    background: url(../images/common/icon_home.svg) no-repeat;
+}
+
+.romanson .content {
+    padding-bottom: 80px
+}
+
+.romanson .subTop {
+    position: static
+}
+
+.romanson .location li {
+    color: #767676
+}
+
+.romanson .location li>a {
+    color: #767676
+}
+
+.romanson .location li::after {
+    background: url(../images/common/icon_location_arrow.svg) no-repeat
+}
+
+.romanson .location li span.now {
+    color: #101010
+}
+
+.romanson .location li span.now::after {
+    background: url(../images/common/icon_location_arrow2.svg) no-repeat
+}
+
+.romanson .location li .dep2List {
+    background: #fff
+}
+
+.romanson .topVisual {
+    height: 400px
+}
+
+.romanson .topVisual .commImgArea {
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    z-index: -1;
+}
+
+.romanson .topVisual .commImgArea img.forPC {
+    width: 0;
+    height: 0;
+    opacity: 0
+}
+
+.romanson .topVisual .commImgArea img.forMobile {
+    width: 0;
+    height: 0;
+    opacity: 0
+}
+
+.romanson .topText {
+    text-align: center;
+    padding: 100px 0 87px 0;
+    position: relative;
+    margin-top: -75px
+}
+
+.romanson .topText h5 {
+    margin-bottom: 15px;
+    font-size: 28px;
+    font-weight: 500;
+    margin-top: 75px
+}
+
+.romanson .topText span.text {
+    display: block;
+    font-size: 16px;
+    color: #767676;
+    line-height: 1.6;
+    margin-top: 68px
+}
+
+.romanson .topText a.mallLink {
+    display: inline-block;
+    margin-top: 52px;
+    font-weight: 500;
+    color: #767676;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #767676;
+    text-transform: uppercase
+}
+
+.romanson .topText dl {
+    width: 150px;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    z-index: 5;
+    right: 0
+}
+
+.romanson .topText dl.fix {
+    position: fixed
+}
+
+.romanson .topText dt {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    background: #2d2d2d;
+    cursor: pointer
+}
+
+.romanson .topText dt span {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+    padding-bottom: 30px
+}
+
+.romanson .topText dt span::before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -6px;
+    background: url(../images/icon_history_arrow.svg) no-repeat center bottom;
+    transition: all .4s;
+    -webkit-transition: all .4s;
+    content: '';
+}
+
+.romanson .topText dt.on span::before {
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.romanson .topText dt b {
+    display: block;
+    font-size: 12px;
+    color: #ffb2b8;
+    font-weight: 400;
+    margin-bottom: 5px
+}
+
+.romanson .topText dd {
+    width: 100%;
+    max-height: 300px;
+    border: 1px solid #e0e0e0;
+    background: #fff;
+    overflow-y: auto;
+    display: none
+}
+
+.romanson .topText dd::-webkit-scrollbar {
+    width: 7px
+}
+
+.romanson .topText dd::-webkit-scrollbar-track {
+    background: #fff;
+    border-radius: 5px
+}
+
+.romanson .topText dd::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 5px
+}
+
+.romanson .topText dd::-webkit-scrollbar-thumb:hover {
+    background: #999;
+    border-radius: 5px
+}
+
+.romanson .topText dd a {
+    display: block;
+    line-height: 32px;
+    text-align: center
+}
+
 .romanson .topText dd a:hover,
-.romanson .topText dd a.on{background:#f0f0f0;font-weight:500}
-.romanson .controller{padding-bottom:31px;border-bottom:1px solid #e0e0e0}
-.romanson .controller > div{position:relative}
-.romanson .controller a{position:absolute;top:55%;transform:translateY(-50%);color:#ccc;line-height:32px;width:150px;overflow:hidden}
-.romanson .controller a img{display:none}
-.romanson .controller a.prevPrd{padding-right:25px;background:url(/images/icon_brand_romanson_prev.svg) no-repeat right center;left:-80px}
-.romanson .controller a.prevPrd::before{content:'';height:32px;width:100%;position:absolute;left:0;top:0;background:linear-gradient(-90deg,transparent,#fff 65%)}
-.romanson .controller a.nextPrd{padding-left:25px;background:url(/images/icon_brand_romanson_next.svg) no-repeat left center;right:-80px}
-.romanson .controller a.nextPrd::before{content:'';height:32px;width:100%;position:absolute;left:0;top:0;background:linear-gradient(90deg,transparent,#fff 65%)}
-.romanson .controller .nowPrd{width:100%;margin:0 auto;font-size:38px;line-height:1;padding:0 150px}
-.romanson .productList{padding-bottom:120px}
-.romanson .productList ul{width:100%;display:inline-block}
-.romanson .productList li{width:33.33%;float:left;margin-top:60px}
-.romanson .productList li:nth-child(3n+2){text-align:center}
-.romanson .productList li:nth-child(3n+3){text-align:right}
-.romanson .productList li a{width:400px;display:inline-block;text-align:center;background:#fff;transition:all .3s;-webkit-transition:all .3s;}
-.romanson .productList li a:hover{box-shadow:10px 10px 15px rgba(0,0,0,.15);}
-.romanson .productList .photo{height:400px;position:relative;background:#fafafa}
+.romanson .topText dd a.on {
+    background: #f0f0f0;
+    font-weight: 500
+}
+
+.romanson .controller {
+    padding-bottom: 31px;
+    border-bottom: 1px solid #e0e0e0
+}
+
+.romanson .controller>div {
+    position: relative
+}
+
+.romanson .controller a {
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    color: #ccc;
+    line-height: 32px;
+    width: 150px;
+    overflow: hidden
+}
+
+.romanson .controller a img {
+    display: none
+}
+
+.romanson .controller a.prevPrd {
+    padding-right: 25px;
+    background: url(../images/icon_brand_romanson_prev.svg) no-repeat right center;
+    left: -80px
+}
+
+.romanson .controller a.prevPrd::before {
+    content: '';
+    height: 32px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: linear-gradient(-90deg, transparent, #fff 65%)
+}
+
+.romanson .controller a.nextPrd {
+    padding-left: 25px;
+    background: url(../images/icon_brand_romanson_next.svg) no-repeat left center;
+    right: -80px
+}
+
+.romanson .controller a.nextPrd::before {
+    content: '';
+    height: 32px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: linear-gradient(90deg, transparent, #fff 65%)
+}
+
+.romanson .controller .nowPrd {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 38px;
+    line-height: 1;
+    padding: 0 150px
+}
+
+.romanson .productList {
+    padding-bottom: 120px
+}
+
+.romanson .productList ul {
+    width: 100%;
+    display: inline-block
+}
+
+.romanson .productList li {
+    width: 33.33%;
+    float: left;
+    margin-top: 60px
+}
+
+.romanson .productList li:nth-child(3n+2) {
+    text-align: center
+}
+
+.romanson .productList li:nth-child(3n+3) {
+    text-align: right
+}
+
+.romanson .productList li a {
+    width: 400px;
+    display: inline-block;
+    text-align: center;
+    background: #fff;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+}
+
+.romanson .productList li a:hover {
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, .15);
+}
+
+.romanson .productList .photo {
+    height: 400px;
+    position: relative;
+    background: #fafafa
+}
+
 /* .romanson .productList .photo img{position:absolute;left:50%;top:50%} */
-.romanson .productList .photo img{position:absolute;left:50%;top:50%;transform:translate(-50% , -50%);height:80%}
-.romanson .productList .name{font-size:18px;font-weight:500;margin:36px 0 19px 0;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;}
-.romanson .productList .cate{font-size:16px;color:#767676;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;padding-bottom:39px}
-.romanson .productDetail{padding:85px 0 120px 0;position:relative}
-.romanson .productDetail::before{content:'';width:60px;height:4px;background:#101010;position:absolute;left:50%;transform:translateX(-50%);top:0}
-.romanson .productDetail .photo{width:50%;padding-right:20px;display:inline-block}
-.romanson .productDetail .photo .flex-viewport{width:100%;overflow:hidden}
-.romanson .productDetail .photo .slides li{height:590px;position:relative}
-.romanson .productDetail .photo .slides li img{position:absolute;left:50%;top:50%}
-.romanson .productDetail .info{width:50%;float:right;padding-left:90px}
-.romanson .productDetail .info .cate{font-size:16px;color:#767676;display:block;margin-top:15px}
-.romanson .productDetail .info h6{margin:15px 0 20px 0;padding-bottom:35px;border-bottom:1px solid #101010;font-size:48px;font-weight:500}
-.romanson .productDetail .info th{width:220px;height:44px;text-align:left;font-weight:500;font-size:16px}
-.romanson .productDetail .info td{font-size:16px;color:#505050}
-.romanson .productDetail .thumb{width:100%;overflow:hidden;overflow-x:auto;margin:23px 0 38px 0}
-.romanson .productDetail .thumb ol{white-space:nowrap}
-.romanson .productDetail .thumb li{width:100px;height:100px;display:inline-block;border:1px solid #e0e0e0;overflow:hidden;position:relative;margin-right:10px;cursor:pointer}
-.romanson .productDetail .thumb li img{height:80px;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}
-.romanson .productDetail .thumb li.active{border-color:#101010}
-.romanson .productDetail .buttons{width:100%;display:table}
-.romanson .productDetail .buttons li{display:table-cell}
-.romanson .productDetail .buttons li.list{width:260px}
-.romanson .productDetail .buttons li a{display:block;line-height:56px;text-align:center;font-size:16px;border:1px solid #101010}
-.romanson .productDetail .buttons li.list a{background:#101010;color:#fff}
-.romanson .productDetail .buttons li.prev{width:145px}
-.romanson .productDetail .buttons li.prev a::before{content:'';display:inline-block;width:6px;height:12px;display:inline-block;background:url(/images/icon_brand_romanson_detail_prev.svg);margin-right:15px}
-.romanson .productDetail .buttons li.next a{background:#fff;color:#101010;border-left:none;}
-.romanson .productDetail .buttons li.next a::after{content:'';display:inline-block;width:6px;height:12px;display:inline-block;background:url(/images/icon_brand_romanson_detail_next.svg);margin-left:15px}
+.romanson .productList .photo img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 80%
+}
+
+.romanson .productList .name {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 36px 0 19px 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.romanson .productList .cate {
+    font-size: 16px;
+    color: #767676;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding-bottom: 39px
+}
+
+.romanson .productDetail {
+    padding: 85px 0 120px 0;
+    position: relative
+}
+
+.romanson .productDetail::before {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background: #101010;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0
+}
+
+.romanson .productDetail .photo {
+    width: 50%;
+    padding-right: 20px;
+    display: inline-block
+}
+
+.romanson .productDetail .photo .flex-viewport {
+    width: 100%;
+    overflow: hidden
+}
+
+.romanson .productDetail .photo .slides li {
+    height: 590px;
+    position: relative
+}
+
+.romanson .productDetail .photo .slides li img {
+    position: absolute;
+    left: 50%;
+    top: 50%
+}
+
+.romanson .productDetail .info {
+    width: 50%;
+    float: right;
+    padding-left: 90px
+}
+
+.romanson .productDetail .info .cate {
+    font-size: 16px;
+    color: #767676;
+    display: block;
+    margin-top: 15px
+}
+
+.romanson .productDetail .info h6 {
+    margin: 15px 0 20px 0;
+    padding-bottom: 35px;
+    border-bottom: 1px solid #101010;
+    font-size: 48px;
+    font-weight: 500
+}
+
+.romanson .productDetail .info th {
+    width: 220px;
+    height: 44px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 16px
+}
+
+.romanson .productDetail .info td {
+    font-size: 16px;
+    color: #505050
+}
+
+.romanson .productDetail .thumb {
+    width: 100%;
+    overflow: hidden;
+    overflow-x: auto;
+    margin: 23px 0 38px 0
+}
+
+.romanson .productDetail .thumb ol {
+    white-space: nowrap
+}
+
+.romanson .productDetail .thumb li {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    border: 1px solid #e0e0e0;
+    overflow: hidden;
+    position: relative;
+    margin-right: 10px;
+    cursor: pointer
+}
+
+.romanson .productDetail .thumb li img {
+    height: 80px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.romanson .productDetail .thumb li.active {
+    border-color: #101010
+}
+
+.romanson .productDetail .buttons {
+    width: 100%;
+    display: table
+}
+
+.romanson .productDetail .buttons li {
+    display: table-cell
+}
+
+.romanson .productDetail .buttons li.list {
+    width: 260px
+}
+
+.romanson .productDetail .buttons li a {
+    display: block;
+    line-height: 56px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid #101010
+}
+
+.romanson .productDetail .buttons li.list a {
+    background: #101010;
+    color: #fff
+}
+
+.romanson .productDetail .buttons li.prev {
+    width: 145px
+}
+
+.romanson .productDetail .buttons li.prev a::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 12px;
+    display: inline-block;
+    background: url(../images/icon_brand_romanson_detail_prev.svg);
+    margin-right: 15px
+}
+
+.romanson .productDetail .buttons li.next a {
+    background: #fff;
+    color: #101010;
+    border-left: none;
+}
+
+.romanson .productDetail .buttons li.next a::after {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 12px;
+    display: inline-block;
+    background: url(../images/icon_brand_romanson_detail_next.svg);
+    margin-left: 15px
+}
 
 /*ARCHIVE*/
-.archive{overflow:hidden}
-.archive .content{padding-bottom:0}
-.archive .yearWrap{display:none}
-.archive .yearWrap:first-child{display:block}
-.archive .categoryWrap{width:100%;position:relative} 
-.archive .categoryWrap .slides > li{background-position:center top;background-repeat:no-repeat;background-size:cover;position:relative}
-.archive .categoryWrap .slides > li > a{display:block;width:100%;height:100%}
-.archive .categoryWrap .slides > li img.forPC{width:0;height:0;opacity:0}
-.archive .categoryWrap .slides > li img.forMobile{width:0;height:0;opacity:0}
-.archive .categoryWrap .titleText{position:absolute;top:50%;transform:translateY(-50%);text-align:center}
-.archive .categoryWrap h5{font-size:48px;font-weight:500;color:#fff}
-.archive .categoryWrap h5 span{margin-right:10px}
-.archive .categoryWrap h6{font-size:48px;color:#fff;margin-top:10px;font-weight:400}
-.archive .categoryWrap h6 span{margin-left:10px}
-.archive .categoryWrap h6 img{margin:-5px 20px 0 20px}
-.archive .categoryWrap .titleText.alLeft{left:12%}
-.archive .categoryWrap .titleText.alRight{right:calc(100% - 88%)}
-.archive .categoryWrap .scroll{width:19px;position:absolute;color:#fff;right:70px;z-index:10;text-align:center;font-weight:300;letter-spacing:2px;font-family:'Malgun Gothic';line-height:1;cursor:pointer;text-transform:capitalize}
-.archive .categoryWrap .scroll.next{bottom:40px;background:url(/images/icon_ban_arrow_scroll.svg) no-repeat center bottom;padding-bottom:65px}
-.archive .categoryWrap .scroll.next i{transform:rotate(-90deg);display:inline-block;width:0;height:0;margin-left:-15px}
-.archive .categoryWrap .scroll.prev{top:40px;background:url(/images/icon_ban_arrow_scroll2.svg) no-repeat center top;padding-top:75px}
-.archive .categoryWrap .scroll.prev i{transform:rotate(90deg);display:inline-block;width:0;height:0;margin-left:15px;}
-.archive .categoryWrap.lastObj .scroll.prev{width:0;height:0;padding:0;transform:rotate(90deg);top:inherit;bottom:40px;white-space:nowrap}
-.archive .categoryWrap.lastObj .scroll.prev img{margin-right:15px}
-.archive .categoryWrap.lastObj .scroll.prev i{width:auto;height:auto;transform:none;margin:0}
-.archive .flex-viewport{width:100%;overflow:hidden}
-.archive .flex-direction-nav{position:absolute;left:0;top:50%;padding:0 70px;width:100%;transform:translateY(-50%)}
-.archive .flex-direction-nav li{width:50%;float:left}
-.archive .flex-direction-nav li a{width:16px;height:32px;display:inline-block;text-indent:-99999px;cursor:pointer}
-.archive .flex-direction-nav li a.flex-prev{background:url(/images/icon_ban_arrow_left.svg) no-repeat;float:left}
-.archive .flex-direction-nav li a.flex-next{background:url(/images/icon_ban_arrow_right.svg) no-repeat;float:right}
-.archive .flex-control-nav{width:100%;position:absolute;left:0;text-align:center;bottom:40px}
-.archive .flex-control-nav > li{display:inline-block;width:10px;height:10px;margin:0 7px}
-.archive .flex-control-nav > li a{display:block;height:10px;border-radius:100%;background:#767676;cursor:pointer;text-indent:-99999px}
-.archive .flex-control-nav > li a.flex-active{background:#ffb2b8}
-.archive .flex-control-nav > li a span{display:none}
-.archive .controller{background:#292929;text-align:center;position:relative;margin-top:-1px}
-.archive .controller .btnWrap{position:relative;width:1380px;display:inline-block}
-.archive .controller a.yearPrev{position:absolute;left:100px;top:50%;transform:translateY(-50%)}
-.archive .controller a.yearNext{position:absolute;right:100px;top:50%;transform:translateY(-50%)}
-.archive .yearList{height:75px;width:100%;text-align:center;width:1060px;margin:0 auto;overflow:hidden}
-.archive .yearList .list{display:inline-block;margin:0 auto;height:75px;overflow:hidden}
-.archive .yearList .list a{text-align:center;cursor:pointer;font-size:18px;color:#fff;line-height:75px;float:left;width:106px}
-.archive .yearList .list a.on span{color:#ffb2b8;border-bottom:2px solid #ffb2b8}
-.archive .prevYearList{width:100px;position:absolute;left:0;top:50%;transform:translateY(-50%);overflow:hidden;text-align:right;white-space:nowrap;display:none}
-.archive .prevYearList b{font-size:14px;color:#505050;font-weight:400;margin-right:16px}
-.archive .prevYearList::before{content:'';height:20px;width:100%;position:absolute;left:0;top:0;background:linear-gradient(-90deg,transparent,#292929 90%)}
-.archive .nextYearList{width:100px;position:absolute;right:0;top:50%;transform:translateY(-50%);overflow:hidden;text-align:left;white-space:nowrap;display:none}
-.archive .nextYearList b{font-size:14px;color:#505050;font-weight:400;margin-left:16px}
-.archive .nextYearList::before{content:'';height:20px;width:100%;position:absolute;left:0;top:0;background:linear-gradient(90deg,transparent,#292929 90%)}
-.archive .controller a.moTop{display:none}
-.archive .controller .moYearList{display:none}
+.archive {
+    overflow: hidden
+}
+
+.archive .content {
+    padding-bottom: 0
+}
+
+.archive .yearWrap {
+    display: none
+}
+
+.archive .yearWrap:first-child {
+    display: block
+}
+
+.archive .categoryWrap {
+    width: 100%;
+    position: relative
+}
+
+.archive .categoryWrap .slides>li {
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative
+}
+
+.archive .categoryWrap .slides>li>a {
+    display: block;
+    width: 100%;
+    height: 100%
+}
+
+.archive .categoryWrap .slides>li img.forPC {
+    width: 0;
+    height: 0;
+    opacity: 0
+}
+
+.archive .categoryWrap .slides>li img.forMobile {
+    width: 0;
+    height: 0;
+    opacity: 0
+}
+
+.archive .categoryWrap .titleText {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center
+}
+
+.archive .categoryWrap h5 {
+    font-size: 48px;
+    font-weight: 500;
+    color: #fff
+}
+
+.archive .categoryWrap h5 span {
+    margin-right: 10px
+}
+
+.archive .categoryWrap h6 {
+    font-size: 48px;
+    color: #fff;
+    margin-top: 10px;
+    font-weight: 400
+}
+
+.archive .categoryWrap h6 span {
+    margin-left: 10px
+}
+
+.archive .categoryWrap h6 img {
+    margin: -5px 20px 0 20px
+}
+
+.archive .categoryWrap .titleText.alLeft {
+    left: 12%
+}
+
+.archive .categoryWrap .titleText.alRight {
+    right: calc(100% - 88%)
+}
+
+.archive .categoryWrap .scroll {
+    width: 19px;
+    position: absolute;
+    color: #fff;
+    right: 70px;
+    z-index: 10;
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-family: 'Malgun Gothic';
+    line-height: 1;
+    cursor: pointer;
+    text-transform: capitalize
+}
+
+.archive .categoryWrap .scroll.next {
+    bottom: 40px;
+    background: url(../images/icon_ban_arrow_scroll.svg) no-repeat center bottom;
+    padding-bottom: 65px
+}
+
+.archive .categoryWrap .scroll.next i {
+    transform: rotate(-90deg);
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: -15px
+}
+
+.archive .categoryWrap .scroll.prev {
+    top: 40px;
+    background: url(../images/icon_ban_arrow_scroll2.svg) no-repeat center top;
+    padding-top: 75px
+}
+
+.archive .categoryWrap .scroll.prev i {
+    transform: rotate(90deg);
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 15px;
+}
+
+.archive .categoryWrap.lastObj .scroll.prev {
+    width: 0;
+    height: 0;
+    padding: 0;
+    transform: rotate(90deg);
+    top: inherit;
+    bottom: 40px;
+    white-space: nowrap
+}
+
+.archive .categoryWrap.lastObj .scroll.prev img {
+    margin-right: 15px
+}
+
+.archive .categoryWrap.lastObj .scroll.prev i {
+    width: auto;
+    height: auto;
+    transform: none;
+    margin: 0
+}
+
+.archive .flex-viewport {
+    width: 100%;
+    overflow: hidden
+}
+
+.archive .flex-direction-nav {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    padding: 0 70px;
+    width: 100%;
+    transform: translateY(-50%)
+}
+
+.archive .flex-direction-nav li {
+    width: 50%;
+    float: left
+}
+
+.archive .flex-direction-nav li a {
+    width: 16px;
+    height: 32px;
+    display: inline-block;
+    text-indent: -99999px;
+    cursor: pointer
+}
+
+.archive .flex-direction-nav li a.flex-prev {
+    background: url(../images/icon_ban_arrow_left.svg) no-repeat;
+    float: left
+}
+
+.archive .flex-direction-nav li a.flex-next {
+    background: url(../images/icon_ban_arrow_right.svg) no-repeat;
+    float: right
+}
+
+.archive .flex-control-nav {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    bottom: 40px
+}
+
+.archive .flex-control-nav>li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 7px
+}
+
+.archive .flex-control-nav>li a {
+    display: block;
+    height: 10px;
+    border-radius: 100%;
+    background: #767676;
+    cursor: pointer;
+    text-indent: -99999px
+}
+
+.archive .flex-control-nav>li a.flex-active {
+    background: #ffb2b8
+}
+
+.archive .flex-control-nav>li a span {
+    display: none
+}
+
+.archive .controller {
+    background: #292929;
+    text-align: center;
+    position: relative;
+    margin-top: -1px
+}
+
+.archive .controller .btnWrap {
+    position: relative;
+    width: 1380px;
+    display: inline-block
+}
+
+.archive .controller a.yearPrev {
+    position: absolute;
+    left: 100px;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.archive .controller a.yearNext {
+    position: absolute;
+    right: 100px;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.archive .yearList {
+    height: 75px;
+    width: 100%;
+    text-align: center;
+    width: 1060px;
+    margin: 0 auto;
+    overflow: hidden
+}
+
+.archive .yearList .list {
+    display: inline-block;
+    margin: 0 auto;
+    height: 75px;
+    overflow: hidden
+}
+
+.archive .yearList .list a {
+    text-align: center;
+    cursor: pointer;
+    font-size: 18px;
+    color: #fff;
+    line-height: 75px;
+    float: left;
+    width: 106px
+}
+
+.archive .yearList .list a.on span {
+    color: #ffb2b8;
+    border-bottom: 2px solid #ffb2b8
+}
+
+.archive .prevYearList {
+    width: 100px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    overflow: hidden;
+    text-align: right;
+    white-space: nowrap;
+    display: none
+}
+
+.archive .prevYearList b {
+    font-size: 14px;
+    color: #505050;
+    font-weight: 400;
+    margin-right: 16px
+}
+
+.archive .prevYearList::before {
+    content: '';
+    height: 20px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: linear-gradient(-90deg, transparent, #292929 90%)
+}
+
+.archive .nextYearList {
+    width: 100px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    overflow: hidden;
+    text-align: left;
+    white-space: nowrap;
+    display: none
+}
+
+.archive .nextYearList b {
+    font-size: 14px;
+    color: #505050;
+    font-weight: 400;
+    margin-left: 16px
+}
+
+.archive .nextYearList::before {
+    content: '';
+    height: 20px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: linear-gradient(90deg, transparent, #292929 90%)
+}
+
+.archive .controller a.moTop {
+    display: none
+}
+
+.archive .controller .moYearList {
+    display: none
+}
 
 @media all and (max-width:1460px) {
+
     /*ROMANSON*/
-    .romanson .controller a.prevPrd{left:-40px}
-    .romanson .controller a.nextPrd{right:-40px}
+    .romanson .controller a.prevPrd {
+        left: -40px
+    }
+
+    .romanson .controller a.nextPrd {
+        right: -40px
+    }
 }
+
 @media all and (max-width:1380px) {
+
     /*ROMANSON*/
-    .romanson .controller a.prevPrd{left:-20px}
-    .romanson .controller .nowPrd{padding:0 150px}
-    .romanson .controller a.nextPrd{right:-20px}
+    .romanson .controller a.prevPrd {
+        left: -20px
+    }
+
+    .romanson .controller .nowPrd {
+        padding: 0 150px
+    }
+
+    .romanson .controller a.nextPrd {
+        right: -20px
+    }
+
     /*ARCHIVE*/
-    .archive .controller .btnWrap{width:100%}
+    .archive .controller .btnWrap {
+        width: 100%
+    }
+
     .archive .prevYearList,
-    .archive .nextYearList{display:none}
-    .archive .controller a.yearPrev{left:2%}
-    .archive .controller a.yearNext{right:2%}
+    .archive .nextYearList {
+        display: none
+    }
+
+    .archive .controller a.yearPrev {
+        left: 2%
+    }
+
+    .archive .controller a.yearNext {
+        right: 2%
+    }
 }
+
 @media all and (max-width:1340px) {
+
     /*ROMANSON*/
-    .romanson .controller a.prevPrd{left:0}
-    .romanson .controller .nowPrd{padding:0 200px}
-    .romanson .controller a.nextPrd{right:0}
+    .romanson .controller a.prevPrd {
+        left: 0
+    }
+
+    .romanson .controller .nowPrd {
+        padding: 0 200px
+    }
+
+    .romanson .controller a.nextPrd {
+        right: 0
+    }
 }
+
 @media all and (max-width:1320px) {
+
     /*공통*/
-    .brand .subTop article{width:100%}
-    .brandVisual > article{width:100%;padding:0 2%}
-    .brandVisual .textWrap{left:2%}
+    .brand .subTop article {
+        width: 100%
+    }
+
+    .brandVisual>article {
+        width: 100%;
+        padding: 0 2%
+    }
+
+    .brandVisual .textWrap {
+        left: 2%
+    }
+
     /*ROMANSON*/
-    .romanson .productList{width:100%;padding:0 2% 120px 2%}
+    .romanson .productList {
+        width: 100%;
+        padding: 0 2% 120px 2%
+    }
 }
+
 @media all and (max-width:1300px) {
+
     /*ROMANSON*/
-    .romanson .productList li a{width:385px}
-    .romanson .productList .photo{height:385px}
-    .romanson .productList .photo img{height:80%;max-height:268px}
-    .romanson .productDetail{padding:85px 2% 200px 2%;width:100%}
-    .romanson .productDetail .buttons li.list{width:calc(100% - 290px)}
-    .romanson .productDetail .buttons li.prev{width:145px}
-    .romanson .productDetail .buttons li.next{width:145px}
+    .romanson .productList li a {
+        width: 385px
+    }
+
+    .romanson .productList .photo {
+        height: 385px
+    }
+
+    .romanson .productList .photo img {
+        height: 80%;
+        max-height: 268px
+    }
+
+    .romanson .productDetail {
+        padding: 85px 2% 200px 2%;
+        width: 100%
+    }
+
+    .romanson .productDetail .buttons li.list {
+        width: calc(100% - 290px)
+    }
+
+    .romanson .productDetail .buttons li.prev {
+        width: 145px
+    }
+
+    .romanson .productDetail .buttons li.next {
+        width: 145px
+    }
 }
 
 @media all and (max-width:1240px) {
+
     /*ROMANSON*/
-    .romanson .productList li a{width:375px}
-    .romanson .productList .photo{height:375px}
-    .romanson .productDetail .buttons li.list{width:calc(100% - 260px)}
-    .romanson .productDetail .buttons li.prev{width:130px}
-    .romanson .productDetail .buttons li.next{width:130px}
+    .romanson .productList li a {
+        width: 375px
+    }
+
+    .romanson .productList .photo {
+        height: 375px
+    }
+
+    .romanson .productDetail .buttons li.list {
+        width: calc(100% - 260px)
+    }
+
+    .romanson .productDetail .buttons li.prev {
+        width: 130px
+    }
+
+    .romanson .productDetail .buttons li.next {
+        width: 130px
+    }
 }
+
 @media all and (max-width:1200px) {
+
     /*ROMANSON*/
-    .romanson .productList li a{width:360px}
-    .romanson .productList .photo{height:360px}
+    .romanson .productList li a {
+        width: 360px
+    }
+
+    .romanson .productList .photo {
+        height: 360px
+    }
+
     /*ARCHIVE*/
-    .archive .yearList{width:1000px}
-    .archive .yearList .list a{width:100px}
+    .archive .yearList {
+        width: 1000px
+    }
+
+    .archive .yearList .list a {
+        width: 100px
+    }
 }
+
 @media all and (max-width:1160px) {
+
     /*ROMANSON*/
-    .romanson .productList li a{width:345px}
-    .romanson .productList .photo{height:345px}
-    .romanson .productDetail .photo{padding-right:0}
-    .romanson .productDetail .info{padding-left:20px}
-    .romanson .productDetail .info th{width:180px}
+    .romanson .productList li a {
+        width: 345px
+    }
+
+    .romanson .productList .photo {
+        height: 345px
+    }
+
+    .romanson .productDetail .photo {
+        padding-right: 0
+    }
+
+    .romanson .productDetail .info {
+        padding-left: 20px
+    }
+
+    .romanson .productDetail .info th {
+        width: 180px
+    }
 }
+
 @media all and (max-width:1110px) {
+
     /*ROMANSON*/
-    .romanson .productList li a{width:335px}
-    .romanson .productList .photo{height:335px}
+    .romanson .productList li a {
+        width: 335px
+    }
+
+    .romanson .productList .photo {
+        height: 335px
+    }
+
     /*ARCHIVE*/
-    .archive .yearList{width:900px}
-    .archive .yearList .list a{width:90px}
+    .archive .yearList {
+        width: 900px
+    }
+
+    .archive .yearList .list a {
+        width: 90px
+    }
 }
+
 @media all and (max-width:1070px) {
+
     /*ROMANSON*/
-    .romanson .productList li a{width:325px}
-    .romanson .productList .photo{height:325px}
+    .romanson .productList li a {
+        width: 325px
+    }
+
+    .romanson .productList .photo {
+        height: 325px
+    }
 }
+
 @media all and (max-width:1045px) {
+
     /*ROMANSON*/
-    .romanson .productList li a{width:310px}
-    .romanson .productList .photo{height:310px}
+    .romanson .productList li a {
+        width: 310px
+    }
+
+    .romanson .productList .photo {
+        height: 310px
+    }
+
     /*ARCHIVE*/
-    .archive .yearList{width:850px}
-    .archive .yearList .list a{width:85px}
+    .archive .yearList {
+        width: 850px
+    }
+
+    .archive .yearList .list a {
+        width: 85px
+    }
 }
+
 @media all and (max-width:1000px) {
+
     /*ROMANSON*/
-    .romanson .productList li a{width:290px}
-    .romanson .productList .photo{height:290px}
+    .romanson .productList li a {
+        width: 290px
+    }
+
+    .romanson .productList .photo {
+        height: 290px
+    }
+
     /*ARCHIVE*/
-    .archive .yearList{width:800px}
-    .archive .yearList .list a{width:80px}
+    .archive .yearList {
+        width: 800px
+    }
+
+    .archive .yearList .list a {
+        width: 80px
+    }
 }
+
 @media all and (max-width:930px) {
+
     /*ROMANSON*/
-    .romanson .productList li a{width:270px}
-    .romanson .productList .photo{height:270px}
-     /*ARCHIVE*/
-    .archive .yearList{width:750px}
-    .archive .yearList .list a{width:75px}
+    .romanson .productList li a {
+        width: 270px
+    }
+
+    .romanson .productList .photo {
+        height: 270px
+    }
+
+    /*ARCHIVE*/
+    .archive .yearList {
+        width: 750px
+    }
+
+    .archive .yearList .list a {
+        width: 75px
+    }
 }
+
 @media all and (max-width:870px) {
+
     /*ROMANSON*/
-    .romanson .productList li a{width:260px}
-    .romanson .productList .photo{height:260px}
+    .romanson .productList li a {
+        width: 260px
+    }
+
+    .romanson .productList .photo {
+        height: 260px
+    }
+
     /*ARCHIVE*/
-    .archive .yearList{width:700px}
-    .archive .yearList .list a{width:70px;font-size:16px}
+    .archive .yearList {
+        width: 700px
+    }
+
+    .archive .yearList .list a {
+        width: 70px;
+        font-size: 16px
+    }
 }
+
 @media all and (max-width:840px) {
+
     /*ROMANSON*/
-    .romanson .productList li a{width:250px}
-    .romanson .productList .photo{height:250px}
+    .romanson .productList li a {
+        width: 250px
+    }
+
+    .romanson .productList .photo {
+        height: 250px
+    }
 }
 
 
-@media all and (max-width:812px){
-    .brand .brandVisual{height:90rem!important}
-    .brandVisual > article{display:none}
-    .brand .moTextWrap{display:block;padding:0 4rem;text-align:center;padding-bottom:20rem}
-    .brand .moTextWrap h5{opacity:1!important;font-size:4.2rem;font-weight:500;margin:9.1rem 0 2.8rem 0}
-    .brand .moTextWrap span{font-size:2.4rem;color:#767676;line-height:1.6;display:block}
-    .brand .moTextWrap span br{display:none}
-    .brand .moTextWrap a{margin-top:5rem;display:inline-block;font-size:2rem;font-weight:500;color:#767676;padding-bottom:0.5rem;border-bottom:1px solid #767676}
+@media all and (max-width:812px) {
+    .brand .brandVisual {
+        height: 90rem !important
+    }
+
+    .brandVisual>article {
+        display: none
+    }
+
+    .brand .moTextWrap {
+        display: block;
+        padding: 0 4rem;
+        text-align: center;
+        padding-bottom: 20rem
+    }
+
+    .brand .moTextWrap h5 {
+        opacity: 1 !important;
+        font-size: 4.2rem;
+        font-weight: 500;
+        margin: 9.1rem 0 2.8rem 0
+    }
+
+    .brand .moTextWrap span {
+        font-size: 2.4rem;
+        color: #767676;
+        line-height: 1.6;
+        display: block
+    }
+
+    .brand .moTextWrap span br {
+        display: none
+    }
+
+    .brand .moTextWrap a {
+        margin-top: 5rem;
+        display: inline-block;
+        font-size: 2rem;
+        font-weight: 500;
+        color: #767676;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid #767676
+    }
+
     /*J.ESTINA JEWELRY*/
-    .jewelry .brandVisual{background-position:center center}
+    .jewelry .brandVisual {
+        background-position: center center
+    }
+
     /*J.ESTINA HANDBAG*/
-    .handbag .brandVisual{background-image: url(/images/brand_visual_handbag_mo.jpg);background-position:center center}
+    .handbag .brandVisual {
+        background-image: url(../images/brand_visual_handbag_mo.jpg);
+        background-position: center center
+    }
+
     /*ROMANSON*/
-    .romanson .content{padding-bottom:0}
-    .romanson .topVisual{height:40rem;background:url(/images/brand_romanson_visual_mo.jpg) no-repeat center center;background-size:cover}
-    .romanson .topText{padding:18rem 4rem 7.8rem 4rem;margin-top:-1px}
-    .romanson .topText h5{margin-bottom:3rem;font-size:2.8rem;margin-top:0}
-    .romanson .topText span.text{font-size:2.4rem;margin-top:0}
-    .romanson .topText span.text br{display:none}
-    .romanson .topText a.mallLink{margin-top:5rem;padding-bottom:0.5rem;font-size:2rem}
-    .romanson .topText dl{width:100%}
-    .romanson .topText dl dt{width:100%;height:9rem}
-    .romanson .topText dl dt span{width:100%;text-align:left;position:relative;transform:none;padding-bottom:0;top:0;line-height:9rem;display:block;padding:0 4rem;font-size:2.4rem}
-    .romanson .topText dl dt b{display:inline-block;margin-bottom:0;font-size:2rem;margin-right:1.5rem}
-    .romanson .topText dl dt span::before{width:2.4rem;height:1.3rem;top:50%;transform:translateY(-50%);background-size:2.4rem;left:calc(100% - 6rem);bottom:inherit;margin-left:0}
-    .romanson .topText dl dd{max-height:30rem;display:none}
-    .romanson .topText dl dd a{display:inline-block!important;font-size:2.4rem;line-height:8rem;width:100%;float:left}
-    .romanson .controller{padding:0 4rem;border-bottom:none}
-    .romanson .controller a{line-height:0;width:auto;top:40%}
-    .romanson .controller a.prevPrd{padding-right:0;background:none;left:0}
-    .romanson .controller a.prevPrd::before{display:none}
-    .romanson .controller a.nextPrd{padding-left:0;background:none;right:0}
-    .romanson .controller a.nextPrd::before{display:none}
-    .romanson .controller a img{display:block;height:4rem}
-    .romanson .controller a span{display:none}
-    .romanson .controller .nowPrd{font-size:7.8rem;padding:0 7.2rem 3.2rem 7.2rem;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;border-bottom:1px solid #e0e0e0}
-    .romanson .content .productList{padding:0 4rem 16rem 4rem}
-    .romanson .productList li{width:50%;margin-top:6rem}
-    .romanson .productList li:nth-child(3n+2){text-align:center}
-    .romanson .productList li:nth-child(3n+3){text-align:center}
-    .romanson .productList li:nth-child(odd){padding-right:2rem}
-    .romanson .productList li:nth-child(even){padding-left:2rem}
-    .romanson .productList li a{width:100%;display:block;text-align:center}
-    .romanson .productList .photo{height:30rem}
-    .romanson .productList .photo img{height:20rem}
-    .romanson .productList .name{font-size:2.6rem;margin:4rem 0 2rem 0}
-    .romanson .productList .cate{font-size:2.4rem;padding-bottom:3.8rem}
-    .romanson .productDetail{padding:8.5rem 0 20rem 0}
-    .romanson .productDetail::before{width:6rem;height:0.5rem}
-    .romanson .productDetail .photo{width:100%;padding-right:0}
-    .romanson .productDetail .photo .slides li{height:57.4rem}
-    .romanson .productDetail .photo .slides li img{height:41.7rem}
-    .romanson .productDetail .info{width:100%;float:inherit;padding-left:0;position:relative;padding:24rem 4rem 0 4rem}
-    .romanson .productDetail .info .cate{font-size:2.4rem;margin-top:2rem}
-    .romanson .productDetail .info h6{margin:2.5rem 0 3rem 0;padding-bottom:4rem;font-size:4.8rem}
-    .romanson .productDetail .info th{width:30rem;height:8rem;font-size:2.6rem}
-    .romanson .productDetail .info td{font-size:2.4rem}
-    .romanson .productDetail .thumb{margin:auto;position:absolute;left:0;top:0;padding:4rem}
-    .romanson .productDetail .thumb li{width:14rem;height:14rem;margin-right:1rem}
-    .romanson .productDetail .thumb li img{height:10rem}
-    .romanson .productDetail .buttons{margin-top:3rem;display:inline-block}
-    .romanson .productDetail .buttons li{display:inline-block;float:left}
-    .romanson .productDetail .buttons li.list{width:100%}
-    .romanson .productDetail .buttons li a{line-height:10.8rem;font-size:2.8rem}
-    .romanson .productDetail .buttons li.prev{width:50%;margin-top:2.4rem}
-    .romanson .productDetail .buttons li.prev a::before{width:1.2rem;height:2.4rem;margin-right:4rem;background:url(/images/icon_brand_romanson_detail_prev_mo.svg) no-repeat;background-size:1.2rem 2.4rem}
-    .romanson .productDetail .buttons li.next{width:50%;margin-top:2.4rem}
-    .romanson .productDetail .buttons li.next a{background:#fff;color:#101010;border-left:none}
-    .romanson .productDetail .buttons li.next a::after{width:1.2rem;height:2.4rem;background:url(/images/icon_brand_romanson_detail_next_mo.svg);margin-left:4rem;background-size:1.2rem 2.4rem}
+    .romanson .content {
+        padding-bottom: 0
+    }
+
+    .romanson .topVisual {
+        height: 40rem;
+        background: url(../images/brand_romanson_visual_mo.jpg) no-repeat center center;
+        background-size: cover
+    }
+
+    .romanson .topText {
+        padding: 18rem 4rem 7.8rem 4rem;
+        margin-top: -1px
+    }
+
+    .romanson .topText h5 {
+        margin-bottom: 3rem;
+        font-size: 2.8rem;
+        margin-top: 0
+    }
+
+    .romanson .topText span.text {
+        font-size: 2.4rem;
+        margin-top: 0
+    }
+
+    .romanson .topText span.text br {
+        display: none
+    }
+
+    .romanson .topText a.mallLink {
+        margin-top: 5rem;
+        padding-bottom: 0.5rem;
+        font-size: 2rem
+    }
+
+    .romanson .topText dl {
+        width: 100%
+    }
+
+    .romanson .topText dl dt {
+        width: 100%;
+        height: 9rem
+    }
+
+    .romanson .topText dl dt span {
+        width: 100%;
+        text-align: left;
+        position: relative;
+        transform: none;
+        padding-bottom: 0;
+        top: 0;
+        line-height: 9rem;
+        display: block;
+        padding: 0 4rem;
+        font-size: 2.4rem
+    }
+
+    .romanson .topText dl dt b {
+        display: inline-block;
+        margin-bottom: 0;
+        font-size: 2rem;
+        margin-right: 1.5rem
+    }
+
+    .romanson .topText dl dt span::before {
+        width: 2.4rem;
+        height: 1.3rem;
+        top: 50%;
+        transform: translateY(-50%);
+        background-size: 2.4rem;
+        left: calc(100% - 6rem);
+        bottom: inherit;
+        margin-left: 0
+    }
+
+    .romanson .topText dl dd {
+        max-height: 30rem;
+        display: none
+    }
+
+    .romanson .topText dl dd a {
+        display: inline-block !important;
+        font-size: 2.4rem;
+        line-height: 8rem;
+        width: 100%;
+        float: left
+    }
+
+    .romanson .controller {
+        padding: 0 4rem;
+        border-bottom: none
+    }
+
+    .romanson .controller a {
+        line-height: 0;
+        width: auto;
+        top: 40%
+    }
+
+    .romanson .controller a.prevPrd {
+        padding-right: 0;
+        background: none;
+        left: 0
+    }
+
+    .romanson .controller a.prevPrd::before {
+        display: none
+    }
+
+    .romanson .controller a.nextPrd {
+        padding-left: 0;
+        background: none;
+        right: 0
+    }
+
+    .romanson .controller a.nextPrd::before {
+        display: none
+    }
+
+    .romanson .controller a img {
+        display: block;
+        height: 4rem
+    }
+
+    .romanson .controller a span {
+        display: none
+    }
+
+    .romanson .controller .nowPrd {
+        font-size: 7.8rem;
+        padding: 0 7.2rem 3.2rem 7.2rem;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        border-bottom: 1px solid #e0e0e0
+    }
+
+    .romanson .content .productList {
+        padding: 0 4rem 16rem 4rem
+    }
+
+    .romanson .productList li {
+        width: 50%;
+        margin-top: 6rem
+    }
+
+    .romanson .productList li:nth-child(3n+2) {
+        text-align: center
+    }
+
+    .romanson .productList li:nth-child(3n+3) {
+        text-align: center
+    }
+
+    .romanson .productList li:nth-child(odd) {
+        padding-right: 2rem
+    }
+
+    .romanson .productList li:nth-child(even) {
+        padding-left: 2rem
+    }
+
+    .romanson .productList li a {
+        width: 100%;
+        display: block;
+        text-align: center
+    }
+
+    .romanson .productList .photo {
+        height: 30rem
+    }
+
+    .romanson .productList .photo img {
+        height: 20rem
+    }
+
+    .romanson .productList .name {
+        font-size: 2.6rem;
+        margin: 4rem 0 2rem 0
+    }
+
+    .romanson .productList .cate {
+        font-size: 2.4rem;
+        padding-bottom: 3.8rem
+    }
+
+    .romanson .productDetail {
+        padding: 8.5rem 0 20rem 0
+    }
+
+    .romanson .productDetail::before {
+        width: 6rem;
+        height: 0.5rem
+    }
+
+    .romanson .productDetail .photo {
+        width: 100%;
+        padding-right: 0
+    }
+
+    .romanson .productDetail .photo .slides li {
+        height: 57.4rem
+    }
+
+    .romanson .productDetail .photo .slides li img {
+        height: 41.7rem
+    }
+
+    .romanson .productDetail .info {
+        width: 100%;
+        float: inherit;
+        padding-left: 0;
+        position: relative;
+        padding: 24rem 4rem 0 4rem
+    }
+
+    .romanson .productDetail .info .cate {
+        font-size: 2.4rem;
+        margin-top: 2rem
+    }
+
+    .romanson .productDetail .info h6 {
+        margin: 2.5rem 0 3rem 0;
+        padding-bottom: 4rem;
+        font-size: 4.8rem
+    }
+
+    .romanson .productDetail .info th {
+        width: 30rem;
+        height: 8rem;
+        font-size: 2.6rem
+    }
+
+    .romanson .productDetail .info td {
+        font-size: 2.4rem
+    }
+
+    .romanson .productDetail .thumb {
+        margin: auto;
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 4rem
+    }
+
+    .romanson .productDetail .thumb li {
+        width: 14rem;
+        height: 14rem;
+        margin-right: 1rem
+    }
+
+    .romanson .productDetail .thumb li img {
+        height: 10rem
+    }
+
+    .romanson .productDetail .buttons {
+        margin-top: 3rem;
+        display: inline-block
+    }
+
+    .romanson .productDetail .buttons li {
+        display: inline-block;
+        float: left
+    }
+
+    .romanson .productDetail .buttons li.list {
+        width: 100%
+    }
+
+    .romanson .productDetail .buttons li a {
+        line-height: 10.8rem;
+        font-size: 2.8rem
+    }
+
+    .romanson .productDetail .buttons li.prev {
+        width: 50%;
+        margin-top: 2.4rem
+    }
+
+    .romanson .productDetail .buttons li.prev a::before {
+        width: 1.2rem;
+        height: 2.4rem;
+        margin-right: 4rem;
+        background: url(../images/icon_brand_romanson_detail_prev_mo.svg) no-repeat;
+        background-size: 1.2rem 2.4rem
+    }
+
+    .romanson .productDetail .buttons li.next {
+        width: 50%;
+        margin-top: 2.4rem
+    }
+
+    .romanson .productDetail .buttons li.next a {
+        background: #fff;
+        color: #101010;
+        border-left: none
+    }
+
+    .romanson .productDetail .buttons li.next a::after {
+        width: 1.2rem;
+        height: 2.4rem;
+        background: url(../images/icon_brand_romanson_detail_next_mo.svg);
+        margin-left: 4rem;
+        background-size: 1.2rem 2.4rem
+    }
+
     /*ARCHIVE*/
-    .archive .flex-direction-nav{display:none}
-    .archive .categoryWrap .scroll{display:none}
-    .archive .categoryWrap .titleText{width:100%;top:inherit;transform:none;bottom:11.5rem}
-    .archive .categoryWrap .titleText.alLeft{left:inherit}
-    .archive .categoryWrap .titleText.alRight{right:inherit}
-    .archive .categoryWrap h5{font-size:4.8rem}
-    .archive .categoryWrap h6{font-size:4.8rem;margin-top:1rem}
-    .archive .categoryWrap h6 img{height:2.6rem;margin:-1rem 2rem 0 2rem}
-    .archive .flex-control-nav{bottom:6rem}
-    .archive .flex-control-nav > li{width:1.6rem;height:1.6rem;margin:0 1.2rem}
-    .archive .flex-control-nav > li a{height:1.6rem}
-    .archive .controller{height:11rem}
-    .archive .prevYearList{display:none}
-    .archive .nextYearList{display:none}
-    .archive .controller a.yearPrev{left:4rem}
-    .archive .controller a.yearPrev img{height:4rem}
-    .archive .controller a.yearNext{right:4rem}
-    .archive .controller a.yearNext img{height:4rem}
-    .archive .controller .btnWrap{width:calc(100% - 11rem);float:left}
-    .archive .yearList{width:calc(100% - 20rem);height:11rem}
-    .archive .yearList .list{height:11rem;width:100%}
-    .archive .yearList .list a{font-size:2.8rem;line-height:11rem;width:33.33%}
-    .archive .controller a.moTop{display:block;position:absolute;right:0;top:0;width:10rem;height:11rem}
-    .archive .controller a.moTop img{height:4.2rem;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}
-    .archive .controller a.moTop::after{content:'';width:1px;height:4rem;background:#1d1d1d;position:absolute;left:0;top:50%;transform:translateY(-50%)}
+    .archive .flex-direction-nav {
+        display: none
+    }
+
+    .archive .categoryWrap .scroll {
+        display: none
+    }
+
+    .archive .categoryWrap .titleText {
+        width: 100%;
+        top: inherit;
+        transform: none;
+        bottom: 11.5rem
+    }
+
+    .archive .categoryWrap .titleText.alLeft {
+        left: inherit
+    }
+
+    .archive .categoryWrap .titleText.alRight {
+        right: inherit
+    }
+
+    .archive .categoryWrap h5 {
+        font-size: 4.8rem
+    }
+
+    .archive .categoryWrap h6 {
+        font-size: 4.8rem;
+        margin-top: 1rem
+    }
+
+    .archive .categoryWrap h6 img {
+        height: 2.6rem;
+        margin: -1rem 2rem 0 2rem
+    }
+
+    .archive .flex-control-nav {
+        bottom: 6rem
+    }
+
+    .archive .flex-control-nav>li {
+        width: 1.6rem;
+        height: 1.6rem;
+        margin: 0 1.2rem
+    }
+
+    .archive .flex-control-nav>li a {
+        height: 1.6rem
+    }
+
+    .archive .controller {
+        height: 11rem
+    }
+
+    .archive .prevYearList {
+        display: none
+    }
+
+    .archive .nextYearList {
+        display: none
+    }
+
+    .archive .controller a.yearPrev {
+        left: 4rem
+    }
+
+    .archive .controller a.yearPrev img {
+        height: 4rem
+    }
+
+    .archive .controller a.yearNext {
+        right: 4rem
+    }
+
+    .archive .controller a.yearNext img {
+        height: 4rem
+    }
+
+    .archive .controller .btnWrap {
+        width: calc(100% - 11rem);
+        float: left
+    }
+
+    .archive .yearList {
+        width: calc(100% - 20rem);
+        height: 11rem
+    }
+
+    .archive .yearList .list {
+        height: 11rem;
+        width: 100%
+    }
+
+    .archive .yearList .list a {
+        font-size: 2.8rem;
+        line-height: 11rem;
+        width: 33.33%
+    }
+
+    .archive .controller a.moTop {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 10rem;
+        height: 11rem
+    }
+
+    .archive .controller a.moTop img {
+        height: 4.2rem;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%)
+    }
+
+    .archive .controller a.moTop::after {
+        content: '';
+        width: 1px;
+        height: 4rem;
+        background: #1d1d1d;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%)
+    }
 }
