@@ -1,0 +1,484 @@
+
+/*Wrap*/
+#wrap{position:relative}
+/*header*/
+header{position:absolute;padding:0 45px 0 48px;height:88px;display:flex;width: 100%;align-items:center;justify-content:space-between;border-bottom:1px solid #e0e0e0;z-index:11}
+header.fix{position:fixed;background:#fff}
+header.noneBg{background:transparent!important;border-bottom:none}
+header .moMenu{display:none}
+/*Nav*/
+.mobileGNB{display:none}
+nav li{display:inline-block;margin:0 32px}
+nav li:last-child{margin-right:0}
+nav li a{position:relative;display:block;font-size:18px;font-weight:500;padding-top:6px}
+nav li i.new{position:absolute;right:-8px;display:block;width:4px;height:4px;border-radius:100%;background:#ff2c2c;top:2px}
+/*Common(Btn)*/
+.sub .btn{text-align:center}
+.sub .btn .borderBtn{display:inline-block;width:160px;line-height:58px;text-align:center;border:1px solid #101010;font-size:18px}
+.sub .btn .btBorder{display:inline-block;font-size:18px;font-weight:500;padding-bottom:8px;border-bottom: 2px solid #5143d4}
+/* .sub .btn .btBorder:hover{border-bottom:2px solid #5143d4} */
+/*Common(Scroll Top)*/
+/*bsy 1006 수정*/
+.fixBtn{position:fixed;right:49px;bottom:38px;z-index:10;text-align:right;display:flex;flex-flow:column;z-index:10}
+.fixBtn .scrollTop{display:none;background:#474747;width:50px;line-height:50px;border-radius:15px;text-align:center;margin-left:auto}
+.fixBtn .scrollTop img{width:12px}
+.fixBtn.removeFix{position:absolute}
+.fixBtn button{display:none}
+.fixBtn .idim{position:relative;background:#474747;width:388px;height:130px;border-radius:14px;text-align:left;margin-top:18px;padding:0 20px;display:flex;align-items:center}
+.fixBtn .idim .close{position:absolute;top:18px;right:20px}
+.fixBtn .idim .close img{vertical-align:top}
+.fixBtn .idim i{width:72px;line-height:72px;background:#5143d4;border-radius:11px;text-align:center}
+.fixBtn .idim i img{width:48px}
+.fixBtn .idim span{font-size:16px;color:#fff;padding-left:26px;line-height:24px}
+.fixBtn .idim span a{color:#fff;margin-top:3px;display:block}
+.fixBtn .idim span a img{margin-left:6px}
+/*-------------*/
+/*Common(Sub)*/
+.sub{padding-bottom:180px;position:relative}
+.sub article{width:1280px;margin:auto}
+/*bsy 1006 수정*/
+.sub .subTop{margin-top:108px;margin-bottom:80px;display:inline-block;width:100%}
+/*--------------*/
+.sub .subTop article{position:relative}
+.sub .location{display:flex;align-items:center;justify-content:end}
+.sub .location a{color:#767676;font-size:14px}
+.sub .location li{color:#767676}
+.sub .location li:first-child{font-family:'Louis George Café';font-weight:bold}
+.sub .location li.arrow{margin:0 7px;font-size:10px}
+.sub .location li.now{color:#101010;font-weight:500}
+.sub h3.pageTitle{font-size:62px;font-weight:500;padding-top:116px}
+.sub .fixTabWrap{background:#f6f6f6}
+.sub .subTab{width:1280px;margin:0 auto 120px;height:68px;display:flex;flex-direction:row;align-items:center}
+.sub .subTab li{vertical-align:middle}/*bsy 1006 수정*/
+.sub .subTab a{margin-right:64px;font-size:18px;color:#767676;display:block;line-height:normal;position:relative;line-height:68px}
+.sub .subTab a.on{color:#101010;font-weight:500}
+.sub .subTab a.on::after{content:'';position:absolute;width:100%;height:2px;bottom:16px;left:0;background:#5143d4}
+.sub .subTab li a::before{content:'';position:absolute;width:1px;height:10px;background:#e0e0e0;top:50%;right:-32px;transform:translateY(-50%)}
+.sub .subTab li:last-child a::before{display:none}
+.sub .subTab li:last-child a{margin-right:0}
+.sub .fixTabWrap.fix{position:fixed;top:88px;left:50%;transform:translateX(-50%);background:#202020;width:100%;z-index:1;height:68px}
+.sub .fixTabWrap.fix .subTab a.on{color:#fff}
+/*bsy 1006 수정*/
+.sub .fixTabWrap.fix .subTab li::after{background:#303030}
+/*--------*/
+.sub .topSearch{position:absolute;right:0;bottom:0;width:400px;border-bottom:2px solid #101010;padding-bottom:10px}
+.sub .topSearch input{padding:0 6px;font-size:16px;font-weight:500;font-family:'Spoqa Han Sans Neo';width:375px;border:none}
+.sub .topSearch input::placeholder{color:#767676;}
+.sub .topSearch button{position:absolute;right:0;bottom:10px;background:none;border:none}
+.sub .topSearch button img{width:24px}
+/*Common(Layper Popup)*/
+.layerPopWrap{position:fixed;left:0;top:0;width:100%;height:100%;background:rgba(0, 0, 0, 0.7);z-index:11}
+.layerPopWrap .layerPopData{position:absolute;background:#fff;left:50%;top:50%;transform:translate(-50%,-50%);padding:60px 0 40px;border-radius:11px}
+.layerPopWrap .layerPopData .closeBtn{position:absolute;right:20px;top:20px}
+.layerPopWrap .layerPopData .closeBtn img{width:16px}
+/*Common(Share Layer Popup)*/
+.shareLayerPop .layerPopData{width:446px;text-align:center;padding-top:38px;padding-bottom:60px}
+.shareLayerPop.layerPopWrap .layerPopData .closeBtn{top:24px;right:24px}
+.shareLayerPop .layerPopData h5{font-size:24px;font-weight:500;margin-bottom:43px}
+.shareLayerPop .layerPopData a{display:inline-block}
+.shareLayerPop .layerPopData i{display:block;margin-bottom:13px}
+.shareLayerPop .layerPopData i img{width:64px}
+.shareLayerPop .layerPopData .btn{position:relative}
+/*bsy 1006 수정*/
+.shareLayerPop .layerPopData .btn a{margin-right:34px}
+.shareLayerPop .layerPopData .btn a.urlCopy{margin-right:0}
+.shareLayerPop .layerPopData .btn a.sms{display:none}
+/*----------*/
+.shareLayerPop .layerPopData .copyTxt{position:absolute;background:rgba(0, 0, 0, 0.9);color:#fff;line-height:46px;border-radius:46px;left:50%;transform:translateX(-50%);top:0;width:210px;display:none}
+/*Common(Common Board View)*/
+.commonBoardView{border-top:1px solid #101010}
+.commonBoardView thead{border-bottom:1px solid #e0e0e0}
+.commonBoardView th{font-weight:400;padding:58px 0}
+.commonBoardView th .cate{font-size:18px;padding-bottom:30px;color:#5143d4;font-family: 'Louis George Café';font-weight:bold}
+.commonBoardView th .name{font-size:34px;font-weight:500;padding-bottom:35px}
+.commonBoardView th .tag{font-size:16px}
+.commonBoardView th .tag span{display:inline-block;margin-right:8px;padding:0 12px;line-height:32px;border-radius:32px;background:#f5f6fa;margin-bottom:5px}
+.commonBoardView th .eventTag{font-size:18px;color:#5143d4;margin-bottom:34px}
+.commonBoardView th .eventTag span{display:inline-block;margin-right:10px}
+.commonBoardView th .date{color:#767676;font-size:18px;font-family:'Louis George Café';font-weight:bold}
+.commonBoardView th dt{display:inline-block;color:#101010;font-size:18px;font-weight:500;margin-right:16px}
+.commonBoardView th .date dt{font-family:'Noto Sans KR', Sans-serif}
+.commonBoardView th dd{display:inline-block}
+.commonBoardView th dd i{color:#ff3e3e;margin-left:14px;display:inline-block;font-family:'Louis George Café';font-weight:bold}
+.commonBoardView td{text-align:center;padding:30px 0}
+.commonBoardView td img{max-width:100%;margin:30px 0}
+.commonBoardView .text{color:#505050;font-size:16px;line-height:28px;margin-top:30px;word-break:break-all;}
+/*Common(paging)*/
+/*bsy 1006 수정*/
+.pagination{padding-top:60px; text-align: center;}
+/*--------*/
+.pagination ul>li{display: inline-block;height:40px;padding:0 20px;}
+.pagination ul>li:first-child{padding-left:0}
+.pagination ul>li:last-child{padding-right:0}
+.pagination ul>li.mo{display:none}
+.pagination ul>li>a{display:inline-block;line-height:2;width:20px;color:#767676;font-size:18px;font-family:'Louis George Café';font-weight:bold}
+/*bsy 1006 수정*/
+.pagination ul>li .num.on{color: #101010; border-bottom: 2px solid #101010;font-weight: 500;}
+/*---------*/
+/*Common(CommonBoardList)*/
+.commBoardList table{border-top:1px solid #101010;width: 100%;}
+/*bsy 1006 수정*/
+.commBoardList table tr{display:flex;justify-content:space-between;padding:45px 35px;border-bottom:1px solid #e0e0e0;height:100px}
+/*-----------*/
+.commBoardList table .notice .noti{color: #fff; text-align: center; width: 60px; line-height: 30px; background-color: #5143d4;position: absolute;top: 50%;left: 3%;transform: translateY(-50%);}
+.commBoardList table td.tit{text-align:left}
+.commBoardList table td.tit a{display:inline-block;line-height:1;font-size:18px;border-bottom:1px solid transparent}
+.commBoardList table td.tit a:hover{border-bottom:1px solid #101010}
+.commBoardList table td.date{font-size:16px;color:#767676;font-family:'Louis George Café';font-weight:bold!important;}
+/* Common(listBoard) */
+.listBoard dl{margin-top:120px;width:31.1%;margin-right:3.1%;cursor:pointer}
+.listBoard dl:nth-child(1),.listBoard dl:nth-child(2),.listBoard dl:nth-child(3){margin-top:0}
+.listBoard dl:nth-child(3n){margin-right:0}
+/*bsy 1006 수정*/
+.listBoard dt{position:relative;height:300px}
+.listBoard .layout3 dt a{max-width: 400px;}
+.listBoard .listBox dt a{border-radius: 40px;display: inline-block;background-repeat:no-repeat;background-size:cover;height:100%;width:100%;background-position:center}
+.listBoard .listBox dt a.endEvent>div{width:100%;background:rgba(0,0,0,0.8);height:100%;position:absolute;color:#fff;font-size:28px;border-radius:34px;display:flex;align-items:center;justify-content:center}
+.listBoard dt a{transition-duration: 0.5s;width: 100%;}
+.listBoard dd{text-align:left}
+.listBoard dd > div{display:flex;flex-direction:row;flex-flow:wrap}
+.listBoard dd br.mo{display: none;}
+.listBoard .label{display: inline-block; font-size: 16px; color: #5143d4; margin-top: 35px; font-weight: 500;}
+.listBoard h5.tit{display:inline-block;font-size:18px;color:#101010;font-weight:500;margin:24px 0;line-height:23px}
+.listBoard h5.tit a{border-bottom:1px solid transparent;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;height:47px}
+.listBoard .date{font-size:16px;color:#767676;font-family:'Louis George Café'}
+.listBoard .listBox{display:flex;flex-wrap:wrap;margin-bottom:95px}
+.listBoard .more{width: 100%; margin:auto; text-align: center}
+.listBoard .more a{display:inline-block;font-weight:500;color:#101010;font-size:18px;border-bottom: 2px solid #5143d4;padding-bottom:8px}
+.listBoard dt a:hover h5 a{border-bottom: 1px solid #101010;}
+.listBoard .term{font-size:16px;color:#101010;padding-right:14px;font-weight:500}
+.listBoard .dday{font-size:16px;color:#ff3e3e;padding-left:30px;font-family:'Louis George Café';font-weight:bold}
+/*Footer*/
+footer{background:#101010;padding:118px 0 108px}
+footer article{width:1280px;color:#767676;margin:auto}
+footer .footer_top{position:relative;padding-bottom:30px;margin-bottom:29px}
+footer .footer_top i{display:inline-block}
+footer .footer_top i img{width: 60px; height: 20px;}
+footer .footer_top::after{content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 1px; background-color: #1d1d1d;}
+footer .footer_top ul{display:inline-block;padding-left:40px;vertical-align:bottom}
+footer .footer_top ul li{display: inline-block;padding-left: 40px; position: relative;;}
+footer .footer_top ul li:first-child{padding: 0;}
+footer .footer_top ul li:first-child::before{background: none;}
+footer .footer_top ul li::before{content: ''; position: absolute; width: 1px; height: 10px; top: 0; left: 20px; background: #1d1d1d;}
+footer .footer_top ul li a{color: #767676;}
+footer .footer_btm{display: flex; justify-content: space-between; position: relative;  align-items: center;}
+footer .footer_btm ul:first-child{padding-bottom: 10px;}
+footer .footer_btm ul li{display: inline-block;position: relative; padding-left: 20px;}
+footer .footer_btm ul li:first-child{padding-left: 0;}
+footer .footer_btm ul li:first-child::before{background: none;}
+footer .footer_btm ul li::before{content: ''; position: absolute; width: 1px; height: 10px; top: 0; left: 10px; background: #1d1d1d;}
+footer .footer_btm br.mo{display: none;}
+footer .footer_btm span:first-child{padding-right: 35px;}
+footer .copy{font-size:12px;margin-top:50px;text-transform:uppercase;font-family:'Louis George Café';font-weight:bold}
+/*Error*/
+.error{padding-top:0.1px;font-family:'Spoqa Han Sans Neo'}
+.error .sub section{margin-top:442px;text-align:center;padding-bottom:242px}
+.error .sub article h3{font-size:62px;font-weight:500;margin-bottom:41px}
+.error .sub article span{font-size:18px;display:block;line-height:30px;margin-bottom:75px}
+.error .sub article span br.mo{display:none}
+.error .sub article a{display:inline-block;font-size:18px;font-weight:500;padding-bottom:8px;border-bottom:2px solid #5143d4}
+/*개인정보 처리방침*/
+.policy.sub h3.pageTitle{text-align:left}
+.policy .dropBox{position:absolute;top:159px;right:0;width:168px}
+.policy .dropBox .now{cursor:pointer;display:block;font-size:16px;border-bottom:2px solid #101010;padding: 0 6px;background:url(../images/common/icon_arrow_down.png)no-repeat calc(100% - 6px) 2px;background-size:16px;font-family: 'Louis George Café';font-weight:bold;padding-bottom:16px}
+.policy .dropBox ul{border:1px solid #e0e0e0;display:none}
+.policy .dropBox li a{display:block;padding:10px 6px;font-family:'Louis George Café';font-weight:bold}
+.policy .dropBox li a:hover{background:#f0f0f0;font-weight:500}
+.policy .content{font-size:16px;color:#505050}
+.policy .content br.mo{display:none}
+.policy .content h5{font-size:24px;font-weight:500;color:#101010;margin:60px 0 40px}
+.policy .content span{display:block}
+.policy .content p{line-height:28px}
+.policy .content p.margin{margin:40px 0}
+.policy .content ul{margin-left:20px}
+.policy .content li{line-height:28px}
+.policy .content li b{margin-top:40px;color:#101010;display:block;font-weight:500}
+.policy .content li span{margin-bottom:40px}
+.policy .content li a{color:#505050}
+/*시스템 점검 안내*/
+.sysNotiLayerPop.layerPopWrap .layerPopData{background:transparent;width:500px}
+.sysNotiLayerPop.layerPopWrap .closeBtns{top:inherit;right:inherit;bottom:0;padding-top:20px;display:flex;width:100%;justify-content:space-between;align-items:end}
+.sysNotiLayerPop.layerPopWrap .closeBtn{position:static}
+.sysNotiLayerPop .closeBtns a{color:#fff;font-size:16px}
+.sysNotiLayerPop .closeBtns a img{margin-left:10px;width:11px}
+.sysNotiLayerPop .closeBtns .dayChk{position:absolute;opacity:0}
+.sysNotiLayerPop .cnt{background:#fff;text-align:center;padding:89px 0;border-radius:15px}
+.sysNotiLayerPop .cnt h5{font-size:48px;font-weight:500;margin-bottom:38px}
+.sysNotiLayerPop .cnt span{font-size:20px;font-weight:500;line-height:24px;display:block;margin-bottom:37px}
+.sysNotiLayerPop .cnt dl{width:380px;margin:auto;background:#f6f6f6;padding:35px 35px 15px;display:flex;flex-flow:wrap;align-items:center}
+.sysNotiLayerPop .cnt dt{font-size:18px;font-weight:500;margin-bottom:20px;width:102px;line-height:36px;border-radius:36px;color:#fff;background:#5143d4}
+.sysNotiLayerPop .cnt dd{font-size:20px;margin-bottom:20px;padding-left:20px;text-align:left}
+/*이벤트 팝업*/
+.eventPopWrap{position:fixed;left:0;top:0;width:100%;height:100%;background:rgba(0, 0, 0, 0.7);z-index:11}
+.eventPopWrap .layerPopData{position:relative;top:50%;left:50%;transform:translate(-50%,-50%);width:500px;overflow:hidden}
+.eventPopWrap .cnt{background:#fff;text-align:center;border-radius:15px;overflow:hidden}
+.eventPopWrap .slidData{background-repeat:no-repeat;background-size:cover;background-position:center;padding:64px 0 93px;height:540px}
+.eventPopWrap .slidData h5{font-size:48px;font-weight:bold;margin-bottom:25px}
+.eventPopWrap .slidData span{display:inline-block;font-weight:500;font-size:20px}
+.eventPopWrap .slidData span.text{background:#fef220;padding:4px 4px 3px;margin-bottom:11px}
+.eventPopWrap .slidData span.period{display:block;margin-bottom:44px}
+.eventPopWrap .closeBtns{padding-top:20px;display:flex;width:100%;justify-content:space-between;align-items:end;}
+.eventPopWrap .closeBtns a{font-size:16px;color:#fff}
+.eventPopWrap .closeBtns a img{width:16px;margin-left:10px}
+.eventPopWrap .closeBtns input{opacity:0;position:absolute;}
+.eventPopWrap .ctrl{position:absolute;bottom:50px;left:50%;transform:translateX(-50%);background:rgba(255, 255, 255, 0.7);width:102px;line-height:34px;border-radius:34px;z-index:1}
+.eventPopWrap .ctrl .button{position:absolute;top:50%;left: 50%;transform:translate(-50%, -50%);display:flex;justify-content:space-between;width:calc(100% - 40px);width:-webkit-calc(100% - 40px);z-index:1;}
+.eventPopWrap .ctrl .button img{width:7px}
+.eventPopWrap .ctrl .paging span{vertical-align:middle;display:inline-block;font-family:'Louis George Café';font-weight:bold}
+.eventPopWrap .ctrl .paging span.line{font-size:8px}
+/*이벤트 팝업2*/
+.eventOtLayerPop.eventPopWrap .slidData h5{color:#fff}
+.eventOtLayerPop.eventPopWrap .slidData span.period{color:#fff}
+@media (hover: hover) {
+    /*Common(paging)*/
+    /*bsy 1006 수정*/
+    /* .pagination ul>li:hover .num{color: #101010; border-bottom: 2px solid #101010;font-weight: 500;} */
+    /*-----------*/
+    /* Common(listBoard) */
+    /*bsy 1006 수정*/
+    .listBoard dl:hover dt a{transform:scale(1.05);transition: all 0.5s;}
+    .listBoard dl:hover a.endEvent>img{transform: none;}
+    .listBoard dl:hover h5 a{text-decoration:underline}/*bsy 1006 수정*/
+    /*---------*/
+}
+@media (max-width :1280px) {
+    /*Sub*/
+    .sub article{width:100%;padding:0 20px}
+    .sub .subTab{padding:0 20px;width:100%}
+    .sub .topSearch{right:20px}
+    /*Common(listBoard)*/
+    .listBoard .listBox{display: flex; flex-wrap: wrap;justify-content: space-between;}
+    .listBoard .layout3 dl{width: 32.3%}
+    /*bsy 1006 수정*/
+    .listBoard .term{display:block}
+    /* .listBoard .layout2 dl{width: 49%;} */
+    /*Footer*/
+    footer article{width:100%;padding:0 20px}
+    /*-----------*/
+    /*개인정보 처리방침*/
+    .policy .dropBox{right:20px}
+}
+@media (max-width:1000px) {
+    /*Nav*/
+    nav li{margin:0 20px}
+    /*Common(Scroll Top)*/
+    .fixBtn .scrollTop{width:52px;line-height:52px}
+    /*Common(Sub)*/
+    /* .sub{padding-bottom:100px} */
+    /*Common(Common Board View)*/
+    .commonBoardView .text br{display:none}
+    /*bsy 1006 수정*/
+    /*Common(listBoard)*/
+    .listBoard dl{margin-top:90px}
+    .listBoard dt{height:220px}
+    .listBoard .term{font-size:14px}
+    .listBoard .date{font-size:14px}
+    .listBoard .dday{font-size:14px;padding-left:10px}
+    /*-------------*/
+}
+@media (max-width :720px) {
+    /*Header*/
+    header .moMenu{display:block;width:4.4rem}
+    header .moMenu img{width:100%}
+    header .moMenu img.off{display:none}
+    header{padding:0 4rem;height:10.8rem}
+    header h1 img{width:12rem;height:3.8rem}
+    /*Nav*/
+    nav{display:none}
+    .mobileGNB{position:fixed;right:-100%;top:0;width:100%;height:100%;background:#fff;padding:3.5rem 0;z-index:999999;display:block}
+    .mobileGNB .menuTop{display:flex;justify-content:space-between;padding:0 4rem 5.4rem}
+    .mobileGNB .menuTop a.menu_logo img{width:12rem}
+    .mobileGNB .menuTop a.close img{width:3.5rem}
+    .mobileGNB .moMenuList{padding:0 4rem;height:calc(100% - 7rem);height:-webkit-calc(100% - 7rem);overflow-y:auto;}
+    .mobileGNB .moMenuList a{font-size:5.2rem;font-weight:500;display:inline-block;padding:4rem 0;position:relative;line-height:4.6rem}
+    .mobileGNB .moMenuList a i{position:absolute;right:-1.8rem;top:4.2rem;display:block;width:1rem;height:1rem;border-radius:100%;background:#ff2c2c;}
+    .mobileGNB  .moMenuAppDown{display:block;text-align:center;line-height:12rem;color:#fff;font-size:3.4rem;background:#5143d4;position:absolute;bottom:0;width:100%;font-weight:500}
+    .mobileGNB  .moMenuAppDown img{margin-right:1.7rem;width:9rem;vertical-align:unset}
+    /*Common(Btn)*/
+    .sub .btn .borderBtn{width:16rem;line-height:8rem;font-size:2.4rem}
+    .sub .btn .btBorder{font-size:2.8rem;padding-bottom:2.3rem;border-bottom:0.4rem solid #5143d4;}
+    /*Common(Scroll Top)*/
+    .fixBtn{bottom:0;right:0;width:100%}
+    .fixBtn .scrollTop{margin-right:4rem;margin-bottom:4.8rem;width:8rem;line-height:8rem;border-radius:1.3rem}/*bsy 1006 수정*/
+    .fixBtn .scrollTop img{width:2.4rem}
+    .fixBtn .idim{display:none}
+    .fixBtn button{display:block;background:#5143d4;border:none;width:100%;font-size:3.4rem;font-weight:500;height:12rem;color:#fff}
+    .fixBtn button img{margin-right:1.7rem;width:9rem;vertical-align:unset}
+    /*Common(Sub)*/
+    .sub{padding-bottom:24rem}
+    .sub article{padding:0 4rem}
+    .sub .subTop{margin-top:10.5rem;margin-bottom:12rem}
+    .sub h3.pageTitle{font-size:7.2rem;padding-top:10rem;text-align:center}
+    .sub .location{display:none}
+    .sub .subTab{margin-bottom:10rem;white-space:nowrap;overflow:auto;padding:0 4rem;height:9.2rem;text-align:center;justify-content:center}
+    .sub .fixTabWrap.fix{top:10.5rem;padding:0 0 2rem;width:100%;background:none;height:9.2rem;z-index:10}
+    .sub .fixTabWrap.fix .subTab{background:#202020}
+    .sub .subTab a{font-size:3.4rem;margin-right:7.2rem;line-height:9.2rem}
+    .sub .subTab a.on::after{height:0.4rem;bottom:1.1rem}
+    .sub .subTab li a::before{width:0.2rem;height:1.8rem;right:-3.8rem}
+    .sub .topSearch{bottom:inherit;top:27.6rem;right:inherit;left:50%;transform:translateX(-50%);width:89%;padding-bottom:1.6rem}
+    .sub .topSearch input{padding:0 1rem;font-size:2.8rem;width:60.5rem}
+    .sub .topSearch button img{width:3.4rem}
+    /*Common(Layper Popup)*/
+    .layerPopWrap .layerPopData{padding:12.7rem 0 5rem;border-radius:1.3rem}
+    .layerPopWrap .layerPopData .closeBtn{top:4rem;right:4rem}
+    .layerPopWrap .layerPopData .closeBtn img{width:2.6rem}
+    /*Common(Share Layer Popup)*/
+    .shareLayerPop .layerPopData{width:50rem;padding-top:6.4rem;padding-bottom:7.2rem}
+    .shareLayerPop .layerPopData h5{font-size:3.4rem;margin-bottom:5.6rem}
+    .shareLayerPop .layerPopData a{font-size:2.4rem}
+    .shareLayerPop .layerPopData i{margin-bottom:1.6rem}
+    .shareLayerPop .layerPopData i img{width:9rem}
+    .shareLayerPop.layerPopWrap .layerPopData .closeBtn{top:4rem;right:4rem}
+    .shareLayerPop.layerPopWrap .layerPopData .closeBtn img{width:3.2rem}
+    /*bsy 1006 수정*/
+    .shareLayerPop .layerPopData .copyTxt{line-height:8rem;border-radius:8rem;width:33rem;font-size:2.4rem;top:45%;transform: translate(-50%,-50%)}
+    .shareLayerPop .layerPopData .btn{display:inline-block}
+    .shareLayerPop .layerPopData .btn a{margin-right:0;float:left;width:50%;text-align:center}
+    .shareLayerPop .layerPopData .btn a.sms{display:inline-block}
+    .shareLayerPop .layerPopData a.kakao{margin-bottom:4.8rem}
+    .shareLayerPop .layerPopData a.facebook{margin-bottom:4.8rem}
+    /*--------------*/
+    /*Common(Common Board View)*/
+    .commonBoardView thead{border-bottom:none}
+    .commonBoardView th{padding:5.6rem 0}
+    .commonBoardView th .cate{font-size:2.4rem;padding-bottom:4.5rem}
+    .commonBoardView th .name{font-size:4.4rem;padding-bottom:2.8rem;line-height:5.3rem}
+    .commonBoardView th .tag{font-size:2.4rem;padding-top:2.5rem}
+    .commonBoardView th .tag span{margin-right:2.6rem;margin-right:1rem;padding:0 2rem;line-height:4.2rem;border-radius:4.2rem;margin-bottom:0.5rem}
+    .commonBoardView th .tag span:last-child{margin-right:0}
+    .commonBoardView th .date{font-size:2.4rem}
+    .commonBoardView th .date dt{margin-right:1rem}
+    .commonBoardView th .eventTag{font-size:2.4rem;margin-bottom:6rem}
+    .commonBoardView th dt{font-size:2.4rem;margin-right:2rem}
+    .commonBoardView th dd i{margin-left:2.7rem}
+    .commonBoardView td{padding:0}
+    .commonBoardView td img{margin:0 0 4rem}
+    .commonBoardView .text{font-size:2.8rem;line-height:4.6rem;margin-top:3rem;text-align:left}
+    /*Common(paging)*/
+    .pagination{padding-top:10rem}
+    .pagination ul>li{padding:0 1.8rem;height:auto}
+    .pagination ul>li:first-child,.pagination ul>li:last-child{width:auto}
+    .pagination ul>li.mo{display:inline-block;}
+    .pagination ul>li>a{font-size:2.4rem;width:2.5rem}
+    .pagination ul>li img{width:1.2rem}
+    .pagination ul>li .num.on{border-bottom:0.4rem solid #101010}
+    /*Common(CommonBoardList)*/
+    article.commBoardList{padding: 0 4rem;}
+    .commBoardList table colgroup{display:none}
+    .commBoardList table tr{flex-direction:column;height:auto;position:relative;padding:5.4rem 1rem}
+    .commBoardList table .notice .noti{top: 40%;width: 11rem; height: 5rem; font-size: 2.3rem;line-height: 5rem}
+    .commBoardList table td{display:block;width:100%;border:none;height:auto;text-align:left}
+    .commBoardList table td.tit a{font-size:2.8rem;margin-bottom:1.6rem}
+    .commBoardList table td.date{font-size:2.4rem}
+    .commBoardList table td.tit a:hover{border-bottom:none}
+    .commBoardList td span.cate{height:5rem;font-size:2.3rem;line-height:5rem;padding:0 0.7rem;margin:0 0 1rem}
+     /* Common(listBoard) */
+    .listBoard article{padding: 0 4rem;}
+    /*bsy 1006 수정*/
+    .listBoard dl{width: 100%;}
+    .listBoard .listBox dl{width: 100%;margin-top:10rem}
+    .listBoard .listBox dl:nth-child(1){margin-top:0}
+    .listBoard .listBox dt{height:42rem}
+    .listBoard .listBox dt a{border-radius:3.2rem}
+    /*---------*/
+    .listBoard dt img{width: 100%;}
+    .listBoard dd br.mo{display: block;}
+    .listBoard dd br.pc{display: none;}
+    .listBoard .label{font-size: 2.4rem; margin-top: 4rem;}
+    /*bsy 1006 수정*/
+    .listBoard h5.tit{font-size:3.4rem;margin-top:4rem;margin-bottom:2.4rem;line-height:3.7rem;height:auto}
+    .listBoard h5.tit a{height:auto}   
+    .listBoard .term{font-size:2.4rem;display:inline-block;padding-right:2rem;}
+    .listBoard .date{font-size:2.4rem}
+    .listBoard .dday{font-size:2.4rem;padding-left:2rem}
+    .listBoard .listBox{flex-direction:column;align-items:center;margin-bottom:0}
+    .listBoard .more a{font-size: 2.8rem;}
+    .listBoard .listBox dt a.endEvent>div{border-radius:3.2rem;font-size:2.8rem}
+    /*----------*/
+    /* footer */
+    /*bsy 1006 수정*/
+    footer{padding:10rem 0 10rem 4rem;height:100%;font-size:2.4rem}
+    footer article{padding:0}
+    footer .footer_top{flex-direction:column;margin-bottom:0;padding-bottom:4rem}
+    footer .footer_top i{padding-bottom:5rem}
+    footer .footer_top i img{width: 12rem; height: 4rem;}
+    footer .footer_top::after{background:none;}
+    footer .footer_top ul{display:block;padding-left:0;}
+    footer .footer_top ul li{padding-left:6rem}
+    footer .footer_top ul li::before{left:3rem}
+    footer .footer_top ul li a{font-size:2.4rem}
+    /*--------*/
+    footer .footer_btm{align-items: flex-start; flex-direction: column}
+    footer .footer_btm ul:first-child{padding-bottom: 0;}
+    footer .footer_btm ul li{display: inline-block; position: relative; padding-left: 0; padding-bottom: 2.5rem;}
+    footer .footer_btm ul li::before{background: none;}
+    footer .footer_btm ul:first-child li:first-child{padding-right: 3.5rem;}
+    footer .footer_btm ul li:nth-of-type(3){padding-right: 10rem;}
+    footer .footer_btm br.mo{display: block;}
+    footer .footer_btm span img{height: 3.8rem;}
+    footer .footer_btm span:first-child{padding-right: 4.5rem}
+    footer .copy{margin-top:4.9rem;padding-top:4.9rem;font-size:2.4rem;border-top:1px solid #1d1d1d}
+    /*Error*/
+    .error .sub{padding-bottom:36.5rem}
+    .error .sub section{margin-top:33rem;padding-bottom:0}
+    .error .sub article h3{font-size:6.2rem;margin-bottom:6rem}
+    .error .sub article span br.pc{display:none}
+    .error .sub article span br.mo{display:inline-block}
+    .error .sub article span{font-size:2.8rem;line-height:3.6rem;margin-bottom:9.9rem}
+    .error .sub article a{font-size:2.8rem;padding-bottom:1.8rem;border-bottom:0.4rem solid #5143d4}
+    /*개인정보 처리방침*/
+    .policy.sub h3.pageTitle{text-align:center}
+    .policy .dropBox{position:static;width:100%;margin-top:10.3rem}
+    .policy .dropBox .now{font-size:2.8rem;border-bottom:0.4rem solid #101010;padding:0 1rem 2.5rem;background-size:2.2rem;background-position-x:calc(100% - 1rem);background-position-y:0.2rem}
+    .policy .dropBox li a{padding:2rem 1rem;font-size: 2.8rem}
+    .policy .content{font-size:2.8rem}
+    .policy .content br.pc{display:none}
+    .policy .content br.mo{display:block}
+    .policy .content h5{font-size:3.4rem;margin:10.6rem 0 6.6rem;line-height:4.5rem}
+    .policy .content p{line-height:4.5rem}
+    .policy .content p.margin{margin:6.6rem 0}
+    .policy .content ul{margin-left:3.2rem}
+    .policy .content li{line-height:4.5rem}
+    .policy .content li b{margin-top:6.6rem}
+    .policy .content li span{margin-bottom:6.6rem}
+    /*시스템 점검 안내*/
+    .sysNotiLayerPop.layerPopWrap .layerPopData{width:60rem}
+    .sysNotiLayerPop.layerPopWrap .closeBtns{padding-top:2.9rem}
+    .sysNotiLayerPop .closeBtns a{font-size:3.4rem}
+    .sysNotiLayerPop .closeBtns a img{margin-left:1.5rem;width:2.5rem}
+    .sysNotiLayerPop .cnt{padding:8rem 0;border-radius:1.2rem}
+    .sysNotiLayerPop .cnt h5{font-size:5.8rem;margin-bottom:4.8rem}
+    .sysNotiLayerPop .cnt span{font-size:2.8rem;line-height:3.3rem;margin-bottom:4.8rem}
+    .sysNotiLayerPop .cnt dl{width:48rem;padding:5rem 0 2.4rem 3.8rem}
+    .sysNotiLayerPop .cnt dt{font-size:2.4rem;margin-bottom:2.6rem;width:31%;line-height:5.2rem;border-radius:5.2rem}
+    .sysNotiLayerPop .cnt dd{font-size:2.8rem;margin-bottom:2.6rem;padding-left:5.66%}
+    /*이벤트 팝업*/
+    .eventPopWrap .layerPopData{width:60rem}
+    .eventPopWrap .cnt{border-radius:1.5rem}
+    .eventPopWrap .slidData{padding:7.6rem 0 12rem;height:67rem}
+    .eventPopWrap .slidData h5{font-size:5.8rem;margin-bottom:2.8rem}
+    .eventPopWrap .slidData span{font-size:2.8rem}
+    .eventPopWrap .slidData span.text{padding:0.4rem 0.6rem 0.4rem 0.3rem;margin-bottom:1.3rem}
+    .eventPopWrap .slidData span.period{margin-bottom:2.8rem}
+    .eventPopWrap .slidData img{max-width:40rem;width:100%}
+    .eventPopWrap .closeBtns{padding-top:3rem}
+    .eventPopWrap .closeBtns a{font-size:3.4rem}
+    .eventPopWrap .closeBtns a img{width:2.5rem;margin-left:1.5rem}
+    .eventPopWrap .ctrl .button{display:none}
+    .eventPopWrap .ctrl{bottom:8.4rem;width:11rem;line-height:4.8rem;border-radius:4.8rem}
+    .eventPopWrap .ctrl .paging span{font-size:2.2rem}
+    .eventPopWrap .ctrl .paging span.line{font-size:1.8rem;padding:0 0.9rem}
+    /* .eventPopWrap .ctrl .paging{bottom:13rem}
+    .eventPopWrap .ctrl .paging span{font-size:2.2rem}
+    .eventPopWrap .ctrl .paging span.line{font-size:1.8rem} */
+    /*이벤트 팝업2*/
+    /* .eventOtLayerPop .ctrl .paging{width:11rem;line-height:4.8rem;border-radius:4.8rem} */
+
+
+
+
+
+
+
+}

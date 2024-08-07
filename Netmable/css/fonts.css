@@ -1,0 +1,5 @@
+/*Font*/
+@import url("font/NotoSansKR.css");
+@import url("font/LouisGeorgeCaf.css");
+
+.louisGeorgeCafe{font-family: 'Louis George Café';font-weight:bold!important;}

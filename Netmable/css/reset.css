@@ -1,0 +1,30 @@
+﻿@charset "utf-8";
+/*Reset Code*/
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,
+address,big,cite,code,del,dfn,em,font,img,ins,
+q,s,samp,small,strike,strong,sub,sup,tt,var,b,
+u,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:none 0;border-spacing:0}
+body{font-family: 'Noto Sans KR', Sans-serif;background-color:#fff;font-size:14px;line-height:1;font-weight:400;letter-spacing:0;color: #101010;}
+header,section,article,nav,aside,footer,address{margin:0;padding:0;border:none 0;border-spacing:0}
+img,fieldset,iframe{border:0}
+ol,ul,li{list-style:none}
+input,select,button,img{vertical-align:middle;font-size:14px}
+select, textarea, input{font-family: 'Noto Sans KR', Sans-serif;outline:none}
+i,em,address{font-style:normal}
+button{margin:0;padding:0;cursor:pointer}
+a{color:#101010}
+a:link,a:visited{text-decoration:none;}
+a:hover{text-decoration:none}
+legend,caption{display:none}
+input:focus,button:focus{outline:none}
+table{width:100%;table-layout:fixed;border-collapse:collapse}
+*{box-sizing:border-box}
+.scrollDisable {height:100%; min-height:100%; overflow:hidden !important; touch-action:none;}
+/* width */
+body::-webkit-scrollbar { width: 7px;}
+/* Track */
+body::-webkit-scrollbar-track {background: #333; border-radius: 5px; }
+/* Handle */
+body::-webkit-scrollbar-thumb {background: #999; border-radius: 5px; }
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {background: #999; border-radius: 5px; }

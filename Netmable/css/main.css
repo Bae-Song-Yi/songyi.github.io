@@ -1,0 +1,307 @@
+
+/*Header*/
+.main header{border-bottom:none}
+.main h1 img{filter:brightness(0) invert(1)}
+.main h1 img.black{filter:brightness(0) invert(0)}
+.main nav li a{color:#fff}
+.main nav li a.louisGeorgeCafe{font-size:20px}
+.main nav li a.black{color:#101010}
+.main footer{height:auto!important}
+.main footer .fp-tableCell{height:auto!important}
+/*Main Fix Btn*/
+.mainFixBtn.fixBtn.removeFix{bottom:438px;position:fixed}
+/*--Main Pc--*/
+/*Main Banner*/
+.mainPc article{height:100%}
+.mainPc .mainBanner{transform: translateY(0)}
+.mainPc .mainBanner .slideWrap{height:100%;position:relative}
+.mainPc .mainBanner .swiper-slide{background-repeat:no-repeat;background-size:cover;background-position:center;height:100%}
+
+.mainPc .mainBanner .slideEtc{position:absolute;z-index:1;top:0;display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;height:100%;text-align:center;}
+.mainPc .mainBanner .slideEtc ul{display:flex;flex-direction:column;align-items:center;justify-content:center}
+.mainPc .mainBanner .slideEtc li.text{font-size:62px;font-weight:500;color:#fff;text-align:center;line-height:75px}
+.mainPc .mainBanner .slideEtc li.text img{height:56px;margin-top:-12px;margin-left:15px}
+.mainPc .mainBanner .slideEtc li.link a{font-size:18px;font-weight:500;color:#fff;display:flex;flex-direction:row;align-items:center;justify-content:center;margin-top:60px;background: #5143d4;width:274px;height:74px;border-radius:74px;}
+.mainPc .mainBanner .slideEtc li.link a i{margin-left:29px}
+.mainPc .mainBanner .slideEtc .controls{margin-bottom:30px;display:flex;flex-direction:row;align-items:center;justify-content:center;}
+.mainPc .mainBanner .controls .paging{display:flex;flex-direction:row;text-align:center;color:#fff}
+.mainPc .mainBanner .controls .paging span{font-size:16px;font-weight:bold}
+.mainPc .mainBanner .controls .paging .swiper-pagination-current{margin-right:5px}
+.mainPc .mainBanner .controls .paging .swiper-pagination-total{margin-left:5px;opacity:0.5}
+.mainPc .mainBanner .controls .motionCtrl{display:flex;align-items:center;justify-content:center;padding-left:20px}
+.mainPc .mainBanner .controls .motionCtrl a{color:#fff}
+.mainPc .mainBanner .controls .motionCtrl a.play{display:none}
+.mainPc .mainBanner .controls .arrowCtrl a{position:absolute;z-index:1;top:50%;transform:translateY(-50%)}
+.mainPc .mainBanner .controls .arrowCtrl a.prev{left:48px}
+.mainPc .mainBanner .controls .arrowCtrl a.next{right:48px}
+
+.mainPc .mainBanner .scroll{position:absolute;bottom:36px;z-index:1;display:flex;flex-direction:column;align-items: center;width:100%}
+.mainPc .mainBanner .scroll i{position:relative;height:36px;width:1px;background:rgba(255, 255, 255, 0.5);margin-bottom:10px}
+.mainPc .mainBanner .scroll i::after{content:'';position:absolute;width:100%;height:40%;background:#fff;animation: scrollMotion 0.5s linear 0s infinite alternate}
+.mainPc .mainBanner .scroll span{color:#fff;font-size:16px}
+@keyframes scrollMotion {
+	0% {height:40%}
+	100% {height:100%}
+}
+/*Brand*/
+.mainPc .brand .phoneWrap{position:absolute;width:100%;height:100%;display:flex;align-items:center;justify-content:center}
+.mainPc .brand .phoneWrap ul{position:absolute;width:440px;height:800px;border-radius:50px;overflow:hidden;border:16px solid #f9f9f9;box-shadow:0 0 27px rgba(0,0,0,0.3);z-index:5;background:#fff}
+.mainPc .brand .phoneWrap .logo{background:#5143d4;width:100%;height:100%;display:flex;align-items:center;justify-content:center}
+.mainPc .brand .phoneWrap .img{position:absolute;width:100%;height:100%;bottom:-100%;left:0;transition:all 0.5s;-webkit-transition:all 0.5s}
+.mainPc .brand .phoneWrap .img.on{bottom:0}
+.mainPc .brand .phoneWrap .img img{transition:all 0.5s;-webkit-transition:all 0.5s;width:100%;height:100%}
+.mainPc .brand .info .left{position:absolute;top:0;left:-100%;width:50%;height:100%;background-repeat:no-repeat;background-size:cover;background-position:center;transition:all 0.5s;-webkit-transition:all 0.5s}
+.mainPc .brand .info .left.on{left:0%}
+.mainPc .brand .info .right{position:absolute;top:0;right:0;width:50%;height:100%;display:flex;flex-direction:column;justify-content:center}
+.mainPc .brand .info .textPos{padding-left:35.5%}
+.mainPc .brand .info .textPos li{opacity:0;}
+.mainPc .brand .info .textPos{margin-top:-60px}
+.mainPc .brand .intro .blank1{z-index:5}
+.mainPc .brand .intro .blank2{z-index:4}
+.mainPc .brand .intro .textPos li a{z-index:5}
+.mainPc .brand .blank div{position:absolute;width:100%;height:100%;top:0;left:0}
+.mainPc .brand .textPos li.txt1{font-size:62px;line-height:74px;margin-top:30px}
+.mainPc .brand .textPos li.txt1 img{height:45px;vertical-align:revert;margin-left:4.2%}
+.mainPc .brand .textPos li.txt2{font-size:18px;color:#505050;margin-top:14px;line-height:24px;transition:all 0.5s;-webkit-transition:all 0.5s}
+.mainPc .brand .textPos li.txt2.on{transform: translateY(0);opacity:1}
+.mainPc .brand .textPos li a{font-size:18px;font-weight:500;margin-top:60px;display:flex;flex-direction:row;align-items:center;position:absolute;z-index:3}
+.mainPc .brand .textPos li a i{width:50px;height:50px;border-radius:100%;background:#5143d4;text-align:center;display:flex;align-items:center;justify-content:center;margin-left:22px}
+.mainPc .brand .proce{position:absolute;left:0;bottom:-100%;width:100%;display:flex;align-items:center;background:#fff;padding-left:48px;transition:all 0.5s;-webkit-transition:all 0.5s;z-index:5}
+.mainPc .brand .proce.on{bottom:0}
+.mainPc .brand .proce .blank1{z-index:5}
+.mainPc .brand .proce .blank2{z-index:1}
+.mainPc .brand .proce .hiddenArrow{position:absolute;width:100%;height:100%;left:0;top:0}
+.mainPc .brand .proce .textPos{width:50%;margin-top:-60px;padding-left:4%}
+.mainPc .brand .proce .textPos li{opacity:0}
+.mainPc .brand .proce .textPos li.txt1 img{vertical-align:baseline}
+.mainPc .brand .proce .textPos li a{z-index:4}
+.mainPc .brand .proce .slideWrap{width:0%;height:520px;overflow:hidden;padding-left:10.7%;transition:all 0.5s;-webkit-transition:all 0.5s}
+.mainPc .brand .proce .slideWrap.on{width:50%}
+.mainPc .brand .proce .swiper-wrapper{z-index:4}
+.mainPc .brand .proce .swiper-slide{opacity:0;border:1px solid #e0e0e0;border-radius:34px;padding:80px 8.2%;position:relative;width:59.9%!important;transition:all 0.5s;-webkit-transition:all 0.5s}
+.mainPc .brand .proce .swiper-slide-next{left:-68%}
+.mainPc .brand .proce .swiper-slide:nth-child(1){opacity:1}
+.mainPc .brand .proce .swiper-slide.endActive{left:0;opacity:1}
+.mainPc .brand .proce .swiper-slide.swiper-slide-next{opacity:1}
+.mainPc .brand .proce .swiper-slide.swiper-slide-prev{opacity:0}
+.mainPc .brand .proce .swiper-slide.swiper-slide-prev a{pointer-events:none}
+.mainPc .brand .proce .swiper-slide.fake{background:none;border:none}
+.mainPc .brand .proce .swiper-slide div{opacity:0}
+.mainPc .brand .proce .swiper-slide div h6{font-size:42px;font-weight:500;line-height:46px}
+.mainPc .brand .proce .swiper-slide div h6 i{font-family:'Louis George Café';font-weight:bold}
+.mainPc .brand .proce .swiper-slide div span{font-size:18px;margin-top:27px;display:block;line-height:24px}
+.mainPc .brand .proce .swiper-slide a{position:absolute;bottom:80px;right:8.2%;opacity:0}
+.mainPc .brand .proce .swiper-slide-active{background:#5143d4;color:#fff;z-index:1}
+.mainPc .brand .proce .swiper-slide-active a img{filter: brightness(0) invert(1)}
+.mainPc .brand .procePhone{left:0;top:0;display:none}
+.mainPc .brand .procePhone ul{z-index:0}
+.mainPc .brand .procePhone.show{display:flex}
+.mainPc .brand .introPhone.show{display:flex}
+/*Service*/
+.mainPc .service{background:url(../images/main/service_bg.jpg) no-repeat center;background-size:cover;background-position:center;padding:0 40px;display:flex;align-items:center;justify-content:center;margin:auto;transition:all 1s;-webkit-transition:all 1s;position:absolute;width:0;height:0!important;top:50%;left:50%;transform:translate(-50%,-50%);opacity:0}
+.mainPc .service.show{width:100%!important;height:100%!important;opacity:1;z-index:5}
+.mainPc .service.on{background-image:url(../images/main/service_bg_on.jpg);transition:all 0.5s;-webkit-transition:all 0.5s} 
+.mainPc .service.on2{background-image:url(../images/main/service_bg02.jpg);transition:all 0.5s;-webkit-transition:all 0.5s} 
+.mainPc .service.on3{background-image:url(../images/main/service_bg03.jpg);transition:all 0.5s;-webkit-transition:all 0.5s} 
+.mainPc .service.on4{background-image:url(../images/main/service_bg04.jpg);transition:all 0.5s;-webkit-transition:all 0.5s} 
+.mainPc .service article{max-width:1528px;width:100%;margin:auto;position:relative}
+.mainPc .service ul{text-align:center;display:flex;display: flex;justify-content: center;align-items: center;flex-direction: row;position:absolute;width:100%;bottom:-100%;transition:all 0.5s;-webkit-transition:all 0.5s}
+.mainPc .service ul.on{bottom:50%;transform:translateY(50%)}
+.mainPc .service li h3{font-size:62px;font-weight:bold;font-family:'Louis George Café';color:#fff;margin-bottom:18px}
+.mainPc .service li span{font-size:18px;color:#fff;line-height:24px}
+.mainPc .service li .txtPos{display:block;position:absolute;top:50%;transform:translateY(-50%);width:100%}
+.mainPc .service li{position:relative;height:162px;width:33.3%}
+.mainPc .service li .arrow{opacity: 0; display: inline-block;top: 55%;width:50px;height:50px;position:relative;background:url(../images/common/icon_arrow_bg.svg) no-repeat center center}
+.mainPc .service li .arrow img{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%)}
+.mainPc .service li::before{content:'';position:absolute;top:50%;transform:translateY(-50%);right:0;height:100px;width:1px;background:#fff;opacity:30%}
+.mainPc .service li.on::after{display:none;content:'';position:fixed;left:0;top:0;width:100%;height:100%}
+.mainPc .service li .fakeWrap{display:inline-block;width:100%;height:100%}
+.mainPc .service .service4::before{display:none}
+/*Service isFocus*/
+.mainPc .service li.isFocus{opacity:100%}
+.mainPc .service li.isFocus .txtPos{top:0;transform:translateY(0);transition:all 0.3s;-webkit-transition:all 0.3s} 
+.mainPc .service li.isFocus .arrow{z-index:1;opacity: 100%; top:90%;transition:all 0.3s;-webkit-transition:all 0.3s}
+.mainPc .service li.isFocusOut{opacity:70%;transition:all 0.3s;-webkit-transition:all 0.3s}
+.mainPc .service li.isFocusOut .arrow{top:70%;transition:all 0.3s;-webkit-transition:all 0.3s}
+.mainPc .service li.isFocusOut .txtPos{top:50%;transform:translateY(-50%);transition:all 0.3s;-webkit-transition:all 0.3s}
+/*Magazine*/
+.mainPc .magazine article{position:absolute;top:50%;transform:translateY(-50%);display:flex;align-items:center;justify-content:center;flex-direction:row}
+.mainPc .magazine .blank div{position:absolute;width:100%;height:100%;top:0;left:0}
+.mainPc .magazine .blank1{z-index:2} 
+.mainPc .magazine .hiddenArrow{position:absolute;width:100%;height:100%;top:0;left:0;z-index:1} 
+.mainPc .magazine .textPos{transition:all 0.5s;-webkit-transition:all 0.5s;margin-left:6.6%;position:relative;z-index:5}
+.mainPc .magazine .textPos.on{margin-left:-100%}
+.mainPc .magazine .textPos h3{font-size:62px;font-weight:500;line-height:74px;margin-top:40px;opacity:0;transition:all 0.7s;-webkit-transition:all 0.7s;transform:translateY(30px)}
+.mainPc .magazine .textPos h3.on{opacity:1;transform:translateY(0)}
+.mainPc .magazine .textPos span{color:#505050;font-size:18px;line-height:24px;display:block;}
+.mainPc .magazine .textPos div{margin-top:28px;opacity:0;transition:all 0.7s;-webkit-transition:all 0.7s;transform:translateY(30px)}
+.mainPc .magazine .textPos div.on{opacity:1;transform:translateY(0)}
+.mainPc .magazine .textPos a{display:flex;flex-direction:row;align-items:center;margin-top:60px;font-size:18px;font-weight:500;width:200px}
+.mainPc .magazine .textPos i{margin-left:22px;width:50px;height:50px;border-radius:100%;background:#5143d4;text-align:center;display:flex;align-items:center;justify-content:center}
+.mainPc .magazine .slideWrap{width:calc(100% - 36%);width:-webkit-calc(100% - 36%)}
+.mainPc .magazine .swiper-wrapper{right:-1000%;transition:all 0.5s;-webkit-transition:all 0.5s;align-items:center}
+.mainPc .magazine .swiper-wrapper.active{right:-125px}
+.mainPc .magazine .swiper-wrapper.slide{right:-370px;z-index:3}
+.mainPc .magazine .swiper-slide{flex-shrink:0;width:42.4%!important;border:1px solid #e0e0e0;border-radius:45px;overflow:hidden;margin-right:3.2%;text-align:center}
+.mainPc .magazine .swiper-slide .thumb{height:520px;background-repeat:no-repeat;background-size:cover;background-position:center;width:100%;}
+.mainPc .magazine .swiper-slide .text{border-top: 1px solid #e0e0e0}
+.mainPc .magazine .swiper-slide .text a{height:158px;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+.mainPc .magazine .swiper-slide .text i{color:#5143d4;font-family:'Louis George Café';font-weight:bold;color:#5143d4;font-size:24px}
+.mainPc .magazine .swiper-slide .text span{margin-top:10px;font-size:24px;font-weight:500;line-height:30px}
+.mainPc .magazine .goMagazine{height:680px;text-align:center;z-index:3;border:none;display:flex;flex-direction:column;align-items:center;justify-content:center;transform:translateX(0)}
+.mainPc .magazine .goMagazine h3{font-size:62px;margin-bottom:48px}
+.mainPc .magazine .goMagazine h3 img{height:45px;vertical-align:revert;margin-right:25px}
+.mainPc .magazine .goMagazine a{font-size:18px;font-weight:500;display:flex;align-items:center;justify-content:center}
+.mainPc .magazine .goMagazine a i{width:50px;height:50px;border-radius:100%;background:#5143d4;text-align:center;display:flex;align-items:center;justify-content:center;margin-left:22px}
+/*앱 다운로드*/
+.mainPc .appDownload article{display:flex;align-items:center;justify-content:end;padding:0 48px;position:absolute;bottom:-100%;width:100%;background:url(../images/main/app_download_bg.jpg)no-repeat center top;background-size:cover;transition:all 0.7s;-webkit-transition:all 0.7s}
+.mainPc .appDownload article.on{bottom:0}
+.mainPc .appDownload article div{text-align:center;margin-right:9%;opacity:0;transition:all 0.7s;-webkit-transition:all 0.7s;margin-top:60px}
+.mainPc .appDownload article div.on{opacity:1;margin-top:0}
+.mainPc .appDownload article h3{font-size:62px;color:#fff;font-weight:500;line-height:74px}
+.mainPc .appDownload article h3 img{height:55px;margin-top:-7px}
+.mainPc .appDownload article h3{transition:all 0.7s;-webkit-transition:all 0.7s}
+.mainPc .appDownload article h3 i{margin:0 14px 0 23px}
+.mainPc .appDownload article span{font-size:18px;color:#fff;margin-top:16px;display:block}
+.mainPc .appDownload article ul{display:flex;flex-direction:row;align-items:center;justify-content:center;margin-top:60px;opacity:0;transition:all 0.7s;-webkit-transition:all 0.7s;transition-delay:0.7s;}
+.mainPc .appDownload article div.on ul{opacity:1}
+.mainPc .appDownload article .qrCode{width:140px;line-height:140px;background:#fff;text-align:center;border-radius:22px;margin-right:36px}
+.mainPc .appDownload article .appStore{display:flex;flex-direction:column;justify-content:space-between;height:140px}
+.mainPc .appDownload article .appStore a{display:flex;width:194px;height:60px;border-radius:60px;align-items:center;justify-content:center;background:#101010;color:#fff;font-size:16px}
+.mainPc .appDownload article .appStore a img{margin-right:10px}
+.mainPc .appDownload article .appStore a:first-child img{filter:brightness(0) invert(1)}
+/*뉴스레터*/
+.mainPc .newsLetter{height:auto!important}
+.mainPc .newsLetter .fp-tableCell{height:auto!important}
+.mainPc .newsLetter article{display:flex;align-items:center;justify-content:center;flex-direction:column;height:auto!important;padding:180px 0}
+.mainPc .newsLetter article h3{font-size:62px;display:flex;flex-direction:row;align-items:baseline}
+.mainPc .newsLetter article h3 img{filter:brightness(0.93) invert(1);height:44px;margin-right:26px}
+.mainPc .newsLetter article span{color:#505050;font-size:18px;margin-top:28px}
+.mainPc .newsLetter article form{margin-top:60px;position:relative;z-index:2}
+.mainPc .newsLetter article form fieldset{width:584px;display:flex;flex-direction:row;justify-content:space-between}
+.mainPc .newsLetter article fieldset input{width:calc(100% - 66px);width:-webkit-calc(100% - 66px);border:2px solid #e0e0e0;border-radius:2px 0 0 2px;padding:0 18px;font-size:18px}
+.mainPc .newsLetter article fieldset input::placeholder{color:#767676}
+.mainPc .newsLetter article fieldset button{width:66px;height:66px;background:#101010 url(../images/main/icon_letter.png)no-repeat center;color:transparent;border:none}
+.mainPc .newsLetter article form ul{padding:0 20px;margin-top:28px;display:flex;flex-direction:row;align-items:center;justify-content:space-between;}
+.mainPc .newsLetter article form li{display:flex;flex-direction:row;align-items:center;}
+.mainPc .newsLetter .checkBox{position:relative;height:20px;margin-bottom:10px;}
+.mainPc .newsLetter .checkBox label{padding-left:19px}
+.mainPc .newsLetter .checkBox input[type="checkbox"]{position:absolute;left:0;top:0;opacity:0}
+.mainPc .newsLetter .checkBox i{width:20px;height:20px;border:2px solid #767676;position:absolute;left:0;top:0;border-radius:2px}
+.mainPc .newsLetter .checkBox label{padding-left:30px;padding-right:10px;position:relative;display:inline-block;line-height:20px;cursor:pointer}
+.mainPc .newsLetter .checkBox label:before{display:none;content:'';color:#ccc;position:absolute;left:7px;top:3px;width:5px;height:9px;border-right:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;transform:rotate(45deg);-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg)}
+.mainPc .newsLetter .checkBox input[type="checkbox"]:checked + i + label:before{display:block;border-color:#767676}
+.mainPc .newsLetter .checkBox input[type="checkbox"]:checked + i{border-radius:3px;background:#5143d4;border:none}
+.mainPc .newsLetter .checkBox input[type="checkbox"]:checked + i + label:before{border-color:#fff}
+.mainPc .newsLetter .checkBox a{display:none;}
+.mainPc .newsLetter .checkBox input[type="checkbox"]:checked + i + label + a{display:block}
+.mainPc .newsLetter .fixBtn.fixRemove{position:absolute;right:48px;bottom:38px}
+.mainPc .newsLetter .fixBtn.fixRemove span{font-size:16px;margin-top:0;color:#fff}
+.mainPc .newsLetter .blank{position:fixed;left:0;top:0;width:100%;height:100%;display:none;z-index:1}
+/*메인 개인정보 Pop*/
+.mainLayerPop.layerPopWrap .layerPopData{padding:60px 45px;width:670px}
+.mainLayerPop .layerPopData h3{font-weight:500;font-size:24px}
+.mainLayerPop .layerPopData span{display:block;color:#505050;font-size:16px}
+.mainLayerPop .layerPopData span.txt1{margin-top:24px}
+.mainLayerPop .layerPopData span.txt2{line-height:20px;margin-top:13px}
+.mainLayerPop .layerPopData b{display:block;font-size:16px;font-weight:500}
+.mainLayerPop .layerPopData div{border-top:1px solid #101010;margin:30px 0}
+.mainLayerPop .layerPopData div th{font-weight:500;font-size:14px;height:46px}
+.mainLayerPop .layerPopData div td{line-height:17px;color:#505050;font-size:14px;border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;text-align:center;height:78px}
+.mainLayerPop .layerPopData div td br.mo{display:none}
+@media (max-width :1768px) {
+	.mainPc .brand .phoneWrap ul{width:385px;height:700px}
+}
+@media (max-width :1600px) {
+	.mainPc .brand .phoneWrap ul{width:330px;height:600px}
+	.mainPc .brand .proce .slideWrap{height:450px}
+	.mainPc .brand .proce .swiper-slide{padding:60px 8.2%}
+	.mainPc .brand .proce .swiper-slide a{bottom:60px}
+	.mainPc .brand .info .textPos{padding-left:30%}
+}
+@media (max-width :1500px){
+	/*Main Banner*/
+	.mainPc .mainBanner .swiper-slide li.text{font-size:50px;line-height:1.14}
+	.mainPc .mainBanner .swiper-slide li.text img{height:42px}
+	/*Brand*/
+	.mainPc .brand .textPos li.txt1{font-size:50px;line-height:1.14}
+	.mainPc .brand .textPos li.txt1 img{height:30px}
+	.mainPc .brand .proce .textPos li.txt1 img{display:block;margin-left:0}
+	.mainPc .brand .proce .swiper-slide{padding: 40px 6%}
+	.mainPc .brand .proce .swiper-slide div h6{font-size:35px;line-height:43px}
+	.mainPc .brand .proce .swiper-slide div span br{display:none}
+	.mainPc .brand .proce .swiper-slide a{bottom:40px}
+	/*Service*/
+	.mainPc .service li h3{font-size:50px}
+	/*Magazine*/
+	.mainPc .magazine .textPos{margin-left:0}
+	.mainPc .magazine .textPos h3{font-size:50px;line-height: 1.14}
+	.mainPc .magazine .slideWrap{width:-webkit-calc(100% - 45%);width:calc(100% - 45%)}
+	.mainPc .magazine .swiper-wrapper.active{right:-10%}
+	.mainPc .magazine .swiper-wrapper.slide{right:-28%;transform:translate3d(0px, 0px, 0px)!important;}
+	.mainPc .magazine .swiper-slide{width:50%!important}
+	.mainPc .magazine .swiper-slide .thumb{height:400px}
+	/*앱다운로드*/
+	.mainPc .appDownload article div{margin-right:5%}
+	.mainPc .appDownload article h3{font-size:50px}
+	.mainPc .appDownload article h3 img{height:45px}
+}
+@media (max-width :1440px) {
+	.mainPc .brand .phoneWrap ul{width:332px}
+}
+@media (max-width :1280px) {
+	/*Main Banner*/
+	.mainPc .mainBanner .swiper-slide li.text{font-size:45px}
+	.mainPc .mainBanner .swiper-slide li.text img{height:38px}
+	.mainPc .mainBanner .slideEtc li.text{font-size:45px;line-height:65px}
+	.mainPc .mainBanner .slideEtc li.text img{height:38px;margin-top:-10px}
+	.mainPc .mainBanner .slideEtc li.link a{height:64px;margin-top:40px}
+	/*Brand*/
+	.mainPc .brand .phoneWrap ul{width:280px;height:500px;border-radius:40px}
+	.mainPc .brand .proce .slideWrap{height:380px}
+	.mainPc .brand .proce .swiper-slide{border-radius:28px}
+	.mainPc .brand .proce .swiper-slide div span{font-size:16px;margin-top:18px}
+	.mainPc .brand .info .textPos{padding-left:33%}
+	.mainPc .brand .textPos li.txt1{font-size:45px}
+	.mainPc .brand .textPos li.txt1 img{height:27px}
+	.mainPc .brand .textPos li.txt2{font-size:16px}
+	/*Magazine*/
+	.mainPc .magazine .goMagazine h3{font-size:45px}
+	.mainPc .magazine .goMagazine h3 img{height:33px}
+	.mainPc .magazine .textPos h3{font-size:40px}
+	.mainPc .magazine .textPos span{font-size:16px}
+	.mainPc .magazine .swiper-slide .text i{font-size:18px}
+	.mainPc .magazine .swiper-slide .text span{font-size:18px;line-height:24px}
+	/*앱다운로드*/
+	.mainPc .appDownload article h3{font-size:40px}
+	.mainPc .appDownload article h3 img{height:38px}
+	/*FixBtn*/
+	.main .fixBtn{bottom:20px}
+	.mainPc .newsLetter .fixBtn.fixRemove{bottom:20px}
+}
+@media (max-width :1024px){
+	.mainPc .brand .phoneWrap ul{width:254px;height:450px}
+	.mainPc .brand .proce .textPos{padding-left:1%}
+	.mainPc .brand .proce .slideWrap{height:330px}
+	.mainPc .brand .proce .swiper-slide div h6{line-height:32px;font-size:27px}
+	.mainPc .brand .proce .swiper-slide a img{width:55px}
+	.mainPc .brand .proce .swiper-slide div span{margin-top:8px}
+}
+@media (max-width :720px) {
+	/*메인 개인정보 Pop*/
+	.mainLayerPop.layerPopWrap .layerPopData{padding:6rem 4rem;width:64rem}
+	.mainLayerPop .layerPopData h3{font-size:3.4rem}
+	.mainLayerPop .layerPopData span{font-size:2.8rem}
+	.mainLayerPop .layerPopData span.txt1{margin-top:4rem;line-height:4rem}
+	.mainLayerPop .layerPopData span.txt2{line-height:4rem;margin-top:2.8rem}
+	.mainLayerPop .layerPopData span.txt2 br{display:none}
+	.mainLayerPop .layerPopData b{font-size:2.8rem}
+	.mainLayerPop .layerPopData div{margin:4rem 0}
+	.mainLayerPop .layerPopData div th{font-size:2.4rem;height:6.8rem}
+	.mainLayerPop .layerPopData div td{line-height:2.9rem;font-size:2.4rem;height:16rem}
+	.mainLayerPop .layerPopData div td br.pc{display:none}
+	.mainLayerPop .layerPopData div td br.mo{display:block}
+
+}
+
+
