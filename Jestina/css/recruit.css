@@ -1,499 +1,2619 @@
-﻿@charset "utf-8";
+@charset "utf-8";
+
 /*공통*/
-.recruit .location li .dep2List{width:150px}
+.recruit .location li .dep2List {
+    width: 150px
+}
 
 /*인재상*/
-.talent .content > article{margin-top:100px}
-.talent .topVisual{background:url(/images/brand_visual_injae.jpg) no-repeat center;background-size:cover;height:400px;width:100%;}
-.talent .diagram ul{padding:0 45px}
-.talent .diagram li{display:inline-block;width:100%;text-align:center}
-.talent .diagram li:first-child{padding-bottom:80px;margin-bottom:80px;position:relative}
-.talent .diagram li:first-child:before{content:'';position:absolute;width:83.2%;height:1px;background:#e0e0e0;bottom:0;left:50%;transform:translateX(-50%)}
-.talent .diagram li:first-child:after{content:'';position:absolute;width:1px;height:80px;background:#e0e0e0;bottom:0;left:50%;transform:translateX(-50%)}
-.talent .diagram li span{position:relative;display:inline-block;width:240px;height:240px;padding:92px 0;border-radius:100%;background:#ffb2b8;color:#fff;font-size:28px;font-weight:500;text-align:center;line-height:31px}
-.talent .diagram li dl{position:relative;float:left;width:200px;height:200px;margin-right:130px;padding:42px 0;background:#f8fafb;border-radius:100%;transition: all .3s;-webkit-transition: all .3s}
-.talent .diagram li dl:last-child{margin-right:0}
-.talent .diagram li dl::after{content:'';position:absolute;width:1px;height:80px;top:-80px;left:50%;transform:translateX(-50%);background:#e0e0e0}
-.talent .diagram li dd{font-size:16px;font-weight:500;padding-top:20px;line-height:20px}
-.talent .diagramInfo dl{border-top:1px solid #101010;}
-.talent .diagramInfo dt{display:inline-block;width:268px;font-size:16px;font-weight:500;border-bottom:1px solid #e0e0e0;padding:33px 0 31px 29px}
-.talent .diagramInfo dd{display:inline-block;width:calc(100% - 272px);font-size:16px;border-bottom:1px solid #e0e0e0;padding:34px 0 32px 0;color:#505050}
-.talent .diagramInfo dd br{display:none}
+.talent .content>article {
+    margin-top: 100px
+}
+
+.talent .topVisual {
+    background: url(../images/brand_visual_injae.jpg) no-repeat center;
+    background-size: cover;
+    height: 400px;
+    width: 100%;
+}
+
+.talent .diagram ul {
+    padding: 0 45px
+}
+
+.talent .diagram li {
+    display: inline-block;
+    width: 100%;
+    text-align: center
+}
+
+.talent .diagram li:first-child {
+    padding-bottom: 80px;
+    margin-bottom: 80px;
+    position: relative
+}
+
+.talent .diagram li:first-child:before {
+    content: '';
+    position: absolute;
+    width: 83.2%;
+    height: 1px;
+    background: #e0e0e0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.talent .diagram li:first-child:after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 80px;
+    background: #e0e0e0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.talent .diagram li span {
+    position: relative;
+    display: inline-block;
+    width: 240px;
+    height: 240px;
+    padding: 92px 0;
+    border-radius: 100%;
+    background: #ffb2b8;
+    color: #fff;
+    font-size: 28px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 31px
+}
+
+.talent .diagram li dl {
+    position: relative;
+    float: left;
+    width: 200px;
+    height: 200px;
+    margin-right: 130px;
+    padding: 42px 0;
+    background: #f8fafb;
+    border-radius: 100%;
+    transition: all .3s;
+    -webkit-transition: all .3s
+}
+
+.talent .diagram li dl:last-child {
+    margin-right: 0
+}
+
+.talent .diagram li dl::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 80px;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #e0e0e0
+}
+
+.talent .diagram li dd {
+    font-size: 16px;
+    font-weight: 500;
+    padding-top: 20px;
+    line-height: 20px
+}
+
+.talent .diagramInfo dl {
+    border-top: 1px solid #101010;
+}
+
+.talent .diagramInfo dt {
+    display: inline-block;
+    width: 268px;
+    font-size: 16px;
+    font-weight: 500;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 33px 0 31px 29px
+}
+
+.talent .diagramInfo dd {
+    display: inline-block;
+    width: calc(100% - 272px);
+    font-size: 16px;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 34px 0 32px 0;
+    color: #505050
+}
+
+.talent .diagramInfo dd br {
+    display: none
+}
 
 /*직무소개*/
-.duty .tabButton{text-align:center;margin-bottom:76px;position:relative}
-.duty .tabButton ol{display:inline-block}
-.duty .tabButton ol li{float:left;margin:0 20px;}
-.duty .tabButton ol a{font-size:20px;border-bottom:4px solid #fff;height:36px;display:inline-block;color:#767676;cursor:pointer}
-.duty .tabButton ol a.flex-active{border-color:#101010;color:#101010}
-.duty .tabButton > a{display:none}
-.duty .tabCtrl{display:none}
-.duty .content{padding-bottom:135px}
-.duty .infoText{text-align:center;font-size:16px;color:#767676;line-height:1.6;margin-bottom:95px}
-.duty .infoText br.mo{display:none}
-.duty .infoText h5{font-size:28px;font-weight:500;color:#101010;line-height:1;margin-bottom:13px}
-.duty .imgArea{text-align:center}
-.duty .flex-viewport{width:100%;overflow:hidden}
-.duty .tabData dl{width:100%;display:table;margin-bottom:100px}
-.duty .tabData dl:last-child{margin-bottom:0}
-.duty .tabData dt{width:550px;display:table-cell;vertical-align:middle}
-.duty .tabData dt img{width:100%}
-.duty .tabData dd{display:table-cell;padding-left:70px;vertical-align:top;padding-top:37px}
-.duty .tabData li{width:100%;display:inline-block}
-.duty .tabData li b{font-weight:500;color:#f06e78;font-size:18px;display:inline-block}
-.duty .tabData li b:first-child{margin-right:9px;padding-right:10px;position:relative}
-.duty .tabData li b:first-child::after{content:'';width:1px;height:8px;background:#e0e0e0;position:absolute;right:0;top:50%;transform:translateY(-50%)}
-.duty .tabData li.tit{font-size:24px;font-weight:500;padding-left:25px;position:relative;margin:12px 0 26px 0;line-height:1.5}
-.duty .tabData li.tit br.mo{display:none}
-.duty .tabData li.tit::before{content:'';width:10px;height:9px;position:absolute;left:0;top:8px;background:url(/images/icon_quotes_left.svg) no-repeat}
-.duty .tabData li.tit::after{content:'';width:10px;height:9px;background:url(/images/icon_quotes_right.svg) no-repeat;display:inline-block;vertical-align:top;margin-left:10px;margin-top:9px}
-.duty .tabData li.text{font-size:16px;color:#767676;line-height:1.6}
-.duty .tabData li.text br.mo{display:none}
-.duty .tabData div.subTabData{border-top:1px solid #e0e0e0;padding-top:100px;margin-top:100px}
-.duty .tabData div.subTabData:first-child{padding-top:0;margin-top:0;border-top:none}
-.duty .tabData.marketing .imgArea{text-align:center;margin-top:5px}
+.duty .tabButton {
+    text-align: center;
+    margin-bottom: 76px;
+    position: relative
+}
+
+.duty .tabButton ol {
+    display: inline-block
+}
+
+.duty .tabButton ol li {
+    float: left;
+    margin: 0 20px;
+}
+
+.duty .tabButton ol a {
+    font-size: 20px;
+    border-bottom: 4px solid #fff;
+    height: 36px;
+    display: inline-block;
+    color: #767676;
+    cursor: pointer
+}
+
+.duty .tabButton ol a.flex-active {
+    border-color: #101010;
+    color: #101010
+}
+
+.duty .tabButton>a {
+    display: none
+}
+
+.duty .tabCtrl {
+    display: none
+}
+
+.duty .content {
+    padding-bottom: 135px
+}
+
+.duty .infoText {
+    text-align: center;
+    font-size: 16px;
+    color: #767676;
+    line-height: 1.6;
+    margin-bottom: 95px
+}
+
+.duty .infoText br.mo {
+    display: none
+}
+
+.duty .infoText h5 {
+    font-size: 28px;
+    font-weight: 500;
+    color: #101010;
+    line-height: 1;
+    margin-bottom: 13px
+}
+
+.duty .imgArea {
+    text-align: center
+}
+
+.duty .flex-viewport {
+    width: 100%;
+    overflow: hidden
+}
+
+.duty .tabData dl {
+    width: 100%;
+    display: table;
+    margin-bottom: 100px
+}
+
+.duty .tabData dl:last-child {
+    margin-bottom: 0
+}
+
+.duty .tabData dt {
+    width: 550px;
+    display: table-cell;
+    vertical-align: middle
+}
+
+.duty .tabData dt img {
+    width: 100%
+}
+
+.duty .tabData dd {
+    display: table-cell;
+    padding-left: 70px;
+    vertical-align: top;
+    padding-top: 37px
+}
+
+.duty .tabData li {
+    width: 100%;
+    display: inline-block
+}
+
+.duty .tabData li b {
+    font-weight: 500;
+    color: #f06e78;
+    font-size: 18px;
+    display: inline-block
+}
+
+.duty .tabData li b:first-child {
+    margin-right: 9px;
+    padding-right: 10px;
+    position: relative
+}
+
+.duty .tabData li b:first-child::after {
+    content: '';
+    width: 1px;
+    height: 8px;
+    background: #e0e0e0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.duty .tabData li.tit {
+    font-size: 24px;
+    font-weight: 500;
+    padding-left: 25px;
+    position: relative;
+    margin: 12px 0 26px 0;
+    line-height: 1.5
+}
+
+.duty .tabData li.tit br.mo {
+    display: none
+}
+
+.duty .tabData li.tit::before {
+    content: '';
+    width: 10px;
+    height: 9px;
+    position: absolute;
+    left: 0;
+    top: 8px;
+    background: url(../images/icon_quotes_left.svg) no-repeat
+}
+
+.duty .tabData li.tit::after {
+    content: '';
+    width: 10px;
+    height: 9px;
+    background: url(../images/icon_quotes_right.svg) no-repeat;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 10px;
+    margin-top: 9px
+}
+
+.duty .tabData li.text {
+    font-size: 16px;
+    color: #767676;
+    line-height: 1.6
+}
+
+.duty .tabData li.text br.mo {
+    display: none
+}
+
+.duty .tabData div.subTabData {
+    border-top: 1px solid #e0e0e0;
+    padding-top: 100px;
+    margin-top: 100px
+}
+
+.duty .tabData div.subTabData:first-child {
+    padding-top: 0;
+    margin-top: 0;
+    border-top: none
+}
+
+.duty .tabData.marketing .imgArea {
+    text-align: center;
+    margin-top: 5px
+}
 
 /*기업문화/복리후생*/
-.culture .content{padding-bottom:100px}
-.culture .content > article > h3{font-size:28px;font-weight:500}
-.culture .life{padding-top:82px;position:relative}
-.culture .life::after{content:'';width:60px;height:4px;background:#101010;position:absolute;top:0;left:50%;transform:translateX(-50%)}
-.culture .life h3{margin-bottom:22px}
-.culture .life ul{width:100%;display:inline-block}
-.culture .life ul > li{width:33.33%;float:left;margin-bottom:100px}
-.culture .life ol{width:400px;display:inline-block;text-align:center}
-.culture .life ul > li:nth-child(3n+2){text-align:center}
-.culture .life ul > li:nth-child(3n+3){text-align:right}
-.culture .life .photo img{width:100%}
-.culture .life .text1{font-size:18px;font-weight:500;margin:26px 0 20px 0}
-.culture .life .text2{font-size:16px;color:#767676}
-.culture .life .text2 br{display:none}
-.culture .welfare h3{margin-bottom:80px}
-.culture .welfare ul{width:100%;display:inline-block}
-.culture .welfare ul > li{width:25%;float:left;margin-bottom:100px}
-.culture .welfare ol{width:100%;display:table}
-.culture .welfare ol li{display:table-cell}
-.culture .welfare .icon{width:120px;height:120px;border-radius:100%;background:#f8fafb;position:relative}
-.culture .welfare .icon img{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}
-.culture .welfare .text{vertical-align:middle;padding:0 25px;font-size:18px;font-weight:500;line-height:1.2}
+.culture .content {
+    padding-bottom: 100px
+}
+
+.culture .content>article>h3 {
+    font-size: 28px;
+    font-weight: 500
+}
+
+.culture .life {
+    padding-top: 82px;
+    position: relative
+}
+
+.culture .life::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background: #101010;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.culture .life h3 {
+    margin-bottom: 22px
+}
+
+.culture .life ul {
+    width: 100%;
+    display: inline-block
+}
+
+.culture .life ul>li {
+    width: 33.33%;
+    float: left;
+    margin-bottom: 100px
+}
+
+.culture .life ol {
+    width: 400px;
+    display: inline-block;
+    text-align: center
+}
+
+.culture .life ul>li:nth-child(3n+2) {
+    text-align: center
+}
+
+.culture .life ul>li:nth-child(3n+3) {
+    text-align: right
+}
+
+.culture .life .photo img {
+    width: 100%
+}
+
+.culture .life .text1 {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 26px 0 20px 0
+}
+
+.culture .life .text2 {
+    font-size: 16px;
+    color: #767676
+}
+
+.culture .life .text2 br {
+    display: none
+}
+
+.culture .welfare h3 {
+    margin-bottom: 80px
+}
+
+.culture .welfare ul {
+    width: 100%;
+    display: inline-block
+}
+
+.culture .welfare ul>li {
+    width: 25%;
+    float: left;
+    margin-bottom: 100px
+}
+
+.culture .welfare ol {
+    width: 100%;
+    display: table
+}
+
+.culture .welfare ol li {
+    display: table-cell
+}
+
+.culture .welfare .icon {
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    background: #f8fafb;
+    position: relative
+}
+
+.culture .welfare .icon img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.culture .welfare .text {
+    vertical-align: middle;
+    padding: 0 25px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.2
+}
+
 /*채용공고(목록)*/
-.jobOpening article.tab{text-align:center;margin-bottom:80px}
-.jobOpening .tab ul{display:inline-block}
-.jobOpening .tab ul li{float:left;margin:0 20px;}
-.jobOpening .tab a{font-size:20px;border-bottom:4px solid #fff;height:36px;display:inline-block;color:#767676}
-.jobOpening .tab a.on{border-color:#101010;color:#101010}
-.jobOpening .listWrap ul{width:100%;display:inline-block}
-.jobOpening .listWrap ul > li{width:33.33%;float:left;margin-bottom:40px}
-.jobOpening .listWrap ul > li:nth-child(3n+2){text-align:center}
-.jobOpening .listWrap ul > li:nth-child(3n+3){text-align:right}
-.jobOpening .listWrap ul > li a{width:400px;height:320px;display:inline-block;border:1px solid #e0e0e0;padding:39px;text-align:left;background:#fff;transition:all .3s;-webkit-transition:all .3s;}
-.jobOpening .listWrap ul > li a:hover{box-shadow:10px 10px 15px rgba(0,0,0,.15);}
-.jobOpening .listWrap ol{width:100%;height:183px;display:inline-block;border-bottom:1px solid #e0e0e0}
-.jobOpening .listWrap ol li{width:100%;display:inline-block}
-.jobOpening .listWrap ol li i{display:inline-block;line-height:30px;padding:0 20px;border:1px solid #101010;font-size:16px;border-radius:30px}
-.jobOpening .listWrap ol li i.career{background:#101010;color:#fff}
-.jobOpening .listWrap ol li i.new{background:#fff;color:#101010}
-.jobOpening .listWrap li.tit{font-size:28px;font-weight:500;line-height:1.2;margin:15px 0 14px 0}
-.jobOpening .listWrap li.part{font-size:18px;color:#767676}
-.jobOpening .listWrap span.date{width:100%;display:block;font-size:18px;color:#767676;margin-top:40px}
-.jobOpening .listWrap span.date i{color:#ff4949;font-weight:500;margin-left:15px}
-.jobOpening .faqWrap{margin-top:55px}
-.jobOpening .faqWrap h3{font-size:28px;font-weight:500;margin-bottom:22px}
-.jobOpening .faqWrap table{border-top:1px solid #101010}
-.jobOpening .faqWrap td{border-bottom:1px solid #e0e0e0}
-.jobOpening .faqWrap dt{width:100%;display:block;position:relative;font-size:16px;line-height:1.4;padding:28px 55px;cursor:pointer}
-.jobOpening .faqWrap dt::before{content:'Q.';position:absolute;left:20px;top:26px}
-.jobOpening .faqWrap dt::after{content:'';width:16px;height:8px;position:absolute;right:20px;top:50%;margin-top:-4px;background:url(/images/icon_faq_arrow.svg) no-repeat center center;transition:all .4s;-webkit-transition:all .4s}
-.jobOpening .faqWrap dt.on::after{-ms-transform:rotate(180deg);-webkit-transform:rotate(180deg);transform:rotate(180deg);}
-.jobOpening .faqWrap dd{width:100%;height:155px;background:#fafafa;font-size:16px;line-height:1.6;overflow-y:auto;padding:38px 55px;border-top:1px solid #e0e0e0;display:none}
+.jobOpening article.tab {
+    text-align: center;
+    margin-bottom: 80px
+}
+
+.jobOpening .tab ul {
+    display: inline-block
+}
+
+.jobOpening .tab ul li {
+    float: left;
+    margin: 0 20px;
+}
+
+.jobOpening .tab a {
+    font-size: 20px;
+    border-bottom: 4px solid #fff;
+    height: 36px;
+    display: inline-block;
+    color: #767676
+}
+
+.jobOpening .tab a.on {
+    border-color: #101010;
+    color: #101010
+}
+
+.jobOpening .listWrap ul {
+    width: 100%;
+    display: inline-block
+}
+
+.jobOpening .listWrap ul>li {
+    width: 33.33%;
+    float: left;
+    margin-bottom: 40px
+}
+
+.jobOpening .listWrap ul>li:nth-child(3n+2) {
+    text-align: center
+}
+
+.jobOpening .listWrap ul>li:nth-child(3n+3) {
+    text-align: right
+}
+
+.jobOpening .listWrap ul>li a {
+    width: 400px;
+    height: 320px;
+    display: inline-block;
+    border: 1px solid #e0e0e0;
+    padding: 39px;
+    text-align: left;
+    background: #fff;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+}
+
+.jobOpening .listWrap ul>li a:hover {
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, .15);
+}
+
+.jobOpening .listWrap ol {
+    width: 100%;
+    height: 183px;
+    display: inline-block;
+    border-bottom: 1px solid #e0e0e0
+}
+
+.jobOpening .listWrap ol li {
+    width: 100%;
+    display: inline-block
+}
+
+.jobOpening .listWrap ol li i {
+    display: inline-block;
+    line-height: 30px;
+    padding: 0 20px;
+    border: 1px solid #101010;
+    font-size: 16px;
+    border-radius: 30px
+}
+
+.jobOpening .listWrap ol li i.career {
+    background: #101010;
+    color: #fff
+}
+
+.jobOpening .listWrap ol li i.new {
+    background: #fff;
+    color: #101010
+}
+
+.jobOpening .listWrap li.tit {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 15px 0 14px 0
+}
+
+.jobOpening .listWrap li.part {
+    font-size: 18px;
+    color: #767676
+}
+
+.jobOpening .listWrap span.date {
+    width: 100%;
+    display: block;
+    font-size: 18px;
+    color: #767676;
+    margin-top: 40px
+}
+
+.jobOpening .listWrap span.date i {
+    color: #ff4949;
+    font-weight: 500;
+    margin-left: 15px
+}
+
+.jobOpening .faqWrap {
+    margin-top: 55px
+}
+
+.jobOpening .faqWrap h3 {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 22px
+}
+
+.jobOpening .faqWrap table {
+    border-top: 1px solid #101010
+}
+
+.jobOpening .faqWrap td {
+    border-bottom: 1px solid #e0e0e0
+}
+
+.jobOpening .faqWrap dt {
+    width: 100%;
+    display: block;
+    position: relative;
+    font-size: 16px;
+    line-height: 1.4;
+    padding: 28px 55px;
+    cursor: pointer
+}
+
+.jobOpening .faqWrap dt::before {
+    content: 'Q.';
+    position: absolute;
+    left: 20px;
+    top: 26px
+}
+
+.jobOpening .faqWrap dt::after {
+    content: '';
+    width: 16px;
+    height: 8px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    margin-top: -4px;
+    background: url(../images/icon_faq_arrow.svg) no-repeat center center;
+    transition: all .4s;
+    -webkit-transition: all .4s
+}
+
+.jobOpening .faqWrap dt.on::after {
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.jobOpening .faqWrap dd {
+    width: 100%;
+    height: 155px;
+    background: #fafafa;
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-y: auto;
+    padding: 38px 55px;
+    border-top: 1px solid #e0e0e0;
+    display: none
+}
+
 /*채용공고(상세) & 인재풀 등록*/
-.jobOpening .detailWrap .topTitle{border-top:1px solid #101010;border-bottom:1px solid #101010;width:100%;display:table;padding:36px 0 38px 0}
-.jobOpening .detailWrap .topTitle > div{display:table-cell}
-.jobOpening .detailWrap .box1{width:108px;text-align:right}
-.jobOpening .detailWrap .box1 i{display:inline-block;text-align:center;font-size:16px;line-height:29px;border-radius:29px;border:1px solid #101010;padding:0 20px;margin-top:3px}
-.jobOpening .detailWrap .box1 i.career{color:#fff;background:#101010}
-.jobOpening .detailWrap .box1 i.new{color:#101010;background:#fff}
-.jobOpening .detailWrap .box2{padding:0 30px;vertical-align:top}
-.jobOpening .detailWrap .box2 .tit{font-size:28px;line-height:1.4;font-weight:500}
-.jobOpening .detailWrap .box2 ol{margin-top:15px}
-.jobOpening .detailWrap .box2 ol li{display:inline-block;font-size:18px;color:#767676}
-.jobOpening .detailWrap .box2 ol li:first-child{margin-right:6px;padding-right:10px;position:relative}
-.jobOpening .detailWrap .box2 ol li:first-child::after{content:'';width:1px;height:8px;background:#e0e0e0;position:absolute;right:0;top:50%;transform:translateY(-50%)}
-.jobOpening .detailWrap .box2 b{color:#ff4949;font-weight:500;margin-left:12px}
-.jobOpening .infoWrap{padding:20px 40px 0 40px}
-.jobOpening .infoWrap h4{font-size:28px;font-weight:500}
-.jobOpening .infoWrap h4 span{display:inline-block;font-size:16px;color:#767676;font-weight:400;margin-left:15px;vertical-align:top;margin-top:6px}
-.jobOpening .infoWrap .part1 h4{margin-top:60px;margin-bottom:23px}
-.jobOpening .infoWrap .part1 table{border-top:1px solid #101010;border-bottom:1px solid #e0e0e0}
-.jobOpening .infoWrap .part1 th{font-size:16px;font-weight:500;height:50px;border-bottom:1px solid #101010}
-.jobOpening .infoWrap .part1 td{text-align:center;border-right:1px solid #e0e0e0;font-size:16px;color:#505050;line-height:1.6;padding:21px 0}
-.jobOpening .infoWrap .part1 td:last-child{border-right:none}
+.jobOpening .detailWrap .topTitle {
+    border-top: 1px solid #101010;
+    border-bottom: 1px solid #101010;
+    width: 100%;
+    display: table;
+    padding: 36px 0 38px 0
+}
+
+.jobOpening .detailWrap .topTitle>div {
+    display: table-cell
+}
+
+.jobOpening .detailWrap .box1 {
+    width: 108px;
+    text-align: right
+}
+
+.jobOpening .detailWrap .box1 i {
+    display: inline-block;
+    text-align: center;
+    font-size: 16px;
+    line-height: 29px;
+    border-radius: 29px;
+    border: 1px solid #101010;
+    padding: 0 20px;
+    margin-top: 3px
+}
+
+.jobOpening .detailWrap .box1 i.career {
+    color: #fff;
+    background: #101010
+}
+
+.jobOpening .detailWrap .box1 i.new {
+    color: #101010;
+    background: #fff
+}
+
+.jobOpening .detailWrap .box2 {
+    padding: 0 30px;
+    vertical-align: top
+}
+
+.jobOpening .detailWrap .box2 .tit {
+    font-size: 28px;
+    line-height: 1.4;
+    font-weight: 500
+}
+
+.jobOpening .detailWrap .box2 ol {
+    margin-top: 15px
+}
+
+.jobOpening .detailWrap .box2 ol li {
+    display: inline-block;
+    font-size: 18px;
+    color: #767676
+}
+
+.jobOpening .detailWrap .box2 ol li:first-child {
+    margin-right: 6px;
+    padding-right: 10px;
+    position: relative
+}
+
+.jobOpening .detailWrap .box2 ol li:first-child::after {
+    content: '';
+    width: 1px;
+    height: 8px;
+    background: #e0e0e0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.jobOpening .detailWrap .box2 b {
+    color: #ff4949;
+    font-weight: 500;
+    margin-left: 12px
+}
+
+.jobOpening .infoWrap {
+    padding: 20px 40px 0 40px
+}
+
+.jobOpening .infoWrap h4 {
+    font-size: 28px;
+    font-weight: 500
+}
+
+.jobOpening .infoWrap h4 span {
+    display: inline-block;
+    font-size: 16px;
+    color: #767676;
+    font-weight: 400;
+    margin-left: 15px;
+    vertical-align: top;
+    margin-top: 6px
+}
+
+.jobOpening .infoWrap .part1 h4 {
+    margin-top: 60px;
+    margin-bottom: 23px
+}
+
+.jobOpening .infoWrap .part1 table {
+    border-top: 1px solid #101010;
+    border-bottom: 1px solid #e0e0e0
+}
+
+.jobOpening .infoWrap .part1 th {
+    font-size: 16px;
+    font-weight: 500;
+    height: 50px;
+    border-bottom: 1px solid #101010
+}
+
+.jobOpening .infoWrap .part1 td {
+    text-align: center;
+    border-right: 1px solid #e0e0e0;
+    font-size: 16px;
+    color: #505050;
+    line-height: 1.6;
+    padding: 21px 0
+}
+
+.jobOpening .infoWrap .part1 td:last-child {
+    border-right: none
+}
+
 .jobOpening .infoWrap .part1 td:nth-child(2),
-.jobOpening .infoWrap .part1 td:nth-child(3){text-align:left;padding:21px 40px}
-.jobOpening .infoWrap .part1 ol{width:100%;display:inline-block;margin:15px 0}
-.jobOpening .infoWrap .part1 li{padding-left:12px;position:relative}
-.jobOpening .infoWrap .part1 li::before{content:'-';position:absolute;left:2px;top:1px}
-.jobOpening .infoWrap .part1 ol li:first-child{font-size:16px;font-weight:500;color:#101010;padding-left:0}
-.jobOpening .infoWrap .part1 ol li:first-child::before{display:none}
-.jobOpening .infoWrap .part1 td span.th{display:none}
-.jobOpening .infoWrap .part2{width:100%;display:table;border-bottom:1px solid #e0e0e0}
-.jobOpening .infoWrap .part2 h4{width:360px;display:table-cell;text-align:left;padding-top:16px;vertical-align:top}
-.jobOpening .infoWrap .part2 > div{display:table-cell}
-.jobOpening .infoWrap .part2 th{width:150px;font-size:16px;font-weight:500;text-align:left;height:42px;vertical-align:middle}
-.jobOpening .infoWrap .part2 td{font-size:16px;color:#505050;line-height:1.4;height:42px;vertical-align:middle}
-.jobOpening .infoWrap .part2.condition{padding-top:50px;padding-bottom:50px}
-.jobOpening .infoWrap .part2.condition h4{padding-top:6px}
-.jobOpening .infoWrap .part2.welfare{padding-top:56px;padding-bottom:56px}
-.jobOpening .infoWrap .part2.welfare h4{padding-top:6px}
-.jobOpening .infoWrap .part2.doc{padding-top:51px;padding-bottom:51px}
-.jobOpening .infoWrap .part2.doc h4{padding-top:0;vertical-align:middle}
-.jobOpening .infoWrap .part2.date{padding-top:49px;padding-bottom:49px}
-.jobOpening .infoWrap .part2.other{padding-top:49px;padding-bottom:49px}
-.jobOpening .infoWrap .part3{width:100%;display:inline-block;padding-bottom:60px;border-bottom:1px solid #e0e0e0}
-.jobOpening .infoWrap .part3 h4{margin-top:56px;margin-bottom:37px;width:100%;display:inline-block}
-.jobOpening .infoWrap .part3 ul{float:left;width:120px;margin-right:96px;position:relative;transition: all .3s;-webkit-transition: all .3}
-.jobOpening .infoWrap .part3 ul::after{content:'';width:6px;height:12px;background:url(/images/icon_job_arrow.svg) no-repeat;position:absolute;right:-50px;top:54px}
-.jobOpening .infoWrap .part3 ul:last-child{margin-right:0}
-.jobOpening .infoWrap .part3 ul:last-child::after{display:none}
-.jobOpening .infoWrap .part3 li{text-align:center}
-.jobOpening .infoWrap .part3 li.img{width:120px;height:120px;position:relative;border-radius:100%;background:#f8fafb;margin:0 auto}
-.jobOpening .infoWrap .part3 li.img img{position:absolute;left:50%;top:50%;margin-left:-29px;margin-top:-29px}
-.jobOpening .infoWrap .part3 li.step{font-size:16px;font-weight:500;margin:20px 0 10px 0}
-.jobOpening .infoWrap .part3 li.text{font-size:16px;color:#505050}
-.jobOpening .bottom_btn{text-align:center;margin-top:100px}
-.jobOpening .bottom_btn a{display:inline-block;width:162px;line-height:58px;font-size:18px;color:#101010;border-radius:60px;border:1px solid #101010;margin:0 8px}
-.jobOpening .bottom_btn a.list{background:#fff;}
-.jobOpening .bottom_btn a.apply{background:#101010;color:#fff}
-.jobOpening.regist .infoWrap{padding:0}
-.jobOpening.regist .infoWrap .part2.method{padding:51px 40px;border-top:1px solid #101010}
-.jobOpening.regist .infoWrap .part2.method h4{padding-top:0;vertical-align:middle}
-.jobOpening.regist .infoWrap .part3{padding:0 40px 60px 40px}
-.jobOpening.regist .infoWrap .part3 ul{margin-right:25px;width:150px}
-.jobOpening.regist .infoWrap .part3 ul:last-child{margin-right:0}
-.jobOpening.regist .infoWrap .part3 ul::after{right:-15px}
-.jobOpening.regist .infoWrap .part2.other{padding:51px 40px;border-top:1px solid #101010}
-.jobOpening.regist .infoWrap .part2.other h4{padding-top:0;vertical-align:middle}
-.jobOpening.regist .infoWrap .part2.inquiries{padding:49px 40px}
+.jobOpening .infoWrap .part1 td:nth-child(3) {
+    text-align: left;
+    padding: 21px 40px
+}
+
+.jobOpening .infoWrap .part1 ol {
+    width: 100%;
+    display: inline-block;
+    margin: 15px 0
+}
+
+.jobOpening .infoWrap .part1 li {
+    padding-left: 12px;
+    position: relative
+}
+
+.jobOpening .infoWrap .part1 li::before {
+    content: '-';
+    position: absolute;
+    left: 2px;
+    top: 1px
+}
+
+.jobOpening .infoWrap .part1 ol li:first-child {
+    font-size: 16px;
+    font-weight: 500;
+    color: #101010;
+    padding-left: 0
+}
+
+.jobOpening .infoWrap .part1 ol li:first-child::before {
+    display: none
+}
+
+.jobOpening .infoWrap .part1 td span.th {
+    display: none
+}
+
+.jobOpening .infoWrap .part2 {
+    width: 100%;
+    display: table;
+    border-bottom: 1px solid #e0e0e0
+}
+
+.jobOpening .infoWrap .part2 h4 {
+    width: 360px;
+    display: table-cell;
+    text-align: left;
+    padding-top: 16px;
+    vertical-align: top
+}
+
+.jobOpening .infoWrap .part2>div {
+    display: table-cell
+}
+
+.jobOpening .infoWrap .part2 th {
+    width: 150px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: left;
+    height: 42px;
+    vertical-align: middle
+}
+
+.jobOpening .infoWrap .part2 td {
+    font-size: 16px;
+    color: #505050;
+    line-height: 1.4;
+    height: 42px;
+    vertical-align: middle
+}
+
+.jobOpening .infoWrap .part2.condition {
+    padding-top: 50px;
+    padding-bottom: 50px
+}
+
+.jobOpening .infoWrap .part2.condition h4 {
+    padding-top: 6px
+}
+
+.jobOpening .infoWrap .part2.welfare {
+    padding-top: 56px;
+    padding-bottom: 56px
+}
+
+.jobOpening .infoWrap .part2.welfare h4 {
+    padding-top: 6px
+}
+
+.jobOpening .infoWrap .part2.doc {
+    padding-top: 51px;
+    padding-bottom: 51px
+}
+
+.jobOpening .infoWrap .part2.doc h4 {
+    padding-top: 0;
+    vertical-align: middle
+}
+
+.jobOpening .infoWrap .part2.date {
+    padding-top: 49px;
+    padding-bottom: 49px
+}
+
+.jobOpening .infoWrap .part2.other {
+    padding-top: 49px;
+    padding-bottom: 49px
+}
+
+.jobOpening .infoWrap .part3 {
+    width: 100%;
+    display: inline-block;
+    padding-bottom: 60px;
+    border-bottom: 1px solid #e0e0e0
+}
+
+.jobOpening .infoWrap .part3 h4 {
+    margin-top: 56px;
+    margin-bottom: 37px;
+    width: 100%;
+    display: inline-block
+}
+
+.jobOpening .infoWrap .part3 ul {
+    float: left;
+    width: 120px;
+    margin-right: 96px;
+    position: relative;
+    transition: all .3s;
+    -webkit-transition: all .3
+}
+
+.jobOpening .infoWrap .part3 ul::after {
+    content: '';
+    width: 6px;
+    height: 12px;
+    background: url(../images/icon_job_arrow.svg) no-repeat;
+    position: absolute;
+    right: -50px;
+    top: 54px
+}
+
+.jobOpening .infoWrap .part3 ul:last-child {
+    margin-right: 0
+}
+
+.jobOpening .infoWrap .part3 ul:last-child::after {
+    display: none
+}
+
+.jobOpening .infoWrap .part3 li {
+    text-align: center
+}
+
+.jobOpening .infoWrap .part3 li.img {
+    width: 120px;
+    height: 120px;
+    position: relative;
+    border-radius: 100%;
+    background: #f8fafb;
+    margin: 0 auto
+}
+
+.jobOpening .infoWrap .part3 li.img img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -29px;
+    margin-top: -29px
+}
+
+.jobOpening .infoWrap .part3 li.step {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 20px 0 10px 0
+}
+
+.jobOpening .infoWrap .part3 li.text {
+    font-size: 16px;
+    color: #505050
+}
+
+.jobOpening .bottom_btn {
+    text-align: center;
+    margin-top: 100px
+}
+
+.jobOpening .bottom_btn a {
+    display: inline-block;
+    width: 162px;
+    line-height: 58px;
+    font-size: 18px;
+    color: #101010;
+    border-radius: 60px;
+    border: 1px solid #101010;
+    margin: 0 8px
+}
+
+.jobOpening .bottom_btn a.list {
+    background: #fff;
+}
+
+.jobOpening .bottom_btn a.apply {
+    background: #101010;
+    color: #fff
+}
+
+.jobOpening.regist .infoWrap {
+    padding: 0
+}
+
+.jobOpening.regist .infoWrap .part2.method {
+    padding: 51px 40px;
+    border-top: 1px solid #101010
+}
+
+.jobOpening.regist .infoWrap .part2.method h4 {
+    padding-top: 0;
+    vertical-align: middle
+}
+
+.jobOpening.regist .infoWrap .part3 {
+    padding: 0 40px 60px 40px
+}
+
+.jobOpening.regist .infoWrap .part3 ul {
+    margin-right: 25px;
+    width: 150px
+}
+
+.jobOpening.regist .infoWrap .part3 ul:last-child {
+    margin-right: 0
+}
+
+.jobOpening.regist .infoWrap .part3 ul::after {
+    right: -15px
+}
+
+.jobOpening.regist .infoWrap .part2.other {
+    padding: 51px 40px;
+    border-top: 1px solid #101010
+}
+
+.jobOpening.regist .infoWrap .part2.other h4 {
+    padding-top: 0;
+    vertical-align: middle
+}
+
+.jobOpening.regist .infoWrap .part2.inquiries {
+    padding: 49px 40px
+}
 
 /*입사지원*/
-.application form{width:1280px;margin:0 auto;border-top:1px solid #101010}
-.application th{width:400px;padding:60px 0;text-align:left;line-height:1.2;font-size:20px;font-weight:500;padding-left:40px;vertical-align:top;border-bottom:1px solid #e0e0e0}
-.application td{padding:60px 40px 60px 0;border-bottom:1px solid #e0e0e0}
-.application .terms{padding:60px 40px 53px 0}
-.application .terms .roll{width:100%;height:330px;overflow:hidden;overflow-y:auto;padding:40px;border:1px solid #e0e0e0;margin-bottom:33px}
-.application .terms .roll h5{width:100%;display:inline-block;font-size:16px;font-weight:500;margin-bottom:15px}
-.application .terms .roll .text{width:100%;display:inline-block;font-size:16px;color:#505050;line-height:1.6;margin-bottom:15px}
-.application .terms .roll table{border-top:1px solid #101010;margin-bottom:15px}
-.application .terms .roll th{width:auto;padding:15px 0;text-align:center;line-height:1;font-size:14px;padding-left:0;vertical-align:middle;border-bottom:1px solid #e0e0e0}
-.application .terms .roll th:first-child{width:100px}
-.application .terms .roll td{padding:15px;border-bottom:1px solid #e0e0e0;line-height:1.4;border-right:1px solid #e0e0e0;color:#505050}
-.application .terms .roll td.th{text-align:center}
-.application .terms .roll td:last-child{border-right:none}
-.application .terms .roll ul{padding-left:20px}
-.application .terms .roll ul > li{line-height:1.4;font-size:16px;color:#505050}
-.application .terms .roll ul > li > p{padding-left:20px;text-indent:-25px}
-.application .terms .roll ol{width:100%;margin:20px 0;padding-left:20px}
-.application .terms .roll ol span{display:block;padding-left:35px;text-indent:-10px}
-.application .terms .checkBox{display:inline-block;position:relative;height:20px;vertical-align:middle;width:100%;margin:7px 0}
-.application .terms input[type="checkbox"]{position:absolute;left:0;top:0;opacity:0}
-.application .terms i{width:20px;height:20px;border:2px solid #e0e0e0;position:absolute;left:0;top:1px;border-radius:2px}
-.application .terms label{padding-left:30px;position:relative;display:inline-block;line-height:20px;color:#505050;cursor:pointer;font-size:16px;}
-.application .terms label:before{content:'';color:#ccc;position:absolute;left:7px;top:4px;width:5px;height:9px;border-right:2px solid #e0e0e0;border-bottom:2px solid #e0e0e0;transform:rotate(45deg);-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg)}
-.application .terms label b{font-weight:500;color:#101010}
-.application .terms input[type="checkbox"]:checked + i{border-color:#ff5a4e;background:#ff5a4e}
-.application .terms input[type="checkbox"]:checked + i + label:before{border-color:#fff}
-.application dt{width:100%;display:inline-block;font-size:16px;font-weight:500;margin-bottom:15px}
-.application dt span{color:#fe7986;margin-left:4px}
-.application select.select{width:100%;background:url(/images/common/icon_select_arrow.svg) no-repeat calc(100% - 20px) center;}
-.application dd{margin-bottom:40px}
-.application dd:last-child{margin-bottom:0}
-.application input.enterField{width:100%;height:48px;border:1px solid #e0e0e0;padding:0 20px;font-size:16px;color:#101010}
-.application input.enterField::placeholder{color:#bdbdbd}
-.application input.enterField:focus{border-color:#101010}
-.application .addFile .addWrap{display:inline-block}
-.application .addFile .fileField{width:118px;position:relative}
-.application .addFile .fileField input[type="file"]{width:100%;height:48px;position:absolute;left:0;top:0;opacity:0;cursor:pointer}
-.application .addFile .fileField button{width:100%;height:48px;background:#fe7986;color:#fff;height:48px;border:none;font-size:16px}
-.application .addFile a.docDown{width:178px;line-height:46px;text-align:center;border:1px solid #fe7986;color:#fe7986;font-size:16px;background:#fff;display:inline-block;margin-left:6px}
-.application .addFile .viewWrap{margin-top:14px;}
-.application .addFile .MultiFile-label:last-child{border-bottom:1px solid #e0e0e0}
-.application .addFile .MultiFile-label{width:100%;height:56px;line-height:54px;border:1px solid #e0e0e0;position:relative;padding:0 20px;font-size:16px;border-bottom:none}
-.application .addFile .MultiFile-label a.MultiFile-remove{width:20px;height:20px;text-indent:-9999px;cursor:pointer;position:absolute;right:20px;top:50%;transform:translateY(-50%);background:url(/images/icon_job_del.svg)}
-.application .addFile p.ment{margin-top:10px;font-size:16px;color:#767676}
-.application textarea{width:100%;height:200px;border:1px solid #e0e0e0;padding:20px;font-size:16px;resize:none}
-.application textarea::placeholder{color:#bdbdbd}
-.application textarea:focus{border-color:#101010}
-.application .bottom_btn{text-align:center;margin-top:100px}
-.application .bottom_btn a{display:inline-block;width:162px;line-height:58px;font-size:18px;color:#101010;border-radius:60px;border:1px solid #101010;background:#101010;color:#fff}
+.application form {
+    width: 1280px;
+    margin: 0 auto;
+    border-top: 1px solid #101010
+}
+
+.application th {
+    width: 400px;
+    padding: 60px 0;
+    text-align: left;
+    line-height: 1.2;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 40px;
+    vertical-align: top;
+    border-bottom: 1px solid #e0e0e0
+}
+
+.application td {
+    padding: 60px 40px 60px 0;
+    border-bottom: 1px solid #e0e0e0
+}
+
+.application .terms {
+    padding: 60px 40px 53px 0
+}
+
+.application .terms .roll {
+    width: 100%;
+    height: 330px;
+    overflow: hidden;
+    overflow-y: auto;
+    padding: 40px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 33px
+}
+
+.application .terms .roll h5 {
+    width: 100%;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 15px
+}
+
+.application .terms .roll .text {
+    width: 100%;
+    display: inline-block;
+    font-size: 16px;
+    color: #505050;
+    line-height: 1.6;
+    margin-bottom: 15px
+}
+
+.application .terms .roll table {
+    border-top: 1px solid #101010;
+    margin-bottom: 15px
+}
+
+.application .terms .roll th {
+    width: auto;
+    padding: 15px 0;
+    text-align: center;
+    line-height: 1;
+    font-size: 14px;
+    padding-left: 0;
+    vertical-align: middle;
+    border-bottom: 1px solid #e0e0e0
+}
+
+.application .terms .roll th:first-child {
+    width: 100px
+}
+
+.application .terms .roll td {
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    line-height: 1.4;
+    border-right: 1px solid #e0e0e0;
+    color: #505050
+}
+
+.application .terms .roll td.th {
+    text-align: center
+}
+
+.application .terms .roll td:last-child {
+    border-right: none
+}
+
+.application .terms .roll ul {
+    padding-left: 20px
+}
+
+.application .terms .roll ul>li {
+    line-height: 1.4;
+    font-size: 16px;
+    color: #505050
+}
+
+.application .terms .roll ul>li>p {
+    padding-left: 20px;
+    text-indent: -25px
+}
+
+.application .terms .roll ol {
+    width: 100%;
+    margin: 20px 0;
+    padding-left: 20px
+}
+
+.application .terms .roll ol span {
+    display: block;
+    padding-left: 35px;
+    text-indent: -10px
+}
+
+.application .terms .checkBox {
+    display: inline-block;
+    position: relative;
+    height: 20px;
+    vertical-align: middle;
+    width: 100%;
+    margin: 7px 0
+}
+
+.application .terms input[type="checkbox"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0
+}
+
+.application .terms i {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #e0e0e0;
+    position: absolute;
+    left: 0;
+    top: 1px;
+    border-radius: 2px
+}
+
+.application .terms label {
+    padding-left: 30px;
+    position: relative;
+    display: inline-block;
+    line-height: 20px;
+    color: #505050;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.application .terms label:before {
+    content: '';
+    color: #ccc;
+    position: absolute;
+    left: 7px;
+    top: 4px;
+    width: 5px;
+    height: 9px;
+    border-right: 2px solid #e0e0e0;
+    border-bottom: 2px solid #e0e0e0;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg)
+}
+
+.application .terms label b {
+    font-weight: 500;
+    color: #101010
+}
+
+.application .terms input[type="checkbox"]:checked+i {
+    border-color: #ff5a4e;
+    background: #ff5a4e
+}
+
+.application .terms input[type="checkbox"]:checked+i+label:before {
+    border-color: #fff
+}
+
+.application dt {
+    width: 100%;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 15px
+}
+
+.application dt span {
+    color: #fe7986;
+    margin-left: 4px
+}
+
+.application select.select {
+    width: 100%;
+    background: url(../images/common/icon_select_arrow.svg) no-repeat calc(100% - 20px) center;
+}
+
+.application dd {
+    margin-bottom: 40px
+}
+
+.application dd:last-child {
+    margin-bottom: 0
+}
+
+.application input.enterField {
+    width: 100%;
+    height: 48px;
+    border: 1px solid #e0e0e0;
+    padding: 0 20px;
+    font-size: 16px;
+    color: #101010
+}
+
+.application input.enterField::placeholder {
+    color: #bdbdbd
+}
+
+.application input.enterField:focus {
+    border-color: #101010
+}
+
+.application .addFile .addWrap {
+    display: inline-block
+}
+
+.application .addFile .fileField {
+    width: 118px;
+    position: relative
+}
+
+.application .addFile .fileField input[type="file"] {
+    width: 100%;
+    height: 48px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer
+}
+
+.application .addFile .fileField button {
+    width: 100%;
+    height: 48px;
+    background: #fe7986;
+    color: #fff;
+    height: 48px;
+    border: none;
+    font-size: 16px
+}
+
+.application .addFile a.docDown {
+    width: 178px;
+    line-height: 46px;
+    text-align: center;
+    border: 1px solid #fe7986;
+    color: #fe7986;
+    font-size: 16px;
+    background: #fff;
+    display: inline-block;
+    margin-left: 6px
+}
+
+.application .addFile .viewWrap {
+    margin-top: 14px;
+}
+
+.application .addFile .MultiFile-label:last-child {
+    border-bottom: 1px solid #e0e0e0
+}
+
+.application .addFile .MultiFile-label {
+    width: 100%;
+    height: 56px;
+    line-height: 54px;
+    border: 1px solid #e0e0e0;
+    position: relative;
+    padding: 0 20px;
+    font-size: 16px;
+    border-bottom: none
+}
+
+.application .addFile .MultiFile-label a.MultiFile-remove {
+    width: 20px;
+    height: 20px;
+    text-indent: -9999px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url(../images/icon_job_del.svg)
+}
+
+.application .addFile p.ment {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #767676
+}
+
+.application textarea {
+    width: 100%;
+    height: 200px;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    font-size: 16px;
+    resize: none
+}
+
+.application textarea::placeholder {
+    color: #bdbdbd
+}
+
+.application textarea:focus {
+    border-color: #101010
+}
+
+.application .bottom_btn {
+    text-align: center;
+    margin-top: 100px
+}
+
+.application .bottom_btn a {
+    display: inline-block;
+    width: 162px;
+    line-height: 58px;
+    font-size: 18px;
+    color: #101010;
+    border-radius: 60px;
+    border: 1px solid #101010;
+    background: #101010;
+    color: #fff
+}
 
 @media all and (max-width:1280px) {
-    .application .content{padding:0 20px}
-    .application form{width:100%}
+    .application .content {
+        padding: 0 20px
+    }
+
+    .application form {
+        width: 100%
+    }
+
     /*인재상*/
-    .talent .diagram ul{width:812px;margin:auto;padding:0 4.6%}
-    .talent .diagram li:first-child:before{width:calc(100% - 200px)}
-    .talent .diagram li dl{margin-right:75px}
-    .talent .diagram li dl:first-child{margin-bottom:80px}
-    .talent .diagram li dl:nth-child(2){margin-bottom:80px}
-    .talent .diagram li dl:nth-child(2n){float:right;margin-right:0}
+    .talent .diagram ul {
+        width: 812px;
+        margin: auto;
+        padding: 0 4.6%
+    }
+
+    .talent .diagram li:first-child:before {
+        width: calc(100% - 200px)
+    }
+
+    .talent .diagram li dl {
+        margin-right: 75px
+    }
+
+    .talent .diagram li dl:first-child {
+        margin-bottom: 80px
+    }
+
+    .talent .diagram li dl:nth-child(2) {
+        margin-bottom: 80px
+    }
+
+    .talent .diagram li dl:nth-child(2n) {
+        float: right;
+        margin-right: 0
+    }
+
     /*직무소개*/
-    .duty .tabButton ol li{margin:0 10px}
+    .duty .tabButton ol li {
+        margin: 0 10px
+    }
+
     /*기업문화/복리후생*/
-    .culture .life ol{width:95%}
+    .culture .life ol {
+        width: 95%
+    }
+
     /*채용공고(목록)*/
-    .jobOpening .listWrap ul > li a{width:95%}
+    .jobOpening .listWrap ul>li a {
+        width: 95%
+    }
+
     /*채용공고(상세) & 인재풀 등록*/
-    .jobOpening .infoWrap .part1 table colgroup{display:none}
-    .jobOpening .infoWrap .part1 th:nth-child(2), 
-    .jobOpening .infoWrap .part1 th:nth-child(3){width:35%}
-    .jobOpening .infoWrap .part2 h4{width:31.4%}
-    .jobOpening .infoWrap .part3 ul{width:16.66%;margin-right:0}
-    .jobOpening .infoWrap .part3 ul::after{right:0}
-    .jobOpening .infoWrap .part3 li.img{width:100px;height:100px}
-    .jobOpening .infoWrap .part3 li.img img{margin-left:0;margin-top:0;transform:translate(-50%,-50%);height:45px}
-    .jobOpening.regist .infoWrap .part3 ul{margin:0;width:14.28%}
-    .jobOpening.regist .infoWrap .part3 ul::after{right:0}
+    .jobOpening .infoWrap .part1 table colgroup {
+        display: none
+    }
+
+    .jobOpening .infoWrap .part1 th:nth-child(2),
+    .jobOpening .infoWrap .part1 th:nth-child(3) {
+        width: 35%
+    }
+
+    .jobOpening .infoWrap .part2 h4 {
+        width: 31.4%
+    }
+
+    .jobOpening .infoWrap .part3 ul {
+        width: 16.66%;
+        margin-right: 0
+    }
+
+    .jobOpening .infoWrap .part3 ul::after {
+        right: 0
+    }
+
+    .jobOpening .infoWrap .part3 li.img {
+        width: 100px;
+        height: 100px
+    }
+
+    .jobOpening .infoWrap .part3 li.img img {
+        margin-left: 0;
+        margin-top: 0;
+        transform: translate(-50%, -50%);
+        height: 45px
+    }
+
+    .jobOpening.regist .infoWrap .part3 ul {
+        margin: 0;
+        width: 14.28%
+    }
+
+    .jobOpening.regist .infoWrap .part3 ul::after {
+        right: 0
+    }
+
     /*입사지원*/
-    .application th{width:32.3%}
+    .application th {
+        width: 32.3%
+    }
 }
 
 @media all and (max-width:1024px) {
-    /*직무소개*/
-    .duty .tab ul{width:812px}
-    .duty .tab ul li{margin:0 0.8%}
-    .duty .tabButton ol a{font-size:18px}
-    .duty .tabData li.text br.pc{display:none}
-    .duty .tabData li.tit span br.pc{display:none}
-    .duty .tabData dt{width:47%}
-    .duty .tabData dd{padding-left:5%}
-    /*기업문화/복리후생*/
-    .culture .welfare ul > li{width:33.33%}
-    .culture .welfare ol li{display:block;text-align:center}
-    .culture .welfare .icon{margin:auto}
-    /*채용공고(상세) & 인재풀 등록*/
-    .jobOpening .detailWrap .box2 .tit{font-size:25px}
-    .jobOpening .infoWrap .part3 ul{width:33.33%;margin-bottom:20px}
-    .jobOpening .infoWrap .part3 ul:nth-child(4)::after{display:none}
-    .jobOpening .infoWrap h4{font-size:25px}
-    .jobOpening.regist .infoWrap .part3 ul{margin-right:0;margin-bottom:20px;width:25%}
-    .jobOpening.regist .infoWrap .part3 ul:nth-child(4)::after{display:block} 
-    /*채용공고(목록)*/
-    .jobOpening .listWrap li.tit{font-size:23px}
-    .jobOpening .listWrap li.part{font-size:16px}
-    .jobOpening .listWrap span.date{font-size:16px}
-}
-@media all and (max-width:812px) {
-    /*인재상*/
-    .talent .content > article{margin-top:10rem}
-    .talent .topVisual{background:url(/images/brand_visual_injae_mo.jpg) no-repeat center;background-size:100%;height:40rem}
-    .talent .content{margin-bottom:20rem}
-    .talent .diagram ul{padding:0 2rem 0 2.2rem;width:100%}
-    .talent .diagram li:first-child{padding-bottom:8rem;margin-bottom:4rem}
-    .talent .diagram li:first-child:before{width:calc(100% - 25.7rem)}
-    .talent .diagram li:first-child:after{height:8rem}
-    .talent .diagram li:last-child{padding:0}
-    .talent .diagram li span{width:24rem;height:24rem;padding:9.2rem 0;font-size:2.8rem;line-height:3.1rem}
-    .talent .diagram li dl{width:25.8rem;height:25.8rem;margin:4rem 0 0;padding:6.1rem 0}
-    .talent .diagram li dl:first-child{margin-bottom:0}
-    .talent .diagram li dl:nth-child(2){margin-bottom:0}
-    .talent .diagram li dl::after{height:8rem;top:-8rem}
-    .talent .diagram li dl:nth-child(3)::after{height:4rem;top:-4rem}
-    .talent .diagram li dl:nth-child(4)::after{height:4rem;top:-4rem}
-    .talent .diagram li dt img{width:5.8rem}
-    .talent .diagram li dd{font-size:2.4rem;padding-top:2.5rem;line-height:3rem}
-    .talent .diagramInfo dt{width:100%;font-size:2.4rem;border-bottom:none;padding:4.1rem 4.3rem 0.8rem 3.1rem;display:block;}
-    .talent .diagramInfo dd{display:block;width:100%;font-size:2.4rem;padding:0 4.3rem 4.1rem 3.1rem;line-height:3.8rem} 
-    .talent .diagramInfo dd br{display:block}
 
     /*직무소개*/
-    .duty .tabButton{text-align:left;margin-bottom:5.8rem;padding:0 4rem;position:relative}
-    .duty .tabButton > a{display:block;height:4rem;position:absolute;top:35%;transform:translateY(-50%);z-index:5}
-    .duty .tabButton > a img{height:4rem}
-    .duty .tabButton > a.prev{left:4rem;height:5.2rem}
-    .duty .tabButton > a.next{right:4rem;height:5.2rem}
-    .duty .tabButton .buttons{width:100%;padding:0 4rem 0 8rem}
-    .duty .tabButton ol{width:100%;height:9rem;overflow-x:auto;overflow-y:hidden;text-align:left;white-space:nowrap;position:relative}
-    .duty .tabButton ol::-webkit-scrollbar{ width:0;}
-    .duty .tabButton ol::-webkit-scrollbar-track {background:transparent; border-radius: 5px; }
-    .duty .tabButton ol::-webkit-scrollbar-thumb {background:transparent; border-radius: 5px; }
-    .duty .tabButton ol::-webkit-scrollbar-thumb:hover {background:transparent; border-radius: 5px; }
-    .duty .tabButton ol li{float:inherit;margin:0;padding-right:6rem;display:inline-block;position:absolute;top:0;left:0;height:5.2rem}
-    .duty .tabButton .buttons{position:relative}
-    .duty .tabButton .buttons::after{content:'';position:absolute;right:0;top:0;background:linear-gradient(90deg,transparent,#fff 100%);width:15rem;height:5.2rem}
-    .duty .tabButton ol a{border-bottom:none;height:5.2rem;position:relative;}
-    .duty .tabButton ol a span{font-size:3.4rem;height:5.2rem;position:relative;display:block;}
-    .duty .tabButton ol a.flex-active span::after{content:'';width:100%;height:0.4rem;background: #101010;position:absolute;left:0;bottom:0;}
-    .duty .content{padding-bottom:10rem}
-    .duty .infoText{font-size:2.4rem;margin-bottom:9.3rem}
-    .duty .infoText h5{font-size:2.8rem;margin-bottom:2.8rem}
-    .duty .infoText br.pc{display:none}
-    .duty .infoText br.mo{display:block}
-    .duty .imgArea img{width:100%}
-    .duty .tabData{display:block!important}
-    .duty .tabData dl{width:100%;display:block;margin-bottom:9.3rem}
-    .duty .tabData dt{width:100%;display:block}
-    .duty .tabData dd{width:100%;display:block;padding-left:0;padding-top:3.8rem;text-align:center}
-    .duty .tabData li{text-align:left}
-    .duty .tabData li b{font-size:2.4rem}
-    .duty .tabData li b:first-child{margin-right:2rem;padding-right:2rem}
-    .duty .tabData li b:first-child::after{width:1px;height:1.8rem}
-    .duty .tabData li.tit{font-size:2.8rem;padding-left:0;position:relative;margin:2rem 0 2.6rem 0;line-height:1.2}
-    .duty .tabData li.tit br.pc{display:none}
-    .duty .tabData li.tit br.mo{display:block}
-    .duty .tabData li.tit span{display:block;text-indent:-2.8rem;padding-left:2.8rem}
-    .duty .tabData li.tit::before{display:none}
-    .duty .tabData li.tit::after{display:none}
-    .duty .tabData li.tit span::before,
-    .duty .tabData li.tit span::after{content:'';width:1.2rem;height:0.9rem;background-size:0.9rem;display:inline-block;vertical-align:top;margin-right:1.6rem;margin-top:0.5rem}
-    .duty .tabData li.tit span::before{background:url(/images/icon_quotes_left.svg) no-repeat;margin-right:1.6rem;background-size:0.9rem}
-    .duty .tabData li.tit span::after{background:url(/images/icon_quotes_right.svg) no-repeat;margin-left:1.6rem;background-size:0.9rem}
-    .duty .tabData li.text{font-size:2.4rem}
-    .duty .tabData li.text br.pc{display:none}
-    .duty .tabData li.text br.mo{display:block}
-    .duty .tabData div.subTabData{padding-top:10rem;margin-top:10rem}
+    .duty .tab ul {
+        width: 812px
+    }
+
+    .duty .tab ul li {
+        margin: 0 0.8%
+    }
+
+    .duty .tabButton ol a {
+        font-size: 18px
+    }
+
+    .duty .tabData li.text br.pc {
+        display: none
+    }
+
+    .duty .tabData li.tit span br.pc {
+        display: none
+    }
+
+    .duty .tabData dt {
+        width: 47%
+    }
+
+    .duty .tabData dd {
+        padding-left: 5%
+    }
+
     /*기업문화/복리후생*/
-    .culture .content{padding-bottom:16.5rem}
-    .culture .content > article > h3{font-size:2.8rem}
-    .culture .life{padding-top:8.3rem}
-    .culture .life::after{width:6rem;height:0.4rem}
-    .culture .life h3{margin-bottom:2.8rem}
-    .culture .life ul > li{width:50%;margin-bottom:0;height:42.8rem}
-    .culture .life ol{width:30rem}
-    .culture .life ul > li:nth-child(3n+2){text-align:inherit}
-    .culture .life ul > li:nth-child(3n+3){text-align:inherit}
-    .culture .life ul > li:nth-child(even){text-align:right}
-    .culture .life .text1{font-size:2.6rem;margin:3.6rem 0 1.2rem 0}
-    .culture .life .text2{font-size:2.4rem;line-height:1.2}
-    .culture .life .text2 br{display:block}
-    .culture .welfare h3{margin-bottom:6rem}
-    .culture .welfare ul > li{width:33.33%;margin-bottom:0;height:21.6rem}
-    .culture .welfare ol{display:block}
-    .culture .welfare ol li{display:block}
-    .culture .welfare .icon{width:12rem;height:12rem;margin:0 auto}
-    .culture .welfare .icon img{height:5.8rem}
-    .culture .welfare .text{width:100%;padding:0;text-align:center;font-size:1.8rem;margin-top:2rem}
-    .culture .welfare ul > li:nth-child(2) .icon img{height:4.6rem}
-    .culture .welfare ul > li:nth-child(4) .icon img{height:5.4rem}
-    .culture .welfare ul > li:nth-child(5) .icon img{height:5rem}
-    /*채용공고(목록)*/
-    .jobOpening .content{padding-bottom:13rem}
-    .jobOpening article.tab{margin-bottom:5.8rem}
-    .jobOpening .tab ul li{float:inherit;margin:0;display:inline-block;margin:0 2.7rem;display:inline-block}
-    .jobOpening .tab a{font-size:3.4rem;border-bottom:0.4rem solid #fff;height:auto;padding-bottom:1.3rem}
-    .jobOpening .listWrap ul > li{width:100%;margin-bottom:4rem}
-    .jobOpening .listWrap ul > li a{width:100%;padding:3.9rem;height:auto}
-    .jobOpening .listWrap ol{height:18rem}
-    .jobOpening .listWrap ol li i{line-height:4rem;padding:0 2rem;font-size:2.4rem;border-radius:4rem}
-    .jobOpening .listWrap li.tit{font-size:2.8rem;margin:1.5rem 0 1.4rem 0}
-    .jobOpening .listWrap li.part{font-size:2.4rem}
-    .jobOpening .listWrap span.date{font-size:2.4rem;margin-top:3.6rem}
-    .jobOpening .listWrap span.date i{margin-left:2rem}
-    .jobOpening .faqWrap{margin-top:5.7rem}
-    .jobOpening .faqWrap h3{font-size:2.8rem;margin-bottom:2.9rem}
-    .jobOpening .faqWrap dt{font-size:2.8rem;padding:3.1rem 6.7rem}
-    .jobOpening .faqWrap dt::before{left:2rem;top:3rem}
-    .jobOpening .faqWrap dt::after{width:2rem;height:1rem;right:2rem;top:4.7rem;margin-top:0;background-size:2rem}
-    .jobOpening .faqWrap dd{height:25rem;font-size:2.8rem;padding:4rem 6.7rem}
+    .culture .welfare ul>li {
+        width: 33.33%
+    }
+
+    .culture .welfare ol li {
+        display: block;
+        text-align: center
+    }
+
+    .culture .welfare .icon {
+        margin: auto
+    }
+
     /*채용공고(상세) & 인재풀 등록*/
-    .jobOpening .detailWrap .topTitle{display:block;padding:3.7rem 2rem 3.6rem 2rem;border-bottom:1px solid #e0e0e0}
-    .jobOpening .detailWrap .topTitle > div{display:block}
-    .jobOpening .detailWrap .box1{width:100%;text-align:left}
-    .jobOpening .detailWrap .box1 i{font-size:2.4rem;line-height:4rem;border-radius:4rem;padding:0 2.2rem;margin-top:0}
-    .jobOpening .detailWrap .box2{padding:0}
-    .jobOpening .detailWrap .box2 .tit{font-size:2.8rem;line-height:1.2;margin-top:2rem}
-    .jobOpening .detailWrap .box2 ol{margin-top:1.7rem}
-    .jobOpening .detailWrap .box2 ol li{font-size:2.4rem}
-    .jobOpening .detailWrap .box2 ol li:first-child{margin-right:1.9rem;padding-right:1.9rem}
-    .jobOpening .detailWrap .box2 ol li:first-child::after{height:1.8rem}
-    .jobOpening .detailWrap .box2 b{margin-left:0.5rem}
-    .jobOpening .infoWrap{padding:0}
-    .jobOpening .infoWrap h4{font-size:2.8rem}
-    .jobOpening .infoWrap h4 span{font-size:1.8rem;margin-left:1.5rem;margin-top:0.6rem}
-    .jobOpening .infoWrap .part1 h4{margin-top:7.8rem;margin-bottom:2.8rem}
-    .jobOpening .infoWrap .part1 colgroup{display:none}
-    .jobOpening .infoWrap .part1 thead{display:none}
-    .jobOpening .infoWrap .part1 tr{width:100%;display:block}
-    .jobOpening .infoWrap .part1 td{width:100%;display:block;text-align:left;border-right:none;padding:3.2rem 3rem 3.2rem 3rem;font-size:2.4rem;border-bottom:1px solid #e0e0e0}
-    .jobOpening .infoWrap .part1 td span.th{display:block;width:100%;font-size:2.4rem;font-weight:500;color:#101010;margin-bottom:1.2rem}
+    .jobOpening .detailWrap .box2 .tit {
+        font-size: 25px
+    }
+
+    .jobOpening .infoWrap .part3 ul {
+        width: 33.33%;
+        margin-bottom: 20px
+    }
+
+    .jobOpening .infoWrap .part3 ul:nth-child(4)::after {
+        display: none
+    }
+
+    .jobOpening .infoWrap h4 {
+        font-size: 25px
+    }
+
+    .jobOpening.regist .infoWrap .part3 ul {
+        margin-right: 0;
+        margin-bottom: 20px;
+        width: 25%
+    }
+
+    .jobOpening.regist .infoWrap .part3 ul:nth-child(4)::after {
+        display: block
+    }
+
+    /*채용공고(목록)*/
+    .jobOpening .listWrap li.tit {
+        font-size: 23px
+    }
+
+    .jobOpening .listWrap li.part {
+        font-size: 16px
+    }
+
+    .jobOpening .listWrap span.date {
+        font-size: 16px
+    }
+}
+
+@media all and (max-width:812px) {
+
+    /*인재상*/
+    .talent .content>article {
+        margin-top: 10rem
+    }
+
+    .talent .topVisual {
+        background: url(../images/brand_visual_injae_mo.jpg) no-repeat center;
+        background-size: 100%;
+        height: 40rem
+    }
+
+    .talent .content {
+        margin-bottom: 20rem
+    }
+
+    .talent .diagram ul {
+        padding: 0 2rem 0 2.2rem;
+        width: 100%
+    }
+
+    .talent .diagram li:first-child {
+        padding-bottom: 8rem;
+        margin-bottom: 4rem
+    }
+
+    .talent .diagram li:first-child:before {
+        width: calc(100% - 25.7rem)
+    }
+
+    .talent .diagram li:first-child:after {
+        height: 8rem
+    }
+
+    .talent .diagram li:last-child {
+        padding: 0
+    }
+
+    .talent .diagram li span {
+        width: 24rem;
+        height: 24rem;
+        padding: 9.2rem 0;
+        font-size: 2.8rem;
+        line-height: 3.1rem
+    }
+
+    .talent .diagram li dl {
+        width: 25.8rem;
+        height: 25.8rem;
+        margin: 4rem 0 0;
+        padding: 6.1rem 0
+    }
+
+    .talent .diagram li dl:first-child {
+        margin-bottom: 0
+    }
+
+    .talent .diagram li dl:nth-child(2) {
+        margin-bottom: 0
+    }
+
+    .talent .diagram li dl::after {
+        height: 8rem;
+        top: -8rem
+    }
+
+    .talent .diagram li dl:nth-child(3)::after {
+        height: 4rem;
+        top: -4rem
+    }
+
+    .talent .diagram li dl:nth-child(4)::after {
+        height: 4rem;
+        top: -4rem
+    }
+
+    .talent .diagram li dt img {
+        width: 5.8rem
+    }
+
+    .talent .diagram li dd {
+        font-size: 2.4rem;
+        padding-top: 2.5rem;
+        line-height: 3rem
+    }
+
+    .talent .diagramInfo dt {
+        width: 100%;
+        font-size: 2.4rem;
+        border-bottom: none;
+        padding: 4.1rem 4.3rem 0.8rem 3.1rem;
+        display: block;
+    }
+
+    .talent .diagramInfo dd {
+        display: block;
+        width: 100%;
+        font-size: 2.4rem;
+        padding: 0 4.3rem 4.1rem 3.1rem;
+        line-height: 3.8rem
+    }
+
+    .talent .diagramInfo dd br {
+        display: block
+    }
+
+    /*직무소개*/
+    .duty .tabButton {
+        text-align: left;
+        margin-bottom: 5.8rem;
+        padding: 0 4rem;
+        position: relative
+    }
+
+    .duty .tabButton>a {
+        display: block;
+        height: 4rem;
+        position: absolute;
+        top: 35%;
+        transform: translateY(-50%);
+        z-index: 5
+    }
+
+    .duty .tabButton>a img {
+        height: 4rem
+    }
+
+    .duty .tabButton>a.prev {
+        left: 4rem;
+        height: 5.2rem
+    }
+
+    .duty .tabButton>a.next {
+        right: 4rem;
+        height: 5.2rem
+    }
+
+    .duty .tabButton .buttons {
+        width: 100%;
+        padding: 0 4rem 0 8rem
+    }
+
+    .duty .tabButton ol {
+        width: 100%;
+        height: 9rem;
+        overflow-x: auto;
+        overflow-y: hidden;
+        text-align: left;
+        white-space: nowrap;
+        position: relative
+    }
+
+    .duty .tabButton ol::-webkit-scrollbar {
+        width: 0;
+    }
+
+    .duty .tabButton ol::-webkit-scrollbar-track {
+        background: transparent;
+        border-radius: 5px;
+    }
+
+    .duty .tabButton ol::-webkit-scrollbar-thumb {
+        background: transparent;
+        border-radius: 5px;
+    }
+
+    .duty .tabButton ol::-webkit-scrollbar-thumb:hover {
+        background: transparent;
+        border-radius: 5px;
+    }
+
+    .duty .tabButton ol li {
+        float: inherit;
+        margin: 0;
+        padding-right: 6rem;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 5.2rem
+    }
+
+    .duty .tabButton .buttons {
+        position: relative
+    }
+
+    .duty .tabButton .buttons::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: linear-gradient(90deg, transparent, #fff 100%);
+        width: 15rem;
+        height: 5.2rem
+    }
+
+    .duty .tabButton ol a {
+        border-bottom: none;
+        height: 5.2rem;
+        position: relative;
+    }
+
+    .duty .tabButton ol a span {
+        font-size: 3.4rem;
+        height: 5.2rem;
+        position: relative;
+        display: block;
+    }
+
+    .duty .tabButton ol a.flex-active span::after {
+        content: '';
+        width: 100%;
+        height: 0.4rem;
+        background: #101010;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+    .duty .content {
+        padding-bottom: 10rem
+    }
+
+    .duty .infoText {
+        font-size: 2.4rem;
+        margin-bottom: 9.3rem
+    }
+
+    .duty .infoText h5 {
+        font-size: 2.8rem;
+        margin-bottom: 2.8rem
+    }
+
+    .duty .infoText br.pc {
+        display: none
+    }
+
+    .duty .infoText br.mo {
+        display: block
+    }
+
+    .duty .imgArea img {
+        width: 100%
+    }
+
+    .duty .tabData {
+        display: block !important
+    }
+
+    .duty .tabData dl {
+        width: 100%;
+        display: block;
+        margin-bottom: 9.3rem
+    }
+
+    .duty .tabData dt {
+        width: 100%;
+        display: block
+    }
+
+    .duty .tabData dd {
+        width: 100%;
+        display: block;
+        padding-left: 0;
+        padding-top: 3.8rem;
+        text-align: center
+    }
+
+    .duty .tabData li {
+        text-align: left
+    }
+
+    .duty .tabData li b {
+        font-size: 2.4rem
+    }
+
+    .duty .tabData li b:first-child {
+        margin-right: 2rem;
+        padding-right: 2rem
+    }
+
+    .duty .tabData li b:first-child::after {
+        width: 1px;
+        height: 1.8rem
+    }
+
+    .duty .tabData li.tit {
+        font-size: 2.8rem;
+        padding-left: 0;
+        position: relative;
+        margin: 2rem 0 2.6rem 0;
+        line-height: 1.2
+    }
+
+    .duty .tabData li.tit br.pc {
+        display: none
+    }
+
+    .duty .tabData li.tit br.mo {
+        display: block
+    }
+
+    .duty .tabData li.tit span {
+        display: block;
+        text-indent: -2.8rem;
+        padding-left: 2.8rem
+    }
+
+    .duty .tabData li.tit::before {
+        display: none
+    }
+
+    .duty .tabData li.tit::after {
+        display: none
+    }
+
+    .duty .tabData li.tit span::before,
+    .duty .tabData li.tit span::after {
+        content: '';
+        width: 1.2rem;
+        height: 0.9rem;
+        background-size: 0.9rem;
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 1.6rem;
+        margin-top: 0.5rem
+    }
+
+    .duty .tabData li.tit span::before {
+        background: url(../images/icon_quotes_left.svg) no-repeat;
+        margin-right: 1.6rem;
+        background-size: 0.9rem
+    }
+
+    .duty .tabData li.tit span::after {
+        background: url(../images/icon_quotes_right.svg) no-repeat;
+        margin-left: 1.6rem;
+        background-size: 0.9rem
+    }
+
+    .duty .tabData li.text {
+        font-size: 2.4rem
+    }
+
+    .duty .tabData li.text br.pc {
+        display: none
+    }
+
+    .duty .tabData li.text br.mo {
+        display: block
+    }
+
+    .duty .tabData div.subTabData {
+        padding-top: 10rem;
+        margin-top: 10rem
+    }
+
+    /*기업문화/복리후생*/
+    .culture .content {
+        padding-bottom: 16.5rem
+    }
+
+    .culture .content>article>h3 {
+        font-size: 2.8rem
+    }
+
+    .culture .life {
+        padding-top: 8.3rem
+    }
+
+    .culture .life::after {
+        width: 6rem;
+        height: 0.4rem
+    }
+
+    .culture .life h3 {
+        margin-bottom: 2.8rem
+    }
+
+    .culture .life ul>li {
+        width: 50%;
+        margin-bottom: 0;
+        height: 42.8rem
+    }
+
+    .culture .life ol {
+        width: 30rem
+    }
+
+    .culture .life ul>li:nth-child(3n+2) {
+        text-align: inherit
+    }
+
+    .culture .life ul>li:nth-child(3n+3) {
+        text-align: inherit
+    }
+
+    .culture .life ul>li:nth-child(even) {
+        text-align: right
+    }
+
+    .culture .life .text1 {
+        font-size: 2.6rem;
+        margin: 3.6rem 0 1.2rem 0
+    }
+
+    .culture .life .text2 {
+        font-size: 2.4rem;
+        line-height: 1.2
+    }
+
+    .culture .life .text2 br {
+        display: block
+    }
+
+    .culture .welfare h3 {
+        margin-bottom: 6rem
+    }
+
+    .culture .welfare ul>li {
+        width: 33.33%;
+        margin-bottom: 0;
+        height: 21.6rem
+    }
+
+    .culture .welfare ol {
+        display: block
+    }
+
+    .culture .welfare ol li {
+        display: block
+    }
+
+    .culture .welfare .icon {
+        width: 12rem;
+        height: 12rem;
+        margin: 0 auto
+    }
+
+    .culture .welfare .icon img {
+        height: 5.8rem
+    }
+
+    .culture .welfare .text {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+        font-size: 1.8rem;
+        margin-top: 2rem
+    }
+
+    .culture .welfare ul>li:nth-child(2) .icon img {
+        height: 4.6rem
+    }
+
+    .culture .welfare ul>li:nth-child(4) .icon img {
+        height: 5.4rem
+    }
+
+    .culture .welfare ul>li:nth-child(5) .icon img {
+        height: 5rem
+    }
+
+    /*채용공고(목록)*/
+    .jobOpening .content {
+        padding-bottom: 13rem
+    }
+
+    .jobOpening article.tab {
+        margin-bottom: 5.8rem
+    }
+
+    .jobOpening .tab ul li {
+        float: inherit;
+        margin: 0;
+        display: inline-block;
+        margin: 0 2.7rem;
+        display: inline-block
+    }
+
+    .jobOpening .tab a {
+        font-size: 3.4rem;
+        border-bottom: 0.4rem solid #fff;
+        height: auto;
+        padding-bottom: 1.3rem
+    }
+
+    .jobOpening .listWrap ul>li {
+        width: 100%;
+        margin-bottom: 4rem
+    }
+
+    .jobOpening .listWrap ul>li a {
+        width: 100%;
+        padding: 3.9rem;
+        height: auto
+    }
+
+    .jobOpening .listWrap ol {
+        height: 18rem
+    }
+
+    .jobOpening .listWrap ol li i {
+        line-height: 4rem;
+        padding: 0 2rem;
+        font-size: 2.4rem;
+        border-radius: 4rem
+    }
+
+    .jobOpening .listWrap li.tit {
+        font-size: 2.8rem;
+        margin: 1.5rem 0 1.4rem 0
+    }
+
+    .jobOpening .listWrap li.part {
+        font-size: 2.4rem
+    }
+
+    .jobOpening .listWrap span.date {
+        font-size: 2.4rem;
+        margin-top: 3.6rem
+    }
+
+    .jobOpening .listWrap span.date i {
+        margin-left: 2rem
+    }
+
+    .jobOpening .faqWrap {
+        margin-top: 5.7rem
+    }
+
+    .jobOpening .faqWrap h3 {
+        font-size: 2.8rem;
+        margin-bottom: 2.9rem
+    }
+
+    .jobOpening .faqWrap dt {
+        font-size: 2.8rem;
+        padding: 3.1rem 6.7rem
+    }
+
+    .jobOpening .faqWrap dt::before {
+        left: 2rem;
+        top: 3rem
+    }
+
+    .jobOpening .faqWrap dt::after {
+        width: 2rem;
+        height: 1rem;
+        right: 2rem;
+        top: 4.7rem;
+        margin-top: 0;
+        background-size: 2rem
+    }
+
+    .jobOpening .faqWrap dd {
+        height: 25rem;
+        font-size: 2.8rem;
+        padding: 4rem 6.7rem
+    }
+
+    /*채용공고(상세) & 인재풀 등록*/
+    .jobOpening .detailWrap .topTitle {
+        display: block;
+        padding: 3.7rem 2rem 3.6rem 2rem;
+        border-bottom: 1px solid #e0e0e0
+    }
+
+    .jobOpening .detailWrap .topTitle>div {
+        display: block
+    }
+
+    .jobOpening .detailWrap .box1 {
+        width: 100%;
+        text-align: left
+    }
+
+    .jobOpening .detailWrap .box1 i {
+        font-size: 2.4rem;
+        line-height: 4rem;
+        border-radius: 4rem;
+        padding: 0 2.2rem;
+        margin-top: 0
+    }
+
+    .jobOpening .detailWrap .box2 {
+        padding: 0
+    }
+
+    .jobOpening .detailWrap .box2 .tit {
+        font-size: 2.8rem;
+        line-height: 1.2;
+        margin-top: 2rem
+    }
+
+    .jobOpening .detailWrap .box2 ol {
+        margin-top: 1.7rem
+    }
+
+    .jobOpening .detailWrap .box2 ol li {
+        font-size: 2.4rem
+    }
+
+    .jobOpening .detailWrap .box2 ol li:first-child {
+        margin-right: 1.9rem;
+        padding-right: 1.9rem
+    }
+
+    .jobOpening .detailWrap .box2 ol li:first-child::after {
+        height: 1.8rem
+    }
+
+    .jobOpening .detailWrap .box2 b {
+        margin-left: 0.5rem
+    }
+
+    .jobOpening .infoWrap {
+        padding: 0
+    }
+
+    .jobOpening .infoWrap h4 {
+        font-size: 2.8rem
+    }
+
+    .jobOpening .infoWrap h4 span {
+        font-size: 1.8rem;
+        margin-left: 1.5rem;
+        margin-top: 0.6rem
+    }
+
+    .jobOpening .infoWrap .part1 h4 {
+        margin-top: 7.8rem;
+        margin-bottom: 2.8rem
+    }
+
+    .jobOpening .infoWrap .part1 colgroup {
+        display: none
+    }
+
+    .jobOpening .infoWrap .part1 thead {
+        display: none
+    }
+
+    .jobOpening .infoWrap .part1 tr {
+        width: 100%;
+        display: block
+    }
+
+    .jobOpening .infoWrap .part1 td {
+        width: 100%;
+        display: block;
+        text-align: left;
+        border-right: none;
+        padding: 3.2rem 3rem 3.2rem 3rem;
+        font-size: 2.4rem;
+        border-bottom: 1px solid #e0e0e0
+    }
+
+    .jobOpening .infoWrap .part1 td span.th {
+        display: block;
+        width: 100%;
+        font-size: 2.4rem;
+        font-weight: 500;
+        color: #101010;
+        margin-bottom: 1.2rem
+    }
+
     .jobOpening .infoWrap .part1 td:nth-child(2),
-    .jobOpening .infoWrap .part1 td:nth-child(3){padding:3.2rem 3rem 2.3rem 3rem}
-    .jobOpening .infoWrap .part1 li{padding-left:1.5rem}
-    .jobOpening .infoWrap .part1 ol{margin:0}
-    .jobOpening .infoWrap .part1 ol li:first-child{width:12rem;font-size:2.4rem;float:left}
-    .jobOpening .infoWrap .part1 ol li{width:calc(100% - 12rem);float:right}
-    .jobOpening .infoWrap .part2{display:block}
-    .jobOpening .infoWrap .part2 h4{width:100%;display:block;padding-top:0}
-    .jobOpening .infoWrap .part2 th{width:21rem;font-size:2.4rem;height:auto;vertical-align:top;padding:1.5rem 0}
-    .jobOpening .infoWrap .part2 td{font-size:2.4rem;height:auto;vertical-align:top;padding:1.5rem 0}
-    .jobOpening .infoWrap .part2.condition{padding-top:5rem;padding-bottom:3.9rem}
-    .jobOpening .infoWrap .part2.condition h4{padding-top:0;margin-bottom:0.8rem}
-    .jobOpening .infoWrap .part2.welfare{padding-top:5rem;padding-bottom:3.9rem}
-    .jobOpening .infoWrap .part2.welfare h4{padding-top:0;margin-bottom:0.8rem}
-    .jobOpening .infoWrap .part2.doc{padding-top:5rem;padding-bottom:3.9rem}
-    .jobOpening .infoWrap .part2.doc h4{padding-top:0;margin-bottom:0.8rem}
-    .jobOpening .infoWrap .part2.date{padding-top:5rem;padding-bottom:3.9rem}
-    .jobOpening .infoWrap .part2.date h4{padding-top:0;margin-bottom:0.8rem}
-    .jobOpening .infoWrap .part2.other{padding-top:5rem;padding-bottom:3.9rem}
-    .jobOpening .infoWrap .part2.other h4{padding-top:0;margin-bottom:0.8rem}
-    .jobOpening .infoWrap .part3{padding-bottom:6rem}
-    .jobOpening .infoWrap .part3 h4{margin-top:5.7rem;margin-bottom:5.7rem}
-    .jobOpening .infoWrap .part3 ul{width:33.33%;margin-right:0;margin-bottom:6rem}
-    .jobOpening .infoWrap .part3 li.img{width:12rem;height:12rem;margin:0 auto}
-    .jobOpening .infoWrap .part3 li.img img{height:5.8rem;margin-left:-2.9rem;margin-top:-2.9rem;transform:translate(0)}
-    .jobOpening .infoWrap .part3 ul:nth-child(4)::after{display:none}
-    .jobOpening .infoWrap .part3 ul:last-child::after{display:none}
-    .jobOpening .infoWrap .part3 ul::after{content:'';width:1.2rem;height:2.4rem;background:url(/images/icon_job_arrow_m.svg) no-repeat;background-size:1.2rem 2.4rem;right:0;top:4.8rem}
-    .jobOpening .infoWrap .part3 li.step{font-size:2.4rem;margin:1.6rem 0 1.2rem 0}
-    .jobOpening .infoWrap .part3 li.text{font-size:2.4rem}
-    .jobOpening .bottom_btn{margin:10rem 0 8rem 0}
-    .jobOpening .bottom_btn a{width:100%;line-height:5.8rem;font-size:2rem;border-radius:5.8rem;margin:0}
-    .jobOpening .bottom_btn a.apply{margin-top:4rem}
-    .jobOpening.regist .infoWrap .part2.method{padding:6rem 0 6.2rem}
-    .jobOpening.regist .infoWrap .part3{padding:0}
-    .jobOpening.regist .infoWrap .part3 ul{margin-right:0;margin-bottom:8.8rem;width:33.3%}
-    .jobOpening.regist .infoWrap .part3 ul::after{right:0}
-    .jobOpening.regist .infoWrap .part3 ul:nth-child(4)::after{display:none}
-    .jobOpening.regist .infoWrap .part3 ul:nth-child(7)::after{display:none}
-    .jobOpening.regist .infoWrap .part2.other{padding:6rem 0 4.5rem}
-    .jobOpening.regist .infoWrap .part2.inquiries{padding:6rem 0 4.1rem}
-    .jobOpening.regist .infoWrap .part2.inquiries h4{padding-bottom:1.3rem}
-    .jobOpening.regist .bottom_btn{margin:8rem 0 7rem}
-    .jobOpening.regist .bottom_btn a.apply{width:26rem;line-height:8.6rem;margin-top:0;font-size:2.8rem}
+    .jobOpening .infoWrap .part1 td:nth-child(3) {
+        padding: 3.2rem 3rem 2.3rem 3rem
+    }
+
+    .jobOpening .infoWrap .part1 li {
+        padding-left: 1.5rem
+    }
+
+    .jobOpening .infoWrap .part1 ol {
+        margin: 0
+    }
+
+    .jobOpening .infoWrap .part1 ol li:first-child {
+        width: 12rem;
+        font-size: 2.4rem;
+        float: left
+    }
+
+    .jobOpening .infoWrap .part1 ol li {
+        width: calc(100% - 12rem);
+        float: right
+    }
+
+    .jobOpening .infoWrap .part2 {
+        display: block
+    }
+
+    .jobOpening .infoWrap .part2 h4 {
+        width: 100%;
+        display: block;
+        padding-top: 0
+    }
+
+    .jobOpening .infoWrap .part2 th {
+        width: 21rem;
+        font-size: 2.4rem;
+        height: auto;
+        vertical-align: top;
+        padding: 1.5rem 0
+    }
+
+    .jobOpening .infoWrap .part2 td {
+        font-size: 2.4rem;
+        height: auto;
+        vertical-align: top;
+        padding: 1.5rem 0
+    }
+
+    .jobOpening .infoWrap .part2.condition {
+        padding-top: 5rem;
+        padding-bottom: 3.9rem
+    }
+
+    .jobOpening .infoWrap .part2.condition h4 {
+        padding-top: 0;
+        margin-bottom: 0.8rem
+    }
+
+    .jobOpening .infoWrap .part2.welfare {
+        padding-top: 5rem;
+        padding-bottom: 3.9rem
+    }
+
+    .jobOpening .infoWrap .part2.welfare h4 {
+        padding-top: 0;
+        margin-bottom: 0.8rem
+    }
+
+    .jobOpening .infoWrap .part2.doc {
+        padding-top: 5rem;
+        padding-bottom: 3.9rem
+    }
+
+    .jobOpening .infoWrap .part2.doc h4 {
+        padding-top: 0;
+        margin-bottom: 0.8rem
+    }
+
+    .jobOpening .infoWrap .part2.date {
+        padding-top: 5rem;
+        padding-bottom: 3.9rem
+    }
+
+    .jobOpening .infoWrap .part2.date h4 {
+        padding-top: 0;
+        margin-bottom: 0.8rem
+    }
+
+    .jobOpening .infoWrap .part2.other {
+        padding-top: 5rem;
+        padding-bottom: 3.9rem
+    }
+
+    .jobOpening .infoWrap .part2.other h4 {
+        padding-top: 0;
+        margin-bottom: 0.8rem
+    }
+
+    .jobOpening .infoWrap .part3 {
+        padding-bottom: 6rem
+    }
+
+    .jobOpening .infoWrap .part3 h4 {
+        margin-top: 5.7rem;
+        margin-bottom: 5.7rem
+    }
+
+    .jobOpening .infoWrap .part3 ul {
+        width: 33.33%;
+        margin-right: 0;
+        margin-bottom: 6rem
+    }
+
+    .jobOpening .infoWrap .part3 li.img {
+        width: 12rem;
+        height: 12rem;
+        margin: 0 auto
+    }
+
+    .jobOpening .infoWrap .part3 li.img img {
+        height: 5.8rem;
+        margin-left: -2.9rem;
+        margin-top: -2.9rem;
+        transform: translate(0)
+    }
+
+    .jobOpening .infoWrap .part3 ul:nth-child(4)::after {
+        display: none
+    }
+
+    .jobOpening .infoWrap .part3 ul:last-child::after {
+        display: none
+    }
+
+    .jobOpening .infoWrap .part3 ul::after {
+        content: '';
+        width: 1.2rem;
+        height: 2.4rem;
+        background: url(../images/icon_job_arrow_m.svg) no-repeat;
+        background-size: 1.2rem 2.4rem;
+        right: 0;
+        top: 4.8rem
+    }
+
+    .jobOpening .infoWrap .part3 li.step {
+        font-size: 2.4rem;
+        margin: 1.6rem 0 1.2rem 0
+    }
+
+    .jobOpening .infoWrap .part3 li.text {
+        font-size: 2.4rem
+    }
+
+    .jobOpening .bottom_btn {
+        margin: 10rem 0 8rem 0
+    }
+
+    .jobOpening .bottom_btn a {
+        width: 100%;
+        line-height: 5.8rem;
+        font-size: 2rem;
+        border-radius: 5.8rem;
+        margin: 0
+    }
+
+    .jobOpening .bottom_btn a.apply {
+        margin-top: 4rem
+    }
+
+    .jobOpening.regist .infoWrap .part2.method {
+        padding: 6rem 0 6.2rem
+    }
+
+    .jobOpening.regist .infoWrap .part3 {
+        padding: 0
+    }
+
+    .jobOpening.regist .infoWrap .part3 ul {
+        margin-right: 0;
+        margin-bottom: 8.8rem;
+        width: 33.3%
+    }
+
+    .jobOpening.regist .infoWrap .part3 ul::after {
+        right: 0
+    }
+
+    .jobOpening.regist .infoWrap .part3 ul:nth-child(4)::after {
+        display: none
+    }
+
+    .jobOpening.regist .infoWrap .part3 ul:nth-child(7)::after {
+        display: none
+    }
+
+    .jobOpening.regist .infoWrap .part2.other {
+        padding: 6rem 0 4.5rem
+    }
+
+    .jobOpening.regist .infoWrap .part2.inquiries {
+        padding: 6rem 0 4.1rem
+    }
+
+    .jobOpening.regist .infoWrap .part2.inquiries h4 {
+        padding-bottom: 1.3rem
+    }
+
+    .jobOpening.regist .bottom_btn {
+        margin: 8rem 0 7rem
+    }
+
+    .jobOpening.regist .bottom_btn a.apply {
+        width: 26rem;
+        line-height: 8.6rem;
+        margin-top: 0;
+        font-size: 2.8rem
+    }
 
     /*입사지원*/
-    .application .content{padding-bottom:10rem;padding:0 4rem 10rem 4rem}
-    .application form{width:100%}
-    .application th{display:block;width:100%;padding:6rem 0 2.8rem;line-height: 1.2;font-size:2.8rem;padding-left:0;border-bottom:none}
-    .application th br{display:none}
-    .application td{display:block;padding:0}
-    .application .terms{padding:0 0 4.5rem}
-    .application .terms .roll{height:30rem;padding:3.8rem 6rem 5rem 4rem;margin-bottom:2.5rem}
-    .application .terms .roll h5{font-size:2rem;margin-bottom:2.9rem}
-    .application .terms .roll table{margin-bottom:1.5rem}
-    .application .terms .roll th{padding:1.5rem 0;font-size:2rem;display:table-cell}
-    .application .terms .roll td{display:table-cell;padding:1.5rem;font-size:2rem}
-    .application .terms .roll ul > li > p{font-size:2rem;padding-left:2rem;text-indent:-3.2rem}
-    .application .terms .roll ol{margin:2rem 0;padding-left:2rem;font-size:2rem}
-    .application .terms .roll ol span{padding-left:3.5rem;text-indent:-1.5rem}
-    .application .terms .roll .text{font-size:2rem;line-height: 1.6;margin-bottom:2.9rem}
-    .application .terms .roll .text br{display:none}
-    .application .terms .checkBox{height:3.2rem;margin:1.5rem 0}
-    .application .terms i{width:3.2rem;height:3.2rem}
-    .application .terms label{padding-left:5.8rem;line-height:3.2rem;font-size:2.4rem}
-    .application .terms label:before{left:1rem;top:0.7rem;width:0.8rem;height:1.2rem}
-    .application dt{font-size:2.4rem;margin-bottom:2.8rem}
-    .application dd{margin-bottom:4.4rem}
-    .application select.select{background-position-x:calc(100% - 2rem);background-size:2rem}
-    .application input.enterField{height:8rem;padding:0 2rem;font-size:2.4rem}
-    .application .addFile .fileField{width:16.6rem}
-    .application .addFile .fileField input[type="file"]{height:8rem}
-    .application .addFile .fileField button{height:8rem;font-size:2.4rem}
-    .application .addFile a.docDown{width:26.2rem;line-height:8rem;font-size:2.4rem;margin-left:2rem}
-    .application .addFile .viewWrap{margin-top:2.8rem}
-    .application .addFile .MultiFile-label{height:7.4rem;line-height:7.4rem;padding:0 2rem;font-size:2rem}
-    .application .addFile .MultiFile-label a.MultiFile-remove{width:2.8rem;height:2.8rem;right:2rem;background-repeat:no-repeat}
-    .application .addFile p.ment{margin-top:2.8rem;font-size:2rem}
-    .application textarea{height:22rem;padding:4rem;font-size:2.4rem}
-    .application .bottom_btn{margin:8rem 0 10rem}
-    .application .bottom_btn a{width:26rem;line-height:8.6rem;font-size:2.8rem;border-radius:9rem}
+    .application .content {
+        padding-bottom: 10rem;
+        padding: 0 4rem 10rem 4rem
+    }
+
+    .application form {
+        width: 100%
+    }
+
+    .application th {
+        display: block;
+        width: 100%;
+        padding: 6rem 0 2.8rem;
+        line-height: 1.2;
+        font-size: 2.8rem;
+        padding-left: 0;
+        border-bottom: none
+    }
+
+    .application th br {
+        display: none
+    }
+
+    .application td {
+        display: block;
+        padding: 0
+    }
+
+    .application .terms {
+        padding: 0 0 4.5rem
+    }
+
+    .application .terms .roll {
+        height: 30rem;
+        padding: 3.8rem 6rem 5rem 4rem;
+        margin-bottom: 2.5rem
+    }
+
+    .application .terms .roll h5 {
+        font-size: 2rem;
+        margin-bottom: 2.9rem
+    }
+
+    .application .terms .roll table {
+        margin-bottom: 1.5rem
+    }
+
+    .application .terms .roll th {
+        padding: 1.5rem 0;
+        font-size: 2rem;
+        display: table-cell
+    }
+
+    .application .terms .roll td {
+        display: table-cell;
+        padding: 1.5rem;
+        font-size: 2rem
+    }
+
+    .application .terms .roll ul>li>p {
+        font-size: 2rem;
+        padding-left: 2rem;
+        text-indent: -3.2rem
+    }
+
+    .application .terms .roll ol {
+        margin: 2rem 0;
+        padding-left: 2rem;
+        font-size: 2rem
+    }
+
+    .application .terms .roll ol span {
+        padding-left: 3.5rem;
+        text-indent: -1.5rem
+    }
+
+    .application .terms .roll .text {
+        font-size: 2rem;
+        line-height: 1.6;
+        margin-bottom: 2.9rem
+    }
+
+    .application .terms .roll .text br {
+        display: none
+    }
+
+    .application .terms .checkBox {
+        height: 3.2rem;
+        margin: 1.5rem 0
+    }
+
+    .application .terms i {
+        width: 3.2rem;
+        height: 3.2rem
+    }
+
+    .application .terms label {
+        padding-left: 5.8rem;
+        line-height: 3.2rem;
+        font-size: 2.4rem
+    }
+
+    .application .terms label:before {
+        left: 1rem;
+        top: 0.7rem;
+        width: 0.8rem;
+        height: 1.2rem
+    }
+
+    .application dt {
+        font-size: 2.4rem;
+        margin-bottom: 2.8rem
+    }
+
+    .application dd {
+        margin-bottom: 4.4rem
+    }
+
+    .application select.select {
+        background-position-x: calc(100% - 2rem);
+        background-size: 2rem
+    }
+
+    .application input.enterField {
+        height: 8rem;
+        padding: 0 2rem;
+        font-size: 2.4rem
+    }
+
+    .application .addFile .fileField {
+        width: 16.6rem
+    }
+
+    .application .addFile .fileField input[type="file"] {
+        height: 8rem
+    }
+
+    .application .addFile .fileField button {
+        height: 8rem;
+        font-size: 2.4rem
+    }
+
+    .application .addFile a.docDown {
+        width: 26.2rem;
+        line-height: 8rem;
+        font-size: 2.4rem;
+        margin-left: 2rem
+    }
+
+    .application .addFile .viewWrap {
+        margin-top: 2.8rem
+    }
+
+    .application .addFile .MultiFile-label {
+        height: 7.4rem;
+        line-height: 7.4rem;
+        padding: 0 2rem;
+        font-size: 2rem
+    }
+
+    .application .addFile .MultiFile-label a.MultiFile-remove {
+        width: 2.8rem;
+        height: 2.8rem;
+        right: 2rem;
+        background-repeat: no-repeat
+    }
+
+    .application .addFile p.ment {
+        margin-top: 2.8rem;
+        font-size: 2rem
+    }
+
+    .application textarea {
+        height: 22rem;
+        padding: 4rem;
+        font-size: 2.4rem
+    }
+
+    .application .bottom_btn {
+        margin: 8rem 0 10rem
+    }
+
+    .application .bottom_btn a {
+        width: 26rem;
+        line-height: 8.6rem;
+        font-size: 2.8rem;
+        border-radius: 9rem
+    }
 }
