@@ -1,0 +1,29 @@
+﻿@import url('jquery-ui/jquery-ui.min.css');
+@import url('jquery-ui/jquery-ui.structure.min.css');
+@import url('jquery-ui/jquery-ui.theme.min.css');
+/*UI Custom*/
+.ui-datepicker{width:19.5rem;box-shadow: 2px 2px 8px rgba(0,0,0,0.2);}
+.ui-widget.ui-widget-content{border:1px solid #e0e0e0;border-radius:0;font-family:'Noto Sans KR',Sans-serif;padding:20px 15px 15px 15px}
+.ui-widget-header{background:none;border:none}
+.ui-datepicker .ui-datepicker-header{padding:0;text-align:center;margin-bottom:8px}
+.ui-datepicker .ui-datepicker-title{margin:0;line-height:26px;display:inline-block}
+.ui-datepicker .ui-datepicker-title span{font-size:20px;font-weight:500}
+.ui-datepicker .ui-datepicker-title span.ui-datepicker-month{margin-left:-4px}
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next{width:26px;height:26px;top:50%;transform:translateY(-50%)}
+.ui-datepicker .ui-datepicker-prev{left:36px}
+.ui-datepicker .ui-datepicker-next{right:36px}
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span{position:static;height:26px;margin:0;width:100%;cursor:pointer}
+.ui-datepicker .ui-datepicker-prev:hover, .ui-datepicker .ui-datepicker-next:hover{background:none;border:none}
+.ui-datepicker .ui-datepicker-prev span{background:url(../../images/admin/icon_datepicker-prev.png) no-repeat center center}
+.ui-datepicker .ui-datepicker-next span{background:url(../../images/admin/icon_datepicker-next.png) no-repeat center center}
+.ui-datepicker th{font-size:14px;color:#6d5a5a;padding:7px 0;width:40px}
+.ui-datepicker td{padding:0;width:40px;height:40px;text-align:center}
+.ui-datepicker td a{width:28px;line-height:28px;display:inline-block;text-align:center;padding:0}
+.ui-state-default, .ui-widget-content .ui-state-default,.ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active{border:none;background:none;color:#101010}
+.ui-datepicker td.ui-datepicker-today a.ui-state-default{border-radius:100%;background:#142034;color:#fff;position:relative}
+.ui-datepicker td.ui-datepicker-today a.ui-state-default::after{content:'오늘';font-size:12px;letter-spacing:-1px;position:absolute;white-space:nowrap;color:#142034;font-weight:500;position:absolute;bottom:-22px;left:50%;transform:translateX(-50%)}
+.ui-datepicker td.ui-datepicker-current-day a.ui-state-default{background:#ff5a4e;border-radius:100%;color:#fff;position:relative}
+.ui-datepicker td.ui-datepicker-current-day a.ui-state-default::after{content:'선택';font-size:12px;letter-spacing:-1px;position:absolute;white-space:nowrap;color:#ff5a4e;font-weight:500;position:absolute;bottom:-22px;left:50%;transform:translateX(-50%)}
+.ui-datepicker td.ui-state-disabled span.ui-state-default{width:100%;display:block;text-align:center;padding:0;line-height:40px}
+.ui-datepicker td.ui-state-disabled.ui-datepicker-today span.ui-state-default{width:100%;display:block;text-align:center;padding:0;line-height:40px;position:relative}
+.ui-datepicker td.ui-state-disabled.ui-datepicker-today span.ui-state-default::after{content:'오늘';font-size:12px;letter-spacing:-1px;position:absolute;white-space:nowrap;font-weight:500;position:absolute;bottom:-22px;left:50%;transform:translateX(-50%)}

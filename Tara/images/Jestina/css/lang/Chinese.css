@@ -1,0 +1,46 @@
+﻿@charset "utf-8";
+/*Common*/
+nav .menuList{width:auto!important;white-space:nowrap}
+nav dl{float:inherit;display:inline-block;vertical-align:top}
+nav dt a{font-size:16px;font-family:'Noto Sans SC', sans-serif}
+nav dd a span::after{height:1px}
+.location li span.now{font-family:'Noto Sans SC', sans-serif}
+/*Board*/
+.sub h3.pageTitle{font-family:'Noto Sans SC', sans-serif}
+.boardSearch .total{font-family:'Noto Sans SC', sans-serif}
+.boardSearch .total b{font-family:'Noto Sans KR',Sans-serif}
+.commBoardList th{font-family:'Noto Sans SC', sans-serif}
+.boardSearch select.select{font-size:16px}
+.searchWord input[type="text"]{font-size:16px}
+.commBoardView .attachFile h6{font-family:'Noto Sans SC', sans-serif}
+.commBoardView .attachFile h6 b,
+.commBoardView .attachFile h6 span,
+.commBoardView .attachFile h6 a{font-family:'Noto Sans KR',Sans-serif}
+.commBoardView .ctrl dt{font-family:'Noto Sans SC', sans-serif}
+/*Main*/
+.main .socialMedia{padding:100px 150px}
+.socialMedia article{display:none}
+.main .bottomMenu dl{margin:0 115px}
+/*Company*/
+.company .topText h4 span{font-family:'Noto Sans SC', sans-serif}
+.company.vision .content .text span{font-family:'Noto Sans SC', sans-serif;color:#101010}
+.company.vision .content article div:nth-child(3) h4{font-family:'Noto Sans SC', sans-serif}
+.company.business .info th{font-family:'Noto Sans SC', sans-serif}
+.company.identity h6 b{font-weight:500;font-family:'Noto Sans SC', sans-serif}
+.company.contact h6 span{font-family:'Noto Sans SC', sans-serif}
+.company.contact .data th{font-family:'Noto Sans SC', sans-serif}
+/*Brand*/
+.brand.romanson .productDetail .info th{font-family:'Noto Sans SC', sans-serif}
+@media all and (max-width:1280px) {
+    /*Main*/
+    .main .bottomMenu dl{margin:0 6.6%}
+}
+@media all and (max-width:1110px) {
+    /*Main*/
+    .brandIntro .info .text{margin-top:17px!important}
+    .brandIntro .info .more{bottom:15px}
+}
+@media all and (max-width:812px) {
+    /*Main*/
+    .main .socialMedia{padding:0 0 10rem 4rem}
+}

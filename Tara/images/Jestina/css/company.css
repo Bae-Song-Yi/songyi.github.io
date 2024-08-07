@@ -1,0 +1,305 @@
+﻿@charset "utf-8";
+/*공통*/
+.company .topVisual{height:400px;background:url(/images/company_visual.jpg) no-repeat center center;background-size:cover}
+.company .topText{padding-top:76px;position:relative}
+.company .topText::before{content:'';width:60px;height:4px;background:#101010;position:absolute;top:0;left:50%;transform:translateX(-50%)}
+.company .topText h4{text-align:center;font-size:28px;line-height:1.4;font-weight:500}
+.company .topText div{text-align:center;margin:12px 0 94px 0;font-size:16px;color:#767676;line-height:1.6}
+
+/*비전*/
+.vision .content{padding-bottom:195px}
+.vision div h4{font-size:28px;font-weight:500;margin:100px 0 28px 0}
+.vision div p{font-size:18px;color:#505050;margin-bottom:37px}
+.vision div p br{display:none}
+.vision div p:last-child{margin-bottom:0}
+.vision div b{color:#f06e78;font-weight:500}
+.vision .content ul{float:left;width:120px;margin-right:210px;position:relative;margin-top:10px}
+.vision .content ul:last-child{margin-right:0}
+.vision .content .icon{width:120px;height:120px;position:relative;display:inline-block;background:#f8fafb;border-radius:100%}
+.vision .content .icon img{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}
+.vision .content .text{text-align:center;color:#505050;font-size:16px;line-height:28px}
+.vision .content .text span{display:block;font-weight:500;font-size:18px;margin-top:17px}
+
+/*연혁*/
+.history.company .topVisual{height:400px;background:url(/images/company_visual2.jpg) no-repeat center center;background-size:cover}
+.history .content{min-height:600px}
+.history .yearSelectWrap{position:relative;height:150px;margin-top:-75px}
+.history .yearSelectWrap dl{width:150px;position:absolute;top:0;overflow:hidden;z-index:5;right:0}
+.history .yearSelectWrap dt{width:150px;height:150px;position:relative;background:#2d2d2d;cursor:pointer}
+.history .yearSelectWrap dt span{width:100%;position:absolute;left:0;top:50%;transform:translateY(-50%);text-align:center;color:#fff;padding-bottom:30px}
+.history .yearSelectWrap dt span::before{content:'';width:12px;height:12px;position:absolute;bottom:0;left:50%;margin-left:-6px;background:url(/images/icon_history_arrow.svg) no-repeat center bottom;transition:all .4s;-webkit-transition:all .4s;}
+.history .yearSelectWrap dt.on span::before{-ms-transform:rotate(180deg);-webkit-transform:rotate(180deg);transform:rotate(180deg);}
+.history .yearSelectWrap dt b{display:block;font-size:12px;color:#ffb2b8;font-weight:400;margin-bottom:5px}
+.history .yearSelectWrap.on dd{transition:3s;display:block}
+.history .yearSelectWrap dd{width:100%;max-height:330px;border:1px solid #e0e0e0;background:#fff;overflow-y:auto;display:none}
+.history .yearSelectWrap dd::-webkit-scrollbar{width:7px}
+.history .yearSelectWrap dd::-webkit-scrollbar-track{background:#fff;border-radius:5px}
+.history .yearSelectWrap dd::-webkit-scrollbar-thumb{background:#ccc;border-radius:5px}
+.history .yearSelectWrap dd::-webkit-scrollbar-thumb:hover{background:#999;border-radius:5px}
+.history .yearSelectWrap dd a{display:block;line-height:32px;text-align:center}
+.history .yearSelectWrap dd a:hover,
+.history .yearSelectWrap dd a.on{background:#f0f0f0;font-weight:500}
+.history .yearSelectWrap dl.fix{position:fixed;right:0}
+.history .yearInfo{width:100%;display:inline-block;position:relative;border-bottom:1px solid #e0e0e0;padding:12px 140px 33px 140px}
+.history .yearInfo > div{cursor:pointer;position:absolute;top:50%;transform:translateY(-50%);z-index:4;color:#ccc;white-space:nowrap;width:100px}
+.history .yearInfo > div > span{display:inline-block}
+.history .yearInfo h5{font-size:78px;font-weight:400;position:relative}
+.history .yearInfo h5 b{display:inline-block;font-weight:400;width:440px}
+.history .yearInfo h5 span{font-size:16px;color:#505050;display:inline-block;vertical-align:top;margin-top:18px;line-height:1.4}
+.history .yearInfo h5 i{width:16px;height:32px;position:absolute;top:63%;transform:translateY(-50%);cursor:pointer}
+.history .yearInfo h5 i.prev{background:url(/images/icon_history_arrow_prev.svg) no-repeat left top;left:-70px}
+.history .yearInfo h5 i.next{background:url(/images/icon_history_arrow_next.svg) no-repeat left top;right:-70px}
+.history .yearInfo .prevYear{left:-63px}
+.history .yearInfo .prevYear span{margin-left:16px}
+.history .yearInfo .prevYear::before{content:'';height:32px;width:65px;position:absolute;left:0;top:50%;background:linear-gradient(-90deg,transparent,#fff 60%);transform:translateY(-50%)}
+.history .yearInfo .nextYear{right:-63px}
+.history .yearInfo .nextYear span{margin-right:16px;color:#101010}
+.history .yearInfo .nextYear::before{content:'';height:32px;width:65px;position:absolute;right:0;top:50%;background:linear-gradient(-270deg,transparent,#fff 60%);transform:translateY(-50%)}
+.history .yearData{display:none}
+.history .yearData .tb{max-width:1060px;width:100%;min-height:390px;margin:0 auto}
+.history .yearData th{width:70px;padding:57px 10px 37px 0;text-align:right;font-size:18px;vertical-align:top;font-weight:500;line-height:1.2}
+.history .yearData td{font-size:16px;color:#505050;padding:57px 0 37px 30px;vertical-align:top;line-height:1.2}
+
+/*사업영역*/
+.business .brand{margin-bottom:95px}
+.business .brand ul{text-align:center;width:100%;display:inline-block}
+.business .brand ul > li{width:400px;display:inline-block;vertical-align:top}
+.business .brand ul > li:first-child{float:left}
+.business .brand ul > li:last-child{float:right}
+.business .brand ol li{text-align:left}
+.business .brand li.tit{font-size:18px;font-weight:500;margin:36px 0 16px 0}
+.business .brand li.text{font-size:16px;text-align:justify;color:#767676;line-height:1.6}
+.business .brand li img.mo{display:none}
+.business .info{display:table}
+.business .info > div{display:table-cell}
+.business .info .logo{position:relative;width:462px;background:#ffb2b8}
+.business .info .logo img{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}
+.business .info .table{padding-left:88px}
+.business .info table{border-top:1px solid #101010}
+.business .info th{width:180px;height:64px;text-align:left;border-bottom:1px solid #e0e0e0;font-size:16px;font-weight:500;padding-left:30px}
+.business .info td{border-bottom:1px solid #e0e0e0;font-size:16px;color:#505050}
+
+/*BI*/
+.identity h6{font-size:28px;font-weight:500;margin-bottom:20px}
+.identity .biInfo{margin-bottom:97px}
+.identity .biInfo > div{width:100%;height:500px;background:url(/images/company_bi_bg.jpg);border:1px solid #e0e0e0;position:relative}
+.identity .biInfo span{position:absolute;top:125px}
+.identity .biInfo span::before{position:absolute;left:0;top:0;font-size:18px;font-weight:500}
+.identity .biInfo .symbol{padding-top:30px;left:175px}
+.identity .biInfo .symbol::before{content:'Symbol Mark'}
+.identity .biInfo .logo{padding-top:90px;left:720px}
+.identity .biInfo .logo::before{content:'Logo'}
+.identity .colorInfo > div{width:100%;display:inline-block}
+.identity .colorInfo .box{width:100%;line-height:100px;background:#ffb2b8;font-size:16px;color:#fff;display:block;padding:0 40px;position:relative;margin-bottom:19px}
+.identity .colorInfo .box b{position:absolute;right:40px;top:0;font-weight:400}
+.identity .colorInfo ul{width:50%;float:left}
+.identity .colorInfo li{display:inline-block;font-size:16px;color:#505050}
+.identity .colorInfo li b{color:#101010;font-weight:500}
+.identity .colorInfo ul:nth-child(2) li{margin-right:25px}
+.identity .colorInfo ul:last-child{text-align:right}
+.identity .colorInfo ul:last-child li{margin-left:25px}
+
+/*Contact*/
+.contact .content{text-align:center}
+.contact .map{background:#f0ede5}
+.contact .map iframe{width:100%;height:400px;border:none}
+.contact h6{width:550px;float:left;font-size:28px;font-weight:500}
+.contact .data{margin-top:100px;display:inline-block;text-align:left}
+.contact .data > div{width:calc(100% - 550px);float:right}
+.contact .data table{border-top:1px solid #101010}
+.contact .data th{width:180px;padding:23px 0;text-align:left;border-bottom:1px solid #e0e0e0;font-size:16px;font-weight:500;text-indent:30px}
+.contact .data td{border-bottom:1px solid #e0e0e0;font-size:16px;color:#505050;padding:20px 0}
+.contact .data li{margin:10px 0}
+.contact .data li span{display:inline-block;width:228px;margin-bottom:10px}
+.contact .data li div{display:inline-block}
+.contact .data li br{display:none}
+.contact .data i{display:inline-block;width:20px;text-align:center;line-height:20px;color:#fff;font-size:12px;font-weight:500;border-radius:100%;margin-right:5px}
+.contact .data i.line8{background:#f14796}
+.contact .data i.line3{background:#ed7b30}
+.contact .data i.blue{background:#1460d1}
+.contact .data i.green{background:#098a00}
+.contact .data i.last{margin-left:15px}
+
+@media all and (max-width:1440px){
+    /*연혁*/
+    .history .yearSelectWrap{width:100%;padding:60px 2%}
+    .history .prevYear{left:0}
+    .history .nextYear{right:0}
+    .history .yearInfo{width:calc(100% - 266px)}
+    .history .yearData{width:100%;padding:0 2%}
+}
+@media all and (max-width:1320px){
+    /*사업영역*/
+    .business .content{padding:0 2% 200px}
+    .business .content > article{width:100%;padding:8.5rem 0 0 0}
+    .business .brand ul > li{width:32%}
+    .business .brand ol li img{width:100%}
+    /*BI*/
+    .identity .content{padding:0 2% 200px}
+    .identity .content > article{width:100%}
+    .identity .biInfo .symbol{left:6.8%}
+    .identity .biInfo .logo{left:inherit;right:6.8%}
+    /*Contact*/
+    .contact .content > article{width:100%;padding:0 2%}
+}
+@media all and (max-width:1650px){
+    /*사업영역*/
+    .business .info .logo{width:400px}
+    .business .info .table{padding-left:50px}
+}
+@media all and (max-width:1260px){
+    /*Contact*/
+    .contact h6{width:450px}
+    .contact .data > div{width:calc(100% - 450px)}
+    .company .topText div br{display:none}
+}
+@media all and (max-width:1160px){
+    /*Contact*/
+    .contact h6{width:400px}
+    .contact .data > div{width:calc(100% - 400px)}
+    /*비전*/
+    .vision .content ul{width: 11%;margin-right: 18.6%}
+    .vision .content .icon{width:110px;height:110px}
+}
+@media all and (max-width:1090px){
+    /*Contact*/
+    .contact h6{width:350px}
+    .contact .data > div{width:calc(100% - 350px)}
+}
+@media all and (max-width:1040px){
+    /*Contact*/
+    .contact h6{width:300px}
+    .contact .data > div{width:calc(100% - 300px)}
+}
+@media all and (max-width:1060px){
+    /*사업영역*/
+    .business .info .logo{width:350px}
+    .business .info .table{padding-left:25px}
+}
+@media all and (max-width:1024px){
+    /*비전*/
+    .vision .content{padding-bottom:115px}
+    .vision .content ul{width:50%;margin:0 0 50px}
+    .vision .content li{text-align:center}
+    /*연혁*/
+    .history .yearInfo li.viewYear{width:300px;font-size:100px}
+    /*BI*/
+    .identity .biInfo .symbol{left:3%}
+    .identity .biInfo .logo{left:inherit;right:3%}
+}
+@media all and (max-width:812px){
+    /*공통*/
+    .company .topVisual{height:40rem;margin-bottom:0;background:url(/images/company_visual_m.jpg) no-repeat center center;background-size: cover;}
+    .company .topText{padding-top:7.5rem}
+    .company .topText::before{width:6rem;height:0.4rem}
+    .company .topText h4{font-size:2.8rem}
+    .company .topText div{margin:2.5rem 0 1.5rem 0;font-size:2.4rem}
+    .company .topText div br{display:none}
+    /*비전*/
+    .vision .content{padding:0 0 14.5rem}
+    .vision div h4{font-size:2.8rem;margin:10rem 0 2.8rem 0}
+    .vision div p{font-size:2.4rem;line-height:3.7rem;text-indent:-1.7rem;padding-left:1.7rem;margin-bottom:4rem}
+    .vision div p br{display:block}
+    .vision .content ul{margin:0 0 5.5rem}
+    .vision .content .icon{width:12rem;height:12rem}
+    .vision .content .icon img{height:5.8rem}
+    .vision .content .text{font-size:2.4rem;line-height:3.7rem}
+    .vision .content .text span{font-size:2.4rem;margin-top:1.8rem}
+
+
+    /* .vision .content > div{display:block}
+    .vision .content ul{width:100%;display:inline-block;padding:0;margin-bottom:9.1rem}
+    .vision .content ul li:first-child{width:18rem;float:left;text-align:left}
+    .vision .content > div ul::before,
+    .vision .content > div ul::after{display:none}
+    .vision .content .icon{width:12rem;height:12rem}
+    .vision .content .icon img{height:5.8rem}
+    .vision .content .btext{width:calc(100% - 18rem);float:right;text-align:left;font-size:2.6rem;margin:4.8rem 0 3rem 0}
+    .vision .content .stext{width:calc(100% - 18rem);float:right;text-align:left;font-size:2.4rem} */
+    /*연혁*/
+    .history.company .topVisual{background:url(/images/company_visual2_m.jpg) no-repeat center center;background-size:cover}
+    .history .content{min-height:inherit;padding-top:9rem}
+    .history .yearSelectWrap{padding:0;border:none;margin-top:-1px;height:9rem;position:absolute;left:0;top:0}
+    .history .yearSelectWrap dl{width:100%;display:block!important;top:0;overflow:inherit;height:9rem!important}
+    .history .yearSelectWrap dt{width:100%;height:9rem}
+    .history .yearSelectWrap dt span{text-align:left;position:relative;transform:none;padding-bottom:0;top:0;line-height:9rem;display:block;padding:0 4rem;font-size:2.4rem}
+    .history .yearSelectWrap dt span::before{display:none}
+    .history .yearSelectWrap dt span::after{content:'';width:2.4rem;height:1.3rem;right:4rem;top:50%;transform:translateY(-50%);background:url(/images/icon_history_arrow.svg) no-repeat center bottom;background-size:2.4rem;position:absolute;transition:all .3s;-webkit-transition:all .3s}
+    .history .yearSelectWrap dt.on span::after{-ms-transform:rotate(180deg);-webkit-transform:rotate(180deg);transform:rotate(180deg)}
+    .history .yearSelectWrap dt b{display:inline-block;margin-bottom:0;font-size:2rem;margin-right:1.5rem}
+    .history .yearSelectWrap > ul{display:none!important}
+    .history .yearSelectWrap dd{max-height:33rem;display:none}
+    .history .yearSelectWrap dd a{display:inline-block!important;font-size:2.4rem;line-height:8rem;width:100%}
+    .history .yearInfo{width:100%;text-align:center;padding:8.6rem 0 4.3rem 0;position:relative;border-bottom:none}
+    .history .yearInfo > div{display:none}
+    .history .yearInfo h5{font-size:7.8rem;text-align:left;padding:0 8rem}
+    .history .yearInfo h5 b{width:100%;}
+    .history .yearInfo h5 i{width:2rem;height:4rem;transform:none;top:2.5rem}
+    .history .yearInfo h5 i.prev{background:url(/images/icon_history_mo_arrow_prev.svg) no-repeat left top;left:0;background-size:2rem}
+    .history .yearInfo h5 i.next{background:url(/images/icon_history_mo_arrow_next.svg) no-repeat left top;right:0;background-size:2rem}
+    .history .yearInfo h5 span{display:block;width:100%;font-size:2.4rem;color:#505050;margin-top:5rem;padding-top:6rem;}
+    .history .yearInfo h5 span p{padding-left:1rem;text-indent:-1.5rem;}
+    .history .yearInfo h5::after{content:'';width:100%;height:1px;background:#e0e0e0;position:absolute;left:0;top:12rem}
+    .history .yearData{padding:0 4rem}
+    .history .yearData .tb{width: 100%;min-height: inherit;}
+    .history .yearData table{display:block;padding:0 8rem}
+    .history .yearData table tbody{width:100%;display:block}
+    .history .yearData tr{width:100%;display:block}
+    .history .yearData th{width:6rem;padding:5.3rem 0 3.6rem 0;text-align:left;display:inline-block;word-break:break-all;font-size:2.6rem}
+    .history .yearData td{width:calc(100% - 7rem);display:inline-block;padding:5.3rem 0 3.6rem 0;font-size:2.4rem;color:#505050}
+    .history .yearData.yy1988 th{width:10rem}
+    .history .yearData.yy1988 td{width:calc(100% - 11rem)}
+
+
+    /*사업영역*/
+    .business .content{padding:0 4rem 20rem 4rem}
+    .business .brand{margin-bottom:0}
+    .business .brand ul > li{width:100%;margin-bottom:9.3rem}
+    .business .brand li img.mo{display:block}
+    .business .brand li img.pc{display:none}
+    .business .brand li.tit{margin:3.5rem 0 3rem 0;font-size:2.8rem}
+    .business .brand li.text{font-size:2.4rem}
+    .business .content > .info{display:block;padding:0}
+    .business .info > div{display:block}
+    .business .info .logo{display:none}
+    .business .info .table{padding-left:0}
+    .business .info tr{width:100%;display:block;border-bottom:1px solid #e0e0e0;padding:4.1rem 0 4.3rem 0}
+    .business .info th{width:100%;height:auto;display:block;border-bottom:none;font-size:2.4rem;margin-bottom:1rem;padding:0 3rem}
+    .business .info td{border-bottom:none;font-size:2.4rem;color:#505050;display:block;padding:0 3rem}
+    /*BI*/
+    .identity .content{padding:0 4rem 20rem 4rem}
+    .identity .content >article{padding-left:0;padding-right:0}
+    .identity h6{font-size:2.8rem;margin-bottom:2.7rem}
+    .identity .biInfo{margin-bottom:9.9rem}
+    .identity .biInfo > div{height:50rem}
+    .identity .biInfo span{position:relative;width:100%;display:block;text-align:right;top:0}
+    .identity .biInfo span::before{top:50%;font-size:2rem;transform:translateY(-50%);left:7rem}
+    .identity .biInfo .symbol{padding-top:0;left:0;margin-top:8rem}
+    .identity .biInfo .symbol img{width:22.2rem;margin-right:10.7rem}
+    .identity .biInfo .logo{right:0;padding-top:0;margin-top:10rem}
+    .identity .biInfo .logo img{width:29.8rem;margin-right:7rem}
+    .identity .colorInfo .box{line-height:10rem;font-size:2rem;padding:0 4rem;margin-bottom:3.5rem}
+    .identity .colorInfo .box b{right:4rem}
+    .identity .colorInfo ul{width:100%}
+    .identity .colorInfo li{font-size:2.4rem}
+    .identity .colorInfo ul:last-child{text-align:left;margin-top:1.5rem}
+    .identity .colorInfo ul:nth-child(2) li{margin-right:2.5rem}
+    .identity .colorInfo ul:nth-child(2) li:first-child{margin-right:3.6rem}
+    .identity .colorInfo ul:last-child li{margin-left:0;margin-right:2.5rem}
+    /*Contact*/
+    .contact .map iframe{height:40rem}
+    .contact .content > article{padding:0 4rem;margin-top:9.7rem}
+    .contact h6{width:100%;font-size:2.8rem}
+    .contact .data > div{width:100%;margin-top:2.7rem}
+    .contact .data tr{width:100%;display:block;border-bottom:1px solid #e0e0e0;padding:3.9rem 0 4.2rem 0}
+    .contact .data th{width:100%;height:auto;display:block;border-bottom:none;font-size:2.4rem;margin-bottom:1rem;text-indent:0;padding:0 3rem}
+    .contact .data td{border-bottom:none;font-size:2.4rem;color:#505050;display:block;padding:0 3rem}
+    .contact .data i{width:3rem;line-height:3rem;font-size:1.8rem;margin-right:1.5rem}
+    .contact .data li{margin:1rem 0}
+    .contact .data .bus li{width:100%;display:table;margin-bottom:2.2rem}
+    .contact .data li span{vertical-align:top;width:100%;margin-bottom:0}
+    .contact .data li div{width:100%}
+    .contact .data li br{display:none}
+    .contact .data li:last-child span{margin-bottom:1.2rem}
+    .contact .data i.last{margin-left:1.9rem;margin-top:1rem}
+}

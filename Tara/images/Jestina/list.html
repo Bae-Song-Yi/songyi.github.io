@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>HTML LIST</title>
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&display=swap&subset=korean" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.11.3.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function (){
+            $(".list_area .data td.no").each(function (index){
+                $(this).text(index + 1);
+            });
+        });
+    </script>
+    <style type="text/css">
+        html,body{width:100%;height:100%;background:#fafafa;margin:0;padding:0;font-family:'Nanum Gothic', sans-serif}
+        body{font-size:14px}
+        .desktop{padding-bottom:100px}
+        ul,ol,li{margin:0;padding:0;list-style:none}
+        .top_tit{margin:0;padding:0;background:#101010;text-align:center;color:#fff;font-size:18px;line-height:70px;font-weight:bold}
+        .list_area{width:1024px;margin:50px auto}
+        .list_area h3, .list_area h4{margin:0;padding:0}
+        .list_area h4{margin-bottom:10px}
+        .list_area h3 span{font-size:16px;background:#fff;display:inline-block;padding:10px 30px;border-radius:10px 10px 0 0;color:#101010;border:1px solid #101010;border-bottom:1px solid #fff}
+        .list_area .data{padding:20px 20px 30px 20px;background:#fff;border:1px solid #101010;margin-top:-1px;box-shadow:2px 2px 5px rgba(0,0,0,0.3)}
+        .list_area table{width:100%;border-collapse:collapse}
+        .list_area th{background:#e0e0e0;font-size:14px}
+        .list_area th.no,.list_area th.loca{border-right:1px solid #fff}
+        .list_area th,.list_area td{padding:10px;border-bottom:1px solid #e0e0e0;font-weight:bold}
+        .list_area td{font-weight:normal;text-align:left;font-size:12px}
+        .list_area td a{color:#101010;padding-bottom:2px;text-decoration:none;border-bottom:1px solid #101010;font-size:13px}
+        .list_area td span{font-family:Dotum,'돋움체';font-size:12px;display:inline-block;margin:0 5px}
+        .list_area tr:nth-child(odd) td{background:#f1f1f1}
+        .list_area .no{width:30px;border-right:1px solid #e0e0e0;text-align:center}
+        .list_area .loca{width:600px;border-right:1px solid #e0e0e0;text-align:left}
+        .list_area .loca b{color:#101010;padding-bottom:2px;border-bottom:1px solid #101010}
+        .list_area ul{margin-top:10px}
+        .list_area ul li{line-height:1;padding-left:15px;width:100%;display:inline-block;margin:6px 0;position:relative}
+        .list_area ul li::before{content:'';width:2px;height:2px;background:#333;position:absolute;left:0;top:50%;transform:translateY(-50%)}
+        .list_area td.part{text-align:center;font-weight:700;background:#999 !important}
+        @media all and (max-width:812px){
+            .list_area{width:100%;margin:0}
+            .list_area h3, .list_area h4{display:none}
+            .top_tit{font-size:16px;line-height:50px}
+            .list_area .data{padding:10px;box-shadow:none}
+            .list_area .data table tr th:nth-child(2){display:none}
+            .list_area .data table tr td:nth-child(2){display:none}
+        }
+    </style>
+</head>
+<body>
+    <h1 class="top_tit">HTML 산출물 LIST</h1>
+    <div class="list_area">
+        <h3><span>제이에스티나</span></h3>
+        <!--Desktop-->
+        <div class="desktop">
+            <div class="data">
+                <table>
+                    <tr>
+                        <th class="no">No.</th>
+                        <th class="loca">Location</th>
+                        <th>Link</th>
+                    </tr>
+                    <tr>
+                        <td class="no">&nbsp;</td>
+                        <td class="loca">메인</td>
+                        <td><a href="0.메인.html" target="_blank">0.메인.html</a></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="part">COMPANY</td>
+                    </tr>
+                    <tr>
+                        <td class="no">&nbsp;</td>
+                        <td class="loca">COMPANY &gt; 비전</td>
+                        <td><a href="1.1.COMPANY.비전.html" target="_blank">1.1.COMPANY.비전.html</a></td>
+                    </tr>
+                    <tr>
+                        <td class="no">&nbsp;</td>
+                        <td class="loca">COMPANY &gt; 연혁</td>
+                        <td><a href="1.2.COMPANY.연혁.html" target="_blank">1.2.COMPANY.연혁.html</a></td>
+                    </tr>
+                    <tr>
+                        <td class="no">&nbsp;</td>
+                        <td class="loca">COMPANY &gt; 사업영역</td>
+                        <td><a href="1.3.COMPANY.사업영역.html" target="_blank">1.3.COMPANY.사업영역.html</a></td>
+                    </tr>
+                    <tr>
+                        <td class="no">&nbsp;</td>
+                        <td class="loca">COMPANY &gt; BI</td>
+                        <td><a href="1.4.COMPANY.BI.html" target="_blank">1.4.COMPANY.BI.html</a></td>
+                    </tr>
+                    <tr>
+                        <td class="no">&nbsp;</td>
+                        <td class="loca">COMPANY &gt; Contact</td>
+                        <td><a href="1.5.COMPANY.Contact.html" target="_blank">1.5.COMPANY.Contact.html</a></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="part">BRAND</td>
+                    </tr>
+                    <tr>
+                        <td class="no">&nbsp;</td>
+                        <td class="loca">BRAND &gt; J.ESTINA JEWELRY</td>
+                        <td><a href="2.1.BRAND.J.ESTINAJEWELRY.html" target="_blank">2.1.BRAND.J.ESTINAJEWELRY.html</a></td>
+                    </tr>
+                    <tr>
+                        <td class="no">&nbsp;</td>
+                        <td class="loca">BRAND &gt; J.ESTINA HANDBAG</td>
+                        <td><a href="2.2.BRAND.J.ESTINAHANDBAG.html" target="_blank">2.2.BRAND.J.ESTINAHANDBAG.html</a></td>
+                    </tr>
+                    <tr>
+                        <td class="no">&nbsp;</td>
+                        <td class="loca">BRAND &gt; ROMANSON &gt; 목록</td>
+                        <td><a href="2.3.1.BRAND.ROMANSON.목록.html" target="_blank">2.3.1.BRAND.ROMANSON.목록.html</a></td>
+                    </tr>
+                    <tr>
+                        <td class="no">&nbsp;</td>
+                        <td class="loca">BRAND &gt; ROMANSON &gt; 상세</td>
+                        <td><a href="2.3.2.BRAND.ROMANSON.상세.html" target="_blank">2.3.2.BRAND.ROMANSON.상세.html</a></td>
+                    </tr>
+                    <tr>
+                        <td class="no">&nbsp;</td>
+                        <td class="loca">BRAND &gt; ARCHIVE</td>
+                        <td><a href="2.4.BRAND.ARCHIVE.html" target="_blank">2.4.BRAND.ARCHIVE.html</a></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="part">STORE</td>
+                    </tr>
+                    <tr>
+                        <td class="no">&nbsp;</td>
+                        <td class="loca">STORE &gt; 국내</td>
+                        <td><a href="3.1.STORE.국내.html" target="_blank">3.1.STORE.국내.html</a></td>
+                    </tr>
+                    <tr>
+                        <td class="no">&nbsp;</td>
+                        <td class="loca">STORE &gt; 해외</td>
+                        <td><a href="3.2.STORE.해외.html" target="_blank">3.2.STORE.해외.html</a></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="part">RECRUIT</td>
+                    </tr>
+                    <tr>
+                        <td class="no">&nbsp;</td>
+                        <td class="loca">RECRUIT &gt; 인재상</td>
+                        <td><a href="4.1.RECRUIT.인재상.html" target="_blank">4.1.RECRUIT.인재상.html</a></td>
+                    </tr>
+                    <tr>
+                        <td class="no">&nbsp;</td>
+                        <td class="loca">RECRUIT &gt; 직무소개</td>
+                        <td><a href="4.2.RECRUIT.직무소개.html" target="_blank">4.2.RECRUIT.직무소개.html</a></td>
+                    </tr>
+                    <tr>
+                        <td class="no">&nbsp;</td>
+                        <td class="loca">RECRUIT &gt; 기업문화/복리후생</td>
+                        <td><a href="4.3.RECRUIT.기업문화-복리후생.html" target="_blank">4.3.RECRUIT.기업문화/복리후생.html</a></td>
+                    </tr>
+                    <tr>
+                        <td class="no">&nbsp;</td>
+                        <td class="loca">RECRUIT &gt; 채용공고 &gt; 목록</td>
+                        <td><a href="4.4.1.RECRUIT.채용공고.목록.html" target="_blank">4.4.1.RECRUIT.채용공고.목록.html</a></td>
+                    </tr>
+                    <tr>
+                        <td class="no">&nbsp;</td>
+                        <td class="loca">RECRUIT &gt; 채용공고 &gt; 상세</td>
+                        <td><a href="4.4.2.RECRUIT.채용공고.상세.html" target="_blank">4.4.2.RECRUIT.채용공고.상세.html</a></td>
+                    </tr>
+                    <tr>
+                        <td class="no">&nbsp;</td>
+                        <td class="loca">RECRUIT &gt; 입사지원</td>
+                        <td><a href="4.4.3.RECRUIT.입사지원.html" target="_blank">4.4.3.RECRUIT.입사지원.html</a></td>
+                    </tr>
+                    <tr>
+                        <td class="no">&nbsp;</td>
+                        <td class="loca">RECRUIT &gt; 인재풀등록</td>
+                        <td><a href="4.5.RECRUIT.인재풀등록.html" target="_blank">4.5.RECRUIT.인재풀등록.html</a></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="part">IR</td>
+                    </tr>
+                    <tr>
+                        <td class="no">&nbsp;</td>
+                        <td class="loca">IR &gt; 주가정보</td>
+                        <td><a href="5.1.IR.주가정보.html" target="_blank">5.1.IR.주가정보.html</a></td>
+                    </tr>
+                    <tr>
+                        <td class="no">&nbsp;</td>
+                        <td class="loca">IR &gt; 공시정보</td>
+                        <td><a href="5.2.IR.공시정보.html" target="_blank">5.2.IR.공시정보.html</a></td>
+                    </tr>
+                    <tr>
+                        <td class="no">&nbsp;</td>
+                        <td class="loca">IR &gt; 공고 &gt; 목록</td>
+                        <td><a href="5.3.1.IR.공고.목록.html" target="_blank">5.3.1.IR.공고.목록.html</a></td>
+                    </tr>
+                    <tr>
+                        <td class="no">&nbsp;</td>
+                        <td class="loca">IR &gt; 공고 &gt; 상세</td>
+                        <td><a href="5.3.2.IR.공고.상세.html" target="_blank">5.3.2.IR.공고.상세.html</a></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="part">NEWS</td>
+                    </tr>
+                    <tr>
+                        <td class="no">&nbsp;</td>
+                        <td class="loca">NEWS &gt; 공지사항 &gt; 목록</td>
+                        <td><a href="6.1.1.NEWS.공지사항.목록.html" target="_blank">6.1.1.NEWS.공지사항.목록.html</a></td>
+                    </tr>
+                    <tr>
+                        <td class="no">&nbsp;</td>
+                        <td class="loca">NEWS &gt; 공지사항 &gt; 상세</td>
+                        <td><a href="6.1.2.NEWS.공지사항.상세.html" target="_blank">6.1.2.NEWS.공지사항.상세.html</a></td>
+                    </tr>
+                    <tr>
+                        <td class="no">&nbsp;</td>
+                        <td class="loca">NEWS &gt; 뉴스 &gt; 목록</td>
+                        <td><a href="6.2.1.NEWS.뉴스.목록.html" target="_blank">6.2.1.NEWS.뉴스.목록.html</a></td>
+                    </tr>
+                    <tr>
+                        <td class="no">&nbsp;</td>
+                        <td class="loca">NEWS &gt; 뉴스 &gt; 상세</td>
+                        <td><a href="6.2.2.NEWS.뉴스.상세.html" target="_blank">6.2.2.NEWS.뉴스.상세.html</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!--//Desktop-->
+    </div>
+    
+</body>
+</html>
