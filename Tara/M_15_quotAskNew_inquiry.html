@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=0.5,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>TARA</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/Layout.css" />
+    <script type="text/javascript" src="scripts/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="scripts/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="scripts/Layout.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1 class="logo"><a href="#" title="메인으로 이동">TARA App</a></h1>
+            <ul class="util">
+                <li><a href="#" class="alarm" title="알람"><span class="roboto">99+</span></a></li>
+                <li><a href="#" class="menu_btn" title="메뉴열기">전체메뉴</a></li>
+            </ul>
+        </header>
+        <div class="Container quotAskNewInquiry">
+            <h3 class="CommonTitle">견적/정비 관련 문의하기<a href="#" class="PageBack"><img src="images/common/icon_arrow_open.svg"/></a></h3>
+            <section>
+                <h4>견적/정비 관련 문의</h4>
+                <form>
+                    <dl class="qnaDetail">
+                        <dt>차량선택</dt>
+                        <dd class="select1">
+                            <div class="SelectBox">
+                                <input type="text" class="view" value="원스톰 2.0 디젤 2WD A/T [61 저4003]">
+                                <select>
+                                    <option>원스톰 2.0 디젤 2WD A/T [61 저4003]</option>
+                                </select>
+                            </div>
+                            <ul>
+                                <li>차량번호 : 61 저4003</li>
+                                <li>주행거리 : 233,514 km</li>
+                                <li>전담서비스센터 :</li>
+                            </ul>
+                        <dt>답변받을 휴대폰번호</dt>
+                        <dd class="answerPhone">
+                            <input type="tel" class="u_tel" placeholder="예) 010-0000-0000"/>
+                            <div class="text">휴대폰 번호는 ‘-’를 넣어서 입력해주세요.</div>
+                        </dd>
+                        <dt>답변방법</dt>
+                        <dd class="select2">
+                            <div class="SelectBox">
+                                <input type="text" class="view" value="선택">
+                                <select>
+                                    <option>선택</option>
+                                </select>
+                            </div>
+                            <div class="text">답변받을 방법을 선택해주세요.</div>
+                        </dd>
+                        <dt>문의유형</dt>
+                        <dd class="inquiryType">
+                            <ul>
+                                <li class="select3">
+                                    <div class="SelectBox">
+                                        <input type="text" class="view" value="선택">
+                                        <select>
+                                            <option>선택</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li class="select4">
+                                    <div class="SelectBox">
+                                        <input type="text" class="view" value="선택">
+                                        <select>
+                                            <option>선택</option>
+                                        </select>
+                                    </div>
+                                </li>
+                            </ul>
+                        </dd>
+                        <dt>문의한 사업소 명</dt>
+                        <dd><input type="text" class="biz_office" placeholder="문의하실 사업소 명"/></dd>
+                        <dt>상세요청내용</dt>
+                        <dd><textarea placeholder="요청사항을 입력해주세요."></textarea></dd>
+                        <dt>이미지첨부</dt>
+                        <dd>
+                            <div class="fileArea">
+                                <div class="fileInput">
+                                    <input type="button" value="파일선택" class="fileBtn">
+                                    <input type="text" readonly id="fileName" class="fileName" value="선택된 파일 없음"/>
+                                    <input type="file" multiple="multiple" class="inputHidden" onchange="document.getElementById('fileName').value = this.value">
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                    <div class="bottomText">요청하신 사항은 자주가는 서비스센터에서 확인 후 고객님 연락처로 알려드리도록 하겠습니다.</div>
+                    <button type="button" class="submitBtn">견적/정비 관련 문의</button>
+                </form>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

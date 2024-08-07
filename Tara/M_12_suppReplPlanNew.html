@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=0.5,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>TARA</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/Layout.css" />
+    <script type="text/javascript" src="scripts/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="scripts/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="scripts/Layout.js"></script>
+</head>
+<script>
+    $(document).ready(function(){
+        var HTMLea = $('.expendables').length;
+        $('.suppReplPlanNew dt span').html(HTMLea);
+    })
+</script>
+<body>
+    <div id="wrap">
+        <header>
+            <h1 class="logo"><a href="#" title="메인으로 이동">TARA App</a></h1>
+            <ul class="util">
+                <li><a href="#" class="alarm" title="알람"><span class="roboto">99+</span></a></li>
+                <li><a href="#" class="menu_btn" title="메뉴열기">전체메뉴</a></li>
+            </ul>
+        </header>
+        <div class="Container suppReplPlanNew">
+            <h3 class="CommonTitle">소모품 교환 예정 정보<a href="#" class="PageBack"><img src="images/common/icon_arrow_open.svg"/></a></h3>
+            <section>
+                <dl>
+                    <dt>교환예정 <span></span>건<div>윈스톰 2.0 디젤 2WD A/T (61 저4003)</div></dt>
+                    <dd>
+                        <ul class="expendables">
+                            <li class="checkbox"><input type="checkbox"/></li>
+                            <li class="imgArea"><img src="images/expendables_01.svg"></li>
+                            <li class="txt">
+                                <ol>
+                                    <li class="tit">타이밍벨트 탈부착</li>
+                                    <li class="date">다음 교환 예정일 : 2021 . 03 . 04</li>
+                                    <li class="distance">다음 교환 예정주행거리 : 266,351 km</li>
+                                    <li class="last">마지막 교환 사업소 : <span>(주)한국지엠구리바로서비스</span></li>
+                                </ol>
+                            </li>
+                        </ul>
+                        <ul class="expendables">
+                            <li class="checkbox"><input type="checkbox"/></li>
+                            <li class="imgArea"><img src="images/expendables_02.svg"></li>
+                            <li class="txt">
+                                <ol>
+                                    <li class="tit">브레이크오일 교환</li>
+                                    <li class="date">다음 교환 예정일 : 2022 . 02 . 10</li>
+                                    <li class="distance">다음 교환 예정주행거리 : 284,496 km</li>
+                                    <li class="last">마지막 교환 사업소 : <span>(주)한국지엠동일산서비스</span></li>
+                                </ol>
+                            </li>
+                        </ul>
+                        <ul class="expendables">
+                            <li class="checkbox"><input type="checkbox"/></li>
+                            <li class="imgArea"><img src="images/expendables_03.svg"></li>
+                            <li class="txt">
+                                <ol>
+                                    <li class="tit">연료필터 탈부착</li>
+                                    <li class="date">다음 교환 예정일 : 2022 . 03 . 17</li>
+                                    <li class="distance">다음 교환 예정주행거리 : 286,351 km</li>
+                                    <li class="last">마지막 교환 사업소 : <span>(주)한국지엠구리바로서비스</span></li>
+                                </ol>
+                            </li>
+                        </ul>
+                        <button type="button">정비예약</button>
+                    </dd>
+                </dl>
+            </section>
+        </div>
+        <!--Bottom Dock-->
+        <div class="Dock">
+            <article class="MenuList">
+                <ul>
+                    <li><a href=".DepMyCar"><img src="images/common/icon_bottom_01.svg" class="off"/><img src="images/common/icon_bottom_01_on.svg" class="on"/><span class="roboto">My Car</span></a></li>
+                    <li><a href=".DepService"><img src="images/common/icon_bottom_02.svg" class="off"/><img src="images/common/icon_bottom_02_on.svg" class="on"/><span class="roboto">Service</span></a></li>
+                    <li><a href=".DepInformation"><img src="images/common/icon_bottom_03.svg" class="off"/><img src="images/common/icon_bottom_03_on.svg" class="on"/><span class="roboto">Information</span></a></li>
+                    <li><a href=".DepNotice"><img src="images/common/icon_bottom_04.svg" class="off"/><img src="images/common/icon_bottom_04_on.svg" class="on"/><span class="roboto">Notice</span></a></li>
+                </ul>
+            </article>
+            <!--My Car-->
+            <div class="DepthList DepMyCar">
+                <h5 class="roboto">My car<a href="#"><img src="images/common/icon_close_minus.svg.png"/></a></h5>
+                <ol>
+                    <li><a href="#">나의 정보 수정</a></li>
+                    <li><a href="#">나의 차량 정보</a></li>
+                    <li><a href="#">차량 정비 이력</a></li>
+                    <li><a href="#">소모품 교환 예정</a></li>
+                    <li><a href="#">자주가는 네트워크</a></li>
+                </ol>
+            </div>
+            <!--//My Car-->
+            <!--Service-->
+            <div class="DepthList DepService">
+                <h5 class="roboto">Service<a href="#"><img src="images/common/icon_close_minus.svg.png"/></a></h5>
+                <ol>
+                    <li><a href="#">정비예약</a></li>
+                    <li><a href="#">견적&middot;정비 문의</a></li>
+                    <li><a href="#">실시간 수리 현황</a></li>
+                    <li><a href="#">네트워크 찾기</a></li>
+                </ol>
+            </div>
+            <!--//Service-->
+            <!--Information-->
+            <div class="DepthList DepInformation">
+                <h5 class="roboto">Information<a href="#"><img src="images/common/icon_close_minus.svg.png"/></a></h5>
+                <ol>
+                    <li><a href="#">긴급 연락처</a></li>
+                    <li><a href="#">차량 경고등</a></li>
+                    <li><a href="#">차량 고장 코드</a></li>
+                    <li><a href="#">차량 매뉴얼</a></li>
+                    <li><a href="#">전시장 찾기</a></li>
+                </ol>
+            </div>
+            <!--//Information-->
+            <!--Notice-->
+            <div class="DepthList DepNotice">
+                <h5 class="roboto">Notice<a href="#"><img src="images/common/icon_close_minus.svg.png"/></a></h5>
+                <ol>
+                    <li><a href="#">새소식</a></li>
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">쉐보레 이벤트</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보 처리방침</a></li>
+                </ol>
+            </div>
+            <!--//Notice-->
+        </div>
+        <!--//Bottom Dock-->
+    </div>
+</body>
+</html>

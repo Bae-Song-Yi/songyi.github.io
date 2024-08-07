@@ -1,0 +1,511 @@
+﻿/* cyrillic-ext */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    src: url(Roboto/Roboto-Light.ttf) format('truetype');
+}
+/* cyrillic */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    src: url(Roboto/Roboto-Light.ttf) format('truetype');
+}
+/* greek-ext */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    src: url(Roboto/Roboto-Light.ttf) format('truetype');
+}
+/* greek */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    src: url(Roboto/Roboto-Light.ttf) format('truetype');
+}
+/* vietnamese */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    src: url(Roboto/Roboto-Light.ttf) format('truetype');
+}
+/* latin-ext */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    src: url(Roboto/Roboto-Light.ttf) format('truetype');
+}
+/* latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    src: url(Roboto/Roboto-Light.ttf) format('truetype');
+}
+
+
+/* cyrillic-ext */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url(Roboto/Roboto-Regular.ttf) format('truetype');
+}
+/* cyrillic */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url(Roboto/Roboto-Regular.ttf) format('truetype');
+}
+/* greek-ext */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url(Roboto/Roboto-Regular.ttf) format('truetype');
+}
+/* greek */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url(Roboto/Roboto-Regular.ttf) format('truetype');
+}
+/* vietnamese */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url(Roboto/Roboto-Regular.ttf) format('truetype');
+}
+/* latin-ext */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url(Roboto/Roboto-Regular.ttf) format('truetype');
+}
+/* latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url(Roboto/Roboto-Regular.ttf) format('truetype');
+}
+
+/* cyrillic-ext */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: url(Roboto/Roboto-Medium.ttf) format('truetype');
+}
+/* cyrillic */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: url(Roboto/Roboto-Medium.ttf) format('truetype');
+}
+/* greek-ext */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: url(Roboto/Roboto-Medium.ttf) format('truetype');
+}
+/* greek */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: url(Roboto/Roboto-Medium.ttf) format('truetype');
+}
+/* vietnamese */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: url(Roboto/Roboto-Medium.ttf) format('truetype');
+}
+/* latin-ext */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: url(Roboto/Roboto-Medium.ttf) format('truetype');
+}
+/* latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: url(Roboto/Roboto-Medium.ttf) format('truetype');
+}
+
+
+/* cyrillic-ext */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: url(Roboto/Roboto-Bold.ttf) format('truetype');
+}
+/* cyrillic */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: url(Roboto/Roboto-Bold.ttf) format('truetype');
+}
+/* greek-ext */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: url(Roboto/Roboto-Bold.ttf) format('truetype');
+}
+/* greek */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: url(Roboto/Roboto-Bold.ttf) format('truetype');
+}
+/* vietnamese */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: url(Roboto/Roboto-Bold.ttf) format('truetype');
+}
+/* latin-ext */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: url(Roboto/Roboto-Bold.ttf) format('truetype');
+}
+/* latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: url(Roboto/Roboto-Bold.ttf) format('truetype');
+}
+
+
+
+/* cyrillic-ext */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    src: url(Roboto/Roboto-Black.ttf) format('truetype');
+}
+/* cyrillic */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    src: url(Roboto/Roboto-Black.ttf) format('truetype');
+}
+/* greek-ext */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    src: url(Roboto/Roboto-Black.ttf) format('truetype');
+}
+/* greek */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    src: url(Roboto/Roboto-Black.ttf) format('truetype');
+}
+/* vietnamese */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    src: url(Roboto/Roboto-Black.ttf) format('truetype');
+}
+/* latin-ext */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    src: url(Roboto/Roboto-Black.ttf) format('truetype');
+}
+/* latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    src: url(Roboto/Roboto-Black.ttf) format('truetype');
+}
+
+
+/* cyrillic-ext */
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 300;
+    src: url(Roboto/Roboto-LightItalic.ttf) format('truetype');
+}
+/* cyrillic */
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 300;
+    src: url(Roboto/Roboto-LightItalic.ttf) format('truetype');
+}
+/* greek-ext */
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 300;
+    src: url(Roboto/Roboto-LightItalic.ttf) format('truetype');
+}
+/* greek */
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 300;
+    src: url(Roboto/Roboto-LightItalic.ttf) format('truetype');
+}
+/* vietnamese */
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 300;
+    src: url(Roboto/Roboto-LightItalic.ttf) format('truetype');
+}
+/* latin-ext */
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 300;
+    src: url(Roboto/Roboto-LightItalic.ttf) format('truetype');
+}
+/* latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 300;
+    src: url(Roboto/Roboto-LightItalic.ttf) format('truetype');
+}
+
+
+/* cyrillic-ext */
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+    src: url(Roboto/Roboto-Italic.ttf) format('truetype');
+}
+/* cyrillic */
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+    src: url(Roboto/Roboto-Italic.ttf) format('truetype');
+}
+/* greek-ext */
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+    src: url(Roboto/Roboto-Italic.ttf) format('truetype');
+}
+/* greek */
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+    src: url(Roboto/Roboto-Italic.ttf) format('truetype');
+}
+/* vietnamese */
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+    src: url(Roboto/Roboto-Italic.ttf) format('truetype');
+}
+/* latin-ext */
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+    src: url(Roboto/Roboto-Italic.ttf) format('truetype');
+}
+/* latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+    src: url(Roboto/Roboto-Italic.ttf) format('truetype');
+}
+
+
+/* cyrillic-ext */
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 500;
+    src: url(Roboto/Roboto-MediumItalic.ttf) format('truetype');
+}
+/* cyrillic */
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 500;
+    src: url(Roboto/Roboto-MediumItalic.ttf) format('truetype');
+}
+/* greek-ext */
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 500;
+    src: url(Roboto/Roboto-MediumItalic.ttf) format('truetype');
+}
+/* greek */
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 500;
+    src: url(Roboto/Roboto-MediumItalic.ttf) format('truetype');
+}
+/* vietnamese */
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 500;
+    src: url(Roboto/Roboto-MediumItalic.ttf) format('truetype');
+}
+/* latin-ext */
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 500;
+    src: url(Roboto/Roboto-MediumItalic.ttf) format('truetype');
+}
+/* latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 500;
+    src: url(Roboto/Roboto-MediumItalic.ttf) format('truetype');
+}
+
+
+
+
+
+/* cyrillic-ext */
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 700;
+    src: url(Roboto/Roboto-BoldItalic.ttf) format('truetype');
+}
+/* cyrillic */
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 700;
+    src: url(Roboto/Roboto-BoldItalic.ttf) format('truetype');
+}
+/* greek-ext */
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 700;
+    src: url(Roboto/Roboto-BoldItalic.ttf) format('truetype');
+}
+/* greek */
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 700;
+    src: url(Roboto/Roboto-BoldItalic.ttf) format('truetype');
+}
+/* vietnamese */
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 700;
+    src: url(Roboto/Roboto-BoldItalic.ttf) format('truetype');
+}
+/* latin-ext */
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 700;
+    src: url(Roboto/Roboto-BoldItalic.ttf) format('truetype');
+}
+/* latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 700;
+    src: url(Roboto/Roboto-BoldItalic.ttf) format('truetype');
+}
+
+
+/* cyrillic-ext */
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 900;
+    src: url(Roboto/Roboto-BlackItalic.ttf) format('truetype');
+}
+/* cyrillic */
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 900;
+    src: url(Roboto/Roboto-BlackItalic.ttf) format('truetype');
+}
+/* greek-ext */
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 900;
+    src: url(Roboto/Roboto-BlackItalic.ttf) format('truetype');
+}
+/* greek */
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 900;
+    src: url(Roboto/Roboto-BlackItalic.ttf) format('truetype');
+}
+/* vietnamese */
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 900;
+    src: url(Roboto/Roboto-BlackItalic.ttf) format('truetype');
+}
+/* latin-ext */
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 900;
+    src: url(Roboto/Roboto-BlackItalic.ttf) format('truetype');
+}
+/* latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 900;
+    src: url(Roboto/Roboto-BlackItalic.ttf) format('truetype');
+}

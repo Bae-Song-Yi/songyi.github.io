@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>TARA</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/Layout.css" />
+    <script type="text/javascript" src="scripts/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="scripts/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="scripts/Layout.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.Dock .MenuList').css('box-shadow','0 0 3rem rgba(65,65,65,0.5)');
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1 class="logo"><a href="#" title="메인으로 이동">TARA App</a></h1>
+            <ul class="util">
+                <li><a href="#" class="alarm" title="알람"><span class="roboto">99+</span></a></li>
+                <li><a href="#" class="menu_btn" title="메뉴열기">전체메뉴</a></li>
+            </ul>
+        </header>
+        <div class="Container saleCarCentFindNew">
+            <h3 class="CommonTitle">전시장 찾기<a href="#" class="PageBack"><img src="images/common/icon_arrow_open.svg"/></a></h3>
+            <!--Map-->
+            <section class="MapArea">
+                <!--Marker-->
+                <div class="Marker">
+                    <div class="details">
+                        <h5 class="place_name">한국지엠 구리바로 네트워크</h5>
+                        <div class="adrs_icon">
+                            <table>
+                                <tr>
+                                    <td class="adres">경기 구리시 한다리길 21</td>
+                                    <td class="text"><a href="#">정비예약</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="tel">031-563-2588</td>
+                                    <td class="text"><a href="#">전화걸기</a></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <i><img src="images/map_marker.png"/></i>
+                </div>
+                <!--//Marker-->
+                <!--Map Data-->
+                <article class="MapData"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.9721049624686!2d126.89903131566085!3d37.484984636551204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9e306e8cf7b7%3A0x285bb14ec96681bd!2z7ISc7Jq47Yq567OE7IucIOq1rOuhnOq1rCDqtazroZwz64-ZIDgxMC0y!5e0!3m2!1sko!2skr!4v1610600144154!5m2!1sko!2skr"></iframe></article>
+                <!--//Map Data-->
+            </section>
+            <!--//Map-->
+            <!--List-->
+            <section class="ListData">
+                <!--네트워크 검색조건-->
+                <div class="NetworkSearchMethod">
+                    <!--Tab-->
+                    <ul class="tab">
+                        <li><a href=".Area" class="on">지역으로 검색</a></li>
+                        <li><a href=".Name">전시장 이름</a></li>
+                    </ul>
+                    <!--//Tab-->
+                    <!--지역으로 검색-->
+                    <div class="Method Area">
+                        <ul>
+                            <li class="select1">
+                                <div class="SelectBox">
+                                    <input type="text" class="view" value="선택">
+                                    <select>
+                                        <option>선택</option>
+                                        <option>서울</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li class="select2">
+                                <div class="SelectBox">
+                                    <input type="text" class="view" value="선택">
+                                    <select>
+                                        <option>선택</option>
+                                        <option>관악구</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li class="s_btn">
+                                <button>검색</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--//지역으로 검색-->
+                    <!--네트워크 명 검색-->
+                    <div class="Method Name">
+                        <ul>
+                            <li class="s_text"><input type="text" placeholder="전시장 이름을 입력하세요."/></li>
+                            <li class="s_btn">
+                                <button>검색</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--//네트워크 명 검색-->
+                </div>
+                <!--//네트워크 검색조건-->
+                <!--검색결과-->
+                <article class="SearchResult">
+                    <h5>전시장</h5>
+                    <ul>
+                        <!--Set-->
+                        <li>
+                            <table>
+                                <tr>
+                                    <td class="icon"><a href="#" title="전화"><img src="images/icon_telephone_on.svg"/></a></td>
+                                    <td class="details">
+                                        <ol>
+                                            <li class="name">한국지엠 구리바로 전시장</li>
+                                            <li>경기 구리시 한다리길 21</li>
+                                            <li>031-563-2588</li>
+                                        </ol>
+                                    </td>
+                                </tr>
+                            </table>
+                        </li>
+                        <!--//Set-->
+                        <!--Set-->
+                        <li>
+                            <table>
+                                <tr>
+                                    <td class="icon"><a href="#" title="전화"><img src="images/icon_telephone_on.svg"/></a></td>
+                                    <td class="details">
+                                        <ol>
+                                            <li class="name">한국지엠관악 전시장</li>
+                                            <li>서울 관악구 봉천로 12길 5 (신림동)</li>
+                                            <li>02-873-1155</li>
+                                        </ol>
+                                    </td>
+                                </tr>
+                            </table>
+                        </li>
+                        <!--//Set-->
+                    </ul>
+                </article>
+                <!--//검색결과-->
+            </section>
+            <!--//List-->
+        </div>
+        <!--Bottom Dock-->
+        <div class="Dock">
+            <article class="MenuList">
+                <ul>
+                    <li><a href=".DepMyCar"><img src="images/common/icon_bottom_01.svg" class="off"/><img src="images/common/icon_bottom_01_on.svg" class="on"/><span class="roboto">My Car</span></a></li>
+                    <li><a href=".DepService"><img src="images/common/icon_bottom_02.svg" class="off"/><img src="images/common/icon_bottom_02_on.svg" class="on"/><span class="roboto">Service</span></a></li>
+                    <li><a href=".DepInformation"><img src="images/common/icon_bottom_03.svg" class="off"/><img src="images/common/icon_bottom_03_on.svg" class="on"/><span class="roboto">Information</span></a></li>
+                    <li><a href=".DepNotice"><img src="images/common/icon_bottom_04.svg" class="off"/><img src="images/common/icon_bottom_04_on.svg" class="on"/><span class="roboto">Notice</span></a></li>
+                </ul>
+            </article>
+            <!--My Car-->
+            <div class="DepthList DepMyCar">
+                <h5 class="roboto">My car<a href="#"><img src="images/common/icon_close_minus.svg.png"/></a></h5>
+                <ol>
+                    <li><a href="#">나의 정보 수정</a></li>
+                    <li><a href="#">나의 차량 정보</a></li>
+                    <li><a href="#">차량 정비 이력</a></li>
+                    <li><a href="#">소모품 교환 예정</a></li>
+                    <li><a href="#">자주가는 네트워크</a></li>
+                </ol>
+            </div>
+            <!--//My Car-->
+            <!--Service-->
+            <div class="DepthList DepService">
+                <h5 class="roboto">Service<a href="#"><img src="images/common/icon_close_minus.svg.png"/></a></h5>
+                <ol>
+                    <li><a href="#">정비예약</a></li>
+                    <li><a href="#">견적&middot;정비 문의</a></li>
+                    <li><a href="#">실시간 수리 현황</a></li>
+                    <li><a href="#">네트워크 찾기</a></li>
+                </ol>
+            </div>
+            <!--//Service-->
+            <!--Information-->
+            <div class="DepthList DepInformation">
+                <h5 class="roboto">Information<a href="#"><img src="images/common/icon_close_minus.svg.png"/></a></h5>
+                <ol>
+                    <li><a href="#">긴급 연락처</a></li>
+                    <li><a href="#">차량 경고등</a></li>
+                    <li><a href="#">차량 고장 코드</a></li>
+                    <li><a href="#">차량 매뉴얼</a></li>
+                    <li><a href="#">전시장 찾기</a></li>
+                </ol>
+            </div>
+            <!--//Information-->
+            <!--Notice-->
+            <div class="DepthList DepNotice">
+                <h5 class="roboto">Notice<a href="#"><img src="images/common/icon_close_minus.svg.png"/></a></h5>
+                <ol>
+                    <li><a href="#">새소식</a></li>
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">쉐보레 이벤트</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보 처리방침</a></li>
+                </ol>
+            </div>
+            <!--//Notice-->
+        </div>
+        <!--//Bottom Dock-->
+    </div>
+</body>
+</html>

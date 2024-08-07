@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>TARA</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/Layout.css" />
+    <script type="text/javascript" src="scripts/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="scripts/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="scripts/Layout.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1 class="logo"><a href="#" title="메인으로 이동">TARA App</a></h1>
+        </header>
+        <div class="Container findAccount">
+            <h3 class="CommonTitle">아이디 / 비밀번호 찾기<a href="#" class="PageBack"><img src="images/common/icon_arrow_open.svg"/></a></h3>
+            <!--Tab-->
+            <ul class="findTab">
+                <li><a href=".IDfind" class="on">아이디 찾기</a></li>
+                <li><a href=".PWfind">비밀번호 찾기</a></li>
+            </ul>
+            <!--//Tab-->
+            <section>
+                <!--아이디 찾기-->
+                <article class="IDfind">
+                    <dl>
+                        <dt>고객명</dt>
+                        <dd><input type="text" placeholder="고객명 입력"/></dd>
+                    </dl>
+                    <dl>
+                        <dt>휴대폰 번호</dt>
+                        <dd><input type="text" placeholder="휴대폰 번호 입력"/></dd>
+                    </dl>
+                    <dl>
+                        <dt>아이디</dt>
+                        <dd><input type="text" placeholder="아이디 입력"/></dd>
+                    </dl>
+                    <button type="button">아이디 찾기</button>
+                </article>
+                <!--//아이디 찾기-->
+                <!--비밀번호 찾기-->
+                <article class="PWfind">
+                    <dl>
+                        <dt>이메일</dt>
+                        <dd><input type="text" placeholder="이메일 입력"/></dd>
+                    </dl>
+                    <dl>
+                        <dt>고객명</dt>
+                        <dd><input type="text" placeholder="고객명 입력"/></dd>
+                    </dl>
+                    <dl>
+                        <dt>휴대폰 번호</dt>
+                        <dd><input type="text" placeholder="휴대폰 번호 입력"/></dd>
+                    </dl>
+                    <button type="button">임시 비밀번호 발급 요청하기</button>
+                </article>
+                <!--//비밀번호 찾기-->
+                <!--비밀번호 팝업-->
+                <div class="PasswordPopup">
+                    <div class="msg"><span>임시 비밀번호를<br/>입력하신 번호로 발송하였습니다.</span></div>
+                    <button type="button">닫기</button>
+                </div>
+                <!--//비밀번호 팝업-->
+            </section>
+        </div>
+    </div>
+</body>
+</html>

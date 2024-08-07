@@ -1,0 +1,907 @@
+﻿@import url('rem.css');
+@import url('font/Nanumsquare.css');
+@import url('font/NanumGothic.css');
+@import url('font/Roboto.css');
+/*Common*/
+body{font-family:'NanumSquare',sans-serif;font-size:1.9rem;font-weight:400;color:#fff;background:#1a1e2a;height:100%}
+#wrap{background:#1a1e2a;min-height:100vh;max-width:76.8rem;margin:0 auto;overflow-x:hidden}
+.roboto{font-family:'Roboto'}
+.Container{line-height:0}
+section{width:100%;display:inline-block;line-height:1.5}
+a{text-decoration:none}
+a:hover{text-decoration:none}
+select,input,button:focus,textarea{outline:none}
+input[type=text],
+input[type=password]{border-radius:0}
+textarea{resize:none}
+/*Title(Common)*/
+h3.CommonTitle{width:99.8%;position:relative;background:#005dff;text-align:center;font-size:4.6rem;font-weight:700;padding:2.7rem 0;margin:0 auto;line-height:1;color:#fff}
+h3.CommonTitle a.PageBack{position:absolute;left:3rem;top:50%;transform:translateY(-50%);padding:1.5rem;line-height:0}
+h3.CommonTitle a.PageBack img{width:2rem}
+h3.CommonTitle.Nonebg{background:none;padding:5rem 0}
+/*Header(Common)*/
+header{width:100%;background:#000;padding:3.75rem 4.5rem;line-height:0;z-index:9;max-width:76.8rem;position:fixed;top:0;left:50%;transform:translateX(-50%)}
+header .logo{width:17rem;display:inline-block;line-height:0;margin:0}
+header .logo a{display:block;height:4.5rem;background:url(../images/common/logo.svg) no-repeat;text-indent:-99999px}
+header .util{position:absolute;right:4.5rem;top:50%;transform:translateY(-50%);margin:0;padding:0}
+header .util li{display:inline-block;vertical-align:middle}
+header .util li:nth-child(2){margin-left:3rem}
+header .alarm{width:5.5rem;height:4.85rem;display:block;position:relative;background:url(../images/common/icon_alarm.svg) no-repeat center center}
+header .alarm span{font-size:1.2rem;background:#005dff;color:#fff;font-weight:500;padding:2px 0.5rem 0 0.5rem;border-radius:2.4rem;position:absolute;right:-1.1rem;line-height:1;top:-1.4rem}
+header .menu_btn{width:5.55rem;height:4.7rem;display:inline-block;background:url(../images/common/icon_menu_btn.png) no-repeat center center;background-size:100%;text-indent:-9999px}
+header.mainType{background:transparent}
+header.mainType .logo a{background:url(../images/common/logo_gray.svg) no-repeat}
+header.mainType .alarm{background:url(../images/common/icon_alarm_gray.svg) no-repeat center center}
+header.mainType .menu_btn{background:url(../images/common/icon_menu_btn_gray.png) no-repeat center center;background-size:100%}
+/*SideMenu(Common)*/
+.sideMenu{width:100%;height:100vh;background:#f9f9f9;position:fixed;left:50%;top:0;z-index:20;max-width:76.8rem;transform:translateX(-50%)}
+.sideMenu .infoSearch{padding:0 4.5rem;background:#005dff}
+.sideMenu .util{width:100%;display:inline-block;position:relative;padding:3.65rem 0}
+.sideMenu .util i.user{font-size:3.4rem;font-weight:800;font-style:normal;left:0;top:50%;transform:translateY(-50%)}
+.sideMenu .util ul{float:right;margin:0;padding:0;list-style:none}
+.sideMenu .util ul li{display:inline-block;vertical-align:middle}
+.sideMenu .util ul li a{display:block}
+.sideMenu .util ul li a img{height:4.8rem}
+.sideMenu .util ul li:nth-child(2){margin-left:3rem}
+.sideMenu .util ul li.alarm{position:relative}
+.sideMenu .util ul li.alarm span{font-size:1.2rem;background:#fff;color:#005dff;font-weight:500;padding:2px 0.5rem 0 0.5rem;border-radius:2.4rem;position:absolute;right:-1.1rem;line-height:1;top:-1.4rem}
+.sideMenu .infoSearch form{margin:8rem 0;width:100%;display:inline-block}
+.sideMenu .infoSearch fieldset{background:#fff;display:block;width:100%;border-radius:4.75rem;padding:0 3.5rem;position:relative}
+.sideMenu .infoSearch form input{width:100%;height:9.9rem;line-height:9.9rem;border:none;font-size:3rem;background-color:transparent}
+.sideMenu .infoSearch form button{position:absolute;right:3.5rem;top:50%;transform:translateY(-50%);width:4.7rem;margin:0;padding:0;background-color:transparent;border:none}
+.sideMenu .infoSearch form button img{width:100%}
+.sideMenu nav{position:relative}
+.sideMenu nav .menuList{width:26rem;height:100%;background:#fff;display:inline-block;overflow-y:auto;overflow-x:hidden;position:relative;z-index:8}
+.sideMenu nav .menuList ul{margin:0;padding:0;list-style:none;padding-top:5.6rem;padding-bottom:11.9rem;border-bottom:1px solid #ccc }
+.sideMenu nav .menuList li a{text-align:center;color:#333;font-size:3rem;font-weight:700 ;display:block;line-height:8.5rem}
+.sideMenu nav .menuList li a.on{background:url(../images/common/icon_arrow.svg) no-repeat 94% center;background-size:1.4rem }
+.sideMenu nav .menuList a.logout{text-align:center;color:#333;font-size:3rem;font-weight:700 ;display:block;line-height:8.5rem;margin-top:3.4rem}
+.sideMenu nav .depth{position:absolute;right:0;top:5.6rem;z-index:7;padding-left:26rem;width:100%;display:none}
+.sideMenu nav .depth li{display:block}
+.sideMenu nav .depth li a{display:block;font-size:3rem;font-weight:400 ;display:block;line-height:8rem;color:#333;text-indent:7.5rem}
+.sideMenu nav .depth.Mycar{display:block}
+.sideMenu nav .depth.Notice{top:41%;transform:translateY(-50%)}
+/*Dock(Common)*/
+.Dock{width:100%}
+.Dock .MenuList{width:100%;background:#fff;border-radius:3rem 3rem 0 0;padding:0 3.3rem;line-height:0;position:relative;z-index:7;position:fixed;left:50%;bottom:0;z-index:10;max-width:76.8rem;transform:translateX(-50%)}
+.Dock .MenuList.active{box-shadow:0 0 3rem rgba(65,65,65,0.5)}
+.Dock .MenuList ul{padding:0 1.2rem;width:100%;display:inline-block;margin:0}
+.Dock .MenuList li{width:25%;float:left;text-align:center;padding:2.2rem 0}
+.Dock .MenuList li a{display:inline-block}
+.Dock .MenuList li a img{height:4.9rem}
+.Dock .MenuList li a img.on{display:none}
+.Dock .MenuList li a span{display:block;white-space:nowrap;font-size:2.1rem;color:#333;margin-top:1.4rem;line-height:1}
+.Dock .MenuList li a.on img.off{display:none}
+.Dock .MenuList li a.on img.on{display:inline-block}
+.Dock .MenuList li a.on span{color:#005dff}
+.Dock .DepthList{width:100%;position:fixed;left:50%;bottom:-100%;background:#005dff;z-index:9;max-width:76.8rem;transform:translateX(-50%);border-radius:3rem 3rem 0 0;padding:5rem 4.5rem 0 4.5rem;box-shadow:0 0 3rem rgba(0,0,0,0.7)}
+.Dock .DepthList h5{font-size:5rem;font-weight:700;position:relative;margin:0;line-height:1;padding:1rem 0}
+.Dock .DepthList h5 a{position:absolute;right:-1rem;top:50%;transform:translateY(-50%);z-index:1;text-indent:0;line-height:0;padding:1rem}
+.Dock .DepthList h5 a img{width:2.2rem}
+.Dock .DepthList ol{margin:0;padding:0;list-style:none}
+.Dock .DepthList li{border-bottom:1px solid #fff}
+.Dock .DepthList li:last-child{border-bottom:none}
+.Dock .DepthList ol li a{display:block;font-size:2.6rem;font-weight:700;line-height:10.2rem;color:#fff;background:url(../images/common/icon_arrow_white.svg) no-repeat right center;background-size:1.1rem}
+.Dock .DockCloseBG{width:100%;height:100vh;position:fixed;left:50%;bottom:-100%;z-index:8;max-width:76.8rem;transform:translateX(-50%)}
+.SubDock.Dock .MenuList{box-shadow:0 0 3rem rgba(65,65,65,0.5)}
+/*tab(Common)*/
+.common_tab{width:100%;margin:0;padding:0 8rem 6.5rem 8rem;border-bottom:1px solid #ccc}
+.common_tab li{list-style:none;float:left;text-align:center;width:33.3%}
+.common_tab li a{color:#333;font-size:3rem;font-weight:bold;padding-bottom:2.3rem}
+.common_tab li a.on{border-bottom:0.7rem solid #005dff}
+/*Select(Common)*/
+.SelectBox{width:100%;position:relative}
+.SelectBox input.view{width:100%;padding:0.55rem 0;font-size:2.2rem;color:#999;border:none;border-bottom:0.2rem solid #ccc;background:url(../images/common/icon_arrow_down_down.svg) no-repeat right center;background-size:2rem}
+.SelectBox select{width:100%;height:4.6rem;position:absolute;left:0;top:0;opacity:0}
+/*네트워크 검색조건(Common)*/
+.NetworkSearchMethod{margin-bottom:2.5rem}
+.NetworkSearchMethod .tab{width:100%;display:inline-block;margin:0;padding:0;list-style:none;margin:2rem 0}
+.NetworkSearchMethod .tab li{width:49.3%;margin:0;padding:0;list-style:none}
+.NetworkSearchMethod .tab li:first-child{float:left}
+.NetworkSearchMethod .tab li:last-child{float:right}
+.NetworkSearchMethod .tab a{display:block;text-align:center;line-height:4.6rem;color:#000;font-size:2.6rem;border:1px solid #005dff;border-radius:0.7rem}
+.NetworkSearchMethod .tab a.on{background:#005dff;color:#fff}
+.NetworkSearchMethod .Method{display:none}
+.NetworkSearchMethod .Method.Area{display:block}
+.NetworkSearchMethod .Method ul{width:100%;display:table;margin:0;padding:0;list-style:none}
+.NetworkSearchMethod .Method li{display:table-cell;vertical-align:top;position:relative}
+.NetworkSearchMethod .Method .s_btn{width:9rem}
+.NetworkSearchMethod .Method .s_btn button{background:#005dff;color:#fff;height:4.7rem;width:100%;border:none;font-size:2.2rem;border-radius:0.6rem}
+.NetworkSearchMethod .Area .select1{width:23.1rem}
+.NetworkSearchMethod .Area .select2{padding:0 1.75rem}
+.NetworkSearchMethod .Name .s_text{padding-right:1.6rem}
+.NetworkSearchMethod .Name .s_text input{width:100%;border:none;font-size:2.2rem;color:#000;border-bottom:0.2rem solid #ccc;height:4.7rem;line-height:4.7rem}
+.NetworkSearchMethod .Name .s_text input::placeholder{color:#999}
+/*Index*/
+/*Index Banner*/
+.idx .IndexBanner h4.user_msg{width:100%;position:absolute;z-index:1;font-size:3.2rem;color:#333;font-weight:700;left:0;padding:0 4.5rem}
+.idx .IndexBanner h4.user_msg span{font-weight:800;font-size:3.4rem}
+.idx .IndexBanner{position:relative}
+.idx .IndexBanner .flex-viewport{overflow:hidden}
+.idx .IndexBanner ul.slides{margin:0;padding:0}
+.idx .IndexBanner ul.slides li{line-height:0}
+.idx .IndexBanner ul.slides li a{display:block}
+.idx .IndexBanner ul.slides li a img{width:100%}
+.idx .IndexBanner .flex-control-nav{margin:0;padding:0;line-height:0}
+.idx .IndexBanner .flex-control-nav li{display:inline-block;margin:0 1rem}
+.idx .IndexBanner .flex-control-nav a{width:1.2rem;height:1.2rem;display:inline-block;opacity:0.4;border-radius:100%;background:#fff}
+.idx .IndexBanner .flex-control-nav a span{display:none}
+.idx .IndexBanner .flex-control-nav a.flex-active{opacity:1}
+.idx .MainBanner .flex-control-nav{padding:0;margin:0;width:100%;text-align:center;margin-top:1.7rem}
+.idx .EventBanner .flex-control-nav{position:absolute;right:4.5rem;bottom:1.2rem;z-index:8}
+/*My Menu*/
+.idx .MyMenu{padding:5rem 4.5rem 3.5rem 4.5rem;line-height:0}
+.idx .MyMenu article{padding:0 3.35rem;position:relative}
+.idx .MyMenu .flex-viewport{overflow:hidden}
+.idx .MyMenu .slides{display:inline-block;margin:0;padding:0;list-style:none}
+.idx .MyMenu .slides li div{width:100%;display:inline-block}
+.idx .MyMenu .slides li a{width:25%;float:left;text-align:center}
+.idx .MyMenu .slides li a img{width:80%}
+.idx .MyMenu .slides li a span{display:inline-block;color:#fff;margin-top:2.5rem;font-size:2.1rem;line-height:1.2;font-weight:700}
+.idx .MyMenu a.ctrl{width:1.95rem;position:absolute;top:30%;transform:translateY(-50%);z-index:8}
+.idx .MyMenu a.ctrl.disabled{opacity:0.1}
+.idx .MyMenu a.ctrl img{width:100%}
+.idx .MyMenu a.ctrl.prev{left:0}
+.idx .MyMenu a.ctrl.next{right:0}
+/*Latest*/
+.Latest{padding:0 4.5rem;margin-top:4.5rem}
+.Latest article{width:49%;border:1px solid #fff;padding-top:1.5rem;border-radius:2rem 2rem 0 0;padding-bottom:0.6rem}
+.Latest article:first-child{float:left}
+.Latest article:last-child{float:right}
+.Latest h4{width:100%;position:relative;margin:0;padding:1.4rem 0 1.2rem 0;font-size:2.1rem;font-weight:700;text-indent:1.6rem;border-bottom:1px solid #fff}
+.Latest h4 a{position:absolute;right:0.5rem;top:50%;transform:translateY(-50%);z-index:1;text-indent:0;line-height:0;padding:1rem}
+.Latest h4 a img{width:1.4rem}
+.Latest .data a{display:block;font-size:1.9rem;color:#fff;padding:1.4rem 1.2rem;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;line-height:1}
+
+/*회원정보(입력/수정 공통)*/
+.MemberEnterComm{margin-bottom:0}
+.MemberEnterComm dd{margin-bottom:0.9rem;width:100%;display:inline-block}
+.MemberEnterComm dt{margin-top:1.9rem;line-height:5.6rem;width:100%;display:inline-block;color:#000}
+.MemberEnterComm .u_enter{width:100%;height:4.7rem;line-height:4.7rem;border:none;border-bottom:0.2rem solid #999;font-size:2.2rem;color:#000}
+.MemberEnterComm .u_enter::placeholder{color:#999}
+.MemberEnterComm dd > div{color:#999;font-size:2.2rem;line-height:1.2;margin-top:1rem}
+.MemberEnterComm dd.phone{position:relative}
+.MemberEnterComm dd.phone .u_enter{width:45.5rem}
+.MemberEnterComm dd.phone button{border:1px solid #005dff;font-size:2.2rem;color:#005dff;background:#fff;height:4.7rem;border-radius:4rem;padding:0 2rem;position:absolute;right:0;top:50%;transform:translateY(-50%)}
+/*Login*/
+.LoginArea ul{margin:0;padding:0}
+.LoginArea ul li{list-style:none}
+.LoginArea header{background:url(../images/login_header.jpg)no-repeat;height:48rem;background-size:cover;position:relative}
+.LoginArea .Login{background:url(../images/login_bg.png)no-repeat;background-size:cover}
+.Login section{padding:0 4.5rem 16.5rem 4.5rem}
+.Login h3.CommonTitle.Nonebg{padding:2.3rem 0 4.4rem;margin-top:0!important}
+.Login form{margin:0;padding:0;margin-bottom:1.5rem}
+.Login input.u_enter{font-family:'Roboto';width:100%;height:11.5rem;padding-left:2.65rem;border-radius:1rem;background:#fff;border:none;font-weight:700;font-size:2.6rem;line-height:11.5rem}
+.Login input.u_enter::placeholder{font-size:2.6rem;color:#999999;font-weight:400;font-weight:700}
+.Login input.u_enter.id{margin-bottom:1.6rem}
+.Login .id_save{margin:2.8rem 0 3.8rem 0}
+.Login .id_save input[type=checkbox]{width:3.9rem;height:3.9rem;vertical-align:middle}
+.Login .id_save span{display:inline-block;margin-left:2.25rem;font-size:2.6rem;vertical-align:middle}
+.Login form button{width:100%;height:11.5rem;font-size:2.6rem;font-weight:bold;color:#005dff;border:none;border-radius:1rem;background:#fff;margin-top:20rem}
+.Login a.login_btn{font-size:2.6rem;font-weight:bold;color:#fff}
+.Login a.join{width:100%;padding:3.8rem 0;text-align:center;background:#000;border-radius:1rem;display:block;border:1px solid #565c6c}
+.Login a.find{width:100%;margin-top:1.5rem;padding:3.8rem 0;text-align:center;background:#002263;border:1px solid #565c6c;border-radius:1rem;display:block}
+.Login .snsLogin h5{font-size:2.6rem;margin:5.7rem 0 4rem 0;float:left}
+.Login .snsLogin ul{float:right;margin-top:3.8rem}
+.Login .snsLogin li{display:inline-block}
+.Login .snsLogin li:first-child{margin-right:5.85rem}
+.Login .snsLogin img{width:6.4rem;height:6.4rem}
+/*회원가입*/
+.memberJoin section{padding:0 4.5rem}
+.memberJoin article{margin-bottom:2rem}
+.memberJoin h5{font-size:2.6rem;font-weight:700;color:#333;position:relative;text-indent:2.5rem;border-radius:1.4rem;line-height:9.3rem;border:1px solid #ccc;margin:0;padding:0;cursor:pointer;background:#fff}
+.memberJoin h5 span{position:absolute;right:3rem;top:50%;transform:translateY(-50%);padding:1.5rem;line-height:0;text-indent:0}
+.memberJoin h5 .plus{width:2.2rem}
+.memberJoin h5 .minus{width:2.2rem;display:none}
+.memberJoin h5.on{border:1px solid #005dff;background:#005dff;color:#fff}
+.memberJoin h5.on .plus{display:none}
+.memberJoin h5.on .minus{display:block}
+.memberJoin article > div{background:#fff;border-radius:0 0 1.4rem 1.4rem;padding:0 2.5rem;border:1px solid #ccc;border-top:none;display:none}
+.memberJoin .Agreement h5{text-indent:0}
+.memberJoin .Agreement h5 i{width:4.15rem;height:2.35rem;display:inline-block;vertical-align:middle;margin-left:1.7rem;margin-right:0.4rem;line-height:1;background:url(../images/common/icon_select.png) no-repeat left center;background-size:100%;position:relative}
+.memberJoin .Agreement h5 i input{opacity:0}
+.memberJoin .Agreement h5 i.on{background:url(../images/common/icon_whitebg_select.png) no-repeat left center;background-size:100%}
+.memberJoin .Agreement h5 span img{width:2.2rem}
+.memberJoin .Agreement h5 .open_white{display:none}
+.memberJoin .Agreement h5 .view_close{display:none}
+.memberJoin .Agreement h5 .view_close_blue{display:none}
+.memberJoin .Agreement h5.default{background-color:#fff}
+.memberJoin .Agreement h5.chkON{background-color:#005dff;color:#fff;border-color:#005dff}
+.memberJoin .Agreement ul{margin:0;padding:0;padding-top:1.5rem;list-style:none}
+.memberJoin .Agreement ul li{color:#000;line-height:6.5rem;font-size:2.5rem;position:relative;padding-left:5.5rem;background:url(../images/common/icon_select.png) no-repeat left center;background-size:4.15rem}
+.memberJoin .Agreement ul li span{font-size:2.2rem;color:#005dff}
+.memberJoin .Agreement ul li a{position:absolute;right:-0.5rem;top:50%;transform:translateY(-50%);line-height:normal;font-size:1.6rem;font-weight:700;color:#000;padding:1rem;text-decoration:underline}
+.memberJoin .Agreement ul li.required.on{background:url(../images/common/icon_select_on.png) no-repeat left center;background-size:4.15rem}
+.memberJoin .Agreement ul li input[type=checkbox]{position:absolute;left:0;top:0;opacity:0}
+.memberJoin .Agreement ul li.choice.on{background:url(../images/common/icon_select_on.png) no-repeat left center;background-size:4.15rem}
+.memberJoin .Agreement .c_list{padding:0 4rem 2.2rem 4rem;font-size:2.2rem;color:#000}
+.memberJoin .Agreement .c_list table{width:100%;font-size:2.2rem}
+.memberJoin .Agreement .c_list th{width:65%;padding:1.5rem 0 1.5rem 3.95rem;background:url(../images/common/icon_check.png) no-repeat left center;background-size:2.95rem;font-weight:normal;position:relative}
+.memberJoin .Agreement .c_list th span{color:#005dff;font-size:1.8rem}
+.memberJoin .Agreement .c_list th input[type=checkbox]{position:absolute;left:0;top:0;opacity:0}
+.memberJoin .Agreement .c_list th.on{background:url(../images/common/icon_check_on.png) no-repeat left center;background-size:2.95rem}
+.memberJoin .Agreement .c_list td{width:35%}
+.memberJoin .Agreement .c_list td a{font-size:1.6rem;color:#000;font-weight:700;text-decoration:underline}
+.memberJoin .NetworkReg{color:#000}
+.memberJoin .NetworkReg > div{border-radius:0}
+.memberJoin .Code{padding:2.2rem 0}
+.memberJoin .Code h6{font-size:2.6rem;line-height:5.2rem;margin:0;padding:0}
+.memberJoin .Code input{width:100%;border:none;border-bottom:0.2rem solid #ccc;font-size:2.3rem;height:4.8rem;line-height:4.8rem}
+.memberJoin .Code span{display:block;font-size:2.2rem;color:#999;margin-top:1.2rem;margin-bottom:0.8rem}
+.memberJoin .SearchResult{width:100%;display:block;background:#f3f3f3;margin-bottom:2rem}
+.memberJoin .SearchResult h6{background:#1a1e2a;line-height:4.85rem;color:#fff;text-align:center;font-weight:700;font-size:2.4rem;margin:0;padding:0}
+.memberJoin .SearchResult ul{margin:0;padding:0;list-style:none}
+.memberJoin .SearchResult ul > li{border-bottom:0.2rem solid #999}
+.memberJoin .SearchResult ul > li:last-child{border-bottom:none}
+.memberJoin .SearchResult ul > li > a{display:block;padding-left:1rem;background:url(../images/common/icon_select.svg) no-repeat 96% center;background-size:3.25rem}
+.memberJoin .SearchResult ul > li > a.active{background:url(../images/common/icon_select_on2.svg) no-repeat 96% center;background-size:3.25rem }
+.memberJoin .SearchResult li ol{margin:0;padding:0;list-style:none;padding:1.5rem 0;color:#555}
+.memberJoin .SearchResult ol li{line-height:1.2;font-size:2.2rem}
+.memberJoin .SearchResult ol li:first-child{font-weight:700}
+.memberJoin .JoinButton{width:100%;position:fixed;left:50%;bottom:0;background:#005dff;z-index:9;max-width:76.8rem;transform:translateX(-50%);border:none;font-size:3rem;font-weight:700;height:12rem;color:#fff}
+/*아이디 / 비밀번호 찾기*/
+.findAccount section{padding:6.5rem 4.5rem 0 4.5rem}
+.findAccount article{display:none}
+.findAccount article.IDfind{display:block}
+.findAccount .findTab{width:100%;margin:0;padding:0;list-style:none;display:inline-block;text-align:center}
+.findAccount .findTab li{width:50%;float:left;border-bottom:1px solid #fff}
+.findAccount .findTab li a{display:block;line-height:9.25rem;color:#fff;font-size:3rem;font-weight:700;position:relative}
+.findAccount .findTab li a.on::after{content:'';width:100%;height:0.35rem;background:#005dff;position:absolute;left:0;bottom:-0.2rem}
+.findAccount dl{width:100%;display:table;margin:3rem 0;border:0.2rem solid #ccc;background:#fff;border-radius:0.6rem}
+.findAccount dt{width:15.5rem;height:5.45rem;display:table-cell;font-size:2.6rem;font-weight:700;color:#333;vertical-align:middle;text-indent:1.3rem;background:#f3f3f3}
+.findAccount dd{display:table-cell}
+.findAccount dd input{width:100%;height:5.45rem;border:none;line-height:5.45rem;text-indent:2.5rem;font-size:2.6rem;font-weight:700}
+.findAccount button{width:100%;margin-top:1.75rem;background:#005dff;color:#fff;font-size:2.6rem;color:#fff;font-weight:700;height:8rem;border:none;border-radius:0.6rem}
+.findAccount .PasswordPopup{width:46.4rem;height:24.85rem;background:#fff;position:absolute;left:50%;top:50%;transform:translateX(-50%) translateY(-50%);box-shadow:0 0 3rem rgba(0,0,0,0.7);display:none}
+.findAccount .PasswordPopup .msg{width:100%;height:18.5rem;position:relative}
+.findAccount .PasswordPopup .msg span{font-size:2.6rem;color:#333;font-weight:700;line-height:1.2;width:100%;text-align:center;display:block;top:50%;transform:translateY(-50%);position:absolute}
+.findAccount .PasswordPopup button{position:absolute;left:0;bottom:0;border-radius:0;height:6.3rem;margin:0}
+/*나의정보수정*/
+.signInMngInfoNew{font-size:2.6rem;margin-bottom:4.8rem}
+.signInMngInfoNew section{padding:0 4.5rem}
+.signInMngInfoNew h4{background:#005dff;text-align:center;border-radius:0.6rem 0.6rem 0 0;font-weight:700;font-size:2.6rem;margin:0;line-height:9.5rem}
+.signInMngInfoNew fieldset{border:1px solid #ccc;border-radius:0 0 0.6rem 0.6rem;background:#fff;color:#000;padding:0 2.5rem 7rem;border-top:none;margin-bottom:5rem}
+.signInMngInfoNew table{width:100%;font-size:2rem}
+.signInMngInfoNew td{width:50%;padding:1.375rem 0;vertical-align:middle}
+.signInMngInfoNew td span{display:inline-block;padding-left:2.7rem ;background:url(../images/icon_uncheck.png) no-repeat left center;background-size:1rem;white-space:nowrap;cursor:pointer;position:relative}
+.signInMngInfoNew td span input{position:absolute;left:0;top:0;opacity:0}
+.signInMngInfoNew td span.on{background:url(../images/icon_check.png) no-repeat left center;background-size:1rem}
+.signInMngInfoNew td i{font-size:1.8rem;color:#005dff;font-style:normal}
+.signInMngInfoNew td a{font-size:1.6rem;font-weight:700;text-decoration:underline;color:#000}
+.signInMngInfoNew tr.other td{padding:3.2rem 0}
+.signInMngInfoNew tr.other td br{display:none}
+.signInMngInfoNew td a.link{font-size:2rem;font-weight:400;text-decoration:none;position:relative;padding-left:0.85rem;white-space:nowrap}
+.signInMngInfoNew td a.link::before{content:'';width:0.2rem;height:0.2rem;position:absolute;left:0;top:50%;transform:translateY(-50%);background:#000}
+.signInMngInfoNew button.com_btn{height:11.5rem;border-radius:0.6rem;color:#fff;font-size:2.6rem;border:none;width:100%;font-weight:700}
+.signInMngInfoNew button.com_btn.modify{background:#005dff;margin-bottom:1.7rem}
+.signInMngInfoNew button.com_btn.secession{background:#565c6c}
+/*차량정비이력*/
+.carReprHistNew section{padding:0 4.5rem;margin-top:3.75rem}
+.carReprHistNew dl{width:100%;position:relative;margin-bottom:2rem}
+.carReprHistNew dl dt{border:1px solid #ccc;border-radius:1.4rem;background:#fff url(../images/common/icon_arrow_down.png) no-repeat 95.5% center;background-size:2.25rem ;min-height:9.5rem;color:#333;font-size:2.51rem;font-weight:700;line-height:1}
+.carReprHistNew dl.selected dt{background:#005dff url(../images/common/icon_close_minus.svg.png) no-repeat 95.5% center;background-size:2.2rem;color:#fff;border-color:#005dff}
+.carReprHistNew dl dd{display:none;background:#fff;position:absolute;left:0;width:100%;top:9.5rem;border-radius:0 0 1.4rem 1.4rem;border:1px solid #ccc;border-top:none;margin:0}
+.carReprHistNew .CarSelect dt{text-align:center;padding:3.4rem 3rem}
+.carReprHistNew .CarSelect dt ul li{height:auto;text-align:left}
+.carReprHistNew .CarSelect dt ul li.mfr{text-align:left}
+.carReprHistNew .CarSelect dd{overflow:hidden;overflow-y:auto;z-index:5}
+.carReprHistNew .CarSelect dd a{display:block;border-bottom:1px solid #ccc;font-size:2.51rem;color:#000;padding:0 1.6rem}
+.carReprHistNew .CarSelect dd a:last-child{border-bottom:none}
+.carReprHistNew .CarSelect ul{width:100%;display:table;list-style:none;margin:0;padding:0;table-layout:fixed}
+.carReprHistNew .CarSelect li{display:table-cell;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;height:10rem;vertical-align:middle}
+.carReprHistNew .CarSelect li.mfr{width:11.5rem;text-align:right;padding-right:1.6rem;position:relative}
+.carReprHistNew .CarSelect li.dti{padding:0 1.6rem;position:relative}
+.carReprHistNew .CarSelect li.dti:before,
+.carReprHistNew .CarSelect li.dti:after{content:'';width:0.2rem;height:2.5rem;background:#000;position:absolute;top:50%;transform:translateY(-50%)}
+.carReprHistNew .CarSelect li.dti:before{left:0}
+.carReprHistNew .CarSelect li.dti:after{right:0}
+.carReprHistNew .CarSelect li.num{width:16.5rem;padding-left:1.6rem}
+.carReprHistNew .DataList dt{padding:1.6rem 3rem;line-height:1.2}
+.carReprHistNew .DataList dt span{display:block;font-weight:400}
+.carReprHistNew .DataList dd{z-index:4;overflow:hidden;position:static}
+.carReprHistNew .DataList dd ul{margin:0;padding:0;list-style:none}
+.carReprHistNew .DataList dd ul li p{width:100%;line-height:10rem;color:#000;font-size:2.51rem;color:#000;padding:0 3rem;border-bottom:1px solid #ccc;margin:0}
+.carReprHistNew .DataList dd .flex-viewport{display:inline-block;width:100%}
+.carReprHistNew .DataList .flex-control-nav{padding:2.5rem 0;text-align:center;width:100%;line-height:0}
+.carReprHistNew .DataList .flex-control-nav li{display:inline-block}
+.carReprHistNew .DataList .flex-control-nav a{width:2rem;height:2rem;display:inline-block;background:#f8f8f8;border-radius:100%;border:1px solid #9f9f9f;text-indent:-9999px;margin:0 1rem}
+.carReprHistNew .DataList .flex-control-nav a.flex-active{background:#005dff;border-color:#005dff}
+/*소모품 교환 예정*/
+.suppReplPlanNew section{padding:0 4.5rem;margin-top:5.8rem}
+.suppReplPlanNew dl{width:100%;position:relative;margin-bottom:2rem}
+.suppReplPlanNew dl dt{border:1px solid #e0e0e0;border-radius:1.4rem;background:#fff url(../images/common/view_more.png) no-repeat 95.5% center;background-size:2.25rem ;min-height:9.5rem;color:#005dff;font-size:2.6rem;font-weight:bold;padding:1.6rem 3rem;line-height:1.2}
+/*.suppReplPlanNew dl span{display:inline-block}*/
+.suppReplPlanNew dl dt div{color:#333}
+.suppReplPlanNew dl.selected dt{background:#005dff url(../images/common/icon_close_minus.svg.png) no-repeat 95.5% center;background-size:2.2rem;color:#fff;border-color:#005dff}
+.suppReplPlanNew dl.selected dt div{color:#fff}
+.suppReplPlanNew dl dd{display:none;background:#fff;left:0;width:100%;top:9.5rem;padding:0 2rem 3.55rem 2rem;border-radius:0 0 1.4rem 1.4rem;border:1px solid #ccc;border-top:none;margin:0;position:static}
+.suppReplPlanNew dl dd ul{display:table;border-bottom:1px solid #e0e0e0;width:100%;padding:3.2rem 0;margin:0}
+.suppReplPlanNew dl dd ul li{list-style:none}
+.suppReplPlanNew dl ul>li{display:table-cell}
+.suppReplPlanNew dl ul li input{width:2rem;height:2rem;border:3px solid #e0e0e0}
+.suppReplPlanNew dl ul .imgArea{width:9rem;text-align:center;padding-top:1.6rem;vertical-align:top}
+.suppReplPlanNew dl dd ul:first-child li img{width:8.3rem}
+.suppReplPlanNew dl ul li img{width:5.3rem}
+.suppReplPlanNew dl ul .txt{color:#000}
+.suppReplPlanNew dl ul .txt ol{padding:0}
+.suppReplPlanNew dl ul .txt ol li{font-size:2rem;line-height:1.3}
+.suppReplPlanNew dl ul .txt .tit{font-size:2.6rem;margin-bottom:0.8rem}
+.suppReplPlanNew dl ul .txt .date{color:#ffa800;font-weight:bold}
+.suppReplPlanNew dl ul .txt .distance,.suppReplPlanNew dl ul .txt .last{color:#777777}
+.suppReplPlanNew dl ul .txt .last span{font-weight:bold}
+.suppReplPlanNew dl button{border:1px solid #005dff;background:none;font-size:2rem;font-weight:bold;color:#333333;border-radius:1rem;margin-top:3.3rem;margin-left:50%;transform:translateX(-50%);width:15.1rem;height:5.2rem;font-family:'NanumSquare',sans-serif}
+.suppReplPlanNew dl button.on{background:#005dff;border:none}
+/*나의 차량정보*/
+.myCarMngNew h3.CommonTitle{font-size:4.2rem}
+.myCarMngNew section{padding:0 4.5rem;margin-top:5.8rem}
+.myCarMngNew ol{padding:0}
+.myCarMngNew ul{padding:0}
+.myCarMngNew ol li{list-style:none;color:#000;width:100%}
+.myCarMngNew ol>li{float:left;width:48.3%;min-height:49rem;background:#fff;padding:3.4rem 2.9rem;margin-bottom:2.2rem;border-radius:0.8rem}
+.myCarMngNew ol>li:nth-of-type(odd){margin-right:3%}
+.myCarMngNew ol ul li{margin-bottom:2rem;font-size:2rem;font-weight:bold;color:#333}
+.myCarMngNew ol ul li:last-child{margin-bottom:0}
+.myCarMngNew ol ul .imgArea{text-align:center;margin-bottom:4rem}
+.myCarMngNew ol ul li img{width:15.6rem}
+.myCarMngNew ol ul li div{color:#005dff}
+.myCarMngNew ol ul li span{display:inline-block;margin-right:1.8rem;color:#005dff}
+.myCarMngNew ol ul li button{width:47%;height:5.25rem;border-radius:0.8rem;border:none;background:none;font-size:2rem;font-weight:bold}
+.myCarMngNew ol ul li button:first-child{margin-right:2.9%}
+.myCarMngNew ol ul li .delete{border:1px solid #005dff;color:#333}
+.myCarMngNew ol ul li .modify{background:#005dff;color:#fff}
+.myCarMngNew ol .new ul{text-align:center;margin-top:40%}
+/*나의차량정보2_1*/
+.myCarMngNewDrop h3{font-size:4.2rem}
+.myCarMngNewDrop section{padding:5.8rem 4.5rem}
+.myCarMngNewDrop article ul{margin:0;padding:0}
+.myCarMngNewDrop article li{list-style:none}
+.myCarMngNewDrop article{margin-bottom:2rem}
+.myCarMngNewDrop article h5{width:100%;background:#fff;padding:3.5rem 2.9rem;margin:0;min-height:9.5rem;border-radius:0.6rem;color:#000;position:relative;font-size:2.6rem;font-weight:bold;color:#333}
+.myCarMngNewDrop article .imgArea{position:absolute;right:2.9rem;top:50%;transform:translateY(-50%)}
+.myCarMngNewDrop article img{width:2.2rem}
+.myCarMngNewDrop article img.on{display:none}
+.myCarMngNewDrop article .arrow{width:1.35rem}
+.myCarMngNewDrop .VehicleInfo .text{float:right;margin-right:5.3rem;width:8.75rem;border:1px solid #005dff;text-align:center;font-size:2.4rem;color:#005dff;border-radius:2rem;padding:0.3rem 0}
+.myCarMngNewDrop .Detail{display:none;background:#fff;color:#000;padding:3rem 2.8rem 2.7rem;border-radius:0 0 0.6rem 0.6rem}
+.myCarMngNewDrop .Detail h6{font-size:2.6rem;background:url(../images/common/icon_arrow_down.png)no-repeat right center;background-size:2.2rem;margin-bottom:2.5rem}
+.myCarMngNewDrop .Detail li{font-size:2.6rem}
+.myCarMngNewDrop .Detail .content{color:#005dff;font-size:2.2rem;font-weight:bold;margin-right:1.3rem}
+.myCarMngNewDrop .VehicleStatus ul{margin-bottom:3.3rem}
+.myCarMngNewDrop .VehicleStatus ul:last-child{margin-bottom:0}
+.myCarMngNewDrop article h5.select{background:#005dff;color:#fff}
+.myCarMngNewDrop article .text.select{border:1px solid #fff;color:#fff}
+/*나의차량정보_신규차량등록*/
+.myCarMngNewGrs h3{font-size:4.2rem}
+.myCarMngNewGrs ul{margin:0;padding:0}
+.myCarMngNewGrs ul li{list-style:none}
+.myCarMngNewGrs section{padding:5.7rem 4.5rem}
+.myCarMngNewGrs section h4{font-size:2.6rem;font-weight:bold;background:#005dff;width:100%;height:9.5rem;line-height:3.6;padding:0 6.2rem;position:relative;border-radius:0.6rem 0.6rem 0 0;margin:0}
+.myCarMngNewGrs section h4 a.PageBack{position:absolute;left:2.9rem;top:50%;transform:translateY(-50%);line-height:0}
+.myCarMngNewGrs section h4 a.PageBack img{width:1.45rem}
+.myCarMngNewGrs article{background:#fff;padding:3rem;border-radius:0 0 0.6rem 0.6rem}
+.myCarMngNewGrs form{width:100%;color:#000;padding-bottom:3rem}
+.myCarMngNewGrs form dt{font-size:2.6rem;margin-bottom:0.85rem}
+.myCarMngNewGrs form dd{margin-bottom:4rem}
+.myCarMngNewGrs form dd:last-child{margin-bottom:3.5rem;padding-bottom:2.5rem;border-bottom:0.2rem solid #999}
+.myCarMngNewGrs form dd input{width:100%;background-color:#f3f3f3;border:0.2rem solid #ccc;padding-left:0.8rem;font-size:2.2rem;height:4.6rem}
+.myCarMngNewGrs form dd textarea{width:100%;min-height:8rem;border:0.2rem solid #ccc;background:#f3f3f3;padding:0.9rem 1.2rem;font-size:2.2rem}
+.myCarMngNewGrs form dd textarea::placeholder{color:#999}
+.myCarMngNewGrs form dd textarea:focus{background:#fff}
+.myCarMngNewGrs form .newRgs{width:100%;height:7rem;background:#005dff;color:#fff;font-size:2.6rem;font-weight:bold;text-align:center;border:none;border-radius:0.6rem}
+.myCarMngNewGrs .SelectBox input.view{background-color:#f3f3f3;border:0.2rem solid #ccc;padding-left:0.8rem;background-position-x:97%;color:#000}
+.myCarMngNewGrs .vehicleGuide{font-size:2.2rem}
+.myCarMngNewGrs .vehicleGuide p{color:#999;line-height:1.3;margin-bottom:2.2rem}
+.myCarMngNewGrs .vehicleGuide li{color:#333;padding-left:1.5rem;position:relative;line-height:1.3}
+.myCarMngNewGrs .vehicleGuide li:before{content:'*';position:absolute;left:0}
+/*나의차량정보_수정,삭제*/
+.myCarMngChange h3{font-size:4.2rem}
+.myCarMngChange ul{margin:0;padding:0}
+.myCarMngChange ul li{list-style:none}
+.myCarMngChange section{padding:5.7rem 4.5rem}
+.myCarMngChange section h4{font-size:2.6rem;font-weight:bold;background:#005dff;width:100%;height:9.5rem;line-height:3.6;padding:0 6.2rem;position:relative;border-radius:0.6rem 0.6rem 0 0;margin:0}
+.myCarMngChange section h4 a.PageBack{position:absolute;left:2.9rem;top:50%;transform:translateY(-50%);line-height:0}
+.myCarMngChange section h4 a.PageBack img{width:1.45rem}
+.myCarMngChange section form{display:inline-block;width:100%;background:#fff;color:#000;padding:3rem 3rem 3.5rem;border-radius:0 0 0.6rem 0.6rem}
+.myCarMngChange ul li>dl:first-child{float:left;width:35.4%}
+.myCarMngChange ul li>dl:last-child{float:right;width:63.8%;padding-left:1rem}
+.myCarMngChange dl{margin:0}
+.myCarMngChange dl dt{font-size:2.6rem;margin-bottom:0.7rem}
+.myCarMngChange dl dd{margin-bottom:4.2rem;font-size:2.2rem}
+.myCarMngChange dl dd:last-child{margin-bottom:3.5rem}
+.myCarMngChange dl input{width:100%;background-color:#f3f3f3;border:0.2rem solid #ccc;padding-left:0.8rem;font-size:2.2rem;height:4.6rem}
+.myCarMngChange dl textarea{width:100%;min-height:7rem;border:0.2rem solid #ccc;background:#f3f3f3;padding:0.5rem 0.8rem;font-size:2.2rem}
+.myCarMngChange dl textarea::placeholder{color:#999}
+.myCarMngChange dl textarea:focus{background:#fff}
+.myCarMngChange dl .ShipmentDate li{display:inline-block;width:30%;padding-right:1.5rem}
+.myCarMngChange dl .ShipmentDate input.view{border:none;border-bottom:0.2rem solid #ccc;background:#fff url(../images/common/icon_arrow_down_down.svg) no-repeat right center;background-size:1.35rem}
+.myCarMngChange .btnArea{border-top:0.2rem solid #999;padding-top:3.5rem}
+.myCarMngChange .btnArea button{width:100%;height:7rem;border:none;border-radius:0.6rem;color:#fff;font-size:2.6rem;font-weight:bold}
+.myCarMngChange .btnArea button.save{margin-bottom:1.6rem;background:#005dff;letter-spacing:1.5rem}
+.myCarMngChange .btnArea button.delete{background:#ff5569;letter-spacing:0.2rem}
+.myCarMngChange .SelectBox input.view{background:#f3f3f3 url(../images/common/icon_arro_down_black.png)no-repeat 90% center;background-size:2.25rem;border:0.2rem solid #ccc;padding-left:0.8rem;background-position-x:90%;color:#000}
+.myCarMngChange .division input.view{background-position-x:97%}
+/*실시간 수리현황*/
+.realJobStatNew h3.CommonTitle{font-size:4.2rem}
+.realJobStatNew section{padding:0 4.5rem;margin:3.75rem 0}
+.realJobStatNew .workStatus h4{background:#005dff;text-align:center;border-radius:0.6rem 0.6rem 0 0;font-weight:700;font-size:2.6rem;margin:0;line-height:9.5rem}
+.realJobStatNew .workStatus>div{background:#fff;color:#000;padding:3.2rem 3.7rem 1rem;border-radius:0 0 0.6rem 0.6rem}
+.realJobStatNew .workStatus ul{margin:0;padding:0;border-bottom:0.2rem solid #999999}
+.realJobStatNew .workStatus ul li{list-style:none}
+.realJobStatNew .workStatus .info{padding-bottom:3rem;position:relative}
+.realJobStatNew .workStatus .telImg{position:absolute;right:0;top:0}
+.realJobStatNew .workStatus .telImg img{width:5.4rem}
+.realJobStatNew .workStatus .info li{font-size:2.6rem;font-weight:500;line-height:1.3}
+.realJobStatNew .workStatus .status{padding:2.35rem 0}
+.realJobStatNew .workStatus .status li{display:inline-block;width:24.3%;padding:0.8rem 0;margin-right:12.2%;border:1px solid black;text-align:center;border-radius:0.8rem}
+.realJobStatNew .workStatus .status li:last-child{margin:0}
+.realJobStatNew .workStatus .status .receipt{border:0.2rem solid #ffcc33}
+.realJobStatNew .workStatus .status .work{border:0.2rem solid #3399cc}
+.realJobStatNew .workStatus .status .complete{border:0.2rem solid #005dff}
+.realJobStatNew .workStatus .status .receipt.on{background:#ffcc33;color:#fff}
+.realJobStatNew .workStatus .status .work.on{background:#3399cc;color:#fff}
+.realJobStatNew .workStatus .status .complete.on{background:#005dff;color:#fff}
+.realJobStatNew .workStatus .date{margin-top:3rem}
+.realJobStatNew .workStatus .date dl{display:inline-block;width:47%;text-align:center;font-size:2.2rem;color:#010101;font-weight:500;margin-bottom:2.8rem}
+.realJobStatNew .workStatus .date dl:nth-of-type(odd){margin-right:3%}
+.realJobStatNew .workStatus .date dl dt{margin-bottom:1rem}
+.realJobStatNew .workStatus .date dl dd{border:0.2rem solid #e0e0e0;background:#f3f3f3;padding:0.5rem 0}
+/*공지사항*/
+div.Container.trappNoticeNew{background:#fff;min-height:85vh;width:100%;margin:0;padding:0}
+.trappNoticeNew h3.CommonTitle{font-size:4.2rem}
+.trappNoticeNew section{padding:2.3rem 5.6rem;color:#000}
+.trappNoticeNew section dl{border-bottom:1px solid #cccccc;margin:0;padding:2.5rem 0;background:url(../images/common/icon_arrow.svg)no-repeat right 35%;background-size:1.4rem}
+.trappNoticeNew section dl dt{font-size:2.6rem;font-weight:bold;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+.trappNoticeNew section dl dt a{color:#000}
+.trappNoticeNew section dl dd{font-size:2.2rem;font-weight:bold;color:#777;margin:0}
+/*공지사항_상세글*/
+.trappNoticeNewRead{background:#fff;min-height:85vh;width:100%;margin:0;padding:0}
+.trappNoticeNewRead h3.CommonTitle{font-size:4.2rem}
+.trappNoticeNewRead section{padding:4.8rem 5.6rem;color:#000}
+.trappNoticeNewRead table tr th{border-bottom:1px solid #ccc;padding-bottom:2.8rem}
+.trappNoticeNewRead table tr th .tit{width:36rem;font-size:3.2rem;font-weight:bold;line-height:1.3}
+.trappNoticeNewRead table tr th .date{font-size:2.2rem;font-weight:bold;color:#777;padding-top:1rem}
+.trappNoticeNewRead table tbody ul{margin:0;padding:0}
+.trappNoticeNewRead table tbody ul li{list-style:none;margin-bottom:4rem}
+.trappNoticeNewRead table tbody td{padding:6.5rem 0;font-size:2.6rem}
+.trappNoticeNewRead table tbody td dt,.trappNoticeNewRead table tbody td dd{margin:0;padding:0}
+.trappNoticeNewRead table tbody td dd{text-indent:-6px}
+.trappNoticeNewRead table tbody td div{margin:4.3rem 0}
+/*이벤트*/
+.trappEventNew{background:#fff;min-height:85vh;width:100%;margin:0;padding:0}
+.trappEventNew h3.CommonTitle{font-size:4.2rem}
+.trappEventNew section{padding:6.3rem 0 4.3rem}
+.trappEventNew .eventList{padding:4rem 5.4rem 0 5.6rem;color:#000}
+.trappEventNew .eventList dl{padding:2.3rem 0;margin:0;border-bottom:1px solid #ccc;background:url(../images/common/icon_arrow.svg)no-repeat right 35%;background-size:1.4rem}
+.trappEventNew .eventList dl.complete{background:url(../images/icon_event_completed.png)no-repeat 92% center,url(../images/common/icon_arrow.svg)no-repeat right 35%;background-size:7.85rem,1.4rem}
+.trappEventNew .eventList dl dt a{font-size:2.6rem;font-weight:bold;color:#000}
+.trappEventNew .eventList dl dt .process{color:#005dff}
+.trappEventNew .eventList dl dd{font-size:2.2rem;color:#777;font-weight:bold}
+/*알람정보*/
+.msgAlarm h3.CommonTitle{font-size:4.2rem}
+.msgAlarm section{padding:3.8rem 5rem}
+.msgAlarm section ul,.msgAlarm section ol{margin:0;padding:0}
+.msgAlarm section li{list-style:none}
+.msgAlarm section .imgArea{background:url(../images/common/icon_whitebg_select.svg)no-repeat left top;background-size:3.2rem;padding-left:5.25rem;margin-bottom:1.95rem}
+.msgAlarm section .imgArea.on{background:url(../images/common/icon_select_on.svg)no-repeat left top;background-size:3.2rem}
+.msgAlarm section tr td ul{border:1px solid #ccc;background:#fff;color:#000;border-radius:1rem;padding:2.5rem 5.2rem 2.3rem 4rem;margin-bottom:1.95rem}
+.msgAlarm section tr:last-child td ul{margin-bottom:0}
+.msgAlarm section td ul li{font-size:2.6rem}
+.msgAlarm section td ol li{display:inline-block;vertical-align:top;font-size:2.2rem;color:#666;font-weight:bold}
+.msgAlarm section td ol li:first-child{color:#005dff}
+.msgAlarm section td ol .seciceCenter{float:right}
+/*차량 경고등 정보*/
+.carWarrIndiNew h3.CommonTitle{font-size:4.2rem;background:#005dff url(../images/common/icon_close_minus.svg.png)no-repeat 95% center;background-size:2.2rem}
+.carWarrIndiNew section .common_tab{padding:3.35rem 3rem 7.1rem}
+.carWarrIndiNew section .common_tab li a{color:#fff;padding-bottom:2.9rem}
+.carWarrIndiNew section .common_tab li:nth-child(2) a{padding-right:2.6rem;padding-left:2.6rem}
+.carWarrIndiNew section article h5{font-size:2.6rem;text-align:center;line-height:1.4}
+.carWarrIndiNew section article{font-size:2.6rem;padding:6.5rem 4.5rem 12.3rem;display:none}
+.carWarrIndiNew article dl{display:table;table-layout:fixed;margin-top:5rem}
+.carWarrIndiNew article dl:nth-child(2){margin-top:5.8rem}
+.carWarrIndiNew article dl dt,.carWarrIndiNew article dl dd{display:table-cell}
+.carWarrIndiNew article dl dt{padding:0 2.85rem 0 3.4rem;vertical-align:middle}
+.carWarrIndiNew section article dt img{width:11.15rem}
+.carWarrIndiNew article dl dd{vertical-align:top}
+.carWarrIndiNew article dl dd p{margin:1rem 0 0}
+/*종료화면*/
+.Close#wrap{background:transparent}
+.closeAreaWrap{background:rgba(0,0,0,0.7);height:100vh;width:76.8rem;margin:0;padding:0;position:fixed}
+.closeAreaWrap .closeArea{position:absolute;top:50%;margin-left:50%;transform:translate(-50%,-50%);width:46.5rem;background:#fff;display:table}
+.closeAreaWrap .closeArea div{font-size:2.6rem;font-weight:bold;color:#333;text-align:center;padding:7.3rem 0}
+.closeAreaWrap .closeArea div span{color:#005dff}
+.closeAreaWrap .closeArea button{display:table-cell;width:50%;padding:2rem 0;color:#fff;font-size:2.6rem;font-weight:bold;border:none}
+.closeAreaWrap .closeArea .end{background:#005dff}
+.closeAreaWrap .closeArea .cancel{background:#434343}
+/*긴급연락처*/
+.emerContNew section{display:block;background:#fff;min-height:54.1vh;width:68rem;margin:5rem auto 0;padding:3.2rem 0 4.7rem 0;color:#000}
+.emerContNew h3.CommonTitle{font-size:4.2rem}
+.emerContNew fieldset{margin:0 1.2rem;position:relative}
+.emerContNew fieldset input{width:58rem;height:4.7rem;padding-left:1.4rem;border:0.2rem solid #ccc;background:#f3f3f3}
+.emerContNew fieldset input::placeholder{font-size:2.2rem;color:#999}
+.emerContNew fieldset button{border:none;background:#005dff;width:10rem;height:4.7rem;font-size:2.2rem;color:#fff;border-radius:0 1rem 1rem 0;position:absolute;right:0}
+.emerContNew table{width:100%;margin-top:3.2rem}
+.emerContNew table tr{height:9.7rem}
+.emerContNew table thead th{background:#f3f3f3;font-size:2.6rem;font-weight:bold;text-align:center}
+.emerContNew table thead th:first-child,.emerContNew table tbody td:first-child{border-right:1px solid #ccc}
+.emerContNew table tbody tr{border-bottom:1px solid #ccc}
+.emerContNew table tbody td{font-size:2.6rem;font-weight:300}
+.emerContNew table tbody td:first-child{padding-left:2.6rem}
+.emerContNew table tbody td.tel{padding-left:5rem}
+.emerContNew table tbody .imgArea img{width:5rem;text-align:right}
+.emerContNew table tbody .imgArea{padding-right:3rem}
+/*견적/정비관련문의1*/
+.quotAskNew{background:#fff;min-height:85vh;width:100%;margin:0;padding:0}
+.quotAskNew ul{margin:0;padding:0}
+.quotAskNew li{list-style:none}
+.quotAskNew h3.CommonTitle{font-size:4.2rem}
+.quotAskNew .quoteInquiry{margin:5.5rem 4.5rem 5.5rem;padding:4.5rem 0;background:#005dff;text-align:center;border-radius:1rem}
+.quotAskNew .quoteInquiry a{color:#fff;font-size:2.6rem;font-weight:bold}
+.quotAskNew section{color:#000;padding:0 4.5rem 5.8rem;margin:0 1.1rem}
+.quotAskNew section h4{font-size:2.6rem;font-weight:bold}
+.quotAskNew table{width:100%;margin-top:1.5rem;display:table;table-layout:fixed}
+.quotAskNew table thead tr{height:9.75rem;border-bottom:1px solid #ccc}
+.quotAskNew table th span,.quotAskNew table dt span{font-size:2.6rem;font-weight:bold;display:table-cell}
+.quotAskNew table .date{width:12.1rem}
+.quotAskNew table .cntn{width:41.1rem;padding-left:3.35rem}
+.quotAskNew table .status{width:12.1rem}
+.quotAskNew table tbody .date{font-size:2.2rem;color:#777}
+.quotAskNew table tbody tr dt{padding:2.8rem 0;border-bottom:1px solid #ccc;cursor:pointer}
+.quotAskNew table tbody tr dd{display:none}
+.quotAskNew table tbody tr dd.on{display:block}
+.quotAskNew table tbody tr ul{background:#f3f3f3;padding:2rem 4rem 0}
+.quotAskNew table tbody tr ul li{padding-bottom:1rem;font-size:2.2rem}
+.quotAskNew table tbody tr ul li:last-child{padding-bottom:2rem}
+.quotAskNew table tbody tr ul li b{margin-right:1.25rem}
+.quotAskNew table tbody tr dd{position:relative}
+.quotAskNew table tbody .reply{padding:1rem 4rem;background:#f3f3f3 url(../images/icon_reply.png)no-repeat 1.05rem top;background-size:2.35rem;font-size:2.2rem;color:#777;font-weight:400}
+.quotAskNew table tbody .answer{font-size:2.2rem;color:#777;font-weight:400;margin:0;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical}
+.quotAskNew table tbody tr .more{bottom:0.9rem;font-size:2.2rem;font-weight:bold;color:#005dff;cursor:pointer}
+/*견적/정비 관련 문의하기1_1*/
+.quotAskNewInquiry section{padding:5.1rem 4.5rem 8.9rem}
+.quotAskNewInquiry h3.CommonTitle{font-size:4.2rem}
+.quotAskNewInquiry ul{margin:0;padding:0}
+.quotAskNewInquiry ul li{list-style:none;padding:0;margin:0}
+.quotAskNewInquiry section h4{font-size:2.6rem;font-weight:bold;background:#005dff url(../images/common/icon_whitebg_select.svg)no-repeat 2.5rem center;background-size:2.4rem;padding:3.5rem 2.5rem 3.5rem 6.3rem;border-radius:0.8rem 0.8rem 0 0;margin:0}
+.quotAskNewInquiry section form{background:#fff;color:#000}
+.quotAskNewInquiry section form .qnaDetail{padding:3rem 2.5rem 0;margin:0}
+.quotAskNewInquiry .SelectBox input.view{background:url(../images/icon_question_arrow_down.svg) no-repeat 97% center;background-size:2.2rem;color:#000}
+.quotAskNewInquiry .select1 input.view{background-color:#f3f3f3}
+.quotAskNewInquiry .qnaDetail dt{font-size:2.6rem;font-weight:400;margin-bottom:0.8rem}
+.quotAskNewInquiry .qnaDetail dd{margin-bottom:4rem}
+.quotAskNewInquiry .qnaDetail .select1 ul{margin:2.3rem 0 -1.3rem 0;padding:0}
+.quotAskNewInquiry .qnaDetail .select1 li{position:relative;padding-left:4.75rem}
+.quotAskNewInquiry .qnaDetail .select1 li:before{content:'○';position:absolute;left:1.5rem;font-weight:bold}
+.quotAskNewInquiry .qnaDetail .inquiryType li{width:50%;display:inline-block}
+.quotAskNewInquiry .qnaDetail .inquiryType li:last-child{float:right;padding-left:1.4rem}
+.quotAskNewInquiry .qnaDetail dd input{border:0.2rem solid #ccc;padding:0 1.25rem;width:100%;height:4.6rem}
+.quotAskNewInquiry .qnaDetail dd textarea{width:100%;border:0.2rem solid #ccc;padding:1.2rem 01.25rem;background:#f3f3f3}
+.quotAskNewInquiry .qnaDetail dd textarea:focus{background:#fff}
+.quotAskNewInquiry .qnaDetail dd input::placeholder,
+.quotAskNewInquiry .qnaDetail dd textarea::placeholder{font-size:2.2rem;color:#999}
+.quotAskNewInquiry .qnaDetail dd .text{font-size:2.2rem;font-weight:400;color:#999;margin-top:0.8rem}
+.quotAskNewInquiry .qnaDetail .fileArea{position:relative;text-align:left;display:inline-block}
+.quotAskNewInquiry .qnaDetail .fileArea .fileName{width:36rem;display:inline-block;height:50px;color:#010101;font-size:2.2rem;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;border:none}
+.quotAskNewInquiry .qnaDetail .fileArea .fileBtn{display:inline-block;width:13.6rem;font-size:2.2rem;color:#005dff;background:#fff url(../images/icon_file.png)no-repeat 1rem center;background-size:2.35rem;border:0.2rem solid #005dff;border-radius:0.7rem;padding:0 9.5rem 0 4.15rem}
+.quotAskNewInquiry .qnaDetail .fileArea .inputHidden{width:100%;height:5rem;cursor:pointer;position:absolute;left:0;top:0;opacity:0;right:0}
+.quotAskNewInquiry section form .bottomText{font-size:2.2rem;color:#999;padding:0 2.2rem 2.5rem}
+.quotAskNewInquiry section form .submitBtn{width:100%;height:10.5rem;background:#005dff;border:none;color:#fff;font-size:2.6rem;font-weight:bold}
+/*자주가는 네트워크*/   
+.favoriteCentNew h3.CommonTitle{font-size:4.2rem}
+.favoriteCentNew section dl dt,.favoriteCentNew section dl dd{margin:0;padding:0}
+.favoriteCentNew section{padding:5.75rem 4.5rem}
+.favoriteCentNew section h4{width:100%;padding:3.3rem 0;height:9.6rem;background:#005dff;text-align:center;border-radius:1rem;margin:0}
+.favoriteCentNew section h4 a{font-size:2.6rem;font-weight:bold;color:#fff}
+.favoriteCentNew section dl{width:100%;color:#000;height:9.6rem;margin:1.95rem 0;padding:1.6rem 2.45rem 1.8rem 3.75rem;line-height:1.3;background:#fff;border-radius:1rem;font-size:2.6rem;font-weight:bold;color:#333;position:relative}
+.favoriteCentNew section dd .delete{width:2.45rem;position:absolute;right:2.5rem;top:50%;transform:translateY(-50%)}
+/*네트워크 찾기*/
+.reprCentFindNew{background:#fff;color:#000}
+.reprCentFindNew .ListData{padding:0 4.5rem;overflow-y:auto;overflow-x:hidden}
+.reprCentFindNew .ListFavorite h5{font-size:2.6rem;font-weight:700;margin:3rem 0}
+.reprCentFindNew .ListFavorite ul{margin:0;padding:0;list-style:none}
+.reprCentFindNew .ListFavorite li{border:1px solid #ccc;border-radius:0.7rem;background:#f3f3f3;margin-bottom:2rem}
+.reprCentFindNew .ListFavorite table{width:100%}
+.reprCentFindNew .ListFavorite td{vertical-align:middle;height:9.45rem;line-height:1}
+.reprCentFindNew .ListFavorite td.icon{width:5.4rem;text-align:center}
+.reprCentFindNew .ListFavorite td.icon img{width:2.2rem}
+.reprCentFindNew .ListFavorite td.name{font-size:2.6rem;font-weight:700;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+.reprCentFindNew .ListFavorite td.icon_btn{width:22.75rem;text-align:center}
+.reprCentFindNew .ListFavorite td.icon_btn a{width:5.25rem;display:inline-block;border-radius:0.2rem;background:#999;margin:0 0.4rem}
+.reprCentFindNew .ListFavorite td.icon_btn a img{width:100%}
+.reprCentFindNew .ListFavorite td.icon_btn a.on{background:#005dff}
+.reprCentFindNew .SearchResult{margin-bottom:1.5rem}
+.reprCentFindNew .SearchResult h5{background:#1a1e2a;color:#fff;line-height:4.85rem;font-weight:700;font-size:2.4rem;margin:0;padding:0;text-align:center}
+.reprCentFindNew .SearchResult ul{margin:0;padding:0;list-style:none;background:#f3f3f3}
+.reprCentFindNew .SearchResult ul > li{border-bottom:0.2rem solid #999}
+.reprCentFindNew .SearchResult table{width:100%}
+.reprCentFindNew .SearchResult td{vertical-align:middle;padding:1.5rem 0}
+.reprCentFindNew .SearchResult td.icon{width:5.4rem;text-align:center}
+.reprCentFindNew .SearchResult td.icon a{width:3.2rem;height:3rem;background:url(../images/icon_favorites.svg) no-repeat center center;background-size:cover;display:inline-block;text-indent:-99999px}
+.reprCentFindNew .SearchResult td.icon a.on{background:url(../images/icon_favorites_on_full.svg) no-repeat center center;background-size:cover}
+.reprCentFindNew .SearchResult td.details ol{margin:0;padding:0;list-style:none}
+.reprCentFindNew .SearchResult td.details ol li{line-height:1.2;font-size:2.2rem}
+.reprCentFindNew .SearchResult td.details ol li.name{font-weight:700;color:#555}
+.reprCentFindNew .SearchResult td.icon_btn{width:22.75rem;text-align:center}
+.reprCentFindNew .SearchResult td.icon_btn a{width:5.25rem;display:inline-block;border-radius:0.2rem;background:#999;margin:0 0.4rem}
+.reprCentFindNew .SearchResult td.icon_btn a img{width:100%}
+.reprCentFindNew .SearchResult td.icon_btn a.on{background:#005dff}
+/*네트워크 (정비예약)*/
+.reprResvNew section{padding:0 4.5rem 6.25rem 4.5rem;margin-top:5rem}
+.reprResvNew section h4{background:#005dff;margin:0;padding:0;line-height:9.5rem;font-size:2.6rem;font-weight:700;padding-left:2.5rem;border-radius:0.6rem 0.6rem 0 0}
+.reprResvNew section h4 img{height:2.4rem;margin-right:1.2rem}
+.reprResvNew fieldset{border:1px solid #ccc;border-top:none;border-radius:0 0 0.6rem 0.6rem;background:#fff;padding:0 2.5rem 4.3rem 2.5rem;color:#000}
+.reprResvNew dl{margin:0;padding:0}
+.reprResvNew dl dt{font-size:2.6rem;line-height:1;margin:3.5rem 0 1.5rem 0}
+.reprResvNew dl dd{margin:0}
+.reprResvNew input.readonly{width:100%;font-size:2.2rem;border:0.2rem solid #ccc;background:#f3f3f3;color:#000;line-height:4.7rem;height:4.7rem;padding:0 1.2rem}
+.reprResvNew input.u_enter{width:100%;font-size:2.2rem;border:none;border-bottom:0.2rem solid #ccc;color:#000;line-height:4.7rem;height:4.7rem}
+.reprResvNew input.u_enter::placeholder{color:#999}
+.reprResvNew textarea{width:100%;height:8rem;border:0.2rem solid #ccc;padding:1rem;background:#f3f3f3}
+.reprResvNew textarea:focus{background:#fff}
+.reprResvNew textarea::placeholder{color:#999}
+.reprResvNew dd span.i_text{display:block;font-size:2.2rem;color:#999;margin-top:1rem}
+.reprResvNew dd.NetworkTel{width:100%;display:inline-block}
+.reprResvNew dd.NetworkTel input{float:left}
+.reprResvNew dd.NetworkTel a{font-size:2.2rem;float:right;border:0.2rem solid #005dff;line-height:3.8rem;padding:0 2rem;border-radius:2rem;margin-top:0.2rem}
+.reprResvNew dd.RsrvDate ul{margin:0;padding:0;list-style:none;display:table}
+.reprResvNew dd.RsrvDate ul li{width:25%;display:table-cell;padding-right:1rem}
+.reprResvNew dd.RsrvDate ul li.tt{padding-right:0}
+.reprResvNew dd.RsrvDate .SelectBox input.view{text-align:center;color:#000}
+.reprResvNew article{width:100%;display:inline-block;margin-top:1.5rem}
+.reprResvNew article button{width:48.9%;height:7rem;border:0.2rem solid #005dff;font-size:2.6rem;border-radius:0.7rem;font-weight:bold}
+.reprResvNew article .execution{float:left;background:#005dff;color:#fff}
+.reprResvNew article .status{float:right;background:#fff;color:#005dff}
+/*정비예약 현황*/
+.reprResvCondition section{padding:5rem 4.5rem 6.25rem 4.5rem;line-height:0}
+.reprResvCondition section h4{background:#005dff;margin:0;padding:0;line-height:9.5rem;font-size:3.4rem;font-weight:700;border-radius:0.6rem;text-align:center;margin-bottom:1.5rem}
+.reprResvCondition .tab{width:100%;display:inline-block}
+.reprResvCondition .tab a{width:48.9%;font-size:2.6rem;font-weight:700;color:#333;line-height:9.5rem;text-align:center;background:#f3f3f3;border-radius:0.6rem 0.6rem 0 0}
+.reprResvCondition .tab a.on{background:#005dff;color:#fff}
+.reprResvCondition .tab a:first-child{float:left}
+.reprResvCondition .tab a:last-child{float:right}
+.reprResvCondition .ListData{padding:2rem 2.5rem;background:#fff;border:1px solid #ccc;border-top:none;line-height:1.5rem}
+.reprResvCondition .ListData h6{line-height:1;font-size:2.6rem;color:#000;margin:0;padding:0;margin-top:1.5rem;padding-bottom:1.5rem;border-bottom:0.2rem solid #ccc}
+.reprResvCondition .ListData > ul{margin:0;padding:0;list-style:none}
+.reprResvCondition .ListSet > a{display:block;color:#000}
+.reprResvCondition .ListSet table{width:100%;table-layout:fixed;border-collapse:collapse}
+.reprResvCondition .ListSet th{width:13.4rem;height:15.5rem ;vertical-align:middle;position:relative;font-size:2.5rem;background:#f3f3f3;border-bottom:0.2rem solid #ccc}
+.reprResvCondition .ListSet th span{display:block;text-align:center}
+.reprResvCondition .ListSet th span img{width:1.8rem;margin-left:1rem}
+.reprResvCondition .ListSet th span.s_text{font-weight:700;letter-spacing:0.5rem;margin-top:3rem}
+.reprResvCondition .ListSet th span.s_text.request{color:#3398cc}
+.reprResvCondition .ListSet th span.s_text.approved{color:#005dff}
+.reprResvCondition .ListSet th span.s_text.reject{color:#cc0000}
+.reprResvCondition .ListSet th span.reg_date{font-size:1.4rem;font-family:'Nanum Gothic',sans-serif;color:#333}
+.reprResvCondition .ListSet td{padding:1.5rem 0 1.5rem 3rem;border-bottom:0.2rem solid #ccc}
+.reprResvCondition .ListSet td ol{margin:0;padding:0;list-style:none}
+.reprResvCondition .ListSet td li{line-height:2.5rem;font-size:2rem;color:#333 }
+.reprResvCondition .ListSet td li span{font-size:2.2rem;display:inline-block}
+.reprResvCondition .ListSet td li.day{margin:0.7rem 0}
+.reprResvCondition .ListSet td li.day span{font-weight:700;color:#010101;vertical-align:middle}
+.reprResvCondition .ListSet td li.day span.time{margin:0 3rem}
+.reprResvCondition .ListSet td li.day span.text{color:#333;font-weight:normal}
+.reprResvCondition .Details{padding:0 1.5rem;background:#e9f7ff;color:#000;display:none}
+.reprResvCondition .Details dl{margin:0;padding:0}
+.reprResvCondition .Details dl dt{font-size:2.6rem;line-height:1;margin:3.5rem 0 1.5rem 0;width:100%;display:inline-block}
+.reprResvCondition .Details dl dd{margin:0}
+.reprResvCondition .Details input.readonly{width:100%;font-size:2.2rem;border:0.2rem solid #ccc;background:#fff;color:#000;line-height:4.7rem;height:4.7rem;padding:0 1.2rem}
+.reprResvCondition .Details input.u_enter{width:100%;font-size:2.2rem;border:none;border-bottom:0.2rem solid #ccc;color:#000;line-height:4.7rem;height:4.7rem;background:transparent}
+.reprResvCondition .Details input.u_enter::placeholder{color:#999}
+.reprResvCondition .Details textarea{width:100%;height:8rem;border:0.2rem solid #ccc;padding:1rem;background:#fff}
+.reprResvCondition .Details textarea::placeholder{color:#999}
+.reprResvCondition .Details dd span.i_text{display:block;font-size:2.2rem;color:#999;margin-top:1rem}
+.reprResvCondition .Details dd.NetworkTel{width:100%;display:inline-block}
+.reprResvCondition .Details dd.NetworkTel input{width:73%;float:left}
+.reprResvCondition .Details dd.NetworkTel a{width:25%;font-size:2.2rem;float:right;text-align:center;border:0.2rem solid #005dff;background:#fff;line-height:3.8rem;border-radius:2rem;margin-top:0.2rem}
+.reprResvCondition .Details dd.RsrvDate ul{margin:0;padding:0;list-style:none;display:table}
+.reprResvCondition .Details dd.RsrvDate ul li{width:25%;display:table-cell;padding-right:1rem}
+.reprResvCondition .Details dd.RsrvDate ul li.tt{padding-right:0}
+.reprResvCondition .Details dd.RsrvDate .SelectBox input.view{text-align:center;color:#000}
+.reprResvCondition .Details .btn_area{width:100%;display:inline-block;margin:4.25rem 0}
+.reprResvCondition .Details .btn_area button{width:48.9%;height:7rem;font-size:2.6rem;border-radius:0.7rem;font-weight:bold;border:none;color:#fff}
+.reprResvCondition .Details .btn_area .modify{float:left;background:#005dff}
+.reprResvCondition .Details .btn_area .cancel{float:right;background:#fe5568}
+.reprResvCondition .ListData.Complete{display:none}
+.reprResvCondition .ListData.Complete > ul > li:first-child th{border-top:0.2rem solid #ccc}
+.reprResvCondition .ListData.Complete > ul > li:first-child td{border-top:0.2rem solid #ccc}
+.reprResvCondition .ListData.Complete th{background:#005dff}
+.reprResvCondition .ListData.Complete th span.reg_date{color:#fff}
+.reprResvCondition .ListData.Complete th span.s_text{color:#fff}
+.reprResvCondition .ListData.Complete .Details{padding:0 1.5rem 3.5rem 1.5rem}
+.reprResvCondition .ListData.Complete .Details h6{text-align:center;width:100%;display:inline-block;font-weight:700;color:#333;border:none;padding:0;margin:3.5rem 0 0 0}
+.reprResvCondition .ListData.Complete dd.RsrvDate input{text-align:center}
+/*차량고장코드*/
+.carTrublCdNew{padding-bottom:5.5rem}
+.carTrublCdNew section{padding:0 4.5rem}
+.carTrublCdNew h4{background:#005dff;margin:0;padding:0;line-height:9.5rem;font-size:2.6rem;font-weight:700;padding-left:2.5rem;border-radius:0.6rem 0.6rem 0 0}
+.carTrublCdNew h4 img{height:2.4rem;margin-right:1.2rem}
+.carTrublCdNew .search{margin:5rem 0}
+.carTrublCdNew .search ul{width:100%;display:table;margin:0;padding:0;}
+.carTrublCdNew .search li{display:table-cell;vertical-align:bottom}
+.carTrublCdNew .search li.cate{width:12.4rem}
+.carTrublCdNew .search li.cate .SelectBox input.view{height:4.7rem;color:#fff;background:url(../images/common/icon_arrow_down_down_w.svg) no-repeat right center;background-size:2rem;border-bottom:0.2rem solid #fff}
+.carTrublCdNew .search li.field{padding-left:1.2rem}
+.carTrublCdNew .search li.field input{width:100%;height:4.7rem;line-height:4.7rem;font-size:2.2rem;color:#fff;border:none;border-bottom:0.2rem solid #fff;background:transparent}
+.carTrublCdNew .search li.field input::placeholder{color:#fff}
+.carTrublCdNew .search li.s_btn{width:10rem}
+.carTrublCdNew .search li.s_btn button{background:#005dff;color:#fff;height:4.7rem;width:100%;border:none;font-size:2.2rem;border-radius:0.6rem}
+.carTrublCdNew article > div{background:#fff;color:#000}
+.carTrublCdNew article > div dl{padding:0 2.5rem 4.3rem 2.5rem;margin:0;border-left:1px solid #ccc;border-right:1px solid #ccc}
+.carTrublCdNew article > div dt{width:100%;display:inline-block;font-size:2.6rem;line-height:1;margin:3.7rem 0 2rem 0}
+.carTrublCdNew article > div textarea{width:100%;height:13rem;font-size:2.6rem;margin:0;border:0.2rem solid #ccc;background:#f3f3f3;padding:1rem}
+.carTrublCdNew article > div dd.code textarea{height:8rem}
+.carTrublCdNew article button{width:100%;height:11.5rem;background:#005dff;color:#fff;font-size:2.6rem;border:none;border-radius:0 0 0.6rem 0.6rem;font-weight:700}
+/*전시장 찾기*/
+.saleCarCentFindNew h3.CommonTitle{font-size:4.2rem}
+.saleCarCentFindNew{background:#fff;color:#000}
+.saleCarCentFindNew .MapArea .Marker td.adres,
+.saleCarCentFindNew .MapArea .Marker td.tel{width:31.5rem}
+.saleCarCentFindNew .MapArea .Marker td.text a{font-size:2.2rem;color:#005dff;width:11.3rem;height:3rem;border:1px solid #005dff;padding:0.2rem 1.7rem;border-radius:2rem}
+.saleCarCentFindNew .MapArea .Marker td.text a.on{background:#005dff;color:#fff}
+.saleCarCentFindNew .MapArea{margin-bottom:0.8rem}
+.saleCarCentFindNew .ListData{padding:0 4.5rem}
+.saleCarCentFindNew .SearchResult{margin-bottom:1.5rem}
+.saleCarCentFindNew .SearchResult h5{background:#1a1e2a;color:#fff;line-height:4.85rem;font-weight:700;font-size:2.4rem;letter-spacing:0.6rem;margin:0;padding:0;text-align:center}
+.saleCarCentFindNew .SearchResult ul{margin:0;padding:0;list-style:none;background:#f3f3f3}
+.saleCarCentFindNew .SearchResult ul > li{border-bottom:0.2rem solid #999}
+.saleCarCentFindNew .SearchResult table{width:100%}
+.saleCarCentFindNew .SearchResult td{vertical-align:middle;padding:1.5rem 0}
+.saleCarCentFindNew .SearchResult td.icon{width:12.8rem;text-align:center}
+.saleCarCentFindNew .SearchResult td.icon img{width:7.5rem}
+.saleCarCentFindNew .SearchResult td.details ol{margin:0;padding:0;list-style:none}
+.saleCarCentFindNew .SearchResult td.details ol li{line-height:1.2;font-size:2.2rem}
+.saleCarCentFindNew .SearchResult td.details ol li.name{font-weight:700;color:#555}
+.saleCarCentFindNew .NetworkSearchMethod .tab{margin-top:3rem}
+.saleCarCentFindNew .NetworkSearchMethod .Name .s_text input{height:6.8rem}
+.saleCarCentFindNew .NetworkSearchMethod .Method .s_btn{padding-top:1.9rem}
+.saleCarCentFindNew .NetworkSearchMethod .Method.Area li{vertical-align:bottom}
+/*차량 안전 점검*/
+.vehicInspectList{background:#fff}
+.vehicInspectList +.Dock .MenuList{box-shadow:0 0 3rem rgba(65,65,65,0.5)}
+.vehicInspectList section{padding:0 4.5rem;color:#000;margin-top:5.8rem}
+.vehicInspectList .termsDate table{width:100%}
+.vehicInspectList .termsDate th{font-size:2.6rem;text-align:left}
+.vehicInspectList .termsDate th span{border-bottom:0.2rem solid #999;display:inline-block;padding:0 2rem 0.2rem 2rem;margin-top:0.4rem}
+.vehicInspectList .termsDate td.in_text{width:16rem}
+.vehicInspectList .termsDate td.icon{width:3.6rem;padding:0 1rem;font-size:2.6rem;color:#999;text-align:center}
+.vehicInspectList .termsDate td input{width:100%;height:4.7rem;line-height:4.7rem;text-align:center;border:none;border-radius:0;border-bottom:0.2rem solid #999;color:#000;font-size:2.6rem}
+.vehicInspectList .termsDate td.srch_btn{width:9.25rem;padding-left:1.5rem;text-align:right}
+.vehicInspectList .termsDate td.srch_btn button{width:7.75rem;height:4.7rem;border:none;background:#005dff;color:#fff;font-size:2.2rem;border-radius:0.6rem}
+.vehicInspectList .listData{padding:2rem 0}
+.vehicInspectList .listData table{width:100%}
+.vehicInspectList .listData th{height:9.7rem;font-size:2.6rem;font-weight:700;text-align:center;border-bottom:1px solid #ccc}
+.vehicInspectList .listData th:first-child{text-align:left;text-indent:1.1rem}
+.vehicInspectList .listData th:last-child{text-align:left;text-indent:6rem}
+.vehicInspectList .listData td{height:9.5rem;font-size:2.6rem;font-weight:700;border-bottom:1px solid #ccc}
+.vehicInspectList .listData td.s_date{text-indent:1.1rem;font-size:2.2rem;color:#777}
+.vehicInspectList .listData td.carNum{text-align:center}
+.vehicInspectList .listData td.carName{padding-left:6rem}
+.vehicInspectList.Network a.inspectionReg{display:block;text-align:center;margin-bottom:2rem;background:#005dff;color:#fff;line-height:11.5rem;font-size:2.6rem;font-weight:700;border-radius:1rem}
+.vehicInspectList.Network .termsDate th{padding:2rem 0}
+.vehicInspectList.Network .termsDate td{padding:2rem 0}
+.vehicInspectList.Network .termsDate .carNumenter{text-align:left}
+.vehicInspectList.Network .termsDate td.srch_btn{vertical-align:top}
+.vehicInspectList.Network .termsDate td.srch_btn button{height:13.4rem}
+.vehicInspectList.Network td.srch_btn button img{width:2.74rem}
+.vehicInspectList.Network td.srch_btn button span{display:block}
+/*차량 안전 점검표*/
+.vehicInspect{background:#fff}
+.vehicInspect +.Dock .MenuList{box-shadow:0 0 3rem rgba(65,65,65,0.5)}
+.vehicInspect section{padding:0 4.5rem 3rem 4.5rem;color:#000}
+.vehicInspect .carInfo{margin:5.6rem 0;border:1px solid #ccc;position:relative}
+.vehicInspect .carInfo .listTB{width:100%;table-layout:fixed}
+.vehicInspect .carInfo .listTB th{background:#000;color:#fff;text-align:center;border:1px solid #ccc;font-size:2.2rem;font-weight:700;height:3.35rem}
+.vehicInspect .carInfo .listTB td{text-align:center;height:6rem;border:1px solid #ccc;font-weight:700;color:#000;font-size:1.8rem;line-height:1;vertical-align:middle;padding:1rem}
+.vehicInspect .carInfo .listTB td.car_num{text-align:right;padding:0;padding-left:1rem;padding-right:7rem;position:relative}
+.vehicInspect .carInfo button.details{border:none;width:6rem;height:6rem;text-indent:-99999px;background:#005dff url(../images/common/icon_magnifying_white.png) no-repeat center center;background-size:2.6rem;position:absolute;right:0;top:0}
+.vehicInspect .carListPopup{width:100%;border-radius:1rem;overflow:hidden;position:absolute;left:0;top:0;z-index:9;display:none}
+.vehicInspect .carListPopup h5{width:100%;position:relative;text-align:center;background:#005dff;font-size:2.6rem;font-weight:700;color:#fff;line-height:9.5rem;margin:0;padding:0}
+.vehicInspect .carListPopup h5 a{position:absolute;top:50%;transform:translateY(-50%);right:1.5rem}
+.vehicInspect .carListPopup h5 a img{width:2.5rem}
+.vehicInspect .carListPopup .listData{background:#000;padding:0 1.5rem 3.5rem 1.5rem;width:100%;display:inline-block}
+.vehicInspect .carListPopup form{margin:2.5rem 0 3.5rem 0}
+.vehicInspect .carListPopup dl{width:100%;display:table}
+.vehicInspect .carListPopup dt{display:table-cell;width:17rem;text-align:left;padding-right:3.5rem;vertical-align:bottom}
+.vehicInspect .carListPopup dt span{line-height:4.7rem;color:#fff;border-bottom:1px solid #fff;display:inline-block;width:100%;text-align:center;font-size:2.6rem;font-weight:400}
+.vehicInspect .carListPopup dd{display:table-cell;vertical-align:bottom;position:relative;height:4.7rem}
+.vehicInspect .carListPopup dd button{width:8.5rem;background:#005dff;color:#fff;border:none;height:4.7rem;float:right;border-radius:0.5rem;font-size:2.2rem;position:absolute;right:0;top:0}
+.vehicInspect .carListPopup dd input{width:75%;height:4.7rem;line-height:4.7rem;border:none;border-bottom:1px solid #fff;font-size:2.6rem;background:transparent;color:#fff;padding-left:2rem}
+.vehicInspect .carListPopup dd input::placeholder{color:#fff}
+.vehicInspect .carListPopup .listData > div{width:100%;display:inline-block;height:17.5rem;background:#fff;overflow-y:auto;overflow-x:hidden}
+.vehicInspect .carListPopup .listData table{width:100%}
+.vehicInspect .carListPopup .listData th{height:6.5rem;text-align:center;border:1px solid #ccc;font-size:2.6rem}
+.vehicInspect .carListPopup .listData th:first-child{width:20.2rem}
+.vehicInspect .carListPopup .listData td{height:10.9rem;border:1px solid #ccc;text-align:center;font-size:2.6rem;font-weight:700}
+.vehicInspect .checkList{margin-bottom:4rem}
+.vehicInspect .checkList h4{margin-bottom:3.2rem;font-size:2.6rem;font-weight:700}
+.vehicInspect .checkList > div{border:1px solid #ccc}
+.vehicInspect .checkList table{width:100%}
+.vehicInspect .checkList th{text-align:center;height:4.6rem;font-size:2.2rem;font-weight:700;border:1px solid #ccc;background:#000;color:#fff}
+.vehicInspect .checkList th:first-child{width:4.5rem}
+.vehicInspect .checkList th.emergency{width:5.3rem;background:#f1050f;color:#000}
+.vehicInspect .checkList th.advice{width:5.3rem;background:#ffd200;color:#000}
+.vehicInspect .checkList th.good{width:5.3rem;background:#04c461;color:#000}
+.vehicInspect .checkList td{height:6rem;border:1px solid #ccc;text-align:center;color:#777;font-weight:700;font-size:2.2rem;vertical-align:middle}
+.vehicInspect .checkList td.name{padding:0 1.5rem;text-align:left}
+.vehicInspect .checkList td.has_bg{background:#e8edf2}
+.vehicInspect .checkList td img{width:2.45rem}
+.vehicInspect .resultComment{margin-bottom:6rem}
+.vehicInspect .resultComment h4{margin-bottom:2rem;font-size:2.6rem;font-weight:700}
+.vehicInspect .resultComment .text{width:100%;height:11rem;border:1px solid #ccc;padding:1rem;overflow-x:hidden;overflow-y:auto;margin-bottom:4rem}
+.vehicInspect .resultComment table{width:100%}
+.vehicInspect .resultComment th{background:#e8edf2;text-align:center;font-size:1.8rem;font-weight:700;border:1px solid #ccc;width:7.7%;height:3.5rem}
+.vehicInspect .resultComment th:first-child{background:#005dff;color:#fff;width:auto;line-height:1.2}
+.vehicInspect .resultComment td{border:1px solid #ccc;text-align:center;height:6rem;vertical-align:middle}
+.vehicInspect .carCheck h4{margin-bottom:1.5rem;font-size:2.6rem;font-weight:700} 
+.vehicInspect .carCheck ul{width:100%;display:inline-block;margin:0;padding:0;list-style:none;text-align:center}
+.vehicInspect .carCheck ul li{position:relative}
+.vehicInspect .carCheck ul li .point{position:absolute;width:1.6rem;height:1.6rem;border:1px solid #000;border-radius:100%;background:#fff}
+.vehicInspect .carCheck ul li .point i{width:1rem;height:1rem;border-radius:100%;background:#ccc;border:1px solid #a4a4a4;line-height:0;position:absolute;left:50%;top:50%;transform:translate(-50% , -50%)}
+.vehicInspect .carCheck ul li .point i.on{background:#005dff;border-color:#0544b1}
+.vehicInspect .carCheck ul li.carLeft{float:left;margin-top:2.7rem;margin-left:2rem}
+.vehicInspect .carCheck ul li.carLeft img{width:14.4rem}
+.vehicInspect .carCheck ul li.carLeft .point{left:7.2rem}
+.vehicInspect .carCheck ul li.carLeft .point.p1{top:7.1rem}
+.vehicInspect .carCheck ul li.carLeft .point.p2{top:17.65rem}
+.vehicInspect .carCheck ul li.carLeft .point.p3{top:26.75rem}
+.vehicInspect .carCheck ul li.carLeft .point.p4{top:39.45rem}
+.vehicInspect .carCheck ul li.carTop{display:inline-block}
+.vehicInspect .carCheck ul li.carTop img{width:22.25rem}
+.vehicInspect .carCheck ul li.carTop .point{left:50%;transform:translateX(-50%)}
+.vehicInspect .carCheck ul li.carTop .point.p1{top:3.5rem}
+.vehicInspect .carCheck ul li.carTop .point.p2{top:9.3rem}
+.vehicInspect .carCheck ul li.carTop .point.p3{top:27.8rem}
+.vehicInspect .carCheck ul li.carTop .point.p4{top:42.95rem}
+.vehicInspect .carCheck ul li.carTop .point.p5{top:45.25rem}
+.vehicInspect .carCheck ul li.carRight{float:right;margin-top:2.7rem;margin-right:2rem}
+.vehicInspect .carCheck ul li.carRight img{width:14.4rem}
+.vehicInspect .carCheck ul li.carRight .point{left:5.6rem}
+.vehicInspect .carCheck ul li.carRight .point.p1{top:7.1rem}
+.vehicInspect .carCheck ul li.carRight .point.p2{top:17.65rem}
+.vehicInspect .carCheck ul li.carRight .point.p3{top:26.75rem}
+.vehicInspect .carCheck ul li.carRight .point.p4{top:39.45rem}
+/*지도(Common)*/
+.MapArea{width:100%;height:70rem;position:relative}
+.MapArea .Marker{position:absolute;left:50%;top:50%;transform:translateX(-50%) translateY(-50%)}
+.MapArea .Marker i{width:6.75rem;display:inline-block}
+.MapArea .Marker i img{width:100%}
+.MapArea .Marker .details{width:47.85rem;height:19.55rem;color:#000;position:absolute;left:50%;transform:translateX(-50%);top:-20rem;background:url(../images/map_details_bg.png) no-repeat;background-size:cover}
+.MapArea .Marker .place_name{text-align:center;width:100%;font-size:2.6rem;font-weight:700;line-height:6.4rem;margin:0;padding:0 1.5rem;margin-top:0.8rem;white-space:nowrap;text-overflow:ellipsis;overflow:hidden} 
+.MapArea .Marker .adrs_icon{padding:1.25rem 1.5rem 0 1.5rem}
+.MapArea .Marker table{width:100%;table-layout:fixed}
+.MapArea .Marker td{font-size:2.6rem;vertical-align:middle}
+.MapArea .Marker td.adres{width:27.2rem;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+.MapArea .Marker td.icon{text-align:right}
+.MapArea .Marker td.icon a{width:5.15rem;display:inline-block;border-radius:0.2rem;background:#999}
+.MapArea .Marker td.icon a img{width:100%}
+.MapArea .Marker td.icon a.on{background:#005dff}
+.MapArea .MapData{width:100%;height:70rem;background:#fff;overflow:hidden}
+.MapArea .MapData iframe{width:100%;height:100%}
+/*Popup(Common)*/
+.LayerPopup{width:100%;position:fixed;left:50%;top:0;background:#fff;z-index:10;max-width:76.8rem;transform:translateX(-50%);line-height:1.5;display:none}
+.LayerPopup .tit{width:100%;background:#005dff;text-align:center;font-weight:700;font-size:4.6rem;line-height:10.5rem;position:relative}
+.LayerPopup .tit a{position:absolute;right:4.5rem;top:50%;transform:translateY(-50%);line-height:0}
+.LayerPopup .tit a img{width:3.4rem}
+.LayerPopup .PopContent{width:100%;background:#fff;overflow-y:auto;overflow-x:hidden;color:#333}
+/*Popup(이용약관)*/
+.PolicyPopup .PopContent{font-size:2.2rem;padding:5rem 4.5rem 5rem 4.5rem}
+.PolicyPopup .PopContent h6{font-size:2.6rem;font-weight:700;margin:0;padding:0;margin-bottom:2rem}
+.PolicyPopup .PopContent p{width:100%;display:inline-block;margin:2rem 0;text-align:justify}
+@media all and (max-width:720px){
+    /*공지사항_상세글*/
+    .trappNoticeNewRead table tbody td dd br{display:none}
+    /*알람정보*/
+    .msgAlarm section td ol .seciceCenter{float:initial}
+    .msgAlarm section td ol li{font-size:2rem}
+}
+@media all and (max-width:600px){
+    body{font-family:'Nanum Gothic',sans-serif}
+     /*알람정보*/
+    .msgAlarm section tr td ul{padding:2.5rem 3rem 2.3rem 3rem}
+}
+@media all and (max-width:320px){
+    /*회원정보(입력/수정 공통)*/
+    .MemberEnterComm dd > div br{display:none}
+    /*나의정보수정*/
+    .signInMngInfoNew tr.other td br{display:block}
+    .signInMngInfoNew tr.other td:last-child{text-indent:-1rem}
+}
