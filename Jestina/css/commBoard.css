@@ -1,0 +1,130 @@
+﻿@charset "utf-8";
+/*Common - 검색/Total영역*/
+.boardSearch{text-align:right;position:relative;margin-bottom:20px}
+.boardSearch .total{position:absolute;left:0;bottom:0;font-size:16px;font-weight:500}
+.boardSearch .total b{color:#f06e78;font-weight:500}
+.boardSearch select.select{width:154px;margin-right:6px;}
+.searchWord{display:inline-block;vertical-align:middle;height:46px;border:1px solid #e0e0e0}
+.searchWord input[type="text"]{width:calc(100% - 44px);float:left;height:44px;border:none;padding:0 12px}
+.searchWord input[type="text"]::placeholder{color:#bdbdbd}
+.searchWord button{width:44px;height:44px;float:right;border:none;background:#fff}
+
+/*Common - Board - List*/
+.commBoardList table{border-top:1px solid #101010}
+.commBoardList th{height:50px;border-bottom:1px solid #101010;font-weight:500;padding:0 15px}
+.commBoardList td{height:80px;text-align:center;border-bottom:1px solid #e0e0e0;font-size:16px;color:#505050;padding:0 15px;line-height:1.4}
+.commBoardList td a{color:#505050}
+.commBoardList td.alLeft{text-align:left}
+.commBoardList .typeGallery{width:100%;display:inline-block}
+.commBoardList .typeGallery > li{width:290px;float:left;margin-right:40px;margin-bottom:100px}
+.commBoardList .typeGallery > li:nth-child(4n){margin-right:0}
+.commBoardList .typeGallery ol{width:100%;}
+.commBoardList .typeGallery ol > li{width:100%;display:inline-block}
+.commBoardList .typeGallery li.thumb a{width:100%;height:200px;background-position:center center;background-repeat:no-repeat;background-size:cover;display:block;position:relative}
+.commBoardList .typeGallery li.thumb img{width:0;height:0;position:absolute;opacity:0}
+.commBoardList .typeGallery li.tit{margin:20px 0}
+.commBoardList .typeGallery li.tit a{font-size:18px;font-weight:500;line-height:1.4;display:block;display:-webkit-box;overflow:hidden;text-overflow:ellipsis;-ms-text-overflow:ellipsis;-webkit-box-orient:vertical;-webkit-line-clamp:2;}
+.commBoardList .typeGallery li.date{font-size:16px;color:#505050}
+.commBoardList .typeGallery + .paging{margin-top:0}
+
+/*Common - Board - View*/
+.commBoardView .title{border-top:1px solid #101010;border-bottom:1px solid #bababa;padding:40px}
+.commBoardView .title h5{font-size:28px;font-weight:500}
+.commBoardView .title span{font-size:18px;color:#767676;margin-top:25px;display:block}
+.commBoardView .viewWrap{padding:0 30px}
+.commBoardView .attachFile h6{margin:30px 0 25px 0;font-size:16px;font-weight:500}
+.commBoardView .attachFile h6 b{color:#fe7986;font-weight:500}
+.commBoardView .attachFile h6 span{font-size:16px;color:#767676;font-weight:400}
+.commBoardView .attachFile h6 a{display:inline-block;font-weight:400;margin-left:18px;border-bottom:1px solid #101010;padding-bottom:1px}
+.commBoardView .attachFile li{border:1px solid #e0e0e0;border-bottom:none;padding:20px}
+.commBoardView .attachFile li:last-child{border-bottom:1px solid #e0e0e0}
+.commBoardView .attachFile li a{color:#767676;font-size:16px;display:inline-block;padding-left:34px;position:relative}
+.commBoardView .attachFile li a::before{content:'';width:18px;height:18px;position:absolute;left:0;top:50%;transform:translateY(-50%);background:url(/images/icon_ir_file.svg) no-repeat}
+.commBoardView .attachFile li span{color:#767676}
+.commBoardView .bbsText{padding:60px 0 110px 0;font-size:16px;color:#505050;line-height:1.6}
+.commBoardView .bbsText img{max-width:100%}
+.commBoardView .ctrl{border-top:1px solid #e0e0e0}
+.commBoardView .ctrl dl{border-bottom:1px solid #e0e0e0;width:100%;display:table;table-layout:fixed}
+.commBoardView .ctrl dt{display:table-cell;width:100px;text-align:center;font-size:16px;font-weight:500;padding:30px 0}
+.commBoardView .ctrl dd{display:table-cell;padding:30px 30px 30px 10px;position:relative}
+.commBoardView .ctrl dd a{font-size:16px;color:#505050;display:inline-block;width:calc(100% - 110px);white-space:nowrap;text-overflow:ellipsis;overflow:hidden;}
+.commBoardView .ctrl dd span{position:absolute;right:30px;top:50%;transform:translateY(-50%);color:#505050;font-size:16px}
+.commBoardView .buttons{text-align:center;margin-top:100px}
+.commBoardView .buttons a{display:inline-block;line-height:58px;border:1px solid #101010;border-radius:58px;width:160px;font-size:18px}
+.commBoardView .buttons a.typeWhite{background:#fff;color:#101010}
+
+/*Common - Paging*/
+.paging{margin-top:80px;text-align:center}
+.paging > a{display:inline-block;vertical-align:middle;width:20px;height:20px;line-height:20px}
+.paging > a img{vertical-align:baseline}
+.paging ul{display:inline-block;margin:0 15px;vertical-align:middle}
+.paging li{width:20px;line-height:20px;display:inline-block;margin:0 5px;position:relative;text-align:center}
+.paging li a{display:block}
+.paging li.now span{display:inline-block;position:relative}
+.paging li.now span::after{content:'';width:100%;height:2px;background:#101010;position:absolute;left:0;bottom:-2px}
+
+@media all and (max-width:1280px) {
+    /*Common - Board - List*/
+    .commBoardList .typeGallery > li{margin-right:0;width:25%;text-align:center}
+    .commBoardList .typeGallery ol{width:95%;text-align:left;display:inline-block}
+}
+@media all and (max-width:1060px) {
+    /*Common - Board - List*/
+    .commBoardList .typeGallery > li{width:33.33%}
+}
+
+@media all and (max-width:812px) {
+    /*Common - 검색/Total영역*/
+    .boardSearch{width:100%;display:inline-block;margin-bottom:4rem}
+    .boardSearch .searchWord{width:100%;margin-left:0;margin-top:1rem}
+    .boardSearch .total{display:none}
+    .boardSearch select.select{width:100%;margin-right:0;background:url(/images/common/icon_select_arrow.svg) no-repeat 96.5% center;background-size:2rem 1rem}
+    .searchWord{height:auto}
+    .searchWord input[type="text"]{width:calc(100% - 6.4rem);height:6.4rem;padding:0 2rem;font-size:2.4rem}
+    .searchWord button{width:6.4rem;height:6.4rem}
+    .searchWord button img{height:2.4rem}
+    /*Common - Board - List*/
+    .commBoardList th{height:7.7rem;font-size:2.4rem}
+    .commBoardList td{height:9.8rem;font-size:2.4rem}
+    .commBoardList colgroup,
+    .commBoardList thead{display:none}
+    .commBoardList td.no{display:none}
+    .commBoardList tr{width:100%;display:inline-block;position:relative;border-bottom:1px solid #e0e0e0}
+    .commBoardList .typeGallery > li{width:100%;margin-right:0;margin-bottom:9.8rem}
+    .commBoardList .typeGallery ol{width:100%}
+    .commBoardList .typeGallery li.thumb a{height:40rem}
+    .commBoardList .typeGallery li.tit{margin:3.2rem 0 3.1rem 0}
+    .commBoardList .typeGallery li.tit a{font-size:2.8rem;line-height:1.2}
+    .commBoardList .typeGallery li.date{font-size:2.4rem}
+    .commBoardList .typeGallery > li:last-child{margin-bottom:8.9rem}
+    /*Common - Board - View*/
+    .commBoardView .title{padding:3.7rem 2rem}
+    .commBoardView .title h5{font-size:2.8rem}
+    .commBoardView .title span{font-size:2.4rem;margin-top:1.8rem}
+    .commBoardView .viewWrap{padding:0 2rem}
+    .commBoardView .attachFile h6{margin:3.6rem 0 2.5rem 0;font-size:2.4rem}
+    .commBoardView .attachFile h6 span{font-size:2.4rem}
+    .commBoardView .attachFile h6 a{margin-left:3.5rem}
+    .commBoardView .attachFile li{padding:2.5rem 2rem}
+    .commBoardView .attachFile li a{font-size:2.2rem;padding-left:4.3rem}
+    .commBoardView .attachFile li a::before{width:2.5rem;height:2.4rem;background:url(/images/icon_ir_file.svg) no-repeat;background-size:2.5rem 2.4rem}
+    .commBoardView .attachFile li span{font-size:2.2rem}
+    .commBoardView .bbsText{padding:7.5rem 0 14rem 0;font-size:2.4rem}
+    .commBoardView .ctrl dt{width:10rem;font-size:16px;padding:3.6rem 0;font-size:2.4rem}
+    .commBoardView .ctrl dd{padding:3.6rem 3.6rem 3.6rem 1.9rem}
+    .commBoardView .ctrl dd a{font-size:2.4rem;width:100%}
+    .commBoardView .ctrl dd span{display:none}
+    .commBoardView .buttons{margin:8rem 0 7rem 0}
+    .commBoardView .buttons a{line-height:8.5rem;border-radius:8.5rem;width:22rem;font-size:2.8rem}
+    /*Common - Paging*/
+    .paging{margin-top:8rem;padding:0;position:relative}
+    .paging > a{width:3.4rem;height:3.4rem;line-height:3.4rem;position:absolute;top:0}
+    .paging > a:first-child{left:0;background:url(/images/common/icon_paging_first_m.svg) no-repeat left center;background-size:1.4rem}
+    .paging > a:nth-child(2){left:3.4rem;background:url(/images/common/icon_paging_prev_m.svg) no-repeat left center;background-size:1rem}
+    .paging > a:nth-child(4){right:3.4rem;background:url(/images/common/icon_paging_next_m.svg) no-repeat right center;background-size:1rem}
+    .paging > a:last-child{right:0;background:url(/images/common/icon_paging_last_m.svg) no-repeat right center;background-size:1.4rem}
+    .paging > a img{display:none}
+    .paging ul{margin:0}
+    .paging li{width:3.4rem;line-height:3.4rem;margin:0 0.5rem;font-size:2.4rem}
+    .paging li.now span::after{bottom:-1rem}
+}

@@ -1,0 +1,38 @@
+﻿@charset "utf-8";
+/*공통*/
+.store .storeTab{text-align:center;margin-bottom:80px}
+.store .storeTab li{display:inline-block;margin:0 16px}
+.store .storeTab a{font-size:20px;color:#767676;padding-bottom:15px;border-bottom:4px solid #fff}
+.store .storeTab a.on{color:#101010;border-color:#101010}
+.store .boardSearch .searchWord{width:260px;margin-left:6px}
+.store .boardSearch select.shop{width:154px}
+.store .boardSearch select.area{width:154px;margin-left:6px}
+.store .commBoardList td.address{text-align:left}
+.store .commBoardList td.name span{display:none}
+.store.overseas .commBoardList td.name a:hover{text-decoration:underline}
+@media all and (max-width:812px) {
+    .store .storeTab{margin-bottom:8rem}
+    .store .storeTab li{margin:0 3rem}
+    .store .storeTab a{font-size:3.4rem;padding-bottom:1rem;border-bottom:0.4rem solid #fff}
+    .store .boardSearch{width:100%;display:inline-block;margin-bottom:4rem}
+    .store .boardSearch .searchWord{width:100%;margin-left:0;margin-top:1rem}
+    .store .boardSearch .total{display:none}
+    .store .boardSearch select.shop{width:calc(50% - 0.5rem);float:left}
+    .store .boardSearch select.area{width:calc(50% - 0.5rem);margin-left:0;float:right}
+    .store .commBoardList td.name span{display:inline-block}
+    .store .commBoardList td.name span{margin-left:2rem;padding-left:2rem;position:relative;display:inline-block}
+    .store .commBoardList td.name span::before{content:'';width:1px;height:1.8rem;background:#e0e0e0;position:absolute;left:0;top:50%;transform:translateY(-50%)}
+    .store .commBoardList tbody tr{padding:0 2rem}
+    .store .commBoardList tbody td{display:inline-block;border:none;height:auto;padding:0}
+    .store .commBoardList td.name{width:100%;text-align:left;font-size:2.4rem;color:#767676}
+    .store .commBoardList td.address{width:100%;text-align:left;font-size:2.4rem;color:#767676;margin:0 0 3rem 0}
+    /*국내*/
+    .domestic .commBoardList td.brand{width:100%;text-align:left;font-size:2.8rem;font-weight:500;color:#101010;margin:3.5rem 0 1.5rem 0}
+    .domestic .commBoardList td.area,
+    .domestic .commBoardList td.shop,
+    .domestic .commBoardList td.tel{display:none}
+    /*해외*/
+    .overseas .commBoardList td.no{margin:3.5rem 0 1.5rem 0;width:auto;vertical-align:middle}
+    .overseas .commBoardList td.nation{text-align:left;font-size:2.8rem;font-weight:500;color:#101010;margin:3.5rem 0 1.5rem 0;display:inline-block}
+    .overseas .commBoardList td.area{display:none}
+}

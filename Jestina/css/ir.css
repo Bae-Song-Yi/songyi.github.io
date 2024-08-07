@@ -1,0 +1,102 @@
+﻿@charset "utf-8";
+/*주가정보*/
+.stock .content{padding-bottom:200px}
+.stock .realTime h3{width:100%;display:inline-block;margin-bottom:20px;font-size:28px;font-weight:500;position:relative}
+.stock .realTime h3 .date{position:absolute;right:0;bottom:0;font-size:14px;color:#767676;font-weight:400}
+.stock .realTime > ul{width:100%;display:inline-block}
+.stock .realTime > ul li{width:290px;float:left;margin-right:40px}
+.stock .realTime > ul li:last-child{margin-right:0}
+.stock .realTime .box{width:100%;height:140px;border:1px solid #e0e0e0;position:relative;display:inline-block;text-align:left}
+.stock .realTime .box > div{width:100%;position:absolute;left:0;top:50%;transform:translateY(-50%);padding:0 40px}
+.stock .realTime .box h6{font-size:16px;font-weight:500;margin-bottom:20px}
+.stock .realTime .box span{width:100%;display:inline-block;font-size:28px;font-weight:500;line-height:28px;position:relative;white-space:nowrap}
+.stock .realTime .box span b{font-size:16px;font-weight:400;vertical-align:bottom;margin-left:10px}
+.stock .realTime .box span::before{content:'';width:14px;height:10px;position:absolute;left:0;top:50%;transform:translateY(-50%)}
+.stock .realTime .box span.lower{color:#3c4ef7;padding-left:23px}
+.stock .realTime .box span.lower::before{background:url(/images/icon_ir_lower.svg)}
+.stock .realTime .box span.upper{color:#f02222;padding-left:23px}
+.stock .realTime .box span.upper::before{background:url(/images/icon_ir_upper.svg)}
+.stock .realTime .tableData{margin-top:40px;margin-bottom:100px;width:100%;display:inline-block}
+.stock .realTime .tableData > div{width:50%;float:left}
+.stock .realTime .tableData > div:first-child{padding-right:20px;}
+.stock .realTime .tableData > div:last-child{padding-left:20px}
+.stock .realTime .tableData > div dl:first-child{border-top:1px solid #101010}
+.stock .realTime .tableData dl{width:100%;display:table}
+.stock .realTime .tableData dt{width:50%;height:63px;border-bottom:1px solid #e0e0e0;text-align:left;font-size:16px;font-weight:500;padding-left:30px;display:table-cell;vertical-align:middle}
+.stock .realTime .tableData dd{border-bottom:1px solid #e0e0e0;text-align:center;font-size:16px;color:#505050;display:table-cell;vertical-align:middle;text-indent:-110px}
+.stock .realTime .tableData span.red{color:#f02222}
+.stock .realTime .tableData span.blue{color:#3c4ef7}
+.stock .askingPrice h3{width:100%;display:inline-block;margin-bottom:20px;font-size:28px;font-weight:500}
+/*공시정보*/
+.disclosure .commBoardList td.name{white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+/*공고*/
+.notif .commBoardList td.title{padding-left:5%;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+
+@media all and (max-width:1300px) {
+    /*주가정보*/
+    .stock .content article{width:100%;padding:0 2%}
+    .stock .realTime > ul li{margin-right:0;width:25%;padding:0 0.5%}
+    .stock .realTime .box > div{padding:0 10%}
+    .stock .realTime .tableData > div:first-child{padding-right:0.5%;}
+    .stock .realTime .tableData > div:last-child{padding-left:0.5%}
+}
+@media all and (max-width:1160px) {
+    /*주가정보*/
+    .stock .realTime .box span{font-size:24px}
+}
+@media all and (max-width:980px) {
+    /*주가정보*/
+    .stock .realTime .box span{font-size:22px}
+    .stock .realTime .tableData dd{text-indent:-70px}
+}
+@media all and (max-width:870px) {
+    /*주가정보*/
+    .stock .realTime .box span{font-size:20px}
+    .stock .realTime .tableData dd{text-indent:-40px}
+}
+@media all and (max-width:812px) {
+    /*주가정보*/
+    .stock .realTime h3{margin-bottom:2.8rem;font-size:2.8rem}
+    .stock .realTime h3 .date{font-size:2rem}
+    .stock .realTime > ul li{width:50%;margin-right:0;margin-bottom:4rem}
+    .stock .realTime > ul li:nth-child(even){text-align:right}
+    .stock .realTime > ul li:nth-child(odd){text-align:left}
+    .stock .realTime .box{width:93.8%;height:17.2rem}
+    .stock .realTime .box > div{padding:0 3.8rem}
+    .stock .realTime .box h6{font-size:2.4rem;margin-bottom:2.4rem}
+    .stock .realTime .box span{font-size:3.4rem;line-height:3.4rem}
+    .stock .realTime .box span b{font-size:2.4rem;margin-left:1.7rem}
+    .stock .realTime .box span::before{width:1.4rem;height:1rem}
+    .stock .realTime .box span.lower::before{background:url(/images/icon_ir_lower.svg);background-size:1.4rem 1rem}
+    .stock .realTime .box span.upper::before{background:url(/images/icon_ir_upper.svg);background-size:1.4rem 1rem}
+    .stock .realTime .box span.lower{padding-left:2.5rem}
+    .stock .realTime .box span.upper{padding-left:2.5rem}
+    .stock .realTime .tableData{margin-top:0;margin-bottom:9.7rem}
+    .stock .realTime .tableData > div:first-child{padding-right:0}
+    .stock .realTime .tableData > div:last-child{padding-left:0}
+    .stock .realTime .tableData dl{width:100%;display:block;border-bottom:1px solid #e0e0e0;padding:3.4rem 0 3.4rem 2.8rem}
+    .stock .realTime .tableData dt{width:100%;height:auto;border-bottom:none;font-size:2.4rem;padding-left:0;display:block;margin-bottom:0.8rem}
+    .stock .realTime .tableData dd{border-bottom:none;text-align:left;font-size:2.4rem;display:block;text-indent:inherit}
+    .stock .askingPrice h3{margin-bottom:2.8rem;font-size:2.8rem}
+    /*공시정보*/
+    .disclosure .commBoardList tr{height:21.8rem;padding:11.8rem 2rem 0 2rem}
+    .disclosure .commBoardList td{border-bottom:none;height:auto;padding:0;text-align:left;font-size:2.4rem;color:#767676}
+    .disclosure .commBoardList td.name{width:calc(100% - 4rem);position:absolute;left:2rem;top:3rem;white-space:inherit;text-overflow:inherit}
+    .disclosure .commBoardList td.cmpy{float:left;padding-top:0.3rem;padding-right:1.5rem;position:relative}
+    .disclosure .commBoardList td.cmpy::before{content:'공시대상회사';display:inline-block;color:#101010;font-weight:500;font-size:2.4rem;margin-right:1.5rem}
+    .disclosure .commBoardList td.cmpy::after{content:'';width:1px;height:1.8rem;background:#e0e0e0;position:absolute;right:0;top:50%;transform:translateY(-50%)}
+    .disclosure .commBoardList td.submit{float:left;padding-top:0.3rem;padding-left:1.5rem}
+    .disclosure .commBoardList td.submit::before{content:'제출인';display:inline-block;color:#101010;font-weight:500;font-size:2.4rem;margin-right:1.5rem}
+    .disclosure .commBoardList td.date{width:100%;display:block}
+    .disclosure .commBoardList td.name a{display:-webkit-box;overflow:hidden;text-overflow:ellipsis;-ms-text-overflow:ellipsis;-webkit-box-orient:vertical;-webkit-line-clamp: 2;font-size:2.8rem;font-weight:500;color:#101010}
+    .disclosure .commBoardList td.dete{width:100%;display:inline-block}
+    /*공고*/
+    .notif .commBoardList tr{padding-bottom:3rem}
+    .notif .commBoardList td{border-bottom:none;height:auto;padding:0;text-align:left;font-size:2.4rem;color:#767676}
+    .notif .commBoardList td.title{display:block;padding:0 6.5rem 0 2rem;margin:3rem 0 1rem 0}
+    .notif .commBoardList td.title a{font-size:2.8rem;color:#101010}
+    .notif .commBoardList td.dete{display:block;padding:0 6.5rem 0 2rem}
+    .notif .commBoardList td.file{position:absolute;right:2rem;top:50%;transform:translateY(-50%)}
+    .notif .commBoardList td.file a{line-height:0;display:block}
+    .notif .commBoardList td.file a img{height:2.4rem}
+}
