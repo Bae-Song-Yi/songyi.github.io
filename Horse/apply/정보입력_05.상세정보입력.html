@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>경기도학생승마체험</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/apply.css" />
+    <link rel="stylesheet" type="text/css" href="../css/rem.css" />
+    <script type="text/javascript" src="../scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="../scripts/apply.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!--상세정보입력-->
+        <div id="container" class="sub join">
+            <section class="formArea ">
+                <h2>
+                    <img src="../images/apply/logo2.png" alt="새로운경기 공정한세상 경기도학생승마체험" class="pc" />
+                    <img src="../images/apply/logo2_mo.png" alt="새로운경기 공정한세상 경기도학생승마체험" class="mo" />
+                </h2>
+                <form>
+                    <div class="title">
+                        <h2>상세정보 입력</h2>
+                        <h3><b>홍길동</b> 학생님 아래 기본정보를 입력해주세요.</h3>
+                    </div>
+                    <dl>
+                        <dt>아이디</dt>
+                        <dd><input type="text" placeholder="초기 입력된 이름과 생년월일이 아이디로 사용됩니다." /></dd>
+                    </dl>
+                    <dl>
+                        <dt>비밀번호 <span>*</span></dt>
+                        <dd><input type="text" placeholder="영문, 숫자 혼합 8~20자리를 사용해주세요." /></dd>
+                    </dl>
+                    <dl>
+                        <dt>비밀번호 확인 <span>*</span></dt>
+                        <dd>
+                            <!--inputCheck class on을 추가 하면 warn문구가 나옵니다-->
+                            <div class="inputCheck">
+                                <input type="text" placeholder="비밀번호를 다시 입력해주세요." />
+                                <a href="#" class="delBtn"><img src="../images/apply/icon_del.png" /></a>
+                                <span class="warn pc">입력하신 비밀번호가 위의 입력사항과 일치하지 않습니다. 다시 확인해주세요.</span>
+                                <span class="warn mo">위의 입력사항과 일치하지 않습니다.</span>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>학교선택 <span>*</span></dt>
+                        <dd><input type="text" disabled class="schoolName" /><a href="#" class="selectSchool">학교선택</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>학년반 <span>*</span></dt>
+                        <dd>
+                            <select class="w50">
+                                <option>학년 선택</option>
+                            </select>
+                            <select class="w50 last">
+                                <option>반 선택</option>
+                            </select>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>연락처 <span>*</span></dt>
+                        <dd>
+                            <select>
+                                <option>선택</option>
+                            </select>
+                            <input type="text" placeholder="'-' 없이 입력" class="phoneNumber" />
+                            <span class="info mo">
+                                학생의 번호가 없을 경우 연락가능한 연락처를 입력해주세요.<br />
+                                (ex 부모님 번호 가능) 해당번호는 비밀번호 분실시에 사용됩니다.
+                            </span>
+                        </dd>
+                    </dl>
+                    <dl class="pc">
+                        <dt>&nbsp;</dt>
+                        <dd>
+                            <span class="info">
+                                학생의 번호가 없을 경우 연락가능한 연락처를 입력해주세요 (ex 부모님 번호 가능)<br />
+                                해당번호는 비밀번호 분실시에 사용됩니다.
+                            </span>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt class="lineTwo">
+                            이전 승마체험<br />
+                            참여 횟수
+                        </dt>
+                        <dd>
+                            <select class="w100 last">
+                                <option>선택</option>
+                            </select>
+                        </dd>
+                    </dl>
+                    <div class="buttonArea">
+                        <button class="btn">완료</button>
+                    </div>
+                </form>
+            </section>
+            <!--학교검색 팝업-->
+            <div class="popupArea">
+                <div class="popupData searchSchool">
+                    <a href="#" class="popupClose" title="팝업 닫기"><img src="../images/apply/popup_close.png" /></a>
+                    <h3>학교 선택</h3>
+                    <div class="searchArea">
+                        <input type="text" placeholder="학교명을 검색해 주세요." />
+                        <button>검색</button>
+                    </div>
+                    <div class="listData">
+                        <table>
+                            <colgroup>
+                                <col style="width:12.1%" />
+                                <col style="width:*" />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>
+                                        <span class="checkArea">
+                                            <input type="radio" name="school" id="s1" />
+                                            <label for="s1"></label>
+                                        </span>
+                                    </th>
+                                    <td>
+                                        서울세곡초등학교 <span>초등학교</span>
+                                        <div class="address">서울 구로구 고척로33길 34 (고척동)</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <span class="checkArea">
+                                            <input type="radio" name="school" id="s2" />
+                                            <label for="s2"></label>
+                                        </span>
+                                    </th>
+                                    <td>
+                                        서울세곡초등학교 <span>초등학교</span>
+                                        <div class="address">서울 구로구 고척로33길 34 (고척동)</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <span class="checkArea">
+                                            <input type="radio" name="school" id="s3" />
+                                            <label for="s3"></label>
+                                        </span>
+                                    </th>
+                                    <td>
+                                        서울세곡초등학교 <span>초등학교</span>
+                                        <div class="address">서울 구로구 고척로33길 34 (고척동)</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <span class="checkArea">
+                                            <input type="radio" name="school" id="s4" />
+                                            <label for="s4"></label>
+                                        </span>
+                                    </th>
+                                    <td>
+                                        서울세곡초등학교 <span>초등학교</span>
+                                        <div class="address">서울 구로구 고척로33길 34 (고척동)</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <span class="checkArea">
+                                            <input type="radio" name="school" id="s5" />
+                                            <label for="s5"></label>
+                                        </span>
+                                    </th>
+                                    <td>
+                                        서울세곡초등학교 <span>초등학교</span>
+                                        <div class="address">서울 구로구 고척로33길 34 (고척동)</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <span class="checkArea">
+                                            <input type="radio" name="school" id="s6" />
+                                            <label for="s6"></label>
+                                        </span>
+                                    </th>
+                                    <td>
+                                        서울세곡초등학교 <span>초등학교</span>
+                                        <div class="address">서울 구로구 고척로33길 34 (고척동)</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <span class="checkArea">
+                                            <input type="radio" name="school" id="s7" />
+                                            <label for="s7"></label>
+                                        </span>
+                                    </th>
+                                    <td>
+                                        서울세곡초등학교 <span>초등학교</span>
+                                        <div class="address">서울 구로구 고척로33길 34 (고척동)</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <span class="checkArea">
+                                            <input type="radio" name="school" id="s8" />
+                                            <label for="s8"></label>
+                                        </span>
+                                    </th>
+                                    <td>
+                                        서울세곡초등학교 <span>초등학교</span>
+                                        <div class="address">서울 구로구 고척로33길 34 (고척동)</div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="paging">
+                        <a href="#" class="prev">
+                            <img src="../images/apply/paging_prev.png" alt="" class="pc" />
+                            <img src="../images/apply/paging_prev_mo.png" alt="" class="mo" />
+                        </a>
+                        <div>
+                            <input type="text" value="1" />
+                            / 20
+                        </div>
+                        <a href="#" class="LastPage"><img src="../images/apply/paging_next.png" alt="" class="pc" /></a>
+                        <a href="#" class="LastPage"><img src="../images/apply/paging_next_mo.png" alt="" class="mo" /></a>
+                    </div>
+                </div>
+            </div>
+            <!--//학교검색 팝업-->
+        </div>
+        <!--//상세정보입력-->
+        <!--Footer-->
+        <footer>
+            <div class="info">(사) 경기도 말산업협회 &nbsp;&middot;&nbsp; 경기도 화성시 매송면 화성로 2349<br /> <span>&nbsp;&middot;&nbsp;</span> TEL.031-291-5560  &nbsp;&middot;&nbsp; FAX. 031-291-5359</div>
+            <div class="copy">Copyright © 2020 Gyeonggi Horse Industry <br />Association All Rights Reserved</div>
+        </footer>
+        <!--//Footer-->
+    </div>
+</body>
+</html>

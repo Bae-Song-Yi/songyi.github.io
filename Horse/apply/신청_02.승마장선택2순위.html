@@ -1,0 +1,449 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>경기도학생승마체험</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/rem.css" />
+    <link rel="stylesheet" type="text/css" href="../css/apply.css" />
+    <script type="text/javascript" src="../scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="../scripts/apply.js"></script>
+    <script>
+        $(document).ready(function () {
+            var st = $('.experience .cnt').offset().top;
+            $(window).scroll(function () {
+                if ($(document).scrollTop() <= st) {
+                    $('.experience .selectInfo').removeClass('fix');
+                } else {
+                    $('.experience .selectInfo').addClass('fix');
+                    $('.experience .selectInfo').css({ 'top': $(document).scrollTop() - 300 });
+                }
+            });
+            //요일선택
+            $('.experience .dataList .week li').click(function () {
+                if ($(this).hasClass('closed') == true) {
+                    $(this).removeClass('on');
+                } else {
+                    $('.experience .dataList .week li').removeClass('on');
+                    $(this).addClass('on');
+                    $('.experience .selectInfo .btnArea a.nextBtn').addClass('on');
+                    $('.selectInfoMo .btnArea a.nextBtn').addClass('on');
+                }
+                return false;
+            });
+            selctMenu();
+            function selctMenu() {
+                if ($(window).width() < 721) {
+                    $('footer').css('margin-bottom', '25rem')
+                    var st2 = $('#wrap').scrollTop();
+                    $(window).scroll(function () {
+                        if ($(document).scrollTop() <= 50) {
+                            $('.experience .selectInfoMo').stop().animate({ bottom: '-26rem' })
+                        } else {
+                            $('.experience .selectInfoMo').stop().animate({ bottom: 0 });
+                        }
+                    });
+                }
+            }
+        });
+        $(window).resize(function () {
+            selctMenu();
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <!--Header-->
+        <header>
+            <h1><a href="#"><img src="../images/apply/logo.png" alt="" title="새로운경기 공정한세상 경기도학생승마체험" /></a></h1>
+            <nav>
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">신청 안내</a></li>
+                    <li><a href="#">체험 신청</a></li>
+                    <li><a href="#">커뮤니티</a></li>
+                    <li class="last"><a href="#" class="resultBtn"><img src="../images/apply/icon_btn_result.png" alt="" />결과조회</a></li>
+                </ul>
+            </nav>
+            <!--Mobile-->
+            <div class="moBtnArea">
+                <a href="#" class="allMenuBtn"><img src="../images/apply/icon_allMenu.png" /></a>
+                <a href="#" class="resultBtn">결과조회</a>
+            </div>
+            <div class="moAllMenu">
+                <div class="blackBg"></div>
+                <div class="menuCnt">
+                    <div class="topArea">
+                        <h2><img src="../images/apply/logo3.png" /></h2>
+                        <h4><img src="../images/apply/icon_user.png" class="icon" />체험신청결과 조회하기<img src="../images/apply/allMenu_right_arrow.png" class="arrow" /></h4>
+                        <span class="menuCloseBtn"><img src="../images/apply/allMenu_close.png" /></span>
+                    </div>
+                    <ul class="menuList">
+                        <li><a href="#"><img src="../images/apply/icon_home_mo.png" />HOME</a></li>
+                        <li><a href="#"><img src="../images/apply/icon_info_mo.png" />신청 안내</a></li>
+                        <li><a href="#"><img src="../images/apply/icon_apply_mo.png" />체험 신청</a></li>
+                        <li><a href="#"><img src="../images/apply/icon_comunity_mo.png" />커뮤니티</a></li>
+                    </ul>
+                    <ul class="bottomMenu">
+                        <li><a>경기말산업협회</a></li>
+                        <li class="dot"></li>
+                        <li><a>고객센터</a></li>
+                        <li class="dot"></li>
+                        <li><a>신청절차</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--//Mobile-->
+        </header>
+        <!--//Header-->
+        <!--체험신청-->
+        <div id="container" class="sub experience">
+            <section class="firstChoice section">
+                <h2 class="subTitle">체험신청</h2>
+                <ul class="applicationStage">
+                    <li><a href="#">1순위 승마장 선택 </a></li>
+                    <li><img src="../images/apply/stage_img.png" class="pc" /><img src="../images/apply/stage_img_mo.png" class="mo" /></li>
+                    <li class="on"><a href="#">2순위 승마장 선택 </a></li>
+                    <li><img src="../images/apply/stage_img.png" class="pc" /><img src="../images/apply/stage_img_mo.png" class="mo" /></li>
+                    <li><a href="#">승마체험 신청 완료 </a></li>
+                </ul>
+                <div class="userInfoMo"><span>경기초등학교 홍길동</span> 님! <span>2순위 승마장</span>을 선택해 주세요.</div>
+                <article class="cnt">
+                    <!--목록 -->
+                    <div class="dataList">
+                        <!--Set-->
+                        <ul class="hasImage">
+                            <li class="top">
+                                <div class="imgArea"><img src="../images/apply/sample01.png" /></div>
+                                <ul class="info">
+                                    <li class="name">베르아델 승마클럽<a href="#" class="detailBtn"><img src="../images/apply/icon_detail.png" />자세히 보기</a></li>
+                                    <li class="address"><img src="../images/apply/icon_address.png" /><span>경기 안산시 단원구 부흥로 376 경기 안산시 단원구 부흥로 376</span></li>
+                                    <li><img src="../images/apply/icon_phone.png" class="iconPhone" />032-882-2255<span class="line"></span><img src="../images/apply/icon_clock.png" class="iconClock" /><span class="openingHours">매일 06:00 - 21:00 월요일 휴무</span></li>
+                                </ul>
+                            </li>
+                            <li class="title"><img src="../images/apply/icon_calendar.png" />요일 선택<span>총 모집인원 / 지원 인원</span></li>
+                            <li class="week_scroll">
+                                <ol class="week">
+                                    <li class="closed"><a href="#">월<div>100/<span>10</span></div></a></li>
+                                    <li><a href="#">화<div>100/<span class="less">10</span></div></a></li>
+                                    <li class="fix"><a href="#">수<div>100/<span class="less">50</span></div></a></li>
+                                    <li><a href="#">목<div>100/<span class="less">80</span></div></a></li>
+                                    <li><a href="#">금<div>100/<span class="full">200</span></div></a></li>
+                                    <li><a href="#">토<div>100/<span class="full">200</span></div></a></li>
+                                    <li><a href="#">일<div>100/<span class="full">200</span></div></a></li>
+                                </ol>
+                            </li>
+                        </ul>
+                        <!--//Set-->
+                        <!--Set-->
+                        <ul>
+                            <li class="top">
+                                <ul class="info">
+                                    <li class="name">덕소 승마클럽<a href="#" class="detailBtn"><img src="../images/apply/icon_detail.png" />자세히 보기</a></li>
+                                    <li class="address"><img src="../images/apply/icon_address.png" /><span>경기 안산시 단원구 부흥로 376 경기 안산시 단원구 부흥로 376</span></li>
+                                    <li><img src="../images/apply/icon_phone.png" class="iconPhone" />032-882-2255<span class="line"></span><img src="../images/apply/icon_clock.png" class="iconClock" /><span class="openingHours">매일 06:00 - 21:00 월요일 휴무</span></li>
+                                </ul>
+                            </li>
+                            <li class="title"><img src="../images/apply/icon_calendar.png" />요일 선택<span>총 모집인원 / 지원 인원</span></li>
+                            <li class="week_scroll">
+                                <ol class="week">
+                                    <li><a href="#">월<div>100/<span class="less">10</span></div></a></li>
+                                    <li class="closed"><a href="#">화<div>100/<span class="less">10</span></div></a></li>
+                                    <li><a href="#">수<div>100/<span class="less">50</span></div></a></li>
+                                    <li><a href="#">목<div>100/<span class="less">80</span></div></a></li>
+                                    <li><a href="#">금<div>100/<span class="full">200</span></div></a></li>
+                                    <li><a href="#">토<div>100/<span class="full">200</span></div></a></li>
+                                    <li><a href="#">일<div>100/<span class="full">200</span></div></a></li>
+                                </ol>
+                            </li>
+                        </ul>
+                        <!--//Set-->
+                        <!--Set-->
+                        <ul class="hasImage">
+                            <li class="top">
+                                <div class="imgArea"><img src="../images/apply/sample01.png" /></div>
+                                <ul class="info">
+                                    <li class="name">베르아델 승마클럽<a href="#" class="detailBtn"><img src="../images/apply/icon_detail.png" />자세히 보기</a></li>
+                                    <li class="address"><img src="../images/apply/icon_address.png" /><span>경기 안산시 단원구 부흥로 376 경기 안산시 단원구 부흥로 376</span></li>
+                                    <li><img src="../images/apply/icon_phone.png" class="iconPhone" />032-882-2255<span class="line"></span><img src="../images/apply/icon_clock.png" class="iconClock" /><span class="openingHours">매일 06:00 - 21:00 월요일 휴무</span></li>
+                                </ul>
+                            </li>
+                            <li class="title"><img src="../images/apply/icon_calendar.png" />요일 선택<span>총 모집인원 / 지원 인원</span></li>
+                            <li class="week_scroll">
+                                <ol class="week">
+                                    <li class="closed"><a href="#">월<div>100/<span>10</span></div></a></li>
+                                    <li><a href="#">화<div>100/<span class="less">10</span></div></a></li>
+                                    <li><a href="#">수<div>100/<span class="less">50</span></div></a></li>
+                                    <li><a href="#">목<div>100/<span class="less">80</span></div></a></li>
+                                    <li><a href="#">금<div>100/<span class="full">200</span></div></a></li>
+                                    <li><a href="#">토<div>100/<span class="full">200</span></div></a></li>
+                                    <li><a href="#">일<div>100/<span class="full">200</span></div></a></li>
+                                </ol>
+                            </li>
+                        </ul>
+                        <!--//Set-->
+                        <!--Set-->
+                        <ul>
+                            <li class="top">
+                                <ul class="info">
+                                    <li class="name">덕소 승마클럽<a href="#" class="detailBtn"><img src="../images/apply/icon_detail.png" />자세히 보기</a></li>
+                                    <li class="address"><img src="../images/apply/icon_address.png" /><span>경기 안산시 단원구 부흥로 376 경기 안산시 단원구 부흥로 376</span></li>
+                                    <li><img src="../images/apply/icon_phone.png" class="iconPhone" />032-882-2255<span class="line"></span><img src="../images/apply/icon_clock.png" class="iconClock" /><span class="openingHours">매일 06:00 - 21:00 월요일 휴무</span></li>
+                                </ul>
+                            </li>
+                            <li class="title"><img src="../images/apply/icon_calendar.png" />요일 선택<span>총 모집인원 / 지원 인원</span></li>
+                            <li class="week_scroll">
+                                <ol class="week">
+                                    <li><a href="#">월<div>100/<span class="less">10</span></div></a></li>
+                                    <li class="closed"><a href="#">화<div>100/<span class="less">10</span></div></a></li>
+                                    <li><a href="#">수<div>100/<span class="less">50</span></div></a></li>
+                                    <li><a href="#">목<div>100/<span class="less">80</span></div></a></li>
+                                    <li><a href="#">금<div>100/<span class="full">200</span></div></a></li>
+                                    <li><a href="#">토<div>100/<span class="full">200</span></div></a></li>
+                                    <li><a href="#">일<div>100/<span class="full">200</span></div></a></li>
+                                </ol>
+                            </li>
+                        </ul>
+                        <!--//Set-->
+                        <!--Set-->
+                        <ul class="hasImage">
+                            <li class="top">
+                                <div class="imgArea"><img src="../images/apply/sample01.png" /></div>
+                                <ul class="info">
+                                    <li class="name">베르아델 승마클럽<a href="#" class="detailBtn"><img src="../images/apply/icon_detail.png" />자세히 보기</a></li>
+                                    <li class="address"><img src="../images/apply/icon_address.png" /><span>경기 안산시 단원구 부흥로 376 경기 안산시 단원구 부흥로 376</span></li>
+                                    <li><img src="../images/apply/icon_phone.png" class="iconPhone" />032-882-2255<span class="line"></span><img src="../images/apply/icon_clock.png" class="iconClock" /><span class="openingHours">매일 06:00 - 21:00 월요일 휴무</span></li>
+                                </ul>
+                            </li>
+                            <li class="title"><img src="../images/apply/icon_calendar.png" />요일 선택<span>총 모집인원 / 지원 인원</span></li>
+                            <li class="week_scroll">
+                                <ol class="week">
+                                    <li class="closed"><a href="#">월<div>100/<span>10</span></div></a></li>
+                                    <li><a href="#">화<div>100/<span class="less">10</span></div></a></li>
+                                    <li><a href="#">수<div>100/<span class="less">50</span></div></a></li>
+                                    <li><a href="#">목<div>100/<span class="less">80</span></div></a></li>
+                                    <li><a href="#">금<div>100/<span class="full">200</span></div></a></li>
+                                    <li><a href="#">토<div>100/<span class="full">200</span></div></a></li>
+                                    <li><a href="#">일<div>100/<span class="full">200</span></div></a></li>
+                                </ol>
+                            </li>
+                        </ul>
+                        <!--//Set-->
+                        <!--Set-->
+                        <ul>
+                            <li class="top">
+                                <ul class="info">
+                                    <li class="name">덕소 승마클럽<a href="#" class="detailBtn"><img src="../images/apply/icon_detail.png" />자세히 보기</a></li>
+                                    <li class="address"><img src="../images/apply/icon_address.png" /><span>경기 안산시 단원구 부흥로 376 경기 안산시 단원구 부흥로 376</span></li>
+                                    <li><img src="../images/apply/icon_phone.png" class="iconPhone" />032-882-2255<span class="line"></span><img src="../images/apply/icon_clock.png" class="iconClock" /><span class="openingHours">매일 06:00 - 21:00 월요일 휴무</span></li>
+                                </ul>
+                            </li>
+                            <li class="title"><img src="../images/apply/icon_calendar.png" />요일 선택<span>총 모집인원 / 지원 인원</span></li>
+                            <li class="week_scroll">
+                                <ol class="week">
+                                    <li><a href="#">월<div>100/<span class="less">10</span></div></a></li>
+                                    <li class="closed"><a href="#">화<div>100/<span class="less">10</span></div></a></li>
+                                    <li><a href="#">수<div>100/<span class="less">50</span></div></a></li>
+                                    <li><a href="#">목<div>100/<span class="less">80</span></div></a></li>
+                                    <li><a href="#">금<div>100/<span class="full">200</span></div></a></li>
+                                    <li><a href="#">토<div>100/<span class="full">200</span></div></a></li>
+                                    <li><a href="#">일<div>100/<span class="full">200</span></div></a></li>
+                                </ol>
+                            </li>
+                        </ul>
+                        <!--//Set-->
+                    </div>
+                    <!--//목록 -->
+                    <!--선택정보 -->
+                    <div class="rightArea">
+                        <ul class="selectInfo">
+                            <li class="userInfo">
+                                <span>경기초등학교 홍길동</span>님!<br /><span>1순위 승마장</span>을 선택해 주세요.
+                            </li>
+                            <li>
+                                <ol>
+                                    <li>
+                                        1순위 승마장
+                                        <input type="text" readonly placeholder="선택해 주세요 (중복 선택 불가)" value="베르아델 승마클럽 (수요일)" />
+                                    </li>
+                                    <li class="on">
+                                        2순위 승마장
+                                        <input type="text" readonly placeholder="선택해 주세요 (중복 선택 불가)" />
+                                    </li>
+                                </ol>
+                            </li>
+                            <li class="btnArea">
+                                <a href="#" class="completeBtn">신청완료</a>
+                                <a href="#" class="modifyBtn">내 정보 수정</a>
+                            </li>
+                            <li class="warn">
+                                <h4><img src="../images/apply/icon_warn.png" />주의사항</h4>
+                                <span>
+                                    최종신청 후 승마장을 변경할 수 없으니 신중하게<br />
+                                    선택해 주세요.
+                                </span>
+                                <span>
+                                    승마장 사정에 따라 요일은 변동이 될 수 있습니다.<br />
+                                    (변동 시 별도 연락)
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--//선택정보 -->
+                    <div class="warnMo on">
+                        <h4><img src="../images/apply/icon_warn.png" />주의사항</h4>
+                        <span>
+                            최종신청 후 승마장을 변경할 수 없으니 신중하게 선택해 주세요.
+                        </span>
+                        <span>
+                            승마장 사정에 따라 요일은 변동이 될 수 있습니다. (변동 시 별도 연락)
+                        </span>
+                    </div>
+                    <!--//모바일 주의사항-->
+                </article>
+            </section>
+            <!--모바일 주의사항-->
+            <!--모바일 승마장 선택영역-->
+            <div class="selectInfoMo">
+                <div class="userClub">
+                    <h4>1순위 승마장</h4>
+                    <input type="text" readonly placeholder="선택해 주세요 (중복 선택 불가)" value="베르아델 승마클럽 (수요일)" class="priority" />
+                </div>
+                <div class="userClub">
+                    <h4>2순위 승마장</h4>
+                    <input type="text" readonly placeholder="선택해 주세요 (중복 선택 불가)" />
+                </div>
+                <div class="btnArea">
+                    <a href="#" class="modifyBtn">내 정보 수정</a>
+                    <!--승마장 선택시 class on되어야합니다-->
+                    <a href="#" class="nextBtn">신청완료</a>
+                </div>
+            </div>
+            <!--//모바일 승마장 선택영역-->
+            <!--승마장 정보 팝업-->
+            <div class="popupArea">
+                <div class="popupData ridingGround">
+                    <div class="topArea">
+                        <span class="closeBtn"><img src="../images/apply/icon_close.png" alt="" class="pc" /><img src="../images/apply/icon_close_mo.png" alt="" class="mo" /></span>
+                        <h2>엑셀로이콰인R&D센터</h2>
+                        <h4 class="topAreaPc"><img src="../images/apply/icon_address2.png" alt="" />경기 안산시 단원구 부흥로 376</h4>
+                        <h4 class="topAreaMo"><img src="../images/apply/icon_address2.png" alt="" />경기 안산시 단원구 부흥로 376경기 안산시 단원구 부흥로 376</h4>
+                    </div>
+                    <div class="infoArea">
+                        <ul class="topAreaPc">
+                            <li><img src="../images/apply/icon_clock.png" class="iconClock" />평일 06:00 - 21:00, 주말/공휴일 09:00 - 19:00,  월요일 휴무</li>
+                            <li><img src="../images/apply/icon_phone.png" class="iconPhone" />032-882-2255</li>
+                            <li><img src="../images/apply/icon_person.png" class="iconUser" />관리인원  코치 20명 / 안전요원 20명</li>
+                            <li><img src="../images/apply/icon_star.png" class="iconStar" />대표코치  강승마 (010-1234-5678)</li>
+                            <li><img src="../images/apply/icon_horseshoe.png" class="iconHorseshoe" />말 보유두 20 두</li>
+                        </ul>
+                        <ul class="topAreaMo">
+                            <li><img src="../images/apply/icon_clock.png" class="iconClock" />평일 06:00 - 21:00, 주말/공휴일 09:00 - 19:00,  월요일 휴무</li>
+                            <li><img src="../images/apply/icon_phone.png" class="iconPhone" />032-882-2255</li>
+                            <li><img src="../images/apply/icon_person.png" class="iconUser" />관리인원  코치 20명 / 안전요원 20명</li>
+                            <li><img src="../images/apply/icon_star.png" class="iconStar" />대표코치  강승마 (010-1234-5678)</li>
+                            <li><img src="../images/apply/icon_horseshoe.png" class="iconHorseshoe" />말 보유두 20 두</li>
+                        </ul>
+                        <div class="status">
+                            <h3>모집현황<span>총 모집 인원 / 지원 인원</span></h3>
+                            <table class="topAreaPc">
+                                <thead>
+                                    <tr>
+                                        <th>월</th>
+                                        <th>화</th>
+                                        <th>수</th>
+                                        <th>목</th>
+                                        <th>금</th>
+                                        <th>토</th>
+                                        <th>일</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>0/0</td>
+                                        <td>100/<span class="less">10</span></td>
+                                        <td>100/<span class="less">50</span></td>
+                                        <td>100/<span class="less">10</span></td>
+                                        <td>100/<span class="full">110</span></td>
+                                        <td>100/<span class="full">400</span></td>
+                                        <td>100/<span class="full">400</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!--모바일팝업모집현황-->
+                            <table class="topAreaMo">
+                                <thead>
+                                    <tr>
+                                        <th>월</th>
+                                        <th>화</th>
+                                        <th>수</th>
+                                        <th>목</th>
+                                    </tr>
+                                    <tr>
+                                        <th>0/0</th>
+                                        <th>100/<span class="less">10</span></th>
+                                        <th>100/<span class="less">500</span></th>
+                                        <th>100/<span class="less">100</span></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>금</td>
+                                        <td>토</td>
+                                        <td>일</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>100/<span class="full">110</span></td>
+                                        <td>100/<span class="full">400</span></td>
+                                        <td>100/<span class="full">400</span></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="picture">
+                            <h3>사진<span>6</span></h3>
+                            <!--사진이 2개이하인경우-->
+                            <ul class="listArea" style="display:none">
+                                <li><img src="../images/apply/sample02.png" /></li>
+                                <li><img src="../images/apply/sample02.png" /></li>
+                            </ul>
+                            <!--//사진이 2개이하인경우-->
+                            <!--사진이 2개이상인경우 슬라이드-->
+                            <div class="slideArea">
+                                <ul class="slides">
+                                    <li>
+                                        <img src="../images/apply/sample02.png" />
+                                        <img src="../images/apply/sample02.png" />
+                                    </li>
+                                    <li>
+                                        <img src="../images/apply/sample02.png" />
+                                        <img src="../images/apply/sample02.png" />
+                                    </li>
+                                    <li>
+                                        <img src="../images/apply/sample02.png" />
+                                        <img src="../images/apply/sample02.png" />
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--//사진이 2개이상인경우 슬라이드-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--//승마장 정보 팝업-->
+        </div>
+        <!--//체험신청-->
+        <!--Footer-->
+        <footer>
+            <div class="info">(사) 경기도 말산업협회 &nbsp;&middot;&nbsp; 경기도 화성시 매송면 화성로 2349<br /> <span>&nbsp;&middot;&nbsp;</span> TEL.031-291-5560  &nbsp;&middot;&nbsp; FAX. 031-291-5359</div>
+            <div class="copy">Copyright © 2020 Gyeonggi Horse Industry <br />Association All Rights Reserved</div>
+        </footer>
+        <!--//Footer-->
+    </div>
+</body>
+</html>

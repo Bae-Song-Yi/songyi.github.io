@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>경기도학생승마체험</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/apply.css" />
+    <link rel="stylesheet" type="text/css" href="../css/rem.css" />
+    <script type="text/javascript" src="../scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="../scripts/apply.js"></script>
+    <script>
+        $(document).ready(function () {
+            //모바일 글씨짜르기
+            $('.notice .pageControl td a').each(function () {
+                var length = 26;
+                $(this).each(function () {
+                    if ($(this).text().length >= length) {
+                        $(this).text($(this).text().substr(0, length) + '...');
+                    }
+                });
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <!--Header-->
+        <header>
+            <h1><a href="#"><img src="../images/apply/logo.png" alt="" title="새로운경기 공정한세상 경기도학생승마체험" /></a></h1>
+            <nav>
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">신청 안내</a></li>
+                    <li><a href="#">체험 신청</a></li>
+                    <li><a href="#">커뮤니티</a></li>
+                    <li class="last"><a href="#" class="resultBtn"><img src="../images/apply/icon_btn_result.png" alt="" />결과조회</a></li>
+                </ul>
+            </nav>
+            <!--Mobile-->
+            <div class="moBtnArea">
+                <a href="#" class="allMenuBtn"><img src="../images/apply/icon_allMenu.png" /></a>
+                <a href="#" class="resultBtn">결과조회</a>
+            </div>
+            <div class="moAllMenu">
+                <div class="blackBg"></div>
+                <div class="menuCnt">
+                    <div class="topArea">
+                        <h2><img src="../images/apply/logo3.png" /></h2>
+                        <h4><img src="../images/apply/icon_user.png" class="icon" />체험신청결과 조회하기<img src="../images/apply/allMenu_right_arrow.png" class="arrow" /></h4>
+                        <span class="menuCloseBtn"><img src="../images/apply/allMenu_close.png" /></span>
+                    </div>
+                    <ul class="menuList">
+                        <li><a href="#"><img src="../images/apply/icon_home_mo.png" />HOME</a></li>
+                        <li><a href="#"><img src="../images/apply/icon_info_mo.png" />신청 안내</a></li>
+                        <li><a href="#"><img src="../images/apply/icon_apply_mo.png" />체험 신청</a></li>
+                        <li><a href="#"><img src="../images/apply/icon_comunity_mo.png" />커뮤니티</a></li>
+                    </ul>
+                    <ul class="bottomMenu">
+                        <li><a>경기말산업협회</a></li>
+                        <li class="dot"></li>
+                        <li><a>고객센터</a></li>
+                        <li class="dot"></li>
+                        <li><a>신청절차</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--//Mobile-->
+        </header>
+        <!--//Header-->
+        <!--Notice-->
+        <div id="container" class="sub notice">
+            <!--Breadcrumb-->
+            <section class="breadCrumb">
+                <ul>
+                    <li><a href="#"><img src="../images/apply/icon_home.png" /></a></li>
+                    <li><a href="#">커뮤니티</a></li>
+                    <li><a href="#">공지사항</a></li>
+                </ul>
+            </section>
+            <!--//Breadcrumb-->
+            <section class="noticeDetail section">
+                <h2 class="subTitle">공지사항</h2>
+                <article>
+                    <!--Contents-->
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>말이력정보, 말등록 신규 오픈 안내<span class="date">2020.10.14</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="fileArea">
+                                <td>
+                                    <h4><img src="../images/apply/icon_file_down_arrow.png" class="pc" /><img src="../images/apply/icon_file_down_arrow_mo.png" class="mo" />첨부파일 <b>1</b>개 <span class="fileSize">(571.5KB)</span><a href="#" class="saveAllBtn">전체 저장하기</a></h4>
+                                    <a href="#" class="downloadFile">201015_말이력정보, 말등록 신규 오픈 안내.pdf<span class="fileSize">571.5KB</span></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cnt">
+                                    내용
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td>
+                                    <a href="#" class="listBtn">목록보기</a>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <!--//Contents-->
+                    <table class="pageControl">
+                        <tbody>
+                            <tr>
+                                <th>
+                                    <a href="#"><img src="../images/apply/page_prev.png" alt="" />이전</a>
+                                </th>
+                                <td>
+                                    <a href="#">2020년 온라인 말산업 박람회</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <a href="#"><img src="../images/apply/page_next.png" />다음</a>
+                                </th>
+                                <td>
+                                    <a href="#">[재활힐링승마센터](조기마감)2020년 3차 자원봉사자 최종확정공고</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </article>
+            </section>
+        </div>
+        <!--//Notice-->
+        <!--Footer-->
+        <footer>
+            <div class="info">(사) 경기도 말산업협회 &nbsp;&middot;&nbsp; 경기도 화성시 매송면 화성로 2349<br /> <span>&nbsp;&middot;&nbsp;</span> TEL.031-291-5560  &nbsp;&middot;&nbsp; FAX. 031-291-5359</div>
+            <div class="copy">Copyright © 2020 Gyeonggi Horse Industry <br />Association All Rights Reserved</div>
+        </footer>
+        <!--//Footer-->
+    </div>
+</body>
+</html>

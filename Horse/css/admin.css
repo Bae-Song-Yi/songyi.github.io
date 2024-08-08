@@ -1,0 +1,2430 @@
+@import url(css/font/NotoSansKR.css);
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background: #eff5fb
+}
+
+select,
+textarea,
+button,
+input {
+    font-family: 'Noto Sans KR', sans-serif
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse
+}
+
+/*HTML5 Class*/
+.Header,
+.Nav,
+.Footer,
+.Section,
+.Article {
+    width: 100%;
+    display: block
+}
+
+/*Layout(Common)*/
+#warp {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative
+}
+
+/*Login*/
+.Login {
+    width: 600px;
+    height: 634px;
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -300px;
+    margin-top: -317px
+}
+
+.Login .logo {
+    text-align: center;
+    margin: 70px 0
+}
+
+.Login .logo a {
+    display: inline-block
+}
+
+.Login form {
+    padding: 0 80px;
+    text-align: center
+}
+
+.Login legend {
+    display: block;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 500;
+    color: #292a2c;
+    text-align: left
+}
+
+.Login ul {
+    margin: 60px 0 70px 0
+}
+
+.Login input {
+    width: 100%;
+    height: 48px;
+    border: 1px solid #cbcbcb;
+    padding: 0 20px;
+    padding: 15px;
+    line-height: 46px;
+    text-align: left;
+    font-size: 16px
+}
+
+.Login input::placeholder {
+    color: #8e8e8e
+}
+
+.Login input:focus {
+    border-color: #0b39d1
+}
+
+.Login ul li:first-child {
+    margin-bottom: 20px
+}
+
+.Login button {
+    width: 200px;
+    height: 60px;
+    background: #0b39d1;
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px
+}
+
+.Login .info_text {
+    display: block;
+    margin-top: 40px;
+    color: #606060;
+    font-weight: 300
+}
+
+/*Header*/
+.Header {
+    width: 100%;
+    height: 80px;
+    position: relative;
+    background: #fff;
+    z-index: 9
+}
+
+.Header .logo {
+    width: 250px;
+    line-height: 80px;
+    float: left;
+    font-size: 19px;
+    color: #fff;
+    background: #0b39d1;
+    text-align: center;
+    border-radius: 0 0 18px 0
+}
+
+.Header .util {
+    float: right
+}
+
+.Header a.go_home {
+    float: left;
+    height: 80px;
+    margin-right: 25px;
+    text-align: center;
+    font-size: 12px;
+    color: #0b39d1;
+    font-weight: 500;
+    padding-right: 35px;
+    background: url(../images/admin/icon_gohome_arrow.png) no-repeat right center;
+    padding-top: 30px;
+    line-height: 1.2
+}
+
+.Header a.logout {
+    width: 80px;
+    display: block;
+    background: #859be2;
+    line-height: 80px;
+    text-align: center;
+    float: left
+}
+
+/*LNB*/
+.Nav {
+    width: 250px;
+    height: 100%;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 8
+}
+
+.Nav>ul {
+    margin-top: 20px
+}
+
+.Nav ul>li>a {
+    display: block;
+    line-height: 50px;
+    color: #6f7275;
+    font-size: 14px;
+    padding-left: 52px;
+    background-repeat: no-repeat;
+    background-position: 22px center
+}
+
+.Nav ul>li>a:hover,
+.Nav ul>li>a.on {
+    font-weight: 500;
+    color: #0b39d1
+}
+
+.Nav a.m1 {
+    background-image: url(../images/admin/lnb_icon_m1_off.png)
+}
+
+.Nav a.m1:hover,
+.Nav a.m1.on {
+    background-image: url(../images/admin/lnb_icon_m1_on.png)
+}
+
+.Nav a.m2 {
+    background-image: url(../images/admin/lnb_icon_m2_off.png)
+}
+
+.Nav a.m2:hover,
+.Nav a.m2.on {
+    background-image: url(../images/admin/lnb_icon_m2_on.png)
+}
+
+.Nav a.m3 {
+    background-image: url(../images/admin/lnb_icon_m3_off.png)
+}
+
+.Nav a.m3:hover,
+.Nav a.m3.on {
+    background-image: url(../images/admin/lnb_icon_m3_on.png)
+}
+
+.Nav a.m4 {
+    background-image: url(../images/admin/lnb_icon_m4_off.png)
+}
+
+.Nav a.m4:hover,
+.Nav a.m4.on {
+    background-image: url(../images/admin/lnb_icon_m4_on.png)
+}
+
+.Nav a.m5 {
+    background-image: url(../images/admin/lnb_icon_m5_off.png)
+}
+
+.Nav a.m5:hover,
+.Nav a.m5.on {
+    background-image: url(../images/admin/lnb_icon_m5_on.png)
+}
+
+.Nav a.m6 {
+    background-image: url(../images/admin/lnb_icon_m6_off.png)
+}
+
+.Nav a.m6:hover,
+.Nav a.m6.on {
+    background-image: url(../images/admin/lnb_icon_m6_on.png)
+}
+
+.Nav a.m7 {
+    background-image: url(../images/admin/lnb_icon_m7_off.png)
+}
+
+.Nav a.m7:hover,
+.Nav a.m7.on {
+    background-image: url(../images/admin/lnb_icon_m7_on.png)
+}
+
+.Nav a.m8 {
+    background-image: url(../images/admin/lnb_icon_m8_off.png)
+}
+
+.Nav a.m8:hover,
+.Nav a.m8.on {
+    background-image: url(../images/admin/lnb_icon_m8_on.png)
+}
+
+.Nav a.m9 {
+    background-image: url(../images/admin/lnb_icon_m9_off.png)
+}
+
+.Nav a.m9:hover,
+.Nav a.m9.on {
+    background-image: url(../images/admin/lnb_icon_m9_on.png)
+}
+
+.Nav a.m10 {
+    background-image: url(../images/admin/lnb_icon_m10_off.png)
+}
+
+.Nav a.m10:hover,
+.Nav a.m10.on {
+    background-image: url(../images/admin/lnb_icon_m10_on.png)
+}
+
+.Nav .depth {
+    padding: 0 20px
+}
+
+.Nav .depth ol {
+    background: #eff5fb;
+    padding: 10px;
+    border-radius: 8px
+}
+
+.Nav .depth ol li a {
+    line-height: 30px;
+    padding-left: 20px;
+    color: #6f7275
+}
+
+.Nav .depth ol li a.on {
+    color: #292a2c;
+    font-weight: 500
+}
+
+/*Common(Title)*/
+h2.PageTitle {
+    width: 100%;
+    position: relative;
+    font-size: 20px;
+    font-weight: 500;
+    color: #292a2c;
+    margin-bottom: 17px;
+    display: inline-block
+}
+
+h2.PageTitle i {
+    vertical-align: middle;
+    line-height: 0
+}
+
+h2.PageTitle .year {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+h2.PageTitle .year .tit {
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px
+}
+
+h2.PageTitle .year .select {
+    width: 120px;
+    background-color: transparent;
+    color: #0b39d1;
+    font-weight: 500;
+    font-family: 'Noto Sans KR', sans-serif
+}
+
+h2.PageTitle a.direct {
+    font-size: 12px;
+    font-weight: 500;
+    color: #0b39d1;
+    display: inline-block;
+    vertical-align: middle;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #0b39d1;
+    margin-left: 10px
+}
+
+h4.SubTitle {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    font-size: 18px;
+    color: #292a2c;
+    font-weight: 500;
+    padding-left: 12px;
+    margin-bottom: 16px
+}
+
+h4.SubTitle:before {
+    content: '';
+    width: 4px;
+    height: 16px;
+    background: #0b39d1;
+    position: absolute;
+    left: 0;
+    top: 1px;
+    border-radius: 2px
+}
+
+/*Common(Button)*/
+.CommBtn.Add {
+    width: 120px;
+    height: 42px;
+    background: #0b39d1;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 8px
+}
+
+.CommBtn.Del {
+    width: 60px;
+    font-family: Dotum, '돋움', sans-serif;
+    font-size: 12px;
+    height: 30px;
+    border: 1px solid #bdbdbd;
+    color: #424242;
+    background: #fff;
+    border-radius: 3px
+}
+
+.CommBtn.Modify {
+    width: 60px;
+    font-family: Dotum, '돋움', sans-serif;
+    font-size: 12px;
+    height: 30px;
+    border: 1px solid #bdbdbd;
+    color: #424242;
+    background: #fff;
+    border-radius: 3px
+}
+
+.CommBtn.Ass {
+    width: 85px;
+    font-family: Dotum, '돋움', sans-serif;
+    font-size: 12px;
+    height: 30px;
+    border: 1px solid #bdbdbd;
+    color: #424242;
+    background: #fff;
+    border-radius: 3px
+}
+
+.CommBtn.Download {
+    width: 85px;
+    font-family: Dotum, '돋움', sans-serif;
+    font-size: 12px;
+    height: 30px;
+    border: 1px solid #bdbdbd;
+    color: #424242;
+    background: #fff;
+    border-radius: 3px
+}
+
+.CommBtn.Save {
+    width: 120px;
+    height: 42px;
+    background: #0b39d1 url(../images/admin/icon_save.png) no-repeat 23px center;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 8px;
+    text-align: center;
+    text-indent: 20px
+}
+
+.CommBtn.Register {
+    width: 120px;
+    height: 42px;
+    background: #0b39d1 url(../images/admin/icon_register.png) no-repeat 25px center;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 8px;
+    text-align: center;
+    text-indent: 20px
+}
+
+.CommBtn.DetailView {
+    width: 83px;
+    font-family: Dotum, '돋움', sans-serif;
+    font-size: 12px;
+    height: 30px;
+    border: 1px solid #bdbdbd;
+    color: #424242;
+    background: #fff;
+    border-radius: 3px
+}
+
+.CommBtn.GroundAddChange {
+    width: 130px;
+    font-family: Dotum, '돋움', sans-serif;
+    font-size: 12px;
+    height: 30px;
+    border: 1px solid #0b39d1;
+    color: #0b39d1;
+    background: #fff;
+    border-radius: 3px
+}
+
+.CommBtn.Search {
+    width: 42px;
+    height: 42px;
+    border: none;
+    ;
+    background: url(../images/admin/icon_search.png) no-repeat center center;
+    display: inline-block;
+    text-indent: -9999px
+}
+
+.CommBtn.File {
+    width: 84px;
+    font-family: Dotum, '돋움', sans-serif;
+    font-size: 12px;
+    height: 30px;
+    border: 1px solid #bdbdbd;
+    color: #424242;
+    background: #fff;
+    border-radius: 3px
+}
+
+.CommBtn.Cert {
+    width: 120px;
+    height: 42px;
+    background: #0b39d1;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 8px
+}
+
+.CommBtn.Excel {
+    width: 120px;
+    height: 42px;
+    background-color: transparent;
+    border: 1px solid #0b39d1;
+    color: #0b39d1;
+    font-size: 14px;
+    border-radius: 8px
+}
+
+.CommBtn.Sms {
+    width: 150px;
+    height: 42px;
+    background-color: transparent;
+    border: 1px solid #0b39d1;
+    color: #0b39d1;
+    font-size: 14px;
+    border-radius: 8px
+}
+
+.CommBtn.Del2 {
+    width: 120px;
+    height: 42px;
+    background-color: #859be2;
+    border: 1px solid #859be2;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 8px
+}
+
+.CommBtn.Del3 {
+    width: 120px;
+    height: 42px;
+    background-color: transparent;
+    border: 1px solid #0b39d1;
+    color: #0b39d1;
+    font-size: 14px;
+    border-radius: 8px
+}
+
+/*Common(Table)*/
+.TableWrap {
+    border-radius: 8px;
+    background: #fff;
+    overflow: hidden
+}
+
+.TableWrap span.essential {
+    color: #fc334b;
+    font-family: 'Noto Sans KR' !important;
+    font-size: 14px;
+    font-weight: 500
+}
+
+.HasTopTH>thead>tr>th {
+    height: 50px;
+    border-bottom: 1px solid #4d73f4;
+    font-size: 14px;
+    font-weight: 500;
+    color: #292a2c
+}
+
+.HasTopTH>tbody>tr>td {
+    height: 50px;
+    text-align: center;
+    font-family: Dotum, '돋움', sans-serif;
+    font-size: 12px;
+    color: #424242;
+    border-top: 1px solid #e5e5e5
+}
+
+.HasLeftTH>tbody>tr>th {
+    text-align: left;
+    padding: 18px 0 18px 2%;
+    border-right: 1px solid #0b39d1;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 14px;
+    color: #292a2c;
+    font-weight: 500
+}
+
+.HasLeftTH>tbody>tr>td {
+    height: 50px;
+    text-align: left;
+    padding: 9px 2%;
+    border-bottom: 1px solid #e5e5e5;
+    font-family: Dotum, '돋움', sans-serif;
+    font-size: 12px;
+    color: #424242
+}
+
+.HasLeftTH>tbody>tr>td.shot_ht {
+    padding: 8px 2%
+}
+
+.HasLeftTH>tbody>tr:last-child>th {
+    border-bottom: none
+}
+
+.HasLeftTH>tbody>tr:last-child>td {
+    border-bottom: none
+}
+
+.HasTopTHcolor>thead>tr>th {
+    height: 40px;
+    font-size: 12px;
+    font-weight: normal;
+    color: #292a2c;
+    text-align: center;
+    background: #eff5fb;
+    font-family: Dotum, '돋움', sans-serif;
+}
+
+.HasTopTHcolor>tbody>tr>td {
+    height: 40px;
+    text-align: center;
+    font-family: Dotum, '돋움', sans-serif;
+    font-size: 12px;
+    color: #424242;
+    border-bottom: 1px solid #e5e5e5
+}
+
+/*Common(Form Item)*/
+select.select {
+    height: 32px;
+    font-family: Dotum, '돋움', sans-serif;
+    font-size: 13px;
+    color: #292a2c;
+    border: 1px solid #d2d2d2
+}
+
+select.select.yy {
+    width: 120px
+}
+
+select.select.Area {
+    width: 120px
+}
+
+select.select.Class {
+    width: 120px
+}
+
+select.select.PageEA {
+    width: 120px
+}
+
+select.select.Kind {
+    width: 120px
+}
+
+select.select.Ground {
+    width: 120px
+}
+
+select.select.Num {
+    width: 120px
+}
+
+select.select.Target {
+    width: 90px
+}
+
+input.enter {
+    height: 32px;
+    font-family: Dotum, '돋움', sans-serif;
+    font-size: 13px;
+    color: #292a2c;
+    border: 1px solid #d2d2d2;
+    line-height: 30px;
+    padding-left: 5px
+}
+
+input.enter.shot {
+    width: 120px
+}
+
+input.enter.long {
+    width: 100%
+}
+
+input.enter.SearchBar {
+    width: 335px
+}
+
+input.enter.date {
+    width: 120px;
+    padding-left: 5px;
+    background: url(../images/admin/icon_date.png) no-repeat 95% center;
+    padding-right: 3%;
+    cursor: pointer
+}
+
+input.radio {
+    vertical-align: middle;
+    transform: scale(1.2);
+    margin: 0;
+    padding: 0
+}
+
+input.checkbox {
+    vertical-align: middle;
+    transform: scale(1.2);
+    margin: 0;
+    padding: 0
+}
+
+label.label {
+    vertical-align: bottom;
+    cursor: pointer
+}
+
+/*Common(첨부파일)*/
+.AddFile {
+    background: #eff5fb;
+    border-radius: 8px;
+    padding: 20px 30px
+}
+
+.AddFile ul {
+    width: 100%;
+    display: table
+}
+
+.AddFile .th {
+    text-align: left;
+    color: #292a2c;
+    font-weight: 500;
+    display: table-cell
+}
+
+.AddFile .td {
+    display: table-cell;
+    position: relative
+}
+
+.AddFile .td .HiddenFile {
+    width: 84px;
+    height: 30px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    z-index: 9;
+    cursor: pointer
+}
+
+.AddFile .td .ViewFile {
+    line-height: 30px;
+    height: 30px;
+    width: 100%;
+    padding-right: 100px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden
+}
+
+.AddFile .td .CommBtn.File {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 8
+}
+
+.AddFile .td a.AddFileDel {
+    display: none;
+    margin-left: 5px;
+    vertical-align: middle;
+    line-height: 0;
+    padding: 5px
+}
+
+/*Common(Search)*/
+.DataSearch {
+    text-align: center;
+    background: #fff;
+    padding: 40px 0;
+    border-radius: 8px
+}
+
+.DataSearch dl {
+    display: inline-block;
+    margin: 0 16px
+}
+
+.DataSearch dt {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    font-weight: 500;
+    margin-right: 10px
+}
+
+.DataSearch dd {
+    display: inline-block;
+    vertical-align: middle
+}
+
+.DataSearch .CommBtn.Search {
+    margin-left: 24px
+}
+
+/*Common(검색결과)*/
+.SearchResult {
+    text-align: left;
+    margin-bottom: 17px;
+    color: #424242
+}
+
+.SearchResult span {
+    color: #0b39d1
+}
+
+/*Common(Paging)*/
+.paging {
+    margin: 40px 0;
+    text-align: center
+}
+
+.paging ul {
+    display: inline-block
+}
+
+.paging li {
+    display: inline-block;
+    vertical-align: middle
+}
+
+.paging li a {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    display: inline-block;
+    font-family: Dotum, '돋움', sans-serif;
+    font-size: 11px;
+    color: #424242
+}
+
+.paging li a.now {
+    background: #0b39d1;
+    color: #fff;
+    border-radius: 2px
+}
+
+/*Common(Popup)*/
+.LayerPopup {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 99;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0;
+    top: 0
+}
+
+.LayerPopup .PopupData {
+    width: 800px;
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    padding: 40px
+}
+
+.LayerPopup .PopupData table .CommBtn {
+    margin-right: 4px
+}
+
+.LayerPopup .PopupData table .CommBtn.Approval {
+    width: 64px;
+    font-family: Dotum, '돋움', sans-serif;
+    font-size: 12px;
+    height: 30px;
+    border: 1px solid #3a3a3a;
+    color: #fff;
+    background: #3a3a3a;
+    border-radius: 3px
+}
+
+.LayerPopup .PopupData table .CommBtn.NonApproval {
+    width: 64px;
+    font-family: Dotum, '돋움', sans-serif;
+    font-size: 12px;
+    height: 30px;
+    border: 1px solid #bdbdbd;
+    color: #292a2c;
+    background: #fff;
+    border-radius: 3px
+}
+
+.LayerPopup .popup_close {
+    position: absolute;
+    right: 20px;
+    top: 20px
+}
+
+.LayerPopup .pop_tit {
+    font-size: 20px;
+    font-weight: 500;
+    color: #292a2c
+}
+
+/*Common(Top Info Text)*/
+.TopInfoText {
+    width: 100%;
+    position: relative
+}
+
+.TopInfoText button {
+    position: absolute;
+    right: 0;
+    top: 10px
+}
+
+.TopInfoText ul {
+    display: inline-block
+}
+
+.TopInfoText li.main_text {
+    color: #424242;
+    line-height: 36px
+}
+
+.TopInfoText li.main_text span {
+    color: #0b39d1
+}
+
+.TopInfoText ul li.main_text:first-child {
+    border-bottom: 1px solid #fff
+}
+
+.TopInfoText li.sub_text {
+    color: #8e8e8e;
+    line-height: 20px;
+    font-size: 12px;
+    font-weight: 300
+}
+
+/*Common(Top Tab)*/
+.TopTab {
+    height: 24px;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 40px
+}
+
+.TopTab ul {
+    display: inline-block
+}
+
+.TopTab ul li {
+    width: 75px;
+    float: left
+}
+
+.TopTab ul li a {
+    display: block;
+    height: 24px;
+    text-align: center;
+    font-weight: 500
+}
+
+.TopTab ul li a.on {
+    color: #0b39d1;
+    border-bottom: 2px solid #0b39d1
+}
+
+/*Common(초기화)*/
+.ResetMgmt {
+    display: inline-block
+}
+
+.ResetMgmt a {
+    position: relative;
+    line-height: 28px;
+    border: 1px solid #bdbdbd;
+    display: inline-block;
+    padding: 0 17px;
+    color: #292a2c;
+    border-radius: 3px
+}
+
+.ResetMgmt a input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    visibility: hidden
+}
+
+.ResetMgmt a.chk {
+    background: #3a3a3a;
+    border-color: #3a3a3a;
+    color: #fff
+}
+
+/*Content*/
+.Container {
+    width: 100%;
+    display: block;
+    padding-left: 250px;
+    position: relative;
+    background: #f4f9ff url(../images/admin/content_bg.gif) no-repeat 250px top
+}
+
+.DataArea {
+    padding: 40px 4.8% 0 4.8%
+}
+
+/*운영기본설정(목록)*/
+.OperBasicSettingList .PageTitle .Add {
+    float: right
+}
+
+.OperBasicSettingList .Activate li {
+    display: inline-block;
+    margin: 0 4px
+}
+
+/*운영기본설정(추가)*/
+.OperBasicSettingAdd .PageTitle .Save {
+    float: right
+}
+
+.OperBasicSettingAdd .info_box {
+    position: relative;
+}
+
+.OperBasicSettingAdd span.info_text {
+    display: inline-block;
+    margin-bottom: 15px
+}
+
+.OperBasicSettingAdd span.prvw_btn {
+    font-size: 12px;
+    line-height: 28px;
+    color: #0b39d1;
+    padding: 0 16px;
+    border: 1px solid #0b39d1;
+    display: inline-block;
+    border-radius: 4px;
+    position: absolute;
+    right: 0
+}
+
+/*시·군 관리(목록)*/
+.CitySettingList .PageTitle {
+    margin-bottom: 30px
+}
+
+.CitySettingList .top_ctrl {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 17px
+}
+
+.CitySettingList .top_ctrl h3 {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #292a2c;
+    margin-right: 8px
+}
+
+.CitySettingList .top_ctrl .Save {
+    float: right
+}
+
+.CitySettingList .Activate li {
+    display: inline-block;
+    margin: 0 4px
+}
+
+/*시·군 관리(팝업 - **시 모집상세)*/
+.CityRctLayer .info_text {
+    margin: 28px 0 17px 0;
+    font-size: 14px;
+    color: #424242
+}
+
+.CityRctLayer .info_text span {
+    color: #0b39d1
+}
+
+.CityRctLayer .DataTable {
+    border-top: 1px solid #e5e5e5;
+    margin-bottom: 40px
+}
+
+.CityRctLayer .DataTable .in_text {
+    display: block;
+    margin-top: 8px
+}
+
+.CityRctLayer .DataTable .in_text.red {
+    color: #fc334b
+}
+
+.CityRctLayer .button_area {
+    text-align: right;
+    margin-bottom: 10px
+}
+
+.CityRctLayer .HasTopTHcolor input.enter.shot {
+    width: 80px
+}
+
+.CityRctLayer .bottom_btn {
+    text-align: center
+}
+
+/*시·군 관리(팝업 - 승마장 추가)*/
+.GroundAddLayer {
+    padding: 40px 0 !important
+}
+
+.GroundAddLayer .pop_tit {
+    padding: 0 40px
+}
+
+.GroundAddLayer .DataTable {
+    padding: 30px 40px 40px 40px;
+    border-bottom: 1px solid #d2d2d2
+}
+
+.GroundAddLayer .search {
+    margin-bottom: 30px
+}
+
+.GroundAddLayer .search dt {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    font-weight: 500;
+    color: #292a2c;
+    margin-right: 6px
+}
+
+.GroundAddLayer .search dt:nth-child(3) {
+    margin-left: 25px
+}
+
+.GroundAddLayer .search dd {
+    display: inline-block;
+    vertical-align: middle
+}
+
+.GroundAddLayer .search .school {
+    width: 178px;
+    border-right: none;
+    float: left
+}
+
+.GroundAddLayer .search button {
+    float: left;
+    width: 62px;
+    height: 32px;
+    background: #0b39d1;
+    color: #fff;
+    border: none;
+    font-family: Dotum, '돋움', sans-serif;
+    font-size: 12px
+}
+
+.GroundAddLayer .total {
+    color: #424242
+}
+
+.GroundAddLayer .total span {
+    color: #0b39d1;
+    font-family: Dotum, '돋움', sans-serif
+}
+
+.GroundAddLayer .HasTopTH td {
+    border-bottom: 1px solid #e5e5e5;
+    border-top: none
+}
+
+.GroundAddLayer .paging {
+    margin: 20px 0 0 0
+}
+
+.GroundAddLayer .bottom_btn {
+    text-align: center;
+    padding-top: 40px
+}
+
+/*학교관리*/
+.SchoolMgmtList .DataSearch {
+    margin: 13px 0 50px 0
+}
+
+.SchoolMgmtList .Activate li {
+    display: inline-block;
+    margin: 0 4px
+}
+
+.SchoolMgmtList .top_ctrl {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 17px
+}
+
+.SchoolMgmtList .top_ctrl select {
+    margin-top: 10px
+}
+
+.SchoolMgmtList .top_ctrl button {
+    float: right
+}
+
+/*학교관리(팝업 - 학교 추가-)*/
+.SchoolAddLayer {
+    width: 600px !important
+}
+
+.SchoolAddLayer .popup_close {
+    right: 20px
+}
+
+.SchoolAddLayer .pop_tit {
+    margin-bottom: 20px
+}
+
+.SchoolAddLayer table th {
+    text-align: left;
+    color: #292a2c;
+    font-weight: 500
+}
+
+.SchoolAddLayer table th span {
+    color: #fc334b
+}
+
+.SchoolAddLayer table td {
+    padding: 10px 0
+}
+
+.SchoolAddLayer .bottom_btn {
+    text-align: center;
+    margin-top: 40px
+}
+
+/*승마장 관리 > 기본관리(목록)*/
+.GroundMgmtBasics .DataSearch {
+    margin: 13px 0 50px 0
+}
+
+.GroundMgmtBasics .top_ctrl {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 17px
+}
+
+.GroundMgmtBasics .top_ctrl select {
+    margin-top: 10px
+}
+
+.GroundMgmtBasics .top_ctrl button {
+    float: right
+}
+
+.GroundMgmtBasics .Activate li {
+    display: inline-block;
+    margin: 0 4px
+}
+
+/*승마장 관리 > 기본관리(목록)(팝업 - 승마장 추가-)*/
+.GroundMgmtAddLayer {
+    width: 600px !important
+}
+
+.GroundMgmtAddLayer .popup_close {
+    right: 20px
+}
+
+.GroundMgmtAddLayer .pop_tit {
+    margin-bottom: 20px
+}
+
+.GroundMgmtAddLayer table th {
+    text-align: left;
+    color: #292a2c;
+    font-weight: 500
+}
+
+.GroundMgmtAddLayer table th span {
+    color: #fc334b
+}
+
+.GroundMgmtAddLayer table td {
+    padding: 10px 10px 10px 0
+}
+
+.GroundMgmtAddLayer table tr.address1 th {
+    vertical-align: top;
+    padding-top: 15px
+}
+
+.GroundMgmtAddLayer table tr.address1 td {
+    padding: 10px 0 5px 0
+}
+
+.GroundMgmtAddLayer table tr.address2 td {
+    padding: 5px 0 10px 0
+}
+
+.GroundMgmtAddLayer table tr.tel td {
+    text-align: center
+}
+
+.GroundMgmtAddLayer table tr.tel .select {
+    width: 110px;
+    float: left
+}
+
+.GroundMgmtAddLayer table tr.tel .enter {
+    width: 110px;
+    text-align: center
+}
+
+.GroundMgmtAddLayer table tr.tel .enter:last-child {
+    float: right
+}
+
+.GroundMgmtAddLayer dl {
+    width: 33.33%;
+    float: left
+}
+
+.GroundMgmtAddLayer dt {
+    display: inline-block;
+    text-align: left;
+    color: #292a2c;
+    font-weight: 500
+}
+
+.GroundMgmtAddLayer dd {
+    display: inline-block;
+    text-align: right
+}
+
+.GroundMgmtAddLayer dd select {
+    width: 70px;
+    margin-left: 6px
+}
+
+.GroundMgmtAddLayer td dl:last-child select {
+    width: 82px
+}
+
+.GroundMgmtAddLayer .AddFile .th {
+    width: 140px
+}
+
+.GroundMgmtAddLayer .scroll_tb {
+    height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden
+}
+
+.GroundMgmtAddLayer .bottom_btn {
+    text-align: center;
+    margin-top: 40px
+}
+
+/*승마장 관리 > 승마장배정현황(목록)*/
+.GroundMgmtAsgmt .DataSearch {
+    margin: 13px 0 50px 0
+}
+
+.GroundMgmtAsgmt .top_ctrl {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 17px
+}
+
+.GroundMgmtAsgmt .top_ctrl select {
+    margin-top: 10px
+}
+
+.GroundMgmtAsgmt .top_ctrl button {
+    float: right
+}
+
+.GroundMgmtAsgmt .Activate li {
+    display: inline-block;
+    margin: 0 4px
+}
+
+.GroundMgmtAsgmt .HasTopTH>thead>tr>th {
+    height: 32px
+}
+
+.GroundMgmtAsgmt .HasTopTH>thead>tr:first-child th:nth-child(6) {
+    border-bottom: none
+}
+
+.GroundMgmtAsgmt .HasTopTH>thead>tr>td {
+    height: 32px;
+    text-align: center;
+    border-bottom: 1px solid #0b39d1;
+    background: #f0f2f7;
+    font-size: 13px
+}
+
+/*승마장 관리 > 승마장배정현황(목록)(팝업 - 승마장 배정 추가-)*/
+.GroundAsgmtAddLayer {
+    width: 500px !important
+}
+
+.GroundAsgmtAddLayer .popup_close {
+    right: 20px
+}
+
+.GroundAsgmtAddLayer .pop_tit {
+    margin-bottom: 20px
+}
+
+.GroundAsgmtAddLayer table th {
+    text-align: left;
+    color: #292a2c;
+    font-weight: 500
+}
+
+.GroundAsgmtAddLayer table th span {
+    color: #fc334b
+}
+
+.GroundAsgmtAddLayer table td {
+    padding: 10px 0;
+    font-family: Dotum, '돋움', sans-serif;
+    font-size: 13px;
+    color: #424242
+}
+
+.GroundAsgmtAddLayer table td input.enter.long {
+    width: 90%
+}
+
+.GroundAsgmtAddLayer .bottom_btn {
+    text-align: center;
+    margin-top: 40px
+}
+
+/*체험신청 인원 관리(목록)*/
+.AppExperience .DataSearch {
+    margin: 13px 0 50px 0
+}
+
+.AppExperience .top_ctrl {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 17px
+}
+
+.AppExperience .top_ctrl select {
+    margin-top: 10px
+}
+
+.AppExperience .top_ctrl button {
+    float: right
+}
+
+.AppExperience .top_ctrl button.Cert {
+    margin-left: 10px
+}
+
+.AppExperience .Activate li {
+    display: inline-block;
+    margin: 0 4px
+}
+
+/*배정 관리 > 배정 관리*/
+.AssMgmt .DataSearch {
+    margin: 13px 0 50px 0
+}
+
+.AssMgmt .top_ctrl {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 17px
+}
+
+.AssMgmt .top_ctrl select {
+    margin-top: 10px
+}
+
+.AssMgmt .top_ctrl button {
+    float: right
+}
+
+.AssMgmt .top_ctrl button.Cert {
+    margin-left: 10px
+}
+
+.AssMgmt .Activate li {
+    display: inline-block;
+    margin: 0 4px
+}
+
+/*배정 관리 > 배정완료 인원관리*/
+.AssFinishMgmt .DataSearch {
+    margin: 13px 0 50px 0
+}
+
+.AssFinishMgmt .top_ctrl {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 17px;
+    position: relative
+}
+
+.AssFinishMgmt .top_ctrl h5 {
+    color: #0b39d1;
+    font-size: 16px;
+    font-weight: 500;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%)
+}
+
+.AssFinishMgmt .top_ctrl button {
+    float: right
+}
+
+.AssFinishMgmt .top_ctrl button.Excel {
+    margin-left: 10px;
+    background: #0b39d1;
+    color: #fff
+}
+
+.AssFinishMgmt .Activate li {
+    display: inline-block;
+    margin: 0 4px
+}
+
+/*배정 관리 > 탈락자관리*/
+.AssFailMgmt .DataSearch {
+    margin: 13px 0 50px 0
+}
+
+.AssFailMgmt .top_ctrl {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 17px;
+    position: relative
+}
+
+.AssFailMgmt .top_ctrl h5 {
+    color: #0b39d1;
+    font-size: 16px;
+    font-weight: 500;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%)
+}
+
+.AssFailMgmt .top_ctrl select {
+    margin-top: 10px
+}
+
+.AssFailMgmt .top_ctrl button {
+    float: right
+}
+
+.AssFailMgmt .top_ctrl button.Excel {
+    margin-left: 10px;
+    background: #0b39d1;
+    color: #fff
+}
+
+.AssFailMgmt .Activate li {
+    display: inline-block;
+    margin: 0 4px
+}
+
+/*배정 관리 > 탈락자관리(팝업 - 학생 추가 배정-)*/
+.StudentAddLayer {
+    width: 500px !important
+}
+
+.StudentAddLayer .popup_close {
+    right: 20px
+}
+
+.StudentAddLayer .pop_tit {
+    margin-bottom: 20px
+}
+
+.StudentAddLayer table th {
+    text-align: left;
+    padding: 15px 0;
+    font-weight: 500
+}
+
+.StudentAddLayer table tr:first-child td {
+    text-align: left
+}
+
+.StudentAddLayer table td {
+    text-align: center
+}
+
+.StudentAddLayer dl {
+    width: 100%;
+    display: inline-block;
+    margin: 20px 0
+}
+
+.StudentAddLayer dl dt {
+    width: 50%;
+    float: left;
+    text-align: right;
+    padding-right: 30px;
+    font-weight: 500
+}
+
+.StudentAddLayer dl dt input.radio {
+    margin-right: 10px
+}
+
+.StudentAddLayer dl dd {
+    width: 50%;
+    float: left;
+    text-align: left;
+    padding-left: 30px;
+    font-family: Dotum, '돋움', sans-serif;
+    font-size: 13px
+}
+
+.StudentAddLayer dl.full dt {
+    color: #8e8e8e
+}
+
+.StudentAddLayer dl.full dd {
+    color: #8e8e8e
+}
+
+.StudentAddLayer .bottom_btn {
+    text-align: center;
+    margin-top: 20px
+}
+
+.StudentAddLayer .bottom_btn .CommBtn.Add {
+    width: 120px
+}
+
+/*출결 관리(목록)*/
+.Attendance .DataSearch {
+    margin: 13px 0 50px 0
+}
+
+.Attendance a.down {
+    color: #0b39d1;
+    text-decoration: underline;
+    line-height: 16px
+}
+
+/*보고서 > 시군,승마장별 현황*/
+.ReportList .DataSearch {
+    margin: 13px 0 50px 0
+}
+
+.ReportList .top_ctrl {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 17px
+}
+
+.ReportList .top_ctrl .CommBtn.Excel {
+    background: #0b39d1;
+    color: #fff;
+    float: right
+}
+
+/*보고서 > 체험결과*/
+.ReportExp .DataSearch {
+    margin: 13px 0 50px 0
+}
+
+.ReportExp .top_ctrl {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 17px
+}
+
+.ReportExp .top_ctrl .CommBtn.Excel {
+    background: #0b39d1;
+    color: #fff;
+    float: right
+}
+
+.ReportExp .HasTopTH>thead>tr>th {
+    height: 32px
+}
+
+.ReportExp .HasTopTH>thead>tr:first-child th:nth-child(4) {
+    border-bottom: none
+}
+
+.ReportExp .HasTopTH>thead>tr>td {
+    height: 32px;
+    text-align: center;
+    border-bottom: 1px solid #0b39d1;
+    background: #f0f2f7;
+    font-size: 13px
+}
+
+.ReportExp tr.total td {
+    background: #eff5fb
+}
+
+.ReportExp td.NoData {
+    background: #eff5fb
+}
+
+/*고객센터 > 목록(공통)*/
+.ServiceList .DataSearch {
+    margin: 13px 0 50px 0
+}
+
+.ServiceList td.tit {
+    text-align: left
+}
+
+/*고객센터 > 작성(공통)*/
+.ServiceWrite {
+    padding-bottom: 40px
+}
+
+.ServiceWrite .PageTitle button {
+    width: 120px;
+    float: right
+}
+
+.ServiceWrite .write {
+    background: #fff
+}
+
+.ServiceWrite th {
+    background: #edf1f5;
+    font-weight: 500;
+    text-align: left;
+    padding-left: 30px;
+    border-bottom: 1px solid #e5e5e5
+}
+
+.ServiceWrite td {
+    padding: 9px 25px;
+    border-bottom: 1px solid #e5e5e5;
+    height: 50px;
+    font-family: Dotum, '돋움';
+    font-size: 13px
+}
+
+.ServiceWrite td label {
+    margin: 0 10px;
+    font-family: Dotum, '돋움', sans-serif;
+    font-size: 13px;
+    color: #292a2c;
+    font-size: 13px
+}
+
+.ServiceWrite td.editor_area {
+    padding: 20px
+}
+
+.ServiceWrite td.editor_area .editor {
+    width: 100%;
+    height: 240px;
+    border: 1px solid #bdbdbd;
+    padding: 15px;
+    font-family: Dotum, '돋움', sans-serif;
+    font-size: 13px;
+}
+
+.ServiceWrite td a.mail {
+    color: #0b39d1;
+    text-decoration: underline
+}
+
+.ServiceWrite td a.file {
+    color: #424242;
+    text-decoration: underline
+}
+
+.ServiceWrite .bottom_btn {
+    margin-top: 40px;
+    text-align: center;
+    width: 100%;
+    position: relative
+}
+
+.ServiceWrite .bottom_btn button {
+    width: 120px;
+    height: 42px;
+    margin: 0 6px;
+    border-radius: 8px
+}
+
+.ServiceWrite .bottom_btn .del {
+    border: 1px solid #0b39d1;
+    color: #0b39d1;
+    background-color: transparent
+}
+
+.ServiceWrite .bottom_btn .list {
+    border: 1px solid #0b39d1;
+    color: #0b39d1;
+    background-color: transparent;
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.ServiceWrite .bottom_btn .cancel {
+    border: 1px solid #859be2;
+    color: #fff;
+    background-color: #859be2
+}
+
+/*관리자관리 > 목록(공통)*/
+.AdminMgmt .DataSearch {
+    margin: 13px 0 50px 0
+}
+
+/*관리자관리 > 목록(팝업 - 관리자 추가)*/
+.AdmAddLayer {
+    width: 500px !important
+}
+
+.AdmAddLayer .popup_close {
+    right: 20px
+}
+
+.AdmAddLayer table th {
+    text-align: left
+}
+
+.AdmAddLayer table th span {
+    color: #fc334b
+}
+
+.AdmAddLayer table td {
+    padding: 10px 0;
+    font-family: Dotum, '돋움', sans-serif;
+    font-size: 13px
+}
+
+.AdmAddLayer table td.popup_select {
+    text-align: center;
+    padding: 40px 0 18px 0
+}
+
+.AdmAddLayer table tr.tel td {
+    text-align: center
+}
+
+.AdmAddLayer table tr.tel .select {
+    width: 90px;
+    float: left
+}
+
+.AdmAddLayer table tr.tel .enter {
+    width: 90px;
+    text-align: center
+}
+
+.AdmAddLayer table tr.tel .enter:last-child {
+    float: right
+}
+
+.AdmAddLayer .bottom_btn {
+    text-align: center;
+    margin-top: 30px
+}
+
+.AdmAddLayer .bottom_btn button {
+    width: 120px !important;
+    margin: 0 10px
+}
+
+/*관리자관리 > 배너/팝업 관리*/
+.BannerPopupMgmt h2.PageTitle {
+    margin-bottom: 40px
+}
+
+.BannerPopupMgmt h4.SubTitle button {
+    float: right
+}
+
+.BannerPopupMgmt h4.SubTitle button.Save {
+    margin-left: 10px
+}
+
+.BannerPopupMgmt .list {
+    width: 48.7%;
+    float: left
+}
+
+.BannerPopupMgmt .list td.tit {
+    text-align: left
+}
+
+.BannerPopupMgmt .details {
+    width: 48.7%;
+    float: right
+}
+
+.BannerPopupMgmt .details th {
+    text-align: left;
+    padding-left: 30px;
+    font-weight: 500;
+    background: #edf1f5;
+    border-bottom: 1px solid #e5e5e5
+}
+
+.BannerPopupMgmt .details td {
+    height: 50px;
+    padding: 0 4%;
+    border-bottom: 1px solid #e5e5e5;
+    font-family: Dotum, '돋움', sans-serif;
+    font-size: 13px
+}
+
+.BannerPopupMgmt .details select.select.Target {
+    width: 28%
+}
+
+.BannerPopupMgmt .details input.url {
+    width: 70%;
+    float: right
+}
+
+.BannerPopupMgmt .details ul {
+    display: inline-block;
+    width: 100%
+}
+
+.BannerPopupMgmt .details ul li {
+    width: 50%;
+    float: left
+}
+
+.BannerPopupMgmt .details ul li span {
+    width: 15px;
+    display: inline-block;
+    margin-right: 5px
+}
+
+.BannerPopupMgmt .details input.enter.px {
+    width: 55%
+}
+
+/*■■■■승마사업자■■■■*/
+/*승마장 기본설정(목록)*/
+.BuisnessGrndStn h2.PageTitle {
+    margin-bottom: 30px
+}
+
+.BuisnessGrndStn .TopInfoText {
+    margin-bottom: 15px
+}
+
+.BuisnessGrndStn .TableWrap input.enter {
+    width: 428px
+}
+
+.BuisnessGrndStn .TableWrap select.select {
+    width: 115px
+}
+
+.BuisnessGrndStn .TableWrap .tel input.enter {
+    width: 130px;
+    text-align: center
+}
+
+.BuisnessGrndStn .AddFile {
+    background: #fff;
+    padding: 0
+}
+
+.BuisnessGrndStn .AddFile ul {
+    display: inline-block
+}
+
+.BuisnessGrndStn .AddFile .td .ViewFile {
+    padding-right: 78px
+}
+
+.BuisnessGrndStn .AddFile .td a.AddFileDel {
+    margin-right: 15px
+}
+
+/*배정 인원 관리 > 요일별 인원설정*/
+.BuisnessDayUser h2.PageTitle {
+    margin-bottom: 30px
+}
+
+.BuisnessDayUser .TopInfoText {
+    margin-bottom: 30px
+}
+
+.BuisnessDayUser .HasTopTH>thead>tr>th {
+    height: 32px
+}
+
+.BuisnessDayUser .HasTopTH>thead>tr:first-child th:nth-child(4) {
+    border-bottom: none
+}
+
+.BuisnessDayUser .HasTopTH>thead>tr>td {
+    height: 32px;
+    text-align: center;
+    border-bottom: 1px solid #0b39d1;
+    background: #f0f2f7;
+    font-size: 13px
+}
+
+.BuisnessDayUser .TableWrap input.enter {
+    width: 65%;
+    text-align: center
+}
+
+/*배정 인원 관리 > 배정 인원 관리*/
+.BuisnessUserMgmt h2.PageTitle {
+    margin-bottom: 40px
+}
+
+.BuisnessUserMgmt .top_ctrl {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 17px;
+    margin-top: 40px
+}
+
+.BuisnessUserMgmt .top_ctrl select {
+    margin-top: 10px
+}
+
+.BuisnessUserMgmt .top_ctrl button {
+    float: right
+}
+
+.BuisnessUserMgmt .top_ctrl button.Excel {
+    margin-left: 10px;
+    background: #0b39d1;
+    color: #fff
+}
+
+/*출결관리*/
+.BuisnessAttendance h2.PageTitle {
+    margin-bottom: 40px
+}
+
+.BuisnessAttendance .AddFile {
+    background: #fff;
+    padding: 0;
+    text-align: center
+}
+
+.BuisnessAttendance .AddFile ul {
+    display: inline-block;
+    width: auto
+}
+
+.BuisnessAttendance .AddFile .td .ViewFile {
+    padding-right: 78px
+}
+
+.BuisnessAttendance .AddFile .td a.AddFileDel {
+    margin-right: 15px
+}
+
+/*보고서*/
+.BuisnessReportExp h2.PageTitle {
+    margin-bottom: 40px
+}
+
+.BuisnessReportExp .top_ctrl {
+    text-align: right;
+    margin-bottom: 18px
+}
+
+.BuisnessReportExp .top_ctrl button {
+    margin-left: 6px
+}
+
+.BuisnessReportExp .HasTopTH>thead>tr>th {
+    height: 32px
+}
+
+.BuisnessReportExp .HasTopTH>thead>tr:first-child th:nth-child(3) {
+    border-bottom: none
+}
+
+.BuisnessReportExp .HasTopTH>thead>tr>td {
+    height: 32px;
+    text-align: center;
+    border-bottom: 1px solid #0b39d1;
+    background: #f0f2f7;
+    font-size: 13px
+}
+
+.BuisnessReportExp tr.total td {
+    background: #eff5fb
+}
+
+.BuisnessReportExp .TableWrap input.enter {
+    width: 75%;
+    text-align: center
+}
+
+/*■■■■시·군 담당자■■■■*/
+/*승마장기본설정*/
+.RespBasicStn .TopInfoText {
+    margin-bottom: 17px
+}
+
+.RespBasicStn .TableWrap span.info_text {
+    display: block;
+    margin-top: 8px
+}
+
+.RespBasicStn .TableWrap span.info_text.red {
+    color: #fc334b
+}
+
+.RespBasicStn .TableWrap .btn_area {
+    text-align: right;
+    margin-bottom: 10px
+}
+
+.RespBasicStn .TableWrap .in_table th {
+    height: 40px;
+    font-weight: normal;
+    text-align: center;
+    background: #eff5fb;
+    font-size: 13px
+}
+
+.RespBasicStn .TableWrap .in_table td {
+    height: 40px;
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5
+}
+
+.RespBasicStn .TableWrap .in_table td input.enter {
+    width: 80px;
+    color: #8e8e8e
+}
+
+.RespBasicStn .TableWrap td.btn_table .CommBtn {
+    margin-right: 4px
+}
+
+.RespBasicStn .TableWrap td.btn_table .CommBtn.ResetAll {
+    font-family: Dotum, '돋움', sans-serif;
+    font-size: 12px;
+    background: #3a3a3a;
+    width: 94px;
+    height: 30px;
+    color: #fff;
+    border: 0;
+    border-radius: 3px
+}
+
+.RespBasicStn .TableWrap td.btn_table .CommBtn.Reset {
+    font-family: Dotum, '돋움', sans-serif;
+    font-size: 12px;
+    background: #fff;
+    width: 140px;
+    height: 30px;
+    color: #292a2c;
+    border: 1px solid #bdbdbd;
+    border-radius: 3px
+}
+
+/*승마장관리*/
+.RespGroundMgmt .DataSearch {
+    margin: 13px 0 50px 0
+}
+
+.RespGroundMgmt .top_ctrl {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 17px
+}
+
+.RespGroundMgmt .top_ctrl select {
+    margin-top: 10px
+}
+
+.RespGroundMgmt .top_ctrl button {
+    float: right;
+    width: 150px
+}
+
+.RespGroundMgmt .Activate li {
+    display: inline-block;
+    margin: 0 4px
+}
+
+.RespGroundMgmt .HasTopTH>thead>tr>th {
+    height: 32px
+}
+
+.RespGroundMgmt .HasTopTH>thead>tr:first-child th:nth-child(5) {
+    border-bottom: none
+}
+
+.RespGroundMgmt .HasTopTH>thead>tr>td {
+    height: 32px;
+    text-align: center;
+    border-bottom: 1px solid #0b39d1;
+    background: #f0f2f7;
+    font-size: 13px
+}
+
+/*체험신청 인원 관리 / 배정 인원 관리 */
+.RespUserMgmt .DataSearch {
+    margin: 13px 0 50px 0
+}
+
+.RespUserMgmt .top_ctrl {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 17px
+}
+
+.RespUserMgmt .top_ctrl select {
+    margin-top: 10px
+}
+
+.RespUserMgmt .top_ctrl button {
+    float: right;
+    margin-left: 10px
+}
+
+.RespUserMgmt .Activate li {
+    display: inline-block;
+    margin: 0 4px
+}
+
+/*배정 관리 > 배정완료 인원관리*/
+.RespFinishMgmt .DataSearch {
+    margin: 13px 0 50px 0
+}
+
+.RespFinishMgmt .top_ctrl {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 17px;
+    position: relative
+}
+
+.RespFinishMgmt .top_ctrl h5 {
+    color: #0b39d1;
+    font-size: 16px;
+    font-weight: 500;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%)
+}
+
+.RespFinishMgmt .top_ctrl select {
+    margin-top: 10px
+}
+
+.RespFinishMgmt .top_ctrl button {
+    float: right
+}
+
+.RespFinishMgmt .top_ctrl button.Excel {
+    margin-left: 10px;
+    background: #0b39d1;
+    color: #fff
+}
+
+.RespFinishMgmt .Activate li {
+    display: inline-block;
+    margin: 0 4px
+}
+
+/*배정 관리 > 탈락자관리*/
+.RespFailMgmt .DataSearch {
+    margin: 13px 0 50px 0
+}
+
+.RespFailMgmt .top_ctrl {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 17px;
+    position: relative
+}
+
+.RespFailMgmt .top_ctrl h5 {
+    color: #0b39d1;
+    font-size: 16px;
+    font-weight: 500;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%)
+}
+
+.RespFailMgmt .top_ctrl select {
+    margin-top: 10px
+}
+
+.RespFailMgmt .top_ctrl button {
+    float: right
+}
+
+.RespFailMgmt .top_ctrl button.Excel {
+    margin-left: 10px;
+    background: #0b39d1;
+    color: #fff
+}
+
+/*출결관리*/
+.RespAttendance h2.PageTitle {
+    margin-bottom: 40px
+}
+
+.RespAttendance .DataSearch {
+    margin: 13px 0 50px 0
+}
+
+.RespAttendance .AddFile {
+    background: #fff;
+    padding: 0;
+    text-align: center
+}
+
+.RespAttendance .AddFile ul {
+    display: inline-block;
+    width: auto
+}
+
+.RespAttendance .AddFile .td .ViewFile {
+    padding-right: 78px
+}
+
+.RespAttendance .AddFile .td a.AddFileDel {
+    margin-right: 15px
+}
+
+/*보고서 > 시군,승마장별 현황*/
+.RespReportList .DataSearch {
+    margin: 13px 0 50px 0
+}
+
+.RespReportList .DataSearch .SearchBar {
+    width: 400px;
+}
+
+.RespReportList .top_ctrl {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 17px
+}
+
+.RespReportList .top_ctrl .CommBtn.Add {
+    width: 140px;
+    background: #0b39d1;
+    color: #fff;
+    float: right
+}
+
+/*보고서 > 체험결과*/
+.RespReportExp .DataSearch {
+    margin: 13px 0 50px 0
+}
+
+.RespReportExp .top_ctrl {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 17px
+}
+
+.RespReportExp .top_ctrl button {
+    float: right;
+    margin-left: 10px
+}
+
+.RespReportExp .HasTopTH>thead>tr>th {
+    height: 32px
+}
+
+.RespReportExp .HasTopTH>thead>tr:first-child th:nth-child(3) {
+    border-bottom: none
+}
+
+.RespReportExp .HasTopTH>thead>tr>td {
+    height: 32px;
+    text-align: center;
+    border-bottom: 1px solid #0b39d1;
+    background: #f0f2f7;
+    font-size: 13px
+}
+
+.RespReportExp tr.total td {
+    background: #eff5fb
+}
+
+.RespReportExp td.NoData {
+    background: #eff5fb
+}

@@ -1,0 +1,6381 @@
+﻿@import 'font/NanumSquare/Nanumsquare.css';
+@import 'font/NotoSansKR.css';
+
+/*Common*/
+section {
+    width: 100%;
+    position: relative;
+    display: inline-block
+}
+
+article {
+    width: 1200px;
+    margin: auto
+}
+
+a {
+    color: #101010
+}
+
+.noto {
+    font-family: Noto Sans KR
+}
+
+/*Header*/
+header {
+    width: 100%;
+    background-color: #fff;
+    height: 100px;
+    position: relative;
+    border-bottom: 1px solid #e0e0e0
+}
+
+header h1 {
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+header nav {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    margin-top: -25px
+}
+
+header nav li {
+    display: inline-block;
+    text-align: right;
+    margin: 0 38px;
+    font-weight: 700;
+    position: relative
+}
+
+header nav li.on>a {
+    color: #125adf;
+    padding-bottom: 10px;
+    border-bottom: 4px solid #125adf;
+    font-weight: 700
+}
+
+header nav li>a:hover {
+    color: #125adf;
+    padding-bottom: 10px;
+    border-bottom: 4px solid #125adf;
+    font-weight: 700
+}
+
+header nav li.last {
+    margin: 0
+}
+
+header nav li.last>a:hover {
+    color: #fff
+}
+
+header nav ul li>a {
+    font-size: 18px
+}
+
+header nav li>div {
+    width: 180px;
+    border: 1px solid #125adf;
+    position: absolute;
+    left: 50%;
+    top: 45px;
+    transform: translateX(-50%);
+    padding: 15px 0;
+    background: #fff;
+    z-index: 9;
+    display: none
+}
+
+header nav li>div:before {
+    content: '';
+    width: 12px;
+    height: 9px;
+    background: url(../images/apply/menu_drop_arrow.png) no-repeat;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -9px
+}
+
+header nav li>div>a {
+    display: block;
+    text-align: left;
+    padding-left: 20px;
+    line-height: 44px;
+    font-size: 17px;
+    background: url(../images/apply/menu_drop_arrow2.png) no-repeat 90% center
+}
+
+header nav li>div>a span {
+    padding-bottom: 2px;
+    border-bottom: 1px solid #fff
+}
+
+header nav li>div>a:hover {
+    color: #125adf;
+    background: url(../images/apply/menu_drop_arrow3.png) no-repeat 90% center
+}
+
+header nav li>div>a:hover span {
+    border-bottom: 1px solid #125adf
+}
+
+header nav .resultBtn {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    background-color: #125adf;
+    width: 134px;
+    border-radius: 40px;
+    text-align: center
+}
+
+header nav .resultBtn img {
+    margin-right: 10px
+}
+
+header .moAllMenu,
+header .moBtnArea {
+    display: none
+}
+
+/*Footer*/
+footer {
+    background-color: #2b2b2d;
+    width: 100%;
+    padding: 33px 0;
+    font-size: 12px;
+    color: #848484;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    text-transform: uppercase
+}
+
+footer .info {
+    margin-bottom: 10px
+}
+
+footer br {
+    display: none
+}
+
+/*Index*/
+.idx .mainBanner {
+    height: 980px;
+    overflow: hidden;
+    display: block
+}
+
+.idx .slideArea {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    height: 980px
+}
+
+.idx .slideArea .flex-viewport {
+    width: 100%;
+    display: inline-block
+}
+
+.idx .slideArea .slides li {
+    height: 980px;
+    width: 100%
+}
+
+.idx .slideArea .slides .s1 {
+    background: url(../images/apply/main_banner1.jpg) no-repeat center center
+}
+
+.idx .slideArea .slides .s2 {
+    background: url(../images/apply/main_banner2.jpg) no-repeat center center
+}
+
+.idx .slideArea .slides .s3 {
+    background: url(../images/apply/main_banner3.jpg) no-repeat center center
+}
+
+.idx .slideNavi {
+    position: absolute;
+    top: 310px;
+    z-index: 1;
+    width: 125px;
+    left: 50%;
+    margin-left: -80px
+}
+
+.idx .slideNavi .flex-pauseplay a {
+    display: block;
+    text-indent: -9999px;
+    cursor: pointer
+}
+
+.idx .slideNavi .flex-pauseplay a.flex-pause {
+    background: url(../images/apply/icon_pause.png) no-repeat left center
+}
+
+.idx .slideNavi .flex-pauseplay a.flex-play {
+    background: url(../images/apply/icon_play.png) no-repeat left center
+}
+
+.idx .slideNavi .flex-control-paging {
+    float: right
+}
+
+.idx .slideNavi .flex-control-paging li {
+    display: inline-block;
+    margin: 0 5px
+}
+
+.idx .slideNavi .flex-control-paging li a {
+    background-color: #fff;
+    width: 14px;
+    height: 14px;
+    border-radius: 100%;
+    display: block;
+    display: block;
+    cursor: pointer
+}
+
+.idx .slideNavi .flex-control-paging li a.flex-active {
+    width: 50px;
+    height: 14px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 40px
+}
+
+.idx .slideNavi .flex-control-paging li span {
+    text-indent: -9999px;
+    display: block
+}
+
+.idx .pageTitle {
+    position: absolute;
+    top: 134px;
+    width: 100%;
+    text-align: center;
+    z-index: 1
+}
+
+.idx .pageTitle h2 {
+    font-size: 62px;
+    color: #fff
+}
+
+.idx .pageTitle h3 {
+    font-size: 24px;
+    color: #fff;
+    margin-top: 40px;
+    line-height: 28px;
+    font-weight: 400
+}
+
+.idx .pageTitle h3 br {
+    display: none
+}
+
+.idx .leftMenu {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -68px;
+    z-index: 1
+}
+
+.idx .leftMenu li {
+    margin-bottom: 20px
+}
+
+.idx .leftMenu a {
+    color: #fff;
+    height: 50px;
+    line-height: 50px;
+    display: block;
+    width: 134px;
+    text-align: center
+}
+
+.idx .leftMenu li.on a {
+    background-color: #125adf
+}
+
+.idx .quickMenu {
+    position: absolute;
+    right: 60px;
+    top: 50%;
+    z-index: 2;
+    margin-top: -159px
+}
+
+.idx .quickMenu h4 {
+    color: #fff;
+    line-height: 20px;
+    text-align: center
+}
+
+.idx .quickMenu li {
+    margin-bottom: 14px
+}
+
+.idx .quickMenu li:first-child a {
+    background-color: #f89f13;
+    border-color: #f89f13;
+    padding-top: 25px
+}
+
+.idx .quickMenu a {
+    display: block;
+    width: 72px;
+    height: 72px;
+    border-radius: 100%;
+    color: #fff;
+    text-align: center;
+    border: 1px solid #fff;
+    line-height: 20px;
+    padding-top: 18px
+}
+
+.idx .quickMenu .popupOn {
+    position: absolute;
+    top: 60px;
+    display: none
+}
+
+.idx .quickMenu .popupOn .popupCloseBtn {
+    padding-top: 16px
+}
+
+.idx .quickMenu .popupOn .popupCloseBtn img.mo {
+    display: none
+}
+
+.idx .quickMenu .popupOn .stopWatchBtn {
+    background-color: #f87413;
+    border-color: #f87413
+}
+
+.idx .shortCutArea {
+    position: absolute;
+    left: 50%;
+    top: 465px;
+    display: inline-block;
+    margin-left: -369px
+}
+
+.idx .shortCutArea a {
+    display: inline-block;
+    margin: 0 20px;
+    text-align: center;
+    padding: 66px 28px 0 17px;
+    ;
+    width: 328px;
+    height: 363px
+}
+
+.idx .shortCutArea .applyBtn {
+    background: url(../images/apply/main_shortcut_bg1.png) no-repeat center center
+}
+
+.idx .shortCutArea .searchBtn {
+    background: url(../images/apply/main_shortcut_bg2.png) no-repeat center center
+}
+
+.idx .shortCutArea .line {
+    margin: 20px auto;
+    width: 16px;
+    height: 1px;
+    background-color: #fff
+}
+
+.idx .shortCutArea .title {
+    font-size: 28px;
+    color: #fff;
+    line-height: 36px
+}
+
+.idx .shortCutArea .link {
+    color: #fff;
+    margin-top: 35px
+}
+
+.idx .shortCutArea .link img {
+    margin-left: 10px
+}
+
+.idx .shortCutArea .link img.mo {
+    display: none
+}
+
+.idx .moBottomMenu {
+    display: none
+}
+
+/*Index - Popup*/
+.popupData.idxPopup {
+    background-color: transparent;
+    width: 1160px;
+    text-align: left
+}
+
+.idxPopup ul {
+    display: inline-block;
+    width: 360px;
+    height: 400px;
+    border-radius: 5px;
+    color: #fff;
+    padding: 50px 40px;
+    margin-right: 3.1%
+}
+
+.idxPopup ul:nth-child(1) {
+    background-color: #08265e;
+    margin-bottom: 3.1%
+}
+
+.idxPopup ul:nth-child(2) {
+    background-color: #0d409e;
+    margin-bottom: 3.1%
+}
+
+.idxPopup ul:nth-child(3) {
+    background-color: #104fc4;
+    margin-right: 0;
+    margin-bottom: 3.1%
+}
+
+.idxPopup ul:nth-child(4) {
+    background-color: #125adf
+}
+
+.idxPopup ul:nth-child(5) {
+    background-color: #0799f5
+}
+
+.idxPopup ul:nth-child(6) {
+    background-color: #159ca4;
+    margin-right: 0
+}
+
+.idxPopup .subtit {
+    font-size: 16px
+}
+
+.idxPopup .title {
+    font-size: 24px;
+    line-height: 30px;
+    height: 60px;
+    margin: 20px 0 30px
+}
+
+.idxPopup .cnt {
+    height: 120px;
+    margin-bottom: 10px;
+    line-height: 19px
+}
+
+.idxPopup .cnt li {
+    padding-left: 18px;
+    margin-bottom: 10px;
+    line-height: 18px;
+    position: relative
+}
+
+.idxPopup .cnt li:last-child {
+    margin-bottom: 0
+}
+
+.idxPopup .cnt li:before {
+    content: "ㆍ";
+    position: absolute;
+    left: 1px;
+    top: 1px
+}
+
+.idxPopup .btn {
+    text-align: center
+}
+
+.idxPopup .btn a {
+    color: #fff;
+    display: inline-block;
+    width: 150px;
+    height: 62px;
+    background: url(../images/apply/detailBtn_bg.png) no-repeat center center;
+    line-height: 50px;
+    text-align: center
+}
+
+.idxPopup .btn a img {
+    margin-left: 5px
+}
+
+.idxPopup .btn a img.mo {
+    display: none
+}
+
+
+/*Sub Common*/
+.subTitle {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 80px
+}
+
+.sub .section {
+    padding: 80px 0
+}
+
+.breadCrumb {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.breadCrumb ul {
+    width: 1200px;
+    margin: auto
+}
+
+.breadCrumb li {
+    display: inline-block;
+    border-right: 1px solid #e0e0e0;
+    text-align: left;
+}
+
+.breadCrumb li a {
+    height: 50px;
+    line-height: 50px;
+    display: block;
+    background: url(../images/apply/down_arrow_black.png) no-repeat 92% center;
+    ;
+    padding: 0 20px;
+    width: 165px
+}
+
+.breadCrumb li:first-child {
+    border-left: 1px solid #e0e0e0;
+    margin-left: 20px;
+    text-align: center
+}
+
+.breadCrumb li:first-child a {
+    width: 50px;
+    background: none;
+    padding: 0
+}
+
+.topSearchArea {
+    width: 100%;
+    display: inline-block;
+    text-align: right;
+    margin-bottom: 20px
+}
+
+.topSearchArea input {
+    height: 50px;
+    border: 1px solid #e0e0e0;
+    padding-left: 15px
+}
+
+.topSearchArea input:placehoder {
+    color: #767676
+}
+
+.topSearchArea select {
+    margin-right: 6px;
+    border: 1px solid #e0e0e0;
+    padding: 0 22px 0 15px;
+    min-width: 120px
+}
+
+.topSearchArea button {
+    border: none;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    width: 100px;
+    background-color: #505050;
+    float: right
+}
+
+/*Select*/
+select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    ;
+    background: url(../images/apply/select_arrow.png) no-repeat 90% center;
+    height: 50px
+}
+
+select::-ms-expand {
+    display: none
+}
+
+/*Popup*/
+.popupArea {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    display: none;
+    z-index: 1
+}
+
+.popupData {
+    background-color: #fff;
+    width: 600px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 5px
+}
+
+.popupData .popupClose {
+    position: absolute;
+    top: 20px;
+    right: 20px
+}
+
+.popupData .popupClose img {
+    width: 15px
+}
+
+/*Form Area*/
+.formArea {
+    padding: 140px 0 120px 0;
+    text-align: center
+}
+
+.formArea h2 img.mo {
+    display: none
+}
+
+.formArea h3 {
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 10px;
+    line-height: 24px
+}
+
+.formArea form {
+    border-top: 2px solid #101010;
+    margin: 50px auto;
+    padding: 45px 0;
+    width: 746px;
+    margin-bottom: 0
+}
+
+.formArea form dl {
+    display: table;
+    width: 100%;
+    text-align: left
+}
+
+.formArea form dt {
+    display: table-cell;
+    padding-left: 30px;
+    line-height: 18px;
+    font-weight: 400;
+    width: 150px
+}
+
+.formArea form dt.lineTwo {
+    vertical-align: top;
+    padding-top: 11px
+}
+
+.formArea form dt span {
+    color: #fe633d
+}
+
+.formArea form dd {
+    padding: 5px 30px 5px 0;
+    text-align: left;
+    display: table-cell
+}
+
+.formArea form dd input {
+    background-color: #f9f9f9;
+    border: none;
+    width: 100%;
+    height: 50px;
+    padding-left: 15px;
+    color: #767676
+}
+
+.formArea form dd .phoneNumber {
+    width: 100%;
+    max-width: 400px
+}
+
+.formArea form dd .inputCheck {
+    position: relative
+}
+
+.formArea form dd .inputCheck .delBtn {
+    position: absolute;
+    right: 15px;
+    top: 16px;
+    display: none
+}
+
+.formArea form dd .inputCheck .delBtn img {
+    width: 20px
+}
+
+.formArea form dd .inputCheck .warn {
+    display: none;
+    margin: 10px 0 15px 0;
+    color: #fe633d
+}
+
+.formArea form dd .inputCheck.on input {
+    border: 1px solid #fe633d
+}
+
+.formArea form dd .inputCheck.on .warn.pc {
+    display: block
+}
+
+.formArea form dd .inputCheck.on .delBtn {
+    display: block
+}
+
+.formArea form dd select {
+    margin-right: 20px
+}
+
+.formArea form select {
+    max-width: 140px;
+    width: 100%;
+    border: none;
+    background-color: #f9f9f9;
+    padding: 0 22px 0 16px;
+    background-position-x: 92%;
+    color: #767676
+}
+
+.formArea form .crtNumInput {
+    position: relative;
+}
+
+.formArea form .inputArea {
+    position: relative;
+    display: none;
+    width: 100%
+}
+
+.formArea form .inputArea .time {
+    position: absolute;
+    right: 15px;
+    top: 19px;
+    color: #050505
+}
+
+.formArea form .btnArea {
+    text-align: right;
+    padding: 10px 0 5px 0
+}
+
+.formArea form .crtNumSend {
+    width: 100%;
+    max-width: 140px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #505050;
+    display: inline-block;
+    text-align: center;
+    color: #fff
+}
+
+.formArea form .crtNumConfirm {
+    width: 100%;
+    max-width: 140px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #505050;
+    display: inline-block;
+    text-align: center;
+    color: #fff;
+    display: none
+}
+
+.formArea form .crtNumResend {
+    width: 100%;
+    max-width: 140px;
+    height: 50px;
+    line-height: 50px;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid #101010;
+    vertical-align: top;
+    margin-right: 10px;
+    display: none
+}
+
+.formArea form .crtNumInput.on .crtNumSend {
+    display: none
+}
+
+.formArea form .crtNumInput.on .inputArea {
+    display: inline-block
+}
+
+.formArea form .crtNumInput.on .crtNumResend {
+    display: inline-block
+}
+
+.formArea form .crtNumInput.on .crtNumConfirm {
+    display: inline-block
+}
+
+.formArea .buttonArea {
+    width: 100%;
+    display: inline-block;
+    padding: 0 35px;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 50px;
+    padding-top: 40px
+}
+
+.formArea .btn {
+    color: #fff;
+    border: none;
+    background-color: #125adf;
+    border-radius: 5px;
+    width: 100%;
+    height: 60px;
+    display: block;
+    margin: auto;
+    font-size: 18px
+}
+
+.formArea .buttonArea .leftBtn {
+    color: #fff;
+    background-color: #a4a9b0;
+    float: left;
+    height: 60px;
+    width: 48.9%;
+    border-radius: 5px;
+    line-height: 60px;
+    font-size: 18px;
+    text-align: center;
+    font-size: 18px
+}
+
+.formArea .buttonArea .rightBtn {
+    color: #fff;
+    background-color: #125adf;
+    float: right;
+    height: 60px;
+    ;
+    width: 48.9%;
+    border-radius: 5px;
+    line-height: 60px;
+    font-size: 18px;
+    text-align: center;
+    font-size: 18px
+}
+
+/*Paging*/
+.paging {
+    width: 100%;
+    display: inline-block;
+    text-align: center
+}
+
+.paging div {
+    display: inline-block;
+    font-size: 16px;
+    margin: 0 35px
+}
+
+.paging a {
+    display: inline-block;
+    padding: 0 8px
+}
+
+.paging a img.mo {
+    display: none
+}
+
+.paging input {
+    text-align: right;
+    font-size: 16px;
+    border: 1px solid #e0e0e0;
+    width: 50px;
+    height: 32px;
+    padding-right: 13px;
+    margin-top: -3px
+}
+
+/*Notice*/
+.notice .listArea {
+    width: 100%;
+    border-top: 2px solid #101010;
+    margin-bottom: 60px
+}
+
+.notice dl {
+    width: 100%;
+    display: table
+}
+
+.notice dt {
+    color: #767676;
+    padding: 35px 0 35px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    display: table-cell
+}
+
+.notice dt a {
+    font-size: 16px
+}
+
+.notice dd {
+    color: #767676;
+    padding: 35px 0;
+    border-bottom: 1px solid #e0e0e0;
+    padding-right: 13px;
+    display: table-cell;
+    width: 102px
+}
+
+/*Notice -Detail*/
+.notice table {
+    width: 100%;
+    border-top: 2px solid #101010
+}
+
+.notice .noticeDetail th {
+    font-size: 24px;
+    padding: 35px 20px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0
+}
+
+.notice .noticeDetail th .date {
+    font-size: 16px;
+    color: #767676;
+    float: right;
+    margin-top: 10px
+}
+
+.notice .noticeDetail td {
+    padding: 20px 0 20px 30px;
+    border-bottom: 1px solid #e0e0e0
+}
+
+.notice .noticeDetail tfoot td {
+    padding: 40px 0
+}
+
+.notice .noticeDetail .listBtn {
+    color: #fff;
+    height: 60px;
+    line-height: 60px;
+    width: 200px;
+    border-radius: 5px;
+    display: block;
+    margin: auto;
+    background-color: #125adf;
+    text-align: center
+}
+
+.notice .noticeDetail .cnt {
+    padding: 40px 30px
+}
+
+.notice .noticeDetail .fileArea td {
+    padding-left: 45px
+}
+
+.notice .noticeDetail .fileArea h4 {
+    font-weight: 400;
+    color: #101010;
+    margin-bottom: 20px
+}
+
+.notice .noticeDetail .fileArea h4 b {
+    color: #fe633d;
+    font-weight: 400
+}
+
+.notice .noticeDetail .fileArea h4 img {
+    margin: 0 10px 0 -20px
+}
+
+.notice .noticeDetail .fileArea h4 img.mo {
+    display: none
+}
+
+.notice .noticeDetail .fileArea .saveAllBtn {
+    display: inline-block;
+    color: #09294c;
+    margin-left: 10px;
+    font-size: 14px
+}
+
+.notice .noticeDetail .fileArea .fileSize {
+    display: inline-block;
+    color: #767676
+}
+
+.notice .noticeDetail .fileArea .downloadFile {
+    padding-left: 24px;
+    background: url(../images/apply/icon_file_download.png) no-repeat left center;
+    font-size: 14px;
+    margin-top: 10px;
+    display: block
+}
+
+.notice .noticeDetail .fileArea .downloadFile .fileSize {
+    margin-left: 20px
+}
+
+.notice .pageControl {
+    border-top: none;
+    margin-bottom: 0
+}
+
+.notice .pageControl th {
+    text-align: right;
+    font-size: 16px;
+    padding: 25px 0;
+    width: 100px
+}
+
+.notice .pageControl th img {
+    margin-right: 20px
+}
+
+.notice .pageControl td {
+    text-align: left;
+    padding: 25px 0 25px 50px
+}
+
+/*FAQ*/
+.faq .breadCrumb li:nth-child(3) a {
+    width: 204px
+}
+
+.faq table {
+    width: 100%;
+    border-top: 2px solid #101010;
+    margin-bottom: 60px
+}
+
+.faq dt {
+    width: 100%;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 35px 20px;
+    font-size: 16px;
+    background: url(../images/apply/faq_down_arrow.png) no-repeat 98.8% center;
+    cursor: pointer
+}
+
+.faq dt.on {
+    background: url(../images/apply/faq_up_arrow.png) no-repeat 98.8% center
+}
+
+.faq dt span {
+    display: inline-block;
+    width: 45px
+}
+
+.faq dd {
+    width: 100%;
+    background-color: #f6f7fa;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 35px;
+    max-height: 262px;
+    overflow-y: auto;
+    display: none
+}
+
+.faq dd div {
+    margin-bottom: 30px
+}
+
+.faq dd h5 {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 400
+}
+
+.faq dd p {
+    margin-bottom: 10px;
+    text-indent: 6px
+}
+
+.faq dd li {
+    margin-bottom: 10px;
+    padding-left: 27px;
+    position: relative;
+    line-height: 18px
+}
+
+.faq dd li:before {
+    content: '·';
+    position: absolute;
+    left: 17px;
+    top: 0
+}
+
+.faq dd li:last-child {
+    margin-bottom: 0
+}
+
+/*로그인 아이디생성*/
+.creatID .formArea {
+    padding-bottom: 183px
+}
+
+.creatID .formArea h3 br.mo {
+    display: none
+}
+
+.creatID .formArea form {
+    width: 588px
+}
+
+/*비밀번호*/
+.password .formArea {
+    padding-bottom: 163px
+}
+
+.password .formArea form {
+    width: 588px
+}
+
+.password .formArea .pwResetBtn {
+    color: #101010;
+    background-color: #efefef;
+    margin-top: 20px
+}
+
+/*비밀번호-신청기간아닌경우 팝업*/
+.password .nonApplicat {
+    padding: 70px 30px 30px 30px
+}
+
+.password .nonApplicat h3 {
+    font-size: 18px;
+    color: #101010;
+    letter-spacing: -1px;
+    line-height: 30px
+}
+
+.password .nonApplicat h3 a {
+    font-size: 24px;
+    color: #fe633d;
+    text-decoration: underline
+}
+
+.password .nonApplicat .btnArea {
+    width: 294px;
+    margin: auto;
+    margin-top: 40px
+}
+
+.password .nonApplicat .btnArea a {
+    width: 48%;
+    border-radius: 5px;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    text-align: center
+}
+
+.password .nonApplicat .btnArea .leftBtn {
+    background-color: #a4a9b0;
+    float: left
+}
+
+.password .nonApplicat .btnArea .rightBtn {
+    background-color: #125adf;
+    float: right
+}
+
+/*비밀번호 재설정*/
+.resetPassword .title {
+    text-align: left;
+    padding: 0 30px;
+    margin-bottom: 40px
+}
+
+.resetPassword .title h2 {
+    font-size: 28px;
+    color: #101010
+}
+
+.resetPassword .formArea form .crtNumInput dd .inputCheck .delBtn {
+    right: 63px
+}
+
+/*상세정보입력*/
+.join .title {
+    text-align: left;
+    padding: 0 30px;
+    margin-bottom: 40px
+}
+
+.join .title h2 {
+    font-size: 28px;
+    color: #101010
+}
+
+.join .title h3 {
+    font-size: 18px;
+    color: #101010;
+    margin-top: 18px
+}
+
+.join .title h3 b {
+    font-size: 20px;
+    color: #0050a3
+}
+
+.join .selectSchool {
+    width: 100%;
+    max-width: 140px;
+    background-color: #505050;
+    color: #fff;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    display: inline-block;
+    text-align: center
+}
+
+.join .schoolName {
+    width: 100%;
+    max-width: 400px;
+    margin-right: 22px;
+    display: none
+}
+
+.join .info {
+    padding-left: 16px;
+    display: block;
+    position: relative;
+    color: #fe633d;
+    padding-bottom: 10px;
+    line-height: 16px
+}
+
+.join .info:before {
+    content: '※';
+    position: absolute;
+    left: 0;
+    top: 0
+}
+
+.join .formArea form tbody th {
+    padding-top: 19px;
+    vertical-align: top
+}
+
+.join .formArea form tbody td {
+    padding-right: 0
+}
+
+.join .formArea form tbody td:last-child {
+    padding-right: 30px
+}
+
+.join .formArea form tbody tr:last-child th {
+    padding-top: 11px
+}
+
+.join .formArea form tbody tr:last-child th {
+    padding-top: 11px
+}
+
+.join .info.mo {
+    display: none
+}
+
+/*상세정보입력-학교선택 팝업*/
+.join .searchSchool {
+    padding: 50px
+}
+
+.join .searchSchool h3 {
+    font-size: 24px;
+}
+
+.join .searchSchool .searchArea {
+    margin-top: 20px;
+    width: 100%;
+    display: inline-block
+}
+
+.join .searchSchool .searchArea input {
+    float: left;
+    border: 1px solid #e0e0e0;
+    height: 50px;
+    width: 80%;
+    padding: 0 15px
+}
+
+.join .searchSchool .searchArea button {
+    border: 1px solid #505050;
+    background-color: #505050;
+    color: #fff;
+    height: 50px;
+    float: right;
+    width: 20%
+}
+
+.join .searchSchool .listData {
+    margin: 10px 0 20px 0;
+    max-height: 360px;
+    overflow: hidden;
+    overflow-y: auto;
+    border-bottom: 1px solid #e0e0e0
+}
+
+.join .searchSchool .listData table {
+    width: 100%
+}
+
+.join .searchSchool .listData tr:hover {
+    background-color: #f6f7fa
+}
+
+.join .searchSchool .listData th {
+    padding-top: 10px;
+    vertical-align: top
+}
+
+.join .searchSchool .listData td {
+    padding: 10px 0;
+    font-size: 16px;
+}
+
+.join .searchSchool .listData td span {
+    display: inline-block;
+    margin-left: 5px;
+    color: #0050a3;
+    font-size: 12px
+}
+
+.join .searchSchool .listData td .address {
+    font-size: 14px;
+    color: #767676;
+    width: 100%;
+    margin-top: 10px
+}
+
+.join .searchSchool .listData .checkArea {
+    position: relative
+}
+
+.join .searchSchool .listData .checkArea input {
+    opacity: 0;
+    width: 0;
+    position: absolute;
+    left: 0
+}
+
+.join .searchSchool .listData .checkArea label {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url(../images/apply/check_box_off.png) no-repeat center center;
+    ;
+    cursor: pointer
+}
+
+.join .searchSchool .listData .checkArea input:checked+label {
+    background: url(../images/apply/check_box_on.png) no-repeat center center;
+}
+
+.join .searchSchool .paging div {
+    margin: 0 15px;
+    font-size: 14px
+}
+
+.join .searchSchool .paging input {
+    width: 40px;
+    height: 24px;
+    font-size: 14px
+}
+
+/*가입완료 모집기간*/
+.complete .formArea {
+    padding-bottom: 191px
+}
+
+.complete form .cnt {
+    text-align: left;
+    padding: 0 35px
+}
+
+.complete form h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 700
+}
+
+.complete form h4 {
+    font-size: 16px;
+    color: #101010;
+    font-weight: 400
+}
+
+.complete form h4 b {
+    font-size: 18px;
+    color: #0050a3
+}
+
+.complete form h5 {
+    font-size: 16px;
+    color: #101010;
+    margin-top: 50px;
+    line-height: 22px
+}
+
+.complete form h5 a {
+    font-size: 20px;
+    color: #fe633d
+}
+
+.complete form h5 br.mo {
+    display: none
+}
+
+/*학부모 인증*/
+.parntalAut .title {
+    text-align: left;
+    padding: 0 30px;
+    margin-bottom: 40px
+}
+
+.parntalAut .title h2 {
+    font-size: 28px;
+    color: #101010
+}
+
+.parntalAut .title h3 {
+    font-size: 18px;
+    color: #101010;
+    margin-top: 18px;
+    letter-spacing: -2px
+}
+
+.parntalAut .title h3 br {
+    display: none
+}
+
+.parntalAut .formArea form .crtNumInput {
+    padding-bottom: 50px
+}
+
+.parntalAut .formArea form .inputCheck .delBtn {
+    right: 60px
+}
+
+.parntalAut .formArea form table {
+    width: 100%
+}
+
+.parntalAut .agreeArea tr:first-child td {
+    border-top: 1px solid #e0e0e0;
+    padding-top: 50px
+}
+
+.parntalAut .agreeArea td {
+    padding: 10px 30px 10px 60px;
+    position: relative;
+    text-align: left
+}
+
+.parntalAut .agreeArea td .text {
+    display: block;
+    font-size: 12px;
+    color: #767676;
+    margin-top: 10px
+}
+
+.parntalAut .agreeArea h4 {
+    display: inline-block;
+    font-weight: 400
+}
+
+.parntalAut .agreeArea h4 b {
+    color: #125adf;
+    font-weight: 400
+}
+
+.parntalAut .agreeArea .popupBtn {
+    float: right;
+    color: #767676;
+    font-size: 12px;
+    margin-top: 2px
+}
+
+.parntalAut .agreeArea .popupBtn img {
+    margin: -1px 0 0 10px
+}
+
+.parntalAut .agreeArea .popupBtn img.mo {
+    display: none
+}
+
+.parntalAut .checkBox {
+    position: absolute;
+    left: 30px
+}
+
+.parntalAut .checkBox input {
+    position: absolute;
+    left: 0;
+    width: 0;
+    opacity: 0
+}
+
+.parntalAut .checkBox label {
+    width: 18px;
+    height: 18px;
+    display: block;
+    background: url(../images/apply/check_box_off.png) no-repeat center center;
+    cursor: pointer;
+    margin-top: -2px
+}
+
+.parntalAut .checkBox input[type="checkbox"]:checked+label {
+    background: url(../images/apply/check_box_on.png) no-repeat center center
+}
+
+/*학부모 인증-팝업*/
+.parntalAut .popupData {
+    display: none;
+    padding: 50px 40px 50px 50px
+}
+
+.parntalAut .popupData .cnt {
+    max-height: 700px;
+    overflow-y: auto;
+    padding-right: 10px
+}
+
+.parntalAut .popupData h2 {
+    font-size: 24px;
+    color: #101010;
+    margin-bottom: 20px
+}
+
+.parntalAut .popupData h3 {
+    font-size: 16px;
+    color: #101010;
+    margin-bottom: 20px
+}
+
+.parntalAut .popupData h4 {
+    font-size: 14px;
+    color: #101010;
+    margin: 10px 0 20px 0
+}
+
+.parntalAut .popupData p {
+    font-size: 12px;
+    color: #767676;
+    line-height: 18px;
+    margin-bottom: 20px
+}
+
+.parntalAut .popupData ol {
+    margin-bottom: 20px
+}
+
+.parntalAut .popupData ul {
+    margin-top: 5px
+}
+
+.parntalAut .popupData li {
+    font-size: 12px;
+    color: #767676;
+    margin-bottom: 5px;
+    line-height: 16px
+}
+
+.parntalAut .popupData ul li {
+    padding-left: 10px
+}
+
+.parntalAut .popupData ul li div {
+    padding-left: 10px;
+    margin-bottom: 20px;
+    line-height: 20px
+}
+
+.parntalAut .popupData.Term li {
+    margin-bottom: 20px
+}
+
+.parntalAut .popupData ol li ul li {
+    margin-bottom: 0px !important
+}
+
+:lang(zh) {
+    font-family: sans-serif
+}
+
+/*Q&A*/
+.qna h2 {
+    margin-bottom: 30px
+}
+
+.qna h3 {
+    text-align: center;
+    font-size: 16px;
+    color: #101010;
+    font-weight: 400;
+    line-height: 24px
+}
+
+.qna .radio {
+    display: inline-block;
+    position: relative
+}
+
+.qna .radio input {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 0
+}
+
+.qna .radio label {
+    padding-left: 30px;
+    color: #505050;
+    background: url(../images/apply/radio_off.png) no-repeat left center;
+    line-height: 18px;
+    display: inline-block;
+    margin-right: 20px;
+    cursor: pointer
+}
+
+.qna .radio input[type="radio"]:checked+label {
+    background: url(../images/apply/radio_on.png) no-repeat left center
+}
+
+.qna .formArea {
+    padding: 80px 0 0 0
+}
+
+.qna .formArea form {
+    width: 100%;
+    margin: 0;
+    padding: 0
+}
+
+.qna .formArea form dt {
+    padding: 35px 0 35px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    width: 200px;
+    vertical-align: middle
+}
+
+.qna .formArea form dd {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 18px 0
+}
+
+.qna .formArea form dl:first-child dd {
+    padding-top: 35px
+}
+
+.qna .formArea form .secret dd {
+    padding-top: 35px
+}
+
+.qna .formArea form .secret dd input[type="password"] {
+    display: none;
+    background-color: #f9f9f9;
+    border: none;
+    width: 312px;
+    height: 50px;
+    padding-left: 15px;
+    color: #767676
+}
+
+.qna .text {
+    margin-top: 10px;
+    position: relative;
+    padding-left: 10px
+}
+
+.qna .text:before {
+    content: '*';
+    color: #fe633d;
+    position: absolute;
+    left: 0;
+    top: 1px;
+}
+
+.qna .text br {
+    display: none
+}
+
+.qna select {
+    margin-right: 20px
+}
+
+.qna .formArea form dd input[type="text"] {
+    width: 100%;
+    max-width: 400px
+}
+
+.qna .formArea form dd textarea {
+    width: 100%;
+    max-width: 700px;
+    background-color: #f9f9f9;
+    border: none;
+    height: 240px;
+    ;
+    padding: 20px 15px;
+    resize: none
+}
+
+.qna .submitBtn {
+    height: 60px;
+    line-height: 60px;
+    width: 200px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #125adf;
+    border: none;
+    border-radius: 5px;
+    margin-top: 40px
+}
+
+.qna .fileArea {
+    width: 560px;
+    position: relative;
+    text-align: left;
+    display: inline-block
+}
+
+.qna .fileArea {
+    width: 560px;
+    position: relative;
+    text-align: left;
+    display: inline-block
+}
+
+.qna .fileArea .fileName {
+    width: 400px;
+    float: right;
+    height: 50px;
+    background-color: #f9f9f9;
+    color: #125adf;
+    border: none
+}
+
+.qna .fileArea .fileBtn {
+    float: left;
+    width: 140px;
+    height: 50px;
+    background-color: #505050;
+    color: #fff;
+    border: none
+}
+
+.qna .fileArea .inputHidden {
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    right: 0
+}
+
+.qna .fileArea .fileDel {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer
+}
+
+.qna .fileArea .fileDel img.mo {
+    display: none
+}
+
+.qna .fileArea .fileSize {
+    position: absolute;
+    left: 280px;
+    top: 53%;
+    transform: translateY(-50%);
+    color: #505050;
+    font-weight: 700
+}
+
+/*Q&A_비밀번호 팝업*/
+.PasswordPopup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7)
+}
+
+.PasswordPopup>div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1
+}
+
+.PasswordPopup form {
+    background: #fff;
+    padding: 50px 0;
+    width: 484px;
+    text-align: center;
+    position: relative;
+    border-radius: 3px
+}
+
+.PasswordPopup form h5 {
+    font-size: 18px;
+    color: #101010;
+    line-height: 30px;
+    margin-bottom: 30px;
+    font-weight: 400
+}
+
+.PasswordPopup form .close {
+    position: absolute;
+    right: 20px;
+    top: 20px
+}
+
+.PasswordPopup form .close img {
+    width: 15px
+}
+
+.PasswordPopup form fieldset {
+    position: relative;
+    display: inline-block;
+}
+
+.PasswordPopup form input {
+    width: 338px;
+    height: 50px;
+    border: none;
+    background: #f9f9f9;
+    font-size: 14px;
+    padding-left: 16px
+}
+
+.PasswordPopup form button {
+    width: 78px;
+    height: 50px;
+    background: #125adf;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    position: absolute;
+    right: 0
+}
+
+/*Q&A_리스트*/
+.qnaList .mo {
+    display: none
+}
+
+.qnaList .topSearchArea {
+    margin-top: 80px;
+    margin-bottom: 0;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #101010
+}
+
+.qnaList .topSearchArea .btnArea {
+    float: left;
+    margin-top: 10px
+}
+
+.qnaList .topSearchArea .btnArea a {
+    width: 114px;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+    color: #fff
+}
+
+.qnaList .topSearchArea .btnArea a:first-child {
+    background: #a4a9b0
+}
+
+.qnaList .topSearchArea .btnArea a:last-child {
+    background: #125adf;
+    margin-left: 10px
+}
+
+.qnaList table {
+    width: 100%
+}
+
+.qnaList .thTable tr {
+    height: 74px
+}
+
+.qnaList .thTable th {
+    border-bottom: 1px solid #e0e0e0;
+    font-weight: bold;
+    font-size: 16px;
+    color: #101010
+}
+
+.qnaList .thTable th.tit {
+    padding-left: 30px
+}
+
+.qnaList .tbTable {
+    margin-bottom: 60px
+}
+
+.qnaList .tbTable td .mo {
+    display: none
+}
+
+.qnaList .tbTable td {
+    height: 84px;
+    text-align: center;
+    font-size: 16px;
+    color: #101010;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.qnaList .tbTable .tit {
+    text-align: left;
+    padding-left: 30px
+}
+
+.qnaList .tbTable .tit.secret {
+    background: url(../images/apply/secret.png)no-repeat 30px center;
+    background-size: 14px;
+    padding-left: 60px
+}
+
+.qnaList .tbTable .tit a {
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden
+}
+
+.qnaList .tbTable .status.accepting {
+    color: #ff8a00
+}
+
+.qnaList .tbTable .status.answer_complete {
+    color: #101010
+}
+
+/*Q&A_상세*/
+.qnaDetails article {
+    margin-top: 54px
+}
+
+.qnaDetails table {
+    width: 100%;
+    border-top: 2px solid #101010
+}
+
+.qnaDetails thead th {
+    padding: 0 20px;
+    text-align: left;
+    color: #101010;
+    font-size: 24px;
+    font-weight: 400;
+    height: 95px;
+    border-bottom: 1px solid #e0e0e0;
+    vertical-align: middle
+}
+
+.qnaDetails thead th span {
+    font-size: 16px;
+    color: #767676;
+    float: right
+}
+
+.qnaDetails tbody td {
+    border-bottom: 1px solid #e0e0e0;
+    vertical-align: middle;
+    padding: 0 20px
+}
+
+.qnaDetails tbody .fileArea td {
+    padding: 20px
+}
+
+.qnaDetails tbody .fileArea dt {
+    color: #101010;
+    font-size: 14px
+}
+
+.qnaDetails tbody .fileArea dt .file {
+    background: url(../images/apply/arrow_down.png)no-repeat left center;
+    background-size: 10px;
+    display: inline-block;
+    padding-left: 26px
+}
+
+.qnaDetails tbody .fileArea dt .file.on {
+    background-image: url(../images/apply/arrow_up.png)
+}
+
+.qnaDetails tbody .fileArea dt .file_num {
+    color: #fe633d;
+    display: inline-block;
+    margin-left: 5px
+}
+
+.qnaDetails tbody .fileArea dt .all_save {
+    color: #09294c;
+    display: inline-block;
+    margin-left: 10px
+}
+
+.qnaDetails tbody .fileArea dd {
+    margin-top: 20px
+}
+
+.qnaDetails tbody .fileArea dd a {
+    color: #101010;
+    font-size: 14px;
+    margin-right: 20px;
+    display: inline-block;
+    background: url(../images/apply/icon_file_download_mo.png)no-repeat 26px top;
+    background-size: 14px;
+    padding-left: 50px
+}
+
+.qnaDetails tbody .fileArea .file_size {
+    color: #767676
+}
+
+.qnaDetails tbody .cntArea td {
+    padding: 40px 20px 40px 70px;
+    line-height: 24px;
+    background: url(../images/apply/icon_qna_gray.png)no-repeat 20px 40px;
+    background-size: 26px
+}
+
+.qnaDetails tbody .replyArea td {
+    font-size: 14px;
+    color: #101010;
+    background: #f6f7fa url(../images/apply/icon_qna_a_.png)no-repeat 20px 40px;
+    background-size: 26px;
+    padding: 40px 20px 40px 70px
+}
+
+.qnaDetails tbody .replyArea h5 {
+    color: #101010;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 25px
+}
+
+.qnaDetails tbody .replyArea h5 span {
+    color: #767676;
+    padding-left: 13px;
+    margin-left: 13px;
+    border-left: 1px solid #e0e0e0;
+    display: inline-block
+}
+
+.qnaDetails tbody .replyArea div {
+    margin-bottom: 35px;
+    line-height: 25px
+}
+
+.qnaDetails tbody .replyArea li {
+    line-height: 25px
+}
+
+.qnaDetails tbody .replyArea li i {
+    margin-right: 12px
+}
+
+.qnaDetails tbody .btnArea td {
+    text-align: right;
+    border-bottom: none;
+    padding: 20px 0 40px
+}
+
+.qnaDetails tbody .btnArea td .btn {
+    width: 78px;
+    height: 42px;
+    line-height: 42px;
+    font-size: 14px;
+    margin-left: 10px
+}
+
+.qnaDetails tbody .btnArea td a {
+    display: inline-block;
+    background: #505050;
+    color: #fff;
+    text-align: center
+}
+
+.qnaDetails tbody .btnArea td button {
+    color: #505050;
+    background: none;
+    border: 1px solid #505050
+}
+
+.qnaDetails tfoot td a {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    background: #125adf;
+    border-radius: 3px;
+    text-align: center;
+    margin: auto
+}
+
+/*체험신청 -승마장선택*/
+.experience .subTitle {
+    margin-bottom: 20px
+}
+
+.experience .applicationStage {
+    text-align: center;
+    width: 100%
+}
+
+.experience .applicationStage li {
+    display: inline-block;
+    margin: 0 10px
+}
+
+.experience .applicationStage a {
+    font-size: 16px;
+    color: #767676
+}
+
+.experience .applicationStage li.on a {
+    font-weight: 700;
+    color: #101010
+}
+
+.experience .applicationStage li img.mo {
+    display: none
+}
+
+.experience .cnt {
+    display: table;
+    margin-top: 80px
+}
+
+.experience .dataList {
+    display: table-cell;
+    border-top: 2px solid #101010
+}
+
+.experience .dataList>ul {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 30px
+}
+
+.experience .dataList .top {
+    display: table;
+    width: 100%;
+    margin-bottom: 20px
+}
+
+.experience .dataList .info {
+    display: table-cell;
+    vertical-align: top
+}
+
+.experience .dataList .info>li {
+    color: #505050;
+    margin-bottom: 8px
+}
+
+.experience .dataList .info>li:last-child {
+    margin-bottom: 0
+}
+
+.experience .dataList .info>li img {
+    margin-right: 7px
+}
+
+.experience .dataList .info>li span.line {
+    width: 1px;
+    height: 14px;
+    background-color: #e0e0e0;
+    display: inline-block;
+    margin: 0 8px;
+    vertical-align: middle
+}
+
+.experience .dataList .info li.name {
+    font-size: 22px;
+    color: #101010;
+    font-weight: 700;
+    margin: 5px 0 15px
+}
+
+.experience .dataList .info .address img {
+    width: 15px
+}
+
+.experience .iconPhone,
+.experience .iconClock,
+.experience .iconStar,
+.experience .iconHorseshoe,
+.experience .iconUser {
+    width: 17px
+}
+
+.experience .iconAddress {
+    width: 14px;
+    margin-left: 2px
+}
+
+.experience .dataList .imgArea {
+    display: table-cell;
+    width: 150px;
+    text-align: right;
+    padding-right: 20px
+}
+
+.experience .dataList .imgArea img {
+    max-width: 130px;
+    width: 130px
+}
+
+.experience .dataList .title {
+    color: #101010;
+    font-weight: 700
+}
+
+.experience .dataList .title img {
+    margin-right: 8px;
+    width: 14px
+}
+
+.experience .dataList .title span {
+    color: #767676;
+    font-size: 12px;
+    display: inline-block;
+    margin-left: 8px
+}
+
+.experience .dataList .week {
+    margin-top: 15px
+}
+
+.experience .dataList .week li {
+    display: inline-block;
+    width: 13.4%;
+    height: 42px;
+    border: 1px solid #e0e0e0;
+    text-align: center;
+    margin-right: 0.5%
+}
+
+.experience .dataList .week li.on {
+    border-color: #05c9d0
+}
+
+.experience .dataList .week li.on a {
+    color: #fff;
+    background: #05c9d0
+}
+
+.experience .dataList .week li.on div {
+    color: #fff
+}
+
+.experience .dataList .week li.on .less {
+    color: #fff
+}
+
+.experience .dataList .week li.on .full {
+    color: #fff
+}
+
+.experience .dataList .week li.fix {
+    border-color: #05c9d0
+}
+
+.experience .dataList .week li.fix a {
+    color: #fff;
+    background: #05c9d0
+}
+
+.experience .dataList .week li.fix div {
+    color: #fff
+}
+
+.experience .dataList .week li.fix .less {
+    color: #fff
+}
+
+.experience .dataList .week li.fix .full {
+    color: #fff
+}
+
+.experience .dataList .week li.closed a {
+    background: #f3f3f3 url(../images/apply/closed_bg.png) no-repeat center center;
+    color: #979595
+}
+
+.experience .dataList .week li.closed a div {
+    display: none
+}
+
+.experience .dataList .week li:last-child {
+    margin-right: 0
+}
+
+.experience .dataList .week a {
+    display: inline-block;
+    padding-top: 13px;
+    width: 100%;
+    height: 100%;
+    color: #101010;
+    font-weight: 700
+}
+
+.experience .dataList .week div {
+    display: inline-block;
+    margin-left: 5px;
+    color: #505050;
+    font-weight: 400
+}
+
+.experience .dataList .week .less {
+    color: #125adf
+}
+
+.experience .dataList .week .full {
+    color: #f42c2e
+}
+
+.experience .detailBtn {
+    font-size: 12px;
+    display: inline-block;
+    width: 105px;
+    line-height: 28px;
+    height: 28px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 40px;
+    margin-left: 20px
+}
+
+.experience .detailBtn img {
+    margin-right: 5px;
+    width: 12px
+}
+
+.experience .rightArea {
+    width: 410px;
+    position: relative;
+    display: table-cell;
+    vertical-align: top;
+    text-align: right
+}
+
+.experience .selectInfo {
+    width: 350px;
+    height: 700px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 30px;
+    display: inline-block;
+    text-align: left;
+    background-color: #fff
+}
+
+.experience .selectInfo.fix {
+    position: absolute;
+    left: 15%
+}
+
+.experience .selectInfo .userInfo {
+    font-size: 18px;
+    color: #101010;
+    line-height: 32px;
+    margin-bottom: 35px
+}
+
+.experience .selectInfo .userInfo span {
+    font-size: 24px;
+    font-weight: 700
+}
+
+.experience .selectInfo ol {
+    height: 290px
+}
+
+.experience .selectInfo ol li {
+    font-size: 16px;
+    color: #767676;
+    margin-bottom: 30px
+}
+
+.experience .selectInfo ol li input {
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 10px 0;
+    margin-top: 10px;
+    color: #505050;
+    letter-spacing: -1px
+}
+
+.experience .selectInfo ol li.on input {
+    color: #125adf
+}
+
+.experience .selectInfo ol li input::placeholder {
+    color: #125adf;
+    letter-spacing: -1px
+}
+
+.experience .selectInfo ol li input:-ms-input-placeholder {
+    color: #125adf;
+    letter-spacing: -1px
+}
+
+.experience .selectInfo .btnArea a {
+    display: inline-block;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px
+}
+
+.experience .selectInfo .btnArea a.nextBtn {
+    color: #fff;
+    background-color: #cacaca
+}
+
+.experience .selectInfo .btnArea a.nextBtn.on {
+    background-color: #125adf
+}
+
+.experience .selectInfo .btnArea a.completeBtn {
+    color: #fff;
+    background-color: #cacaca
+}
+
+.experience .selectInfo .btnArea a.modifyBtn {
+    color: #125adf;
+    border: 1px solid #125adf;
+    margin: 10px 0 20px
+}
+
+.experience .selectInfo .warn h4 img {
+    margin-right: 10px
+}
+
+.experience .selectInfo .warn span {
+    display: block;
+    margin-top: 10px;
+    color: #505050;
+    line-height: 18px
+}
+
+.experience .homeBtn {
+    display: block;
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    margin: 40px auto;
+    font-size: 18px;
+    color: #fff;
+    background-color: #125adf;
+    border-radius: 5px
+}
+
+.experience .closeBtn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer
+}
+
+.experience .selectList {
+    width: 1060px;
+    margin: auto;
+    text-align: left
+}
+
+.experience .selectList ul {
+    width: 48.9%;
+    display: inline-block;
+    border: 1px solid #e0e0e0;
+    padding: 30px;
+    position: relative
+}
+
+.experience .selectList ul:first-child {
+    margin-right: 1.8%
+}
+
+.experience .selectList li {
+    margin-bottom: 10px
+}
+
+.experience .selectList li>img {
+    margin-right: 10px
+}
+
+.experience .selectList li.rank {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    color: #fff;
+    background-color: #f89f13;
+    text-align: center;
+    border-radius: 100%;
+    margin-bottom: 0
+}
+
+.experience .selectList li.top {
+    display: table;
+    width: 100%;
+    margin-bottom: 20px
+}
+
+.experience .selectList li.top>div {
+    display: table-cell
+}
+
+.experience .selectList .imgArea {
+    width: 130px;
+    border-radius: 5px;
+    overflow: hidden
+}
+
+.experience .selectList .imgArea img {
+    width: 100%
+}
+
+.experience .selectList .info {
+    padding-left: 20px;
+    vertical-align: middle
+}
+
+.experience .selectList h3 {
+    font-size: 18px;
+    color: #101010;
+    margin-bottom: 12px
+}
+
+.experience .resultMsg h2 {
+    text-align: center;
+    font-size: 30px;
+    line-height: 42px;
+    color: #101010
+}
+
+.experience .resultMsg h2 span {
+    color: #125adf;
+    display: block
+}
+
+.experience .resultMsg h4 {
+    text-align: center;
+    font-size: 16px;
+    color: #505050;
+    margin: 15px 0 60px;
+    font-weight: 400
+}
+
+.experience .warnMo,
+.selectInfoMo,
+.experience .userInfoMo {
+    display: none
+}
+
+/*체험신청-승마체험 신청완료*/
+.experience .final .resultMsg h4 br {
+    display: none
+}
+
+/*결과조회-공통*/
+.resultInquiry .section {
+    padding: 120px 0
+}
+
+.resultInquiry h2 {
+    text-align: center;
+    font-size: 30px;
+    line-height: 42px;
+    color: #101010
+}
+
+.resultInquiry h2 span {
+    color: #125adf;
+    display: block
+}
+
+.resultInquiry h4 {
+    text-align: center;
+    font-size: 16px;
+    color: #505050;
+    margin: 15px 0 60px;
+    font-weight: 400;
+    line-height: 22px
+}
+
+.resultInquiry h4 br {
+    display: none
+}
+
+.resultInquiry .selectList {
+    width: 1060px;
+    margin: auto;
+    text-align: left
+}
+
+.resultInquiry .selectList ul {
+    width: 48.9%;
+    display: inline-block;
+    border: 1px solid #e0e0e0;
+    padding: 30px;
+    position: relative
+}
+
+.resultInquiry .selectList ul:first-child {
+    margin-right: 1.8%
+}
+
+.resultInquiry .selectList li {
+    margin-bottom: 10px
+}
+
+.resultInquiry .selectList li:last-child {
+    margin-bottom: 0
+}
+
+.resultInquiry .selectList li>img {
+    margin-right: 10px
+}
+
+.resultInquiry .iconAddress {
+    margin-left: 2px;
+    width: 14px
+}
+
+.resultInquiry .iconPhone,
+.resultInquiry .iconUser,
+.resultInquiry .iconStar,
+.resultInquiry .iconHorseshoe,
+.resultInquiry .iconClock {
+    width: 16px
+}
+
+.resultInquiry .selectList li.rank {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    color: #fff;
+    background-color: #f89f13;
+    text-align: center;
+    border-radius: 100%;
+    margin-bottom: 0
+}
+
+.resultInquiry .selectList li.top {
+    display: table;
+    width: 100%;
+    margin-bottom: 20px
+}
+
+.resultInquiry .selectList li.top>div {
+    display: table-cell
+}
+
+.resultInquiry .selectList .imgArea {
+    width: 130px;
+    border-radius: 5px;
+    overflow: hidden
+}
+
+.resultInquiry .selectList .imgArea img {
+    width: 100%
+}
+
+.resultInquiry .selectList .info {
+    padding-left: 20px;
+    vertical-align: middle
+}
+
+.resultInquiry .selectList h3 {
+    font-size: 18px;
+    color: #101010;
+    margin-bottom: 12px
+}
+
+.resultInquiry .homeBtn {
+    display: block;
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    margin: 40px auto;
+    font-size: 18px;
+    color: #fff;
+    background-color: #125adf;
+    border-radius: 5px
+}
+
+.resultInquiry .detailBtn {
+    font-size: 12px;
+    display: inline-block;
+    width: 105px;
+    line-height: 28px;
+    height: 28px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 40px
+}
+
+.resultInquiry .detailBtn img {
+    margin-right: 5px;
+    width: 12px
+}
+
+/*결과조회-탈락*/
+.resultInquiry .fail {
+    padding: 250px 0 278px
+}
+
+.resultInquiry .fail .btnArea {
+    width: 414px;
+    margin: auto;
+    text-align: left
+}
+
+.resultInquiry .fail .btnArea a {
+    display: inline-block;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 5px;
+    width: 48.4%
+}
+
+.resultInquiry .fail .btnArea .leftBtn {
+    background-color: #a4a9b0;
+    margin-right: 1.1%
+}
+
+.resultInquiry .fail .btnArea .rightBtn {
+    background-color: #125adf
+}
+
+/*결과조회-당첨*/
+.resultInquiry .succes .succesMo {
+    display: none
+}
+
+.resultInquiry .succes h2 {
+    background: url(../images/apply/succes_bg.png) no-repeat center top;
+    height: 135px;
+    padding-top: 54px
+}
+
+.resultInquiry .succes h4 br {
+    display: block
+}
+
+.resultInquiry .succes .selectList {
+    text-align: center
+}
+
+.resultInquiry .succes .selectList ul:first-child {
+    margin-right: 0;
+    text-align: left
+}
+
+/*승마장 정보 팝업*/
+.ridingGround {
+    width: 570px;
+    border-radius: 5px;
+    overflow: hidden
+}
+
+.ridingGround .closeBtn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer
+}
+
+.ridingGround .closeBtn .mo {
+    display: none
+}
+
+.ridingGround .topArea {
+    padding: 40px;
+    position: relative;
+    background-color: #266cec
+}
+
+.ridingGround .topAreaMo {
+    display: none
+}
+
+.ridingGround h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    color: #fff;
+    text-align: left
+}
+
+.ridingGround h4 {
+    font-weight: 400;
+    color: #fff;
+    text-align: left;
+    margin: 0
+}
+
+.ridingGround h4 img {
+    margin-right: 10px
+}
+
+.ridingGround .infoArea {
+    padding: 40px
+}
+
+.ridingGround .infoArea li {
+    color: #101010;
+    margin-bottom: 10px
+}
+
+.ridingGround .infoArea li:last-child {
+    margin-bottom: 0
+}
+
+.ridingGround .infoArea li img {
+    margin-right: 10px
+}
+
+.ridingGround .infoArea h3 {
+    margin: 40px 0 10px 0;
+    font-size: 16px;
+    color: #101010
+}
+
+.ridingGround .infoArea h3 span {
+    font-size: 12px;
+}
+
+.ridingGround .infoArea .status h3 span {
+    color: #767676;
+    float: right
+}
+
+.ridingGround .infoArea .picture h3 span {
+    color: #125adf;
+    margin-left: 5px
+}
+
+.ridingGround .infoArea table {
+    border-top: 2px solid #101010;
+    width: 100%
+}
+
+.ridingGround .infoArea th {
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+    width: 14.2%;
+    font-weight: 400
+}
+
+.ridingGround .infoArea tr:last-child .less {
+    color: #125adf
+}
+
+.ridingGround .infoArea td {
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+    width: 14.2%;
+    text-align: center
+}
+
+.ridingGround .infoArea td .less {
+    color: #125adf
+}
+
+.ridingGround .infoArea td .full {
+    color: #f42c2e
+}
+
+.ridingGround .listArea li {
+    border-radius: 5px;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: top
+}
+
+.ridingGround .listArea li:first-child {
+    margin-right: 0.6%
+}
+
+.ridingGround .listArea li img {
+    width: 100%;
+    max-width: 240px;
+    margin-right: 0
+}
+
+.ridingGround .slideArea {
+    position: relative;
+    display: inline-block;
+    width: 100%
+}
+
+.ridingGround .slideArea li {
+    text-align: left
+}
+
+.ridingGround .slideArea li img {
+    display: inline-block;
+    max-width: 240px;
+    width: 100%;
+    margin-right: 0
+}
+
+.ridingGround .slideArea li img:first-child {
+    margin-right: 0.6%
+}
+
+.ridingGround .slideArea .flex-viewport {
+    display: inline-block;
+    width: 100%;
+    overflow: hidden
+}
+
+.ridingGround .slideArea .flex-direction-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%
+}
+
+.ridingGround .slideArea .flex-direction-nav li {
+    display: inline-block
+}
+
+.ridingGround .slideArea .flex-direction-nav a {
+    display: block;
+    text-indent: -9999px;
+    width: 52px;
+    height: 52px;
+    position: absolute;
+    top: -22px
+}
+
+.ridingGround .slideArea .flex-direction-nav .flex-prev {
+    background: url(../images/apply/popup_prev.png) no-repeat center center;
+    left: -26px
+}
+
+.ridingGround .slideArea .flex-direction-nav .flex-next {
+    background: url(../images/apply/popup_next.png) no-repeat center center;
+    right: -26px
+}
+
+
+@media all and (max-width:1480px) {
+
+    /*Index*/
+    .idx .quickMenu {
+        right: 1%
+    }
+}
+
+@media all and (max-width:1340px) {
+    .popupData.idxPopup {
+        width: 87%
+    }
+
+    .idxPopup ul {
+        width: 31.5%;
+        margin-right: 2%
+    }
+}
+
+@media all and (max-width:1240px) {
+    article {
+        width: 100%;
+        padding: 0 2%
+    }
+
+    .breadCrumb ul {
+        width: 100%
+    }
+
+    .qna .formArea {
+        padding: 80px 2% 0
+    }
+
+    .idxPopup ul {
+        padding: 40px 20px
+    }
+}
+
+@media all and (max-width:1200px) {
+
+    /*체험신청*/
+    .experience .dataList>ul {
+        padding: 30px 2.5%
+    }
+
+    .experience .dataList .week {
+        width: 100%;
+        display: inline-block
+    }
+
+    .experience .dataList .week li {
+        float: left;
+        width: 13.8%
+    }
+
+    .experience .dataList .week div {
+        margin-left: 1px
+    }
+
+    .experience .selectList {
+        width: 100%
+    }
+
+    .experience .selectList ul {
+        padding: 30px 2%
+    }
+
+    /*결과조회*/
+    .resultInquiry .selectList {
+        width: 100%
+    }
+
+    .resultInquiry .selectList ul {
+        padding: 30px 2%
+    }
+}
+
+@media all and (max-width:1024px) {
+
+    /*Header*/
+    header h1 {
+        left: 20px
+    }
+
+    header h1 img {
+        width: 190px
+    }
+
+    header nav {
+        right: 20px
+    }
+
+    header nav li {
+        margin: 0 10px
+    }
+
+    header nav a {
+        font-size: 17px
+    }
+
+    /*Index*/
+    .idx .pageTitle h3 {
+        padding: 0 3%
+    }
+
+    .idx .quickMenu {
+        right: 0
+    }
+
+    .idxPopup .cnt {
+        height: 160px
+    }
+
+    .idxPopup ul {
+        margin-right: 1%;
+        width: 31.6%
+    }
+
+    .idxPopup ul:nth-child(1),
+    .idxPopup ul:nth-child(2),
+    .idxPopup ul:nth-child(3) {
+        margin-bottom: 1%
+    }
+
+    .idxPopup .title {
+        margin-bottom: 15px
+    }
+
+    /*체험신청*/
+    .experience .rightArea {
+        width: 380px
+    }
+
+    .experience .selectInfo.fix {
+        left: 8%
+    }
+
+    .experience .selectList ul {
+        padding: 30px 8% 30px 2%
+    }
+
+    .experience .selectList ul:first-child {
+        margin-right: 1.6%
+    }
+
+    .resultInquiry .selectList h3 {
+        width: 83%
+    }
+}
+
+@media all and (max-width:980px) {
+
+    /*체험신청*/
+    .experience .dataList .week div {
+        display: block
+    }
+
+    .experience .dataList .week a {
+        padding-top: 8px
+    }
+
+    .experience .dataList .week li.closed a {
+        padding-top: 14px
+    }
+
+    .experience .detailBtn {
+        margin-left: 3%
+    }
+
+}
+
+@media all and (max-width:940px) {
+    .idxPopup .title {
+        font-size: 20px;
+        margin-top: 10px;
+        line-height: 26px;
+        height: 55px
+    }
+
+    /*체험신청*/
+    .experience .detailBtn {
+        margin-left: 1%
+    }
+
+    .experience .dataList .imgArea {
+        width: 110px;
+        padding-right: 10px
+    }
+
+    .experience .dataList .imgArea img {
+        max-width: 100%;
+        width: 100%
+    }
+
+    .experience .selectInfo {
+        width: 330px;
+        padding: 20px
+    }
+
+    .experience .rightArea {
+        width: 350px
+    }
+
+    .experience .dataList>ul {
+        padding: 30px 1%
+    }
+
+    .experience .dataList .week div {
+        letter-spacing: -1px
+    }
+
+    .resultInquiry .selectList ul:first-child {
+        margin-right: 1.6%
+    }
+
+    .resultInquiry .selectList h3 {
+        width: 78%
+    }
+
+    .resultInquiry .selectList .imgArea {
+        width: 110px
+    }
+
+}
+
+@media all and (max-width:820px) {
+
+    /*1대1문의*/
+    .qna .formArea form dd input[type="text"].phoneNumber {
+        float: right;
+        max-width: 71%
+    }
+
+    .qna .formArea form dd select {
+        margin-right: 2.3%
+    }
+
+    .experience .selectList .imgArea {
+        width: 110px
+    }
+}
+
+@media all and (max-width:770px) {
+
+    /*Index*/
+    .idx .shortCutArea a {
+        margin: 0 10px
+    }
+
+    /*Form Area*/
+    .formArea form {
+        width: 95%
+    }
+
+    .formArea form dd .phoneNumber {
+        float: right;
+        max-width: 69%
+    }
+
+    .formArea form dd select {
+        margin-right: 2.3%
+    }
+
+    /*가입완료 모집기간*/
+    .complete .formArea form {
+        width: 95%
+    }
+
+    /*1대1문의*/
+    .qna .formArea form dd input[type="text"].phoneNumber {
+        max-width: 68%
+    }
+}
+
+/*Mobile*/
+@media all and (max-width:720px) {
+
+    /*Common*/
+    select {
+        background: url(../images/apply/select_arrow2.png) no-repeat 98% center;
+        background-size: 1.9rem
+    }
+
+    .breadCrumb {
+        display: none
+    }
+
+    .subTitle {
+        font-size: 4.6rem;
+        margin-bottom: 9.8rem
+    }
+
+    .topSearchArea {
+        margin-bottom: 2rem
+    }
+
+    .topSearchArea select {
+        min-width: 14.6rem;
+        font-size: 2.4rem;
+        height: 7.4rem;
+        padding: 0 4rem 0 2rem;
+        margin-right: 0;
+        background-position-x: 85%;
+        float: left
+    }
+
+    .topSearchArea input {
+        height: 7.4rem;
+        font-size: 2.4rem;
+        width: 55.2%
+    }
+
+    .topSearchArea button {
+        height: 7.4rem;
+        line-height: 7.4rem;
+        font-size: 2.4rem;
+        width: 20%
+    }
+
+    /*Header*/
+    header {
+        height: auto;
+        padding-top: 1.5rem
+    }
+
+    header h1 {
+        text-align: center;
+        position: relative;
+        left: 0;
+        transform: translate(0);
+        top: 0
+    }
+
+    header h1 img {
+        width: 19rem
+    }
+
+    header nav {
+        right: 0;
+        left: 0;
+        top: 0;
+        margin-top: 0;
+        position: relative;
+        width: 100%;
+        display: inline-block;
+        margin-top: 2rem
+    }
+
+    header nav ul li>a {
+        font-size: 2.6rem
+    }
+
+    header nav li {
+        margin: 0;
+        width: 25%;
+        float: left;
+        text-align: center;
+        padding: 2.4rem 0
+    }
+
+    header nav li.last {
+        display: none
+    }
+
+    header nav li.on a {
+        padding-bottom: 2.2rem
+    }
+
+    header nav li.has_depth>div {
+        display: none !important
+    }
+
+    header .allMenuBtn {
+        left: 3.4%;
+        top: 2.5rem
+    }
+
+    header .allMenuBtn img {
+        width: 3.2rem
+    }
+
+    header .resultBtn {
+        font-size: 2rem;
+        width: 10.8rem;
+        height: 4rem;
+        right: 3.4%;
+        color: #fff;
+        background-color: #125adf;
+        border-radius: 4rem;
+        text-align: center;
+        line-height: 4rem;
+        top: 2rem
+    }
+
+    header nav li a:hover {
+        padding-bottom: 2.3rem;
+        border-width: 0.4rem;
+    }
+
+    header .moBtnArea {
+        display: block
+    }
+
+    header .moBtnArea a {
+        position: absolute;
+    }
+
+    header .moAllMenu {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        display: block
+    }
+
+    header .moAllMenu .blackBg {
+        background-color: rgba(0, 0, 0, 0.7);
+        width: 100%;
+        height: 100%;
+        display: none
+    }
+
+    header .moAllMenu .menuCnt {
+        width: 82.3%;
+        position: absolute;
+        left: -100%;
+        top: 0;
+        background-color: #fff;
+        height: 100%;
+        overflow-y: auto
+    }
+
+    header .moAllMenu .menuCnt .topArea {
+        background: url(../images/apply/allMenu_Bg.png) no-repeat left top;
+        height: 35.7rem;
+        background-size: cover;
+        position: relative;
+        padding: 14rem 0 0 4rem;
+        margin-bottom: 2rem
+    }
+
+    header .moAllMenu .menuCnt h2 img {
+        width: 31.7rem
+    }
+
+    header .moAllMenu .menuCnt h4 {
+        margin-top: 4rem;
+        font-size: 2.4rem;
+        color: #fff
+    }
+
+    header .moAllMenu .menuCnt h4 .icon {
+        margin-right: 2rem;
+        width: 2.2rem
+    }
+
+    header .moAllMenu .menuCnt h4 .arrow {
+        margin-left: 3rem;
+        width: 1.1rem
+    }
+
+    header .moAllMenu .menuCnt .menuCloseBtn {
+        position: absolute;
+        right: 3rem;
+        top: 3rem
+    }
+
+    header .moAllMenu .menuCnt .menuCloseBtn img {
+        width: 4rem
+    }
+
+    header .moAllMenu .menuCnt .menuList {
+        width: 100%;
+        padding: 0 4rem;
+        border-bottom: 0.1rem solid #e0e0e0
+    }
+
+    header .moAllMenu .menuCnt .menuList li {
+        border-bottom: 1px solid #e0e0e0
+    }
+
+    header .moAllMenu .menuCnt .menuList li:last-child {
+        border-bottom: 0
+    }
+
+    header .moAllMenu .menuCnt .menuList li>a {
+        padding: 4rem;
+        text-align: left;
+        display: block;
+        font-size: 2.8rem;
+        font-weight: 700;
+        padding-left: 2rem;
+        background: url(../images/apply/allMenu_right_arrow2.png) no-repeat 94% center;
+        background-size: 1rem
+    }
+
+    header .moAllMenu .menuCnt .menuList li>a img {
+        margin-right: 2rem;
+        width: 1.8rem
+    }
+
+    header .moAllMenu .menuCnt .menuList li.has_depth>a {
+        background: url(../images/apply/mo_depth_arrow_down.png) no-repeat 94% center;
+        background-size: 1.8rem
+    }
+
+    header .moAllMenu .menuCnt .menuList li.has_depth>a.on {
+        background: url(../images/apply/mo_depth_arrow_up.png) no-repeat 94% center;
+        background-size: 1.8rem
+    }
+
+    header .moAllMenu .menuCnt .menuList li.has_depth div {
+        padding-left: 5.5rem;
+        padding-bottom: 6rem;
+        display: none
+    }
+
+    header .moAllMenu .menuCnt .menuList li.has_depth div a {
+        display: block;
+        font-size: 2.4rem;
+        line-height: 7.5rem;
+        color: #111;
+        font-weight: 700
+    }
+
+    header .moAllMenu .menuCnt .bottomMenu {
+        border-top: 3.8rem solid #f0f0f0;
+        padding: 4rem 0 10rem 0;
+        text-align: center
+    }
+
+    header .moAllMenu .menuCnt .bottomMenu li {
+        display: inline-block
+    }
+
+    header .moAllMenu .menuCnt .bottomMenu li.dot {
+        width: 0.6rem;
+        height: 0.6rem;
+        border-radius: 100%;
+        background-color: #767676;
+        margin: 0 2.5rem;
+        vertical-align: top;
+        margin-top: 0.8rem
+    }
+
+    header .moAllMenu .menuCnt .bottomMenu a {
+        font-size: 2.4rem
+    }
+
+    /*Footer*/
+    footer {
+        padding: 6rem 6rem 10rem;
+        font-size: 2.2rem;
+        line-height: 3rem
+    }
+
+    footer .info {
+        margin-bottom: 4rem;
+        padding-bottom: 4rem;
+        border-bottom: 0.1rem solid #454546
+    }
+
+    footer span {
+        display: none
+    }
+
+    footer br {
+        display: inline-block
+    }
+
+    /*Index*/
+    .idx .mainBanner {
+        height: auto
+    }
+
+    .idx .pageTitle {
+        top: 12.5rem
+    }
+
+    .idx .pageTitle h2 {
+        font-size: 6.2rem
+    }
+
+    .idx .pageTitle h3 {
+        font-size: 2.4rem;
+        line-height: 3rem
+    }
+
+    .idx .pageTitle h3 br {
+        display: inline-block
+    }
+
+    .idx .slideArea {
+        height: 76rem
+    }
+
+    .idx .slideArea .slides li {
+        height: 76rem
+    }
+
+    .idx .slideArea .slides .s1,
+    .idx .slideArea .slides .s2,
+    .idx .slideArea .slides .s3 {
+        background-size: cover
+    }
+
+    .idx .slideNavi {
+        top: 69rem;
+        width: 20rem;
+        margin-left: -10rem
+    }
+
+    .idx .slideNavi .flex-control-paging li {
+        margin: 0 1rem
+    }
+
+    .idx .slideNavi .flex-control-paging li a {
+        width: 2rem;
+        height: 2rem
+    }
+
+    .idx .slideNavi .flex-control-paging li a.flex-active {
+        width: 7.6rem;
+        height: 2rem;
+        border-radius: 4rem
+    }
+
+    .idx .slideNavi .flex-pauseplay a.flex-pause {
+        background: url(../images/apply/icon_pause_mo.png) no-repeat left center;
+        width: 0.8rem;
+        height: 2rem;
+        background-size: cover
+    }
+
+    .idx .slideNavi .flex-pauseplay a.flex-play {
+        background: url(../images/apply/icon_play_mo.png) no-repeat left center;
+        width: 1.4rem;
+        height: 2rem;
+        background-size: cover
+    }
+
+    .idx .shortCutArea {
+        position: relative;
+        left: 0;
+        top: 0;
+        margin-left: 0;
+        display: inline-block;
+        width: 100%;
+        margin-top: -0.3rem
+    }
+
+    .idx .shortCutArea a {
+        margin: 0;
+        float: left;
+        width: 50%;
+        height: 36.5rem;
+        padding: 6rem 0 0 0
+    }
+
+    .idx .shortCutArea .applyBtn {
+        background: #125adf
+    }
+
+    .idx .shortCutArea .applyBtn .icon {
+        width: 2.4rem
+    }
+
+    .idx .shortCutArea .searchBtn {
+        background: #05c9d0
+    }
+
+    .idx .shortCutArea .searchBtn .icon {
+        width: 3.2rem
+    }
+
+    .idx .shortCutArea .title {
+        font-size: 3.8rem;
+        line-height: 4.8rem
+    }
+
+    .idx .shortCutArea .line {
+        width: 3.2rem;
+        height: 0.2rem;
+        margin: 2.8rem auto
+    }
+
+    .idx .shortCutArea .link {
+        font-size: 1.8rem;
+        margin-top: 3.5rem
+    }
+
+    .idx .shortCutArea .link img.pc {
+        display: none
+    }
+
+    .idx .shortCutArea .link img.mo {
+        display: inline-block;
+        margin-left: 1rem
+    }
+
+    .idx .leftMenu {
+        display: none
+    }
+
+    .idx .quickMenu {
+        margin-top: -29rem;
+        right: 3%
+    }
+
+    .idx .quickMenu h4 {
+        display: none
+    }
+
+    .idx .quickMenu .popupOff li:nth-child(2),
+    .idx .quickMenu .popupOff li:nth-child(3) {
+        display: none
+    }
+
+    .idx .quickMenu .popupOn {
+        top: 40.2%;
+        position: fixed
+    }
+
+    .idx .quickMenu .popupOn .popupCloseBtn {
+        padding-top: 2.2rem
+    }
+
+    .idx .quickMenu .popupOn .popupCloseBtn img.mo {
+        display: inline-block;
+        width: 2.5rem;
+        margin-bottom: 1rem
+    }
+
+    .idx .quickMenu .popupOn .popupCloseBtn img.pc {
+        display: none
+    }
+
+    .idx .quickMenu .popupOn .stopWatchBtn {
+        padding-top: 2.9rem
+    }
+
+    .idx .quickMenu a {
+        width: 9.6rem;
+        height: 9.6rem;
+        font-size: 2.4rem
+    }
+
+    .idx .quickMenu .popupOn a {
+        font-size: 1.8rem;
+        line-height: 2.1rem
+    }
+
+    .idx .quickMenu li:first-child a {
+        padding-top: 3.8rem
+    }
+
+    .idx .moBottomMenu {
+        display: inline-block;
+        width: 100%
+    }
+
+    .idx .moBottomMenu li {
+        vertical-align: middle;
+        width: 29.3%;
+        text-align: center;
+        ;
+        padding: 3.8rem 0;
+        float: left
+    }
+
+    .idx .moBottomMenu li:first-child {
+        width: 38%
+    }
+
+    .idx .moBottomMenu li.dot {
+        margin-top: 4.4rem;
+        width: 0.6rem;
+        height: 0.6rem;
+        background-color: #767676;
+        border-radius: 100%;
+        padding: 0
+    }
+
+    .idx .moBottomMenu a {
+        font-size: 2.4rem
+    }
+
+    .popupData.idxPopup {
+        width: 75%;
+        height: 100%;
+        overflow-y: auto;
+        left: 41%;
+        top: 57%;
+        padding-bottom: 8rem
+    }
+
+    .idxPopup .subtit {
+        font-size: 2.4rem
+    }
+
+    .idxPopup .title {
+        margin: 2rem 0 8rem;
+        height: auto;
+        font-size: 3.4rem;
+        line-height: 4rem
+    }
+
+    .idxPopup ul {
+        width: 100%;
+        margin-right: 0;
+        padding: 6.5rem 5rem 5rem;
+        height: auto;
+        margin-bottom: 4rem
+    }
+
+    .idxPopup ul:nth-child(1),
+    .idxPopup ul:nth-child(2),
+    .idxPopup ul:nth-child(3) {
+        margin-bottom: 4rem
+    }
+
+    .idxPopup .cnt {
+        height: auto;
+        line-height: 3rem;
+        font-size: 2.4rem;
+        margin-bottom: 6rem
+    }
+
+    .idxPopup .cnt li {
+        font-size: 2.4rem;
+        padding-left: 2.5rem;
+        line-height: 3rem;
+        margin-bottom: 1.5rem
+    }
+
+    .idxPopup .cnt li:before {
+        left: -0.2rem
+    }
+
+    .idxPopup .btn a {
+        background: url(../images/apply/detailBtn_bg_mo.png) no-repeat center center;
+        width: 20.6rem;
+        height: 7.6rem;
+        font-size: 1.8rem;
+        line-height: 6.3rem;
+        background-size: cover
+    }
+
+    .idxPopup .btn a img.mo {
+        display: inline-block;
+        margin-left: 1rem;
+        width: 2.2rem
+    }
+
+    .idxPopup .btn a img.pc {
+        display: none
+    }
+
+    /*Form Area*/
+    .formArea {
+        padding: 10rem 3.5%
+    }
+
+    .formArea form {
+        border-width: 0.2rem;
+        margin: 6rem 0 0 0;
+        padding: 5rem 0 0 0;
+        width: 100%
+    }
+
+    .formArea h2 img.mo {
+        display: inline-block;
+        width: 46.2rem
+    }
+
+    .formArea h2 img.pc {
+        display: none
+    }
+
+    .formArea h3 {
+        font-size: 2.4rem;
+        margin-top: 3rem;
+        line-height: 3.4rem
+    }
+
+    .formArea .btn {
+        font-size: 3rem;
+        height: 9rem
+    }
+
+    .formArea .buttonArea {
+        padding: 0;
+        margin-top: 1rem;
+        padding-top: 4rem
+    }
+
+    .formArea .buttonArea .leftBtn {
+        height: 9rem;
+        font-size: 3rem;
+        line-height: 9rem
+    }
+
+    .formArea .buttonArea .rightBtn {
+        height: 9rem;
+        font-size: 3rem;
+        line-height: 9rem
+    }
+
+    .formArea form dl {
+        display: inline-block
+    }
+
+    .formArea form dl:last-child dd {
+        margin-bottom: 0
+    }
+
+    .formArea form dt {
+        display: inline-block;
+        width: 100%;
+        padding-left: 0;
+        font-size: 2.4rem;
+        margin-bottom: 2rem;
+        line-height: 1
+    }
+
+    .formArea form dt br {
+        display: none
+    }
+
+    .formArea form dt.lineTwo {
+        padding-top: 0
+    }
+
+    .formArea form dd {
+        display: inline-block;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 4rem
+    }
+
+    .formArea form dd input {
+        font-size: 2.6rem;
+        height: 7.4rem;
+        padding-left: 2rem
+    }
+
+    .formArea form dd input::placeholder {
+        letter-spacing: -0.1rem
+    }
+
+    .formArea form dd .inputCheck .warn {
+        font-size: 2rem;
+        margin: 1rem 0 0 0
+    }
+
+    .formArea form dd .inputCheck.on .warn.pc {
+        display: none
+    }
+
+    .formArea form dd .inputCheck.on .warn.mo {
+        display: block
+    }
+
+    .formArea form select {
+        height: 7.4rem;
+        font-size: 2.6rem;
+        max-width: 31%;
+        padding: 0 4rem 0 2rem;
+        background-position-x: 89%
+    }
+
+    .formArea form select.w50 {
+        max-width: 47.9%;
+        background-position-x: 93%
+    }
+
+    .formArea form select.w100 {
+        max-width: 100%;
+        background-position-x: 97%
+    }
+
+    .formArea form dd .phoneNumber {
+        width: 64.8%;
+        max-width: 100%
+    }
+
+    .formArea form dd select {
+        margin-right: 3.1%
+    }
+
+    .formArea form dd select.last {
+        margin-right: 0
+    }
+
+    .formArea form dd .inputCheck .delBtn {
+        right: 2.5rem;
+        top: 2.5rem
+    }
+
+    .formArea form dd .inputCheck .delBtn img {
+        width: 2.6rem
+    }
+
+    .formArea form .crtNumSend {
+        max-width: 20rem;
+        height: 7.4rem;
+        ;
+        line-height: 7.4rem;
+        font-size: 2.4rem
+    }
+
+    .formArea form .inputArea .time {
+        font-size: 2.6rem;
+        right: 2rem;
+        top: 2.5rem
+    }
+
+    .formArea form .crtNumConfirm,
+    .formArea form .crtNumInput.on .crtNumResend {
+        font-size: 2.4rem;
+        max-width: 20rem;
+        height: 7.4rem;
+        line-height: 7.4rem
+    }
+
+    .formArea form .parentPhoneNum dd {
+        margin-bottom: 1rem
+    }
+
+    .formArea form .crtNumInput dt {
+        display: none
+    }
+
+    .formArea form .crtNumInput dd .inputCheck .warn.mo {
+        margin-bottom: 2rem
+    }
+
+    /*Paging*/
+    .paging div {
+        font-size: 2.4rem;
+        margin: 0 2.5rem
+    }
+
+    .paging input {
+        padding-right: 2rem;
+        font-size: 2.4rem;
+        width: 7.6rem;
+        height: 5.4rem
+    }
+
+    .paging a {
+        padding: 0 1.5rem
+    }
+
+    .paging a img.mo {
+        display: block
+    }
+
+    .paging a.prev img,
+    .paging a.next img {
+        width: 1rem
+    }
+
+    .paging a.firstPage img,
+    .paging a.lastPage img {
+        width: 1.6rem
+    }
+
+    .paging a img.pc {
+        display: none
+    }
+
+    /*Popup*/
+    .popupData {
+        border-radius: 0.5rem
+    }
+
+    .popupData .popupClose {
+        top: 3rem;
+        right: 3rem
+    }
+
+    .popupData .popupClose img {
+        width: 2.7rem
+    }
+
+    /*비밀번호*/
+    .password .formArea {
+        padding-bottom: 20rem
+    }
+
+    .password .formArea form {
+        width: 100%
+    }
+
+    .password .formArea .pwResetBtn {
+        margin-top: 2rem
+    }
+
+    /*비밀번호-신청기간아닌경우 팝업*/
+    .password .nonApplicat {
+        width: 93.4%;
+        padding: 10rem 9rem 4rem
+    }
+
+    .password .nonApplicat h3 {
+        font-size: 2.6rem;
+        line-height: 4rem
+    }
+
+    .password .nonApplicat h3 a {
+        font-size: 2.6rem
+    }
+
+    .password .nonApplicat .btnArea {
+        width: 42rem;
+        margin-top: 5.5rem
+    }
+
+    .password .nonApplicat .btnArea a {
+        font-size: 2.6rem;
+        border-radius: 0.5rem;
+        height: 7.4rem;
+        line-height: 7.4rem;
+    }
+
+    /*비밀번호 재설정*/
+    .resetPassword .title {
+        padding: 0;
+        margin-bottom: 4rem
+    }
+
+    .resetPassword .title h2 {
+        font-size: 4rem
+    }
+
+    .resetPassword .formArea form dd input::placeholder {
+        letter-spacing: -0.2rem;
+        font-size: 2.4rem
+    }
+
+    .resetPassword .formArea form .crtNumInput dd .inputCheck .delBtn {
+        right: 15%
+    }
+
+    /*가입완료 모집기간*/
+    .complete .formArea {
+        padding-bottom: 30rem
+    }
+
+    .complete .formArea form {
+        width: 100%
+    }
+
+    .complete form .cnt {
+        padding: 0
+    }
+
+    .complete form h3 {
+        margin-top: 0;
+        font-size: 4rem;
+        margin-bottom: 2rem
+    }
+
+    .complete form h4 {
+        font-size: 2.6rem
+    }
+
+    .complete form h4 b {
+        font-size: 2.6rem
+    }
+
+    .complete form h5 {
+        margin: 5rem 0 3rem 0;
+        font-size: 2.6rem;
+        line-height: 3.4rem
+    }
+
+    .complete form h5 a {
+        font-size: 2.6rem
+    }
+
+    .complete form h5 br.mo {
+        display: inline-block
+    }
+
+    /*로그인-아이디생성*/
+    .creatID .formArea {
+        padding-bottom: 19rem
+    }
+
+    .creatID .formArea form {
+        width: 100%
+    }
+
+    .creatID .formArea h3 br.mo {
+        display: inline-block
+    }
+
+    .creatID .formArea .buttonArea {
+        margin-top: 0
+    }
+
+    /*상세정보입력*/
+    .join .title {
+        padding: 0;
+        margin-bottom: 6rem
+    }
+
+    .join .title h2 {
+        font-size: 4rem
+    }
+
+    .join .title h3 {
+        font-size: 2.6rem;
+        margin-top: 2rem
+    }
+
+    .join .title h3 b {
+        font-size: 2.6rem
+    }
+
+    .join .selectSchool {
+        max-width: 20rem;
+        height: 7.4rem;
+        font-size: 2.4rem;
+        line-height: 7.4rem
+    }
+
+    .join .schoolName {
+        vertical-align: top;
+        max-width: 65.9%;
+        margin-right: 1.9rem
+    }
+
+    .join .info.mo {
+        display: block;
+        font-size: 2rem;
+        line-height: 2.6rem;
+        padding-left: 2.2rem;
+        margin-top: 1rem;
+        padding-bottom: 0
+    }
+
+    .join .formArea form dl.pc {
+        display: none
+    }
+
+    /*상세정보입력- 학교선택 팝업*/
+    .join .searchSchool {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        padding: 10rem 3.4% 5.5rem
+    }
+
+    .join .searchSchool h3 {
+        font-size: 4rem
+    }
+
+    .join .searchSchool .searchArea {
+        margin-top: 5rem
+    }
+
+    .join .searchSchool .searchArea input {
+        height: 7.4rem;
+        font-size: 2.6rem;
+        padding: 0 2rem;
+        width: 79%
+    }
+
+    .join .searchSchool .searchArea button {
+        font-size: 2.4rem;
+        width: 21%;
+        height: 7.4rem
+    }
+
+    .join .searchSchool .listData {
+        margin: 2rem 0 4rem 0;
+        min-height: 57rem
+    }
+
+    .join .searchSchool .listData .checkArea label {
+        width: 24px;
+        height: 24px;
+        background: url(../images/apply/check_box_off_mo.png) no-repeat center center
+    }
+
+    .join .searchSchool .listData .checkArea input:checked+label {
+        background: url(../images/apply/check_box_on_mo.png) no-repeat center center
+    }
+
+    .join .searchSchool .listData th {
+        padding-top: 3rem;
+        text-align: right;
+        padding-right: 2rem
+    }
+
+    .join .searchSchool .listData td {
+        padding: 3rem 0;
+        font-size: 2.6rem
+    }
+
+    .join .searchSchool .listData td span {
+        font-size: 2rem;
+        margin-left: 1rem
+    }
+
+    .join .searchSchool .listData td .address {
+        margin-top: 1.5rem;
+        font-size: 2.4rem
+    }
+
+    .join .searchSchool .paging div {
+        font-size: 2.4rem;
+        margin: 0 4rem
+    }
+
+    .join .searchSchool .paging input {
+        height: 5.4rem;
+        width: 7.6rem;
+        font-size: 2.6rem
+    }
+
+    /*학부모인증*/
+    .parntalAut .title {
+        padding: 0;
+        margin-bottom: 6rem
+    }
+
+    .parntalAut .title h2 {
+        font-size: 4rem
+    }
+
+    .parntalAut .title h3 {
+        font-size: 2.6rem;
+        letter-spacing: -0.1rem
+    }
+
+    .parntalAut .title h3 br {
+        display: inline-block
+    }
+
+    .parntalAut .formArea form .inputCheck .delBtn {
+        right: 15%
+    }
+
+    .parntalAut .formArea form .crtNumInput {
+        padding-bottom: 0
+    }
+
+    .parntalAut .checkBox label {
+        width: 2.4rem;
+        height: 2.4rem;
+        background: url(../images/apply/check_box_off_mo.png) no-repeat center center;
+        background-size: 2.4rem
+    }
+
+    .parntalAut .checkBox input[type="checkbox"]:checked+label {
+        background: url(../images/apply/check_box_on_mo.png) no-repeat center center;
+        background-size: 2.4rem
+    }
+
+    .parntalAut .checkBox {
+        left: 0
+    }
+
+    .parntalAut .agreeArea tr:first-child td {
+        padding-top: 5rem
+    }
+
+    .parntalAut .agreeArea td {
+        padding: 2rem 0 2rem 4rem
+    }
+
+    .parntalAut .agreeArea h4 {
+        font-size: 2.6rem
+    }
+
+    .parntalAut .agreeArea td .text {
+        font-size: 2rem;
+        margin-top: 1rem
+    }
+
+    .parntalAut .agreeArea td .text span {
+        display: none
+    }
+
+    .parntalAut .agreeArea .popupBtn {
+        font-size: 2.2rem;
+        margin-top: 0.2rem
+    }
+
+    .parntalAut .agreeArea .popupBtn img.pc {
+        display: none
+    }
+
+    .parntalAut .agreeArea .popupBtn img.mo {
+        display: inline-block;
+        margin: -0.1rem 0 0 2rem;
+        width: 1rem
+    }
+
+    .parntalAut .formArea .buttonArea {
+        margin-top: 3rem
+    }
+
+    /*학부모 인증-팝업*/
+    .parntalAut .popupData {
+        width: 100%;
+        border-radius: 0;
+        padding: 10rem 2rem 0 2rem;
+        height: 100%
+    }
+
+    .parntalAut .popupData h2 {
+        font-size: 4rem;
+        margin-bottom: 2rem
+    }
+
+    .parntalAut .popupData .cnt {
+        max-height: 76rem
+    }
+
+    .parntalAut .popupData p {
+        font-size: 2.4rem;
+        line-height: 3rem;
+        margin-bottom: 5rem
+    }
+
+    .parntalAut .popupData h4 {
+        font-size: 2.8rem;
+        margin-bottom: 0 0 2.5rem 0
+    }
+
+    .parntalAut .popupData li {
+        font-size: 2.4rem;
+        line-height: 3.2rem
+    }
+
+    .parntalAut .popupData ul li div {
+        padding-left: 0;
+        margin-bottom: 0;
+        line-height: 3.2rem;
+        margin-top: 0.5rem
+    }
+
+    .parntalAut .popupData h3 {
+        font-size: 2.8rem;
+        margin: 4.5rem 0
+    }
+
+    .parntalAut .popupData.Term li {
+        margin-bottom: 4rem
+    }
+
+    /*1:1문의*/
+    .qna .section {
+        padding-top: 10rem
+    }
+
+    .qna .formArea {
+        padding: 10rem 3.5%
+    }
+
+    .qna .formArea form {
+        padding: 4rem 0 0 0
+    }
+
+    .qna .formArea form dt {
+        padding: 0;
+        width: 100%;
+        border: none
+    }
+
+    .qna .formArea form dd {
+        padding: 0;
+        border-bottom: none
+    }
+
+    .qna h2 {
+        margin-bottom: 2.5rem
+    }
+
+    .qna h3 {
+        font-size: 2.4rem;
+        line-height: 3.2rem
+    }
+
+    .qna .formArea form dl:first-child dd {
+        padding-top: 0
+    }
+
+    .qna .formArea form dl:last-of-type dd {
+        padding-top: 2.2rem !important
+    }
+
+    .qna .formArea form dd select {
+        margin-right: 0
+    }
+
+    .qna .formArea form dd input[type="text"] {
+        max-width: 100%
+    }
+
+    .qna .formArea form dd input[type="text"].phoneNumber {
+        max-width: 66%
+    }
+
+    .qna .formArea form dd textarea {
+        font-size: 2.6rem;
+        height: 30rem;
+        padding: 2.5rem 2rem;
+        max-width: 100%
+    }
+
+    .qna .formArea form .secret {
+        border-bottom: 1px solid #e0e0e0
+    }
+
+    .qna .formArea form .secret dd input[type="password"] {
+        max-width: 45.3rem;
+        width: 100%;
+        font-size: 2.6rem;
+        height: 7.4rem;
+        padding-left: 2rem
+    }
+
+    .qna .secret .radio {
+        width: 25%
+    }
+
+    .qna .radio {
+        width: 32%
+    }
+
+    .qna .radio:nth-child(1),
+    .qna .radio:nth-child(2),
+    .qna .radio:nth-child(3) {
+        margin-bottom: 3rem;
+        margin-top: 1rem
+    }
+
+    .qna .radio label {
+        font-size: 2.6rem;
+        margin-right: 0;
+        height: 2.4rem;
+        background-size: 2.4rem;
+        background: url(../images/apply/radio_off_mo.png) no-repeat left center;
+        line-height: 2.4rem;
+        margin-right: 2rem;
+        background-size: 2.4rem
+    }
+
+    .qna .radio input[type="radio"]:checked+label {
+        background: url(../images/apply/radio_on_mo.png) no-repeat left center;
+        background-size: 2.4rem
+    }
+
+    .qna .citySelect select {
+        max-width: 100%;
+        background-position-x: 97%
+    }
+
+    .qna .submitBtn {
+        width: 30.2rem;
+        height: 9rem;
+        line-height: 9rem;
+        font-size: 3rem
+    }
+
+    .qna .fileArea {
+        width: 100%
+    }
+
+    .qna .fileArea .fileBtn {
+        width: 20rem;
+        height: 7.4rem;
+        font-size: 2.4rem
+    }
+
+    .qna .fileArea .fileName {
+        max-width: 100% !important;
+        width: 68% !important;
+        height: 7.4rem
+    }
+
+    .qna .fileArea .inputHidden {
+        height: 7.4rem
+    }
+
+    .qna .fileArea .fileSize {
+        left: 65%;
+        font-size: 2.6rem
+    }
+
+    .qna .fileArea .fileDel img.pc {
+        display: none
+    }
+
+    .qna .fileArea .fileDel img.mo {
+        display: inline-block;
+        width: 1.9rem
+    }
+
+    .qna .formArea form dl:last-child {
+        border-bottom: 1px solid #e0e0e0
+    }
+
+    .qna .text {
+        font-size: 2rem;
+        line-height: 2.4rem;
+        padding-left: 1.2rem
+    }
+
+    .qna .text br {
+        display: inline-block
+    }
+
+    /*Q&A_비밀번호 팝업*/
+    .PasswordPopup form {
+        padding: 9rem 0;
+        border-radius: 0.6rem;
+        width: 67.4rem
+    }
+
+    .PasswordPopup form h5 {
+        font-size: 2.6rem;
+        line-height: 4rem;
+        margin-bottom: 3.4rem
+    }
+
+    .PasswordPopup form .close {
+        right: 2rem;
+        top: 2rem
+    }
+
+    .PasswordPopup form .close img {
+        width: 2.7rem
+    }
+
+    .PasswordPopup form input {
+        width: 55.2rem;
+        height: 7.4rem;
+        font-size: 2.6rem;
+        padding-left: 2.2rem
+    }
+
+    .PasswordPopup form button {
+        width: 14rem;
+        height: 7.4rem;
+        font-size: 2.4rem
+    }
+
+    /*Q&A_리스트*/
+    .qna .qnaList.section {
+        padding: 8.5rem 0 10rem
+    }
+
+    .qna .qnaList h2 {
+        margin-bottom: 1.5rem
+    }
+
+    .qnaList .pc {
+        display: none
+    }
+
+    .qnaList .mo {
+        display: block
+    }
+
+    .qnaList article {
+        padding: 0 3.5%
+    }
+
+    .qnaList .topSearchArea {
+        margin-top: 10rem;
+        padding-bottom: 2rem
+    }
+
+    .qnaList .topSearchArea input {
+        width: 51.2%
+    }
+
+    .qnaList .topSearchArea button {
+        width: 21%
+    }
+
+    .qnaList .topSearchArea .btnArea {
+        width: 100%;
+        float: none;
+        display: inline-block;
+        margin: 3rem 0 0;
+        padding: 3rem 0 0;
+        border-top: 1px solid #e0e0e0
+    }
+
+    .qnaList .topSearchArea .btnArea a {
+        width: 49%;
+        height: 6.8rem;
+        line-height: 6.8rem;
+        font-size: 2.2rem
+    }
+
+    .qnaList .topSearchArea .btnArea a:first-child {
+        float: left
+    }
+
+    .qnaList .topSearchArea .btnArea a:last-child {
+        float: right;
+        margin-left: 0
+    }
+
+    .qnaList .tbTable {
+        margin-bottom: 4rem
+    }
+
+    .qnaList .tbTable td .mo {
+        display: block
+    }
+
+    .qnaList .tbTable td {
+        height: auto;
+        padding: 3.8rem 2rem 3.4rem;
+        text-align: left
+    }
+
+    .qnaList .tbTable td.tit,
+    .qnaList .tbTable td.area,
+    .qnaList .tbTable td.name,
+    .qnaList .tbTable td.status,
+    .qnaList .tbTable td.date {
+        display: none
+    }
+
+    .qnaList .tbTable .result,
+    .qnaList .tbTable .area,
+    .qnaList .tbTable .name,
+    .qnaList .tbTable .status {
+        width: auto !important
+    }
+
+    .qnaList .tbTable .result {
+        width: 100%;
+        font-size: 2.2rem;
+        font-weight: bold;
+    }
+
+    .qnaList .tbTable .tit {
+        text-align: left;
+        padding-left: 30px;
+        padding: 2rem 0 1.7rem 0;
+        font-size: 2.6rem;
+        font-weight: 400;
+        width: 60rem;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden
+    }
+
+    .qnaList .tbTable .tit.secret {
+        background-position: left 2rem;
+        background-size: 2rem;
+        padding-left: 3.4rem
+    }
+
+    .qnaList .tbTable li span {
+        font-size: 2.198rem;
+        color: #767676;
+        display: inline-block;
+        font-weight: 400;
+        width: auto
+    }
+
+    .qnaList .tbTable li span.name {
+        border-left: 1px solid #e0e0e0;
+        border-right: 1px solid #e0e0e0;
+        margin: 0 2rem;
+        padding: 0 2rem
+    }
+
+    .qnaList .tbTable li span.status {
+        float: right
+    }
+
+    .qnaList .status.reComplete {
+        color: #767676
+    }
+
+    /*Q&A_상세*/
+    .qnaDetails article {
+        margin-top: 10rem;
+        margin-bottom: 10rem;
+        padding: 0 3.5%
+    }
+
+    .qnaDetails table {
+        border-width: 0.2rem;
+    }
+
+    .qnaDetails thead th {
+        padding: 0 2rem;
+        font-size: 2.6rem;
+        height: 13rem
+    }
+
+    .qnaDetails thead th span {
+        font-size: 2.2rem;
+        float: none;
+        display: block;
+        margin-top: 1.4rem
+    }
+
+    .qnaDetails tbody td {
+        padding: 0 2rem
+    }
+
+    .qnaDetails tbody .fileArea td {
+        padding: 2rem
+    }
+
+    .qnaDetails tbody .fileArea dt {
+        font-size: 2.2rem
+    }
+
+    .qnaDetails tbody .fileArea dt .file {
+        background-size: 2rem;
+        padding-left: 3.8rem
+    }
+
+    .qnaDetails tbody .fileArea dt .file_num {
+        color: #fe633d;
+        display: inline-block;
+        margin-left: 5px
+    }
+
+    .qnaDetails tbody .fileArea dt .all_save {
+        margin-left: 0;
+        float: right;
+    }
+
+    .qnaDetails tbody .fileArea dt .file_size {
+        display: none
+    }
+
+    .qnaDetails tbody .fileArea dd {
+        margin-top: 3rem
+    }
+
+    .qnaDetails tbody .fileArea dd a {
+        font-size: 2.2rem;
+        margin-right: 1.3rem;
+        background-size: 1.8rem;
+        padding-left: 4rem;
+        background-position-x: left
+    }
+
+    .qnaDetails tbody .fileArea dd .file_size {
+        font-size: 2.2rem
+    }
+
+    .qnaDetails tbody .cntArea td {
+        padding: 6rem 2rem 6rem 6.7rem;
+        line-height: 3.2rem;
+        background-position: 2rem 6rem;
+        background-size: 3rem;
+        font-size: 2.4rem
+    }
+
+    .qnaDetails tbody .replyArea td {
+        font-size: 2.4rem;
+        background-position: 2rem 6rem;
+        background-size: 3rem;
+        padding: 6rem 2rem 6rem 6.7rem
+    }
+
+    .qnaDetails tbody .replyArea h5 {
+        font-size: 2.4rem;
+        margin-bottom: 4.2rem
+    }
+
+    .qnaDetails tbody .replyArea h5 span {
+        padding-left: 1.4rem;
+        margin-left: 1.4rem;
+        font-size: 2.2rem
+    }
+
+    .qnaDetails tbody .replyArea div {
+        margin-bottom: 4.2rem;
+        line-height: 3.2rem
+    }
+
+    .qnaDetails tbody .replyArea li {
+        line-height: 3.3rem
+    }
+
+    .qnaDetails tbody .replyArea li i {
+        margin-right: 2rem
+    }
+
+    .qnaDetails tbody .btnArea td {
+        padding: 2rem 0 6rem
+    }
+
+    .qnaDetails tbody .btnArea td .btn {
+        width: 12rem;
+        height: 6.8rem;
+        line-height: 6.8rem;
+        font-size: 2.2rem;
+        vertical-align: top;
+        margin-left: 2rem
+    }
+
+    .qnaDetails tfoot td a {
+        font-size: 3rem;
+        width: 30rem;
+        height: 9rem;
+        line-height: 9rem;
+        border-radius: 0.3rem
+    }
+
+    /*FAQ*/
+    .faq article {
+        padding: 0 3.5% 10rem
+    }
+
+    .faq dt {
+        font-size: 2.6rem;
+        line-height: 3.2rem
+    }
+
+    .faq dt span {
+        display: none
+    }
+
+    .faq dt {
+        padding: 3.5rem 7rem 3.5rem 2rem;
+        background: url(../images/apply/faq_down_arrow_mo.png) no-repeat 94% center;
+        background-size: 2.6rem
+    }
+
+    .faq dt.on {
+        background: url(../images/apply/faq_up_arrow_mo.png) no-repeat 94% center;
+        background-size: 2.6rem
+    }
+
+    .faq table {
+        margin-bottom: 4rem
+    }
+
+    .faq dd {
+        padding: 4rem 3rem;
+        max-height: 55rem
+    }
+
+    .faq dd div {
+        margin-bottom: 0
+    }
+
+    .faq dd h5 {
+        margin-bottom: 1.5rem;
+        font-size: 2.4rem
+    }
+
+    .faq dd p {
+        font-size: 2.4rem;
+        text-indent: 0;
+        line-height: 3.4rem;
+        margin-bottom: 1rem
+    }
+
+    .faq dd li {
+        font-size: 2.4rem;
+        margin-bottom: 1rem;
+        line-height: 3.4rem;
+        padding-left: 1.7rem
+    }
+
+    .faq dd li:before {
+        left: 0
+    }
+
+    /*공지사항-목록*/
+    .notice .noticeList.section {
+        padding: 10rem 0
+    }
+
+    .notice article {
+        padding: 0 2%
+    }
+
+    .notice dl {
+        display: inline-block;
+        border-bottom: 1px solid #e0e0e0;
+        padding: 3.7rem 2.9%
+    }
+
+    .notice dt {
+        display: block;
+        border-bottom: none;
+        padding: 0
+    }
+
+    .notice dt a {
+        font-size: 2.6rem;
+        line-height: 3.4rem
+    }
+
+    .notice dd {
+        display: block;
+        border-bottom: none;
+        width: 100%;
+        padding: 1rem 0 0 0;
+        font-size: 2.2rem
+    }
+
+    /*공지사항-상세*/
+    .notice .noticeDetail th {
+        padding: 4rem 2rem;
+        font-size: 2.6rem
+    }
+
+    .notice .noticeDetail th .date {
+        float: none;
+        margin-top: 1.5rem;
+        display: block;
+        font-size: 2.2rem
+    }
+
+    .notice .noticeDetail td {
+        padding: 3.5rem 2rem;
+    }
+
+    .notice .noticeDetail .fileArea h4 img.mo {
+        display: inline-block;
+        margin: 0 2rem 0 0;
+        width: 1.9rem
+    }
+
+    .notice .noticeDetail .fileArea h4 img.pc {
+        display: none
+    }
+
+    .notice .noticeDetail .fileArea td {
+        padding-left: 2rem
+    }
+
+    .notice .noticeDetail .fileArea h4 .fileSize {
+        display: none
+    }
+
+    .notice .noticeDetail .fileArea h4 {
+        font-size: 2.4rem;
+        margin-bottom: 3rem
+    }
+
+    .notice .noticeDetail .fileArea .saveAllBtn {
+        float: right;
+        font-size: 2.2rem
+    }
+
+    .notice .noticeDetail .fileArea .downloadFile {
+        background: url(../images/apply/icon_file_download_mo.png) no-repeat left center;
+        font-size: 2.2rem;
+        margin-top: 0;
+        padding-left: 4rem
+    }
+
+    .notice .noticeDetail .cnt {
+        padding: 6rem 2rem;
+        font-size: 2.2rem
+    }
+
+    .notice .noticeDetail tfoot td {
+        padding: 4rem 0 10rem
+    }
+
+    .notice .noticeDetail .listBtn {
+        font-size: 3rem;
+        width: 30rem;
+        height: 9rem;
+        line-height: 9rem
+    }
+
+    .notice .pageControl {
+        width: 100%
+    }
+
+    .notice .pageControl th img {
+        display: none
+    }
+
+    .notice .noticeDetail article {
+        padding: 0 3.5% 10rem 3.5%;
+        overflow-x: hidden
+    }
+
+    .notice .pageControl th {
+        text-align: left;
+        width: 10rem;
+        white-space: nowrap
+    }
+
+    .notice .pageControl td a {
+        font-size: 2.6rem;
+    }
+
+    /*체험신청*/
+    article {
+        width: auto;
+        padding: 0
+    }
+
+    .sub .section {
+        padding: 10rem 0 0 0
+    }
+
+    .experience .subTitle {
+        margin-bottom: 2.2rem
+    }
+
+    .experience .applicationStage a {
+        font-size: 2.4rem
+    }
+
+    .experience .applicationStage li {
+        margin: 0 0.6rem
+    }
+
+    .experience .applicationStage li img.pc {
+        display: none
+    }
+
+    .experience .applicationStage li img.mo {
+        display: inline-block;
+        width: 1.1rem;
+        margin-top: -0.5rem
+    }
+
+    .experience .userInfoMo {
+        display: block;
+        font-size: 2.6rem;
+        margin: 10rem 0 0 2.4rem
+    }
+
+    .experience .userInfoMo>span {
+        font-weight: bold
+    }
+
+    .experience .cnt {
+        margin-top: 2rem;
+        display: inline-block;
+        width: 100%;
+        padding: 0 3.4%;
+        overflow-x: hidden
+    }
+
+    .experience .rightArea {
+        display: none
+    }
+
+    .experience .dataList {
+        border-top: 0;
+        display: inline-block;
+        width: 100%
+    }
+
+    .experience .dataList>ul {
+        padding: 4rem 0 3rem;
+        width: 100%
+    }
+
+    .experience .dataList>ul:first-child {
+        border-top: 2px solid #101010
+    }
+
+    .experience .dataList .top {
+        margin-bottom: 2rem
+    }
+
+    .experience .dataList .imgArea {
+        width: 16rem;
+        text-align: left
+    }
+
+    .experience .dataList .imgArea img {
+        max-width: 100%;
+        width: 100%
+    }
+
+    .experience .dataList .imgArea {
+        padding-right: 2rem
+    }
+
+    .experience .dataList .info li.name {
+        font-size: 3.2rem;
+        margin: 0 0 1.9rem
+    }
+
+    .experience .detailBtn {
+        margin-left: 2rem;
+        font-size: 2rem;
+        width: auto;
+        height: auto;
+        border: 0;
+        border-radius: 0
+    }
+
+    .experience .detailBtn img {
+        width: 1.8rem;
+        margin-right: 0.8rem
+    }
+
+    .experience .dataList .info {
+        padding-bottom: 1rem;
+        overflow: hidden
+    }
+
+    .experience .dataList .week li.closed a {
+        padding-top: 1.5rem
+    }
+
+    .experience .dataList .info li.name a>img {
+        display: none
+    }
+
+    .experience .dataList .info>li {
+        margin-bottom: 1.3rem;
+        font-size: 2.2rem;
+    }
+
+    .experience .dataList .info>li img {
+        margin-right: 0.7rem
+    }
+
+    .experience .dataList .info .address img {
+        width: 1.8rem;
+        vertical-align: top
+    }
+
+    .experience .iconPhone,
+    .experience .iconClock,
+    .experience .iconStar,
+    .experience .iconHorseshoe,
+    .experience .iconUser {
+        width: 2.3rem
+    }
+
+    .experience .iconAddress {
+        width: 1.9rem;
+        margin-left: 0.2rem
+    }
+
+    .experience .dataList .hasImage .info .address span {
+        width: 82%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: inline-block
+    }
+
+    .experience .dataList .hasImage .info .openingHours {
+        width: 26rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: inline-block;
+        vertical-align: bottom
+    }
+
+    .experience .dataList .info>li span.line {
+        width: 0.1rem;
+        height: 1.4rem;
+        margin: 0 1rem
+    }
+
+    .experience .dataList .title {
+        font-size: 2.4rem
+    }
+
+    .experience .dataList .title span {
+        font-size: 2rem;
+        margin-left: 1.6rem
+    }
+
+    .experience .dataList .week div {
+        margin-left: 1rem
+    }
+
+    .experience .dataList .title img {
+        width: 1.8rem;
+        margin-right: 1rem;
+        vertical-align: top
+    }
+
+    .experience .dataList>ul .week_scroll {
+        width: 72rem;
+        overflow-x: scroll;
+        white-space: nowrap;
+        padding-bottom: 1rem
+    }
+
+    .experience .dataList .week {
+        margin-top: 1.8rem;
+        width: 121rem
+    }
+
+    .experience .dataList .week li {
+        width: 16rem;
+        height: 5.6rem;
+        margin-right: 1rem
+    }
+
+    .experience .dataList .week li.closed a {
+        background: url(../images/apply/closed_bg_mo.png) no-repeat center center
+    }
+
+    .experience .dataList .week a {
+        padding-top: 1.6rem;
+        font-size: 2.4rem
+    }
+
+    .experience .dataList .week div {
+        display: inline-block;
+        letter-spacing: 0
+    }
+
+    .experience .warnMo {
+        display: block;
+        margin: 3rem 0 10rem
+    }
+
+    .experience .warnMo h4 img {
+        display: inline-block;
+        width: 2.2rem;
+        margin-right: 1rem
+    }
+
+    .experience .warnMo h4 {
+        font-size: 2.2rem
+    }
+
+    .experience .warnMo span {
+        display: block;
+        margin-top: 1rem;
+        color: #505050;
+        font-size: 2.2rem
+    }
+
+    .selectInfoMo {
+        display: inline-block;
+        padding: 3.8rem 2.4rem;
+        width: 100%;
+        border-top: 0.1rem solid #c8c8c8;
+        position: fixed;
+        bottom: -26rem;
+        background-color: #fff;
+        left: 0
+    }
+
+    .selectInfoMo .userClub {
+        width: 100%;
+        margin-top: 1rem;
+        border-bottom: 1px solid #e0e0e0;
+        display: inline-block
+    }
+
+    .selectInfoMo h4 {
+        font-size: 2rem;
+        color: #767676;
+        display: inline-block;
+        margin-top: 15px
+    }
+
+    .selectInfoMo .userClub input {
+        float: right;
+        border: none;
+        font-size: 3.2rem;
+        font-weight: 700;
+        color: #125adf;
+        letter-spacing: -1px;
+        background: transparent;
+        margin-bottom: 10px
+    }
+
+    .selectInfoMo .userClub .priority {
+        color: #505050
+    }
+
+    .selectInfoMo .userClub input::placeholder {
+        color: #125adf;
+        letter-spacing: -1px
+    }
+
+    .selectInfoMo .userClub input:-ms-input-placeholder {
+        color: #125adf;
+        letter-spacing: -1px
+    }
+
+    .selectInfoMo .btnArea {
+        width: 100%;
+        margin-top: 2.4rem
+    }
+
+    .selectInfoMo .btnArea a {
+        display: inline-block;
+        height: 8.8rem;
+        line-height: 8.8rem;
+        border-radius: 0.5rem;
+        text-align: center;
+        font-size: 2.8rem;
+        margin-bottom: 2.4rem
+    }
+
+    .selectInfoMo .btnArea a.modifyBtn {
+        width: 36.8%;
+        color: #125adf;
+        border: 1px solid #125adf;
+        float: left
+    }
+
+    .selectInfoMo .btnArea a.nextBtn {
+        color: #fff;
+        background-color: #cacaca;
+        width: 60.5%;
+        float: right
+    }
+
+    .selectInfoMo .btnArea a.nextBtn.on {
+        background-color: #125adf
+    }
+
+    .experience .final .cnt {
+        margin-top: 10rem
+    }
+
+    .experience .resultMsg h2 {
+        font-size: 3rem;
+        line-height: 4rem
+    }
+
+    .experience .final .resultMsg h4 {
+        font-size: 2.4rem;
+        line-height: 3.4rem;
+        margin: 2rem 0 10rem
+    }
+
+    .experience .final .resultMsg h4 br {
+        display: block
+    }
+
+    .experience .selectList ul {
+        width: 100%;
+        padding: 4rem 5.5% 4rem 4.5%;
+        margin-bottom: 2rem
+    }
+
+    .experience .selectList li.rank {
+        right: 2.3%;
+        top: 5%;
+        width: 8rem;
+        height: 8rem;
+        line-height: 8rem;
+        font-size: 2rem
+    }
+
+    .experience .selectList .imgArea {
+        width: 16rem
+    }
+
+    .experience .selectList .info {
+        padding-left: 2rem
+    }
+
+    .experience .selectList h3 {
+        font-size: 2.8rem;
+        margin-bottom: 1.5rem
+    }
+
+    .experience .final .detailBtn {
+        border: 1px solid #e0e0e0;
+        width: 17rem;
+        height: 4.6rem;
+        border-radius: 3rem;
+        line-height: 4.6rem;
+        font-size: 2rem;
+        margin-left: 2rem
+    }
+
+    .experience .selectList li.top {
+        margin-bottom: 2rem
+    }
+
+    .experience .selectList li {
+        font-size: 2.2rem;
+        margin-bottom: 1rem
+    }
+
+    .experience .selectList li>img {
+        margin-right: 1rem
+    }
+
+    .experience .homeBtn {
+        margin: 2rem auto;
+        margin-bottom: 10rem;
+        width: 30rem;
+        height: 9rem;
+        line-height: 9rem;
+        font-size: 3rem
+    }
+
+    /*결과조회 발표전*/
+    .resultInquiry .section {
+        padding: 9.9rem 0
+    }
+
+    .resultInquiry h2 {
+        font-size: 3rem;
+        line-height: 4.2rem
+    }
+
+    .resultInquiry h4 {
+        font-size: 2.4rem;
+        line-height: 3.2rem;
+        margin: 2rem 0 10rem
+    }
+
+    .resultInquiry h4 br {
+        display: block
+    }
+
+    .resultInquiry .selectList {
+        width: 100%;
+        padding: 0 3.4%
+    }
+
+    .resultInquiry .selectList ul {
+        padding: 4rem 4.2%;
+        width: 100%;
+        display: block;
+        border: 1px solid #e0e0e0;
+        margin-bottom: 2rem
+    }
+
+    .resultInquiry .selectList .info {
+        padding-left: 1.9rem;
+    }
+
+    .resultInquiry .selectList h3 {
+        font-size: 2.8rem;
+        margin: 1.3rem 0
+    }
+
+    .resultInquiry .detailBtn {
+        font-size: 2rem;
+        width: 17rem;
+        height: 4.6rem;
+        line-height: 4.6rem;
+        border-radius: 4rem
+    }
+
+    .resultInquiry .selectList li.rank {
+        right: 1.8%;
+        top: 3%;
+        width: 8rem;
+        height: 8rem;
+        line-height: 8rem;
+        font-size: 2rem
+    }
+
+    .resultInquiry .selectList li>img {
+        margin-right: 1rem
+    }
+
+    .resultInquiry .iconAddress {
+        margin-left: 0.2rem;
+        width: 1.8rem
+    }
+
+    .resultInquiry .iconPhone {
+        width: 2.3rem
+    }
+
+    .resultInquiry .iconClock {
+        width: 2.2rem
+    }
+
+    .resultInquiry .selectList .imgArea {
+        width: 16rem;
+        border-radius: 0.5rem
+    }
+
+    .resultInquiry .selectList li {
+        margin-bottom: 1.6rem;
+        font-size: 2.2rem
+    }
+
+    .resultInquiry .homeBtn {
+        width: 30rem;
+        height: 9rem;
+        line-height: 9rem;
+        margin: 4rem auto;
+        font-size: 3rem;
+        border-radius: 0.5rem;
+    }
+
+    .resultInquiry .selectList h3 {
+        width: 84%
+    }
+
+    .resultInquiry .detailBtn img {
+        width: 1.8rem;
+        margin-right: 0.8rem
+    }
+
+    /*결과조회-탈락*/
+    .resultInquiry .fail {
+        padding: 25rem 0 40rem
+    }
+
+    .resultInquiry .fail h4 {
+        letter-spacing: -0.1rem
+    }
+
+    .resultInquiry .fail .btnArea {
+        width: 62.1rem
+    }
+
+    .resultInquiry .fail .btnArea .leftBtn {
+        background-color: #a4a9b0;
+        margin-right: 1.8%
+    }
+
+    .resultInquiry .fail .btnArea a {
+        font-size: 3rem;
+        height: 9rem;
+        line-height: 9rem;
+        border-radius: 0.5rem;
+        width: 48.4%
+    }
+
+    /*결과조회-당첨*/
+    .resultInquiry .succes h4 {
+        width: 94%;
+        margin: 2rem auto;
+        margin-bottom: 10rem;
+        letter-spacing: -0.1rem
+    }
+
+    .resultInquiry .succes h4 br {
+        display: none
+    }
+
+    .resultInquiry .succes h2 {
+        background: url(../images/apply/succes_bg.png) no-repeat center top;
+        background-size: contain;
+        height: 12rem;
+        padding-top: 5rem
+    }
+
+    .resultInquiry .succes .selectList {
+        text-align: center
+    }
+
+    .resultInquiry .succes .selectList ul:first-child {
+        margin-right: 0;
+        text-align: left
+    }
+
+    /*승마장 정보 팝업*/
+    .ridingGround .topAreaPc {
+        display: none
+    }
+
+    .ridingGround .topAreaMo {
+        display: block
+    }
+
+    .ridingGround {
+        width: 94%;
+        height: 85%;
+        border-radius: 0.5rem;
+    }
+
+    .ridingGround .closeBtn {
+        right: 2rem;
+        top: 2rem
+    }
+
+    .ridingGround .closeBtn .pc {
+        display: none
+    }
+
+    .ridingGround .closeBtn .mo {
+        display: block;
+        width: 2.7rem
+    }
+
+    .ridingGround .topArea {
+        padding: 4rem;
+    }
+
+    .ridingGround h2 {
+        font-size: 3.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .ridingGround .topArea .topAreaMo {
+        font-size: 2.2rem;
+        line-height: 3rem
+    }
+
+    .ridingGround h4 {
+        margin: 0
+    }
+
+    .ridingGround h4 img {
+        width: 1.8rem;
+        margin-right: 1rem
+    }
+
+    .ridingGround .infoArea {
+        padding: 4rem;
+        height: 70%;
+        overflow-y: scroll;
+    }
+
+    .ridingGround .infoArea li {
+        color: #101010;
+        margin-bottom: 1rem;
+        font-size: 2.2rem
+    }
+
+    .ridingGround .infoArea li img {
+        width: 2.2rem;
+        margin-right: 0.8rem
+    }
+
+    .ridingGround .infoArea h3 {
+        margin: 4rem 0 1rem 0;
+        font-size: 2.4rem
+    }
+
+    .ridingGround .infoArea h3 span {
+        font-size: 1.9rem;
+    }
+
+    .ridingGround .infoArea .picture h3 span {
+        margin-left: 0.5rem
+    }
+
+    .ridingGround .infoArea .topAreaMo {
+        font-size: 2.3rem
+    }
+
+    .ridingGround .infoArea th {
+        padding: 1.3rem 0;
+        width: 15.1rem
+    }
+
+    .ridingGround .infoArea td {
+        padding: 1.3rem 0;
+        width: 15.1rem
+    }
+
+    .ridingGround .infoArea .topAreaMo tr:last-child th {
+        border-bottom: 2px solid #101010
+    }
+
+    .ridingGround .listArea li {
+        border-radius: 0.5rem
+    }
+
+    .ridingGround .listArea li img {
+        width: 100%;
+        max-width: 48.7%
+    }
+
+    .ridingGround .slideArea li img {
+        max-width: 48.7%;
+        width: 100%;
+        margin-right: 0
+    }
+
+    .ridingGround .slideArea li img:first-child {
+        margin-right: 0.6%
+    }
+
+    .ridingGround .slideArea .flex-direction-nav a {
+        width: 5.2rem;
+        height: 5.2rem;
+        top: -2.2rem
+    }
+
+    .ridingGround .slideArea .flex-direction-nav .flex-prev {
+        left: -2.6rem;
+        background-size: 5.2rem
+    }
+
+    .ridingGround .slideArea .flex-direction-nav .flex-next {
+        right: -2.6rem;
+        background-size: 5.2rem
+    }
+
+}
+
+@media all and (max-width:640px) {
+
+    /*상세정보입력*/
+    .join .schoolName {
+        max-width: 65.1%
+    }
+
+    .ridingGround h4 img {
+        margin-right: 0.6rem
+    }
+
+    .ridingGround .infoArea li {
+        letter-spacing: -0.1rem
+    }
+}
+
+@media all and (max-width:414px) {
+
+    /*상세정보입력*/
+    .join .schoolName {
+        max-width: 64.3%
+    }
+
+    /*상세정보입력- 학교선택 팝업*/
+    .join .searchSchool .listData {
+        min-height: 81rem
+    }
+
+    .parntalAut .popupData .cnt {
+        min-height: 104rem
+    }
+
+    /*승마장 정보 팝업*/
+    .ridingGround {
+        height: auto
+    }
+
+    .ridingGround .infoArea {
+        height: auto;
+    }
+
+    .topSearchArea select {
+        margin-right: 1rem
+    }
+
+    .experience .dataList .hasImage .info .address span {
+        width: 42rem
+    }
+
+    .experience .dataList .hasImage .info .openingHours {
+        width: 21rem
+    }
+
+    .experience .selectList h3 {
+        line-height: 3rem;
+        padding-right: 22.5%
+    }
+
+    .complete form h5 {
+        letter-spacing: -0.1rem
+    }
+}
+
+/*신청안내*/
+.aplctGuide img {
+    max-width: 100%
+}
+
+.aplctGuide h2 {
+    margin-bottom: 26px
+}
+
+.aplctGuide h3 {
+    text-align: center;
+    font-size: 16px;
+    color: #101010;
+    font-weight: 400
+}
+
+.aplctGuide ol {
+    max-width: 1200px;
+    margin: 80px auto 100px;
+    font-size: 0;
+    width: 100%;
+    background: #125adf;
+    padding: 84px 2.8% 90px;
+    color: #fff
+}
+
+.aplctGuide ol li {
+    display: inline-block
+}
+
+.aplctGuide ol>li {
+    width: 25%;
+    vertical-align: top;
+    padding: 0 2.3%
+}
+
+.aplctGuide ol li.img {
+    float: right
+}
+
+.aplctGuide ol li.title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    margin-top: 20px
+}
+
+.aplctGuide ol li.text {
+    width: 100%;
+    font-size: 14px;
+    line-height: 24px;
+    margin-top: 10px;
+    padding-top: 20px;
+    border-top: 1px solid #0d4abb;
+    word-break: keep-all
+}
+
+.aplctGuide h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #101010;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #101010
+}
+
+.aplctGuide table {
+    width: 100%;
+    margin-bottom: 100px;
+    padding-bottom: 40px;
+    font-size: 16px;
+    border-bottom: 1px solid #e0e0e0
+}
+
+.aplctGuide .details th {
+    width: 14%;
+    padding-top: 38px;
+    padding-left: 30px;
+    text-align: left;
+    font-weight: 700;
+    color: #101010;
+    vertical-align: top
+}
+
+.aplctGuide .details td {
+    padding-top: 36px;
+    color: #505050;
+    line-height: 22px
+}
+
+.aplctGuide .details ul {
+    vertical-align: top
+}
+
+.aplctGuide .details .blue {
+    color: #115ada
+}
+
+.aplctGuide .details .red {
+    color: #ff8a00
+}
+
+.aplctGuide .details .num,
+.aplctGuide .details .date,
+.aplctGuide .details .num ul,
+.aplctGuide .details .num li {
+    display: inline-block
+}
+
+.aplctGuide .details .num::before {
+    content: "/"
+}
+
+.aplctGuide .details .goBtn {
+    display: inline-block;
+    width: 172px;
+    line-height: 42px;
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    background: #125adf
+}
+
+.aplctGuide .details .goBtn img {
+    margin-left: 18px
+}
+
+.aplctGuide .details .mo {
+    display: none
+}
+
+.aplctGuide .details .dot li {
+    padding-left: 12px;
+    position: relative
+}
+
+.aplctGuide .details .dot li:before {
+    content: '·';
+    position: absolute;
+    left: 0;
+    top: 0
+}
+
+.aplctGuide .questionArea {
+    border-bottom: 0;
+    padding-bottom: 0
+}
+
+.aplctGuide dt {
+    width: 100%;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 30px 20px;
+    font-size: 16px;
+    background: url(../images/apply/faq_down_arrow.png) no-repeat 98.8% center;
+    cursor: pointer
+}
+
+.aplctGuide dt.on {
+    background: url(../images/apply/faq_up_arrow.png) no-repeat 98.8% center
+}
+
+.aplctGuide dt ul li {
+    display: inline-block
+}
+
+.aplctGuide dt ul li:first-child {
+    width: 50px
+}
+
+.aplctGuide dt li span {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    border-radius: 3px;
+    background: #0d4abb;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700
+}
+
+.aplctGuide dd {
+    width: 100%;
+    background-color: #f6f7fa;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 35px;
+    max-height: 262px;
+    overflow-y: auto;
+    display: none
+}
+
+.aplctGuide dd div {
+    margin-bottom: 30px;
+    line-height: 18px
+}
+
+.aplctGuide dd h5 {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 400
+}
+
+.aplctGuide dd p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-indent: 6px
+}
+
+.aplctGuide dd li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    padding-left: 22px;
+    position: relative;
+    line-height: 18px
+}
+
+.aplctGuide dd li:before {
+    content: '·';
+    position: absolute;
+    left: 12px;
+    top: 0
+}
+
+.aplctGuide dd li:last-child {
+    margin-bottom: 0
+}
+
+.aplctGuide .policy {
+    padding: 40px 0;
+    border-bottom: 1px solid #e0e0e0
+}
+
+.aplctGuide .policy li {
+    margin-bottom: 10px;
+    padding-left: 36px;
+    position: relative;
+    font-size: 16px;
+    color: #505050
+}
+
+.aplctGuide .policy li:last-child {
+    margin-bottom: 0
+}
+
+.aplctGuide .policy li:before {
+    content: '·';
+    position: absolute;
+    left: 20px;
+    top: 0
+}
+
+@media all and (max-width:1200px) {
+
+    /*신청안내*/
+    .aplctGuide ol li.title {
+        width: 6rem;
+        margin-top: 1rem
+    }
+
+    .aplctGuide ol li.img {
+        width: 5rem;
+    }
+}
+
+@media all and (max-width:940px) {
+
+    /*신청안내*/
+    .aplctGuide ol {
+        padding: 4rem 2.8%
+    }
+
+    .aplctGuide ol li.title {
+        width: 5rem;
+        font-size: 1rem;
+        margin-top: 0
+    }
+
+    .aplctGuide ol li.img {
+        width: 3rem
+    }
+}
+
+@media all and (max-width:720px) {
+
+    /*신청안내*/
+    .aplctGuide article {
+        padding: 0 3.3%
+    }
+
+    .aplctGuide h2 {
+        margin-bottom: 2rem
+    }
+
+    .aplctGuide h3 {
+        font-size: 2.4rem
+    }
+
+    .aplctGuide ol {
+        margin: 10rem 0 3.4rem;
+        padding: 7rem 3.3%
+    }
+
+    .aplctGuide ol li {
+        text-align: center
+    }
+
+    .aplctGuide ol>li {
+        padding: 0 0.5rem;
+    }
+
+    .aplctGuide ol li.img {
+        float: none;
+        width: 100%
+    }
+
+    .aplctGuide ol li.title {
+        display: block;
+        width: 100%;
+        font-size: 2rem;
+        line-height: 1;
+        margin-top: 2rem
+    }
+
+    .aplctGuide ol li.title br {
+        display: none
+    }
+
+    .aplctGuide ol li.text {
+        display: none
+    }
+
+    .aplctGuide h4 {
+        font-size: 2.4rem;
+        padding-bottom: 1.8rem
+    }
+
+    .aplctGuide table {
+        margin-bottom: 10rem;
+        padding-bottom: 6rem;
+        font-size: 2.4rem
+    }
+
+    .aplctGuide .details th {
+        width: 16rem;
+        padding-top: 6rem;
+        padding-left: 2rem
+    }
+
+    .aplctGuide .details td {
+        padding-top: 5.6rem;
+        line-height: 3rem
+    }
+
+    .aplctGuide .details td>ul>li {
+        padding-bottom: 1rem
+    }
+
+    .aplctGuide .details td>ul>li:last-child {
+        padding-bottom: 0
+    }
+
+    .aplctGuide .details .goBtn {
+        width: 24rem;
+        line-height: 5rem;
+        margin-top: 1.6rem;
+        font-size: 2.2rem
+    }
+
+    .aplctGuide .details .goBtn img {
+        margin-left: 1.4rem;
+        width: 0.7rem
+    }
+
+    .aplctGuide .details .num,
+    .aplctGuide .details .date,
+    .aplctGuide .details .num li {
+        display: block
+    }
+
+    .aplctGuide .details .num::before {
+        display: none
+    }
+
+    .aplctGuide .details .mo {
+        display: block
+    }
+
+    .aplctGuide .details ul.dot li {
+        padding-left: 2.2rem;
+        line-height: 3rem;
+        word-break: keep-all
+    }
+
+    .aplctGuide table.questionArea {
+        margin-bottom: 6rem
+    }
+
+    .aplctGuide dt {
+        padding: 3.4rem 0;
+        font-size: 2.4rem;
+        background-size: 2.6rem
+    }
+
+    .aplctGuide dt.on {
+        background-size: 2.6rem
+    }
+
+    .aplctGuide dt ul li {
+        width: 70%;
+        line-height: 3rem
+    }
+
+    .aplctGuide dt ul li:first-child {
+        width: 10%;
+        vertical-align: top;
+        text-align: center
+    }
+
+    .aplctGuide dt li span {
+        width: 2.6rem;
+        height: 2.6rem;
+        line-height: 2.6rem;
+        border-radius: 0.3rem;
+        font-size: 1.6rem
+    }
+
+    .aplctGuide dd {
+        padding: 4rem 3rem;
+        max-height: 100%
+    }
+
+    .aplctGuide dd div {
+        margin-bottom: 0.8rem;
+        line-height: 3rem
+    }
+
+    .aplctGuide dd h5 {
+        margin-bottom: 0.8rem;
+        font-size: 2.4rem
+    }
+
+    .aplctGuide dd p {
+        margin-bottom: 0.8rem;
+        font-size: 2.4rem;
+        text-indent: 0;
+        line-height: 3rem
+    }
+
+    .aplctGuide dd li {
+        margin-bottom: 0.8rem;
+        padding-left: 1.5rem;
+        font-size: 2.4rem;
+        line-height: 3rem
+    }
+
+    .aplctGuide dd li:before {
+        left: 0
+    }
+
+    .aplctGuide .policy {
+        padding: 6rem 0;
+        margin-bottom: 10rem
+    }
+
+    .aplctGuide .policy li {
+        margin-bottom: 1rem;
+        padding-left: 5rem;
+        font-size: 2.4rem;
+        line-height: 3rem
+    }
+
+    .aplctGuide .policy li:before {
+        left: 2.2rem
+    }
+}
+
+@media all and (max-width:320px) {
+    .aplctGuide ol li.title {
+        letter-spacing: -0.2rem;
+    }
+}
