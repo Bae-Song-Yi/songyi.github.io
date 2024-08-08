@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>승마관리시스템</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/admin.css" />
+    <script type="text/javascript" src="../scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="../scripts/admin.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!--Header-->
+        <div class="Header">
+            <h1 class="logo">승미인관리시스템 ADMIN</h1>
+            <div class="util">
+                <a href="#" class="go_home"><span>학생승마체험<br/>홈페이지 바로가기</span></a>
+                <a href="#" class="logout"><img src="../images/admin/icon_login_out.png" alt="로그아웃"/></a>
+            </div>
+        </div>
+        <!--//Header-->
+        <!--Content-->
+        <div class="Container">
+            <!--LNB-->
+            <div class="Nav">
+                <ul>
+                    <li><a href="#" class="m1">승마장 기본설정</a></li>
+                    <li><a href="#" class="m6">배정 인원 관리</a></li>
+                    <li><a href="#" class="m7 on">출결 관리</a></li>
+                    <li><a href="#" class="m8">보고서</a></li>
+                </ul>
+            </div>
+            <!--//LNB-->
+            <!--Data Area-->
+            <div class="Section DataArea">
+                <!--출결관리-->
+                <div class="Article BuisnessAttendance">
+                    <h2 class="PageTitle">
+                        출결관리
+                        <span class="year">
+                            <span class="tit">운영년도</span>
+                            <select class="select">
+                                <option>2020년도</option>
+                            </select>
+                        </span>
+                    </h2>
+                    <!--데이터-->
+                    <form class="TableWrap">
+                        <table class="HasTopTH">
+                            <colgroup>
+                                <col width="25%">
+                                <col width="25%">
+                                <col width="25%">
+                                <col width="25%"> 
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>시&middot;군</th>
+                                    <th>시&middot;군 담당자명</th>
+                                    <th>시&middot;군 연락처</th>
+                                    <th>출석파일 다운로드</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>김포시</td>
+                                    <td>OOO</td>
+                                    <td>031-000-0000</td>
+                                    <td>
+                                        <div class="AddFile">
+                                            <ul>
+                                                <li class="td">
+                                                    <input type="file" class="HiddenFile" accept=".gif, .jpg, .jpeg ,.bmp, .png"/>
+                                                    <div class="ViewFile"><span>&nbsp;</span><a href="#" class="AddFileDel"><img src="../images/admin/icon_add_file_del.png"/></a></div>
+                                                    <button class="CommBtn File">업로드</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                    <!--//데이터-->
+                    
+                </div> 
+                <!--//출결관리-->
+            </div>
+            <!--//Data Area-->
+        </div>
+        <!--//Content-->
+    </div>
+</body>
+</html>

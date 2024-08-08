@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>승마관리시스템</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/admin.css" />
+    <script type="text/javascript" src="../scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="../scripts/admin.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!--Header-->
+        <div class="Header">
+            <h1 class="logo">승미인관리시스템 ADMIN</h1>
+            <div class="util">
+                <a href="#" class="go_home"><span>학생승마체험<br/>홈페이지 바로가기</span></a>
+                <a href="#" class="logout"><img src="../images/admin/icon_login_out.png" alt="로그아웃"/></a>
+            </div>
+        </div>
+        <!--//Header-->
+        <!--Content-->
+        <div class="Container">
+            <!--LNB-->
+            <div class="Nav">
+                <ul>
+                    <li><a href="#" class="m1">운영기본설정(총괄,도)</a></li>
+                    <li><a href="#" class="m4">승마장 관리</a></li>
+                    <li><a href="#" class="m5">체험신청 인원 관리</a></li>
+                    <li><a href="#" class="m6">배정 관리</a></li>
+                    <li><a href="#" class="m7">출결 관리</a></li>
+                    <li>
+                        <a href="#" class="m8 on">보고서</a>
+                        <div class="depth">
+                            <ol>
+                                <li><a href="#" class="on">승마장별 현황</a></li>
+                                <li><a href="#">체험결과</a></li>
+                            </ol>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--//LNB-->
+            <!--Data Area-->
+            <div class="Section DataArea">
+                <!--보고서 > 승마장별 현황-->
+                <div class="Article RespReportList">
+                    <h2 class="PageTitle">
+                        보고서 <i><img src="../images/admin/icon_location_arrow.png"/></i> 승마장별 현황
+                        <span class="year">
+                            <span class="tit">운영년도</span>
+                            <select class="select">
+                                <option>2020년도</option>
+                            </select>
+                        </span>
+                    </h2>
+                    <!--검색-->
+                    <div class="DataSearch">
+                        <dl>                      
+                            <dd><input type="text" class="enter SearchBar" placeholder="검색어를 입력해주세요."/></dd>
+                        </dl>
+                        <button class="CommBtn Search">검색</button>
+                    </div>
+                    <!--//검색-->
+                    <div class="top_ctrl">
+                        <button class="CommBtn Add">승마장 추가/변경</button>
+                    </div>
+                    <!--데이터-->
+                    <form class="TableWrap">
+                        <table class="HasTopTH">
+                            <colgroup>
+                                <col width="25%">
+                                <col width="25%">
+                                <col width="25%">
+                                <col width="25%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>승마장명</th>
+                                    <th>총배정인원</th>
+                                    <th>신청인원</th>
+                                    <th>참여학생인원</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>OO승마장</td>
+                                    <td>100</td>
+                                    <td>90</td>
+                                    <td>80</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                    <!--//데이터-->
+                </div> 
+                <!--//-보고서 > 승마장별 현황-->
+            </div>
+            <!--//Data Area-->
+        </div>
+        <!--//Content-->
+    </div>
+</body>
+</html>

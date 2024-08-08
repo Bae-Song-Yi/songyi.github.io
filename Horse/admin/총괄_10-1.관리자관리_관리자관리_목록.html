@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>승마관리시스템</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/admin.css" />
+    <script type="text/javascript" src="../scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="../scripts/admin.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!--Header-->
+        <div class="Header">
+            <h1 class="logo">승미인관리시스템 ADMIN</h1>
+            <div class="util">
+                <a href="#" class="go_home"><span>학생승마체험<br/>홈페이지 바로가기</span></a>
+                <a href="#" class="logout"><img src="../images/admin/icon_login_out.png" alt="로그아웃"/></a>
+            </div>
+        </div>
+        <!--//Header-->
+        <!--Content-->
+        <div class="Container">
+            <!--LNB-->
+            <div class="Nav">
+                <ul>
+                    <li><a href="#" class="m1">운영기본설정(총괄,도)</a></li>
+                    <li><a href="#" class="m2">시&middot;군 관리</a></li>
+                    <li><a href="#" class="m3">학교 관리</a></li>
+                    <li><a href="#" class="m4">승마장 관리</a></li>
+                    <li><a href="#" class="m5">체험신청 인원 관리</a></li>
+                    <li><a href="#" class="m6">배정 관리</a></li>
+                    <li><a href="#" class="m7">출결 관리</a></li>
+                    <li><a href="#" class="m8">보고서</a></li>
+                    <li><a href="#" class="m9">고객센터</a></li>
+                    <li>
+                        <a href="#" class="m10 on">관리자 관리</a>
+                        <div class="depth">
+                            <ol>
+                                <li><a href="#" class="on">관리자 관리</a></li>
+                                <li><a href="#">배너 관리</a></li>
+                                <li><a href="#">팝업 관리</a></li>
+                            </ol>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--//LNB-->
+            <!--Data Area-->
+            <div class="Section DataArea">
+                <!--관리자관리 > 관리자관리(목록)-->
+                <div class="Article AdminMgmt">
+                    <h2 class="PageTitle">관리자 관리 <i><img src="../images/admin/icon_location_arrow.png"/></i> 관리자 관리</h2>
+                    <!--검색-->
+                    <div class="DataSearch">
+                        <dl>
+                            <dt>분류</dt>
+                            <dd>
+                                <select class="select Kind">
+                                    <option>전체</option>
+                                </select>
+                            </dd>
+                        </dl>
+                        <dl>       
+                            <dd><input type="text" class="enter SearchBar" placeholder="검색어를 입력해주세요."/></dd>
+                        </dl>
+                        <button class="CommBtn Search">검색</button>
+                    </div>
+                    <!--//검색-->
+                    <!--데이터-->
+                    <form class="TableWrap">
+                        <table class="HasTopTH">
+                            <colgroup>
+                                <col width="9.5%">
+                                <col width="15%">
+                                <col width="15.5%">
+                                <col width="15.5%">
+                                <col width="*">
+                                <col width="22%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>NO</th>
+                                    <th>구분</th>
+                                    <th>이름</th>
+                                    <th>계정</th>
+                                    <th>담당자명</th>
+                                    <th>담당자 연락처</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>운영자</td>
+                                    <td>홍길동</td>
+                                    <td>horseadmin</td>
+                                    <td>홍길동</td>
+                                    <td>010-0000-0000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                    <!--//데이터-->
+                    <!--Paging-->
+                    <div class="paging">
+                        <ul>
+                            <li><a href="#"><img src="../images/admin/first_page.png"/></a></li>
+                            <li><a href="#" class="now">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">7</a></li>
+                            <li><a href="#">8</a></li>
+                            <li><a href="#">9</a></li>
+                            <li><a href="#">10</a></li>
+                            <li><a href="#"><img src="../images/admin/last_page.png"/></a></li>
+                        </ul>
+                    </div>
+                    <!--//Paging-->
+                    <!--[팝업]관리자 추가-->
+                    <div class="LayerPopup" style="display: none;">
+                        <div class="PopupData AdmAddLayer">
+                            <a href="#" class="popup_close"><img src="../images/admin/popup_close.png"/></a>
+                            <h4 class="pop_tit">관리자 추가</h4>
+                            <div class="DataTable">
+                                <table>
+                                    <colgroup>
+                                        <col width="100"/>
+                                        <col width="*"/>
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <td colspan="2" class="popup_select">
+                                                <input type="radio" class="radio" name="select2" id="Select2_1" checked="checked">&nbsp;<label class="label" for="Select2_1">총괄(도담당자)</label>&nbsp;&nbsp;&nbsp;
+                                                <input type="radio" class="radio" name="select2" id="Select2_2">&nbsp;<label class="label" for="Select2_2">시&middot;군 담당자</label>
+                                            </td>
+                                        </tr>
+                                    </thead>
+                                    <!--총괄(도담당자)-->
+                                    <tbody>
+                                        <tr>
+                                            <th>아이디<span>*</span></th>
+                                            <td><input type="text" class="enter long" placeholder="승마장 계정을 입력해 주세요."/></td>
+                                        </tr>
+                                        <tr>
+                                            <th>비밀번호<span>*</span></th>
+                                            <td><input type="password" class="enter long" placeholder="비밀번호를 입력해 주세요."/></td>
+                                        </tr>
+                                        <tr>
+                                            <th>담당자</th>
+                                            <td><input type="text" class="enter long" placeholder="대표코치를 입력해 주세요."/></td>
+                                        </tr>
+                                        <tr class="tel">
+                                            <th>담당자 연락처</th>
+                                            <td>
+                                                <select class="select">
+                                                    <option>010</option>
+                                                </select>
+                                                -&nbsp;
+                                                <input type="text" class="enter"/>
+                                                &nbsp;-
+                                                <input type="text" class="enter"/>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <!--//총괄(도담당자)-->
+                                    <!--시·군 담당자-->
+                                    <tbody style="display: none;">
+                                        <tr>
+                                            <th>지역선택<span>*</span></th>
+                                            <td>
+                                                <select class="select Area">
+                                                    <option>선택</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>아이디<span>*</span></th>
+                                            <td><input type="text" class="enter long" placeholder="승마장 계정을 입력해 주세요."/></td>
+                                        </tr>
+                                        <tr>
+                                            <th>비밀번호<span>*</span></th>
+                                            <td><input type="password" class="enter long" placeholder="비밀번호를 입력해 주세요."/></td>
+                                        </tr>
+                                        <tr>
+                                            <th>담당자</th>
+                                            <td><input type="text" class="enter long" placeholder="대표코치를 입력해 주세요."/></td>
+                                        </tr>
+                                        <tr class="tel">
+                                            <th>담당자 연락처</th>
+                                            <td>
+                                                <select class="select">
+                                                    <option>010</option>
+                                                </select>
+                                                -&nbsp;
+                                                <input type="text" class="enter"/>
+                                                &nbsp;-
+                                                <input type="text" class="enter"/>
+                                            </td>
+                                        </tr>
+                                    </tbody>    
+                                    <!--//시·군 담당자-->
+                                </table>
+                            </div>
+                            <div class="bottom_btn"><button class="CommBtn Add">수정(등록)</button><button class="CommBtn Del2">삭제</button></div>
+                        </div>
+                    </div>
+                    <!--//[팝업]관리자 추가-->
+                </div> 
+                <!--//관리자관리 > 관리자관리(목록)-->
+            </div>
+            <!--//Data Area-->
+        </div>
+        <!--//Content-->
+    </div>
+</body>
+</html>

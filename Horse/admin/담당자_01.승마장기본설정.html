@@ -1,0 +1,233 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>승마관리시스템</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/admin.css" />
+    <script type="text/javascript" src="../scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="../scripts/admin.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!--Header-->
+        <div class="Header">
+            <h1 class="logo">승미인관리시스템 ADMIN</h1>
+            <div class="util">
+                <a href="#" class="go_home"><span>학생승마체험<br/>홈페이지 바로가기</span></a>
+                <a href="#" class="logout"><img src="../images/admin/icon_login_out.png" alt="로그아웃"/></a>
+            </div>
+        </div>
+        <!--//Header-->
+        <!--Content-->
+        <div class="Container">
+            <!--LNB-->
+            <div class="Nav">
+                <ul>
+                    <li><a href="#" class="m1 on">운영기본설정(총괄,도)</a></li>
+                    <li><a href="#" class="m4">승마장 관리</a></li>
+                    <li><a href="#" class="m5">체험신청 인원 관리</a></li>
+                    <li><a href="#" class="m6">배정 관리</a></li>
+                    <li><a href="#" class="m7">출결 관리</a></li>
+                    <li><a href="#" class="m8">보고서</a></li>
+                </ul>
+            </div>
+            <!--//LNB-->
+            <!--Data Area-->
+            <div class="Section DataArea">
+                <!--운영기본설정(목록)-->
+                <div class="Article RespBasicStn">
+                    <h2 class="PageTitle">
+                        운영기본설정
+                        <span class="year">
+                            <span class="tit">운영년도</span>
+                            <select class="select">
+                                <option>2020년도</option>
+                            </select>
+                        </span>
+                    </h2>
+                    <!--상단텍스트-->
+                    <div class="TopInfoText">
+                        <ul>
+                            <li class="main_text">경기도에서 승인상태는 <span>“활성(비활성)”</span>상태이며 <span>“ㅁㅁ승마장”</span>에 배정한 인원은 <span>00명</span> 입니다.</li>
+                            <li class="sub_text">- 승인을 원하실 경우 경기도말산업협회에 별도로 문의해주세요.(연락처 : 0000-0000)</li>
+                        </ul>
+                        <button class="CommBtn Save">저장하기</button>
+                    </div>
+                    <!--//상단텍스트-->
+                    <!--데이터-->
+                    <form class="TableWrap">
+                        <table class="HasLeftTH">
+                            <colgroup>
+                                <col width="170">
+                                <col width="*">
+                            </colgroup>
+                            <tr>
+                                <th>체험모집 일정등록</th>
+                                <td>
+                                    <input type="text" class="enter date"/>&nbsp;-&nbsp;<input type="text" class="enter date"/>
+                                    <span class="info_text">*해당 일정 설정에 따라 각시도 체험신청 페이지의 승마장 선택 영역이 활성화됩니다.</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>체험모집 여부</th>
+                                <td>
+                                    <input type="radio" class="radio" name="activate" id="Activate1">&nbsp;&nbsp;<label class="label" for="Activate1">활성</label>&nbsp;&nbsp;&nbsp;
+                                    <input type="radio" class="radio" name="activate" id="RatioActivation1" checked="checked">&nbsp;&nbsp;<label class="label" for="RatioActivation1">비활성</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>승마장</th>
+                                <td>
+                                    <div class="btn_area"><button class="CommBtn GroundAddChange">승마장 추가/변경</button></div>
+                                    <table class="in_table">
+                                        <tr>
+                                            <colgroup>
+                                                <col width="25%">
+                                                <col width="25%">
+                                                <col width="25%">
+                                                <col width="25%">
+                                            </colgroup>
+                                        </tr>
+                                        <thead>
+                                            <tr>
+                                                <th>승마장명</th>
+                                                <th>소속지역</th>
+                                                <th>전화번호</th>
+                                                <th>인원수 배정</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>OO승마장</td>
+                                                <td>용인시</td>
+                                                <td>000-000-0000</td>
+                                                <td><input type="text" class="enter"> 명</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <span class="info_text red">* 승마장 인원수 배정 총합이 경기도에서 배정한 인원수를 초과할 수 없습니다. </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>초기화 관리</th>
+                                <td class="btn_table">
+                                    <button class="CommBtn ResetAll">전체 초기화</button>
+                                    <button class="CommBtn Reset">배정인원 설정 초기화</button>
+                                    <button class="CommBtn Reset">신청 학생 정보초기화</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                    <!--//데이터-->
+                    <!--[팝업]승마장 추가-->
+                    <div class="LayerPopup" style="display: none;">
+                        <div class="PopupData GroundAddLayer">
+                            <a href="#" class="popup_close"><img src="../images/admin/popup_close.png"/></a>
+                            <h4 class="pop_tit">승마장 추가</h4>
+                            <div class="DataTable">
+                                <!--검색-->
+                                <div class="search">
+                                    <dl>
+                                        <dt>지역선택</dt>
+                                        <dd>
+                                            <select class="select Area">
+                                                <option>선택</option>
+                                            </select>
+                                        </dd>
+                                        <dt>승마장명</dt>
+                                        <dd>
+                                            <input type="text" class="enter school" placeholder="학교명을 입력해 주세요.">
+                                            <button>검색</button>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <!--//검색-->
+                                <!--Total-->
+                                <div class="total">전체 <span>00</span>개</div>
+                                <!--//Total-->
+                                <table class="HasTopTH">
+                                    <colgroup>
+                                        <col width="11.5%"/>
+                                        <col width="26.5%"/>
+                                        <col width="29.5%"/>
+                                        <col width="*"/>
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>선택</th>
+                                            <th>소속지역</th>
+                                            <th>승마장명</th>
+                                            <th>전화번호</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="checkbox" class="checkbox"/></td>
+                                            <td>부천시</td>
+                                            <td>OO승마장</td>
+                                            <td>000-0000-0000</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!--Paging-->
+                                <div class="paging">
+                                    <ul>
+                                        <li><a href="#"><img src="../images/admin/first_page.png"/></a></li>
+                                        <li><a href="#" class="now">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                        <li><a href="#">6</a></li>
+                                        <li><a href="#">7</a></li>
+                                        <li><a href="#">8</a></li>
+                                        <li><a href="#">9</a></li>
+                                        <li><a href="#">10</a></li>
+                                        <li><a href="#"><img src="../images/admin/last_page.png"/></a></li>
+                                    </ul>
+                                </div>
+                                <!--//Paging-->                                
+                                <div class="bottom_btn"><button class="CommBtn Register">등록하기</button></div>
+                            </div>
+                            <div class="DataTable" style="border-bottom:none">
+                                <table class="HasTopTH">
+                                    <colgroup>
+                                        <col width="19.5%"/>
+                                        <col width="*"/>
+                                        <col width="27.5%"/>
+                                        <col width="25%"/>
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>소속지역</th>
+                                            <th>승마장명</th>
+                                            <th>전화번호</th>
+                                            <th>삭제</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>부천시</td>
+                                            <td>OO승마장</td>
+                                            <td>000-0000-0000</td>
+                                            <td><button class="CommBtn Del">삭제</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!--//[팝업]승마장 추가-->
+                </div> 
+                <!--운영기본설정(목록)-->
+            </div>
+            <!--//Data Area-->
+        </div>
+        <!--//Content-->
+    </div>
+</body>
+</html>

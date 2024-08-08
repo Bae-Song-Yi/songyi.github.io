@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>승마관리시스템</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/admin.css" />
+    <script type="text/javascript" src="../scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="../scripts/admin.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!--Header-->
+        <div class="Header">
+            <h1 class="logo">승미인관리시스템 ADMIN</h1>
+            <div class="util">
+                <a href="#" class="go_home"><span>학생승마체험<br/>홈페이지 바로가기</span></a>
+                <a href="#" class="logout"><img src="../images/admin/icon_login_out.png" alt="로그아웃"/></a>
+            </div>
+        </div>
+        <!--//Header-->
+        <!--Content-->
+        <div class="Container">
+            <!--LNB-->
+            <div class="Nav">
+                <ul>
+                    <li><a href="#" class="m1">운영기본설정(총괄,도)</a></li>
+                    <li><a href="#" class="m2">시&middot;군 관리</a></li>
+                    <li><a href="#" class="m3">학교 관리</a></li>
+                    <li><a href="#" class="m4">승마장 관리</a></li>
+                    <li><a href="#" class="m5">체험신청 인원 관리</a></li>
+                    <li><a href="#" class="m6">배정 관리</a></li>
+                    <li><a href="#" class="m7">출결 관리</a></li>
+                    <li>
+                        <a href="#" class="m8 on">보고서</a>
+                        <div class="depth">
+                            <ol>
+                                <li><a href="#">시군별 현황</a></li>
+                                <li><a href="#">승마장별 현황</a></li>
+                                <li><a href="#" class="on">체험결과</a></li>
+                            </ol>
+                        </div>
+                    </li>
+                    <li><a href="#" class="m9">고객센터</a></li>
+                    <li><a href="#" class="m10">관리자 관리</a></li>
+                </ul>
+            </div>
+            <!--//LNB-->
+            <!--Data Area-->
+            <div class="Section DataArea">
+                <!--보고서 > 체험결과-->
+                <div class="Article ReportExp">
+                    <h2 class="PageTitle">
+                        보고서 <i><img src="../images/admin/icon_location_arrow.png"/></i> 체험결과
+                        <span class="year">
+                            <span class="tit">운영년도</span>
+                            <select class="select">
+                                <option>2020년도</option>
+                            </select>
+                        </span>
+                    </h2>
+                    <!--검색-->
+                    <div class="DataSearch">
+                        <dl>
+                            <dt>분류</dt>
+                            <dd>
+                                <select class="select Kind">
+                                    <option>전체</option>
+                                </select>
+                            </dd>
+                        </dl>
+                        <dl>                      
+                            <dd><input type="text" class="enter SearchBar" placeholder="검색어를 입력해주세요."/></dd>
+                        </dl>
+                        <button class="CommBtn Search">검색</button>
+                    </div>
+                    <!--//검색-->
+                    <div class="top_ctrl">
+                        <button class="CommBtn Excel">엑셀다운로드</button>
+                    </div>
+                    <!--데이터-->
+                    <form class="TableWrap">
+                        <table class="HasTopTH">
+                            <colgroup>
+                                <col width="7.2%">
+                                <col width="8%">
+                                <col width="8%">
+                                <col width="6.5%">
+                                <col width="6.5%">
+                                <col width="6.5%">
+                                <col width="6.5%">
+                                <col width="6.5%">
+                                <col width="6.5%">
+                                <col width="6.5%">
+                                <col width="6.5%">
+                                <col width="6.5%">
+                                <col width="6.5%">
+                                <col width="*"> 
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th rowspan="2">지역</th>
+                                    <th rowspan="2">승마장명</th>
+                                    <th rowspan="2">참여인원</th>
+                                    <th colspan="10">참여횟수</th>
+                                    <th rowspan="2">출결내역 다운로드</th>
+                                </tr>
+                                <tr>
+                                    <td>1회</td>
+                                    <td>2회</td>
+                                    <td>3회</td>
+                                    <td>4회</td>
+                                    <td>5회</td>
+                                    <td>6회</td>
+                                    <td>7회</td>
+                                    <td>8회</td>
+                                    <td>9회</td>
+                                    <td>10회</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="total">
+                                    <td colspan="2">총계</td>
+                                    <td>280</td>
+                                    <td>20</td>
+                                    <td>20</td>
+                                    <td>20</td>
+                                    <td>20</td>
+                                    <td>20</td>
+                                    <td>20</td>
+                                    <td>20</td>
+                                    <td>20</td>
+                                    <td>20</td>
+                                    <td>20</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>부천시</td>
+                                    <td>A승마장</td>
+                                    <td>80</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>
+                                        <button class="CommBtn Download">다운받기</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>부천시</td>
+                                    <td>A승마장</td>
+                                    <td>80</td>
+                                    <td colspan="10" class="NoData">미작성</td>
+                                    <td>미업로드</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                    <!--//데이터-->
+                </div> 
+                <!--//-보고서 > 체험결과-->
+            </div>
+            <!--//Data Area-->
+        </div>
+        <!--//Content-->
+    </div>
+</body>
+</html>

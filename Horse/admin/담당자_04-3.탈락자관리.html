@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>승마관리시스템</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/admin.css" />
+    <script type="text/javascript" src="../scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="../scripts/admin.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!--Header-->
+        <div class="Header">
+            <h1 class="logo">승미인관리시스템 ADMIN</h1>
+            <div class="util">
+                <a href="#" class="go_home"><span>학생승마체험<br/>홈페이지 바로가기</span></a>
+                <a href="#" class="logout"><img src="../images/admin/icon_login_out.png" alt="로그아웃"/></a>
+            </div>
+        </div>
+        <!--//Header-->
+        <!--Content-->
+        <div class="Container">
+            <!--LNB-->
+            <div class="Nav">
+                <ul>
+                    <li><a href="#" class="m1">운영기본설정(총괄,도)</a></li>
+                    <li><a href="#" class="m4">승마장 관리</a></li>
+                    <li><a href="#" class="m5">체험신청 인원 관리</a></li>
+                    <li>
+                        <a href="#" class="m6 on">배정 관리</a>
+                        <div class="depth">
+                            <ol>
+                                <li><a href="#">배정 관리</a></li>
+                                <li><a href="#">배정완료 인원관리</a></li>
+                                <li><a href="#" class="on">탈락자 관리</a></li>
+                            </ol>
+                        </div>
+                    </li>
+                    <li><a href="#" class="m7">출결 관리</a></li>
+                    <li><a href="#" class="m8">보고서</a></li>
+                </ul>
+            </div>
+            <!--//LNB-->
+            <!--Data Area-->
+            <div class="Section DataArea">
+                <!--배정완료 인원관리-->
+                <div class="Article RespFailMgmt">
+                    <h2 class="PageTitle">
+                        탈락자 관리 <a href="#" class="direct">승마장 배정 인원 현황 보기 <img src="../images/admin/icon_direct_arrow.png"/></a>
+                        <span class="year">
+                            <span class="tit">운영년도</span>
+                            <select class="select">
+                                <option>2020년도</option>
+                            </select>
+                        </span>
+                    </h2>
+                    <!--검색-->
+                    <div class="DataSearch">
+                        <dl>
+                            <dt>분류</dt>
+                            <dd>
+                                <select class="select Kind">
+                                    <option>전체</option>
+                                </select>
+                            </dd>
+                        </dl>
+                        <dl>                      
+                            <dd><input type="text" class="enter SearchBar" placeholder="검색어를 입력해주세요."/></dd>
+                        </dl>
+                        <button class="CommBtn Search">검색</button>
+                    </div>
+                    <!--//검색-->
+                    <!--데이터-->
+                    <div class="top_ctrl">
+                        <select class="select PageEA">
+                            <option>10개씩 보기</option>
+                        </select>
+                        <h5>배정이 완료되었습니다.</h5>
+                        <button class="CommBtn Excel">엑셀다운로드</button>
+                    </div>
+                    <!--검색결과 값-->
+                    <div class="SearchResult">
+                        <span>“검색어”</span>에 대한 검색결과입니다.
+                    </div>
+                    <!--//검색결과 값-->
+                    <form class="TableWrap">
+                        <table class="HasTopTH">
+                            <colgroup>
+                                <col width="5%">
+                                <col width="5%">
+                                <col width="9%">
+                                <col width="10%"> 
+                                <col width="10%"> 
+                                <col width="12.5%"> 
+                                <col width="12.5%"> 
+                                <col width="12.5%"> 
+                                <col width="12.5%"> 
+                                <col width="*"> 
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>선택</th>
+                                    <th>NO</th>
+                                    <th>학교명</th>
+                                    <th>이름</th>
+                                    <th>보호자</th>
+                                    <th>보호자 연락처</th>
+                                    <th>연락처</th>
+                                    <th>1순위 승마장</th>
+                                    <th>2순위 승마장</th>
+                                    <th>추가배정</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="checkbox" class="checkbox"/></td>
+                                    <td>1</td>
+                                    <td>OO초등학교</td>
+                                    <td>OOO</td>
+                                    <td>OOO</td>
+                                    <td>OOO / 031-000-000</td>
+                                    <td>031-000-0000</td>
+                                    <td>OO승마장 월요일</td>
+                                    <td>OO승마장 월요일</td>
+                                    <td>
+                                        <button class="CommBtn Ass">추가배정</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                    <!--//데이터-->
+                    <!--Paging-->
+                    <div class="paging">
+                        <ul>
+                            <li><a href="#"><img src="../images/admin/first_page.png"/></a></li>
+                            <li><a href="#" class="now">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">7</a></li>
+                            <li><a href="#">8</a></li>
+                            <li><a href="#">9</a></li>
+                            <li><a href="#">10</a></li>
+                            <li><a href="#"><img src="../images/admin/last_page.png"/></a></li>
+                        </ul>
+                    </div>
+                    <!--//Paging-->
+                    <!--[팝업]○○학생 추가 배정-->
+                    <div class="LayerPopup" style="display: none;">
+                        <div class="PopupData StudentAddLayer">
+                            <a href="#" class="popup_close"><img src="../images/admin/popup_close.png"/></a>
+                            <h4 class="pop_tit">○○○학생 추가 배정</h4>
+                            <table>
+                                <colgroup>
+                                    <col width="95">
+                                    <col width="*">
+                                </colgroup>                     
+                                <tr>
+                                    <th>승마장</th>
+                                    <td>
+                                        <select class="select Ground">
+                                            <option>ㅇㅇㅇ승마장</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>배정인원</th>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <dl>
+                                            <dt><input type="radio" class="radio" name="day"/>월요일</dt>
+                                            <dd>100&nbsp;/&nbsp;50</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><input type="radio" class="radio" name="day"/>화요일</dt>
+                                            <dd>100&nbsp;/&nbsp;50</dd>
+                                        </dl>
+                                        <dl class="full">
+                                            <dt><input type="radio" class="radio" name="day" disabled="disabled"/>수요일</dt>
+                                            <dd>100&nbsp;/&nbsp;100</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><input type="radio" class="radio" name="day"/>목요일</dt>
+                                            <dd>100&nbsp;/&nbsp;50</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><input type="radio" class="radio" name="day"/>금요일</dt>
+                                            <dd>100&nbsp;/&nbsp;50</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><input type="radio" class="radio" name="day"/>토요일</dt>
+                                            <dd>100&nbsp;/&nbsp;50</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><input type="radio" class="radio" name="day"/>일요일</dt>
+                                            <dd>100&nbsp;/&nbsp;50</dd>
+                                        </dl>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class="bottom_btn">
+                                <button class="CommBtn Add">배정하기</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--//[팝업]○○학생 추가 배정-->
+                </div> 
+                <!--//배정완료 인원관리-->
+            </div>
+            <!--//Data Area-->
+        </div>
+        <!--//Content-->
+    </div>
+</body>
+</html>

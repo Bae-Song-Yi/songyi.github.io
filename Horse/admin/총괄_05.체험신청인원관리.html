@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>승마관리시스템</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/admin.css" />
+    <script type="text/javascript" src="../scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="../scripts/admin.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!--Header-->
+        <div class="Header">
+            <h1 class="logo">승미인관리시스템 ADMIN</h1>
+            <div class="util">
+                <a href="#" class="go_home"><span>학생승마체험<br/>홈페이지 바로가기</span></a>
+                <a href="#" class="logout"><img src="../images/admin/icon_login_out.png" alt="로그아웃"/></a>
+            </div>
+        </div>
+        <!--//Header-->
+        <!--Content-->
+        <div class="Container">
+            <!--LNB-->
+            <div class="Nav">
+                <ul>
+                    <li><a href="#" class="m1">운영기본설정(총괄,도)</a></li>
+                    <li><a href="#" class="m2">시&middot;군 관리</a></li>
+                    <li><a href="#" class="m3">학교 관리</a></li>
+                    <li><a href="#" class="m4">승마장 관리</a></li>
+                    <li><a href="#" class="m5 on">체험신청 인원 관리</a></li>
+                    <li><a href="#" class="m6">배정 관리</a></li>
+                    <li><a href="#" class="m7">출결 관리</a></li>
+                    <li><a href="#" class="m8">보고서</a></li>
+                    <li><a href="#" class="m9">고객센터</a></li>
+                    <li><a href="#" class="m10">관리자 관리</a></li>
+                </ul>
+            </div>
+            <!--//LNB-->
+            <!--Data Area-->
+            <div class="Section DataArea">
+                <!--체험신청 인원 관리-->
+                <div class="Article AppExperience">
+                    <h2 class="PageTitle">
+                        체험신청 인원 관리
+                        <span class="year">
+                            <span class="tit">운영년도</span>
+                            <select class="select">
+                                <option>2020년도</option>
+                            </select>
+                        </span>
+                    </h2>
+                    <!--검색-->
+                    <div class="DataSearch">
+                        <dl>
+                            <dt>분류</dt>
+                            <dd>
+                                <select class="select Kind">
+                                    <option>전체</option>
+                                </select>
+                            </dd>
+                        </dl>
+                        <dl>                      
+                            <dd><input type="text" class="enter SearchBar" placeholder="검색어를 입력해주세요."/></dd>
+                        </dl>
+                        <button class="CommBtn Search">검색</button>
+                    </div>
+                    <!--//검색-->
+                    <!--데이터-->
+                    <div class="top_ctrl">
+                        <select class="select PageEA">
+                            <option>10개씩 보기</option>
+                        </select>
+                        <button class="CommBtn Cert">선택학생인증</button>
+                        <button class="CommBtn Excel">엑셀다운로드</button>
+                    </div>
+                    <form class="TableWrap">
+                        <table class="HasTopTH">
+                            <colgroup>
+                                <col width="4%">
+                                <col width="3%">
+                                <col width="7.5%">
+                                <col width="8.5%">
+                                <col width="7.5%"> 
+                                <col width="8.5%"> 
+                                <col width="7.5%"> 
+                                <col width="11.5%"> 
+                                <col width="10.5%"> 
+                                <col width="11%"> 
+                                <col width="11%"> 
+                                <col width="*"> 
+                                <col width="8%"> 
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>선택</th>
+                                    <th>NO</th>
+                                    <th>참여지역</th>
+                                    <th>학교명</th>
+                                    <th>이름</th>
+                                    <th>생년월일</th>
+                                    <th>보호자</th>
+                                    <th>보호자 연락처</th>
+                                    <th>연락처</th>
+                                    <th>1순위 승마장</th>
+                                    <th>2순위 승마장</th>
+                                    <th>이전 승마체험 횟수</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="checkbox" class="checkbox"/></td>
+                                    <td>2</td>
+                                    <td>김포시</td>
+                                    <td>OO초등학교</td>
+                                    <td>OO승마장</td>
+                                    <td>OO승마장</td>
+                                    <td>OO승마장</td>
+                                    <td>OOO / 031-000-000</td>
+                                    <td>031-000-0000</td>
+                                    <td>OO승마장 월요일</td>
+                                    <td>OO승마장 토요일</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" class="checkbox"/></td>
+                                    <td>1</td>
+                                    <td>김포시</td>
+                                    <td>OO초등학교</td>
+                                    <td>OO승마장</td>
+                                    <td>OO승마장</td>
+                                    <td>OO승마장</td>
+                                    <td>OOO / 031-000-000</td>
+                                    <td>031-000-0000</td>
+                                    <td>OO승마장 월요일</td>
+                                    <td>OO승마장 토요일</td>
+                                    <td>1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                    <!--//데이터-->
+                    <!--Paging-->
+                    <div class="paging">
+                        <ul>
+                            <li><a href="#"><img src="../images/admin/first_page.png"/></a></li>
+                            <li><a href="#" class="now">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">7</a></li>
+                            <li><a href="#">8</a></li>
+                            <li><a href="#">9</a></li>
+                            <li><a href="#">10</a></li>
+                            <li><a href="#"><img src="../images/admin/last_page.png"/></a></li>
+                        </ul>
+                    </div>
+                    <!--//Paging-->
+                </div> 
+                <!--//체험신청 인원 관리-->
+            </div>
+            <!--//Data Area-->
+        </div>
+        <!--//Content-->
+    </div>
+</body>
+</html>

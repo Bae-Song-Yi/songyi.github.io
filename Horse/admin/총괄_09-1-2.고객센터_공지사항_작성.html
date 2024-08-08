@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>승마관리시스템</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/admin.css" />
+    <script type="text/javascript" src="../scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="../scripts/admin.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!--Header-->
+        <div class="Header">
+            <h1 class="logo">승미인관리시스템 ADMIN</h1>
+            <div class="util">
+                <a href="#" class="go_home"><span>학생승마체험<br/>홈페이지 바로가기</span></a>
+                <a href="#" class="logout"><img src="../images/admin/icon_login_out.png" alt="로그아웃"/></a>
+            </div>
+        </div>
+        <!--//Header-->
+        <!--Content-->
+        <div class="Container">
+            <!--LNB-->
+            <div class="Nav">
+                <ul>
+                    <li><a href="#" class="m1">운영기본설정(총괄,도)</a></li>
+                    <li><a href="#" class="m2">시&middot;군 관리</a></li>
+                    <li><a href="#" class="m3">학교 관리</a></li>
+                    <li><a href="#" class="m4">승마장 관리</a></li>
+                    <li><a href="#" class="m5">체험신청 인원 관리</a></li>
+                    <li><a href="#" class="m6">배정 관리</a></li>
+                    <li><a href="#" class="m7">출결 관리</a></li>
+                    <li><a href="#" class="m8">보고서</a></li>
+                    <li>
+                        <a href="#" class="m9 on">고객센터</a>
+                        <div class="depth">
+                            <ol>
+                                <li><a href="#" class="on">공지사항</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">1:1 문의</a></li>
+                            </ol>
+                        </div>
+                    </li>
+                    <li><a href="#" class="m10">관리자 관리</a></li>
+                </ul>
+            </div>
+            <!--//LNB-->
+            <!--Data Area-->
+            <div class="Section DataArea">
+                <!--고객센터 > 공지사항(작성)-->
+                <div class="Article ServiceWrite">
+                    <h2 class="PageTitle">고객센터 <i><img src="../images/admin/icon_location_arrow.png"/></i> 공지사항 <button class="CommBtn Add">수정(등록)</button></h2>
+                    <div class="write">
+                        <table>
+                            <colgroup>
+                                <col width="160">
+                                <col width="39.5%">
+                                <col width="160">
+                                <col width="39.5%">
+                            </colgroup>
+                            <tr>
+                                <th>제목</th>
+                                <td colspan="3"><input type="text" class="enter long" placeholder="제목을 입력해 주세요."/></td>
+                            </tr>
+                            <tr>
+                                <th>공지사항</th>
+                                <td>
+                                    <input type="radio" name="YN" class="radio" id="Yes"/><label for="Yes" class="label">Y</label>
+                                    <input type="radio" name="YN" class="radio" id="No"/><label for="No" class="label">N</label>
+                                </td>
+                                <th>공지기간</th>
+                                <td>
+                                    <input type="text" class="enter date"/>&nbsp;<span>~</span>&nbsp;<input type="text" class="enter date"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>첨부파일</th>
+                                <td><input type="file"/></td>
+                                <th>등록일</th>
+                                <td><input type="text" class="enter date"/></td>
+                            </tr>
+                            <tr>
+                                <td class="editor_area" colspan="4">
+                                    <div class="editor">
+                                        에디터
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!--Button-->
+                    <div class="bottom_btn">
+                        <button class="del">삭제</button>
+                        <button class="cancel">취소</button>
+                    </div>
+                    <!--//Button-->
+                </div> 
+                <!--//고객센터 > 공지사항(작성)-->
+            </div>
+            <!--//Data Area-->
+        </div>
+        <!--//Content-->
+    </div>
+</body>
+</html>

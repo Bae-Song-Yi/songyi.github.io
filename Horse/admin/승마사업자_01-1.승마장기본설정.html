@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>승마관리시스템</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/admin.css" />
+    <script type="text/javascript" src="../scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="../scripts/admin.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!--Header-->
+        <div class="Header">
+            <h1 class="logo">승미인관리시스템 ADMIN</h1>
+            <div class="util">
+                <a href="#" class="go_home"><span>학생승마체험<br/>홈페이지 바로가기</span></a>
+                <a href="#" class="logout"><img src="../images/admin/icon_login_out.png" alt="로그아웃"/></a>
+            </div>
+        </div>
+        <!--//Header-->
+        <!--Content-->
+        <div class="Container">
+            <!--LNB-->
+            <div class="Nav">
+                <ul>
+                    <li><a href="#" class="m1 on">승마장 기본설정</a></li>
+                    <li><a href="#" class="m6">배정 인원 관리</a></li>
+                    <li><a href="#" class="m7">출결 관리</a></li>
+                    <li><a href="#" class="m8">보고서</a></li>
+                </ul>
+            </div>
+            <!--//LNB-->
+            <!--Data Area-->
+            <div class="Section DataArea">
+                <!--승마장 기본설정(목록)-->
+                <div class="Article BuisnessGrndStn">
+                    <h2 class="PageTitle">
+                        승마장 기본설정
+                        <span class="year">
+                            <span class="tit">운영년도</span>
+                            <select class="select">
+                                <option>2020년도</option>
+                            </select>
+                        </span>
+                    </h2>
+                    <!--상단텍스트-->
+                    <div class="TopInfoText">
+                        <ul>
+                            <li class="main_text">○○시에서 승인상태는 <span>“활성(비활성)”</span>상태이며 <span>“ㅁㅁ승마장”</span>에 배정한 인원은 <span>00명</span> 입니다.</li>
+                            <li class="main_text">##시에서 승인상태는 <span>“활성(비활성)”</span>상태이며 <span>“ㅁㅁ승마장”</span>에 배정한 인원은 <span>00명</span> 입니다.</li>
+                            <li class="sub_text">- 승인을 원하실 경우 해당 시,군 담당자에게 별도로 문의해주세요.</li>
+                            <li class="sub_text">- 비밀번호를 분실하셨을 경우 관리자에게 문의해주세요.</li>
+                        </ul>
+                        <button class="CommBtn Save">저장하기</button>
+                    </div>
+                    <!--//상단텍스트-->
+                    <!--데이터-->
+                    <form class="TableWrap">
+                        <table class="HasLeftTH">
+                            <colgroup>
+                                <col width="200">
+                                <col width="*">
+                            </colgroup>
+                            <tr>
+                                <th>승마장명 <span class="essential">*</span></th>
+                                <td><input type="text" class="enter" placeholder="전화번호를 입력해 주세요."/></td>
+                            </tr>
+                            <tr>
+                                <th>주소</th>
+                                <td><input type="text" class="enter" placeholder="주소를 입력해 주세요."/>&nbsp;&nbsp;<input type="text" class="enter" placeholder="상세주소를 입력해 주세요."/></td>
+                            </tr>
+                            <tr class="tel">
+                                <th>전화번호</th>
+                                <td>
+                                    <select class="select">
+                                        <option>010</option>
+                                    </select>
+                                    &nbsp;-&nbsp;
+                                    <input type="text" class="enter"/>
+                                    &nbsp;-&nbsp;
+                                    <input type="text" class="enter"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>운영시간</th>
+                                <td><input type="text" class="enter" placeholder="운영시간을 입력해 주세요."/></td>
+                            </tr>
+                            <tr>
+                                <th>휴무일</th>
+                                <td><input type="text" class="enter" placeholder="휴무일을 입력해 주세요."/></td>
+                            </tr>
+                            <tr>
+                                <th>담당자</th>
+                                <td><input type="text" class="enter" placeholder="대표코치를 입력해 주세요."/></td>
+                            </tr>
+                            <tr class="tel">
+                                <th>담당자 연락처</th>
+                                <td>
+                                    <select class="select">
+                                        <option>010</option>
+                                    </select>
+                                    &nbsp;-&nbsp;
+                                    <input type="text" class="enter"/>
+                                    &nbsp;-&nbsp;
+                                    <input type="text" class="enter"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>대표코치 수</th>
+                                <td>
+                                    <select class="select">
+                                        <option>선택</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>안전요원 수</th>
+                                <td>
+                                    <select class="select">
+                                        <option>선택</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>말 보유두 수</th>
+                                <td>
+                                    <select class="select">
+                                        <option>선택</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>승마장 사진 등록</th>
+                                <td>
+                                    <div class="AddFile">
+                                        <ul>
+                                            <li class="td">
+                                                <input type="file" class="HiddenFile" accept=".gif, .jpg, .jpeg ,.bmp, .png"/>
+                                                <div class="ViewFile"><span>&nbsp;</span><a href="#" class="AddFileDel"><img src="../images/admin/icon_add_file_del.png"/></a></div>
+                                                <button class="CommBtn File">파일선택</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                    <!--//데이터-->
+                </div> 
+                <!--승마장 기본설정(목록)-->
+            </div>
+            <!--//Data Area-->
+        </div>
+        <!--//Content-->
+    </div>
+</body>
+</html>

@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>승마관리시스템</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/admin.css" />
+    <script type="text/javascript" src="../scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="../scripts/admin.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!--Header-->
+        <div class="Header">
+            <h1 class="logo">승미인관리시스템 ADMIN</h1>
+            <div class="util">
+                <a href="#" class="go_home"><span>학생승마체험<br/>홈페이지 바로가기</span></a>
+                <a href="#" class="logout"><img src="../images/admin/icon_login_out.png" alt="로그아웃"/></a>
+            </div>
+        </div>
+        <!--//Header-->
+        <!--Content-->
+        <div class="Container">
+            <!--LNB-->
+            <div class="Nav">
+                <ul>
+                    <li><a href="#" class="m1">운영기본설정(총괄,도)</a></li>
+                    <li><a href="#" class="m2">시&middot;군 관리</a></li>
+                    <li><a href="#" class="m3">학교 관리</a></li>
+                    <li><a href="#" class="m4">승마장 관리</a></li>
+                    <li><a href="#" class="m5">체험신청 인원 관리</a></li>
+                    <li><a href="#" class="m6">배정 관리</a></li>
+                    <li><a href="#" class="m7">출결 관리</a></li>
+                    <li><a href="#" class="m8">보고서</a></li>
+                    <li>
+                        <a href="#" class="m9 on">고객센터</a>
+                        <div class="depth">
+                            <ol>
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#" class="on">1:1 문의</a></li>
+                            </ol>
+                        </div>
+                    </li>
+                    <li><a href="#" class="m10">관리자 관리</a></li>
+                </ul>
+            </div>
+            <!--//LNB-->
+            <!--Data Area-->
+            <div class="Section DataArea">
+                <!--고객센터 > 공지사항(목록)-->
+                <div class="Article ServiceList">
+                    <h2 class="PageTitle">고객센터 <i><img src="../images/admin/icon_location_arrow.png"/></i> 1:1문의</h2>
+                    <!--검색-->
+                    <div class="DataSearch">
+                        <dl>
+                            <dt>문의유형</dt>
+                            <dd>
+                                <select class="select Kind">
+                                    <option>전체</option>
+                                </select>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>시군</dt>
+                            <dd>
+                                <select class="select Kind">
+                                    <option>전체</option>
+                                </select>
+                            </dd>
+                        </dl>
+                        <dl> 
+                            <dt>제목</dt>             
+                            <dd><input type="text" class="enter SearchBar" placeholder="검색어를 입력해주세요."/></dd>
+                        </dl>
+                        <button class="CommBtn Search">검색</button>
+                    </div>
+                    <!--//검색-->
+                    <!--데이터-->
+                    <form class="TableWrap">
+                        <table class="HasTopTH">
+                            <colgroup>
+                                <col width="6.5%">
+                                <col width="10.5%">
+                                <col width="13%">
+                                <col width="11.5%">
+                                <col width="*">
+                                <col width="13%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>번호</th>
+                                    <th>문의유형</th>
+                                    <th>소속시&middot;군</th>
+                                    <th>이름</th>
+                                    <th>제목</th>
+                                    <th>문의일시</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>본인인증</td>
+                                    <td>부천시</td>
+                                    <td>홍길동1</td>
+                                    <td class="tit"><a href="#">질문</a></td>
+                                    <td>2020-00-00 00:00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                    <!--//데이터-->
+                    <!--Paging-->
+                    <div class="paging">
+                        <ul>
+                            <li><a href="#"><img src="../images/admin/first_page.png"/></a></li>
+                            <li><a href="#" class="now">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">7</a></li>
+                            <li><a href="#">8</a></li>
+                            <li><a href="#">9</a></li>
+                            <li><a href="#">10</a></li>
+                            <li><a href="#"><img src="../images/admin/last_page.png"/></a></li>
+                        </ul>
+                    </div>
+                    <!--//Paging-->
+                </div> 
+                <!--//고객센터 > 공지사항(목록)-->
+            </div>
+            <!--//Data Area-->
+        </div>
+        <!--//Content-->
+    </div>
+</body>
+</html>

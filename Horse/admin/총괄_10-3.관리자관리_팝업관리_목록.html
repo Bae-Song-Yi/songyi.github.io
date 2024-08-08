@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>승마관리시스템</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/admin.css" />
+    <script type="text/javascript" src="../scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="../scripts/admin.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!--Header-->
+        <div class="Header">
+            <h1 class="logo">승미인관리시스템 ADMIN</h1>
+            <div class="util">
+                <a href="#" class="go_home"><span>학생승마체험<br/>홈페이지 바로가기</span></a>
+                <a href="#" class="logout"><img src="../images/admin/icon_login_out.png" alt="로그아웃"/></a>
+            </div>
+        </div>
+        <!--//Header-->
+        <!--Content-->
+        <div class="Container">
+            <!--LNB-->
+            <div class="Nav">
+                <ul>
+                    <li><a href="#" class="m1">운영기본설정(총괄,도)</a></li>
+                    <li><a href="#" class="m2">시&middot;군 관리</a></li>
+                    <li><a href="#" class="m3">학교 관리</a></li>
+                    <li><a href="#" class="m4">승마장 관리</a></li>
+                    <li><a href="#" class="m5">체험신청 인원 관리</a></li>
+                    <li><a href="#" class="m6">배정 관리</a></li>
+                    <li><a href="#" class="m7">출결 관리</a></li>
+                    <li><a href="#" class="m8">보고서</a></li>
+                    <li><a href="#" class="m9">고객센터</a></li>
+                    <li>
+                        <a href="#" class="m10 on">관리자 관리</a>
+                        <div class="depth">
+                            <ol>
+                                <li><a href="#">관리자 관리</a></li>
+                                <li><a href="#" class="on">배너 관리</a></li>
+                                <li><a href="#">팝업 관리</a></li>
+                            </ol>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--//LNB-->
+            <!--Data Area-->
+            <div class="Section DataArea">
+                <!--관리자관리 > 배너관리-->
+                <div class="Article BannerPopupMgmt">
+                    <h2 class="PageTitle">관리자 관리 <i><img src="../images/admin/icon_location_arrow.png"/></i> 팝업 관리</h2>
+                    <!--목록-->
+                    <div class="list">
+                        <h4 class="SubTitle">팝업 목록<button class="CommBtn Add">신규등록</button></h4>
+                        <!--데이터-->
+                        <form class="TableWrap">
+                            <table class="HasTopTH">
+                                <colgroup>
+                                    <col width="13.5%">
+                                    <col width="*">
+                                    <col width="19%">
+                                    <col width="18%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>NO</th>
+                                        <th>팝업명</th>
+                                        <th>사용유무</th>
+                                        <th>게시기간</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="tit"><a href="#">배너 제목</a></td>
+                                        <td>사용</td>
+                                        <td>20.09.10~20.10.10</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </form>
+                        <!--//데이터-->
+                        <!--Paging-->
+                        <div class="paging">
+                            <ul>
+                                <li><a href="#"><img src="../images/admin/first_page.png"/></a></li>
+                                <li><a href="#" class="now">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">6</a></li>
+                                <li><a href="#">7</a></li>
+                                <li><a href="#">8</a></li>
+                                <li><a href="#">9</a></li>
+                                <li><a href="#">10</a></li>
+                                <li><a href="#"><img src="../images/admin/last_page.png"/></a></li>
+                            </ul>
+                        </div>
+                        <!--//Paging-->
+                    </div>
+                    <!--//목록-->
+                    <!--상세내용-->
+                    <div class="details">
+                        <h4 class="SubTitle">상세내용<button class="CommBtn Save">저장</button><button class="CommBtn Del3">삭제</button></h4>
+                        <form class="TableWrap">
+                            <table>
+                                <colgroup>
+                                    <col width="160"/>
+                                    <col width="*"/>
+                                </colgroup>
+                                <tr>
+                                    <th>팝업명</th>
+                                    <td><input type="text" class="enter long" placeholder="팝업명을 입력해 주세요."/></td>
+                                </tr>
+                                <tr>
+                                    <th>사용유무</th>
+                                    <td>
+                                        <input type="radio" class="radio" name="select1" id="Yes">&nbsp;<label class="label" for="Yes">사용</label>&nbsp;
+                                        <input type="radio" class="radio" name="select1" id="No" checked="checked">&nbsp;<label class="label" for="No">미사용</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>게시기간</th>
+                                    <td>
+                                        <input type="text" class="enter date"/>&nbsp;~&nbsp;<input type="text" class="enter date"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>이미지 첨부</th>
+                                    <td><input type="file"></td>
+                                </tr>
+                                <tr>
+                                    <th>URL</th>
+                                    <td>
+                                        <select class="select Target">
+                                            <option>현재창</option>
+                                            <option>새창</option>
+                                        </select>
+                                        <input type="text" class="enter url" placeholder="팝업명을 입력해주세요"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>창크기</th>
+                                    <td>
+                                        <ul>
+                                            <li><span>H</span><input type="text" class="enter px"/>&nbsp;px</li>
+                                            <li><span>W</span><input type="text" class="enter px"/>&nbsp;px</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>창위치</th>
+                                    <td>
+                                        <ul>
+                                            <li><span>L</span><input type="text" class="enter px"/>&nbsp;px</li>
+                                            <li><span>T</span><input type="text" class="enter px"/>&nbsp;px</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>팝업창 스크롤</th>
+                                    <td>
+                                        <input type="radio" class="radio" name="select2" id="ScrollY">&nbsp;<label class="label" for="ScrollY">사용</label>&nbsp;
+                                        <input type="radio" class="radio" name="select2" id="ScrollN" checked="checked">&nbsp;<label class="label" for="ScrollN">미사용</label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                    <!--//상세내용-->
+                </div> 
+                <!--//관리자관리 > 배너관리-->
+            </div>
+            <!--//Data Area-->
+        </div>
+        <!--//Content-->
+    </div>
+</body>
+</html>

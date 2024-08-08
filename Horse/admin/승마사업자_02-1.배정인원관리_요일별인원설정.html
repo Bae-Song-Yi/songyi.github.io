@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>승마관리시스템</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/admin.css" />
+    <script type="text/javascript" src="../scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="../scripts/admin.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!--Header-->
+        <div class="Header">
+            <h1 class="logo">승미인관리시스템 ADMIN</h1>
+            <div class="util">
+                <a href="#" class="go_home"><span>학생승마체험<br/>홈페이지 바로가기</span></a>
+                <a href="#" class="logout"><img src="../images/admin/icon_login_out.png" alt="로그아웃"/></a>
+            </div>
+        </div>
+        <!--//Header-->
+        <!--Content-->
+        <div class="Container">
+            <!--LNB-->
+            <div class="Nav">
+                <ul>
+                    <li><a href="#" class="m1">승마장 기본설정</a></li>
+                    <li>
+                        <a href="#" class="m6 on">배정 인원 관리</a>
+                        <div class="depth">
+                            <ol>
+                                <li><a href="#" class="on">요일별 인원설정</a></li>
+                                <li><a href="#">배정 인원 관리</a></li>
+                            </ol>
+                        </div>
+                    </li>
+                    <li><a href="#" class="m7">출결 관리</a></li>
+                    <li><a href="#" class="m8">보고서</a></li>
+                </ul>
+            </div>
+            <!--//LNB-->
+            <!--Data Area-->
+            <div class="Section DataArea">
+                <!--배정 인원 관리 > 요일별 인원설정-->
+                <div class="Article BuisnessDayUser">
+                    <h2 class="PageTitle">
+                        배정 인원 관리 <i><img src="../images/admin/icon_location_arrow.png"/></i> 일별 인원설정
+                        <span class="year">
+                            <span class="tit">운영년도</span>
+                            <select class="select">
+                                <option>2020년도</option>
+                            </select>
+                        </span>
+                    </h2>
+                    <!--상단텍스트-->
+                    <div class="TopInfoText">
+                        <ul>
+                            <li class="sub_text">- 활성상태가 활성일 경우 요일별 인원배정 수정이 불가능합니다</li>
+                            <li class="sub_text">- 수정이 필요할 경우 시&middot;군 담당자에게 문의해주세요</li>
+                        </ul>
+                        <button class="CommBtn Save">저장하기</button>
+                    </div>
+                    <!--//상단텍스트-->
+                    <!--데이터-->
+                    <form class="TableWrap">
+                        <table class="HasTopTH">
+                            <colgroup>
+                                <col width="13%">
+                                <col width="14%">
+                                <col width="*">
+                                <col width="8.3%">
+                                <col width="8.3%">
+                                <col width="8.3%">
+                                <col width="8.3%">
+                                <col width="8.3%">
+                                <col width="8.3%">
+                                <col width="8.3%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th rowspan="2">활성상태</th>
+                                    <th rowspan="2">참여 시&middot;군</th>
+                                    <th rowspan="2">배정인원</th>
+                                    <th colspan="7">인원배정</th>
+                                </tr>
+                                <tr>
+                                    <td>월</td>
+                                    <td>화</td>
+                                    <td>수</td>
+                                    <td>목</td>
+                                    <td>금</td>
+                                    <td>토</td>
+                                    <td>일</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>활성</td>
+                                    <td>부천시</td>
+                                    <td>100명</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>비활성</td>
+                                    <td>광명시</td>
+                                    <td>100명</td>
+                                    <td><input type="text" class="enter" placeholder="인원입력"/></td>
+                                    <td><input type="text" class="enter" placeholder="인원입력"/></td>
+                                    <td><input type="text" class="enter" placeholder="인원입력"/></td>
+                                    <td><input type="text" class="enter" placeholder="인원입력"/></td>
+                                    <td><input type="text" class="enter" placeholder="인원입력"/></td>
+                                    <td><input type="text" class="enter" placeholder="인원입력"/></td>
+                                    <td><input type="text" class="enter" placeholder="인원입력"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                    <!--//데이터-->
+                </div> 
+                <!--배정 인원 관리 > 요일별 인원설정-->
+            </div>
+            <!--//Data Area-->
+        </div>
+        <!--//Content-->
+    </div>
+</body>
+</html>

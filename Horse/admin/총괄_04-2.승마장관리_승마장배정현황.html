@@ -1,0 +1,250 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>승마관리시스템</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/admin.css" />
+    <script type="text/javascript" src="../scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="../scripts/admin.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!--Header-->
+        <div class="Header">
+            <h1 class="logo">승미인관리시스템 ADMIN</h1>
+            <div class="util">
+                <a href="#" class="go_home"><span>학생승마체험<br/>홈페이지 바로가기</span></a>
+                <a href="#" class="logout"><img src="../images/admin/icon_login_out.png" alt="로그아웃"/></a>
+            </div>
+        </div>
+        <!--//Header-->
+        <!--Content-->
+        <div class="Container">
+            <!--LNB-->
+            <div class="Nav">
+                <ul>
+                    <li><a href="#" class="m1">운영기본설정(총괄,도)</a></li>
+                    <li><a href="#" class="m2">시&middot;군 관리</a></li>
+                    <li><a href="#" class="m3">학교 관리</a></li>
+                    <li>
+                        <a href="#" class="m4 on">승마장 관리</a>
+                        <div class="depth">
+                            <ol>
+                                <li><a href="#">기본관리</a></li>
+                                <li><a href="#" class="on">승마장배정현황</a></li>
+                            </ol>
+                        </div>
+                    </li>
+                    <li><a href="#" class="m5">체험신청 인원 관리</a></li>
+                    <li><a href="#" class="m6">배정 관리</a></li>
+                    <li><a href="#" class="m7">출결 관리</a></li>
+                    <li><a href="#" class="m8">보고서</a></li>
+                    <li><a href="#" class="m9">고객센터</a></li>
+                    <li><a href="#" class="m10">관리자 관리</a></li>
+                </ul>
+            </div>
+            <!--//LNB-->
+            <!--Data Area-->
+            <div class="Section DataArea">
+                <!--승마장 관리 > 승마장배정현황(목록)-->
+                <div class="Article GroundMgmtAsgmt">
+                    <h2 class="PageTitle">
+                        승마장 관리 <i><img src="../images/admin/icon_location_arrow.png"/></i> 배정현황
+                        <span class="year">
+                            <span class="tit">운영년도</span>
+                            <select class="select">
+                                <option>2020년도</option>
+                            </select>
+                        </span>
+                    </h2>
+                    <!--검색-->
+                    <div class="DataSearch">
+                        <dl>
+                            <dt>지역선택</dt>
+                            <dd>
+                                <select class="select Area">
+                                    <option>전체</option>
+                                </select>
+                            </dd>
+                        </dl>
+                        <dl>                      
+                            <dt>승마장명</dt>
+                            <dd><input type="text" class="enter SearchBar" placeholder="전체"/></dd>
+                        </dl>
+                        <button class="CommBtn Search">검색</button>
+                    </div>
+                    <!--//검색-->
+                    <!--데이터-->
+                    <div class="top_ctrl">
+                        <select class="select PageEA">
+                            <option>10개씩 보기</option>
+                        </select>
+                        <button class="CommBtn Add">+ 추가하기</button>
+                    </div>
+                    <form class="TableWrap">
+                        <table class="HasTopTH">
+                            <colgroup>
+                                <col width="4%">
+                                <col width="8%">
+                                <col width="8%">
+                                <col width="15%">
+                                <col width="8%"> 
+                                <col width="6.5%"> 
+                                <col width="6.5%"> 
+                                <col width="6.5%"> 
+                                <col width="6.5%"> 
+                                <col width="6.5%"> 
+                                <col width="6.5%"> 
+                                <col width="6.5%"> 
+                                <col width="*"> 
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th rowspan="2">NO</th>
+                                    <th rowspan="2">승마장명</th>
+                                    <th rowspan="2">지역</th>
+                                    <th rowspan="2">참여관리</th>
+                                    <th rowspan="2">배정인원</th>
+                                    <th colspan="7">인원배정</th>
+                                    <th rowspan="2">관리</th>
+                                </tr>
+                                <tr>
+                                    <td>월</td>
+                                    <td>화</td>
+                                    <td>수</td>
+                                    <td>목</td>
+                                    <td>금</td>
+                                    <td>토</td>
+                                    <td>일</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2</td>
+                                    <td>ㅇㅇ승마장</td>
+                                    <td>부천시</td>
+                                    <td>승인</td>
+                                    <td>100명</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>25</td>
+                                    <td>25</td>
+                                    <td>
+                                        <button class="CommBtn Modify">수정</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>ㅇㅇ승마장</td>
+                                    <td>광명시</td>
+                                    <td>비승인</td>
+                                    <td>100명</td>
+                                    <td>미배정</td>
+                                    <td>미배정</td>
+                                    <td>미배정</td>
+                                    <td>미배정</td>
+                                    <td>미배정</td>
+                                    <td>100</td>
+                                    <td>100</td>
+                                    <td>
+                                        <button class="CommBtn Modify">수정</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                    <!--//데이터-->
+                    <!--Paging-->
+                    <div class="paging">
+                        <ul>
+                            <li><a href="#"><img src="../images/admin/first_page.png"/></a></li>
+                            <li><a href="#" class="now">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">7</a></li>
+                            <li><a href="#">8</a></li>
+                            <li><a href="#">9</a></li>
+                            <li><a href="#">10</a></li>
+                            <li><a href="#"><img src="../images/admin/last_page.png"/></a></li>
+                        </ul>
+                    </div>
+                    <!--//Paging-->
+                    <!--[팝업]○○승마장 배정 추가-->
+                    <div class="LayerPopup">
+                        <div class="PopupData GroundAsgmtAddLayer">
+                            <a href="#" class="popup_close"><img src="../images/admin/popup_close.png"/></a>
+                            <h4 class="pop_tit">○○승마장 배정 추가</h4>
+                            <table>
+                                <colgroup>
+                                    <col width="110">
+                                    <col width="*">
+                                </colgroup>                     
+                                <tr>
+                                    <th>참여지역</th>
+                                    <td>부천시</td>
+                                </tr>
+                                <tr>
+                                    <th>배정인원</th>
+                                    <td>100명</td>
+                                </tr>
+                                <tr>
+                                    <th>월요일</th>
+                                    <td><input type="password" class="enter long" placeholder="배정인원을 입력해 주세요"/> 명</td>
+                                </tr>
+                                <tr>
+                                    <th>화요일</th>
+                                    <td><input type="password" class="enter long" placeholder="배정인원을 입력해 주세요"/> 명</td>
+                                </tr>
+                                <tr>
+                                    <th>수요일</th>
+                                    <td><input type="password" class="enter long" placeholder="배정인원을 입력해 주세요"/> 명</td>
+                                </tr>
+                                <tr>
+                                    <th>목요일</th>
+                                    <td><input type="password" class="enter long" placeholder="배정인원을 입력해 주세요"/> 명</td>
+                                </tr>
+                                <tr>
+                                    <th>금요일</th>
+                                    <td><input type="password" class="enter long" placeholder="배정인원을 입력해 주세요"/> 명</td>
+                                </tr>
+                                <tr>
+                                    <th>토요일</th>
+                                    <td><input type="password" class="enter long" placeholder="배정인원을 입력해 주세요"/> 명</td>
+                                </tr>
+                                <tr>
+                                    <th>일요일</th>
+                                    <td><input type="password" class="enter long" placeholder="배정인원을 입력해 주세요"/> 명</td>
+                                </tr>
+                                <tr>
+                                    <th>참여관리</th>
+                                    <td>
+                                        <button class="CommBtn Approval">승인</button>
+                                        <button class="CommBtn NonApproval">비승인</button>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class="bottom_btn">
+                                <button class="CommBtn Register">등록하기</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--//[팝업]○○승마장 배정 추가-->
+                </div> 
+                <!--승마장 관리 > 승마장배정현황(목록)-->
+            </div>
+            <!--//Data Area-->
+        </div>
+        <!--//Content-->
+    </div>
+</body>
+</html>

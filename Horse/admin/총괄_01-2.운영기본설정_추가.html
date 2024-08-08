@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>승마관리시스템</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/admin.css" />
+    <script type="text/javascript" src="../scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="../scripts/admin.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!--Header-->
+        <div class="Header">
+            <h1 class="logo">승미인관리시스템 ADMIN</h1>
+            <div class="util">
+                <a href="#" class="go_home"><span>학생승마체험<br/>홈페이지 바로가기</span></a>
+                <a href="#" class="logout"><img src="../images/admin/icon_login_out.png" alt="로그아웃"/></a>
+            </div>
+        </div>
+        <!--//Header-->
+        <!--Content-->
+        <div class="Container">
+            <!--LNB-->
+            <div class="Nav">
+                <ul>
+                    <li><a href="#" class="m1 on">운영기본설정(총괄,도)</a></li>
+                    <li><a href="#" class="m2">시&middot;군 관리</a></li>
+                    <li><a href="#" class="m3">학교 관리</a></li>
+                    <li><a href="#" class="m4">승마장 관리</a></li>
+                    <li><a href="#" class="m5">체험신청 인원 관리</a></li>
+                    <li><a href="#" class="m6">배정 관리</a></li>
+                    <li><a href="#" class="m7">출결 관리</a></li>
+                    <li><a href="#" class="m8">보고서</a></li>
+                    <li><a href="#" class="m9">고객센터</a></li>
+                    <li><a href="#" class="m10">관리자 관리</a></li>
+                </ul>
+            </div>
+            <!--//LNB-->
+            <!--Data Area-->
+            <div class="Section DataArea">
+                <!--운영기본설정(추가)-->
+                <div class="Article OperBasicSettingAdd">
+                    <h2 class="PageTitle">운영기본설정 <button class="CommBtn Save">저장하기</button></h2>
+                    <!--데이터-->
+                    <form class="TableWrap">
+                        <table class="HasLeftTH">
+                            <colgroup>
+                                <col width="210">
+                                <col width="*">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>운영연도<span class="essential">*</span></th>
+                                    <td>
+                                        <select class="select yy">
+                                            <option>2020년</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>체험모집 일정등록<span class="essential">*</span></th>
+                                    <td>
+                                        <input type="text" class="enter date"/>&nbsp;<span>~</span>&nbsp;<input type="text" class="enter date"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>체험모집여부</th>
+                                    <td>
+                                        <input type="radio" class="radio" name="select1" id="Select1_1">&nbsp;<label class="label" for="Select1_1">모집실시</label>&nbsp;
+                                        <input type="radio" class="radio" name="select1" id="Select1_2" checked="checked">&nbsp;<label class="label" for="Select1_2">미운영</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>결과조회버튼</th>
+                                    <td>
+                                        <input type="radio" class="radio" name="select2" id="Select2_1">&nbsp;<label class="label" for="Select2_1">활성</label>&nbsp;
+                                        <input type="radio" class="radio" name="select2" id="Select2_2" checked="checked">&nbsp;<label class="label" for="Select2_2">비활성</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>체험활동버튼</th>
+                                    <td>
+                                        <input type="radio" class="radio" name="select3" id="Select3_1">&nbsp;<label class="label" for="Select3_1">활성</label>&nbsp;
+                                        <input type="radio" class="radio" name="select3" id="Select3_2" checked="checked">&nbsp;<label class="label" for="Select3_2">비활성</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>체험공고<span class="essential">*</span></th>
+                                    <td>
+                                        <div class="info_box">
+                                            <span class="info_text">* 공고내용에 해당 하는 내용을 입력해 주세요.</span>
+                                            <span class="prvw_btn">미리보기</span>
+                                        </div>
+                                        <div class="editor">에디터</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>초기화관리</th>
+                                    <td>
+                                        <div class="ResetMgmt">
+                                            <a href="#" class="all"><input type="checkbox"/>전체초기화</a>
+                                            <a href="#" class="each"><input type="checkbox"/>배정인원설정 초기화</a>
+                                            <a href="#" class="each"><input type="checkbox"/>신청학생정보 초기화</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                    <!--//데이터-->
+                </div> 
+                <!--운영기본설정(추가)-->
+            </div>
+            <!--//Data Area-->
+        </div>
+        <!--//Content-->
+    </div>
+</body>
+</html>
