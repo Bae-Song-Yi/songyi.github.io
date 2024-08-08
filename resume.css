@@ -156,9 +156,13 @@ ul > li:before {
     background: #f76e33;
     color: #fff;
     font-weight: bold;
-    padding: 10px 5px;
     border-radius: 6px;
     text-decoration: none;
+    width: 130px;
+    height: 60px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media screen and (max-width: 1000px) {
