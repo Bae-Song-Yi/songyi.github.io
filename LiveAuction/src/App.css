@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/inter');
+@import url('https://fonts.cdnfonts.com/css/montserrat');
+
+
+blockquote,
+body,
+button,
+code,
+dd,
+div,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+legend,
+li,
+ol,
+p,
+pre,
+select,
+td,
+textarea,
+th,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: #EDEFF0;
+}
+
+body.no-scroll{
+  overflow-y: hidden;
+}
+
+fieldset,
+img {
+  border: 0;
+}
+
+dl,
+li,
+menu,
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: '';
+  content: none;
+}
+
+button,
+input,
+select,
+textarea {
+  vertical-align: middle;
+  font-size: 100%;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  -webkit-text-size-adjust: none;
+}
+
+input:checked[type='checkbox'] {
+  background-color: #666;
+  -webkit-appearance: checkbox;
+}
+
+html input[type='button'],
+input[type='email'],
+input[type='password'],
+input[type='reset'],
+input[type='search'],
+input[type='submit'],
+input[type='tel'],
+input[type='text'] {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+input[type='search']::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+body,
+button,
+input,
+select,
+td,
+textarea,
+th {
+  font-size: 14px;
+  line-height: 1.5;
+  font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+  font-weight: 400;
+  color: #000;
+}
+
+a {
+  color: #000;
+}
+
+a,
+a:active,
+a:hover {
+  text-decoration: none;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+var {
+  font-style: normal;
+  font-weight: 400;
+}
+
+#root{
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+
+.row {
+  padding: 0 48px;
+}
+
+div::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+div::-webkit-scrollbar:vertical {
+  width: 6px;
+}
+
+div::-webkit-scrollbar:horizontal {
+  height: 11px;
+}
+
+div::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+div::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.ant-modal-wrap {
+  width: 100%;
+  height: 1005;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ant-modal-body {
+  height: 420px;
+}
+
+.ant-modal {
+  top: auto;
+  width: 550px;
+  padding-bottom: 0 !important;
+}
+
+.ant-modal-header {
+  border-radius: 5px 5px 0 0;
+  display: none;
+}
+
+.ant-modal-content {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.ant-modal-footer {
+  display: none;
+}
+
+.ant-table-cell {
+  font-size: 12px;
+}
+
+.ant-table-body {
+  height: 270px;
+}
+
+.ant-table-container table {
+  table-layout: auto !important;
+}
+
+.ant-table-header th {
+  white-space: nowrap;
+  text-align: center !important;
+}
+
+.ant-table-header th,
+.ant-table table td {
+  width: 18%;
+  word-break: keep-all;
+}
+
+.ant-table-cell.ant-table-cell-scrollbar {
+  padding: 0 4px !important;
+}
+
+.ant-table-header th:nth-child(1),
+.ant-table table td:nth-child(1) {
+  width: 10%;
+}
+
+.ant-table table td:nth-child(6) {
+  text-align: center;
+}
+
+div.bidState {
+  display: inline-flex;
+  padding: 0 7px;
+  height: 16px;
+  align-items: center;
+  justify-content: center;
+  background-color: #d63300;
+  color: #ffffff;
+  border-radius: 15px;
+  font-size: 10px;
+}
+
+.bidding-btn-wrap.preparing > span::selection,
+.bidding-btn-wrap.preparing > span img::selection,
+.bidding-btn-wrap.bid > span::selection,
+.bidding-btn-wrap.bid > span img::selection{
+  background: transparent;
+}
+.bidding-btn-wrap.preparing > span::-moz-selection,
+.bidding-btn-wrap.preparing > span img::-moz-selection,
+.bidding-btn-wrap.bid > span::-moz-selection,
+.bidding-btn-wrap.bid > span img::-moz-selection{
+  background: transparent;
+}
+.bidding-btn-wrap.preparing > span::-webkit-selection,
+.bidding-btn-wrap.preparing > span img::-webkit-selection,
+.bidding-btn-wrap.bid > span::-webkit-selection,
+.bidding-btn-wrap.bid > span img::-webkit-selection{
+  background: transparent;
+}
+.bidding-btn-wrap.preparing > span::-o-selection,
+.bidding-btn-wrap.preparing > span img::-o-selection,
+.bidding-btn-wrap.bid > span::-o-selection,
+.bidding-btn-wrap.bid > span img::-o-selection{
+  background: transparent;
+}
+
+.Toastify{
+  white-space: pre-wrap;
+}
+
+@media all and (max-width:1200px){
+  .row {
+    padding: 0 20px;
+  }
+}
+
+@media all and (max-width:840px){
+  #root{
+    overflow-x: visible;
+  }
+
+  .Toastify__toast-container--bottom-center, 
+  .Toastify__toast-container--bottom-left, 
+  .Toastify__toast-container--bottom-right{
+    bottom: 105px;
+  }
+}
+
+@media all and (max-width:820px){
+  .ant-modal{
+    max-width: 360px;
+  }
+}
+
+@media all and (max-width:720px){
+  .Toastify__toast-container--bottom-center, 
+  .Toastify__toast-container--bottom-left, 
+  .Toastify__toast-container--bottom-right{
+    top: 8.8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 46px);
+    width: -webkit-calc(100% - 46px);
+    width: -moz-calc(100% - 46px);
+    width: -o-calc(100% - 46px);
+  }
+  
+}
+
+@media all and (max-width:420px){
+  .ant-modal{
+    max-width: 270px;
+  }
+}
+
