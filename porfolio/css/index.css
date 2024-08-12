@@ -364,9 +364,10 @@ header h1 a{
     opacity: 0.6;
 }
 
-.work-sec .text b{
+.work-sec .text a{
     color: #ff4848;
     text-decoration: underline;
+    font-weight: bold;
 }
 
 .work-sec .list{
