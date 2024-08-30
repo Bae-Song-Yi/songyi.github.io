@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/font.css" />
+        <link rel="stylesheet" type="text/css" href="css/reset.css" />
+        <link rel="stylesheet" type="text/css" href="css/lunch.css" />
+        <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+        <script type="text/javascript" src="js/aos.js" defer></script>
+    </head>
+<body>
+    <div class="wrap cafetaria">
+        <header>
+            <h1><a href="portfolio.html">PORTFOLIO</a></h1>
+        </header>
+        <div class="header-img">
+            <div class="inner" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="1000">
+                <h2>사내 런치오더</h2>
+                <div class="project-desc">
+                    <dl>
+                        <dt>&middot; Period</dt>
+                        <dd>2023.01 - 2023.02</dd>
+                    </dl>
+                    
+                    <dl>
+                        <dt>· Skill</dt>
+                        <dd>HTML, CSS, JQUERY</dd>
+                    </dl>
+                    
+                    <dl>
+                        <dt>&middot; Publishing & Front</dt>
+                        <dd>100%</dd>
+                        <dd>Responsive Web</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <section>
+                <article>
+                    <div class="prj-background">
+                        <div class="title-main">
+                            <h3 class="layer-title">Project Background</h3>
+                            <span>사내 구내 식당 점심 구독 서비스 개발</span>
+                        </div>
+                        <div class="needs-wrap">
+                            <span data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="1500">Client Needs</span>
+                            <ul class="list" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">
+                                <li>PC환경에서 최적화 되어있지만 모바일환경도 최적화 되었으면,,</li>
+                                <li>신청한 메뉴 확인하고싶어요,,</li>
+                                <li>복잡한 양도, 인계 프로세스,,</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 개발 Point -->
+                    <div class="development-point">
+                        <div class="inner">
+                            <h3 class="layer-title-ot">Development Point✦</h3>
+                            <p data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="1000">
+                                <b>calendar 부트스트랩 없이 직접 캘린더 개발 작업</b> <br/>
+                                -> 부트스트랩 사용 시 기본 스타일이나 스크립트가 특정 요구 사항과 충돌하여, 
+                                캘린더의 사용자 정의 기능이나 인터랙션을 제대로 구현하기 어려웠습니다. 
+                                유연하게 요구 사항에 맞는 캘린더를 개발하기 위해 부트스트랩 없이 직접 개발하는 방식을 선택했습니다.
+                            </p>
+                        </div>
+                        
+                    </div>
+                    <!-- //개발 Point -->
+                    <div class="design">
+                        <h3 class="layer-title-ot">Design</h3>
+                    </div>
+
+                    <div class="frame-wrap">
+                        <div class="title-main">
+                            <h3 class="layer-title">MarkUp</h3>
+                        </div>
+
+                        <script type="text/javascript" src="js/lunch.js"></script>
+                        <script type="text/javascript" src="js/calendar.js"></script>
+                        <div class="frame">
+                            <div class="inner">
+                                <div class="cafe-reservation">
+                                    <div class="right-area">
+                                        <div class="top-area">
+                                            <!-- <h2 class="tit">예약하기</h2> -->
+                                            <div class="ctrl-month">
+                                                <span id="prevMonth" class="prev"><img src="img/lunch/icon_left.png"></span>
+                                                <span id="currentMonth" class="txt">2024. 8</span>
+                                                <span id="nextMonth" class="next"><img src="img/lunch/icon_right.png"></span>
+                                            </div>
+                                            <a href="#"><img src="img/lunch/icon_menu.png"></a>
+                                        </div>
+                                        <div class="apply-menu-detail">
+                                            <div><img src="https://d2fbjqd2wdto8s.cloudfront.net/images/Cafeteria/11월 막주 메뉴판_22110428.jpg"></div>
+                                            
+                                        </div>
+                                        <div class="apply-wrap" style="padding-bottom: 52.8333px;">
+                                            <div class="calendar">
+                                                <ul class="tab">
+                                                    <li><a href="#" class="on one-day">일일</a></li>
+                                                    <li><a href="#" class="one-week">일주일</a></li>
+                                                    <li><a href="#" class="one-month">한달</a></li>
+                                                </ul>
+                        
+                                                <div class="lunch-order">
+                                                    <div class="day-wrap">
+                                                        <span><i class="today" data-day="13" data-month="8">13(화)</i></span>
+                                                        <a href="#" class="calendar-btn"><img src="img/lunch/icon_calendar.png"></a>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                           
+                                            <div class="lunch-order">
+                                                <!--메뉴-->
+                                                <ul class="menu">
+                                                    <li class="rice"><a href="#">일반식</a></li>
+                                                    <li class="salad"><a href="#">샐러드</a></li>
+                                                    <li class="sandwich"><a href="#">샐러드&amp;샌드위치</a></li>
+                                                </ul>
+                                                <!--//메뉴-->
+                        
+                                                <button class="apply-btn">신청하기</button>
+                                            </div>
+                                        </div>
+                        
+                                        <!--하단 메뉴-->
+                                        <div class="bottom-menu">
+                                            <a href="#" class="on">
+                                                <i class="img regi"></i>
+                                                <span>신청하기</span>
+                                            </a>
+                                            <a href="#">
+                                                <i class="img list"></i>
+                                                <span>신청내역</span>
+                                            </a>
+                                            <a href="#">
+                                                <i class="img state"></i>
+                                                <span>양도현황</span>
+                                            </a>
+                                        </div>
+                                        <!--//하단 메뉴-->
+                        
+                                        <!--캘린더 팝업-->
+                                        <div class="calendar-popup" style="display: none;">
+                                            <div class="calendar-data">
+                                                <div class="calendar">
+                                                    <div class="ctrl-month">
+                                                        <span id="prevMonth" class="prev"><img src="img/lunch/icon_left.png"></span>
+                                                        <span id="currentMonth" class="txt">2024. 8</span>
+                                                        <span id="nextMonth" class="next"><img src="img/lunch/icon_right.png"></span>
+                                                    </div>
+                                                    
+                                                    <ul class="tab">
+                                                        <li><a href="#" class="on one-day">일일</a></li>
+                                                        <li><a href="#" class="one-week">일주일</a></li>
+                                                        <li><a href="#" class="one-month">한달</a></li>
+                                                    </ul>
+                                                    
+                                                    <!--달력-->
+                                                    <table id="calendar">
+                                                        <thead>
+                                                            <tr class="week">
+                                                                <th><span>일</span></th>
+                                                                <th><span>월</span></th>
+                                                                <th><span>화</span></th>
+                                                                <th><span>수</span></th>
+                                                                <th><span>목</span></th>
+                                                                <th><span>금</span></th>
+                                                                <th><span>토</span></th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody><tr><td class="other-month sun"><span>28</span><div class="day-month">7</div></td><td class="other-month"><span>29</span><div class="day-month">7</div></td><td class="other-month"><span>30</span><div class="day-month">7</div></td><td class="other-month"><span>31</span><div class="day-month">7</div></td><td><span>1</span><div class="day-month">8</div></td><td><span>2</span><div class="day-month">8</div></td><td class="sat"><span>3</span><div class="day-month">8</div></td></tr><tr><td class="sun"><span>4</span><div class="day-month">8</div></td><td><span>5</span><div class="day-month">8</div></td><td><span>6</span><div class="day-month">8</div></td><td><span>7</span><div class="day-month">8</div></td><td><span>8</span><div class="day-month">8</div></td><td><span>9</span><div class="day-month">8</div></td><td class="sat"><span>10</span><div class="day-month">8</div></td></tr><tr class="multi-check"><td class="sun"><span>11</span><div class="day-month">8</div></td><td><span>12</span><div class="day-month">8</div></td><td class="today on"><span>13</span><div class="day-month">8</div></td><td><span>14</span><div class="day-month">8</div></td><td><span>15</span><div class="day-month">8</div></td><td><span>16</span><div class="day-month">8</div></td><td class="sat"><span>17</span><div class="day-month">8</div></td></tr><tr><td class="sun"><span>18</span><div class="day-month">8</div></td><td><span>19</span><div class="day-month">8</div></td><td><span>20</span><div class="day-month">8</div></td><td><span>21</span><div class="day-month">8</div></td><td><span>22</span><div class="day-month">8</div></td><td><span>23</span><div class="day-month">8</div></td><td class="sat"><span>24</span><div class="day-month">8</div></td></tr><tr><td class="sun"><span>25</span><div class="day-month">8</div></td><td><span>26</span><div class="day-month">8</div></td><td><span>27</span><div class="day-month">8</div></td><td><span>28</span><div class="day-month">8</div></td><td><span>29</span><div class="day-month">8</div></td><td><span>30</span><div class="day-month">8</div></td><td class="sat"><span>31</span><div class="day-month">8</div></td></tr></tbody>
+                                                    </table>
+                                                    <!--//달력-->
+                                                </div>
+                                                <div class="btns">
+                                                    <a href="#" class="reset">초기화</a>
+                                                    <button>확인</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--//캘린더 팝업-->
+                                    </div>
+                                </div>
+
+                                <ul class="how-list">
+                                    <li data-aos="fade-up" data-aos-duration="1000">신청한 메뉴 리스트, 모바일 체크인, 양도 및 인계 신규 개발되어 직원들의 만족도 90% 이상이에요.</li>
+                                    <li data-aos="fade-up" data-aos-duration="1000">모바일 체크인이 가능해져 점심시간 20분 절약할 수 있어요.</li>
+                                    <li data-aos="fade-up" data-aos-duration="1000">메뉴 선택 실수도 줄어들고, 양도 및 인계 프로세스 단순해졌어요.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 주요업무 -->
+                    <!-- <div class="result">
+                        <div class="title-main">
+                            <h5>Result</h5>
+                        </div>
+                        <ul>
+                            <li>프로젝트 기획</li>
+                            <li>신청한 메뉴 리스트, Mobile 체크인, 양도, 인계 기능 프론트 개발</li>
+                        </ul>
+                    </div> -->
+                    <!-- //주요성과 -->
+                </article>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

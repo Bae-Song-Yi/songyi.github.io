@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+        <script type="text/javascript" src="js/aos.js" defer></script>
+        <script type="text/javascript" src="js/lunch.js"></script>
+
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/font.css" />
+        <link rel="stylesheet" type="text/css" href="css/reset.css" />
+        <link rel="stylesheet" type="text/css" href="css/lunch.css" />
+    </head>
+<body>
+    <div class="wrap artek-project">
+        <header>
+            <h1><a href="portfolio.html">PORTFOLIO</a></h1>
+        </header>
+
+        <div class="header-img">
+            <div class="inner" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="1000">
+                <h2>Arte-K<br/> Renewal</h2>
+                <div class="project-desc">
+                    <dl>
+                        <dt>&middot; Period</dt>
+                        <dd>2024.06 - 진행중</dd>
+                    </dl>
+                    <dl>
+                        <dt>&middot; Skill</dt>
+                        <dd>HTML, REACT, TYPESCRIPT, CSS</dd>
+                    </dl>
+                    <dl>
+                        <dt>&middot; Publishing & Front</dt>
+                        <dd>100%</dd>
+                        <dd>Responsive Web</dd>
+                    </dl>
+                </div>
+                <a href="https://bae-song-yi.github.io/songyi.github.io/ArteK/list.html" class="link" target="_blank">Mark Up Site</a>
+            </div>
+        </div>
+        <div class="container">
+            <section>
+                <article>
+                    <div class="prj-background" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="1000">
+                        <div class="inner" >
+                            <div class="title-main">
+                                <h3 class="layer-title">Project Background<i>1</i></h3>
+                            </div>
+                            <div class="text">
+                                현재는 WIX로 컨텐츠 운영중이지만 창작자를 지원하고 컬렉터와 연결될 수 있도록 
+                                다양한 활동 개발을 위해 홈페이지 리뉴얼을 원해요.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="design">
+                        <h3 class="layer-title-ot">Design</h3>
+                    </div>
+
+                    <!-- 개발 Point -->
+                    <div class="development-point">
+                        <div class="inner">
+                            <h3 class="layer-title">Development Point✦<i>2</i></h3>
+                            <ul>
+                                <li data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="1000">부트스트랩 없이 직접 개발</li>
+                                <li data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="1700">상황에 맞는 Hook 사용</li>
+                                <li data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="2400">반응형 미디어쿼리 사용</li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                    <!-- //개발 Point -->
+
+                    <div class="study">
+                        <div class="inner">
+                            <div class="title-main">
+                                <h3 class="layer-title">Code Review<i>3</i></h3>
+                                <p>리엑트 변환 작업 하고있어요!</p>
+                            </div>
+    
+                            <div class="question">
+                                <img src="img/artek/artek_main.jpg">
+                                <ul>
+                                    <li class="arrow" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">
+                                        1. 텍스트 박스 색상은 작품에 따라 달라지므로 동적으로 처리해주었고,
+                                        개발시 확인하기 편하도록 <b>인라인 스타일</b>로 적용했습니다.
+                                    </li>
+
+                                    <li class="arrow arrow-left" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">
+                                        2. 카드 리스트 형식의 값들은 useState를 사용하여 샘플 데이터값들을 넣어주었고, 초기 값을 설정하여 노출시켜주었다.<br/>
+                                        <b>무한 스크롤 기능은 부트스트랩 없이 직접 개발 해주었습니다.</b><br/>
+                                        useCallback을 사용하여 handleScroll 함수가 상태 값 변화에 따라 효율적으로 재생성되도록 하였으며, 불필요한 함수 
+                                        재생성을 방지하여 성능을 최적화 해줄 수 있도록 처리하였습니다.
+                                    </li>
+
+                                    <li class="arrow" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">
+                                        3. useRef 훅과 같이 컴포넌트를 처음 렌더링할 때 null 또는 undefined인 경우 에러가 발생하지 않도록, 
+                                        <b>옵셔널 체이닝 연산자</b>를 사용하여 undefined를 반환하도록 처리했습니다.
+                                    </li>
+
+                                    <li class="arrow arrow-left" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">
+                                        4. 탭영역 같이 <b>반복되는 컴포넌트</b>를 렌더링 할 떄
+                                        <b>map()내장함수</b>를 사용하여 배열에 문자열을 입력 해준 후 a태그를 반환하도록 처리했습니다.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </article>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
