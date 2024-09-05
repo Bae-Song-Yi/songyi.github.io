@@ -473,9 +473,9 @@ section > article{
 }
 
 .project-wrap .list .thumb .desc{
-    position: absolute;
+    /* position: absolute;
     top: 0;
-    height: 100%;
+    height: 100%; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -493,12 +493,18 @@ section > article{
     padding: 20px;
     color: #fff;
     line-height: 1.4;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .project-wrap .list .thumb .tech{
     padding: 20px;
     display: flex;
     align-items: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
 .project-wrap .list .thumb span{
