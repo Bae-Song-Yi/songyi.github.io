@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/font.css" />
+        <link rel="stylesheet" type="text/css" href="css/reset.css" />
+        <link rel="stylesheet" type="text/css" href="css/lunch.css" />
+
+        <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+        <script type="text/javascript" src="js/aos.js" defer></script>
+    </head>
+<body>
+    <div class="wrap live-auction">
+        <!-- <header>
+            <h1><a href="portfolio.html">PORTFOLIO</a></h1>
+        </header> -->
+        <div class="container">
+            <section>
+                <article>
+                    <div class="sticky-wrap">
+                        <div class="sticky-bar">
+                            <div class="inner">
+                                <h2>라이브 경매</h2>
+                                <div class="project-desc">
+                                    <dl>
+                                        <dt>Description</dt>
+                                        <dd>온라인에서 편리하게 실시간 경매를 참여하기 위한 웹 서비스 개발</dd>
+                                    </dl>
+        
+                                    <dl>
+                                        <dt>Period</dt>
+                                        <dd>2023.12 - 2024.01</dd>
+                                    </dl>
+                                    
+                                    <dl>
+                                        <dt>Skill</dt>
+                                        <dd>REACT, TYPESCRIPT, CSS</dd>
+                                    </dl>
+                                    
+                                    <dl>
+                                        <dt>Front</dt>
+                                        <dd>100%</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <!-- 프로젝트 배경 -->
+                            <div class="background">
+                                <h5 class="layer-tit">Project Background</h5>
+                                <ul class="list">
+                                    <li>PC 환경에 최적화 되어있는 서비스<br/> → 모든 디바이스 최적화 필요</li>
+                                    <li>응찰 버튼 실수로 클릭하는 상황 <br/> → 응찰 버튼 민감도 강화</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- //프로젝트 배경 -->
+
+                            <!-- 주요기능 -->
+                            <div class="main-features">
+                                <div><img src="img/detail/live/live_mockup.png"></div>
+                                <h5 class="layer-tit">Main features</h5>
+                                <ul class="list">
+                                    <li>스켈레톤 UI 적용 (데이터를 가져오는 동안 보여주는 화면) </li>
+                                    <li>
+                                        응찰가 변경됐을 경우 시각적 효과를 주기위한 애니메이션 기능 적용<br/>
+                                        -> 금액 요소 깜박이 애니메이션
+                                    </li>
+                                    <li>진행중인 LOT 클릭시 현재 진행중인 작품 자동 포커싱 </li>
+                                    <li>모바일의 경우 응찰버튼 민감도를 강화하기 위해 잠금 기능 적용</li>
+                                </ul>
+                            </div>
+                            <!-- //주요기능 -->
+                        </div>
+                    </div>
+
+                    <div class="overview-wrap bg1">
+                        <h5 class="layer-tit">Project Overview</h5>
+                        <ul class="list">
+                            <li class="on">스켈레톤 UI 적용 </li>
+                            <li>깜박이 애니메이션</li>
+                            <li>진행중인 LOT 클릭시 현재 진행중인 작품 자동 포커싱 </li>
+                            <li>잠금 기능 적용</li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </div>
+</body>
+
+<script>
+    document.querySelectorAll('.overview-wrap li').forEach(function(item, index) {
+        item.addEventListener('click', function(className) {
+            const itemIndex = index + 1;
+            const overviewEle = document.querySelector('.overview-wrap');
+            const newClass = `bg${itemIndex}`;
+
+            document.querySelectorAll('.overview-wrap li').forEach(function(all) {
+                all.classList.remove('on');
+            });
+
+            item.classList.add('on');
+
+            overviewEle.classList.forEach(function(className) {
+                if (className.startsWith('bg') && className !== newClass) {
+                    overviewEle.classList.remove(className);
+                }
+            });
+
+            if (!overviewEle.classList.contains(newClass)) {
+                overviewEle.classList.add(newClass);
+            }
+            
+            
+        });
+    });
+</script>
+</html>
