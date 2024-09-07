@@ -20,7 +20,7 @@ header{
 
 .header-img{
     height: 600px;
-    background: url(../img/lunch/luch_bg.png) no-repeat right center;
+    background: url(../img/detail/lunch/luch_bg.png) no-repeat right center;
     background-size: cover;
     display: flex;
     align-items: end;
@@ -200,17 +200,17 @@ section > article{
 }
 
 .needs-wrap .list li:nth-child(1)::before{
-    background: url(../img/common/emoji-man1.png);
+    background: url(../img/detail/lunch/emoji-man1.png);
     background-size: cover;
 }
 
 .needs-wrap .list li:nth-child(2)::before{
-    background: url(../img/common/emoji-man2.png);
+    background: url(../img/detail/lunch/emoji-man2.png);
     background-size: cover;
 }
 
 .needs-wrap .list li:nth-child(3)::before{
-    background: url(../img/common/emoji-man3.png);
+    background: url(../img/detail/lunch/emoji-man3.png);
     background-size: cover;
 }
 
@@ -346,7 +346,7 @@ section > article{
     white-space: wrap;
     text-overflow: ellipsis;
     padding: 0 16px;
-    background: url(../img/lunch/icon_down.png)no-repeat right center;
+    background: url(../img/detail/lunch/icon_down.png)no-repeat right center;
     background-size: 16px;
     background-position-x: calc(100% - 18px);
     background-position-x: -webkit-calc(100% - 18px);
@@ -712,27 +712,27 @@ section > article{
 }
 
 .cafe-reservation .bottom-menu .img.regi{
-    background-image: url(../img/lunch/icon_bottom_m1.png);
+    background-image: url(../img/detail/lunch/icon_bottom_m1.png);
 }
 
 .cafe-reservation .bottom-menu .img.list{
-    background-image: url(../img/lunch/icon_bottom_m2.png);
+    background-image: url(../img/detail/lunch/icon_bottom_m2.png);
 }
 
 .cafe-reservation .bottom-menu .img.state{
-    background-image: url(../img/lunch/icon_bottom_m3.png);
+    background-image: url(../img/detail/lunch/icon_bottom_m3.png);
 }
 
 .cafe-reservation .bottom-menu a.on .img.regi{
-    background-image: url(../img/lunch/icon_bottom_m1_on.png);
+    background-image: url(../img/detail/lunch/icon_bottom_m1_on.png);
 }
 
 .cafe-reservation .bottom-menu a.on .img.list{
-    background-image: url(../img/lunch/icon_bottom_m2_on.png);
+    background-image: url(../img/detail/lunch/icon_bottom_m2_on.png);
 }
 
 .cafe-reservation .bottom-menu a.on .img.state{
-    background-image: url(../img/lunch/icon_bottom_m3_on.png);
+    background-image: url(../img/detail/lunch/icon_bottom_m3_on.png);
 }
 
 
@@ -906,7 +906,7 @@ section > article{
 
 .design{
     height: 100vh;
-    background: #999 url(../img/lunch/overview_bg.png)no-repeat center;
+    background: #999 url(../img/detail/lunch/overview_bg.png)no-repeat center;
     background-size: cover;
     position: relative;
     display: flex;
