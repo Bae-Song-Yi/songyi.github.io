@@ -78,7 +78,7 @@ $(document).ready(function(){
     const maskingSampleImg = $('.masking .upload-img .sample-img');
     const maskingTit = $('.masking h5');
     let maskImg = '';
-    const imgSrc = 'img/masking/img/gif/';
+    const imgSrc = 'img/detail/masking/img/gif/';
 
     function maskAuthSetting(){
         var companyType = $("#company_type").val();
