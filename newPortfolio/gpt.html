@@ -14,266 +14,215 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
         <script type="text/javascript" src="js/aos.js" defer></script>
     </head>
-<body>
-    <div class="wrap detail-wrap gpt-detail">
-        <!-- <header>
-            <h1><a href="portfolio.html">PORTFOLIO</a></h1>
-        </header> -->
-        <div class="container">
-            <section>
-                <article>
-                    <div class="sticky-wrap">
-                        <div class="sticky-bar">
-                            <div class="inner">
-                                <h2>GPT API 활용</h2>
-                                <div class="project-desc">
-                                    <dl>
-                                        <dt>Description</dt>
-                                        <dd>GPT API를 사용하여 사업자 등록증 이미지의 텍스트 추출</dd>
-                                    </dl>
-        
-                                    <dl>
-                                        <dt>Period</dt>
-                                        <dd>2024.07 - 2024.08</dd>
-                                    </dl>
-                                    
-                                    <dl>
-                                        <dt>Skill</dt>
-                                        <dd>JSON, JAVASCRIPT, POSTMAN</dd>
-                                    </dl>
-                                    
-                                    <dl>
-                                        <dt>Front</dt>
-                                        <dd>100%</dd>
-                                    </dl>
+    <body>
+        <div class="wrap detail-wrap gpt-detail">
+            <!-- <header>
+                <h1><a href="portfolio.html">PORTFOLIO</a></h1>
+            </header> -->
+            <div class="container">
+                <section>
+                    <article>
+                        <div class="sticky-wrap">
+                            <div class="sticky-bar">
+                                <div class="inner">
+                                    <h2>GPT API 활용</h2>
+                                    <div class="project-desc">
+                                        <dl>
+                                            <dt>Description</dt>
+                                            <dd>GPT API를 사용하여 사업자 등록증 이미지의 텍스트 추출</dd>
+                                        </dl>
+            
+                                        <dl>
+                                            <dt>Period</dt>
+                                            <dd>2024.07 - 2024.08</dd>
+                                        </dl>
+                                        
+                                        <dl>
+                                            <dt>Skill</dt>
+                                            <dd>JSON, JAVASCRIPT, POSTMAN</dd>
+                                        </dl>
+                                        
+                                        <dl>
+                                            <dt>Front</dt>
+                                            <dd>100%</dd>
+                                        </dl>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="project-info">
+                                <!-- 프로젝트 배경 -->
+                                <div class="background">
+                                    <h5 class="layer-tit">Project Background</h5>
+                                    <ul class="list">
+                                        <li>가입시 사업자 등록증 기입하는 정보가 너무 많은거 같다.</li>
+                                        <li>효율적으로 처리하는 방법 무엇이 있을까</li>
+                                    </ul>
+                                </div>
+                                <!-- //프로젝트 배경 -->
+
+                                <!-- 주요기능 -->
+                                <div class="main-features">
+                                    <div class="mocck-img"><img src="img/detail/gpt/gpt_mockup.png"></div>
+                                    <h5 class="layer-tit">Main features</h5>
+                                    <ul class="list">
+                                        <li>POSTMAN 통해 프롬프트 적용된 GPT 답변 취득</li>
+                                        <li>이미지 텍스트 추출 정확도 90% 확인</li>
+                                    </ul>
+                                </div>
+                                <!-- //주요기능 -->
+                            </div>
                         </div>
-                        <div class="project-info">
-                            <!-- 프로젝트 배경 -->
-                            <div class="background">
-                                <h5 class="layer-tit">Project Background</h5>
-                                <ul class="list">
-                                    <li>가입시 사업자 등록증 기입하는 정보가 너무 많은거 같다.</li>
-                                    <li>효율적으로 처리하는 방법 무엇이 있을까</li>
+
+                        <div class="overview-wrap bg1">
+                            <h5 class="layer-tit">Code Review</h5>
+                            <div>
+                                <ul class="prompt-img">
+                                    <li class="before">
+                                        <b>프롬프트</b>
+                                        <img src="img/detail/gpt/gpt_overview1.png">
+                                    </li>
+                                    <li class="after">
+                                        <b>취득 답변</b>
+                                        <img src="img/detail/gpt/gpt_overview2.png">
+                                    </li>
+                                </ul>
+        
+                                <p class="description">
+                                    POSTMAN 플랫폼을 통해 GPT API에 이미지 내용을 최대한 정확하게 추출 할 수 있도록 질문을 여러 번 하며 정확도를 높여주었다. (정확도 90%)
+                                </p>
+                            </div>
+
+                            <div>
+                                <div class="code-img">
+                                    <img src="img/detail/gpt/gpt_code.png">
+                                </div>
+                                <ul class="description">
+                                    <li>GPT API에 POST 요청하여, 이미지의 텍스트 내용을 분석하고 이를 JSON 형식으로 반환시켜주었다.</li>
+                                    <li> escapeHtml 함수를 사용해 HTML로 변환하여 페이지에 표시 해 줄 수 있도록 해주었다.</li>
+                                    <li>API 호출을 실패할 경우, 오류 메시지를 페이지에 표시하도록 구현 해주었다.</li>
                                 </ul>
                             </div>
-                            <!-- //프로젝트 배경 -->
-
-                            <!-- 주요기능 -->
-                            <div class="main-features">
-                                <div class="mocck-img"><img src="img/detail/gpt/gpt_mockup.png"></div>
-                                <h5 class="layer-tit">Main features</h5>
-                                <ul class="list">
-                                    <li>POSTMAN 통해 프롬프트 적용된 GPT 답변 취득</li>
-                                    <li>이미지 텍스트 추출 정확도 90% 확인</li>
-                                </ul>
-                            </div>
-                            <!-- //주요기능 -->
-                        </div>
-                    </div>
-
-                    <div class="overview-wrap bg1">
-                        <h5 class="layer-tit">Code Review</h5>
-                        <div>
-                            <ul class="prompt-img">
-                                <li class="before">
-                                    <b>프롬프트</b>
-                                    <img src="img/detail/gpt/gpt_overview1.png">
-                                </li>
-                                <li class="after">
-                                    <b>취득 답변</b>
-                                    <img src="img/detail/gpt/gpt_overview2.png">
-                                </li>
-                            </ul>
-    
-                            <p class="description">
-                                POSTMAN 플랫폼을 통해 GPT API에 이미지 내용을 최대한 정확하게 추출 할 수 있도록 질문을 여러 번 하며 정확도를 높여주었다. (정확도 90%)
-                            </p>
-                        </div>
-
-                        <div>
-                            <div class="code-img">
-                                <img src="img/detail/gpt/gpt_code.png">
-                            </div>
-                            <ul class="description">
-                                <li>GPT API에 POST 요청하여, 이미지의 텍스트 내용을 분석하고 이를 JSON 형식으로 반환시켜주었다.</li>
-                                <li> escapeHtml 함수를 사용해 HTML로 변환하여 페이지에 표시 해 줄 수 있도록 해주었다.</li>
-                                <li>API 호출을 실패할 경우, 오류 메시지를 페이지에 표시하도록 구현 해주었다.</li>
-                            </ul>
-                        </div>
-                        
-
-                    </div>
-                </article>
-            </section>
-        </div>
-
-        <div class="code-pop-wrap">
-            <div class="pop-inner">
-
-                <!-- 잠금기능 -->
-                <div class="lock-cnt" style="display: none;">
-                    <div class="code-img">
-                        <img src="img/detail/live/live_code1.png">
-                    </div>
-                    <div class="code-review">
-                        <b class="pop-layer-tit">Code Review</b>
-                        <ol>
-                            <li>
-                                ① useState 상태 관리
-                                <ul>
-                                    <li>- isLockPop: 입찰이 잠겨 있을 때 작은 화면에서 잠금 팝업을 보여줄지 여부를 관리하는 상태입니다.</li>
-                                    <li>- isBidPermit: 입찰이 허용되었는지, 혹은 잠겨 있는지를 나타내는 상태입니다. 작은 화면에서 입찰 가능 여부를 제어하는 데 사용됩니다.</li>
-                                    <li>- windowWidth: 현재 창의 너비를 저장하여 반응형 동작을 처리합니다.</li>
-                                </ul>
-                            </li>
-                            <li>
-                                ② lockBidToggle 함수
-                                <ul>
-                                    <li>isBidPermit의 상태를 반전시켜, 입찰을 허용하거나 잠글 수 있도록 합니다.</li>
-                                </ul>
-                            </li>
-                            <li>
-                                ③ bidRequest 함수
-                                <ul>
-                                    <li>- biddingInsertRequest라는 액션을 디스패치하여, 경매 유형, 경매 번호, 랏 번호, 패들 번호, 입찰 금액 등의 정보를 서버에 요청합니다.</li>
-                                </ul>
-                            </li>
-                            <li>
-                                ④ handleOnBidInsert 함수
-                                <ul>
-                                    <li>- 이 함수는 입찰 버튼이 클릭되었을 때 호출됩니다.</li>
-                                    <li>- 화면의 너비가 580px보다 클 경우, 바로 bidRequest 함수를 실행하여 입찰을 진행합니다.</li>
-                                    <li>- 반면, 화면 너비가 580px 이하일 경우, isBidPermit 값에 따라 입찰을 허용하거나, 잠겨 있을 경우 isLockPop을 true로 설정하여 잠금 팝업을 띄웁니다.</li>
-                                </ul>
-                            </li>
-                            <li>
-                                ⑤ useEffect로 화면 크기 변화 감지
-                                <ul>
-                                    <li>- useEffect를 사용하여 화면이 리사이즈될 때마다 window.innerWidth를 가져와 windowWidth 상태를 업데이트합니다. 이를 통해 반응형 디자인을 지원합니다.</li>
-                                </ul>
-                            </li>
-                            <li>
-                                ⑥ 랏 번호 변경 시 잠금 상태 초기화
-                                <ul>
-                                    <li>- lot_num이 변경될 때마다 입찰이 잠겨야 하므로, useEffect를 사용하여 isBidPermit 상태를 false로 설정합니다.</li>
-                                </ul>
-                            </li>
-                        </ol>
-                    </div>
-                </div>
-                <!-- //잠금기능 -->
-
-                <!-- 깜빡이기능 -->
-                <div class="bid-animation" style="display: none;">
-                    <div class="code-img">
-                        <img src="img/detail/live/live_code2.png">
-                    </div>
-                    <div class="code-review">
-                        <b class="pop-layer-tit">Code Review</b>
-                        <ol>
-                            <li>
-                                ① animateBidPrice 상태
-                                <ul>
-                                    <li>- useState(false)로 초기값이 false로 설정됩니다</li>
-                                    <li>- true일 때는 애니메이션이 활성화되며, 300ms 뒤에 다시 false로 변경되어 애니메이션을 비활성화합니다.</li>
-                                </ul>
-                            </li>
-                            <li>
-                                ② useEffect 상태
-                                <ul>
-                                    <li>next_bid_price 값이 변경될 때마다 애니메이션을 실행.</li>
-                                    <li>setAnimateBidPrice(true)를 호출하여 애니메이션이 시작됩니다.</li>
-                                    <li>setTimeout을 사용해 300ms 후에 애니메이션을 종료(setAnimateBidPrice(false))합니다.</li>
-                                    <li>컴포넌트가 언마운트되거나 next_bid_price가 변경될 때 이전 타이머를 정리하기 위해 clearTimeout(timer)를 호출합니다.</li>
-                                </ul>
-                            </li>
                             
-                        </ol>
-                    </div>
-                </div>
-                <!-- //깜빡이기능 -->
 
-                <!-- 작품 포커싱 -->
-                <div class="now-focus" style="display: none;">
-                    <div class="code-img">
-                        <img src="img/detail/live/live_code3.png">
+                        </div>
+                    </article>
+                </section>
+            </div>
+
+            <div class="code-pop-wrap">
+                <div class="pop-inner">
+
+                    <!-- 잠금기능 -->
+                    <div class="lock-cnt" style="display: none;">
+                        <div class="code-img">
+                            <img src="img/detail/live/live_code1.png">
+                        </div>
+                        <div class="code-review">
+                            <b class="pop-layer-tit">Code Review</b>
+                            <ol>
+                                <li>
+                                    ① useState 상태 관리
+                                    <ul>
+                                        <li>- isLockPop: 입찰이 잠겨 있을 때 작은 화면에서 잠금 팝업을 보여줄지 여부를 관리하는 상태입니다.</li>
+                                        <li>- isBidPermit: 입찰이 허용되었는지, 혹은 잠겨 있는지를 나타내는 상태입니다. 작은 화면에서 입찰 가능 여부를 제어하는 데 사용됩니다.</li>
+                                        <li>- windowWidth: 현재 창의 너비를 저장하여 반응형 동작을 처리합니다.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    ② lockBidToggle 함수
+                                    <ul>
+                                        <li>isBidPermit의 상태를 반전시켜, 입찰을 허용하거나 잠글 수 있도록 합니다.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    ③ bidRequest 함수
+                                    <ul>
+                                        <li>- biddingInsertRequest라는 액션을 디스패치하여, 경매 유형, 경매 번호, 랏 번호, 패들 번호, 입찰 금액 등의 정보를 서버에 요청합니다.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    ④ handleOnBidInsert 함수
+                                    <ul>
+                                        <li>- 이 함수는 입찰 버튼이 클릭되었을 때 호출됩니다.</li>
+                                        <li>- 화면의 너비가 580px보다 클 경우, 바로 bidRequest 함수를 실행하여 입찰을 진행합니다.</li>
+                                        <li>- 반면, 화면 너비가 580px 이하일 경우, isBidPermit 값에 따라 입찰을 허용하거나, 잠겨 있을 경우 isLockPop을 true로 설정하여 잠금 팝업을 띄웁니다.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    ⑤ useEffect로 화면 크기 변화 감지
+                                    <ul>
+                                        <li>- useEffect를 사용하여 화면이 리사이즈될 때마다 window.innerWidth를 가져와 windowWidth 상태를 업데이트합니다. 이를 통해 반응형 디자인을 지원합니다.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    ⑥ 랏 번호 변경 시 잠금 상태 초기화
+                                    <ul>
+                                        <li>- lot_num이 변경될 때마다 입찰이 잠겨야 하므로, useEffect를 사용하여 isBidPermit 상태를 false로 설정합니다.</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
                     </div>
-                    <div class="code-review">
-                        <b class="pop-layer-tit">Code Review</b>
-                        <ol>
-                            <li>
-                                ① focusOnLot 함수
-                                <ul>
-                                    <li>- isLotOn과 lot_num에 따라 특정 LOT에 포커스를 맞추고, LOT 버튼과 슬라이드를 조정하며 스크롤 애니메이션을 적용합니다</li>
-                                </ul>
-                            </li>
-                            <li>
-                                ② useEffect
-                                <ul>
-                                    <li>- isLotOn과 lot_num이 변경될 때, LOT의 포커스 상태와 스타일을 업데이트하고 focusOnLot을 호출해 포커스 처리합니다.</li>
-                                    <li>- 모바일이 아닌 경우 swiperContainerRef 내 슬라이드와 목록 개수가 일치하면 LOT 포커스를 켜고 렌더링 상태를 설정합니다.</li>
-                                </ul>
-                            </li>
-                            <li>③ DOM 접근을 최소화하고, focusOnLot 호출을 조건에 따라 효율적으로 처리하여 성능을 개선할 수 있습니다.</li>
-                        </ol>
+                    <!-- //잠금기능 -->
+
+                    <!-- 깜빡이기능 -->
+                    <div class="bid-animation" style="display: none;">
+                        <div class="code-img">
+                            <img src="img/detail/live/live_code2.png">
+                        </div>
+                        <div class="code-review">
+                            <b class="pop-layer-tit">Code Review</b>
+                            <ol>
+                                <li>
+                                    ① animateBidPrice 상태
+                                    <ul>
+                                        <li>- useState(false)로 초기값이 false로 설정됩니다</li>
+                                        <li>- true일 때는 애니메이션이 활성화되며, 300ms 뒤에 다시 false로 변경되어 애니메이션을 비활성화합니다.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    ② useEffect 상태
+                                    <ul>
+                                        <li>next_bid_price 값이 변경될 때마다 애니메이션을 실행.</li>
+                                        <li>setAnimateBidPrice(true)를 호출하여 애니메이션이 시작됩니다.</li>
+                                        <li>setTimeout을 사용해 300ms 후에 애니메이션을 종료(setAnimateBidPrice(false))합니다.</li>
+                                        <li>컴포넌트가 언마운트되거나 next_bid_price가 변경될 때 이전 타이머를 정리하기 위해 clearTimeout(timer)를 호출합니다.</li>
+                                    </ul>
+                                </li>
+                                
+                            </ol>
+                        </div>
                     </div>
+                    <!-- //깜빡이기능 -->
+
+                    <!-- 작품 포커싱 -->
+                    <div class="now-focus" style="display: none;">
+                        <div class="code-img">
+                            <img src="img/detail/live/live_code3.png">
+                        </div>
+                        <div class="code-review">
+                            <b class="pop-layer-tit">Code Review</b>
+                            <ol>
+                                <li>
+                                    ① focusOnLot 함수
+                                    <ul>
+                                        <li>- isLotOn과 lot_num에 따라 특정 LOT에 포커스를 맞추고, LOT 버튼과 슬라이드를 조정하며 스크롤 애니메이션을 적용합니다</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    ② useEffect
+                                    <ul>
+                                        <li>- isLotOn과 lot_num이 변경될 때, LOT의 포커스 상태와 스타일을 업데이트하고 focusOnLot을 호출해 포커스 처리합니다.</li>
+                                        <li>- 모바일이 아닌 경우 swiperContainerRef 내 슬라이드와 목록 개수가 일치하면 LOT 포커스를 켜고 렌더링 상태를 설정합니다.</li>
+                                    </ul>
+                                </li>
+                                <li>③ DOM 접근을 최소화하고, focusOnLot 호출을 조건에 따라 효율적으로 처리하여 성능을 개선할 수 있습니다.</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <!-- //작품 포커싱 -->
                 </div>
-                <!-- //작품 포커싱 -->
             </div>
         </div>
-    </div>
-</body>
-
-<script>
-    const popWrap = document.querySelector('.code-pop-wrap');
-    const popInner = document.querySelector('.pop-inner');
-
-    //주요기능 
-    document.querySelectorAll('.overview-wrap li').forEach(function(item, index) {
-        item.addEventListener('click', function(className) {
-            const itemIndex = index + 1;
-            const overviewEle = document.querySelector('.overview-wrap');
-            const newClass = `bg${itemIndex}`;
-
-            document.querySelectorAll('.overview-wrap li').forEach(function(all) {
-                all.classList.remove('on');
-            });
-
-            item.classList.add('on');
-
-            overviewEle.classList.forEach(function(className) {
-                if (className.startsWith('bg') && className !== newClass) {
-                    overviewEle.classList.remove(className);
-                }
-            });
-
-            if (!overviewEle.classList.contains(newClass)) {
-                overviewEle.classList.add(newClass);
-            }
-        });
-
-        //팝업 열기
-        item.querySelector('.code-btn').addEventListener('click', function(){
-            document.querySelectorAll('.pop-inner > div').forEach(function(content) {
-                content.style.display = 'none'
-            });
-
-            popWrap.classList.add('show');
-            popWrap.querySelector(`.${item.getAttribute('data-link')}`).style.display = 'block'
-
-            event.preventDefault();
-        })
-    });
-
-    
-
-    //팝업 닫기
-    popWrap.addEventListener('click', function (e) {
-        if (!popInner.contains(e.target)) {
-            popWrap.classList.remove('show');
-        }
-    });
-</script>
+    </body>
 </html>
