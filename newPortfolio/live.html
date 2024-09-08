@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>라이브 경매</title>
+        <title></title>
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/font.css" />
         <link rel="stylesheet" type="text/css" href="css/reset.css" />
@@ -117,7 +117,7 @@
                             <li>
                                 ② lockBidToggle 함수
                                 <ul>
-                                    <li>isBidPermit의 상태를 반전시켜, 입찰을 허용하거나 잠글 수 있도록 합니다.</li>
+                                    <li>- isBidPermit의 상태를 반전시켜, 입찰을 허용하거나 잠글 수 있도록 합니다.</li>
                                 </ul>
                             </li>
                             <li>
@@ -169,10 +169,10 @@
                             <li>
                                 ② useEffect 상태
                                 <ul>
-                                    <li>next_bid_price 값이 변경될 때마다 애니메이션을 실행.</li>
-                                    <li>setAnimateBidPrice(true)를 호출하여 애니메이션이 시작됩니다.</li>
-                                    <li>setTimeout을 사용해 300ms 후에 애니메이션을 종료(setAnimateBidPrice(false))합니다.</li>
-                                    <li>컴포넌트가 언마운트되거나 next_bid_price가 변경될 때 이전 타이머를 정리하기 위해 clearTimeout(timer)를 호출합니다.</li>
+                                    <li>- next_bid_price 값이 변경될 때마다 애니메이션을 실행.</li>
+                                    <li>- setAnimateBidPrice(true)를 호출하여 애니메이션이 시작됩니다.</li>
+                                    <li>- setTimeout을 사용해 300ms 후에 애니메이션을 종료(setAnimateBidPrice(false))합니다.</li>
+                                    <li>- 컴포넌트가 언마운트되거나 next_bid_price가 변경될 때 이전 타이머를 정리하기 위해 clearTimeout(timer)를 호출합니다.</li>
                                 </ul>
                             </li>
                             
