@@ -2215,6 +2215,11 @@ section > article{
     }
 
     /* new */
+    .detail-wrap .main-features img {
+        width: 100%;
+        transform: translateY(0);
+    }
+
     .overview-wrap .list {
         margin-top: 0;
         margin-bottom: 260px;
@@ -2257,6 +2262,10 @@ section > article{
         right: 0;
         width: 285px;
         height: 280px;
+    }
+
+    .gpt-detail .main-features .mocck-img {
+        width: 100%;
     }
 }
 
