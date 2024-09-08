@@ -1523,38 +1523,34 @@ section > article{
 .sticky-bar dd{
     width: calc(100% - 120px);
     line-height: 1.4;
+    word-break: keep-all;
 }
 
-.live-auction{
-    background: #EDEFF0;
-}
-
-.live-auction article {
+.detail-wrap article {
     padding: 100px 20px;
     max-width: 1420px;
     margin: auto;
 }
 
-.live-auction .sticky-wrap{
+.detail-wrap .sticky-wrap{
     display: flex;
     align-items: start;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.live-auction .project-info{
+.detail-wrap .project-info{
     width: 55%;
 }
 
-.live-auction .project-info > div{
+.detail-wrap .project-info > div{
     padding: 40px;
     background-color: #fff;
     border-radius: 20px;
     min-height: 250px;
 }
 
-.live-auction .background{
-    background-image: url(../img/detail/live/live_detail_bg.jpg);
+.detail-wrap .background{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1565,7 +1561,7 @@ section > article{
     margin-bottom: 50px;
 }
 
-.live-auction .layer-tit{
+.detail-wrap .layer-tit{
     font-size: 25px;
     display: flex;
     align-items: start;
@@ -1573,7 +1569,7 @@ section > article{
     letter-spacing: 0.04em;
 }
 
-.live-auction .layer-tit::after{
+.detail-wrap .layer-tit::after{
     font-size: 14px;
     margin-left: 8px;
     border-width: 1px;
@@ -1586,19 +1582,19 @@ section > article{
     text-align: center;
 }
 
-.live-auction .background .list{
+.detail-wrap .background .list{
     display: flex;
     justify-content: space-between;
     align-items: start;
     width: 100%;
 }
 
-.live-auction .list li{
+.detail-wrap .list li{
     font-size: 16px;
     line-height: 1.6;
 }
 
-.live-auction .background .list li{
+.detail-wrap .background .list li{
     width: 45%;
     text-align: center;
     border-width: 1px;
@@ -1611,31 +1607,31 @@ section > article{
     word-break: keep-all;
 }
 
-.live-auction .background .layer-tit,
-.live-auction .background .layer-tit::after,
-.live-auction .background .list{
+.detail-wrap .background .layer-tit,
+.detail-wrap .background .layer-tit::after,
+.detail-wrap .background .list{
     color: #fff;
     border-color: #fff;
 }
 
-.live-auction .background .layer-tit::after{
+.detail-wrap .background .layer-tit::after{
     content: '1';
 }
 
-.live-auction .main-features{
+.detail-wrap .main-features{
     background: #f9f9f9;
 }
 
-.live-auction .main-features .layer-tit{
+.detail-wrap .main-features .layer-tit{
     color: #777;
 }
 
-.live-auction .main-features img{
+.detail-wrap .main-features img{
     width: 65%;
     transform: translateY(-60px);
 }
 
-.live-auction .main-features li{
+.detail-wrap .main-features li{
     margin-bottom: 8px;
     margin-bottom: 8px;
     text-indent: -12px;
@@ -1707,14 +1703,14 @@ section > article{
     margin-left: 6px;
 }
 
-.overview-wrap.bg1{
+.live_auction .overview-wrap.bg1{
     background-image: url(../img/detail/live/live_overview1.png);
     background-repeat: no-repeat;
     background-position: -100px -240px;
     background-size: 530px;
 }
 
-.overview-wrap.bg2{
+.live_auction .overview-wrap.bg2{
     background-image: url(../img/detail/live/live_overview2.gif);
     background-repeat: no-repeat;
     background-position: right bottom;
@@ -1722,7 +1718,7 @@ section > article{
     position: relative;
 }
 
-.overview-wrap.bg2::after{
+.live_auction .overview-wrap.bg2::after{
     content: '';
     position: absolute;
     background-image: url(../img/detail/live/live_overview2_1.gif);
@@ -1735,7 +1731,7 @@ section > article{
     height: 300px;
 }
 
-.overview-wrap.bg3{
+.live_auction .overview-wrap.bg3{
     background-image: url(../img/detail/live/live_overview3.gif);
     background-repeat: no-repeat;
     background-position: left top;
@@ -1743,7 +1739,7 @@ section > article{
     position: relative;
 }
 
-.overview-wrap.bg3::after{
+.live_auction .overview-wrap.bg3::after{
     content: '';
     position: absolute;
     background-image: url(../img/detail/live/live_overview3_1.gif);
@@ -1842,6 +1838,148 @@ section > article{
     padding-left: 10px;
     padding-left: 20px;
 }
+
+.code-pop-wrap .font-api .code-review ol > li{
+    text-indent: 0;
+    padding-left: 0;
+}
+
+.overview-wrap .prompt-img{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.overview-wrap .prompt-img li{
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.overview-wrap .prompt-img b{
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.overview-wrap .prompt-img img{
+    width: 100%;
+}
+
+.overview-wrap .code-img{
+    margin-top: 50px;
+}
+
+.overview-wrap .code-img img{
+    width: 100%;
+}
+
+.overview-wrap .description{
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.overview-wrap .description li{
+    position: relative;
+    padding-left: 12px;
+}
+
+.overview-wrap .description li::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 12px;
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background: #777;
+}
+
+.live-auction{
+    background: #EDEFF0;
+}
+
+.live-auction .background{
+    background-image: url(../img/detail/live/live_detail_bg.jpg);
+}
+
+.main-renewal{
+    background: #fff2f1;
+}
+
+.main-renewal .background{
+    background-image: url(../img/detail/main/main_detail_bg.jpg);
+}
+
+.main-renewal .overview-wrap.bg1{
+    background-image: url(../img/detail/main/main_overview2.png);
+    background-repeat: no-repeat;
+    background-position: -100px -240px;
+    background-size: 530px;
+}
+
+.main-renewal .overview-wrap.bg2{
+    background-image: url(../img/detail/main/main_overview2.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 530px;
+    position: relative;
+}
+
+.main-renewal .overview-wrap.bg3{
+    background-image: url(../img/detail/live/live_overview3.gif);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 530px;
+    position: relative;
+}
+
+.main-renewal .overview-wrap.bg3::after{
+    content: '';
+    position: absolute;
+    background-image: url(../img/detail/live/live_overview3_1.gif);
+    background-repeat: no-repeat;
+    background-position: right -60px;
+    background-size: cover;
+    bottom: 0;
+    right: 0;
+    width: 375px;
+    height: 400px;
+}
+
+.gpt-detail{
+    background: #EDEFF0;
+}
+
+.gpt-detail .background{
+    background-image: url(../img/detail/live/live_detail_bg.jpg);
+}
+
+.gpt-detail .main-features .mocck-img{
+    width: 65%;
+    transform: translateY(-40px);
+}
+
+.gpt-detail .main-features  img {
+    width: 100%;
+    transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media all and (max-width: 1280px){
