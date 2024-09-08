@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>K-Auction Main Renewal</title>
+        <title></title>
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/font.css" />
         <link rel="stylesheet" type="text/css" href="css/reset.css" />
@@ -150,39 +150,30 @@
                     <div class="code-review">
                         <b class="pop-layer-tit">Code Review</b>
                         <ol>
-                            <li>한글, 영어 폰트 정보를 그룹화 하여 각각의 폰트 정보 기반으로 CSS @font-face 규칙을 동적으로 생성하는 구조</li>
+                            <li>① 한글, 영어 폰트 정보를 그룹화 하여 각각의 폰트 정보 기반으로 CSS @font-face 규칙을 동적으로 생성하는 구조</li>
                             
                         </ol>
                     </div>
                 </div>
                 <!-- //font API -->
 
-                <!-- 작품 포커싱 -->
+                <!-- ProgressBar 진행 상태 -->
                 <div class="now-focus" style="display: none;">
                     <div class="code-img">
-                        <img src="img/detail/live/live_code3.png">
+                        <img src="img/detail/main/main_code3.png">
                     </div>
                     <div class="code-review">
                         <b class="pop-layer-tit">Code Review</b>
-                        <ol>
-                            <li>
-                                ① focusOnLot 함수
-                                <ul>
-                                    <li>- isLotOn과 lot_num에 따라 특정 LOT에 포커스를 맞추고, LOT 버튼과 슬라이드를 조정하며 스크롤 애니메이션을 적용합니다</li>
-                                </ul>
-                            </li>
-                            <li>
-                                ② useEffect
-                                <ul>
-                                    <li>- isLotOn과 lot_num이 변경될 때, LOT의 포커스 상태와 스타일을 업데이트하고 focusOnLot을 호출해 포커스 처리합니다.</li>
-                                    <li>- 모바일이 아닌 경우 swiperContainerRef 내 슬라이드와 목록 개수가 일치하면 LOT 포커스를 켜고 렌더링 상태를 설정합니다.</li>
-                                </ul>
-                            </li>
-                            <li>③ DOM 접근을 최소화하고, focusOnLot 호출을 조건에 따라 효율적으로 처리하여 성능을 개선할 수 있습니다.</li>
+                        <ol class="description">
+                            <li>① 경매의 상태와 종류에 맞는 UI를 구성하기 위해 switch문을 사용하여 경매별 로직을 독립적으로 처리 할 수 있도록 해주었다.</li>
+                            <li>② 영문 지원을 해주기위해 SiteHelper.IsKorCulture 값에 따라 한국어 또는 영어로 메시지를 표시하도록 구현 하였다.</li>
+                            <li>③ circumference 비율을 사용하여 원형 진행 바의 진행 상태를 동적으로 계산하고, 이를 인라인 스타일로 적용할 수 있도록 해주었다.</li>
+
+                            
                         </ol>
                     </div>
                 </div>
-                <!-- //작품 포커싱 -->
+                <!-- //ProgressBar 진행 상태 -->
             </div>
         </div>
     </div>
