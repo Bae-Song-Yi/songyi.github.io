@@ -1777,8 +1777,8 @@ section > article{
 .code-pop-wrap .code-review ol > li{
     font-size: 18px;
     margin-bottom: 20px;
-    text-indent: -20px;
-    padding-left: 20px;
+    text-indent: -25px;
+    padding-left: 25px;
     line-height: 1.4;
 }
 
@@ -1792,12 +1792,6 @@ section > article{
     line-height: 1.4;
     text-indent: -10px;
     padding-left: 10px;
-    padding-left: 20px;
-}
-
-.code-pop-wrap .font-api .code-review ol > li{
-    text-indent: 0;
-    padding-left: 0;
 }
 
 .overview-wrap .prompt-img{
@@ -2214,12 +2208,6 @@ section > article{
         margin-bottom: 0;
     }
 
-    /* new */
-    .detail-wrap .main-features img {
-        width: 100%;
-        transform: translateY(0);
-    }
-
     .overview-wrap .list {
         margin-top: 0;
         margin-bottom: 260px;
@@ -2231,6 +2219,31 @@ section > article{
 
     .overview-wrap .list .code-btn {
         font-size: 16px;
+        transform: translateY(0);
+    }
+
+    .code-pop-wrap .pop-inner{
+        padding: 30px 10px 30px 20px;
+    }
+
+    .code-pop-wrap .pop-inner .pop-layer-tit {
+        font-size: 24px;
+    }
+
+    .code-pop-wrap .pop-inner > div {
+        padding-right: 10px;
+    }
+
+    .code-pop-wrap .code-review ol > li {
+        font-size: 16px;
+    }
+
+    .code-pop-wrap .code-review ul > li {
+        font-size: 14px;
+    }
+
+    .detail-wrap .main-features img {
+        width: 100%;
         transform: translateY(0);
     }
 
