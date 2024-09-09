@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/font.css" />
+        <link rel="stylesheet" type="text/css" href="css/reset.css" />
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+
+        <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    </head>
+<body>
+    <div class="wrap detail-wrap main-renewal">
+        <header>
+            <a href="copy.html" class="home-btn">Home</a>
+        </header>
+        <div class="container">
+            <section>
+                <div class="cover-wrap">
+                    <img src="img/detail/newMain/main_cover.png">
+                </div>
+
+                <article>
+                    <!-- 프로젝트 정보 -->
+                    <div class="flex-layout project-info">
+                        <div>
+                            <h3 class="title">K-Auction Main Renewal</h3>
+                        </div>
+                        <div class="info-wrap desc">
+                           <dl>
+                                <dt>Period</dt>
+                                <dd>2024.02 - 2024.03</dd>
+                            </dl>
+                            
+                            <dl>
+                                <dt>Skill</dt>
+                                <dd>C#, JQUERY, CSS</dd>
+                            </dl>
+                            
+                            <dl>
+                                <dt>Publishing, Front</dt>
+                                <dd>100%</dd>
+                            </dl>
+                            <dl>
+                                <dt>Description</dt>
+                                <dd>국내 미술품 경매 홈페이지로 다양한 컨텐츠 제공</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <!-- //프로젝트 정보 -->
+
+                    <!-- 프로젝트 배경 -->
+                    <div class="project-background">
+                        <div class="flex-layout img-wrap">
+                            <img src="img/detail/newMain/main_ui1.png">
+                            <img src="img/detail/newMain/main_ui2.png">
+                        </div>
+                        <div class="desc">
+                            <h5 class="sub-title">Project Background</h5>
+                            <ul>
+                                <li>① 2021년 리뉴얼 이후, 회원가입, 마이페이지 등 부분적인 개선을 지속해왔음</li>
+                                <li>② 인터넷 이용 환경의 변화, 최근 1년간 방문자 브라우저해상도 가로1600px 이상 사용자 약 66.4% 이상 추정</li>
+                                <li>③ 현재 자회사, 관계사의 성장에 케이옥션 홈페이지에서 홍보될 수 있는 구간의 니즈 확인</li>
+                                <li>④ 홈페이지 이용에 대한 현업 불편사항 검토</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- //프로젝트 배경 -->
+
+                    <!-- 프로젝트 주요기능 -->
+                    <div class="project-main-features">
+                        <!-- 1. Datapicker, Swiper 커스텀 -->
+                        <div class="bootstrap-custom">
+                            <div class="flex-layout img-wrap">
+                                <img src="img/detail/newMain/main_features3.png">
+                            </div>
+                            <div class="desc">
+                                <div class="review-list">
+                                    <h5 class="sub-title">Datapicker 커스텀</h5>
+                                    <ul>
+                                        <li>① Datepicker를 사용하여 달력 UI를 설정하고, 날짜를 선택하거나 탐색할 수 있게 구현 하였습니다.</li>
+                                        <li>② 날짜를 선택하면 그 날짜에 해당하는 경매 일정을 보여주는 로직입니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="block-layout desc">
+                                <div class="code"><img src="img/detail/newMain/main_code1_1.png"></div>
+                                <div class="review-list">
+                                    <ul>
+                                        <li>① beforeShowDay함수를 통해 특정 날짜에 클래스를 추가하여 스타일링을 해줍니다. </li>
+                                        <li>
+                                            ② 날짜를 선택하면 onSelect 콜백이 호출되어 작업을 수행합니다.
+                                            <div>
+                                                <p>- 선택된 날짜와 월 정보를 폼 필드($('#date_time'))와 달력 상단에 표시합니다.</p>
+                                                <p>- 선택된 날짜가 첫날이거나 마지막 날인 경우 prev-day와 next-day 버튼을 비활성화(inactive 클래스 추가)하여 이동할 수 없게 해줍니다.</p>
+                                            </div>
+
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="block-layout desc">
+                                <div class="code"><img src="img/detail/newMain/main_code1_2.png"></div>
+                                <div class="review-list">
+                                    <ul>
+                                        <li>① 해상도에 따라 달력 표현 방식을 다르게 해줍니다. (해상도 821px 이하일 경우 월별, 그 이상이면 주별 표시)</li>
+                                        <li>② 각 날짜는 renderDayElement() 함수를 통해 화면에 렌더링됩니다</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //1. Datapicker, Swiper 커스텀 -->
+
+                        <!-- 2. 프로그레스바 -->
+                        <div>
+                            <div class="flex-layout img-wrap">
+                                <img src="img/detail/newMain/main_features1.png">
+                            </div>
+                            <div class="flex-layout desc">
+                                <div class="code"><img src="img/detail/newMain/main_code3.png"></div>
+                                <div class="review-list">
+                                    <h5 class="sub-title">ProgressBar 진행 상태</h5>
+                                    <ul>
+                                        <li>① 경매의 상태와 종류에 맞는 UI를 구성하기 위해 switch문을 사용하여 경매별 로직을 독립적으로 처리 할 수 있도록 해주었다.</li>
+                                        <li>② 영문 지원을 해주기위해 SiteHelper.IsKorCulture 값에 따라 한국어 또는 영어로 메시지를 표시하도록 구현 하였다.</li>
+                                        <li>③ circumference 비율을 사용하여 원형 진행 바의 진행 상태를 동적으로 계산하고, 이를 인라인 스타일로 적용할 수 있도록 해주었다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //2. 프로그레스바 -->
+
+                        <!-- 3. API 활용 -->
+                        <div>
+                            <div class="flex-layout img-wrap">
+                                <img src="img/detail/newMain/main_features2.png">
+                            </div>
+                            <div class="flex-layout desc">
+                                <div class="code"><img src="img/detail/newMain/main_code2.png"></div>
+                                <div class="review-list">
+                                    <h5 class="sub-title">Font API 활용</h5>
+                                    <ul>
+                                        <li>① 작품 컨셉에 따라 어울리는 폰트를 적용 하기위해 Font API를 활용하여 개발 하였습니다.</li>
+                                        <li>② 한글, 영어 폰트 정보를 그룹화 하여 각각의 폰트 정보 기반으로 CSS @font-face 규칙을 동적으로 생성하는 구조 입니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //3. API 활용 -->
+
+                        
+                        
+                    </div>
+                    <!-- //프로젝트 주요기능 -->
+
+                </article>
+            </section>
+        </div>
+
+        
+    </div>
+</body>
+
+<script>
+    const popWrap = document.querySelector('.code-pop-wrap');
+    const popInner = document.querySelector('.pop-inner');
+
+    //주요기능 
+    document.querySelectorAll('.overview-wrap li').forEach(function(item, index) {
+        item.addEventListener('click', function(className) {
+            const itemIndex = index + 1;
+            const overviewEle = document.querySelector('.overview-wrap');
+            const newClass = `bg${itemIndex}`;
+
+            document.querySelectorAll('.overview-wrap li').forEach(function(all) {
+                all.classList.remove('on');
+            });
+
+            item.classList.add('on');
+
+            overviewEle.classList.forEach(function(className) {
+                if (className.startsWith('bg') && className !== newClass) {
+                    overviewEle.classList.remove(className);
+                }
+            });
+
+            if (!overviewEle.classList.contains(newClass)) {
+                overviewEle.classList.add(newClass);
+            }
+        });
+
+        //팝업 열기
+        item.querySelector('.code-btn').addEventListener('click', function(){
+            document.querySelectorAll('.pop-inner > div').forEach(function(content) {
+                content.style.display = 'none'
+            });
+
+            popWrap.classList.add('show');
+            popWrap.querySelector(`.${item.getAttribute('data-link')}`).style.display = 'block'
+
+            event.preventDefault();
+        })
+    });
+
+    
+
+    //팝업 닫기
+    popWrap.addEventListener('click', function (e) {
+        if (!popInner.contains(e.target)) {
+            popWrap.classList.remove('show');
+        }
+    });
+</script>
+</html>
