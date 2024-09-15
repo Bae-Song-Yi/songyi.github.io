@@ -59,7 +59,7 @@ header .home-btn{
 
 .detail-wrap .title{
     font-size: 40px;
-    font-weight: 500;
+    font-weight: 600;
     color: #101010;
 }
 
@@ -82,7 +82,7 @@ header .home-btn{
 .detail-wrap .desc .sub-title{
     font-size: 24px;
     color: #101010;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 20px;
 }
 
@@ -109,6 +109,11 @@ header .home-btn{
     padding-left: 20px;
 }
 
+.detail-wrap .desc li p{
+    text-indent: -20px;
+    padding-left: 20px;
+}
+
 .detail-wrap article > div:last-child{
     margin-bottom: 0;
 }
@@ -127,6 +132,7 @@ header .home-btn{
 
 .project-main-features .img-wrap img{
     width: 100%;
+    border-radius: 20px;
 }
 
 .project-main-features .flex-layout.img-wrap img{
@@ -256,9 +262,22 @@ header .home-btn{
     display: none;
 }
 
+.live-detail-wrap .animation-feature .img-wrap > div:first-child{
+    width: 60%;
+}
 
+.live-detail-wrap .animation-feature .img-wrap > div:last-child{
+    width: 38%;
+}
 
+.live-detail-wrap .animation-feature .img-wrap > div img{
+    width: 100%;
+}
 
+.live-detail-wrap .animation-feature .img-wrap > div img.mo{
+    width: auto;
+    height: 350px;
+}
 
 
 
