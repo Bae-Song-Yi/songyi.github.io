@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/font.css" />
+        <link rel="stylesheet" type="text/css" href="css/reset.css" />
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+
+        <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    </head>
+    <body>
+        <div class="wrap detail-wrap live-detail-wrap">
+            <header>
+                <a href="copy.html" class="home-btn">Home</a>
+            </header>
+            <div class="container">
+                <section>
+                    <div class="cover-wrap">
+                        <img src="img/detail/newLive/live_cover.png">
+                    </div>
+
+                    <article>
+                        <!-- 프로젝트 정보 -->
+                        <div class="flex-layout project-info">
+                            <div>
+                                <h3 class="title">라이브 경매 리뉴얼</h3>
+                            </div>
+                            <div class="info-wrap desc">
+                            <dl>
+                                    <dt>Period</dt>
+                                    <dd>2024.05 - 2024.06</dd>
+                                </dl>
+                                
+                                <dl>
+                                    <dt>Skill</dt>
+                                    <dd>REACT, TYPESCRIPT, CSS</dd>
+                                </dl>
+                                
+                                <dl>
+                                    <dt>Publishing, Front</dt>
+                                    <dd>100%</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Description</dt>
+                                    <dd>온라인에서 편리하게 실시간 경매를 참여하기 위한 웹 서비스 개발</dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <!-- //프로젝트 정보 -->
+
+                        <!-- 프로젝트 배경 -->
+                        <div class="project-background">
+                            <div class="block-layout img-wrap">
+                                <img src="img/detail/newLive/live_ui1.png">
+                            </div>
+                            <div class="desc">
+                                <h5 class="sub-title">Project Background</h5>
+                                <ul>
+                                    <li>① PC환경에 최적화 되어있는 서비스 -> 모든 디바이스 환경 최적화 필요</li>
+                                    <li>② 응찰 버튼 실수로 클릭하는 상황 다수 -> 응찰 버튼 민감도 강화 필요</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- //프로젝트 배경 -->
+
+                        <!-- 프로젝트 주요기능 -->
+                        <div class="project-main-features">
+                            <div>
+                                <div class="flex-layout img-wrap">
+                                    <img src="img/detail/newLive/live_ui2.png">
+                                    <img src="img/detail/newLive/live_code1.png">
+                                </div>
+                                <div class="desc">
+                                    <h5 class="sub-title">응찰버튼 Lock 기능</h5>
+                                    <ul>
+                                        <li>
+                                            ①  useState 상태 관리
+                                            <div>
+                                                <p>- isLockPop: 입찰이 잠겨 있을 때 작은 화면에서 잠금 팝업을 보여줄지 여부를 관리하는 상태입니다.</p>
+                                                <p>- isBidPermit: 입찰이 허용되었는지, 혹은 잠겨 있는지를 나타내는 상태입니다. 작은 화면에서 입찰 가능 여부를 제어하는 데 사용됩니다.</p>
+                                                <p>- windowWidth: 현재 창의 너비를 저장하여 반응형 동작을 처리합니다.</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            ② lockBidToggle 함수
+                                            <p>- isBidPermit의 상태를 반전시켜, 입찰을 허용하거나 잠글 수 있도록 합니다.</p>
+                                        </li>
+                                        <li>
+                                            ③ bidRequest 함수
+                                            <p>- biddingInsertRequest라는 액션을 디스패치하여, 경매 유형, 경매 번호, 랏 번호, 패들 번호, 입찰 금액 등의 정보를 서버에 요청합니다.</p>
+                                        </li>
+                                        <li>
+                                            ④ handleOnBidInsert 함수
+                                            <div>
+                                                <p>- 이 함수는 입찰 버튼이 클릭되었을 때 호출됩니다.</p>
+                                                <p>- 화면의 너비가 580px보다 클 경우, 바로 bidRequest 함수를 실행하여 입찰을 진행합니다.</p>
+                                                <p>- 반면, 화면 너비가 580px 이하일 경우, isBidPermit 값에 따라 입찰을 허용하거나, 잠겨 있을 경우 isLockPop을 true로 설정하여 잠금 팝업을 띄웁니다.</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            ⑤ useEffect로 화면 크기 변화 감지
+                                            <p>- useEffect를 사용하여 화면이 리사이즈될 때마다 window.innerWidth를 가져와 windowWidth 상태를 업데이트합니다. 이를 통해 반응형 디자인을 지원합니다.</p>
+                                        </li>
+                                        <li>
+                                            ⑥ 랏 번호 변경 시 잠금 상태 초기화
+                                            <p>- lot_num이 변경될 때마다 입찰이 잠겨야 하므로, useEffect를 사용하여 isBidPermit 상태를 false로 설정합니다.</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="animation-feature">
+                                <div class="flex-layout img-wrap">
+                                    <div><img src="img/detail/newLive/live_ui3.gif"></div>
+                                    <div>
+                                        <img src="img/detail/newLive/live_ui3_1.gif" class="mo">
+                                        <img src="img/detail/newLive/live_code2.png">
+                                    </div>
+                                </div>
+                                <div class="flex-layout desc">
+                                    <div class="code"></div>
+                                    <div class="review-list">
+                                        <h5 class="sub-title">응찰 금액 깜빡이 기능</h5>
+                                        <ul>
+                                            <li>
+                                                ① animateBidPrice 상태
+                                                <div>
+                                                    <p>- useState(false)로 초기값이 false로 설정됩니다.</p>
+                                                    <p>- true일 때는 애니메이션이 활성화되며, 300ms 뒤에 다시 false로 변경되어 애니메이션을 비활성화합니다.</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                ② useEffect 상태
+                                                <p>- next_bid_price 값이 변경될 때마다 애니메이션을 실행.</p>
+                                                <p>- setAnimateBidPrice(true)를 호출하여 애니메이션이 시작됩니다.</p>
+                                                <p>- setTimeout을 사용해 300ms 후에 애니메이션을 종료(setAnimateBidPrice(false))합니다.</p>
+                                                <p>- 컴포넌트가 언마운트되거나 next_bid_price가 변경될 때 이전 타이머를 정리하기 위해 clearTimeout(timer)를 호출합니다.</p>
+                                            </li>
+                                
+                                        </ul>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="img-wrap">
+                                    <img src="img/detail/newLive/live_ui4.gif">
+                                </div>
+                                <div class="flex-layout desc">
+                                    <div class="code"><img src="img/detail/newLive/live_code3.png"></div>
+                                    <div class="review-list">
+                                        <h5 class="sub-title">작품 포커싱 기능</h5>
+                                        <ul>
+                                            <li>
+                                                ① focusOnLot 함수
+                                                <p>- isLotOn과 lot_num에 따라 특정 LOT에 포커스를 맞추고, LOT 버튼과 슬라이드를 조정하며 스크롤 애니메이션을 적용합니다</p>
+                                            </li>
+                                            <li>
+                                                ② useEffect 상태
+                                                <p>- isLotOn과 lot_num이 변경될 때, LOT의 포커스 상태와 스타일을 업데이트하고 focusOnLot을 호출해 포커스 처리합니다.</p>
+                                                <p>- 모바일이 아닌 경우 swiperContainerRef 내 슬라이드와 목록 개수가 일치하면 LOT 포커스를 켜고 렌더링 상태를 설정합니다.</p>
+                                            </li>
+                                            <li>③ DOM 접근을 최소화하고, focusOnLot 호출을 조건에 따라 효율적으로 처리하여 성능을 개선할 수 있습니다.</li>
+                                        </ul>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //프로젝트 주요기능 -->
+                    </article>
+                </section>
+            </div>
+
+            
+        </div>
+    </body>
+</html>
