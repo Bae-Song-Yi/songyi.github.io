@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/font.css" />
+        <link rel="stylesheet" type="text/css" href="css/reset.css" />
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+
+        <link rel="stylesheet" type="text/css" href="css/masking.css" />
+
+        <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+        <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+        <script src="js/masking.js"></script>
+    </head>
+    <body>
+        <div class="wrap detail-wrap masking-wrap">
+            <header>
+                <a href="copy.html" class="home-btn">Home</a>
+            </header>
+            <div class="container">
+                <section>
+                    <div class="cover-wrap">
+                        <img src="img/detail/newMasking/masking_cover.png">
+                    </div>
+
+                    <article>
+                        <!-- 프로젝트 정보 -->
+                        <div class="flex-layout project-info">
+                            <div>
+                                <h3 class="title">신분증 마스킹 자체개발</h3>
+                            </div>
+                            <div class="info-wrap desc">
+                            <dl>
+                                    <dt>Period</dt>
+                                    <dd>2023.09 - 4일소요</dd>
+                                </dl>
+                                
+                                <dl>
+                                    <dt>Skill</dt>
+                                    <dd>C#, JQUERY, CSS</dd>
+                                </dl>
+                                
+                                <dl>
+                                    <dt>Publishing, Front</dt>
+                                    <dd>100%</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Description</dt>
+                                    <dd>신분증 인증 시 마스킹 하기 위한 도구</dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <!-- //프로젝트 정보 -->
+
+                        <!-- 프로젝트 배경 -->
+                        <div class="project-background">
+                            <div class="flex-layout img-wrap">
+                                <img src="img/detail/newMasking/masking_ui1.png">
+                                <img src="img/detail/newMasking/masking_ui2.png">
+                            </div>
+                            <div class="desc">
+                                <div>
+                                    <h5 class="sub-title">Project Background</h5>
+                                    <ul>
+                                        <li>① 마스킹 실수가 많아 현업 업무량 증가</li>
+                                        <li>② OCR 도입 고려</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //프로젝트 배경 -->
+
+                        <!-- 프로젝트 주요기능 -->
+                        <div class="project-main-features">
+                            <div class="desc">
+                                <div class="flex-layout img-wrap">
+                                    <img src="img/detail/newMasking/masking_code1.png">
+                                    <img src="img/detail/newMasking/masking_code2.png">
+                                </div>
+                                <div class="review-list">
+                                    <h5 class="sub-title">마스킹 이벤트</h5>
+                                    <ul>
+                                        <li>
+                                            ① mousedown, mousemove, mouseup 및 touchstart, touchmove, touchend 이벤트를 사용하여 
+                                            움직인 거리를 계산해 마스킹 할 수 있도록 해주었습니다.</li>
+                                        <li>② 반응형을 고려하여 마스킹의 사이즈 단위는 픽셀 단위 대신 %로 계산해주었습니다.</li>  
+                                        <li>③ html2canvas 라이브러리를 사용하여 이미지 영역을 캡처해 이미지 파일로 변환후 서버에 업로드하는 작업을 수행 했습니다.</li>  
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //프로젝트 주요기능 -->
+
+                        <!-- 프로젝트 결과 -->
+                        <div class="block-layout project-result">
+                            <!-- 마스킹 -->
+                            <div class="fram-wrap">
+                                <div class="modal fade self-auth-popup show" id="firest_iden" style="padding-right: 6px;display: flex;align-items: center;justify-content: center;height: 100%;" aria-modal="true">
+                                    <div class="modal-dialog modal_wrap">
+                                        <div class="modal-content">
+                                            <div class="modal fade modal-document-evidence mask-pc show" id="modal-document-evidence" style="display: block;" aria-modal="true">
+                                                <div id="modal-document-evidence-box" class="modal-dialog modal_wrap">
+                                                    <div class="modal-content">
+                                                        <div class="masking" style="display: block;">
+                                                            <div>
+                                                                <!--PC-->
+                                                                <div class="pc img-wrap">
+                                                                    <div class="upload-img">
+                                                                        <div class="masking-wrap"></div>
+                                                                        <div class="file-ctrl">
+                                                                            <span>JPG, JPEG, PNG, PDF 속성 파일 첨부 가능<br>(카메라 가로모드로, 서류가 가득차게 촬영해주세요)</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <!--//PC-->
+                                            
+                                                                <div class="mask-info">
+                                                                    <div class="text-area">
+                                                                        <div class="top-title">
+                                                                            <h5>신분증 사본 제출하기</h5>
+                                                                        </div>
+                                                                        
+                                                                        
+                                                                        <div class="masking-noti"><p><font>이름, 생년월일, 사진, 발급일</font>을 제외한 모든 정보를 마스킹합니다.</p></div>
+                                                                        <div>
+                                                                            <div class="img-wrap">
+                                                                                <div class="upload-img on">
+                                                                                    <img src="img/detail/masking/img/gif/Identification.gif" class="sample-img">                             
+                                                                                    <!--MO-->
+                                                                                    <div class="masking-wrap mo"></div>
+                                                                                    <!--//MO-->
+                                                                                </div>
+                                                                                <ul style="justify-content: center; top: 50%; transform: translateY(-50%);">
+                                                                                    <li>1. 파일은 JPG, JPEG, PNG 만 선택 가능합니다.</li>
+                                                                                    <li>2. 파일 선택 시 미리보기가 가능하고, 드래그하여 이미지 위에 마스킹 영역을 지정할 수 있습니다. (팬 모양 아이콘<i></i>을 눌러 비활성화 가능)</li>
+                                                                                    <li>3. 만약, 실수했다면 초기화<i></i>하여 마스킹을 모두 지울 수 있습니다.</li>
+                                                                                    <li>4. 모바일 마스킹 시 핀치줌(두손가락 터치 후 벌리기)으로 확대하여 이용하시면 편리합니다.</li>
+                                                                                    <li class="mo">
+                                                                                        <a id="modal-show-popup-btn" class="file-select">파일선택<input type="file" id="imgInput" class="file-input" onchange="readURL(this)" style="position: absolute;left: 0;width: 100%;height: 100%;opacity: 0;"></a>    
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <!--MO-->
+                                                                            <ul class="masking-tool mo">
+                                                                                <li>
+                                                                                    <div>
+                                                                                        <a href="#" class="sample-btn on">예시<i class="icon"></i></a>
+                                                                                        <a id="modal-show-popup-btn" class="file-select"><i class="icon"></i>파일선택<input type="file" id="imgInput" class="file-input" onchange="readURL(this)" style="position: absolute;left: 0;width: 100%;height: 100%;opacity: 0;"></a>    
+                                                                                        <div class="tooltip">카메라 가로모드로, 서류가 가득차게 촬영해주세요</div>    
+                                                                                    </div>
+                                                                                    <div>
+                                                                                        <a href="#" class="reset"></a>
+                                                                                        <a href="#" class="editor_btn"><img src="img/detail/masking/img/icon/icon_editor.png"></a>
+                                                                                    </div>
+                                                                                </li>
+                                                                            </ul>
+                                                                            <!--//MO-->
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="document-evidence-btn">
+                                                                        <!--PC-->
+                                                                        <div class="masking-tool pc">
+                                                                            <a id="modal-show-popup-btn" class="file-select"><i class="icon"></i>파일선택<input type="file" id="imgInput" class="file-input" onchange="readURL(this)" style="position: absolute;left: 0;width: 100%;height: 100%;opacity: 0;"></a>    
+                                                                            <a href="#" class="reset"><i></i>초기화</a>
+                                                                            <a href="#" class="editor_btn"><i></i>마스킹</a>
+                                                                        </div>
+                                                                        <!--//PC-->
+                                                                        <a href="#" class="submit-btn">제출하기</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //마스킹 -->
+
+                            <div class="desc">
+                                <h5 class="sub-title">Project Result</h5>
+                                <ul>
+                                    <li>
+                                        ① OCR 프로그램 도입하려 했으나, 비용 절감과 작업의 단순화를 위해 자체개발 했습니다.
+                                        <p>- OCR 도입 시 건당 금액 : 약 1달러</p>
+                                    </li>
+                                    <li>② 자체 개발을 통해 현업 업무량 65% 감소 했습니다.</li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                        <!-- //프로젝트 결과 -->
+
+                    </article>
+                </section>
+            </div>  
+        </div>
+    </body>
+</html>
