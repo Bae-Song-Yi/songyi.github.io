@@ -21,6 +21,8 @@ header .home-btn{
 
 .container{
     margin-bottom: 120px;
+    display: inline-block;
+    width: 100%;
 }
 
 .cover-wrap{
@@ -128,7 +130,7 @@ header .home-btn{
 }
 
 .project-main-features .flex-layout.img-wrap img{
-    width: 48%
+    width: 49%
 }
 
 .project-main-features .desc{
@@ -189,7 +191,70 @@ header .home-btn{
     width: 32%;
 }
 
+.masking-wrap .project-background .img-wrap img{
+    width: 68%;
+}
 
+.masking-wrap .project-background .img-wrap img:last-child{
+    width: 30%;
+}
+
+.masking-wrap .project-main-features .flex-layout.code{
+    width: 100%;
+}
+
+.masking-wrap .project-main-features .flex-layout.code img{
+    width: 49%;
+}
+
+.masking-wrap .fram-wrap{
+    background: #f4f4f4;
+    border-radius: 20px;
+    padding: 60px 0;
+    position: relative;
+}
+
+
+
+.masking-wrap .fram-wrap::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    z-index: 2;
+}
+
+.masking-wrap .fram-wrap::before{
+    content: '사용해보세요 🤗';
+    white-space: pre;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: AppleSDGothicNeo;
+    text-align: center;
+    line-height: 1.4;
+    z-index: 3;
+}
+
+.masking-wrap .fram-wrap:hover::before,
+.masking-wrap .fram-wrap:hover::after{
+    display: none;
+}
 
 
 
