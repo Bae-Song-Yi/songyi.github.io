@@ -671,6 +671,5 @@
 
 .frame .inner{
     position: relative;
-    background: #EFE1D8;
-    border-radius: 40px;
+    border-radius: 20px;
 }
