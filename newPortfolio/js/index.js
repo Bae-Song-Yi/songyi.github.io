@@ -1,3 +1,25 @@
+
+const cursor = document.querySelector('.cursor'); 
+document.addEventListener('mousemove',(e) => { 
+    cursor.style.top = `${e.clientY}px`
+    cursor.style.left = `${e.clientX}px`
+    cursor.animate({
+        top : `${e.clientY}px`, left : `${e.clientX}px`
+    },1000)
+});
+
+const workItems = document.querySelectorAll('.project-wrap .list li');
+
+workItems.forEach(item => {
+    item.addEventListener('mouseover',()=>{ 
+        cursor.classList.add('on');
+    });
+    
+    item.addEventListener('mouseout',()=>{ 
+        cursor.classList.remove('on');
+    });
+})
+
 const lenis = new Lenis();
 
 lenis.on("scroll", ScrollTrigger.update);
