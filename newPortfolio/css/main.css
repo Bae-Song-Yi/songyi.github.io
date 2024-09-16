@@ -336,7 +336,7 @@ header .home-btn{
     }
 
     .detail-wrap .desc {
-        margin-top: 50px;
+        margin-top: 30px;
         font-size: 16px;
     }
 
@@ -355,6 +355,11 @@ header .home-btn{
 
     .project-main-features .flex-layout.img-wrap img{
         width: 100%;
+        margin-bottom: 18px;
+    }
+
+    .project-main-features .block-layout .code{
+        height: auto;
     }
 
     .masking-detail-wrap .project-background .img-wrap img{
@@ -373,7 +378,9 @@ header .home-btn{
         font-size: 24px;
     }
 
-
+    .live-detail-wrap .animation-feature .img-wrap > div:first-child {
+        width: 100%;
+    }
 
 
 
