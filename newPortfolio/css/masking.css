@@ -11,27 +11,9 @@
 /*------------------------------------------------------------------
 [02. Layout]
 ------------------------------------------------------------------*/
-html {
-    height: 100%;
-}
-
-body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background-color: #f6f9fc;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-.container {
-    padding-left: 20px;
-    padding-right: 20px;
-}
 
 /* Mobile Nav */
-body {
-    display: block !important;
-}
+
 
 .modal-bg {
     display: none;
@@ -53,13 +35,6 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 900;
     content: '';
-}
-
-@media (max-width: 767px) {
-    .container {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
 }
 
 /* Container */
