@@ -163,10 +163,6 @@ header .home-btn{
     width: 40%;
 }
 
-/* .project-main-features .block-layout{
-    margin-top: 40px;
-} */
-
 .project-main-features .block-layout.img-wrap .text-right{
     text-align: right;
     display: block;
@@ -395,6 +391,14 @@ header .home-btn{
         width: 100%;
     }
 
+    .live-detail-wrap .animation-feature .img-wrap > div:last-child {
+        width: 100%;
+    }
+
+    .live-detail-wrap .animation-feature .img-wrap > div img.mo {
+        display: none;
+    }
+
     .lunch-detail-wrap .project-main-features .calendar-feature .flex-layout.img-wrap{
         overflow: hidden;
         overflow-x: auto;
@@ -407,14 +411,6 @@ header .home-btn{
     .gpt-detail-wrap .detail-wrap .flex-layout {
         flex-direction: column;
     }
-
-
-
-
-
-
-
-
 }
 
 
