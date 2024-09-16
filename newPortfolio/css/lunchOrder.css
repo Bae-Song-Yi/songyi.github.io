@@ -595,7 +595,7 @@
 
 .frame .cafe-reservation{
     max-width: 420px;
-    width: 95%;
+    width: 98%;
     height: 640px;
     overflow: hidden;
     overflow-y: auto;
@@ -628,7 +628,7 @@
     left: 50%;
     transform: translateX(-50%);
     max-width: 420px;
-    width: 95%;
+    width: 98%;
     height: 640px;
     background: rgba(0, 0, 0, 0.3);
     border-radius: 20px;
