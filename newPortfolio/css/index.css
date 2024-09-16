@@ -10,7 +10,7 @@ body{
 
 .intro-wrap{
     height: 100vh;
-    background: #ffc0cb;
+    background: #FBC1D4;
     transition: background-color 0.5s;
 }
 
@@ -167,7 +167,7 @@ body{
     position: relative;
     width: 30vw;
     height: 30vw;
-    background-color: #ffc0cb;
+    background-color: #FBC1D4;
     border-radius: 50%;
     box-shadow: 
         inset 10px 10px 20px rgba(255, 160, 174, 1), 
@@ -179,7 +179,7 @@ body{
     position: absolute;
     width: 80%;
     height: 10vw;
-    border-bottom: 1vw solid #ffc0cb;
+    border-bottom: 1vw solid #FBC1D4;
     border-radius: 0 0 10vw 10vw;
     bottom: 2vw;
     left: 50%;
@@ -196,7 +196,7 @@ body{
     transform: translateY(-50%);
     font-size: 10vw;
     font-weight: bold;
-    color: #ffc0cb;
+    color: #FBC1D4;
     text-shadow: 
         5px 5px 10px rgba(255, 160, 174, 1), 
         -5px -5px 10px rgba(255, 255, 255, 0.3);
@@ -428,6 +428,10 @@ section > article{
     row-gap: 120px;
 }
 
+.project-wrap .inner .list li:hover{
+    cursor: none;
+}
+
 .project-wrap .inner .list img{
     width: 100%;
     height: 100%;
@@ -465,7 +469,6 @@ section > article{
 
 .project-wrap .list .thumb{
     position: relative;
-    cursor: pointer;
 }
 
 .project-wrap .list .thumb a{
@@ -475,10 +478,11 @@ section > article{
     overflow: hidden;
 }
 
+.project-wrap .list li:hover .thumb a{
+    cursor: none;
+}
+
 .project-wrap .list .thumb .desc{
-    /* position: absolute;
-    top: 0;
-    height: 100%; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -691,7 +695,7 @@ footer div{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #ffc0cb;
+    background: #FBC1D4;
     padding: 120px 20px;
 }
 
@@ -708,6 +712,35 @@ footer span:nth-child(2){
 footer img{
     transform: rotate(30deg);
     width: 8vw;
+}
+
+.cursor {
+    position: fixed;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    z-index: 999;
+}
+
+.cursor::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    display: block;
+    width: 1vw;
+    height: 1vw;
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+    background: #FF7EC4;
+    transition: ease 0.1s;
+}
+
+.cursor.on::before{
+    background:url(../img/cursor.png)no-repeat center;
+    background-size: cover;
+    width: 2.5vw;
+    height: 2.5vw;
+    cursor: none;
 }
 
 
@@ -895,6 +928,10 @@ footer img{
     header{
         padding: 0 20px;
     } 
+
+    .cursor {
+        display: none;
+    }
 }
 
 @media all and (max-width: 820px){
