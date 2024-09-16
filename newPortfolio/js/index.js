@@ -43,11 +43,10 @@ const canvasWidth = document.querySelector(".intro-wrap .inner").offsetWidth;
 
 const radius = 30; // 원의 반지름
 const stopPoint = canvasWidth * 0.55; // 70% 지점
-const centerPoint = canvasWidth / 2.22; // 중앙 지점
+const centerPoint = canvasWidth / 2.15; // 중앙 지점
 
 function animate() {
     const tl = gsap.timeline({ repeat: 0 });
-
     
     // 원을 70% 지점까지 이동
     tl.to(circle, {
@@ -69,6 +68,8 @@ function animate() {
 }
 
 animate();
+
+window.addEventListener("resize", animate);
 
 //마우스 위치에따라 그림자 위치 바뀜
 const container = document.querySelector('.embossed-container');
@@ -228,7 +229,6 @@ updateAnimationSpeed(); // 초기 애니메이션 속도 설정
 const aboutText = new SplitType(".about b", {
     types: "words, chars",
   })
-
 
 
 
