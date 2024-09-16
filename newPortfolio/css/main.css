@@ -361,6 +361,18 @@ header .home-btn{
 }
 
 @media all and (max-width: 820px){
+    .masking-detail-wrap .cover-wrap {
+        background-size: 100%;
+    }
+    
+    .live-detail-wrap .cover-wrap {
+        background-size: 100%;
+    }
+    
+    .main-detail-wrap .cover-wrap {
+        background-size: 100%;
+    }
+
     .detail-wrap .title{
         font-size: 33px;
     }
