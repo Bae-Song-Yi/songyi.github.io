@@ -216,6 +216,10 @@ header .home-btn{
     align-items: center;
 }
 
+.lunch-detail-wrap .cover-wrap img{
+    object-position: 85%;
+}
+
 .lunch-detail-wrap .project-main-features .flex-layout.img-wrap img{
     width: 32%;
 }
