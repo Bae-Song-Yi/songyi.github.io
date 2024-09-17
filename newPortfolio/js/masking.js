@@ -32,8 +32,6 @@ $(document).ready(function(){
         }else{
             device = '.mo';
         }
-
-        console.log(device)
     }
 
     $('.mask-pc .submit-btn').click(function(){
@@ -147,7 +145,7 @@ $(document).ready(function(){
     const upload = $(".masking .upload-img");
     const editorBtn = $('.masking-tool .editor_btn');
     const maskingWrap = $('.masking .masking-wrap');
-    const pcmaskingWrap = $('.masking .pc .masking-wrap');
+    const moMaskingWrap = $('.masking .mo.masking-wrap');
 
     //PC 마스킹 마우스 이벤트
     var isDrawing = false;
@@ -214,12 +212,17 @@ $(document).ready(function(){
     maskingWrap.on("touchstart", function(event) {
         if (editorBtn.hasClass('on') === true && event.originalEvent.touches.length !== 2) {
             isDrawing = true;
-            prevX = (event.touches[0].pageX - $(this).offset().left) / $(this).width() * 100;
-            prevY = (event.touches[0].pageY - $(this).offset().top) / $(this).height() * 100;
+            prevX = (event.originalEvent.touches[0].pageX - $(this).offset().left) / $(this).width() * 100;
+            prevY = (event.originalEvent.touches[0].pageY - $(this).offset().top) / $(this).height() * 100;
             $("<div>")
                 .addClass("highlighter")
                 .css({ left: prevX + '%', top: prevY + '%' })
-                .appendTo(".masking-wrap");
+                .appendTo(".masking .pc .masking-wrap");
+
+            $("<div>")
+                .addClass("highlighter")
+                .css({ left: prevX + '%', top: prevY + '%' })
+                .appendTo(".mo.masking-wrap");
         }
     });
 
@@ -228,11 +231,16 @@ $(document).ready(function(){
             event.preventDefault(); //마스킹하고있을경우 스크롤 동작 차단
 
             // 마스킹 작업 코드
-            var x = (event.touches[0].pageX - $(this).offset().left) / $(this).width() * 100;
-            var y = (event.touches[0].pageY - $(this).offset().top) / $(this).height() * 100;
+            var x = (event.originalEvent.touches[0].pageX - $(this).offset().left) / $(this).width() * 100;
+            var y = (event.originalEvent.touches[0].pageY - $(this).offset().top) / $(this).height() * 100;
             var width = x - prevX;
             var height = y - prevY;
-            $(".highlighter:last").css({
+            $(".pc .highlighter:last").css({
+                width: width + '%',
+                height: height + '%',
+            });
+
+            $(".mo .highlighter:last").css({
                 width: width + '%',
                 height: height + '%',
             });
