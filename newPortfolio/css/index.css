@@ -454,6 +454,10 @@ section > article{
     object-position: center;
 }
 
+.project-wrap .inner .list li.work5 img{
+    object-position: right;
+}
+
 .project-wrap .inner .work6 img{
     object-position: right;
 }
