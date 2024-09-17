@@ -433,7 +433,7 @@ section > article{
 }
 
 .project-wrap .inner .list li.work2 .thumb a{
-    background: #e6e6e6 url(../img/detail/newLive/live_cover.png) no-repeat center;
+    background: #e2e0e0 url(../img/detail/newLive/live_cover.png) no-repeat center;
     background-size: 60%;
 }
 
@@ -443,7 +443,7 @@ section > article{
 }
 
 .project-wrap .inner .list li.work4 .thumb a{
-    background: #FDEFEA url(../img/detail/newMasking/masking_cover.png) no-repeat center;
+    background: #ffe5dc url(../img/detail/newMasking/masking_cover.png) no-repeat center;
     background-size: 70%;
 }
 
