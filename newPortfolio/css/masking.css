@@ -13,8 +13,6 @@
 ------------------------------------------------------------------*/
 
 /* Mobile Nav */
-
-
 .modal-bg {
     display: none;
     position: fixed;
@@ -745,6 +743,7 @@ input:-webkit-autofill:focus, input.error:-webkit-autofill:focus {
     font-weight: 500;
     line-height: normal;
     letter-spacing: -0.42px;
+    position: relative;
 }
 
 .modal-document-evidence .masking-tool .icon{
