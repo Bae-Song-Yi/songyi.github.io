@@ -317,15 +317,19 @@ header .home-btn{
     width: 100%;
 }
 
+.main-detail-wrap .bootstrap-custom .flex-layout.img-wrap div{
+    margin-bottom: 20px;
+}
+
 .main-detail-wrap .bootstrap-custom .flex-layout.img-wrap div:nth-child(2){
     position: absolute;
     right: 0;
-    top: 90px;
+    top: 60px;
     width: 53%;
 }
 
 .main-detail-wrap .bootstrap-custom .flex-layout.img-wrap div:nth-child(3){
-    margin-top: 20px;
+    margin-top: 0;
 }
 
 
@@ -484,7 +488,6 @@ header .home-btn{
         flex-direction: column;
     }
 }
-
 
 
 
