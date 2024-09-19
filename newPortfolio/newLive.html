@@ -75,8 +75,9 @@
                                 <div class="desc">
                                     <h5 class="sub-title">응찰버튼 Lock 기능</h5>
                                     <ul>
+                                        <li>① 응찰 버튼을 오응찰 하는 경우가 많아 이를 방지하기 위해 Lock 기능을 도입하게 되었습니다.</li>
                                         <li>
-                                            ①  useState 상태 관리
+                                            ② useState 상태 관리
                                             <div>
                                                 <p>- isLockPop: 입찰이 잠겨 있을 때 작은 화면에서 잠금 팝업을 보여줄지 여부를 관리하는 상태입니다.</p>
                                                 <p>- isBidPermit: 입찰이 허용되었는지, 혹은 잠겨 있는지를 나타내는 상태입니다. 작은 화면에서 입찰 가능 여부를 제어하는 데 사용됩니다.</p>
@@ -84,15 +85,15 @@
                                             </div>
                                         </li>
                                         <li>
-                                            ② lockBidToggle 함수
+                                            ③ lockBidToggle 함수
                                             <p>- isBidPermit의 상태를 반전시켜, 입찰을 허용하거나 잠글 수 있도록 합니다.</p>
                                         </li>
                                         <li>
-                                            ③ bidRequest 함수
+                                            ④ bidRequest 함수
                                             <p>- biddingInsertRequest라는 액션을 디스패치하여, 경매 유형, 경매 번호, 랏 번호, 패들 번호, 입찰 금액 등의 정보를 서버에 요청합니다.</p>
                                         </li>
                                         <li>
-                                            ④ handleOnBidInsert 함수
+                                            ⑤ handleOnBidInsert 함수
                                             <div>
                                                 <p>- 이 함수는 입찰 버튼이 클릭되었을 때 호출됩니다.</p>
                                                 <p>- 화면의 너비가 580px보다 클 경우, 바로 bidRequest 함수를 실행하여 입찰을 진행합니다.</p>
@@ -100,11 +101,11 @@
                                             </div>
                                         </li>
                                         <li>
-                                            ⑤ useEffect로 화면 크기 변화 감지
+                                            ⑥ useEffect로 화면 크기 변화 감지
                                             <p>- useEffect를 사용하여 화면이 리사이즈될 때마다 window.innerWidth를 가져와 windowWidth 상태를 업데이트합니다. 이를 통해 반응형 디자인을 지원합니다.</p>
                                         </li>
                                         <li>
-                                            ⑥ 랏 번호 변경 시 잠금 상태 초기화
+                                            ⑦ 랏 번호 변경 시 잠금 상태 초기화
                                             <p>- lot_num이 변경될 때마다 입찰이 잠겨야 하므로, useEffect를 사용하여 isBidPermit 상태를 false로 설정합니다.</p>
                                         </li>
                                     </ul>
@@ -122,7 +123,7 @@
                                 <div class="flex-layout desc">
                                     <div class="code"></div>
                                     <div class="review-list">
-                                        <h5 class="sub-title">응찰 금액 깜빡이 기능</h5>
+                                        <h5 class="sub-title">응찰 금액 시각적 효과</h5>
                                         <ul>
                                             <li>
                                                 ① animateBidPrice 상태
