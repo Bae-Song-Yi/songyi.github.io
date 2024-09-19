@@ -77,36 +77,14 @@
                                     <ul>
                                         <li>① 응찰 버튼을 오응찰 하는 경우가 많아 이를 방지하기 위해 Lock 기능을 도입하게 되었습니다.</li>
                                         <li>
-                                            ② useState 상태 관리
-                                            <div>
-                                                <p>- isLockPop: 입찰이 잠겨 있을 때 작은 화면에서 잠금 팝업을 보여줄지 여부를 관리하는 상태입니다.</p>
-                                                <p>- isBidPermit: 입찰이 허용되었는지, 혹은 잠겨 있는지를 나타내는 상태입니다. 작은 화면에서 입찰 가능 여부를 제어하는 데 사용됩니다.</p>
-                                                <p>- windowWidth: 현재 창의 너비를 저장하여 반응형 동작을 처리합니다.</p>
-                                            </div>
+                                            ② useState 함수를 통해 lock 버튼이 비활성화된 경우 잠금 팝업 표시 여부와 입찰 가능 여부를 상태로 관리할 수 있도록 구현했습니다.
                                         </li>
                                         <li>
-                                            ③ lockBidToggle 함수
-                                            <p>- isBidPermit의 상태를 반전시켜, 입찰을 허용하거나 잠글 수 있도록 합니다.</p>
+                                            ③ 해상도에 따라 응찰 정보 불러오는 방식을 다르게 해주었습니다.
+                                            <p>- PC의 경우 응찰 Lock 기능이 없으므로, 모바일에서만 적용되도록 프로세스를 다르게 구현했습니다.</p>
                                         </li>
                                         <li>
-                                            ④ bidRequest 함수
-                                            <p>- biddingInsertRequest라는 액션을 디스패치하여, 경매 유형, 경매 번호, 랏 번호, 패들 번호, 입찰 금액 등의 정보를 서버에 요청합니다.</p>
-                                        </li>
-                                        <li>
-                                            ⑤ handleOnBidInsert 함수
-                                            <div>
-                                                <p>- 이 함수는 입찰 버튼이 클릭되었을 때 호출됩니다.</p>
-                                                <p>- 화면의 너비가 580px보다 클 경우, 바로 bidRequest 함수를 실행하여 입찰을 진행합니다.</p>
-                                                <p>- 반면, 화면 너비가 580px 이하일 경우, isBidPermit 값에 따라 입찰을 허용하거나, 잠겨 있을 경우 isLockPop을 true로 설정하여 잠금 팝업을 띄웁니다.</p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            ⑥ useEffect로 화면 크기 변화 감지
-                                            <p>- useEffect를 사용하여 화면이 리사이즈될 때마다 window.innerWidth를 가져와 windowWidth 상태를 업데이트합니다. 이를 통해 반응형 디자인을 지원합니다.</p>
-                                        </li>
-                                        <li>
-                                            ⑦ 랏 번호 변경 시 잠금 상태 초기화
-                                            <p>- lot_num이 변경될 때마다 입찰이 잠겨야 하므로, useEffect를 사용하여 isBidPermit 상태를 false로 설정합니다.</p>
+                                            ④ 화면 크기 변화를 감지하고 window.innerWidth 값을 가져올 수 있도록 useEffect 함수를 사용하여 구현했습니다.
                                         </li>
                                     </ul>
                                 </div>
