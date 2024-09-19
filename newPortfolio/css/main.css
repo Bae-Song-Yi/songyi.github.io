@@ -312,6 +312,18 @@ header .home-btn{
     .detail-wrap article{
         padding: 0 20px;
     }
+
+    .masking-detail-wrap .cover-wrap {
+        background-size: 800px;
+    }
+    
+    .live-detail-wrap .cover-wrap {
+        background-size: 600px;
+    }
+    
+    .main-detail-wrap .cover-wrap {
+        background-size: 600px;
+    }
 }
 
 @media all and (max-width: 1000px){
@@ -451,7 +463,6 @@ header .home-btn{
         flex-direction: column;
     }
 }
-
 
 
 
