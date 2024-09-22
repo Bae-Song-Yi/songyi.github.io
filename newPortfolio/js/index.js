@@ -53,7 +53,7 @@ split.forEach(target => {
             end: "+=100",
         },
         onComplete: function() {
-            target.parentElement.classList.add('on'); 
+            //target.parentElement.classList.add('on'); 
             document.body.classList.remove('none-scroll');
         }
     });
