@@ -855,10 +855,10 @@ footer img{
 
 @media all and (max-width: 1100px){
     .intro-wrap .split{
-        width: calc(100% - 2.8vw);
-        width: -webkit-calc(100% - 2.8vw);
-        width: -moz-calc(100% - 2.8vw);
-        width: -o-calc(100% - 2.8vw);
+        width: calc(100% - 5.6vw);
+        width: -webkit-calc(100% - 5.6vw);
+        width: -moz-calc(100% - 5.6vw);
+        width: -o-calc(100% - 5.6vw);
     }
     .intro-wrap .inner{
         padding: 0 2.8vw;
@@ -902,7 +902,8 @@ footer img{
     }
 
     .intro-wrap .smile img {
-        transform: translateX(0.3vw);
+        transform: translateX(0.8vw);
+        width:9vw;
     }
 
     .intro-wrap .inner .ani-after-comp{
