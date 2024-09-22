@@ -1128,11 +1128,11 @@ footer img{
     }
 
     .intro-wrap .inner.on .line {
-        justify-content: space-between;
+        justify-content: center;
     }
 
     .intro-wrap .inner.on .split, .intro-wrap .inner.on .smile {
-        font-size: 7vw;
+        font-size: 27px;
     }
 
     .intro-wrap .intro-center h5 {
