@@ -830,7 +830,6 @@ footer img{
     .intro-wrap .inner.on .smile {
         top: 6vw;
         transition: all 0.5s;
-        font-size: 7vw;
     }
 
 
@@ -889,6 +888,10 @@ footer img{
 }
 
 @media all and (max-width: 1024px){
+    .intro-wrap .split {
+        font-size: 6.8vw;
+    }
+
     .intro-wrap .intro-left .text{
         width: 14vw;
         height: 5.5vw;
