@@ -394,6 +394,15 @@ header .home-btn{
         margin-bottom: 30px;
     }
 
+    .project-main-features .flex-layout.img-wrap img{
+        width: 100%;
+        margin-bottom: 18px;
+    }
+
+    .project-main-features .block-layout .code{
+        height: auto;
+    }
+
     .lunch-detail-wrap .project-main-features .calendar-feature .flex-layout.img-wrap{
         flex-direction: row;
     }
@@ -402,13 +411,31 @@ header .home-btn{
         flex-direction: row;
     }
 
-    .masking-detail-wrap.detail-wrap  .flex-layout{
-        flex-direction: row;
+    .masking-detail-wrap .project-background .img-wrap img{
+        width: 100%;
     }
 
-    .masking-detail-wrap.detail-wrap .project-info.flex-layout{
-        flex-direction: column;
+    .masking-detail-wrap .project-background .img-wrap img:last-child{
+        display: none;
     }
+
+    .masking-detail-wrap .project-main-features .flex-layout.img-wrap img:first-child{
+        margin-bottom: 18px;
+    }
+
+    .live-detail-wrap .animation-feature .img-wrap > div:first-child {
+        width: 100%;
+    }
+
+    .live-detail-wrap .animation-feature .img-wrap > div:last-child {
+        width: 100%;
+    }
+
+    .live-detail-wrap .animation-feature .img-wrap > div img.mo {
+        display: none;
+    }
+
+ 
 }
 
 @media all and (max-width: 820px){
@@ -446,45 +473,8 @@ header .home-btn{
         margin-bottom: 50px;
     }
 
-    .project-main-features .flex-layout.img-wrap img{
-        width: 100%;
-        margin-bottom: 18px;
-    }
-
-    .project-main-features .block-layout .code{
-        height: auto;
-    }
-
-    .masking-detail-wrap.detail-wrap .flex-layout{
-        flex-direction: column;
-    }
-
-    .masking-detail-wrap .project-background .img-wrap img{
-        width: 100%;
-    }
-
-    .masking-detail-wrap .project-background .img-wrap img:last-child{
-        display: none;
-    }
-
-    .masking-detail-wrap .project-main-features .flex-layout.img-wrap img:first-child{
-        margin-bottom: 18px;
-    }
-
     .masking-detail-wrap .fram-wrap::before{
         font-size: 24px;
-    }
-
-    .live-detail-wrap .animation-feature .img-wrap > div:first-child {
-        width: 100%;
-    }
-
-    .live-detail-wrap .animation-feature .img-wrap > div:last-child {
-        width: 100%;
-    }
-
-    .live-detail-wrap .animation-feature .img-wrap > div img.mo {
-        display: none;
     }
 
     .lunch-detail-wrap .project-main-features .calendar-feature .flex-layout.img-wrap{
@@ -500,6 +490,8 @@ header .home-btn{
         flex-direction: column;
     }
 }
+
+
 
 
 
