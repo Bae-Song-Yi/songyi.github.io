@@ -401,6 +401,14 @@ header .home-btn{
     .gpt-detail-wrap .detail-wrap .flex-layout {
         flex-direction: row;
     }
+
+    .masking-detail-wrap.detail-wrap  .flex-layout{
+        flex-direction: row;
+    }
+
+    .masking-detail-wrap.detail-wrap .project-info.flex-layout{
+        flex-direction: column;
+    }
 }
 
 @media all and (max-width: 820px){
@@ -447,6 +455,10 @@ header .home-btn{
         height: auto;
     }
 
+    .masking-detail-wrap.detail-wrap .flex-layout{
+        flex-direction: column;
+    }
+
     .masking-detail-wrap .project-background .img-wrap img{
         width: 100%;
     }
@@ -488,35 +500,6 @@ header .home-btn{
         flex-direction: column;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
