@@ -90,7 +90,7 @@ body{
 }
 
 .intro-wrap .inner.on .line {
-    justify-content: center;
+    justify-content: space-between;
     letter-spacing: 0.05em;
 }
 
