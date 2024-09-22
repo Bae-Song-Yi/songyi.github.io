@@ -147,6 +147,12 @@ body{
     transition: all 0.5s;
 }
 
+.intro-wrap .intro-center{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .intro-wrap .inner .ani-after-comp{
     opacity: 0;
     transition: ease-in 1s;
@@ -792,7 +798,7 @@ footer img{
 
 @media all and (max-width: 1280px){
     .intro-wrap .split{
-        font-size: 7.17vw;
+        font-size: 7vw;
     }
 
     .intro-wrap .smile img{
@@ -822,7 +828,7 @@ footer img{
 
     .intro-wrap .inner.on .split, 
     .intro-wrap .inner.on .smile {
-        top: 5vw;
+        top: 6vw;
         transition: all 0.5s;
         font-size: 7vw;
     }
@@ -1104,8 +1110,6 @@ footer img{
         font-size: 12px;
         margin-left: 6px;
     }
-
-
 }
 
 @media all and (max-width: 420px){
