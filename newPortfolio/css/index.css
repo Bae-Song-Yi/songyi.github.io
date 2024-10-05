@@ -439,13 +439,13 @@ section > article{
 }
 
 .project-wrap .inner .list li.work2 .thumb a{
-    background: #ffe5dc url(../img/detail/newMain/main_cover.png) no-repeat center;
-    background-size: 70%;
+    background: #0d1f28 url(../img/detail/newMain/main_cover.png) no-repeat center;
+    background-size: 60%;
 }
 
 .project-wrap .inner .list li.work3 .thumb a{
-    background: #0d1f28 url(../img/detail/newMasking/masking_cover.png) no-repeat center;
-    background-size: 60%;
+    background: #ffe5dc url(../img/detail/newMasking/masking_cover.png) no-repeat center;
+    background-size: 70%;
 }
 
 .project-wrap .inner .list li.work4 .thumb a{
