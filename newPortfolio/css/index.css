@@ -439,8 +439,8 @@ section > article{
 }
 
 .project-wrap .inner .list li.work2 .thumb a{
-    background: #e2e0e0 url(../img/detail/newLive/live_cover.png) no-repeat center;
-    background-size: 60%;
+    background: #ffe5dc url(../img/detail/newMasking/masking_cover.png) no-repeat center;
+    background-size: 70%;
 }
 
 .project-wrap .inner .list li.work3 .thumb a{
@@ -449,8 +449,8 @@ section > article{
 }
 
 .project-wrap .inner .list li.work4 .thumb a{
-    background: #ffe5dc url(../img/detail/newMasking/masking_cover.png) no-repeat center;
-    background-size: 70%;
+    background: #e2e0e0 url(../img/detail/newLive/live_cover.png) no-repeat center;
+    background-size: 60%;
 }
 
 .project-wrap .inner .list img{
