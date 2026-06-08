@@ -14,6 +14,9 @@ create policy "anyone can apply"
   to anon
   with check (true);
 
+-- RLS 정책과 별개로 테이블 레벨 INSERT 권한도 필요 (없으면 401)
+grant insert on table applicants to anon;
+
 -- (select 정책을 만들지 않음 = anon은 읽기 불가)
 -- 운영자는 Supabase 대시보드(service_role)로 보면 됨 → RLS 우회되므로 조회 가능
 
@@ -24,6 +27,8 @@ create policy "anyone can log events"
   on events for insert
   to anon
   with check (true);
+
+grant insert on table events to anon;
 
 -- ---------- log_event RPC가 RLS 아래서도 동작하도록 ----------
 -- log_event는 SECURITY DEFINER로 만들어 호출자 권한과 무관하게 insert 가능하게 함
