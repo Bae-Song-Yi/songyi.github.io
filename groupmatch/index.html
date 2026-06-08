@@ -252,6 +252,12 @@
       <input type="text" placeholder="카톡 ID 입력" id="in-kakao">
     </div>
 
+    <!-- Q10 전화번호 -->
+    <div class="q" data-q="phone">
+      <label>전화번호 <small>신청 완료 알림을 보내드릴 번호예요</small></label>
+      <input type="tel" inputmode="numeric" placeholder="010-1234-5678" id="in-phone">
+    </div>
+
     <!-- 프로필 사진 (선택) -->
     <div class="qphoto">
       <label>프로필 사진 <small>얼굴이 잘 보이는 사진일수록 매칭 확률이 올라가요 (선택)</small></label>
@@ -378,6 +384,7 @@ qEls.forEach(el => {
 const textInputs = [
   ['in-birth', 'birth_year'], ['in-job', 'job'],
   ['in-intro', 'intro'], ['in-kakao', 'kakao_id'],
+  ['in-phone', 'phone'],
 ];
 textInputs.forEach(([id, qid]) => {
   const el = document.getElementById(id);
@@ -461,6 +468,7 @@ document.getElementById('submitBtn').onclick = async () => {
         available: answers.available || null,
         intro: answers.intro || null,
         kakao_id: answers.kakao_id,
+        phone: answers.phone || null,
         wtp: answers.wtp || null,
         photo_url: photoUrl,
         utm_source: utm.utm_source,
