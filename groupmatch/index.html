@@ -31,6 +31,9 @@
     display:flex;align-items:center;padding:64px 56px;
   }
   .brand-inner{max-width:380px}
+  .viz{position:relative;width:100%;height:218px;margin-bottom:28px}
+  .viz .ava{position:absolute;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:19px;border:3px solid #fff;box-shadow:0 8px 20px -6px rgba(0,0,0,.18)}
+  .viz .vheart{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:62px;height:62px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-size:29px;box-shadow:0 10px 24px -6px rgba(232,85,62,.4);z-index:5}
   .badge{
     display:inline-block;font-size:12px;letter-spacing:.3px;color:var(--accent);
     background:#fff;padding:7px 14px;border-radius:20px;margin-bottom:22px;
@@ -132,7 +135,15 @@
 
   <aside class="brand">
     <div class="brand-inner">
-      <span class="badge">혼자 와도 팀이 되는 그룹 소개팅</span>
+      <div class="viz">
+        <div class="ava" style="background:#e8553e;left:4%;top:4%">주</div>
+        <div class="ava" style="background:#d9a441;left:0;top:44%">민</div>
+        <div class="ava" style="background:#c9784f;left:15%;top:80%">하</div>
+        <div class="vheart">💞</div>
+        <div class="ava" style="background:#6a8caf;right:4%;top:4%">강</div>
+        <div class="ava" style="background:#7a9e7e;right:0;top:44%">한</div>
+        <div class="ava" style="background:#b06a9e;right:15%;top:80%">민</div>
+      </div>
       <div class="logo">
         <span class="logo-mark">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -143,11 +154,6 @@
         <span class="logo-word">두<b>근</b></span>
       </div>
       <p id="heroCopy"></p>
-      <ul class="values">
-        <li>혼자 신청하면 운영진이 잘 맞는 팀을 짜드려요</li>
-        <li>괜찮은 상대 팀과 그룹 대 그룹으로 만나요</li>
-        <li>부담은 덜고, 진심은 그대로</li>
-      </ul>
     </div>
   </aside>
 
