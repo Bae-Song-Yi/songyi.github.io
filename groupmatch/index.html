@@ -5,83 +5,163 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>두근 — 그룹 소개팅 신청</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Hahmlet:wght@400;600;700&display=swap');
+  @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css');
   :root{
-    --bg:#fdf6f3; --ink:#2b2320; --muted:#9b8b84;
-    --accent:#e8553e; --accent-soft:#fbe3dc; --card:#fffaf8; --line:#f0ddd6;
+    --bg:#f6f3f1; --ink:#241f1d; --muted:#a59a94;
+    --accent:#e8553e; --accent-soft:#fdeee9; --accent-press:#d44730;
+    --card:#ffffff; --line:#ebe3df; --ring:rgba(232,85,62,.16);
+    --font:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,system-ui,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;
   }
   *{margin:0;padding:0;box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
   body{
-    font-family:'Gowun Dodum',sans-serif;background:var(--bg);color:var(--ink);
-    min-height:100vh;display:flex;justify-content:center;
-    background-image:radial-gradient(circle at 15% 8%, #fceae3 0%, transparent 40%),
-                     radial-gradient(circle at 85% 92%, #fbe3dc 0%, transparent 45%);
+    font-family:var(--font);background:var(--bg);color:var(--ink);
+    min-height:100vh;-webkit-font-smoothing:antialiased;
   }
-  .wrap{width:100%;max-width:480px;padding:28px 20px 60px}
 
-  .hero{margin-bottom:26px}
-  .hero h1{font-family:'Hahmlet',serif;font-size:30px;font-weight:700;letter-spacing:-1px}
-  .hero h1 b{color:var(--accent)}
-  .hero p{font-size:14px;color:#6e5f58;line-height:1.7;margin-top:10px}
+  /* 2단 레이아웃 (좌: 브랜드 / 우: 폼) */
+  .page{
+    display:grid;grid-template-columns:0.92fr 1.08fr;
+    max-width:1180px;margin:0 auto;min-height:100vh;
+  }
+  .brand{
+    position:sticky;top:0;align-self:start;height:100vh;
+    background:linear-gradient(165deg,#fff4f0 0%,#fbe7e0 58%,#f6dcd2 100%);
+    border-right:1px solid var(--line);
+    display:flex;align-items:center;padding:64px 56px;
+  }
+  .brand-inner{max-width:380px}
+  .viz{position:relative;width:100%;height:218px;margin-bottom:28px}
+  .viz .ava{position:absolute;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:19px;border:3px solid #fff;box-shadow:0 8px 20px -6px rgba(0,0,0,.18)}
+  .viz .vheart{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:62px;height:62px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-size:29px;box-shadow:0 10px 24px -6px rgba(232,85,62,.4);z-index:5}
+  .badge{
+    display:inline-block;font-size:12px;letter-spacing:.3px;color:var(--accent);
+    background:#fff;padding:7px 14px;border-radius:20px;margin-bottom:22px;
+    box-shadow:0 3px 10px -5px var(--ring);
+  }
+  .logo{display:flex;align-items:center;gap:13px;margin-bottom:8px}
+  .logo-mark{
+    width:48px;height:48px;border-radius:15px;flex:none;
+    background:linear-gradient(140deg,#f4836b,var(--accent));
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 10px 20px -7px var(--ring);
+  }
+  .logo-mark svg{width:26px;height:26px}
+  .logo-word{font-size:36px;font-weight:800;letter-spacing:-2px;color:var(--ink)}
+  .logo-word b{color:var(--accent)}
+  .brand p{font-size:16px;color:#7b6e68;line-height:1.75;margin-top:16px;white-space:pre-line}
+  .values{list-style:none;margin-top:30px;display:flex;flex-direction:column;gap:13px}
+  .values li{position:relative;padding-left:26px;font-size:14.5px;color:#6e5f58;line-height:1.5}
+  .values li::before{
+    content:'';position:absolute;left:0;top:6px;width:8px;height:8px;border-radius:50%;
+    background:var(--accent);box-shadow:0 0 0 4px var(--accent-soft);
+  }
+
+  /* 폼 컬럼 */
+  .form-col{padding:52px 56px 72px;display:flex;flex-direction:column;justify-content:center}
+  .form-inner{width:100%;max-width:440px;margin:0 auto}
+
+  @media (max-width:880px){
+    .page{grid-template-columns:1fr;max-width:560px}
+    .brand{position:static;height:auto;border-right:none;border-bottom:1px solid var(--line);padding:40px 26px 30px;align-items:flex-start}
+    .brand-inner{max-width:none}
+    .logo-word{font-size:30px}
+    .logo-mark{width:42px;height:42px;border-radius:13px}
+    .logo-mark svg{width:23px;height:23px}
+    .brand p{font-size:15px}
+    .values{display:none}
+    .form-col{padding:6px 24px 56px}
+  }
 
   /* 진행바 */
-  .progress{height:5px;background:var(--line);border-radius:3px;margin-bottom:24px;overflow:hidden}
-  .progress div{height:100%;background:var(--accent);width:0%;transition:width .4s ease;border-radius:3px}
+  .progress-wrap{position:sticky;top:0;z-index:5;background:var(--bg);padding:14px 0 18px;margin-bottom:6px}
+  .progress{height:6px;background:var(--line);border-radius:99px;overflow:hidden}
+  .progress div{height:100%;background:linear-gradient(90deg,#f0795f,var(--accent));width:0%;transition:width .45s cubic-bezier(.2,.8,.3,1);border-radius:99px}
 
+  /* 질문 카드 */
   .q{
-    background:var(--card);border:1px solid var(--line);border-radius:18px;
-    padding:20px;margin-bottom:14px;
-    opacity:.45;pointer-events:none;transition:.3s;
+    background:var(--card);border:1px solid var(--line);border-radius:20px;
+    padding:22px 20px;margin-bottom:12px;
+    opacity:.5;filter:saturate(.6);pointer-events:none;
+    transition:opacity .3s, box-shadow .3s, border-color .3s, filter .3s, transform .3s;
   }
-  .q.active{opacity:1;pointer-events:auto;box-shadow:0 8px 24px rgba(200,90,60,.08)}
-  .q.done{opacity:1;pointer-events:auto}
-  .q label{display:block;font-family:'Hahmlet',serif;font-size:15.5px;font-weight:600;margin-bottom:12px}
-  .q label small{display:block;font-family:'Gowun Dodum';font-weight:400;font-size:12px;color:var(--muted);margin-top:4px}
+  .q.active{
+    opacity:1;filter:none;pointer-events:auto;border-color:#f3d7cf;
+    box-shadow:0 10px 30px -12px rgba(200,90,60,.28);
+  }
+  .q.done{opacity:1;filter:none;pointer-events:auto}
+  .q label{display:block;font-family:var(--font);font-size:16px;font-weight:600;margin-bottom:14px;line-height:1.4}
+  .q label small{display:block;font-family:var(--font);font-weight:400;font-size:12px;color:var(--muted);margin-top:5px;line-height:1.5}
 
   .opts{display:flex;flex-wrap:wrap;gap:8px}
   .opt{
-    padding:10px 16px;border:1.5px solid var(--line);border-radius:24px;
-    font-size:13.5px;cursor:pointer;background:var(--bg);transition:.15s;user-select:none
+    padding:11px 16px;border:1.5px solid var(--line);border-radius:14px;
+    font-size:14px;cursor:pointer;background:#fcfaf9;transition:.15s;user-select:none;line-height:1.2;
   }
-  .opt:hover{border-color:var(--accent)}
-  .opt.sel{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
+  .opt:hover{border-color:#f0a795;background:#fff}
+  .opt.sel{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600;box-shadow:0 4px 12px -3px var(--ring)}
 
   input[type=text],input[type=number],textarea{
-    width:100%;border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;
-    font-family:inherit;font-size:14px;background:var(--bg);outline:none;transition:.15s
+    width:100%;border:1.5px solid var(--line);border-radius:14px;padding:13px 15px;
+    font-family:inherit;font-size:15px;background:#fcfaf9;color:var(--ink);outline:none;transition:.15s;
   }
-  input:focus,textarea:focus{border-color:var(--accent)}
-  textarea{resize:none;height:72px}
+  input::placeholder,textarea::placeholder{color:#c4b8b2}
+  input:focus,textarea:focus{border-color:var(--accent);background:#fff;box-shadow:0 0 0 4px var(--ring)}
+  textarea{resize:none;height:78px;line-height:1.5}
 
   .submit{
-    width:100%;padding:16px;border:none;border-radius:14px;cursor:pointer;
-    font-family:'Hahmlet',serif;font-size:16px;font-weight:700;
-    background:var(--accent);color:#fff;margin-top:8px;transition:.2s;
-    opacity:.4;pointer-events:none;
+    width:100%;padding:17px;border:none;border-radius:16px;cursor:pointer;
+    font-family:var(--font);font-size:16px;font-weight:700;
+    background:var(--accent);color:#fff;margin-top:18px;
+    transition:opacity .25s, transform .15s, background .2s, box-shadow .2s;
+    opacity:.35;pointer-events:none;
   }
-  .submit.ready{opacity:1;pointer-events:auto}
-  .submit.ready:hover{background:#d8472f;transform:translateY(-1px)}
+  .submit.ready{opacity:1;pointer-events:auto;box-shadow:0 12px 26px -10px var(--ring)}
+  .submit.ready:hover{background:var(--accent-press)}
+  .submit.ready:active{transform:translateY(1px)}
 
-  .done-screen{display:none;text-align:center;padding:70px 20px}
+  .done-screen{display:none;text-align:center;padding:90px 24px}
   .done-screen.show{display:block;animation:pop .5s cubic-bezier(.2,1.3,.4,1)}
   @keyframes pop{from{transform:scale(.85);opacity:0}to{transform:scale(1);opacity:1}}
-  .done-screen .heart{font-size:52px}
-  .done-screen h2{font-family:'Hahmlet',serif;font-size:24px;margin:14px 0 8px;color:var(--accent)}
-  .done-screen p{font-size:13.5px;color:var(--muted);line-height:1.8}
+  .done-screen .heart{font-size:56px}
+  .done-screen h2{font-family:var(--font);font-size:25px;margin:16px 0 10px;color:var(--accent)}
+  .done-screen p{font-size:14px;color:var(--muted);line-height:1.9}
 
-  .privacy{font-size:11px;color:var(--muted);line-height:1.6;margin-top:14px;text-align:center}
+  .privacy{font-size:11.5px;color:var(--muted);line-height:1.7;margin-top:18px;text-align:center}
 </style>
 </head>
 <body>
-<div class="wrap">
+<div class="page">
 
-  <div id="formArea">
-    <div class="hero">
-      <h1 id="heroTitle">두<b>근</b></h1>
+  <aside class="brand">
+    <div class="brand-inner">
+      <div class="viz">
+        <div class="ava" style="background:#e8553e;left:4%;top:4%">주</div>
+        <div class="ava" style="background:#d9a441;left:0;top:44%">민</div>
+        <div class="ava" style="background:#c9784f;left:15%;top:80%">하</div>
+        <div class="vheart">💞</div>
+        <div class="ava" style="background:#6a8caf;right:4%;top:4%">강</div>
+        <div class="ava" style="background:#7a9e7e;right:0;top:44%">한</div>
+        <div class="ava" style="background:#b06a9e;right:15%;top:80%">민</div>
+      </div>
+      <div class="logo">
+        <span class="logo-mark">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 20.5C12 20.5 3.5 15.6 3.5 9.4C3.5 6.6 5.7 4.5 8.4 4.5C10 4.5 11.4 5.3 12 6.5C12.6 5.3 14 4.5 15.6 4.5C18.3 4.5 20.5 6.6 20.5 9.4C20.5 15.6 12 20.5 12 20.5Z" fill="#fff" fill-opacity="0.22"/>
+            <path d="M4 12.5H8.2L9.8 8.7L12 15.3L14 11.5L15.2 12.5H20" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span class="logo-word">두<b>근</b></span>
+      </div>
       <p id="heroCopy"></p>
     </div>
+  </aside>
 
-    <div class="progress"><div id="bar"></div></div>
+  <main class="form-col">
+    <div class="form-inner">
+
+  <div id="formArea">
+    <div class="progress-wrap"><div class="progress"><div id="bar"></div></div></div>
 
     <!-- Q1 성별 -->
     <div class="q active" data-q="gender">
@@ -169,6 +249,9 @@
     <h2>신청 완료!</h2>
     <p>잘 맞는 분들로 그룹을 구성해서<br>카카오톡으로 연락드릴게요.<br><br>보통 3~7일 정도 걸려요.</p>
   </div>
+
+    </div>
+  </main>
 
 </div>
 
