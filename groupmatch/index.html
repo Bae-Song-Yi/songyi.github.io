@@ -7,69 +7,84 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Hahmlet:wght@400;600;700&display=swap');
   :root{
-    --bg:#fdf6f3; --ink:#2b2320; --muted:#9b8b84;
-    --accent:#e8553e; --accent-soft:#fbe3dc; --card:#fffaf8; --line:#f0ddd6;
+    --bg:#f6f3f1; --ink:#241f1d; --muted:#a59a94;
+    --accent:#e8553e; --accent-soft:#fdeee9; --accent-press:#d44730;
+    --card:#ffffff; --line:#ebe3df; --ring:rgba(232,85,62,.16);
   }
   *{margin:0;padding:0;box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
   body{
     font-family:'Gowun Dodum',sans-serif;background:var(--bg);color:var(--ink);
     min-height:100vh;display:flex;justify-content:center;
-    background-image:radial-gradient(circle at 15% 8%, #fceae3 0%, transparent 40%),
-                     radial-gradient(circle at 85% 92%, #fbe3dc 0%, transparent 45%);
+    -webkit-font-smoothing:antialiased;
   }
-  .wrap{width:100%;max-width:480px;padding:28px 20px 60px}
+  .wrap{width:100%;max-width:460px;padding:36px 22px 56px}
 
-  .hero{margin-bottom:26px}
-  .hero h1{font-family:'Hahmlet',serif;font-size:30px;font-weight:700;letter-spacing:-1px}
+  /* 헤더 */
+  .hero{margin-bottom:22px}
+  .hero .badge{
+    display:inline-block;font-size:11px;letter-spacing:.5px;color:var(--accent);
+    background:var(--accent-soft);padding:5px 11px;border-radius:20px;margin-bottom:14px;
+  }
+  .hero h1{font-family:'Hahmlet',serif;font-size:32px;font-weight:700;letter-spacing:-1.2px;line-height:1.1}
   .hero h1 b{color:var(--accent)}
-  .hero p{font-size:14px;color:#6e5f58;line-height:1.7;margin-top:10px}
+  .hero p{font-size:14px;color:#7b6e68;line-height:1.7;margin-top:12px}
 
   /* 진행바 */
-  .progress{height:5px;background:var(--line);border-radius:3px;margin-bottom:24px;overflow:hidden}
-  .progress div{height:100%;background:var(--accent);width:0%;transition:width .4s ease;border-radius:3px}
+  .progress-wrap{position:sticky;top:0;z-index:5;background:var(--bg);padding:14px 0 18px;margin-bottom:6px}
+  .progress{height:6px;background:var(--line);border-radius:99px;overflow:hidden}
+  .progress div{height:100%;background:linear-gradient(90deg,#f0795f,var(--accent));width:0%;transition:width .45s cubic-bezier(.2,.8,.3,1);border-radius:99px}
 
+  /* 질문 카드 */
   .q{
-    background:var(--card);border:1px solid var(--line);border-radius:18px;
-    padding:20px;margin-bottom:14px;
-    opacity:.45;pointer-events:none;transition:.3s;
+    background:var(--card);border:1px solid var(--line);border-radius:20px;
+    padding:22px 20px;margin-bottom:12px;
+    opacity:.5;filter:saturate(.6);pointer-events:none;
+    transition:opacity .3s, box-shadow .3s, border-color .3s, filter .3s, transform .3s;
   }
-  .q.active{opacity:1;pointer-events:auto;box-shadow:0 8px 24px rgba(200,90,60,.08)}
-  .q.done{opacity:1;pointer-events:auto}
-  .q label{display:block;font-family:'Hahmlet',serif;font-size:15.5px;font-weight:600;margin-bottom:12px}
-  .q label small{display:block;font-family:'Gowun Dodum';font-weight:400;font-size:12px;color:var(--muted);margin-top:4px}
+  .q.active{
+    opacity:1;filter:none;pointer-events:auto;border-color:#f3d7cf;
+    box-shadow:0 10px 30px -12px rgba(200,90,60,.28);
+  }
+  .q.done{opacity:1;filter:none;pointer-events:auto}
+  .q label{display:block;font-family:'Hahmlet',serif;font-size:16px;font-weight:600;margin-bottom:14px;line-height:1.4}
+  .q label small{display:block;font-family:'Gowun Dodum';font-weight:400;font-size:12px;color:var(--muted);margin-top:5px;line-height:1.5}
 
   .opts{display:flex;flex-wrap:wrap;gap:8px}
   .opt{
-    padding:10px 16px;border:1.5px solid var(--line);border-radius:24px;
-    font-size:13.5px;cursor:pointer;background:var(--bg);transition:.15s;user-select:none
+    padding:11px 16px;border:1.5px solid var(--line);border-radius:14px;
+    font-size:14px;cursor:pointer;background:#fcfaf9;transition:.15s;user-select:none;line-height:1.2;
   }
-  .opt:hover{border-color:var(--accent)}
-  .opt.sel{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
+  .opt:hover{border-color:#f0a795;background:#fff}
+  .opt.sel{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600;box-shadow:0 4px 12px -3px var(--ring)}
 
   input[type=text],input[type=number],textarea{
-    width:100%;border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;
-    font-family:inherit;font-size:14px;background:var(--bg);outline:none;transition:.15s
+    width:100%;border:1.5px solid var(--line);border-radius:14px;padding:13px 15px;
+    font-family:inherit;font-size:15px;background:#fcfaf9;color:var(--ink);outline:none;transition:.15s;
   }
-  input:focus,textarea:focus{border-color:var(--accent)}
-  textarea{resize:none;height:72px}
+  input::placeholder,textarea::placeholder{color:#c4b8b2}
+  input:focus,textarea:focus{border-color:var(--accent);background:#fff;box-shadow:0 0 0 4px var(--ring)}
+  textarea{resize:none;height:78px;line-height:1.5}
 
   .submit{
-    width:100%;padding:16px;border:none;border-radius:14px;cursor:pointer;
+    width:100%;padding:17px;border:none;border-radius:16px;cursor:pointer;
     font-family:'Hahmlet',serif;font-size:16px;font-weight:700;
-    background:var(--accent);color:#fff;margin-top:8px;transition:.2s;
-    opacity:.4;pointer-events:none;
+    background:var(--accent);color:#fff;margin-top:18px;
+    transition:opacity .25s, transform .15s, background .2s, box-shadow .2s;
+    opacity:.35;pointer-events:none;
   }
-  .submit.ready{opacity:1;pointer-events:auto}
-  .submit.ready:hover{background:#d8472f;transform:translateY(-1px)}
+  .submit.ready{opacity:1;pointer-events:auto;box-shadow:0 12px 26px -10px var(--ring)}
+  .submit.ready:hover{background:var(--accent-press)}
+  .submit.ready:active{transform:translateY(1px)}
 
-  .done-screen{display:none;text-align:center;padding:70px 20px}
+  .done-screen{display:none;text-align:center;padding:90px 24px}
   .done-screen.show{display:block;animation:pop .5s cubic-bezier(.2,1.3,.4,1)}
   @keyframes pop{from{transform:scale(.85);opacity:0}to{transform:scale(1);opacity:1}}
-  .done-screen .heart{font-size:52px}
-  .done-screen h2{font-family:'Hahmlet',serif;font-size:24px;margin:14px 0 8px;color:var(--accent)}
-  .done-screen p{font-size:13.5px;color:var(--muted);line-height:1.8}
+  .done-screen .heart{font-size:56px}
+  .done-screen h2{font-family:'Hahmlet',serif;font-size:25px;margin:16px 0 10px;color:var(--accent)}
+  .done-screen p{font-size:14px;color:var(--muted);line-height:1.9}
 
-  .privacy{font-size:11px;color:var(--muted);line-height:1.6;margin-top:14px;text-align:center}
+  .privacy{font-size:11.5px;color:var(--muted);line-height:1.7;margin-top:18px;text-align:center}
 </style>
 </head>
 <body>
@@ -77,11 +92,12 @@
 
   <div id="formArea">
     <div class="hero">
+      <span class="badge">혼자 와도 팀이 되는 그룹 소개팅</span>
       <h1 id="heroTitle">두<b>근</b></h1>
       <p id="heroCopy"></p>
     </div>
 
-    <div class="progress"><div id="bar"></div></div>
+    <div class="progress-wrap"><div class="progress"><div id="bar"></div></div></div>
 
     <!-- Q1 성별 -->
     <div class="q active" data-q="gender">
