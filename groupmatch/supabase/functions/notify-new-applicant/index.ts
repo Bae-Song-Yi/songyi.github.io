@@ -27,7 +27,6 @@ Deno.serve(async (req) => {
       `• 참가비 의향: ${r.wtp ?? "-"}`,
       `• 소개: ${r.intro ?? "-"}`,
       `• 카톡ID: ${r.kakao_id ?? "-"}`,
-      `• 전화번호: ${r.phone ?? "-"}`,
       `• 유입: ${r.utm_source ?? "-"} / 카피 ${r.variant ?? "-"}`,
       r.photo_url ? `• 사진: ${r.photo_url}` : null,
     ].filter(Boolean).join("\n");
