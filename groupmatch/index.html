@@ -128,6 +128,18 @@
   .done-screen p{font-size:14px;color:var(--muted);line-height:1.9}
 
   .privacy{font-size:11.5px;color:var(--muted);line-height:1.7;margin-top:18px;text-align:center}
+
+  /* 프로필 사진 첨부 (선택) */
+  .qphoto{background:var(--card);border:1px solid #f3d7cf;border-radius:20px;padding:22px 20px;margin-bottom:12px;box-shadow:0 10px 30px -12px rgba(200,90,60,.18)}
+  .qphoto label{display:block;font-size:16px;font-weight:600;margin-bottom:14px;line-height:1.4}
+  .qphoto label small{display:block;font-weight:400;font-size:12px;color:var(--muted);margin-top:5px;line-height:1.5}
+  .photo-drop{display:flex;align-items:center;justify-content:center;gap:8px;border:1.5px dashed var(--line);border-radius:14px;padding:26px 16px;color:var(--muted);font-size:14px;cursor:pointer;background:#fcfaf9;transition:.15s;text-align:center}
+  .photo-drop:hover{border-color:#f0a795;background:#fff;color:var(--accent)}
+  .photo-preview{display:none;position:relative}
+  .photo-preview.show{display:block}
+  .photo-preview img{width:100%;max-height:280px;object-fit:cover;border-radius:14px;display:block}
+  .photo-remove{position:absolute;top:10px;right:10px;background:rgba(0,0,0,.55);color:#fff;border:none;border-radius:50%;width:30px;height:30px;font-size:18px;cursor:pointer;line-height:1;display:flex;align-items:center;justify-content:center}
+  .photo-hint{font-size:11.5px;color:var(--muted);margin-top:8px}
 </style>
 </head>
 <body>
@@ -238,6 +250,18 @@
     <div class="q" data-q="kakao_id">
       <label>카카오톡 ID <small>그룹이 구성되면 이 ID로 연락드려요</small></label>
       <input type="text" placeholder="카톡 ID 입력" id="in-kakao">
+    </div>
+
+    <!-- 프로필 사진 (선택) -->
+    <div class="qphoto">
+      <label>프로필 사진 <small>얼굴이 잘 보이는 사진일수록 매칭 확률이 올라가요 (선택)</small></label>
+      <div class="photo-drop" id="photoDrop">📷 사진 선택 또는 여기로 드래그</div>
+      <div class="photo-preview" id="photoPreview">
+        <img id="photoImg" alt="미리보기">
+        <button type="button" class="photo-remove" id="photoRemove" aria-label="삭제">×</button>
+      </div>
+      <input type="file" id="in-photo" accept="image/*" hidden>
+      <div class="photo-hint">JPG·PNG, 최대 5MB</div>
     </div>
 
     <button class="submit" id="submitBtn">신청 완료하기</button>
@@ -362,10 +386,60 @@ textInputs.forEach(([id, qid]) => {
   });
 });
 
+// ---------- 프로필 사진 (선택) ----------
+let photoFile = null;
+const photoDrop = document.getElementById('photoDrop');
+const photoInput = document.getElementById('in-photo');
+const photoPreview = document.getElementById('photoPreview');
+const photoImg = document.getElementById('photoImg');
+
+photoDrop.onclick = () => photoInput.click();
+photoInput.onchange = () => handlePhoto(photoInput.files[0]);
+['dragover', 'dragenter'].forEach(ev =>
+  photoDrop.addEventListener(ev, e => { e.preventDefault(); photoDrop.style.borderColor = 'var(--accent)'; }));
+['dragleave', 'drop'].forEach(ev =>
+  photoDrop.addEventListener(ev, e => { e.preventDefault(); photoDrop.style.borderColor = ''; }));
+photoDrop.addEventListener('drop', e => { const f = e.dataTransfer.files[0]; if (f) handlePhoto(f); });
+document.getElementById('photoRemove').onclick = () => {
+  photoFile = null; photoInput.value = '';
+  photoPreview.classList.remove('show'); photoDrop.style.display = '';
+};
+
+function handlePhoto(file) {
+  if (!file) return;
+  if (!file.type.startsWith('image/')) { alert('이미지 파일만 첨부할 수 있어요.'); return; }
+  if (file.size > 5 * 1024 * 1024) { alert('5MB 이하 이미지만 가능해요.'); return; }
+  photoFile = file;
+  photoImg.src = URL.createObjectURL(file);
+  photoPreview.classList.add('show');
+  photoDrop.style.display = 'none';
+  logEvent('photo_attached', { size: file.size, type: file.type });
+}
+
+// Supabase Storage 업로드 → 공개 URL 반환 (실패 시 null)
+async function uploadPhoto() {
+  if (!photoFile) return null;
+  const ext = (photoFile.name.split('.').pop() || 'jpg').toLowerCase();
+  const path = `${sessionId}-${Date.now()}.${ext}`;
+  const res = await fetch(`${SUPABASE_URL}/storage/v1/object/applicant-photos/${path}`, {
+    method: 'POST',
+    headers: {
+      'apikey': SUPABASE_ANON_KEY,
+      'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+      'Content-Type': photoFile.type,
+    },
+    body: photoFile,
+  });
+  if (!res.ok) return null;
+  return `${SUPABASE_URL}/storage/v1/object/public/applicant-photos/${path}`;
+}
+
 // ---------- 제출 ----------
 document.getElementById('submitBtn').onclick = async () => {
   submitted = true;
-  logEvent('form_submitted', { answers_count: Object.keys(answers).length });
+  logEvent('form_submitted', { answers_count: Object.keys(answers).length, has_photo: !!photoFile });
+  let photoUrl = null;
+  try { photoUrl = await uploadPhoto(); } catch (e) { /* 사진 없이 계속 진행 */ }
   // applicants 테이블 적재
   try {
     await fetch(`${SUPABASE_URL}/rest/v1/applicants`, {
@@ -388,6 +462,7 @@ document.getElementById('submitBtn').onclick = async () => {
         intro: answers.intro || null,
         kakao_id: answers.kakao_id,
         wtp: answers.wtp || null,
+        photo_url: photoUrl,
         utm_source: utm.utm_source,
         variant,
       }),
