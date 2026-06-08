@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>두근 — 그룹 소개팅 신청</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Hahmlet:wght@400;600;700&display=swap');
+  :root{
+    --bg:#fdf6f3; --ink:#2b2320; --muted:#9b8b84;
+    --accent:#e8553e; --accent-soft:#fbe3dc; --card:#fffaf8; --line:#f0ddd6;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:'Gowun Dodum',sans-serif;background:var(--bg);color:var(--ink);
+    min-height:100vh;display:flex;justify-content:center;
+    background-image:radial-gradient(circle at 15% 8%, #fceae3 0%, transparent 40%),
+                     radial-gradient(circle at 85% 92%, #fbe3dc 0%, transparent 45%);
+  }
+  .wrap{width:100%;max-width:480px;padding:28px 20px 60px}
+
+  .hero{margin-bottom:26px}
+  .hero h1{font-family:'Hahmlet',serif;font-size:30px;font-weight:700;letter-spacing:-1px}
+  .hero h1 b{color:var(--accent)}
+  .hero p{font-size:14px;color:#6e5f58;line-height:1.7;margin-top:10px}
+
+  /* 진행바 */
+  .progress{height:5px;background:var(--line);border-radius:3px;margin-bottom:24px;overflow:hidden}
+  .progress div{height:100%;background:var(--accent);width:0%;transition:width .4s ease;border-radius:3px}
+
+  .q{
+    background:var(--card);border:1px solid var(--line);border-radius:18px;
+    padding:20px;margin-bottom:14px;
+    opacity:.45;pointer-events:none;transition:.3s;
+  }
+  .q.active{opacity:1;pointer-events:auto;box-shadow:0 8px 24px rgba(200,90,60,.08)}
+  .q.done{opacity:1;pointer-events:auto}
+  .q label{display:block;font-family:'Hahmlet',serif;font-size:15.5px;font-weight:600;margin-bottom:12px}
+  .q label small{display:block;font-family:'Gowun Dodum';font-weight:400;font-size:12px;color:var(--muted);margin-top:4px}
+
+  .opts{display:flex;flex-wrap:wrap;gap:8px}
+  .opt{
+    padding:10px 16px;border:1.5px solid var(--line);border-radius:24px;
+    font-size:13.5px;cursor:pointer;background:var(--bg);transition:.15s;user-select:none
+  }
+  .opt:hover{border-color:var(--accent)}
+  .opt.sel{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
+
+  input[type=text],input[type=number],textarea{
+    width:100%;border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;
+    font-family:inherit;font-size:14px;background:var(--bg);outline:none;transition:.15s
+  }
+  input:focus,textarea:focus{border-color:var(--accent)}
+  textarea{resize:none;height:72px}
+
+  .submit{
+    width:100%;padding:16px;border:none;border-radius:14px;cursor:pointer;
+    font-family:'Hahmlet',serif;font-size:16px;font-weight:700;
+    background:var(--accent);color:#fff;margin-top:8px;transition:.2s;
+    opacity:.4;pointer-events:none;
+  }
+  .submit.ready{opacity:1;pointer-events:auto}
+  .submit.ready:hover{background:#d8472f;transform:translateY(-1px)}
+
+  .done-screen{display:none;text-align:center;padding:70px 20px}
+  .done-screen.show{display:block;animation:pop .5s cubic-bezier(.2,1.3,.4,1)}
+  @keyframes pop{from{transform:scale(.85);opacity:0}to{transform:scale(1);opacity:1}}
+  .done-screen .heart{font-size:52px}
+  .done-screen h2{font-family:'Hahmlet',serif;font-size:24px;margin:14px 0 8px;color:var(--accent)}
+  .done-screen p{font-size:13.5px;color:var(--muted);line-height:1.8}
+
+  .privacy{font-size:11px;color:var(--muted);line-height:1.6;margin-top:14px;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div id="formArea">
+    <div class="hero">
+      <h1 id="heroTitle">두<b>근</b></h1>
+      <p id="heroCopy"></p>
+    </div>
+
+    <div class="progress"><div id="bar"></div></div>
+
+    <!-- Q1 성별 -->
+    <div class="q active" data-q="gender">
+      <label>성별을 알려주세요</label>
+      <div class="opts">
+        <div class="opt" data-v="M">남성</div>
+        <div class="opt" data-v="F">여성</div>
+      </div>
+    </div>
+
+    <!-- Q2 출생연도 -->
+    <div class="q" data-q="birth_year">
+      <label>출생연도</label>
+      <input type="number" placeholder="예: 1996" min="1970" max="2007" id="in-birth">
+    </div>
+
+    <!-- Q3 지역 -->
+    <div class="q" data-q="region">
+      <label>주로 활동하는 지역 <small>그룹은 같은 지역끼리 묶어드려요</small></label>
+      <div class="opts">
+        <div class="opt" data-v="강남/서초">강남·서초</div>
+        <div class="opt" data-v="홍대/마포">홍대·마포</div>
+        <div class="opt" data-v="성수/건대">성수·건대</div>
+        <div class="opt" data-v="잠실/송파">잠실·송파</div>
+        <div class="opt" data-v="기타서울">기타 서울</div>
+        <div class="opt" data-v="경기/인천">경기·인천</div>
+      </div>
+    </div>
+
+    <!-- Q4 직업 -->
+    <div class="q" data-q="job">
+      <label>직업/소속 <small>그룹 밸런스를 맞추는 데만 써요</small></label>
+      <input type="text" placeholder="예: IT 회사원, 디자이너, 대학원생" id="in-job">
+    </div>
+
+    <!-- Q5 만남 스타일 -->
+    <div class="q" data-q="meet_style">
+      <label>선호하는 만남 분위기</label>
+      <div class="opts">
+        <div class="opt" data-v="술">🍻 가볍게 술 한잔</div>
+        <div class="opt" data-v="카페">☕ 카페에서 차분하게</div>
+        <div class="opt" data-v="액티비티">🎳 액티비티 (볼링·보드게임 등)</div>
+      </div>
+    </div>
+
+    <!-- Q6 가능 시간 -->
+    <div class="q" data-q="available">
+      <label>주로 가능한 시간대</label>
+      <div class="opts">
+        <div class="opt" data-v="평일저녁">평일 저녁</div>
+        <div class="opt" data-v="금요일">금요일 밤</div>
+        <div class="opt" data-v="주말낮">주말 낮</div>
+        <div class="opt" data-v="주말저녁">주말 저녁</div>
+      </div>
+    </div>
+
+    <!-- Q7 자기소개 -->
+    <div class="q" data-q="intro">
+      <label>나를 한 줄로 소개한다면 <small>같은 그룹이 될 분들에게 보여드려요</small></label>
+      <textarea placeholder="예: 처음엔 낯가리는데 친해지면 제일 시끄러운 사람" id="in-intro"></textarea>
+    </div>
+
+    <!-- Q8 WTP -->
+    <div class="q" data-q="wtp">
+      <label>매칭이 성사되면 참가비 1만원, 어떠세요? <small>솔직하게 답해주실수록 좋은 서비스가 돼요</small></label>
+      <div class="opts">
+        <div class="opt" data-v="yes">낼 의향 있어요</div>
+        <div class="opt" data-v="maybe">상황 봐서요</div>
+        <div class="opt" data-v="no">무료면 할래요</div>
+      </div>
+    </div>
+
+    <!-- Q9 연락처 -->
+    <div class="q" data-q="kakao_id">
+      <label>카카오톡 ID <small>그룹이 구성되면 이 ID로 연락드려요</small></label>
+      <input type="text" placeholder="카톡 ID 입력" id="in-kakao">
+    </div>
+
+    <button class="submit" id="submitBtn">신청 완료하기</button>
+    <div class="privacy">입력하신 정보는 그룹 구성과 매칭 연락에만 사용되며,<br>요청 시 즉시 파기됩니다.</div>
+  </div>
+
+  <div class="done-screen" id="doneScreen">
+    <div class="heart">💌</div>
+    <h2>신청 완료!</h2>
+    <p>잘 맞는 분들로 그룹을 구성해서<br>카카오톡으로 연락드릴게요.<br><br>보통 3~7일 정도 걸려요.</p>
+  </div>
+
+</div>
+
+<script>
+// =====================================================
+// 트래킹 설정 — Supabase 키만 채우면 동작
+// =====================================================
+const SUPABASE_URL = 'YOUR_SUPABASE_URL';        // 예: https://xxxx.supabase.co
+const SUPABASE_ANON_KEY = 'YOUR_ANON_KEY';
+
+// ---------- 세션 / UTM / A·B 배정 ----------
+const sessionId = crypto.randomUUID();
+const params = new URLSearchParams(location.search);
+const utm = {
+  utm_source: params.get('utm_source') || 'direct',
+  utm_campaign: params.get('utm_campaign') || '',
+};
+// A/B: 카피 두 버전 랜덤 배정 (URL로 강제하려면 ?v=A)
+const variant = params.get('v') || (Math.random() < 0.5 ? 'A' : 'B');
+const COPY = {
+  A: '혼자 신청하세요. 잘 맞는 사람들로 팀을 짜서,\n괜찮은 상대 팀과 만남을 잡아드려요.',
+  B: '소개팅은 부담스럽고, 미팅은 멤버 모으기 힘들죠.\n혼자 와도 팀이 되는 그룹 소개팅.',
+};
+document.getElementById('heroCopy').innerText = COPY[variant];
+
+// ---------- 이벤트 적재 ----------
+function logEvent(name, props = {}, useBeacon = false) {
+  const body = JSON.stringify({
+    p_event_name: name, p_user_id: null, p_group_id: null,
+    p_session_id: sessionId,
+    p_props: { ...props, variant, ...utm },
+  });
+  const url = `${SUPABASE_URL}/rest/v1/rpc/log_event`;
+  if (useBeacon && navigator.sendBeacon) {
+    // 페이지 이탈 시에도 전송 보장
+    const blob = new Blob([body], { type: 'application/json' });
+    navigator.sendBeacon(`${url}?apikey=${SUPABASE_ANON_KEY}`, blob);
+  } else {
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey': SUPABASE_ANON_KEY,
+        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+      },
+      body,
+    }).catch(() => {});
+  }
+}
+
+// ---------- 폼 상태 ----------
+const answers = {};
+const qEls = [...document.querySelectorAll('.q')];
+const order = qEls.map(el => el.dataset.q);
+let qStartTime = Date.now();
+let submitted = false;
+
+logEvent('form_viewed', { referrer: document.referrer });
+
+function answer(qid, value) {
+  const isNew = !(qid in answers);
+  answers[qid] = value;
+  if (isNew) {
+    logEvent('question_answered', {
+      question_id: qid,
+      elapsed_ms: Date.now() - qStartTime,
+    });
+    qStartTime = Date.now();
+  }
+  advance();
+}
+
+function advance() {
+  let activated = false;
+  qEls.forEach(el => {
+    const qid = el.dataset.q;
+    if (qid in answers) {
+      el.classList.add('done'); el.classList.remove('active');
+    } else if (!activated) {
+      el.classList.add('active'); activated = true;
+    }
+  });
+  const doneCount = Object.keys(answers).length;
+  document.getElementById('bar').style.width = (doneCount / order.length * 100) + '%';
+  const btn = document.getElementById('submitBtn');
+  btn.classList.toggle('ready', doneCount === order.length);
+  // 다음 미응답 문항으로 스크롤
+  const next = qEls.find(el => el.classList.contains('active'));
+  if (next && doneCount > 0) next.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+// 선택형 문항
+qEls.forEach(el => {
+  el.querySelectorAll('.opt').forEach(opt => {
+    opt.onclick = () => {
+      el.querySelectorAll('.opt').forEach(o => o.classList.remove('sel'));
+      opt.classList.add('sel');
+      answer(el.dataset.q, opt.dataset.v);
+    };
+  });
+});
+
+// 입력형 문항 (blur 시 확정)
+const textInputs = [
+  ['in-birth', 'birth_year'], ['in-job', 'job'],
+  ['in-intro', 'intro'], ['in-kakao', 'kakao_id'],
+];
+textInputs.forEach(([id, qid]) => {
+  const el = document.getElementById(id);
+  el.addEventListener('blur', () => {
+    if (el.value.trim()) answer(qid, el.value.trim());
+  });
+});
+
+// ---------- 제출 ----------
+document.getElementById('submitBtn').onclick = async () => {
+  submitted = true;
+  logEvent('form_submitted', { answers_count: Object.keys(answers).length });
+  // applicants 테이블 적재
+  try {
+    await fetch(`${SUPABASE_URL}/rest/v1/applicants`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey': SUPABASE_ANON_KEY,
+        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+      },
+      body: JSON.stringify({
+        session_id: sessionId,
+        gender: answers.gender,
+        birth_year: parseInt(answers.birth_year),
+        region: answers.region,
+        job: answers.job || null,
+        meet_style: answers.meet_style || null,
+        available: answers.available || null,
+        intro: answers.intro || null,
+        kakao_id: answers.kakao_id,
+        wtp: answers.wtp || null,
+        utm_source: utm.utm_source,
+        variant,
+      }),
+    });
+  } catch (e) { /* 이벤트는 이미 적재됨 */ }
+  document.getElementById('formArea').style.display = 'none';
+  document.getElementById('doneScreen').classList.add('show');
+};
+
+// ---------- 이탈 감지 (핵심) ----------
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'hidden' && !submitted) {
+    const answered = Object.keys(answers);
+    const lastQ = answered.length ? answered[answered.length - 1] : null;
+    const nextQ = order.find(q => !(q in answers)) || null;
+    logEvent('form_abandoned', {
+      last_answered: lastQ,
+      stuck_on: nextQ,                 // ← 어느 문항에서 멈췄는가
+      progress: answered.length + '/' + order.length,
+    }, true);                          // sendBeacon으로 전송 보장
+  }
+});
+</script>
+</body>
+</html>

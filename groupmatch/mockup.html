@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>두근 — 그룹 소개팅</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Hahmlet:wght@400;600;700&display=swap');
+
+  :root{
+    --bg:#fdf6f3; --ink:#2b2320; --muted:#9b8b84;
+    --accent:#e8553e; --accent-soft:#fbe3dc; --card:#fffaf8;
+    --line:#f0ddd6; --gold:#d9a441;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:'Gowun Dodum',sans-serif;background:var(--bg);color:var(--ink);
+    min-height:100vh;display:flex;justify-content:center;
+    background-image:radial-gradient(circle at 15% 10%, #fceae3 0%, transparent 40%),
+                     radial-gradient(circle at 85% 90%, #fbe3dc 0%, transparent 45%);
+  }
+  .phone{
+    width:100%;max-width:430px;background:var(--bg);min-height:100vh;
+    position:relative;overflow:hidden;box-shadow:0 0 60px rgba(180,90,60,.08);
+  }
+  header{
+    padding:22px 22px 14px;display:flex;align-items:baseline;gap:8px;
+    border-bottom:1px solid var(--line);background:var(--card);
+  }
+  header h1{font-family:'Hahmlet',serif;font-size:26px;font-weight:700;letter-spacing:-1px}
+  header h1 b{color:var(--accent)}
+  header span{font-size:12px;color:var(--muted);margin-left:auto}
+
+  .tabs{display:flex;background:var(--card);border-bottom:1px solid var(--line)}
+  .tab{flex:1;padding:13px;text-align:center;font-size:14px;color:var(--muted);
+    cursor:pointer;border-bottom:2px solid transparent;transition:.2s;position:relative}
+  .tab.active{color:var(--accent);border-bottom-color:var(--accent);font-weight:600}
+  .tab .badge{position:absolute;top:8px;right:28%;background:var(--accent);color:#fff;
+    font-size:10px;min-width:16px;height:16px;border-radius:8px;line-height:16px;display:none}
+  .tab .badge.show{display:inline-block}
+
+  .screen{display:none;padding:18px 16px 100px;animation:fade .35s ease}
+  .screen.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+  .lead{font-family:'Hahmlet',serif;font-size:18px;margin-bottom:4px}
+  .sub{font-size:12.5px;color:var(--muted);margin-bottom:18px;line-height:1.5}
+
+  .gcard{
+    background:var(--card);border:1px solid var(--line);border-radius:18px;
+    padding:18px;margin-bottom:14px;position:relative;
+    transition:transform .25s, box-shadow .25s;
+  }
+  .gcard:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(200,90,60,.10)}
+  .gcard .gname{font-family:'Hahmlet',serif;font-size:17px;font-weight:600}
+  .gcard .gmeta{font-size:12px;color:var(--muted);margin:5px 0 10px}
+  .gcard .gintro{font-size:13.5px;line-height:1.55;color:#5e524d;margin-bottom:14px}
+  .members{display:flex;gap:6px;margin-bottom:14px}
+  .ava{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;
+    justify-content:center;font-size:13px;color:#fff;font-weight:600}
+  .btnrow{display:flex;gap:8px}
+  button{font-family:inherit;cursor:pointer;border:none;border-radius:12px;
+    padding:11px;font-size:14px;font-weight:600;transition:.18s;flex:1}
+  .like{background:var(--accent);color:#fff}
+  .like:hover{background:#d8472f}
+  .pass{background:transparent;color:var(--muted);border:1px solid var(--line);flex:.5}
+  .pass:hover{background:#f7ece8}
+  .tag{display:inline-block;background:var(--accent-soft);color:var(--accent);
+    font-size:11px;padding:3px 9px;border-radius:20px;margin-right:5px}
+
+  .inbox-item{display:flex;align-items:center;gap:12px;background:var(--card);
+    border:1px solid var(--line);border-radius:16px;padding:14px;margin-bottom:10px}
+  .inbox-item .info{flex:1}
+  .inbox-item .info .n{font-family:'Hahmlet',serif;font-size:15px;font-weight:600}
+  .inbox-item .info .m{font-size:11.5px;color:var(--muted)}
+  .mini-btns{display:flex;gap:6px}
+  .mini-btns button{padding:8px 14px;font-size:12.5px;flex:none}
+
+  .empty{text-align:center;color:var(--muted);font-size:13px;padding:50px 20px;line-height:1.7}
+
+  /* 매칭 성사 오버레이 */
+  .overlay{position:absolute;inset:0;background:rgba(43,35,32,.55);backdrop-filter:blur(4px);
+    display:none;align-items:center;justify-content:center;z-index:30;animation:fade .3s}
+  .overlay.show{display:flex}
+  .match-pop{background:var(--card);border-radius:24px;padding:32px 26px;text-align:center;
+    width:84%;max-width:330px;animation:pop .45s cubic-bezier(.2,1.3,.4,1)}
+  @keyframes pop{from{transform:scale(.7);opacity:0}to{transform:scale(1);opacity:1}}
+  .match-pop .heart{font-size:46px;animation:beat 1s infinite}
+  @keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.18)}}
+  .match-pop h2{font-family:'Hahmlet',serif;font-size:24px;margin:8px 0 4px;color:var(--accent)}
+  .match-pop p{font-size:13px;color:var(--muted);margin-bottom:20px;line-height:1.6}
+  .match-pop button{width:100%}
+
+  /* 단톡방 */
+  .chat-head{display:flex;align-items:center;gap:10px;padding-bottom:12px;
+    border-bottom:1px solid var(--line);margin-bottom:14px}
+  .chat-head .back{flex:none;width:auto;background:none;color:var(--accent);padding:4px 8px}
+  .bubble{max-width:78%;padding:10px 14px;border-radius:16px;font-size:13.5px;
+    margin-bottom:8px;line-height:1.5;animation:fade .3s}
+  .bubble.them{background:var(--card);border:1px solid var(--line);border-bottom-left-radius:4px}
+  .bubble.me{background:var(--accent);color:#fff;margin-left:auto;border-bottom-right-radius:4px}
+  .sys{text-align:center;font-size:11.5px;color:var(--muted);margin:14px 0}
+  .chat-input{position:absolute;bottom:0;left:0;right:0;max-width:430px;margin:0 auto;
+    display:flex;gap:8px;padding:12px 16px;background:var(--card);border-top:1px solid var(--line)}
+  .chat-input input{flex:1;border:1px solid var(--line);border-radius:20px;padding:11px 16px;
+    font-family:inherit;font-size:14px;outline:none;background:var(--bg)}
+  .chat-input button{flex:none;width:auto;padding:11px 18px}
+  .meetup-banner{background:var(--accent-soft);border-radius:14px;padding:12px;
+    text-align:center;font-size:12.5px;color:var(--accent);margin-bottom:12px;cursor:pointer}
+</style>
+</head>
+<body>
+<div class="phone">
+  <header>
+    <h1>두<b>근</b></h1>
+    <span>그룹 대 그룹 소개팅</span>
+  </header>
+
+  <div class="tabs">
+    <div class="tab active" data-tab="explore">탐색</div>
+    <div class="tab" data-tab="inbox">받은 좋아요<span class="badge show" id="inboxBadge">2</span></div>
+    <div class="tab" data-tab="matches">매칭<span class="badge" id="matchBadge">0</span></div>
+  </div>
+
+  <!-- 탐색 -->
+  <div class="screen active" id="explore">
+    <div class="lead">우리 그룹과 어울리는 팀</div>
+    <div class="sub">방장이 좋아요를 보내고, 상대 방장도 수락하면 단톡방이 열려요.</div>
+    <div id="exploreList"></div>
+  </div>
+
+  <!-- 받은 좋아요 -->
+  <div class="screen" id="inbox">
+    <div class="lead">우리에게 좋아요를 보낸 팀</div>
+    <div class="sub">수락하면 바로 매칭, 거절하면 목록에서 사라져요.</div>
+    <div id="inboxList"></div>
+  </div>
+
+  <!-- 매칭 -->
+  <div class="screen" id="matches">
+    <div class="lead">성사된 매칭</div>
+    <div class="sub">서로 좋아요한 팀과의 단톡방이에요.</div>
+    <div id="matchList"><div class="empty">아직 매칭된 팀이 없어요.<br>탐색에서 마음에 드는 팀에 좋아요를 보내보세요!</div></div>
+  </div>
+
+  <!-- 단톡방 -->
+  <div class="screen" id="chat">
+    <div class="chat-head">
+      <button class="back" onclick="showTab('matches')">‹ 뒤로</button>
+      <div><div class="gname" id="chatName" style="font-family:'Hahmlet',serif;font-weight:600"></div></div>
+    </div>
+    <div class="meetup-banner" id="meetupBanner" onclick="confirmMeetup()">📅 만남이 성사됐다면 여기를 눌러 인증하기</div>
+    <div id="chatBody">
+      <div class="sys">매칭됐어요! 첫 인사를 건네보세요 💬</div>
+    </div>
+    <div class="chat-input">
+      <input id="msgInput" placeholder="메시지 입력..." onkeydown="if(event.key==='Enter')sendMsg()">
+      <button class="like" onclick="sendMsg()">전송</button>
+    </div>
+  </div>
+
+  <!-- 매칭 성사 팝업 -->
+  <div class="overlay" id="overlay">
+    <div class="match-pop">
+      <div class="heart">💞</div>
+      <h2>매칭 성사!</h2>
+      <p id="matchText"></p>
+      <button class="like" onclick="goToChat()">단톡방 열기</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ---------- 가짜 데이터 ----------
+const colors=['#e8553e','#d9a441','#7a9e7e','#6a8caf','#b06a9e','#c9784f'];
+let groups=[
+  {id:'g1',name:'금요일의 미식가들',meta:'여성 3인 · 강남 · 평균 28세',intro:'맛집 탐방이 취미인 직장인 모임이에요. 술보다 커피를 좋아해요.',tags:['#맛집','#카페','#차분한'],members:['주','민','하']},
+  {id:'g2',name:'주말 클라이머',meta:'여성 2인 · 마포 · 평균 30세',intro:'클라이밍하다 만난 친구 둘이에요. 활동적인 데이트 환영!',tags:['#운동','#아웃도어'],members:['수','지']},
+  {id:'g3',name:'심야 보드게임단',meta:'여성 4인 · 성수 · 평균 27세',intro:'보드게임 좋아하는 사람 환영. 말 많고 웃음 많아요.',tags:['#보드게임','#수다','#유쾌'],members:['은','채','윤','다']},
+];
+let inbox=[
+  {id:'i1',name:'한강 러너스',meta:'남성 3인 · 용산 · 평균 29세',tags:['#러닝','#건강']},
+  {id:'i2',name:'LP바 단골들',meta:'남성 2인 · 을지로 · 평균 31세',tags:['#음악','#위스키']},
+];
+let matches=[];
+let activeChat=null;
+
+// ---------- 렌더 ----------
+function ava(ch,i){return `<div class="ava" style="background:${colors[i%colors.length]}">${ch}</div>`}
+
+function renderExplore(){
+  const el=document.getElementById('exploreList');
+  if(!groups.length){el.innerHTML='<div class="empty">모든 팀을 다 봤어요!<br>받은 좋아요를 확인해보세요.</div>';return}
+  el.innerHTML=groups.map(g=>`
+    <div class="gcard" id="card-${g.id}">
+      <div class="gname">${g.name}</div>
+      <div class="gmeta">${g.meta}</div>
+      <div>${g.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
+      <div class="gintro" style="margin-top:10px">${g.intro}</div>
+      <div class="members">${g.members.map((m,i)=>ava(m,i)).join('')}</div>
+      <div class="btnrow">
+        <button class="pass" onclick="pass('${g.id}')">패스</button>
+        <button class="like" onclick="like('${g.id}','${g.name}')">좋아요 보내기</button>
+      </div>
+    </div>`).join('');
+}
+function renderInbox(){
+  const el=document.getElementById('inboxList');
+  const badge=document.getElementById('inboxBadge');
+  badge.textContent=inbox.length; badge.classList.toggle('show',inbox.length>0);
+  if(!inbox.length){el.innerHTML='<div class="empty">받은 좋아요가 없어요.</div>';return}
+  el.innerHTML=inbox.map(g=>`
+    <div class="inbox-item" id="inbox-${g.id}">
+      <div class="ava" style="background:${colors[1]}">${g.name[0]}</div>
+      <div class="info"><div class="n">${g.name}</div><div class="m">${g.meta}</div></div>
+      <div class="mini-btns">
+        <button class="pass" onclick="rejectLike('${g.id}')">거절</button>
+        <button class="like" onclick="acceptLike('${g.id}','${g.name}')">수락</button>
+      </div>
+    </div>`).join('');
+}
+function renderMatches(){
+  const el=document.getElementById('matchList');
+  const badge=document.getElementById('matchBadge');
+  badge.textContent=matches.length; badge.classList.toggle('show',matches.length>0);
+  if(!matches.length){el.innerHTML='<div class="empty">아직 매칭된 팀이 없어요.<br>탐색에서 마음에 드는 팀에 좋아요를 보내보세요!</div>';return}
+  el.innerHTML=matches.map(m=>`
+    <div class="inbox-item" onclick="openChat('${m.id}','${m.name}')" style="cursor:pointer">
+      <div class="ava" style="background:${colors[0]}">${m.name[0]}</div>
+      <div class="info"><div class="n">${m.name}</div><div class="m">${m.met?'✓ 만남 인증 완료':'단톡방 열림 · 탭하여 대화'}</div></div>
+      <span style="color:var(--accent);font-size:18px">›</span>
+    </div>`).join('');
+}
+
+// ---------- 액션 ----------
+function like(id,name){
+  const card=document.getElementById('card-'+id);
+  card.style.transition='.4s'; card.style.transform='translateX(120%)'; card.style.opacity='0';
+  // 데모: 50% 확률로 상대도 바로 수락 → 매칭
+  setTimeout(()=>{
+    groups=groups.filter(g=>g.id!==id);
+    renderExplore();
+    if(Math.random()>0.4){ createMatch(name); }
+  },400);
+}
+function pass(id){
+  const card=document.getElementById('card-'+id);
+  card.style.transition='.4s'; card.style.transform='translateX(-120%)'; card.style.opacity='0';
+  setTimeout(()=>{groups=groups.filter(g=>g.id!==id);renderExplore()},400);
+}
+function acceptLike(id,name){
+  inbox=inbox.filter(g=>g.id!==id); renderInbox(); createMatch(name);
+}
+function rejectLike(id){
+  const it=document.getElementById('inbox-'+id);
+  it.style.transition='.3s';it.style.opacity='0';
+  setTimeout(()=>{inbox=inbox.filter(g=>g.id!==id);renderInbox()},300);
+}
+function createMatch(name){
+  const id='m'+Date.now();
+  matches.push({id,name,met:false,msgs:[]});
+  renderMatches();
+  document.getElementById('matchText').textContent=`${name} 팀과 서로 좋아요했어요!`;
+  document.getElementById('overlay').classList.add('show');
+  window._pendingChat={id,name};
+}
+function goToChat(){
+  document.getElementById('overlay').classList.remove('show');
+  openChat(window._pendingChat.id,window._pendingChat.name);
+}
+
+// ---------- 채팅 ----------
+function openChat(id,name){
+  activeChat=matches.find(m=>m.id===id);
+  document.getElementById('chatName').textContent=name;
+  const body=document.getElementById('chatBody');
+  body.innerHTML='<div class="sys">매칭됐어요! 첫 인사를 건네보세요 💬</div>';
+  (activeChat.msgs||[]).forEach(m=>addBubble(m.text,m.me,false));
+  showTab('chat');
+}
+function addBubble(text,me,store=true){
+  const body=document.getElementById('chatBody');
+  const b=document.createElement('div');
+  b.className='bubble '+(me?'me':'them'); b.textContent=text;
+  body.appendChild(b); body.scrollTop=body.scrollHeight;
+  if(store&&activeChat){activeChat.msgs=activeChat.msgs||[];activeChat.msgs.push({text,me})}
+}
+function sendMsg(){
+  const inp=document.getElementById('msgInput');
+  if(!inp.value.trim())return;
+  addBubble(inp.value,true);
+  const reply=inp.value; inp.value='';
+  setTimeout(()=>{
+    const replies=['반가워요! 다들 어디 사세요?','오 저희도 그 동네 자주 가요 ㅎㅎ','이번 주말 시간 어떠세요?','넷이서 만나면 재밌겠다 😄'];
+    addBubble(replies[Math.floor(Math.random()*replies.length)],false);
+  },800);
+}
+function confirmMeetup(){
+  if(!activeChat)return;
+  activeChat.met=true; renderMatches();
+  const body=document.getElementById('chatBody');
+  const s=document.createElement('div');s.className='sys';s.textContent='🎉 만남 인증 완료! 좋은 시간 보내세요';
+  body.appendChild(s);body.scrollTop=body.scrollHeight;
+  document.getElementById('meetupBanner').style.display='none';
+}
+
+// ---------- 탭 ----------
+function showTab(name){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.getElementById(name).classList.add('active');
+  document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active',t.dataset.tab===name));
+  if(name==='chat')document.getElementById('meetupBanner').style.display=activeChat&&activeChat.met?'none':'block';
+}
+document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>showTab(t.dataset.tab));
+
+renderExplore();renderInbox();renderMatches();
+</script>
+</body>
+</html>
