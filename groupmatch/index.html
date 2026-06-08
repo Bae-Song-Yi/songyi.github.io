@@ -129,6 +129,13 @@
 
   .privacy{font-size:11.5px;color:var(--muted);line-height:1.7;margin-top:18px;text-align:center}
 
+  /* 개인정보 수집 동의 */
+  .consent{display:flex;align-items:flex-start;gap:10px;margin-top:6px;padding:4px 2px;font-size:13.5px;color:#5e524d;line-height:1.5;cursor:pointer}
+  .consent input{width:18px;height:18px;flex:none;margin-top:1px;accent-color:var(--accent);cursor:pointer}
+  .consent a{color:var(--accent);text-decoration:underline}
+  .consent-detail{display:none;font-size:12px;color:var(--muted);line-height:1.7;background:#fcfaf9;border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-top:8px}
+  .consent-detail.show{display:block}
+
   /* 프로필 사진 첨부 (선택) */
   .qphoto{background:var(--card);border:1px solid #f3d7cf;border-radius:20px;padding:22px 20px;margin-bottom:12px;box-shadow:0 10px 30px -12px rgba(200,90,60,.18)}
   .qphoto label{display:block;font-size:16px;font-weight:600;margin-bottom:14px;line-height:1.4}
@@ -252,12 +259,6 @@
       <input type="text" placeholder="카톡 ID 입력" id="in-kakao">
     </div>
 
-    <!-- Q10 전화번호 -->
-    <div class="q" data-q="phone">
-      <label>전화번호 <small>신청 완료 알림을 보내드릴 번호예요</small></label>
-      <input type="tel" inputmode="numeric" placeholder="010-1234-5678" id="in-phone">
-    </div>
-
     <!-- 프로필 사진 (선택) -->
     <div class="qphoto">
       <label>프로필 사진 <small>얼굴이 잘 보이는 사진일수록 매칭 확률이 올라가요 (선택)</small></label>
@@ -268,6 +269,17 @@
       </div>
       <input type="file" id="in-photo" accept="image/*" hidden>
       <div class="photo-hint">JPG·PNG, 최대 5MB</div>
+    </div>
+
+    <!-- 개인정보 수집 동의 -->
+    <label class="consent" for="consent">
+      <input type="checkbox" id="consent">
+      <span>(필수) 개인정보 수집·이용에 동의합니다. <a href="#" id="privacyToggle">자세히</a></span>
+    </label>
+    <div class="consent-detail" id="consentDetail">
+      · 수집 항목: 성별, 출생연도, 지역, 직업, 만남 선호, 자기소개, 카카오톡 ID, 프로필 사진(선택)<br>
+      · 수집 목적: 그룹 구성 및 매칭 연락<br>
+      · 보유 기간: 매칭 종료 또는 파기 요청 시까지 (요청 시 즉시 파기)
     </div>
 
     <button class="submit" id="submitBtn">신청 완료하기</button>
@@ -362,12 +374,25 @@ function advance() {
   });
   const doneCount = Object.keys(answers).length;
   document.getElementById('bar').style.width = (doneCount / order.length * 100) + '%';
-  const btn = document.getElementById('submitBtn');
-  btn.classList.toggle('ready', doneCount === order.length);
+  updateSubmitState();
   // 다음 미응답 문항으로 스크롤
   const next = qEls.find(el => el.classList.contains('active'));
   if (next && doneCount > 0) next.scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
+
+// 모든 문항 응답 + 개인정보 동의 시에만 제출 활성화
+const consentEl = document.getElementById('consent');
+function updateSubmitState() {
+  const ready = Object.keys(answers).length === order.length && consentEl.checked;
+  document.getElementById('submitBtn').classList.toggle('ready', ready);
+}
+consentEl.addEventListener('change', updateSubmitState);
+
+// 수집 항목 자세히 보기 토글
+document.getElementById('privacyToggle').onclick = (e) => {
+  e.preventDefault();
+  document.getElementById('consentDetail').classList.toggle('show');
+};
 
 // 선택형 문항
 qEls.forEach(el => {
@@ -384,7 +409,6 @@ qEls.forEach(el => {
 const textInputs = [
   ['in-birth', 'birth_year'], ['in-job', 'job'],
   ['in-intro', 'intro'], ['in-kakao', 'kakao_id'],
-  ['in-phone', 'phone'],
 ];
 textInputs.forEach(([id, qid]) => {
   const el = document.getElementById(id);
@@ -468,7 +492,6 @@ document.getElementById('submitBtn').onclick = async () => {
         available: answers.available || null,
         intro: answers.intro || null,
         kakao_id: answers.kakao_id,
-        phone: answers.phone || null,
         wtp: answers.wtp || null,
         photo_url: photoUrl,
         utm_source: utm.utm_source,
