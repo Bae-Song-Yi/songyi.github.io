@@ -284,22 +284,18 @@ function logEvent(name, props = {}, useBeacon = false) {
     p_session_id: sessionId,
     p_props: { ...props, variant, ...utm },
   });
-  const url = `${SUPABASE_URL}/rest/v1/rpc/log_event`;
-  if (useBeacon && navigator.sendBeacon) {
-    // 페이지 이탈 시에도 전송 보장
-    const blob = new Blob([body], { type: 'application/json' });
-    navigator.sendBeacon(`${url}?apikey=${SUPABASE_ANON_KEY}`, blob);
-  } else {
-    fetch(url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'apikey': SUPABASE_ANON_KEY,
-        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
-      },
-      body,
-    }).catch(() => {});
-  }
+  // sendBeacon은 자격증명(credentials)을 강제로 포함해 Supabase의 와일드카드 CORS와 충돌함.
+  // fetch + keepalive로 교체 → 페이지 이탈 시에도 전송을 보장하면서 CORS 문제 회피.
+  fetch(`${SUPABASE_URL}/rest/v1/rpc/log_event`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'apikey': SUPABASE_ANON_KEY,
+      'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+    },
+    body,
+    keepalive: useBeacon,
+  }).catch(() => {});
 }
 
 // ---------- 폼 상태 ----------
