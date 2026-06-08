@@ -15,20 +15,49 @@
   html{-webkit-text-size-adjust:100%}
   body{
     font-family:'Gowun Dodum',sans-serif;background:var(--bg);color:var(--ink);
-    min-height:100vh;display:flex;justify-content:center;
-    -webkit-font-smoothing:antialiased;
+    min-height:100vh;-webkit-font-smoothing:antialiased;
   }
-  .wrap{width:100%;max-width:460px;padding:36px 22px 56px}
 
-  /* 헤더 */
-  .hero{margin-bottom:22px}
-  .hero .badge{
-    display:inline-block;font-size:11px;letter-spacing:.5px;color:var(--accent);
-    background:var(--accent-soft);padding:5px 11px;border-radius:20px;margin-bottom:14px;
+  /* 2단 레이아웃 (좌: 브랜드 / 우: 폼) */
+  .page{
+    display:grid;grid-template-columns:0.92fr 1.08fr;
+    max-width:1180px;margin:0 auto;min-height:100vh;
   }
-  .hero h1{font-family:'Hahmlet',serif;font-size:32px;font-weight:700;letter-spacing:-1.2px;line-height:1.1}
-  .hero h1 b{color:var(--accent)}
-  .hero p{font-size:14px;color:#7b6e68;line-height:1.7;margin-top:12px}
+  .brand{
+    position:sticky;top:0;align-self:start;height:100vh;
+    background:linear-gradient(165deg,#fff4f0 0%,#fbe7e0 58%,#f6dcd2 100%);
+    border-right:1px solid var(--line);
+    display:flex;align-items:center;padding:64px 56px;
+  }
+  .brand-inner{max-width:380px}
+  .badge{
+    display:inline-block;font-size:12px;letter-spacing:.3px;color:var(--accent);
+    background:#fff;padding:7px 14px;border-radius:20px;margin-bottom:22px;
+    box-shadow:0 3px 10px -5px var(--ring);
+  }
+  .brand h1{font-family:'Hahmlet',serif;font-size:46px;font-weight:700;letter-spacing:-2px;line-height:1.05}
+  .brand h1 b{color:var(--accent)}
+  .brand p{font-size:16px;color:#7b6e68;line-height:1.75;margin-top:16px;white-space:pre-line}
+  .values{list-style:none;margin-top:30px;display:flex;flex-direction:column;gap:13px}
+  .values li{position:relative;padding-left:26px;font-size:14.5px;color:#6e5f58;line-height:1.5}
+  .values li::before{
+    content:'';position:absolute;left:0;top:6px;width:8px;height:8px;border-radius:50%;
+    background:var(--accent);box-shadow:0 0 0 4px var(--accent-soft);
+  }
+
+  /* 폼 컬럼 */
+  .form-col{padding:52px 56px 72px;display:flex;flex-direction:column;justify-content:center}
+  .form-inner{width:100%;max-width:440px;margin:0 auto}
+
+  @media (max-width:880px){
+    .page{grid-template-columns:1fr;max-width:560px}
+    .brand{position:static;height:auto;border-right:none;border-bottom:1px solid var(--line);padding:40px 26px 30px;align-items:flex-start}
+    .brand-inner{max-width:none}
+    .brand h1{font-size:36px}
+    .brand p{font-size:15px}
+    .values{display:none}
+    .form-col{padding:6px 24px 56px}
+  }
 
   /* 진행바 */
   .progress-wrap{position:sticky;top:0;z-index:5;background:var(--bg);padding:14px 0 18px;margin-bottom:6px}
@@ -88,15 +117,25 @@
 </style>
 </head>
 <body>
-<div class="wrap">
+<div class="page">
 
-  <div id="formArea">
-    <div class="hero">
+  <aside class="brand">
+    <div class="brand-inner">
       <span class="badge">혼자 와도 팀이 되는 그룹 소개팅</span>
       <h1 id="heroTitle">두<b>근</b></h1>
       <p id="heroCopy"></p>
+      <ul class="values">
+        <li>혼자 신청하면 운영진이 잘 맞는 팀을 짜드려요</li>
+        <li>괜찮은 상대 팀과 그룹 대 그룹으로 만나요</li>
+        <li>부담은 덜고, 진심은 그대로</li>
+      </ul>
     </div>
+  </aside>
 
+  <main class="form-col">
+    <div class="form-inner">
+
+  <div id="formArea">
     <div class="progress-wrap"><div class="progress"><div id="bar"></div></div></div>
 
     <!-- Q1 성별 -->
@@ -185,6 +224,9 @@
     <h2>신청 완료!</h2>
     <p>잘 맞는 분들로 그룹을 구성해서<br>카카오톡으로 연락드릴게요.<br><br>보통 3~7일 정도 걸려요.</p>
   </div>
+
+    </div>
+  </main>
 
 </div>
 
