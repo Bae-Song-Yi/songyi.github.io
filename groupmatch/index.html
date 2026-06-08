@@ -374,6 +374,8 @@ document.getElementById('submitBtn').onclick = async () => {
         'Content-Type': 'application/json',
         'apikey': SUPABASE_ANON_KEY,
         'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+        // RLS상 applicants는 insert만 허용·select 차단 → 삽입한 행을 되읽지 않도록 minimal.
+        'Prefer': 'return=minimal',
       },
       body: JSON.stringify({
         session_id: sessionId,
