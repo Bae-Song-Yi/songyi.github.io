@@ -7,24 +7,24 @@
 <style>
   @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css');
   :root{
-    --bg:#f6f3f1; --ink:#241f1d; --muted:#a59a94;
-    --accent:#e8553e; --accent-soft:#fdeee9; --accent-press:#d44730;
-    --card:#ffffff; --line:#ebe3df; --ring:rgba(232,85,62,.16);
+    --bg:#ffe9f1; --ink:#43232f; --muted:#bd8b9c;
+    --accent:#ff4f82; --accent2:#ff84a8; --accent-soft:#ffe0ea; --accent-press:#e8366c; --rose:#f5326f;
+    --card:#ffffff; --line:#ffd6e1; --ring:rgba(255,79,130,.18);
     --font:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,system-ui,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   body{font-family:var(--font);background:var(--bg);color:var(--ink);min-height:100vh;-webkit-font-smoothing:antialiased;
-    background-image:radial-gradient(circle at 12% 0%,#fceae3 0%,transparent 42%),radial-gradient(circle at 88% 100%,#fbe3dc 0%,transparent 46%);}
+    background-image:radial-gradient(circle at 14% -5%,#ffc4d8 0%,transparent 46%),radial-gradient(circle at 88% 100%,#ffd9ea 0%,transparent 48%),linear-gradient(165deg,#ffe2ec,#ffc9dd);background-attachment:fixed}
   .wrap{width:100%;max-width:480px;margin:0 auto;padding:40px 22px 64px}
 
   .head{text-align:center;margin-bottom:26px}
   .logo{display:inline-flex;align-items:center;gap:9px;margin-bottom:16px}
-  .logo-mark{width:38px;height:38px;border-radius:12px;background:linear-gradient(140deg,#f4836b,var(--accent));display:flex;align-items:center;justify-content:center;box-shadow:0 8px 16px -6px var(--ring)}
+  .logo-mark{width:38px;height:38px;border-radius:12px;background:linear-gradient(140deg,var(--accent2),var(--accent));display:flex;align-items:center;justify-content:center;box-shadow:0 8px 16px -6px var(--ring)}
   .logo-mark svg{width:21px;height:21px}
   .logo-word{font-size:26px;font-weight:800;letter-spacing:-1.5px}
   .logo-word b{color:var(--accent)}
   .head h1{font-size:22px;font-weight:700;letter-spacing:-.5px}
-  .head p{font-size:14px;color:#7b6e68;line-height:1.7;margin-top:8px}
+  .head p{font-size:14px;color:#9b6f80;line-height:1.7;margin-top:8px}
 
   .codecard{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:0 12px 30px -16px rgba(200,90,60,.22)}
   .codes{display:flex;align-items:flex-end;gap:12px}
@@ -35,8 +35,8 @@
   .codes input:focus{border-color:var(--accent);background:#fff;box-shadow:0 0 0 4px var(--ring)}
   .codes .amp{padding-bottom:14px;font-size:20px;color:var(--accent)}
 
-  .go{width:100%;margin-top:16px;padding:16px;border:none;border-radius:14px;cursor:pointer;font-family:var(--font);font-size:16px;font-weight:700;background:var(--accent);color:#fff;transition:.2s}
-  .go:hover{background:var(--accent-press)}
+  .go{width:100%;margin-top:16px;padding:16px;border:none;border-radius:14px;cursor:pointer;font-family:var(--font);font-size:16px;font-weight:800;background:linear-gradient(135deg,var(--accent2),var(--accent));color:#fff;transition:.2s;box-shadow:0 14px 28px -12px rgba(255,79,130,.6)}
+  .go:hover{filter:brightness(1.05)}
   .go:disabled{opacity:.5;cursor:default}
 
   .status{text-align:center;color:var(--muted);font-size:14px;margin-top:22px;line-height:1.6}
@@ -45,7 +45,7 @@
   .result{margin-top:24px;display:none}
   .result.show{display:block;animation:fade .4s ease}
   @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-  .summary{background:var(--accent-soft);border:1px solid #f3d7cf;border-radius:16px;padding:16px 18px;font-size:14.5px;line-height:1.6;color:#7a3b2c;margin-bottom:16px}
+  .summary{background:var(--accent-soft);border:1px solid var(--line);border-radius:16px;padding:16px 18px;font-size:14.5px;line-height:1.6;color:#a8366c;margin-bottom:16px}
   .stage{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;margin-bottom:12px;box-shadow:0 10px 26px -18px rgba(200,90,60,.2)}
   .stage h3{font-size:15px;font-weight:700;color:var(--accent);margin-bottom:12px}
   .stage ul{list-style:none;display:flex;flex-direction:column;gap:10px}
