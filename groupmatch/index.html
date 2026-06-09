@@ -126,6 +126,10 @@
   .done-screen .heart{font-size:56px}
   .done-screen h2{font-family:var(--font);font-size:25px;margin:16px 0 10px;color:var(--accent)}
   .done-screen p{font-size:14px;color:var(--muted);line-height:1.9}
+  .codebox{margin:10px auto 18px;max-width:300px;background:var(--accent-soft);border:1px solid #f3d7cf;border-radius:18px;padding:20px}
+  .codebox-label{display:block;font-size:12px;color:var(--accent-press);letter-spacing:1px}
+  .codebox .code{display:block;font-size:44px;font-weight:800;letter-spacing:6px;color:var(--accent);margin:6px 0 10px}
+  .codebox-hint{display:block;font-size:12px;color:#8a7a73;line-height:1.6}
 
   .privacy{font-size:11.5px;color:var(--muted);line-height:1.7;margin-top:18px;text-align:center}
 
@@ -289,7 +293,12 @@
   <div class="done-screen" id="doneScreen">
     <div class="heart">💌</div>
     <h2>신청 완료!</h2>
-    <p>잘 맞는 분들로 그룹을 구성해서<br>카카오톡으로 연락드릴게요.<br><br>보통 3~7일 정도 걸려요.</p>
+    <div class="codebox" id="codeBox">
+      <span class="codebox-label">내 참가 코드</span>
+      <span class="code" id="myCode">----</span>
+      <span class="codebox-hint">소개팅 당일 이 코드로 자리를 찾고,<br>대화 주제도 받을 수 있어요. 꼭 기억해 주세요!</span>
+    </div>
+    <p>잘 맞는 분들로 매칭해서<br>곧 연락드릴게요. 보통 3~7일 정도 걸려요.</p>
   </div>
 
     </div>
@@ -471,34 +480,49 @@ document.getElementById('submitBtn').onclick = async () => {
   logEvent('form_submitted', { answers_count: Object.keys(answers).length, has_photo: !!photoFile });
   let photoUrl = null;
   try { photoUrl = await uploadPhoto(); } catch (e) { /* 사진 없이 계속 진행 */ }
-  // applicants 테이블 적재
-  try {
-    await fetch(`${SUPABASE_URL}/rest/v1/applicants`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'apikey': SUPABASE_ANON_KEY,
-        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
-        // RLS상 applicants는 insert만 허용·select 차단 → 삽입한 행을 되읽지 않도록 minimal.
-        'Prefer': 'return=minimal',
-      },
-      body: JSON.stringify({
-        session_id: sessionId,
-        gender: answers.gender,
-        birth_year: parseInt(answers.birth_year),
-        region: answers.region,
-        job: answers.job || null,
-        meet_style: answers.meet_style || null,
-        available: answers.available || null,
-        intro: answers.intro || null,
-        kakao_id: answers.kakao_id,
-        wtp: answers.wtp || null,
-        photo_url: photoUrl,
-        utm_source: utm.utm_source,
-        variant,
-      }),
-    });
-  } catch (e) { /* 이벤트는 이미 적재됨 */ }
+
+  // 고유 숫자코드 발급 + applicants 적재 (코드 중복 시 재시도)
+  let myCode = null;
+  for (let i = 0; i < 6; i++) {
+    const code = String(Math.floor(1000 + Math.random() * 9000));
+    try {
+      const res = await fetch(`${SUPABASE_URL}/rest/v1/applicants`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': SUPABASE_ANON_KEY,
+          'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+          // RLS상 applicants는 insert만 허용·select 차단 → 삽입한 행을 되읽지 않도록 minimal.
+          'Prefer': 'return=minimal',
+        },
+        body: JSON.stringify({
+          session_id: sessionId,
+          code,
+          gender: answers.gender,
+          birth_year: parseInt(answers.birth_year),
+          region: answers.region,
+          job: answers.job || null,
+          meet_style: answers.meet_style || null,
+          available: answers.available || null,
+          intro: answers.intro || null,
+          kakao_id: answers.kakao_id,
+          wtp: answers.wtp || null,
+          photo_url: photoUrl,
+          utm_source: utm.utm_source,
+          variant,
+        }),
+      });
+      if (res.ok) { myCode = code; break; }
+      if (res.status !== 409) { myCode = code; break; }  // 409(코드 중복)만 재시도
+    } catch (e) { break; }
+  }
+
+  if (myCode) {
+    document.getElementById('myCode').textContent = myCode;
+    logEvent('code_issued', { code: myCode });
+  } else {
+    document.getElementById('codeBox').style.display = 'none';
+  }
   document.getElementById('formArea').style.display = 'none';
   document.getElementById('doneScreen').classList.add('show');
 };
