@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>두근 — 대화 주제 추천</title>
+<style>
+  @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css');
+  :root{
+    --bg:#f6f3f1; --ink:#241f1d; --muted:#a59a94;
+    --accent:#e8553e; --accent-soft:#fdeee9; --accent-press:#d44730;
+    --card:#ffffff; --line:#ebe3df; --ring:rgba(232,85,62,.16);
+    --font:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,system-ui,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:var(--font);background:var(--bg);color:var(--ink);min-height:100vh;-webkit-font-smoothing:antialiased;
+    background-image:radial-gradient(circle at 12% 0%,#fceae3 0%,transparent 42%),radial-gradient(circle at 88% 100%,#fbe3dc 0%,transparent 46%);}
+  .wrap{width:100%;max-width:480px;margin:0 auto;padding:40px 22px 64px}
+
+  .head{text-align:center;margin-bottom:26px}
+  .logo{display:inline-flex;align-items:center;gap:9px;margin-bottom:16px}
+  .logo-mark{width:38px;height:38px;border-radius:12px;background:linear-gradient(140deg,#f4836b,var(--accent));display:flex;align-items:center;justify-content:center;box-shadow:0 8px 16px -6px var(--ring)}
+  .logo-mark svg{width:21px;height:21px}
+  .logo-word{font-size:26px;font-weight:800;letter-spacing:-1.5px}
+  .logo-word b{color:var(--accent)}
+  .head h1{font-size:22px;font-weight:700;letter-spacing:-.5px}
+  .head p{font-size:14px;color:#7b6e68;line-height:1.7;margin-top:8px}
+
+  .codecard{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:0 12px 30px -16px rgba(200,90,60,.22)}
+  .codes{display:flex;align-items:flex-end;gap:12px}
+  .codes .field{flex:1}
+  .codes label{display:block;font-size:12px;color:var(--muted);margin-bottom:7px;font-weight:600}
+  .codes input{width:100%;border:1.5px solid var(--line);border-radius:14px;padding:14px;font-family:inherit;font-size:22px;font-weight:700;letter-spacing:4px;text-align:center;color:var(--accent);background:#fcfaf9;outline:none;transition:.15s}
+  .codes input::placeholder{color:#e3ccc5;font-weight:400;letter-spacing:2px}
+  .codes input:focus{border-color:var(--accent);background:#fff;box-shadow:0 0 0 4px var(--ring)}
+  .codes .amp{padding-bottom:14px;font-size:20px;color:var(--accent)}
+
+  .go{width:100%;margin-top:16px;padding:16px;border:none;border-radius:14px;cursor:pointer;font-family:var(--font);font-size:16px;font-weight:700;background:var(--accent);color:#fff;transition:.2s}
+  .go:hover{background:var(--accent-press)}
+  .go:disabled{opacity:.5;cursor:default}
+
+  .status{text-align:center;color:var(--muted);font-size:14px;margin-top:22px;line-height:1.6}
+  .err{color:#c0392b}
+
+  .result{margin-top:24px;display:none}
+  .result.show{display:block;animation:fade .4s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  .summary{background:var(--accent-soft);border:1px solid #f3d7cf;border-radius:16px;padding:16px 18px;font-size:14.5px;line-height:1.6;color:#7a3b2c;margin-bottom:16px}
+  .stage{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;margin-bottom:12px;box-shadow:0 10px 26px -18px rgba(200,90,60,.2)}
+  .stage h3{font-size:15px;font-weight:700;color:var(--accent);margin-bottom:12px}
+  .stage ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+  .stage li{position:relative;padding-left:22px;font-size:14.5px;line-height:1.55;color:#3f352f}
+  .stage li::before{content:'💬';position:absolute;left:0;top:0;font-size:13px}
+
+  .spinner{width:26px;height:26px;border:3px solid var(--line);border-top-color:var(--accent);border-radius:50%;margin:0 auto 10px;animation:spin .8s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="head">
+    <div class="logo">
+      <span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 20.5C12 20.5 3.5 15.6 3.5 9.4C3.5 6.6 5.7 4.5 8.4 4.5C10 4.5 11.4 5.3 12 6.5C12.6 5.3 14 4.5 15.6 4.5C18.3 4.5 20.5 6.6 20.5 9.4C20.5 15.6 12 20.5 12 20.5Z" fill="#fff" fill-opacity="0.22"/><path d="M4 12.5H8.2L9.8 8.7L12 15.3L14 11.5L15.2 12.5H20" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <span class="logo-word">두<b>근</b></span>
+    </div>
+    <h1>오늘의 대화 주제 💬</h1>
+    <p>두 사람의 코드를 입력하면<br>AI가 어색함을 풀어줄 대화 주제를 추천해드려요.</p>
+  </div>
+
+  <div class="codecard">
+    <div class="codes">
+      <div class="field">
+        <label>내 코드</label>
+        <input id="codeA" inputmode="numeric" maxlength="6" placeholder="1234">
+      </div>
+      <div class="amp">♥</div>
+      <div class="field">
+        <label>상대 코드</label>
+        <input id="codeB" inputmode="numeric" maxlength="6" placeholder="5678">
+      </div>
+    </div>
+    <button class="go" id="goBtn">대화 주제 받기</button>
+  </div>
+
+  <div class="status" id="status"></div>
+  <div class="result" id="result"></div>
+</div>
+
+<script>
+  const SUPABASE_URL = 'https://wjjiacepvfamqnwmatkp.supabase.co';
+  const SUPABASE_ANON_KEY = 'sb_publishable_Pz-ciZrqsgZErtYOGH-S3g_REY6_In9';
+
+  const $ = (id) => document.getElementById(id);
+  const statusEl = $('status'), resultEl = $('result'), goBtn = $('goBtn');
+
+  function setStatus(html, isErr) { statusEl.innerHTML = html; statusEl.className = 'status' + (isErr ? ' err' : ''); }
+
+  function render(data) {
+    let html = '';
+    if (data.summary) html += `<div class="summary">${data.summary}</div>`;
+    (data.stages || []).forEach(s => {
+      html += `<div class="stage"><h3>${s.title || ''}</h3><ul>` +
+        (s.topics || []).map(t => `<li>${t}</li>`).join('') + `</ul></div>`;
+    });
+    resultEl.innerHTML = html;
+    resultEl.classList.add('show');
+  }
+
+  async function getTopics() {
+    const a = $('codeA').value.trim(), b = $('codeB').value.trim();
+    resultEl.classList.remove('show'); resultEl.innerHTML = '';
+    if (!a || !b) { setStatus('두 사람의 코드를 모두 입력해 주세요.', true); return; }
+    if (a === b) { setStatus('서로 다른 두 코드를 입력해 주세요.', true); return; }
+
+    goBtn.disabled = true;
+    setStatus('<div class="spinner"></div>AI가 두 분께 어울리는 대화 주제를 고르고 있어요…');
+    try {
+      const res = await fetch(`${SUPABASE_URL}/functions/v1/conversation-topics`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': SUPABASE_ANON_KEY,
+          'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+        },
+        body: JSON.stringify({ code_a: a, code_b: b }),
+      });
+      const data = await res.json();
+      if (!res.ok || !data.ok) { setStatus(data.error || '추천을 불러오지 못했어요.', true); return; }
+      setStatus('');
+      render(data);
+    } catch (e) {
+      setStatus('네트워크 오류가 발생했어요. 잠시 후 다시 시도해 주세요.', true);
+    } finally {
+      goBtn.disabled = false;
+    }
+  }
+
+  goBtn.onclick = getTopics;
+  [ 'codeA', 'codeB' ].forEach(id => $(id).addEventListener('keydown', e => { if (e.key === 'Enter') getTopics(); }));
+</script>
+</body>
+</html>
