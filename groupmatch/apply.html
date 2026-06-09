@@ -3,543 +3,397 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>두근 — 그룹 소개팅 신청</title>
+<title>두근 — 소개팅 신청</title>
 <style>
   @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css');
-  :root{
-    --bg:#f6f3f1; --ink:#241f1d; --muted:#a59a94;
-    --accent:#e8553e; --accent-soft:#fdeee9; --accent-press:#d44730;
-    --card:#ffffff; --line:#ebe3df; --ring:rgba(232,85,62,.16);
-    --font:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,system-ui,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;
-  }
-  *{margin:0;padding:0;box-sizing:border-box}
-  html{-webkit-text-size-adjust:100%}
-  body{
-    font-family:var(--font);background:var(--bg);color:var(--ink);
-    min-height:100vh;-webkit-font-smoothing:antialiased;
-  }
+  *{margin:0;padding:0;box-sizing:border-box;font-family:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,system-ui,'Apple SD Gothic Neo','Noto Sans KR',sans-serif}
+  :root{--accent:#ff4f82;--accent2:#ff84a8;--accent-press:#e8366c;--accent-soft:#ffe0ea;--ink:#43232f;--muted:#bd8b9c;--line:#ffd6e1;--rose:#f5326f}
+  html,body{height:100%}
+  body{color:var(--ink);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px;-webkit-font-smoothing:antialiased;
+    background:radial-gradient(circle at 14% -5%,#ffc4d8 0%,transparent 46%),radial-gradient(circle at 88% 100%,#ffd9ea 0%,transparent 48%),linear-gradient(165deg,#ffe2ec,#ffc9dd);background-attachment:fixed}
 
-  /* 2단 레이아웃 (좌: 브랜드 / 우: 폼) */
-  .page{
-    display:grid;grid-template-columns:0.92fr 1.08fr;
-    max-width:1180px;margin:0 auto;min-height:100vh;
-  }
-  .brand{
-    position:sticky;top:0;align-self:start;height:100vh;
-    background:linear-gradient(165deg,#fff4f0 0%,#fbe7e0 58%,#f6dcd2 100%);
-    border-right:1px solid var(--line);
-    display:flex;align-items:center;padding:64px 56px;
-  }
-  .brand-inner{max-width:380px}
-  .viz{position:relative;width:100%;height:218px;margin-bottom:28px}
-  .viz .ava{position:absolute;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:19px;border:3px solid #fff;box-shadow:0 8px 20px -6px rgba(0,0,0,.18)}
-  .viz .vheart{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:62px;height:62px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-size:29px;box-shadow:0 10px 24px -6px rgba(232,85,62,.4);z-index:5}
-  .badge{
-    display:inline-block;font-size:12px;letter-spacing:.3px;color:var(--accent);
-    background:#fff;padding:7px 14px;border-radius:20px;margin-bottom:22px;
-    box-shadow:0 3px 10px -5px var(--ring);
-  }
-  .logo{display:flex;align-items:center;gap:13px;margin-bottom:8px}
-  .logo-mark{
-    width:48px;height:48px;border-radius:15px;flex:none;
-    background:linear-gradient(140deg,#f4836b,var(--accent));
-    display:flex;align-items:center;justify-content:center;
-    box-shadow:0 10px 20px -7px var(--ring);
-  }
-  .logo-mark svg{width:26px;height:26px}
-  .logo-word{font-size:36px;font-weight:800;letter-spacing:-2px;color:var(--ink)}
-  .logo-word b{color:var(--accent)}
-  .brand p{font-size:16px;color:#7b6e68;line-height:1.75;margin-top:16px;white-space:pre-line}
-  .values{list-style:none;margin-top:30px;display:flex;flex-direction:column;gap:13px}
-  .values li{position:relative;padding-left:26px;font-size:14.5px;color:#6e5f58;line-height:1.5}
-  .values li::before{
-    content:'';position:absolute;left:0;top:6px;width:8px;height:8px;border-radius:50%;
-    background:var(--accent);box-shadow:0 0 0 4px var(--accent-soft);
-  }
+  /* 떠다니는 하트 */
+  .petals{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+  .petals span{position:absolute;bottom:-30px;color:#ff7ba3;opacity:0;font-size:18px;animation:rise linear infinite}
+  @keyframes rise{0%{transform:translateY(0) rotate(0);opacity:0}15%{opacity:.45}85%{opacity:.45}100%{transform:translateY(-105vh) rotate(28deg);opacity:0}}
 
-  /* 폼 컬럼 */
-  .form-col{padding:52px 56px 72px;display:flex;flex-direction:column;justify-content:center}
-  .form-inner{width:100%;max-width:440px;margin:0 auto}
+  .card{position:relative;z-index:2;width:100%;max-width:440px;background:#fff;border-radius:28px;
+    box-shadow:0 30px 70px -28px rgba(150,50,90,.5);padding:26px 24px 28px;display:flex;flex-direction:column;min-height:600px;overflow:hidden}
 
-  @media (max-width:880px){
-    .page{grid-template-columns:1fr;max-width:560px}
-    .brand{position:static;height:auto;border-right:none;border-bottom:1px solid var(--line);padding:40px 26px 30px;align-items:flex-start}
-    .brand-inner{max-width:none}
-    .logo-word{font-size:30px}
-    .logo-mark{width:42px;height:42px;border-radius:13px}
-    .logo-mark svg{width:23px;height:23px}
-    .brand p{font-size:15px}
-    .values{display:none}
-    .form-col{padding:6px 24px 56px}
-  }
+  .topbar{display:flex;align-items:center;gap:10px;margin-bottom:18px}
+  .back{width:34px;height:34px;border:none;background:#fff5f8;color:var(--accent);border-radius:11px;font-size:20px;cursor:pointer;flex:none;line-height:1;visibility:hidden}
+  .topbar .tt{font-size:13px;color:var(--muted);flex:1}
+  .topbar .cap{font-size:11.5px;color:var(--accent);font-weight:700;letter-spacing:.5px}
 
-  /* 진행바 */
-  .progress-wrap{position:sticky;top:0;z-index:5;background:var(--bg);padding:14px 0 18px;margin-bottom:6px}
-  .progress{height:6px;background:var(--line);border-radius:99px;overflow:hidden}
-  .progress div{height:100%;background:linear-gradient(90deg,#f0795f,var(--accent));width:0%;transition:width .45s cubic-bezier(.2,.8,.3,1);border-radius:99px}
+  .prog{height:6px;background:#ffe1ea;border-radius:99px;margin-bottom:24px;overflow:hidden;flex:none}
+  .prog i{display:block;height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,var(--accent2),var(--accent));transition:width .5s cubic-bezier(.2,1,.3,1)}
 
-  /* 질문 카드 */
-  .q{
-    background:var(--card);border:1px solid var(--line);border-radius:20px;
-    padding:22px 20px;margin-bottom:12px;
-    opacity:.5;filter:saturate(.6);pointer-events:none;
-    transition:opacity .3s, box-shadow .3s, border-color .3s, filter .3s, transform .3s;
-  }
-  .q.active{
-    opacity:1;filter:none;pointer-events:auto;border-color:#f3d7cf;
-    box-shadow:0 10px 30px -12px rgba(200,90,60,.28);
-  }
-  .q.done{opacity:1;filter:none;pointer-events:auto}
-  .q label{display:block;font-family:var(--font);font-size:16px;font-weight:600;margin-bottom:14px;line-height:1.4}
-  .q label small{display:block;font-family:var(--font);font-weight:400;font-size:12px;color:var(--muted);margin-top:5px;line-height:1.5}
+  .steps{position:relative;flex:1;display:flex;flex-direction:column}
+  .step{display:none;flex-direction:column;flex:1}
+  .step.on{display:flex;animation:slideIn .42s cubic-bezier(.2,1,.3,1)}
+  @keyframes slideIn{from{opacity:0;transform:translateX(26px)}to{opacity:1;transform:none}}
 
-  .opts{display:flex;flex-wrap:wrap;gap:8px}
-  .opt{
-    padding:11px 16px;border:1.5px solid var(--line);border-radius:14px;
-    font-size:14px;cursor:pointer;background:#fcfaf9;transition:.15s;user-select:none;line-height:1.2;
-  }
-  .opt:hover{border-color:#f0a795;background:#fff}
-  .opt.sel{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600;box-shadow:0 4px 12px -3px var(--ring)}
+  .q{font-size:23px;font-weight:800;line-height:1.34;letter-spacing:-.5px;margin-bottom:6px}
+  .sub{font-size:12.5px;color:var(--muted);margin-bottom:22px;line-height:1.5}
+  .q + .opts,.q + .field{margin-top:18px}
 
-  input[type=text],input[type=number],input[type=tel],input[type=email],textarea{
-    width:100%;border:1.5px solid var(--line);border-radius:14px;padding:13px 15px;
-    font-family:inherit;font-size:15px;background:#fcfaf9;color:var(--ink);outline:none;transition:.15s;
-  }
-  input::placeholder,textarea::placeholder{color:#c4b8b2}
-  input:focus,textarea:focus{border-color:var(--accent);background:#fff;box-shadow:0 0 0 4px var(--ring)}
-  textarea{resize:none;height:78px;line-height:1.5}
+  .opts{display:flex;flex-direction:column;gap:10px}
+  .opt{display:flex;align-items:center;gap:12px;background:#fff;border:1.5px solid var(--line);border-radius:16px;padding:16px 18px;font-size:15px;font-weight:500;color:var(--ink);cursor:pointer;box-shadow:0 8px 18px -14px rgba(180,40,90,.5);transition:.15s;user-select:none}
+  .opt:hover{border-color:var(--accent2)}
+  .opt .emo{font-size:18px}.opt .txt{flex:1}
+  .opt .rd{width:22px;height:22px;border-radius:50%;border:2px solid #f0cfda;flex:none;transition:.15s}
+  .opt.sel{border-color:var(--accent);background:var(--accent-soft);animation:pop .32s cubic-bezier(.2,1.4,.4,1)}
+  .opt.sel .rd{border-color:var(--accent);background:var(--accent);box-shadow:inset 0 0 0 4px #fff}
+  @keyframes pop{0%{transform:scale(.96)}55%{transform:scale(1.04)}100%{transform:scale(1)}}
 
-  .submit{
-    width:100%;padding:17px;border:none;border-radius:16px;cursor:pointer;
-    font-family:var(--font);font-size:16px;font-weight:700;
-    background:var(--accent);color:#fff;margin-top:18px;
-    transition:opacity .25s, transform .15s, background .2s, box-shadow .2s;
-    opacity:.35;pointer-events:none;
-  }
-  .submit.ready{opacity:1;pointer-events:auto;box-shadow:0 12px 26px -10px var(--ring)}
-  .submit.ready:hover{background:var(--accent-press)}
-  .submit.ready:active{transform:translateY(1px)}
+  input[type=text],input[type=number],textarea{width:100%;border:1.5px solid var(--line);border-radius:14px;padding:15px 16px;font-size:16px;background:#fff7f9;color:var(--ink);outline:none;transition:.15s}
+  input::placeholder,textarea::placeholder{color:#e3a9bd}
+  input:focus,textarea:focus{border-color:var(--accent);background:#fff;box-shadow:0 0 0 4px rgba(255,79,130,.16)}
+  textarea{resize:none;height:96px;line-height:1.5}
 
-  .done-screen{display:none;text-align:center;padding:90px 24px}
-  .done-screen.show{display:block;animation:pop .5s cubic-bezier(.2,1.3,.4,1)}
-  @keyframes pop{from{transform:scale(.85);opacity:0}to{transform:scale(1);opacity:1}}
-  .done-screen .heart{font-size:56px}
-  .done-screen h2{font-family:var(--font);font-size:25px;margin:16px 0 10px;color:var(--accent)}
-  .done-screen p{font-size:14px;color:var(--muted);line-height:1.9}
-  .codebox{margin:10px auto 18px;max-width:300px;background:var(--accent-soft);border:1px solid #f3d7cf;border-radius:18px;padding:20px}
-  .codebox-label{display:block;font-size:12px;color:var(--accent-press);letter-spacing:1px}
-  .codebox .code{display:block;font-size:44px;font-weight:800;letter-spacing:6px;color:var(--accent);margin:6px 0 10px}
-  .codebox-hint{display:block;font-size:12px;color:#8a7a73;line-height:1.6}
+  .spacer{flex:1;min-height:18px}
+  .next{width:100%;background:linear-gradient(135deg,var(--accent2),var(--accent));color:#fff;border:none;border-radius:15px;padding:16px;font-size:16px;font-weight:800;cursor:pointer;box-shadow:0 14px 28px -12px rgba(255,79,130,.65);transition:.15s}
+  .next:hover{filter:brightness(1.05)}
+  .next:disabled{opacity:.4;cursor:default;box-shadow:none}
+  .skip{display:block;width:100%;text-align:center;margin-top:12px;background:none;border:none;font-size:13.5px;color:var(--muted);text-decoration:underline;cursor:pointer}
 
-  .privacy{font-size:11.5px;color:var(--muted);line-height:1.7;margin-top:18px;text-align:center}
+  /* 사진 */
+  .drop{flex:1;min-height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;border:1.5px dashed #f0bcce;border-radius:18px;background:#fff7f9;color:var(--muted);font-size:13.5px;cursor:pointer;text-align:center;transition:.15s}
+  .drop:hover{border-color:var(--accent);background:var(--accent-soft);color:var(--accent-press)}
+  .drop .plus{width:48px;height:48px;border-radius:50%;background:var(--accent);color:#fff;font-size:24px;display:flex;align-items:center;justify-content:center}
+  .preview{display:none;position:relative;flex:1;min-height:200px}
+  .preview.show{display:block}
+  .preview img{width:100%;height:100%;max-height:320px;object-fit:cover;border-radius:18px}
+  .preview .rm{position:absolute;top:10px;right:10px;background:rgba(0,0,0,.55);color:#fff;border:none;border-radius:50%;width:30px;height:30px;font-size:18px;cursor:pointer}
 
-  /* 개인정보 수집 동의 */
-  .consent{display:flex;align-items:flex-start;gap:10px;margin-top:6px;padding:4px 2px;font-size:13.5px;color:#5e524d;line-height:1.5;cursor:pointer}
-  .consent input{width:18px;height:18px;flex:none;margin-top:1px;accent-color:var(--accent);cursor:pointer}
+  /* 동의 */
+  .consent{display:flex;align-items:flex-start;gap:10px;font-size:13.5px;color:#7c5563;line-height:1.55;cursor:pointer;margin-bottom:10px}
+  .consent input{width:20px;height:20px;flex:none;margin-top:1px;accent-color:var(--accent);cursor:pointer}
   .consent a{color:var(--accent);text-decoration:underline}
-  .consent-detail{display:none;font-size:12px;color:var(--muted);line-height:1.7;background:#fcfaf9;border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-top:8px}
-  .consent-detail.show{display:block}
+  .cdetail{display:none;font-size:12px;color:var(--muted);line-height:1.7;background:#fff7f9;border:1px solid var(--line);border-radius:12px;padding:13px 15px;margin-bottom:14px}
+  .cdetail.show{display:block}
 
-  /* 프로필 사진 첨부 (선택) */
-  .qphoto{background:var(--card);border:1px solid #f3d7cf;border-radius:20px;padding:22px 20px;margin-bottom:12px;box-shadow:0 10px 30px -12px rgba(200,90,60,.18)}
-  .qphoto label{display:block;font-size:16px;font-weight:600;margin-bottom:14px;line-height:1.4}
-  .qphoto label small{display:block;font-weight:400;font-size:12px;color:var(--muted);margin-top:5px;line-height:1.5}
-  .photo-drop{display:flex;align-items:center;justify-content:center;gap:8px;border:1.5px dashed var(--line);border-radius:14px;padding:26px 16px;color:var(--muted);font-size:14px;cursor:pointer;background:#fcfaf9;transition:.15s;text-align:center}
-  .photo-drop:hover{border-color:#f0a795;background:#fff;color:var(--accent)}
-  .photo-preview{display:none;position:relative}
-  .photo-preview.show{display:block}
-  .photo-preview img{width:100%;max-height:280px;object-fit:cover;border-radius:14px;display:block}
-  .photo-remove{position:absolute;top:10px;right:10px;background:rgba(0,0,0,.55);color:#fff;border:none;border-radius:50%;width:30px;height:30px;font-size:18px;cursor:pointer;line-height:1;display:flex;align-items:center;justify-content:center}
-  .photo-hint{font-size:11.5px;color:var(--muted);margin-top:8px}
+  /* 완료 */
+  .done{display:none;position:relative;z-index:2;width:100%;max-width:440px;background:#fff;border-radius:28px;box-shadow:0 30px 70px -28px rgba(150,50,90,.5);padding:64px 30px;text-align:center}
+  .done.show{display:block;animation:slideIn .5s ease}
+  .done .heart{font-size:54px;display:inline-block;animation:beat 1.1s ease-in-out infinite}
+  @keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.13)}}
+  .done h2{font-size:23px;font-weight:800;margin:14px 0 4px}
+  .codebox{background:linear-gradient(135deg,#fff,#ffeef4);border:1px solid var(--line);border-radius:18px;padding:20px 28px;margin:18px auto;max-width:280px;box-shadow:0 14px 28px -16px rgba(255,79,130,.5)}
+  .codebox small{font-size:11.5px;color:var(--rose);letter-spacing:1px;font-weight:700}
+  .codebox .c{font-size:46px;font-weight:800;color:var(--rose);letter-spacing:7px;margin-top:4px}
+  .done p{font-size:13.5px;color:var(--muted);line-height:1.8}
+
+  @media (max-width:520px){
+    body{padding:0}
+    .card{max-width:none;min-height:100vh;border-radius:0;padding:22px 20px 26px}
+    .done{max-width:none;min-height:100vh;border-radius:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+  }
 </style>
 </head>
 <body>
-<div class="page">
-
-  <aside class="brand">
-    <div class="brand-inner">
-      <div class="viz">
-        <div class="ava" style="background:#e8553e;left:4%;top:4%">주</div>
-        <div class="ava" style="background:#d9a441;left:0;top:44%">민</div>
-        <div class="ava" style="background:#c9784f;left:15%;top:80%">하</div>
-        <div class="vheart">💞</div>
-        <div class="ava" style="background:#6a8caf;right:4%;top:4%">강</div>
-        <div class="ava" style="background:#7a9e7e;right:0;top:44%">한</div>
-        <div class="ava" style="background:#b06a9e;right:15%;top:80%">민</div>
-      </div>
-      <div class="logo">
-        <span class="logo-mark">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 20.5C12 20.5 3.5 15.6 3.5 9.4C3.5 6.6 5.7 4.5 8.4 4.5C10 4.5 11.4 5.3 12 6.5C12.6 5.3 14 4.5 15.6 4.5C18.3 4.5 20.5 6.6 20.5 9.4C20.5 15.6 12 20.5 12 20.5Z" fill="#fff" fill-opacity="0.22"/>
-            <path d="M4 12.5H8.2L9.8 8.7L12 15.3L14 11.5L15.2 12.5H20" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </span>
-        <span class="logo-word">두<b>근</b></span>
-      </div>
-      <p id="heroCopy"></p>
-    </div>
-  </aside>
-
-  <main class="form-col">
-    <div class="form-inner">
-
-  <div id="formArea">
-    <div class="progress-wrap"><div class="progress"><div id="bar"></div></div></div>
-
-    <!-- Q1 성별 -->
-    <div class="q active" data-q="gender">
-      <label>성별을 알려주세요</label>
-      <div class="opts">
-        <div class="opt" data-v="M">남성</div>
-        <div class="opt" data-v="F">여성</div>
-      </div>
-    </div>
-
-    <!-- Q2 출생연도 -->
-    <div class="q" data-q="birth_year">
-      <label>출생연도</label>
-      <input type="number" placeholder="예: 1996" min="1970" max="2007" id="in-birth">
-    </div>
-
-    <!-- Q3 지역 -->
-    <div class="q" data-q="region">
-      <label>주로 활동하는 지역 <small>그룹은 같은 지역끼리 묶어드려요</small></label>
-      <div class="opts">
-        <div class="opt" data-v="강남/서초">강남·서초</div>
-        <div class="opt" data-v="홍대/마포">홍대·마포</div>
-        <div class="opt" data-v="성수/건대">성수·건대</div>
-        <div class="opt" data-v="잠실/송파">잠실·송파</div>
-        <div class="opt" data-v="기타서울">기타 서울</div>
-        <div class="opt" data-v="경기/인천">경기·인천</div>
-      </div>
-    </div>
-
-    <!-- Q4 직업 -->
-    <div class="q" data-q="job">
-      <label>직업/소속 <small>그룹 밸런스를 맞추는 데만 써요</small></label>
-      <input type="text" placeholder="예: IT 회사원, 디자이너, 대학원생" id="in-job">
-    </div>
-
-    <!-- Q5 만남 스타일 -->
-    <div class="q" data-q="meet_style">
-      <label>선호하는 만남 분위기</label>
-      <div class="opts">
-        <div class="opt" data-v="술">🍻 가볍게 술 한잔</div>
-        <div class="opt" data-v="카페">☕ 카페에서 차분하게</div>
-        <div class="opt" data-v="액티비티">🎳 액티비티 (볼링·보드게임 등)</div>
-      </div>
-    </div>
-
-    <!-- Q6 가능 시간 -->
-    <div class="q" data-q="available">
-      <label>주로 가능한 시간대</label>
-      <div class="opts">
-        <div class="opt" data-v="평일저녁">평일 저녁</div>
-        <div class="opt" data-v="금요일">금요일 밤</div>
-        <div class="opt" data-v="주말낮">주말 낮</div>
-        <div class="opt" data-v="주말저녁">주말 저녁</div>
-      </div>
-    </div>
-
-    <!-- Q7 자기소개 -->
-    <div class="q" data-q="intro">
-      <label>나를 한 줄로 소개한다면 <small>같은 그룹이 될 분들에게 보여드려요</small></label>
-      <textarea placeholder="예: 처음엔 낯가리는데 친해지면 제일 시끄러운 사람" id="in-intro"></textarea>
-    </div>
-
-    <!-- Q8 WTP -->
-    <div class="q" data-q="wtp">
-      <label>매칭이 성사되면 참가비 1만원, 어떠세요? <small>솔직하게 답해주실수록 좋은 서비스가 돼요</small></label>
-      <div class="opts">
-        <div class="opt" data-v="yes">낼 의향 있어요</div>
-        <div class="opt" data-v="maybe">상황 봐서요</div>
-        <div class="opt" data-v="no">무료면 할래요</div>
-      </div>
-    </div>
-
-    <!-- Q9 연락처 -->
-    <div class="q" data-q="kakao_id">
-      <label>카카오톡 ID <small>그룹이 구성되면 이 ID로 연락드려요</small></label>
-      <input type="text" placeholder="카톡 ID 입력" id="in-kakao">
-    </div>
-
-    <!-- 프로필 사진 (선택) -->
-    <div class="qphoto">
-      <label>프로필 사진 <small>얼굴이 잘 보이는 사진일수록 매칭 확률이 올라가요 (선택)</small></label>
-      <div class="photo-drop" id="photoDrop">📷 사진 선택 또는 여기로 드래그</div>
-      <div class="photo-preview" id="photoPreview">
-        <img id="photoImg" alt="미리보기">
-        <button type="button" class="photo-remove" id="photoRemove" aria-label="삭제">×</button>
-      </div>
-      <input type="file" id="in-photo" accept="image/*" hidden>
-      <div class="photo-hint">JPG·PNG, 최대 5MB</div>
-    </div>
-
-    <!-- 개인정보 수집 동의 -->
-    <label class="consent" for="consent">
-      <input type="checkbox" id="consent">
-      <span>(필수) 개인정보 수집·이용에 동의합니다. <a href="#" id="privacyToggle">자세히</a></span>
-    </label>
-    <div class="consent-detail" id="consentDetail">
-      · 수집 항목: 성별, 출생연도, 지역, 직업, 만남 선호, 자기소개, 카카오톡 ID, 프로필 사진(선택)<br>
-      · 수집 목적: 그룹 구성 및 매칭 연락<br>
-      · 보유 기간: 매칭 종료 또는 파기 요청 시까지 (요청 시 즉시 파기)
-    </div>
-
-    <button class="submit" id="submitBtn">신청 완료하기</button>
-    <div class="privacy">입력하신 정보는 그룹 구성과 매칭 연락에만 사용되며,<br>요청 시 즉시 파기됩니다.</div>
+  <div class="petals">
+    <span style="left:8%;animation-duration:15s"></span><span style="left:28%;animation-duration:19s;animation-delay:4s"></span>
+    <span style="left:52%;animation-duration:21s;animation-delay:2s"></span><span style="left:74%;animation-duration:16s;animation-delay:6s"></span>
+    <span style="left:92%;animation-duration:18s;animation-delay:1s"></span>
   </div>
 
-  <div class="done-screen" id="doneScreen">
+  <div class="card" id="card">
+    <div class="topbar">
+      <button class="back" id="backBtn" aria-label="뒤로">‹</button>
+      <span class="tt">두근 소개팅 신청</span>
+      <span class="cap" id="cap">STEP 1 · 9</span>
+    </div>
+    <div class="prog"><i id="bar"></i></div>
+
+    <div class="steps" id="steps">
+      <!-- 1 성별 -->
+      <section class="step on" data-cap="STEP 1 · 9" data-q="gender" data-type="choice">
+        <div class="q">먼저, 어떤 분인지<br>살짝 알려주세요 💗</div>
+        <div class="opts">
+          <div class="opt" data-v="M"><span class="emo">🙋‍♂️</span><span class="txt">남성</span><span class="rd"></span></div>
+          <div class="opt" data-v="F"><span class="emo">🙋‍♀️</span><span class="txt">여성</span><span class="rd"></span></div>
+        </div>
+      </section>
+      <!-- 2 출생연도 -->
+      <section class="step" data-cap="STEP 2 · 9" data-q="birth_year" data-type="input">
+        <div class="q">출생연도를<br>알려주세요</div>
+        <div class="field"><input type="number" id="in-birth" placeholder="예: 1996" min="1970" max="2007"></div>
+        <div class="spacer"></div>
+        <button class="next">다음</button>
+      </section>
+      <!-- 3 지역 -->
+      <section class="step" data-cap="STEP 3 · 9" data-q="region" data-type="choice">
+        <div class="q">주로 활동하는<br>지역은 어디세요?</div>
+        <div class="sub">같은 지역끼리 매칭해드려요</div>
+        <div class="opts">
+          <div class="opt" data-v="강남/서초"><span class="txt">강남·서초</span><span class="rd"></span></div>
+          <div class="opt" data-v="홍대/마포"><span class="txt">홍대·마포</span><span class="rd"></span></div>
+          <div class="opt" data-v="성수/건대"><span class="txt">성수·건대</span><span class="rd"></span></div>
+          <div class="opt" data-v="잠실/송파"><span class="txt">잠실·송파</span><span class="rd"></span></div>
+          <div class="opt" data-v="기타서울"><span class="txt">기타 서울</span><span class="rd"></span></div>
+          <div class="opt" data-v="경기/인천"><span class="txt">경기·인천</span><span class="rd"></span></div>
+        </div>
+      </section>
+      <!-- 4 직업 -->
+      <section class="step" data-cap="STEP 4 · 9" data-q="job" data-type="input">
+        <div class="q">직업이나 소속을<br>알려주세요</div>
+        <div class="sub">매칭 밸런스를 맞추는 데만 써요</div>
+        <div class="field"><input type="text" id="in-job" placeholder="예: IT 회사원, 디자이너, 대학원생"></div>
+        <div class="spacer"></div>
+        <button class="next">다음</button>
+      </section>
+      <!-- 5 만남 스타일 -->
+      <section class="step" data-cap="STEP 5 · 9" data-q="meet_style" data-type="choice">
+        <div class="q">어떤 분위기의<br>만남이 설레나요?</div>
+        <div class="sub">취향이 맞는 분과 이어드릴게요</div>
+        <div class="opts">
+          <div class="opt" data-v="카페"><span class="emo">☕</span><span class="txt">카페에서 차분하게</span><span class="rd"></span></div>
+          <div class="opt" data-v="술"><span class="emo">🍷</span><span class="txt">가볍게 한잔하며</span><span class="rd"></span></div>
+          <div class="opt" data-v="액티비티"><span class="emo">🎳</span><span class="txt">액티비티 즐기며</span><span class="rd"></span></div>
+        </div>
+      </section>
+      <!-- 6 가능 시간 -->
+      <section class="step" data-cap="STEP 6 · 9" data-q="available" data-type="choice">
+        <div class="q">주로 언제<br>만나기 좋으세요?</div>
+        <div class="opts">
+          <div class="opt" data-v="평일저녁"><span class="emo">🌆</span><span class="txt">평일 저녁</span><span class="rd"></span></div>
+          <div class="opt" data-v="금요일"><span class="emo">🍸</span><span class="txt">금요일 밤</span><span class="rd"></span></div>
+          <div class="opt" data-v="주말낮"><span class="emo">☀️</span><span class="txt">주말 낮</span><span class="rd"></span></div>
+          <div class="opt" data-v="주말저녁"><span class="emo">🌙</span><span class="txt">주말 저녁</span><span class="rd"></span></div>
+        </div>
+      </section>
+      <!-- 7 자기소개 -->
+      <section class="step" data-cap="STEP 7 · 9" data-q="intro" data-type="input">
+        <div class="q">나를 한 줄로<br>소개한다면?</div>
+        <div class="sub">매칭된 분에게 보여드려요</div>
+        <div class="field"><textarea id="in-intro" placeholder="예: 처음엔 낯가리는데 친해지면 제일 시끄러운 사람"></textarea></div>
+        <div class="spacer"></div>
+        <button class="next">다음</button>
+      </section>
+      <!-- 8 WTP -->
+      <section class="step" data-cap="STEP 8 · 9" data-q="wtp" data-type="choice">
+        <div class="q">매칭되면 참가비<br>1만원, 어떠세요?</div>
+        <div class="sub">솔직할수록 좋은 서비스가 돼요</div>
+        <div class="opts">
+          <div class="opt" data-v="yes"><span class="txt">낼 의향 있어요</span><span class="rd"></span></div>
+          <div class="opt" data-v="maybe"><span class="txt">상황 봐서요</span><span class="rd"></span></div>
+          <div class="opt" data-v="no"><span class="txt">무료면 할래요</span><span class="rd"></span></div>
+        </div>
+      </section>
+      <!-- 9 카톡 -->
+      <section class="step" data-cap="STEP 9 · 9" data-q="kakao_id" data-type="input">
+        <div class="q">마지막! 연락받을<br>카카오톡 ID</div>
+        <div class="sub">매칭되면 이 ID로 안내드려요</div>
+        <div class="field"><input type="text" id="in-kakao" placeholder="카톡 ID 입력"></div>
+        <div class="spacer"></div>
+        <button class="next">다음</button>
+      </section>
+      <!-- 10 사진 (선택) -->
+      <section class="step" data-cap="프로필 사진 (선택)" data-type="photo">
+        <div class="q">프로필 사진을<br>올려주세요 📸</div>
+        <div class="sub">얼굴이 잘 보일수록 매칭 확률이 올라가요 (선택)</div>
+        <div class="drop" id="drop"><div class="plus">+</div>사진 선택 또는 드래그<br><span style="font-size:11px">JPG·PNG · 최대 5MB</span></div>
+        <div class="preview" id="preview"><img id="pimg" alt="미리보기"><button type="button" class="rm" id="prm">×</button></div>
+        <input type="file" id="in-photo" accept="image/*" hidden>
+        <div class="spacer"></div>
+        <button class="next" id="photoNext">다음</button>
+        <button class="skip" id="photoSkip">사진 없이 진행할게요</button>
+      </section>
+      <!-- 11 동의 + 제출 -->
+      <section class="step" data-cap="거의 다 됐어요 💕" data-type="consent">
+        <div class="q">신청 전,<br>마지막 동의만!</div>
+        <div class="sub">두근거리는 만남, 곧 이어드릴게요.</div>
+        <label class="consent" for="consent">
+          <input type="checkbox" id="consent">
+          <span>(필수) 개인정보 수집·이용에 동의합니다. <a href="#" id="cToggle">자세히</a></span>
+        </label>
+        <div class="cdetail" id="cDetail">
+          · 수집 항목: 성별, 출생연도, 지역, 직업, 만남 선호, 자기소개, 카카오톡 ID, 프로필 사진(선택)<br>
+          · 목적: 매칭 및 만남 안내 &nbsp;·&nbsp; 보유: 매칭 종료/파기 요청 시까지
+        </div>
+        <div class="spacer"></div>
+        <button class="next" id="submitBtn" disabled>신청 완료하기</button>
+      </section>
+    </div>
+  </div>
+
+  <!-- 완료 화면 -->
+  <div class="done" id="doneScreen">
     <div class="heart">💌</div>
-    <h2>신청 완료!</h2>
-    <div class="codebox" id="codeBox">
-      <span class="codebox-label">내 참가 코드</span>
-      <span class="code" id="myCode">----</span>
-      <span class="codebox-hint">소개팅 당일 이 코드로 자리를 찾고,<br>대화 주제도 받을 수 있어요. 꼭 기억해 주세요!</span>
-    </div>
-    <p>잘 맞는 분들로 매칭해서<br>곧 연락드릴게요. 보통 3~7일 정도 걸려요.</p>
+    <h2>설렘이 접수됐어요!</h2>
+    <div class="codebox" id="codeBox"><small>MY CODE</small><div class="c" id="myCode">----</div></div>
+    <p>소개팅 당일 이 코드로 자리를 찾고<br>대화 주제도 받을 수 있어요.<br>그날, 곧 만나요 💕</p>
   </div>
-
-    </div>
-  </main>
-
-</div>
 
 <script>
 // =====================================================
-// 트래킹 설정 — Supabase 키만 채우면 동작
+// 트래킹 설정
 // =====================================================
-const SUPABASE_URL = 'https://wjjiacepvfamqnwmatkp.supabase.co';        // 예: https://xxxx.supabase.co
+const SUPABASE_URL = 'https://wjjiacepvfamqnwmatkp.supabase.co';
 const SUPABASE_ANON_KEY = 'sb_publishable_Pz-ciZrqsgZErtYOGH-S3g_REY6_In9';
 
-// ---------- 세션 / UTM / A·B 배정 ----------
 const sessionId = crypto.randomUUID();
 const params = new URLSearchParams(location.search);
-const utm = {
-  utm_source: params.get('utm_source') || 'direct',
-  utm_campaign: params.get('utm_campaign') || '',
-};
-// A/B: 카피 두 버전 랜덤 배정 (URL로 강제하려면 ?v=A)
+const utm = { utm_source: params.get('utm_source') || 'direct', utm_campaign: params.get('utm_campaign') || '' };
 const variant = params.get('v') || (Math.random() < 0.5 ? 'A' : 'B');
-const COPY = {
-  A: '혼자 신청하세요. 잘 맞는 사람들로 팀을 짜서,\n괜찮은 상대 팀과 만남을 잡아드려요.',
-  B: '소개팅은 부담스럽고, 미팅은 멤버 모으기 힘들죠.\n혼자 와도 팀이 되는 그룹 소개팅.',
-};
-document.getElementById('heroCopy').innerText = COPY[variant];
 
-// ---------- 이벤트 적재 ----------
-function logEvent(name, props = {}, useBeacon = false) {
-  const body = JSON.stringify({
-    p_event_name: name, p_user_id: null, p_group_id: null,
-    p_session_id: sessionId,
-    p_props: { ...props, variant, ...utm },
-  });
-  // sendBeacon은 자격증명(credentials)을 강제로 포함해 Supabase의 와일드카드 CORS와 충돌함.
-  // fetch + keepalive로 교체 → 페이지 이탈 시에도 전송을 보장하면서 CORS 문제 회피.
+function logEvent(name, props = {}, keep = false) {
+  const body = JSON.stringify({ p_event_name: name, p_user_id: null, p_group_id: null, p_session_id: sessionId, p_props: { ...props, variant, ...utm } });
   fetch(`${SUPABASE_URL}/rest/v1/rpc/log_event`, {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'apikey': SUPABASE_ANON_KEY,
-      'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
-    },
-    body,
-    keepalive: useBeacon,
+    headers: { 'Content-Type': 'application/json', 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` },
+    body, keepalive: keep,
   }).catch(() => {});
 }
 
-// ---------- 폼 상태 ----------
+// =====================================================
+// 스텝 진행
+// =====================================================
 const answers = {};
-const qEls = [...document.querySelectorAll('.q')];
-const order = qEls.map(el => el.dataset.q);
-let qStartTime = Date.now();
-let submitted = false;
+const stepEls = [...document.querySelectorAll('.step')];
+const totalQ = stepEls.filter(s => s.dataset.q).length;
+let idx = 0, submitted = false, qStart = Date.now();
+const bar = document.getElementById('bar'), cap = document.getElementById('cap'), backBtn = document.getElementById('backBtn');
 
 logEvent('form_viewed', { referrer: document.referrer });
 
-function answer(qid, value) {
+function showStep(i) {
+  stepEls.forEach(s => s.classList.remove('on'));
+  const el = stepEls[i]; el.classList.add('on');
+  idx = i;
+  cap.textContent = el.dataset.cap || '';
+  bar.style.width = ((i) / (stepEls.length - 1) * 100) + '%';
+  backBtn.style.visibility = i === 0 ? 'hidden' : 'visible';
+  qStart = Date.now();
+  const focusable = el.querySelector('input,textarea');
+  if (focusable) setTimeout(() => focusable.focus(), 120);
+}
+function next() { if (idx < stepEls.length - 1) showStep(idx + 1); }
+function back() { if (idx > 0) showStep(idx - 1); }
+backBtn.onclick = back;
+
+function recordAnswer(qid, value) {
   const isNew = !(qid in answers);
   answers[qid] = value;
-  if (isNew) {
-    logEvent('question_answered', {
-      question_id: qid,
-      elapsed_ms: Date.now() - qStartTime,
-    });
-    qStartTime = Date.now();
-  }
-  advance();
+  if (isNew) logEvent('question_answered', { question_id: qid, elapsed_ms: Date.now() - qStart });
 }
 
-function advance() {
-  let activated = false;
-  qEls.forEach(el => {
-    const qid = el.dataset.q;
-    if (qid in answers) {
-      el.classList.add('done'); el.classList.remove('active');
-    } else if (!activated) {
-      el.classList.add('active'); activated = true;
-    }
-  });
-  const doneCount = Object.keys(answers).length;
-  document.getElementById('bar').style.width = (doneCount / order.length * 100) + '%';
-  updateSubmitState();
-  // 다음 미응답 문항으로 스크롤
-  const next = qEls.find(el => el.classList.contains('active'));
-  if (next && doneCount > 0) next.scrollIntoView({ behavior: 'smooth', block: 'center' });
-}
-
-// 모든 문항 응답 + 개인정보 동의 시에만 제출 활성화
-const consentEl = document.getElementById('consent');
-function updateSubmitState() {
-  const ready = Object.keys(answers).length === order.length && consentEl.checked;
-  document.getElementById('submitBtn').classList.toggle('ready', ready);
-}
-consentEl.addEventListener('change', updateSubmitState);
-
-// 수집 항목 자세히 보기 토글
-document.getElementById('privacyToggle').onclick = (e) => {
-  e.preventDefault();
-  document.getElementById('consentDetail').classList.toggle('show');
-};
-
-// 선택형 문항
-qEls.forEach(el => {
+// 선택형: 클릭 → 저장 → 자동 다음
+stepEls.forEach(el => {
+  if (el.dataset.type !== 'choice') return;
   el.querySelectorAll('.opt').forEach(opt => {
     opt.onclick = () => {
       el.querySelectorAll('.opt').forEach(o => o.classList.remove('sel'));
       opt.classList.add('sel');
-      answer(el.dataset.q, opt.dataset.v);
+      recordAnswer(el.dataset.q, opt.dataset.v);
+      setTimeout(next, 280);
     };
   });
 });
 
-// 입력형 문항 (blur 시 확정)
-const textInputs = [
-  ['in-birth', 'birth_year'], ['in-job', 'job'],
-  ['in-intro', 'intro'], ['in-kakao', 'kakao_id'],
-];
-textInputs.forEach(([id, qid]) => {
-  const el = document.getElementById(id);
-  el.addEventListener('blur', () => {
-    if (el.value.trim()) answer(qid, el.value.trim());
-  });
+// 입력형: 다음/엔터 → 검증 → 저장 → 다음
+stepEls.forEach(el => {
+  if (el.dataset.type !== 'input') return;
+  const inp = el.querySelector('input,textarea');
+  const btn = el.querySelector('.next');
+  const go = () => {
+    if (!inp.value.trim()) { inp.focus(); inp.style.borderColor = 'var(--accent)'; return; }
+    recordAnswer(el.dataset.q, inp.value.trim());
+    next();
+  };
+  btn.onclick = go;
+  inp.addEventListener('keydown', e => { if (e.key === 'Enter' && inp.tagName !== 'TEXTAREA') { e.preventDefault(); go(); } });
 });
 
-// ---------- 프로필 사진 (선택) ----------
+// =====================================================
+// 사진 (선택)
+// =====================================================
 let photoFile = null;
-const photoDrop = document.getElementById('photoDrop');
-const photoInput = document.getElementById('in-photo');
-const photoPreview = document.getElementById('photoPreview');
-const photoImg = document.getElementById('photoImg');
-
-photoDrop.onclick = () => photoInput.click();
-photoInput.onchange = () => handlePhoto(photoInput.files[0]);
-['dragover', 'dragenter'].forEach(ev =>
-  photoDrop.addEventListener(ev, e => { e.preventDefault(); photoDrop.style.borderColor = 'var(--accent)'; }));
-['dragleave', 'drop'].forEach(ev =>
-  photoDrop.addEventListener(ev, e => { e.preventDefault(); photoDrop.style.borderColor = ''; }));
-photoDrop.addEventListener('drop', e => { const f = e.dataTransfer.files[0]; if (f) handlePhoto(f); });
-document.getElementById('photoRemove').onclick = () => {
-  photoFile = null; photoInput.value = '';
-  photoPreview.classList.remove('show'); photoDrop.style.display = '';
-};
-
+const drop = document.getElementById('drop'), pinput = document.getElementById('in-photo'),
+      preview = document.getElementById('preview'), pimg = document.getElementById('pimg');
+drop.onclick = () => pinput.click();
+pinput.onchange = () => handlePhoto(pinput.files[0]);
+['dragover','dragenter'].forEach(ev => drop.addEventListener(ev, e => { e.preventDefault(); drop.style.borderColor = 'var(--accent)'; }));
+['dragleave','drop'].forEach(ev => drop.addEventListener(ev, e => { e.preventDefault(); drop.style.borderColor = ''; }));
+drop.addEventListener('drop', e => { const f = e.dataTransfer.files[0]; if (f) handlePhoto(f); });
+document.getElementById('prm').onclick = () => { photoFile = null; pinput.value = ''; preview.classList.remove('show'); drop.style.display = 'flex'; };
+document.getElementById('photoNext').onclick = next;
+document.getElementById('photoSkip').onclick = next;
 function handlePhoto(file) {
   if (!file) return;
   if (!file.type.startsWith('image/')) { alert('이미지 파일만 첨부할 수 있어요.'); return; }
   if (file.size > 5 * 1024 * 1024) { alert('5MB 이하 이미지만 가능해요.'); return; }
-  photoFile = file;
-  photoImg.src = URL.createObjectURL(file);
-  photoPreview.classList.add('show');
-  photoDrop.style.display = 'none';
+  photoFile = file; pimg.src = URL.createObjectURL(file);
+  preview.classList.add('show'); drop.style.display = 'none';
   logEvent('photo_attached', { size: file.size, type: file.type });
 }
-
-// Supabase Storage 업로드 → 공개 URL 반환 (실패 시 null)
 async function uploadPhoto() {
   if (!photoFile) return null;
   const ext = (photoFile.name.split('.').pop() || 'jpg').toLowerCase();
   const path = `${sessionId}-${Date.now()}.${ext}`;
   const res = await fetch(`${SUPABASE_URL}/storage/v1/object/applicant-photos/${path}`, {
     method: 'POST',
-    headers: {
-      'apikey': SUPABASE_ANON_KEY,
-      'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
-      'Content-Type': photoFile.type,
-    },
+    headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}`, 'Content-Type': photoFile.type },
     body: photoFile,
   });
   if (!res.ok) return null;
   return `${SUPABASE_URL}/storage/v1/object/public/applicant-photos/${path}`;
 }
 
-// ---------- 제출 ----------
-document.getElementById('submitBtn').onclick = async () => {
-  submitted = true;
-  logEvent('form_submitted', { answers_count: Object.keys(answers).length, has_photo: !!photoFile });
-  let photoUrl = null;
-  try { photoUrl = await uploadPhoto(); } catch (e) { /* 사진 없이 계속 진행 */ }
+// =====================================================
+// 동의 + 제출
+// =====================================================
+const consentEl = document.getElementById('consent'), submitBtn = document.getElementById('submitBtn');
+consentEl.addEventListener('change', () => { submitBtn.disabled = !consentEl.checked; });
+document.getElementById('cToggle').onclick = (e) => { e.preventDefault(); document.getElementById('cDetail').classList.toggle('show'); };
 
-  // 고유 숫자코드 발급 + applicants 적재 (코드 중복 시 재시도)
+submitBtn.onclick = async () => {
+  if (!consentEl.checked) return;
+  submitted = true;
+  submitBtn.disabled = true; submitBtn.textContent = '신청 중…';
+  logEvent('form_submitted', { answers_count: Object.keys(answers).length, has_photo: !!photoFile });
+
+  let photoUrl = null;
+  try { photoUrl = await uploadPhoto(); } catch (e) {}
+
   let myCode = null;
   for (let i = 0; i < 6; i++) {
     const code = String(Math.floor(1000 + Math.random() * 9000));
     try {
       const res = await fetch(`${SUPABASE_URL}/rest/v1/applicants`, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'apikey': SUPABASE_ANON_KEY,
-          'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
-          // RLS상 applicants는 insert만 허용·select 차단 → 삽입한 행을 되읽지 않도록 minimal.
-          'Prefer': 'return=minimal',
-        },
+        headers: { 'Content-Type': 'application/json', 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}`, 'Prefer': 'return=minimal' },
         body: JSON.stringify({
-          session_id: sessionId,
-          code,
-          gender: answers.gender,
-          birth_year: parseInt(answers.birth_year),
-          region: answers.region,
-          job: answers.job || null,
-          meet_style: answers.meet_style || null,
-          available: answers.available || null,
-          intro: answers.intro || null,
-          kakao_id: answers.kakao_id,
-          wtp: answers.wtp || null,
-          photo_url: photoUrl,
-          utm_source: utm.utm_source,
-          variant,
+          session_id: sessionId, code,
+          gender: answers.gender, birth_year: parseInt(answers.birth_year), region: answers.region,
+          job: answers.job || null, meet_style: answers.meet_style || null, available: answers.available || null,
+          intro: answers.intro || null, kakao_id: answers.kakao_id, wtp: answers.wtp || null,
+          photo_url: photoUrl, utm_source: utm.utm_source, variant,
         }),
       });
       if (res.ok) { myCode = code; break; }
-      if (res.status !== 409) { myCode = code; break; }  // 409(코드 중복)만 재시도
+      if (res.status !== 409) { myCode = code; break; }
     } catch (e) { break; }
   }
 
-  if (myCode) {
-    document.getElementById('myCode').textContent = myCode;
-    logEvent('code_issued', { code: myCode });
-  } else {
-    document.getElementById('codeBox').style.display = 'none';
-  }
-  document.getElementById('formArea').style.display = 'none';
+  if (myCode) { document.getElementById('myCode').textContent = myCode; logEvent('code_issued', { code: myCode }); }
+  else { document.getElementById('codeBox').style.display = 'none'; }
+  document.getElementById('card').style.display = 'none';
   document.getElementById('doneScreen').classList.add('show');
 };
 
-// ---------- 이탈 감지 (핵심) ----------
+// =====================================================
+// 이탈 감지
+// =====================================================
 document.addEventListener('visibilitychange', () => {
   if (document.visibilityState === 'hidden' && !submitted) {
     const answered = Object.keys(answers);
-    const lastQ = answered.length ? answered[answered.length - 1] : null;
-    const nextQ = order.find(q => !(q in answers)) || null;
-    logEvent('form_abandoned', {
-      last_answered: lastQ,
-      stuck_on: nextQ,                 // ← 어느 문항에서 멈췄는가
-      progress: answered.length + '/' + order.length,
-    }, true);                          // sendBeacon으로 전송 보장
+    logEvent('form_abandoned', { last_answered: answered[answered.length - 1] || null, stuck_on: stepEls[idx].dataset.q || stepEls[idx].dataset.type, progress: answered.length + '/' + totalQ }, true);
   }
 });
+
+showStep(0);
 </script>
 </body>
 </html>
