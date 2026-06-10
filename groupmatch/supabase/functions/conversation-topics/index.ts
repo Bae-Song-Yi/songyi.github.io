@@ -15,7 +15,7 @@
 const SUPABASE_URL = Deno.env.get("SUPABASE_URL")!;
 const SERVICE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 const GEMINI_API_KEY = Deno.env.get("GEMINI_API_KEY") ?? "";
-const MODEL = "gemini-2.0-flash";
+const MODEL = "gemini-2.5-flash";
 
 const CORS = {
   "Access-Control-Allow-Origin": "*",
@@ -49,9 +49,15 @@ Deno.serve(async (req) => {
     const url = `${SUPABASE_URL}/rest/v1/applicants?code=in.(${encodeURIComponent(code_a)},${encodeURIComponent(code_b)})` +
       `&select=code,gender,birth_year,region,job,meet_style,available,intro`;
     const r = await fetch(url, { headers: { apikey: SERVICE_KEY, Authorization: `Bearer ${SERVICE_KEY}` } });
-    const rows = await r.json();
-    if (!Array.isArray(rows) || rows.length < 2) {
-      return json({ ok: false, error: "코드에 해당하는 참가자를 찾지 못했어요. 코드를 확인해 주세요." }, 404);
+    const raw = await r.text();
+    let rows: any = null;
+    try { rows = JSON.parse(raw); } catch (_) { /* ignore */ }
+    if (!r.ok || !Array.isArray(rows)) {
+      console.error("applicants fetch failed", r.status, raw);
+      return json({ ok: false, error: "프로필 조회에 실패했어요 (서버 권한 문제).", status: r.status, detail: String(raw).slice(0, 300), service_key_present: !!SERVICE_KEY }, 500);
+    }
+    if (rows.length < 2) {
+      return json({ ok: false, error: "코드에 해당하는 참가자를 찾지 못했어요. (찾은 수: " + rows.length + ")", found: rows.map((x: any) => x.code) }, 404);
     }
     const a = rows.find((x: any) => String(x.code) === String(code_a));
     const b = rows.find((x: any) => String(x.code) === String(code_b));
