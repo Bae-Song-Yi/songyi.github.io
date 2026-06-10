@@ -31,6 +31,7 @@
   .steps{position:relative;flex:1;display:flex;flex-direction:column}
   .step{display:none;flex-direction:column;flex:1}
   .step.on{display:flex;animation:slideIn .42s cubic-bezier(.2,1,.3,1)}
+  .step[data-type="choice"].on{justify-content:center}
   @keyframes slideIn{from{opacity:0;transform:translateX(26px)}to{opacity:1;transform:none}}
 
   .q{font-size:23px;font-weight:800;line-height:1.34;letter-spacing:-.5px;margin-bottom:6px}
@@ -84,10 +85,12 @@
   .codebox .c{font-size:46px;font-weight:800;color:var(--rose);letter-spacing:7px;margin-top:4px}
   .done p{font-size:13.5px;color:var(--muted);line-height:1.8}
 
-  @media (max-width:520px){
-    body{padding:0}
-    .card{max-width:none;min-height:100vh;border-radius:0;padding:22px 20px 26px}
-    .done{max-width:none;min-height:100vh;border-radius:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+  @media (max-width:768px){
+    body{padding:0;align-items:stretch}
+    .card{max-width:none;min-height:100dvh;border-radius:0;padding:24px 22px calc(28px + env(safe-area-inset-bottom))}
+    .q{font-size:25px}
+    .opt{padding:17px 18px;font-size:15.5px}
+    .done{max-width:none;min-height:100dvh;border-radius:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
   }
 </style>
 </head>
