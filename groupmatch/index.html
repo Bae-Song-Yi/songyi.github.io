@@ -71,9 +71,10 @@
   .prog{height:6px;background:#ffe1ea;border-radius:99px;margin-bottom:24px;overflow:hidden;flex:none}
   .prog i{display:block;height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,var(--accent2),var(--accent));transition:width .5s cubic-bezier(.2,1,.3,1)}
 
-  .steps{position:relative;flex:1;display:flex;flex-direction:column}
-  .step{display:none;flex-direction:column;flex:1}
-  .step.on{display:flex;animation:slideIn .42s cubic-bezier(.2,1,.3,1)}
+  .steps{position:relative;flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .steps::-webkit-scrollbar{width:0;height:0}
+  .step{display:none;flex-direction:column;padding-bottom:30px}
+  .step.shown{display:flex;animation:slideIn .42s cubic-bezier(.2,1,.3,1)}
   @keyframes slideIn{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
   .q{font-size:24px;font-weight:800;line-height:1.34;letter-spacing:-.5px;margin-bottom:6px}
   .sub{font-size:12.5px;color:var(--muted);margin-bottom:22px;line-height:1.5}
@@ -93,16 +94,16 @@
   input:focus,textarea:focus{border-color:var(--accent);background:#fff;box-shadow:0 0 0 4px rgba(255,79,130,.16)}
   textarea{resize:none;height:96px;line-height:1.5}
 
-  .spacer{flex:1;min-height:18px}
+  .spacer{flex:none;height:14px}
   .next{width:100%;background:linear-gradient(135deg,var(--accent2),var(--accent));color:#fff;border:none;border-radius:15px;padding:16px;font-size:16px;font-weight:800;cursor:pointer;box-shadow:0 14px 28px -12px rgba(255,79,130,.65);transition:.15s}
   .next:hover{filter:brightness(1.05)}
   .next:disabled{opacity:.4;cursor:default;box-shadow:none}
   .skip{display:block;width:100%;text-align:center;margin-top:12px;background:none;border:none;font-size:13.5px;color:var(--muted);text-decoration:underline;cursor:pointer}
 
-  .drop{flex:1;min-height:190px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;border:1.5px dashed #f0bcce;border-radius:18px;background:#fff7f9;color:var(--muted);font-size:13.5px;cursor:pointer;text-align:center;transition:.15s}
+  .drop{min-height:180px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;border:1.5px dashed #f0bcce;border-radius:18px;background:#fff7f9;color:var(--muted);font-size:13.5px;cursor:pointer;text-align:center;transition:.15s}
   .drop:hover{border-color:var(--accent);background:var(--accent-soft);color:var(--accent-press)}
   .drop .plus{width:48px;height:48px;border-radius:50%;background:var(--accent);color:#fff;font-size:24px;display:flex;align-items:center;justify-content:center}
-  .preview{display:none;position:relative;flex:1;min-height:190px}
+  .preview{display:none;position:relative;min-height:180px}
   .preview.show{display:block}
   .preview img{width:100%;height:100%;max-height:320px;object-fit:cover;border-radius:18px}
   .preview .rm{position:absolute;top:10px;right:10px;background:rgba(0,0,0,.55);color:#fff;border:none;border-radius:50%;width:30px;height:30px;font-size:18px;cursor:pointer}
@@ -164,7 +165,7 @@
       <div class="prog"><i style="width:55%"></i></div>
       <div class="stepcap">STEP 05 · 09</div>
       <div class="steps">
-        <section class="step on" data-type="choice" style="justify-content:flex-start">
+        <section class="step shown" data-type="choice">
           <div class="q">어떤 분위기의<br>만남이 설레나요?</div>
           <div class="sub">취향이 맞는 분과 이어드릴게요</div>
           <div class="opts">
@@ -185,7 +186,7 @@
       <div class="prog"><i id="bar"></i></div>
       <div class="stepcap" id="cap">STEP 01 · 09</div>
       <div class="steps" id="steps">
-        <section class="step on" data-cap="STEP 1 · 9" data-q="gender" data-type="choice">
+        <section class="step" data-cap="STEP 1 · 9" data-q="gender" data-type="choice">
           <div class="q">먼저, 어떤 분인지<br>살짝 알려주세요 💗</div>
           <div class="opts">
             <div class="opt" data-v="M"><span class="emo">🙋‍♂️</span><span class="txt">남성</span><span class="rd"></span></div>
@@ -307,7 +308,7 @@ logEvent('landing_viewed', { referrer: document.referrer });
 let started = false;
 document.getElementById('startBtn').addEventListener('click', () => {
   document.body.classList.add('go');
-  if (!started) { started = true; logEvent('form_viewed'); }
+  if (!started) { started = true; logEvent('form_viewed'); reveal(0); }
 });
 
 // 스텝 진행
@@ -315,27 +316,29 @@ const answers = {};
 const stepEls = [...document.querySelectorAll('#steps .step')];
 const qSteps = stepEls.filter(s => s.dataset.q);
 const totalQ = qSteps.length;
-let idx = 0, submitted = false, qStart = Date.now();
+let cur = 0, submitted = false, qStart = Date.now();
 const bar = document.getElementById('bar'), cap = document.getElementById('cap'), backBtn = document.getElementById('backBtn');
+const stepsEl = document.getElementById('steps');
 function capFor(el) { if (el.dataset.q) { return 'STEP ' + String(qSteps.indexOf(el) + 1).padStart(2, '0') + ' · 09'; } return el.dataset.cap || ''; }
 
-function showStep(i) {
-  stepEls.forEach(s => s.classList.remove('on'));
-  const el = stepEls[i]; el.classList.add('on'); idx = i;
+// 답하면 이전 질문은 위에 남고, 다음 질문이 아래에 나타나며 거기로 스크롤/포커스
+function reveal(i) {
+  if (i < 0 || i >= stepEls.length) return;
+  const el = stepEls[i];
+  el.classList.add('shown');
+  cur = i;
   cap.textContent = capFor(el);
   bar.style.width = (i / (stepEls.length - 1) * 100) + '%';
-  backBtn.style.visibility = i === 0 ? 'hidden' : 'visible';
   qStart = Date.now();
-  const fo = el.querySelector('input,textarea');
-  if (fo) setTimeout(() => fo.focus(), 120);
+  setTimeout(() => {
+    stepsEl.scrollTo({ top: Math.max(0, el.offsetTop - 6), behavior: 'smooth' });
+    const fo = el.querySelector('input,textarea');
+    if (fo) { try { fo.focus({ preventScroll: true }); } catch (e) { fo.focus(); } }
+  }, 90);
 }
-function next() { if (idx < stepEls.length - 1) showStep(idx + 1); }
-function back() {
-  if (idx > 0) showStep(idx - 1);
-  else { document.body.classList.remove('go'); }   // 첫 단계에서 뒤로 → 랜딩
-}
-backBtn.onclick = back;
-backBtn.style.visibility = 'hidden';
+function nextOf(el) { reveal(stepEls.indexOf(el) + 1); }
+backBtn.onclick = () => document.body.classList.remove('go');   // 뒤로 → 랜딩
+backBtn.style.visibility = 'visible';
 
 function recordAnswer(qid, value) {
   const isNew = !(qid in answers); answers[qid] = value;
@@ -346,14 +349,14 @@ stepEls.forEach(el => {
   el.querySelectorAll('.opt').forEach(opt => {
     opt.onclick = () => {
       el.querySelectorAll('.opt').forEach(o => o.classList.remove('sel'));
-      opt.classList.add('sel'); recordAnswer(el.dataset.q, opt.dataset.v); setTimeout(next, 280);
+      opt.classList.add('sel'); recordAnswer(el.dataset.q, opt.dataset.v); setTimeout(() => nextOf(el), 280);
     };
   });
 });
 stepEls.forEach(el => {
   if (el.dataset.type !== 'input') return;
   const inp = el.querySelector('input,textarea'), btn = el.querySelector('.next');
-  const go = () => { if (!inp.value.trim()) { inp.focus(); inp.style.borderColor = 'var(--accent)'; return; } recordAnswer(el.dataset.q, inp.value.trim()); next(); };
+  const go = () => { if (!inp.value.trim()) { inp.focus(); inp.style.borderColor = 'var(--accent)'; return; } recordAnswer(el.dataset.q, inp.value.trim()); nextOf(el); };
   btn.onclick = go;
   inp.addEventListener('keydown', e => { if (e.key === 'Enter' && inp.tagName !== 'TEXTAREA') { e.preventDefault(); go(); } });
 });
@@ -367,8 +370,9 @@ pinput.onchange = () => handlePhoto(pinput.files[0]);
 ['dragleave','drop'].forEach(ev => drop.addEventListener(ev, e => { e.preventDefault(); drop.style.borderColor = ''; }));
 drop.addEventListener('drop', e => { const f = e.dataTransfer.files[0]; if (f) handlePhoto(f); });
 document.getElementById('prm').onclick = () => { photoFile = null; pinput.value = ''; preview.classList.remove('show'); drop.style.display = 'flex'; };
-document.getElementById('photoNext').onclick = next;
-document.getElementById('photoSkip').onclick = next;
+const photoStep = document.querySelector('#steps .step[data-type="photo"]');
+document.getElementById('photoNext').onclick = () => nextOf(photoStep);
+document.getElementById('photoSkip').onclick = () => nextOf(photoStep);
 function handlePhoto(file) {
   if (!file) return;
   if (!file.type.startsWith('image/')) { alert('이미지 파일만 첨부할 수 있어요.'); return; }
@@ -416,7 +420,7 @@ submitBtn.onclick = async () => {
 document.addEventListener('visibilitychange', () => {
   if (document.visibilityState === 'hidden' && started && !submitted) {
     const answered = Object.keys(answers);
-    logEvent('form_abandoned', { last_answered: answered[answered.length - 1] || null, stuck_on: stepEls[idx].dataset.q || stepEls[idx].dataset.type, progress: answered.length + '/' + totalQ }, true);
+    logEvent('form_abandoned', { last_answered: answered[answered.length - 1] || null, stuck_on: stepEls[cur].dataset.q || stepEls[cur].dataset.type, progress: answered.length + '/' + totalQ }, true);
   }
 });
 </script>
