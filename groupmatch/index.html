@@ -32,11 +32,11 @@
   .landing{position:absolute;inset:0;z-index:4;display:flex;flex-direction:column;align-items:center;
     transition:opacity .45s ease, transform .5s ease}
   body.go .landing{opacity:0;transform:translateY(-30px);pointer-events:none}
-  .copy{position:relative;z-index:5;text-align:center;padding:104px 22px 0;max-width:620px}
-  .copy .lab{display:inline-block;font-size:12px;letter-spacing:2px;color:var(--rose);background:#fff;padding:7px 15px;border-radius:20px;box-shadow:0 6px 16px -8px rgba(255,80,120,.5);margin-bottom:18px;font-weight:700}
-  .copy h1{font-size:44px;font-weight:800;letter-spacing:-1.5px;line-height:1.2}
+  .copy{position:relative;z-index:5;text-align:center;padding:clamp(72px,11vh,112px) 22px 0;max-width:620px}
+  .copy .lab{display:inline-block;font-size:clamp(11px,3vw,12px);letter-spacing:2px;color:var(--rose);background:#fff;padding:7px 15px;border-radius:20px;box-shadow:0 6px 16px -8px rgba(255,80,120,.5);margin-bottom:clamp(12px,2.4vh,18px);font-weight:700}
+  .copy h1{font-size:clamp(28px,7vw,46px);font-weight:800;letter-spacing:-1.5px;line-height:1.2}
   .copy h1 em{font-style:normal;color:var(--rose)}
-  .copy p{font-size:16px;color:#9b6f80;line-height:1.7;margin-top:14px}
+  .copy p{font-size:clamp(14px,3.6vw,16px);color:#9b6f80;line-height:1.7;margin-top:14px}
   .cta{display:inline-block;margin-top:26px;background:linear-gradient(135deg,var(--accent2),var(--accent));color:#fff;text-decoration:none;border:none;cursor:pointer;
     border-radius:16px;padding:16px 40px;font-size:16px;font-weight:800;box-shadow:0 16px 32px -12px rgba(255,79,130,.7);transition:transform .15s, filter .2s}
   .cta:hover{filter:brightness(1.05);transform:translateY(-2px)}
@@ -124,11 +124,18 @@
   .codebox .c{font-size:46px;font-weight:800;color:var(--rose);letter-spacing:7px;margin-top:4px}
   .done p{font-size:13.5px;color:var(--muted);line-height:1.8}
 
+  /* 태블릿·모바일: 떠다니는 장식 숨김 (clamp가 폰트·여백 자동 조절) */
   @media (max-width:900px){
     .floaty{display:none}
-    .copy{padding-top:108px}
-    .copy h1{font-size:34px}
-    .copy p{font-size:15px}
+  }
+  /* 넓은 데스크톱: 폰을 살짝 키우고 장식 간격 확보 */
+  @media (min-width:1100px){
+    .device{width:380px;height:min(820px,90dvh)}
+  }
+  /* 가로 모드 등 매우 낮은 화면: 폰을 더 채움 */
+  @media (max-height:620px){
+    .device{height:96dvh}
+    .copy{padding-top:54px}
   }
 </style>
 </head>
