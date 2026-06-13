@@ -89,7 +89,7 @@
   .opt.sel .rd{border-color:var(--accent);background:var(--accent);box-shadow:inset 0 0 0 4px #fff}
   @keyframes pop{0%{transform:scale(.96)}55%{transform:scale(1.04)}100%{transform:scale(1)}}
 
-  input[type=text],input[type=number],textarea{width:100%;border:1.5px solid var(--line);border-radius:14px;padding:15px 16px;font-size:16px;background:#fff7f9;color:var(--ink);outline:none;transition:.15s}
+  input[type=text],input[type=number],input[type=email],input[type=tel],textarea{width:100%;border:1.5px solid var(--line);border-radius:14px;padding:15px 16px;font-size:16px;background:#fff7f9;color:var(--ink);outline:none;transition:.15s}
   input::placeholder,textarea::placeholder{color:#e3a9bd}
   input:focus,textarea:focus{border-color:var(--accent);background:#fff;box-shadow:0 0 0 4px rgba(255,79,130,.16)}
   textarea{resize:none;height:96px;line-height:1.5}
@@ -113,6 +113,7 @@
   .consent a{color:var(--accent);text-decoration:underline}
   .cdetail{display:none;font-size:12px;color:var(--muted);line-height:1.7;background:#fff7f9;border:1px solid var(--line);border-radius:12px;padding:13px 15px;margin-bottom:14px}
   .cdetail.show{display:block}
+  .emailmsg{font-size:12.5px;line-height:1.5;margin-top:10px;color:var(--muted)}
 
   .done{position:absolute;inset:0;background:linear-gradient(180deg,#fff7f9,#fff);display:none;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 30px}
   .done.show{display:flex;animation:slideIn .5s ease}
@@ -228,6 +229,18 @@
       <div class="prog"><i id="bar"></i></div>
       <div class="stepcap" id="cap">STEP 01 · 09</div>
       <div class="steps" id="steps">
+        <section class="step" data-cap="회사 이메일 인증" data-type="email">
+          <div class="q">회사 이메일로<br>인증해 주세요 🏢</div>
+          <div class="sub">직장인 인증을 위해 회사 이메일을 사용해요. (gmail·naver 등 개인 메일은 ✕)</div>
+          <div class="field"><input type="email" id="in-email" placeholder="you@company.com" autocomplete="email"></div>
+          <button class="next" id="emailSendBtn" type="button" style="margin-top:10px">인증코드 받기</button>
+          <div id="otpArea" style="display:none">
+            <div class="field" style="margin-top:12px"><input type="text" id="in-otp" inputmode="numeric" maxlength="6" placeholder="메일로 받은 6자리 코드"></div>
+            <button class="next" id="otpVerifyBtn" type="button" style="margin-top:10px">인증 확인</button>
+            <button class="skip" id="otpResend" type="button">코드 다시 받기</button>
+          </div>
+          <div class="emailmsg" id="emailMsg"></div>
+        </section>
         <section class="step" data-cap="STEP 1 · 9" data-q="gender" data-type="choice">
           <div class="q">먼저, 어떤 분인지<br>살짝 알려주세요 💗</div>
           <div class="opts">
@@ -393,6 +406,67 @@ function nextOf(el) { reveal(stepEls.indexOf(el) + 1); }
 backBtn.onclick = () => document.body.classList.remove('go');   // 뒤로 → 랜딩
 backBtn.style.visibility = 'visible';
 
+// ---------- 회사 이메일 인증 (폼 첫 단계, Supabase Auth OTP) ----------
+let verifiedEmail = null;
+const FREE_DOMAINS = ['gmail.com','googlemail.com','naver.com','daum.net','hanmail.net','kakao.com','nate.com','outlook.com','hotmail.com','live.com','msn.com','yahoo.com','yahoo.co.kr','ymail.com','icloud.com','me.com','mac.com','proton.me','protonmail.com','gmx.com','aol.com'];
+const emailStep = document.querySelector('#steps .step[data-type="email"]');
+const emailInput = document.getElementById('in-email');
+const emailSendBtn = document.getElementById('emailSendBtn');
+const otpArea = document.getElementById('otpArea');
+const otpInput = document.getElementById('in-otp');
+const otpVerifyBtn = document.getElementById('otpVerifyBtn');
+const emailMsg = document.getElementById('emailMsg');
+function emsg(t, err) { emailMsg.textContent = t; emailMsg.style.color = err ? '#d6336c' : 'var(--muted)'; }
+async function sendOtp() {
+  const email = emailInput.value.trim().toLowerCase();
+  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { emsg('올바른 이메일을 입력해 주세요.', true); return; }
+  if (FREE_DOMAINS.includes(email.split('@')[1])) { emsg('회사 이메일로 인증해 주세요 (개인 메일 ✕).', true); return; }
+  emailSendBtn.disabled = true; emailSendBtn.textContent = '전송 중…';
+  try {
+    const res = await fetch(`${SUPABASE_URL}/auth/v1/otp`, {
+      method: 'POST', headers: { 'Content-Type': 'application/json', 'apikey': SUPABASE_ANON_KEY },
+      body: JSON.stringify({ email, create_user: true }),
+    });
+    if (res.ok) {
+      otpArea.style.display = 'block';
+      emsg('메일로 6자리 코드를 보냈어요. 메일함(스팸함도) 확인해 주세요.');
+      emailSendBtn.textContent = '코드 재전송'; emailSendBtn.disabled = false;
+      logEvent('email_otp_sent', { domain: email.split('@')[1] });
+      setTimeout(() => otpInput.focus(), 100);
+    } else {
+      const d = await res.json().catch(() => ({}));
+      emsg('전송 실패: ' + (d.msg || d.error_description || d.error || res.status), true);
+      emailSendBtn.textContent = '인증코드 받기'; emailSendBtn.disabled = false;
+    }
+  } catch (e) { emsg('네트워크 오류. 다시 시도해 주세요.', true); emailSendBtn.textContent = '인증코드 받기'; emailSendBtn.disabled = false; }
+}
+async function verifyOtp() {
+  const email = emailInput.value.trim().toLowerCase();
+  const token = otpInput.value.trim();
+  if (token.length < 6) { emsg('6자리 코드를 입력해 주세요.', true); return; }
+  otpVerifyBtn.disabled = true; otpVerifyBtn.textContent = '확인 중…';
+  try {
+    const res = await fetch(`${SUPABASE_URL}/auth/v1/verify`, {
+      method: 'POST', headers: { 'Content-Type': 'application/json', 'apikey': SUPABASE_ANON_KEY },
+      body: JSON.stringify({ type: 'email', email, token }),
+    });
+    if (res.ok) {
+      verifiedEmail = email;
+      emsg('인증 완료! 💚');
+      logEvent('email_verified', { domain: email.split('@')[1] });
+      setTimeout(() => nextOf(emailStep), 450);
+    } else {
+      emsg('코드가 맞지 않거나 만료됐어요. 다시 확인해 주세요.', true);
+      otpVerifyBtn.disabled = false; otpVerifyBtn.textContent = '인증 확인';
+    }
+  } catch (e) { emsg('네트워크 오류. 다시 시도해 주세요.', true); otpVerifyBtn.disabled = false; otpVerifyBtn.textContent = '인증 확인'; }
+}
+emailSendBtn.onclick = sendOtp;
+otpVerifyBtn.onclick = verifyOtp;
+document.getElementById('otpResend').onclick = sendOtp;
+emailInput.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); sendOtp(); } });
+otpInput.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); verifyOtp(); } });
+
 function recordAnswer(qid, value) {
   const isNew = !(qid in answers); answers[qid] = value;
   if (isNew) logEvent('question_answered', { question_id: qid, elapsed_ms: Date.now() - qStart });
@@ -458,7 +532,7 @@ submitBtn.onclick = async () => {
       const res = await fetch(`${SUPABASE_URL}/rest/v1/applicants`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}`, 'Prefer': 'return=minimal' },
-        body: JSON.stringify({ session_id: sessionId, code, gender: answers.gender, birth_year: parseInt(answers.birth_year), region: answers.region, job: answers.job || null, meet_style: answers.meet_style || null, available: answers.available || null, intro: answers.intro || null, kakao_id: answers.kakao_id, wtp: answers.wtp || null, photo_url: photoUrl, utm_source: utm.utm_source, variant }),
+        body: JSON.stringify({ session_id: sessionId, code, gender: answers.gender, birth_year: parseInt(answers.birth_year), region: answers.region, job: answers.job || null, meet_style: answers.meet_style || null, available: answers.available || null, intro: answers.intro || null, kakao_id: answers.kakao_id, wtp: answers.wtp || null, photo_url: photoUrl, email: verifiedEmail, utm_source: utm.utm_source, variant }),
       });
       if (res.ok) { myCode = code; break; }
       if (res.status !== 409) { myCode = code; break; }
