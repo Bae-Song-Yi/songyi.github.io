@@ -26,7 +26,6 @@
   .brand{position:fixed;top:26px;left:32px;display:flex;align-items:center;gap:10px;z-index:9;transition:opacity .4s}
   .brand .m{width:34px;height:34px;border-radius:10px;background:linear-gradient(140deg,var(--accent2),var(--accent));display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px}
   .brand b{font-size:21px;font-weight:800}.brand b i{color:var(--accent);font-style:normal}
-  body.go .brand{opacity:0;pointer-events:none}
 
   /* 랜딩(히어로) — 신청 시작하면 페이드아웃 */
   .landing{position:absolute;inset:0;z-index:4;display:flex;flex-direction:column;align-items:center;
@@ -52,6 +51,11 @@
   .pcard .av{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:15px;flex:none}
   .pcard .nm{font-size:13.5px;font-weight:700}.pcard .ds{font-size:11.5px;color:var(--muted);margin-top:2px}
   .pL{top:430px;left:9%;transform:rotate(-5deg)}.pR{top:400px;right:8%;transform:rotate(5deg)}
+  /* 둥둥 떠다니는 애니메이션 (transform의 rotate는 유지, translate만 흔듦) */
+  @keyframes bob{0%,100%{translate:0 0}50%{translate:0 -11px}}
+  .floaty{animation:bob 4.6s ease-in-out infinite}
+  .t1{animation-delay:-.2s}.t2{animation-delay:-1.3s}.t3{animation-delay:-.7s}.t4{animation-delay:-1.9s}
+  .f1{animation-delay:-1.0s}.f2{animation-delay:-.4s}.pL{animation-delay:-1.5s}.pR{animation-delay:-.8s}
 
   /* 폰 = 폼. 처음엔 아래에서 살짝 보이고, 신청 시작하면 위로 올라와 전체 차지 */
   /* 폰 목업: 핑크 배경 위에 떠 있는 폰. 시작 전엔 아래에서 1/3쯤 보이고, 시작하면 가운데로 올라옴 */
@@ -184,14 +188,16 @@
   <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
   <div class="brand"><span class="m">💞</span><b>두<i>근</i></b></div>
 
+  <!-- 좌우 떠다니는 장식 (랜딩 밖 → 폼 진행 중에도 계속 떠 있음) -->
+  <div class="floaty tile t1">☕</div><div class="floaty tile t2">🍷</div>
+  <div class="floaty tile t3">💌</div><div class="floaty tile t4">🎳</div>
+  <div class="floaty float f1">💞 매칭 <span class="pct">92%</span></div>
+  <div class="floaty float f2">“오늘 카페 어때요?” ☕</div>
+  <div class="floaty pcard pL"><span class="av" style="background:#ff84a8">지</span><div><div class="nm">지은 · 28</div><div class="ds">☕ 강남 · 카페</div></div></div>
+  <div class="floaty pcard pR"><span class="av" style="background:#9aa7e8">현</span><div><div class="nm">현우 · 31</div><div class="ds">🎳 성수 · 액티비티</div></div></div>
+
   <!-- 랜딩 -->
   <div class="landing" id="landing">
-    <div class="floaty tile t1">☕</div><div class="floaty tile t2">🍷</div>
-    <div class="floaty tile t3">💌</div><div class="floaty tile t4">🎳</div>
-    <div class="floaty float f1">💞 매칭 <span class="pct">92%</span></div>
-    <div class="floaty float f2">“오늘 카페 어때요?” ☕</div>
-    <div class="floaty pcard pL"><span class="av" style="background:#ff84a8">지</span><div><div class="nm">지은 · 28</div><div class="ds">☕ 강남 · 카페</div></div></div>
-    <div class="floaty pcard pR"><span class="av" style="background:#9aa7e8">현</span><div><div class="nm">현우 · 31</div><div class="ds">🎳 성수 · 액티비티</div></div></div>
     <div class="copy">
       <span class="lab">GROUP BLIND DATE</span>
       <h1>혼자 와도, <em>설렘</em>은 함께.</h1>
