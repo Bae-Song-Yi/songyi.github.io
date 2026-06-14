@@ -677,6 +677,12 @@ if (_vv) {
   fitChat();
 }
 
+// 챗봇이 열려 있는 동안 메시지 영역 밖 드래그로 화면이 밀리지 않게(키보드에서 입력칸이 떨어지는 것 방지)
+document.addEventListener('touchmove', (e) => {
+  if (!document.body.classList.contains('chat-open')) return;
+  if (!(e.target.closest && e.target.closest('#chatBody'))) e.preventDefault();
+}, { passive: false });
+
 async function sendChat() {
   const msg = chatInput.value.trim();
   if (!msg) return;
