@@ -486,6 +486,8 @@ async function verifyOtp() {
     if (res.ok) {
       verifiedEmail = email;
       stopOtpTimer();
+      otpInput.disabled = true;
+      otpVerifyBtn.textContent = '확인';
       emsg('인증 완료! 💚');
       logEvent('email_verified', { domain: email.split('@')[1] });
       setTimeout(() => nextOf(emailStep), 450);
