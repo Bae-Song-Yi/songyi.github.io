@@ -3,6 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, interactive-widget=resizes-content">
+<!-- 홈 화면에 추가 시 Safari 주소창 없이 전체화면(standalone) → 입력칸이 키보드에 완전히 붙음 -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="두근메이트">
+<meta name="theme-color" content="#ff4f82">
 <title>두근 — 혼자 와도 팀이 되는 그룹 소개팅</title>
 <style>
   @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css');
@@ -170,11 +176,12 @@
   /* 모바일: 챗봇을 하단 시트로 — 넓게 쓰고 키보드/노치에도 안정적 */
   @media (max-width:540px){
     .chat-fab{right:14px;bottom:calc(16px + env(safe-area-inset-bottom));width:54px;height:54px;font-size:23px}
-    .chat-panel{left:10px;right:10px;top:22dvh;bottom:var(--kb,0px);height:auto;width:auto;
+    .chat-panel{left:10px;right:10px;top:22dvh;bottom:0;height:auto;width:auto;
       border-radius:24px 24px 0 0;transform:translateY(28px)}
     body.chat-open .chat-fab{top:calc(22dvh - 64px);bottom:auto;right:14px}
     .chat-body{padding:14px}
-    .chat-input{padding:12px;padding-bottom:calc(12px + env(safe-area-inset-bottom))}
+    /* 입력칸을 키보드 위로 올리고, 그 아래(=Safari 주소창 자리)는 패널 흰색 배경으로 채워 '분홍 구멍' 제거 */
+    .chat-input{padding:12px;padding-bottom:calc(12px + env(safe-area-inset-bottom));margin-bottom:var(--kb,0px)}
   }
   /* 넓은 데스크톱: 폰을 살짝 키우고 장식 간격 확보 */
   @media (min-width:1100px){
