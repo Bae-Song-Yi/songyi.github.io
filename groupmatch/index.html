@@ -488,6 +488,9 @@ async function verifyOtp() {
       stopOtpTimer();
       otpInput.disabled = true;
       otpVerifyBtn.textContent = '확인';
+      emailInput.disabled = true;
+      emailSendBtn.disabled = true;
+      document.getElementById('otpResend').disabled = true;
       emsg('인증 완료! 💚');
       logEvent('email_verified', { domain: email.split('@')[1] });
       setTimeout(() => nextOf(emailStep), 450);
