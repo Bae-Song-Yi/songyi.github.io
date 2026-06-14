@@ -164,7 +164,7 @@
   }
   /* 모바일: 히어로(타이틀~버튼)를 폰 미리보기 위 공간에 세로 중앙 정렬 */
   @media (max-width:540px){
-    .landing{justify-content:center;padding-top:60px;padding-bottom:47dvh}
+    .landing{justify-content:center;padding-top:60px;padding-bottom:47svh}
     .copy{padding-top:0}
   }
   /* 모바일: 챗봇을 하단 시트로 — 넓게 쓰고 키보드/노치에도 안정적 */
@@ -660,6 +660,7 @@ if (window.visualViewport) {
     const kb = Math.max(0, window.innerHeight - vv.height - vv.offsetTop);
     document.documentElement.style.setProperty('--kb', kb + 'px');
     if (document.body.classList.contains('chat-open')) chatBody.scrollTop = chatBody.scrollHeight;
+    if (kb === 0) { window.scrollTo(0, 0); document.documentElement.scrollTop = 0; } // 키보드 닫힘: iOS 잔여 스크롤 리셋
   };
   vv.addEventListener('resize', fitChat);
   vv.addEventListener('scroll', fitChat);
