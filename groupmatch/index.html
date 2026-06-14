@@ -162,6 +162,11 @@
   @media (max-width:900px){
     .floaty{display:none}
   }
+  /* 모바일: 히어로(타이틀~버튼)를 폰 미리보기 위 공간에 세로 중앙 정렬 */
+  @media (max-width:540px){
+    .landing{justify-content:center;padding-bottom:42dvh}
+    .copy{padding-top:0}
+  }
   /* 모바일: 챗봇을 하단 시트로 — 넓게 쓰고 키보드/노치에도 안정적 */
   @media (max-width:540px){
     .chat-fab{right:14px;bottom:calc(16px + env(safe-area-inset-bottom));width:54px;height:54px;font-size:23px}
