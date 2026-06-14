@@ -242,6 +242,7 @@
           <button class="next" id="emailSendBtn" type="button" style="margin-top:10px">인증코드 받기</button>
           <div id="otpArea" style="display:none">
             <div class="field" style="margin-top:12px"><input type="text" id="in-otp" inputmode="numeric" maxlength="6" placeholder="메일로 받은 6자리 코드"></div>
+            <div id="otpTimer" style="margin-top:6px;font-size:13px;color:var(--muted)"></div>
             <button class="next" id="otpVerifyBtn" type="button" style="margin-top:10px">인증 확인</button>
             <button class="skip" id="otpResend" type="button">코드 다시 받기</button>
           </div>
@@ -422,7 +423,31 @@ const otpArea = document.getElementById('otpArea');
 const otpInput = document.getElementById('in-otp');
 const otpVerifyBtn = document.getElementById('otpVerifyBtn');
 const emailMsg = document.getElementById('emailMsg');
+const otpTimerEl = document.getElementById('otpTimer');
+let otpTimerId = null, otpExpired = false;
+const OTP_TTL = 180; // 인증코드 유효시간(초) — Supabase Email OTP Expiration과 동일하게
 function emsg(t, err) { emailMsg.textContent = t; emailMsg.style.color = err ? '#d6336c' : 'var(--muted)'; }
+function startOtpTimer() {
+  clearInterval(otpTimerId);
+  otpExpired = false;
+  let remaining = OTP_TTL;
+  const render = () => {
+    const m = Math.floor(remaining / 60), s = String(remaining % 60).padStart(2, '0');
+    otpTimerEl.textContent = `남은 시간 ${m}:${s}`;
+    otpTimerEl.style.color = remaining <= 30 ? '#d6336c' : 'var(--muted)';
+  };
+  render();
+  otpTimerId = setInterval(() => {
+    remaining--;
+    if (remaining <= 0) {
+      clearInterval(otpTimerId);
+      otpExpired = true;
+      otpTimerEl.textContent = '코드가 만료됐어요. ‘코드 다시 받기’를 눌러 주세요.';
+      otpTimerEl.style.color = '#d6336c';
+    } else { render(); }
+  }, 1000);
+}
+function stopOtpTimer() { clearInterval(otpTimerId); otpTimerEl.textContent = ''; }
 async function sendOtp() {
   const email = emailInput.value.trim().toLowerCase();
   if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { emsg('올바른 이메일을 입력해 주세요.', true); return; }
@@ -435,8 +460,9 @@ async function sendOtp() {
     });
     if (res.ok) {
       otpArea.style.display = 'block';
-      emsg('메일로 6자리 코드를 보냈어요. 메일함(스팸함도) 확인해 주세요.');
+      emsg('메일로 6자리 코드를 보냈어요. 3분 안에 입력해 주세요. (스팸함도 확인)');
       emailSendBtn.textContent = '코드 재전송'; emailSendBtn.disabled = false;
+      startOtpTimer();
       logEvent('email_otp_sent', { domain: email.split('@')[1] });
       setTimeout(() => otpInput.focus(), 100);
     } else {
@@ -450,6 +476,7 @@ async function verifyOtp() {
   const email = emailInput.value.trim().toLowerCase();
   const token = otpInput.value.trim();
   if (token.length < 6) { emsg('6자리 코드를 입력해 주세요.', true); return; }
+  if (otpExpired) { emsg('코드가 만료됐어요. ‘코드 다시 받기’를 눌러 주세요.', true); return; }
   otpVerifyBtn.disabled = true; otpVerifyBtn.textContent = '확인 중…';
   try {
     const res = await fetch(`${SUPABASE_URL}/auth/v1/verify`, {
@@ -458,6 +485,7 @@ async function verifyOtp() {
     });
     if (res.ok) {
       verifiedEmail = email;
+      stopOtpTimer();
       emsg('인증 완료! 💚');
       logEvent('email_verified', { domain: email.split('@')[1] });
       setTimeout(() => nextOf(emailStep), 450);
