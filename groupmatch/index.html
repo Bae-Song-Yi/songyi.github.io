@@ -165,7 +165,7 @@
   /* 모바일: 챗봇을 하단 시트로 — 넓게 쓰고 키보드/노치에도 안정적 */
   @media (max-width:540px){
     .chat-fab{right:14px;bottom:calc(16px + env(safe-area-inset-bottom));width:54px;height:54px;font-size:23px}
-    .chat-panel{left:10px;right:10px;bottom:0;width:auto;height:85dvh;
+    .chat-panel{left:10px;right:10px;top:15dvh;bottom:var(--kb,0px);width:auto;height:auto;
       border-radius:24px 24px 0 0;transform:translateY(28px)}
     body.chat-open .chat-fab{top:calc(15dvh - 64px);bottom:auto;right:14px}
     .chat-body{padding:14px}
@@ -647,6 +647,18 @@ chatFab.onclick = () => {
   const open = document.body.classList.toggle('chat-open');
   if (open) { greet(); logEvent('chat_opened'); setTimeout(() => chatInput.focus(), 200); }
 };
+
+// 모바일: 소프트 키보드가 떠도 챗봇이 화면 안에 머물도록 visualViewport로 하단 위치 보정
+if (window.visualViewport) {
+  const vv = window.visualViewport;
+  const fitChat = () => {
+    const kb = Math.max(0, window.innerHeight - vv.height - vv.offsetTop);
+    document.documentElement.style.setProperty('--kb', kb + 'px');
+    if (document.body.classList.contains('chat-open')) chatBody.scrollTop = chatBody.scrollHeight;
+  };
+  vv.addEventListener('resize', fitChat);
+  vv.addEventListener('scroll', fitChat);
+}
 
 async function sendChat() {
   const msg = chatInput.value.trim();
