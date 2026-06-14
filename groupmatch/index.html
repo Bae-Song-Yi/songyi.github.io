@@ -650,7 +650,12 @@ function greet() {
 }
 chatFab.onclick = () => {
   const open = document.body.classList.toggle('chat-open');
-  if (open) { greet(); logEvent('chat_opened'); setTimeout(() => chatInput.focus(), 200); }
+  if (open) {
+    greet(); logEvent('chat_opened');
+    chatInput.focus(); // 제스처 안에서 즉시 포커스 → iOS에서 키보드 바로 올라옴
+  } else {
+    chatInput.blur(); // 닫으면 키보드도 같이 내려가게
+  }
 };
 
 // 모바일: 소프트 키보드가 떠도 챗봇이 화면 안에 머물도록 visualViewport로 하단 위치 보정
