@@ -668,7 +668,7 @@ function fitChat() {
   const gap = Math.round(vh * 0.22);                 // 상단 여백(닫기 버튼 자리)
   const root = document.documentElement;
   root.style.setProperty('--cp-top', (vtop + gap) + 'px');
-  root.style.setProperty('--cp-h', (vh - gap) + 'px'); // 패널 바닥 = 보이는 영역 바닥(키보드 위) → 틈 없음
+  root.style.setProperty('--cp-h', (vh - gap + 6) + 'px'); // 바닥을 키보드에 6px 겹쳐 어떤 경우에도 틈이 안 보이게
   const kb = Math.max(0, Math.round(window.innerHeight - vh - vtop));
   if (document.body.classList.contains('chat-open')) chatBody.scrollTop = chatBody.scrollHeight;
   if (kb === 0) { window.scrollTo(0, 0); root.scrollTop = 0; } // 키보드 닫힘: iOS 잔여 스크롤 리셋
