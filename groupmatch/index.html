@@ -60,11 +60,18 @@
   .pcard .av{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:15px;flex:none}
   .pcard .nm{font-size:13.5px;font-weight:700}.pcard .ds{font-size:11.5px;color:var(--muted);margin-top:2px}
   .pL{top:430px;left:9%;transform:rotate(-5deg)}.pR{top:400px;right:8%;transform:rotate(5deg)}
+  /* 위·아래 추가 장식 (PC 좌우 채움) */
+  .f3{top:150px;left:8%}.f4{top:590px;right:7%;border-bottom-right-radius:4px}
+  .t5{top:600px;left:6%;background:#ffe4d6;transform:rotate(8deg)}
+  .t6{top:150px;right:9%;background:#dfeafe;transform:rotate(-9deg)}
+  .t7{top:650px;right:18%;background:#ffe9c2;transform:rotate(6deg)}
+  .p3{top:615px;left:12%;transform:rotate(4deg)}
   /* 둥둥 떠다니는 애니메이션 (transform의 rotate는 유지, translate만 흔듦) */
   @keyframes bob{0%,100%{translate:0 0}50%{translate:0 -11px}}
   .floaty{animation:bob 4.6s ease-in-out infinite}
   .t1{animation-delay:-.2s}.t2{animation-delay:-1.3s}.t3{animation-delay:-.7s}.t4{animation-delay:-1.9s}
   .f1{animation-delay:-1.0s}.f2{animation-delay:-.4s}.pL{animation-delay:-1.5s}.pR{animation-delay:-.8s}
+  .f3{animation-delay:-2.1s}.f4{animation-delay:-.6s}.t5{animation-delay:-1.1s}.t6{animation-delay:-1.7s}.t7{animation-delay:-.3s}.p3{animation-delay:-2.4s}
 
   /* 폰 = 폼. 처음엔 아래에서 살짝 보이고, 신청 시작하면 위로 올라와 전체 차지 */
   /* 폰 목업: 핑크 배경 위에 떠 있는 폰. 시작 전엔 아래에서 1/3쯤 보이고, 시작하면 가운데로 올라옴 */
@@ -219,6 +226,12 @@
   <div class="floaty float f2">“오늘 카페 어때요?” ☕</div>
   <div class="floaty pcard pL"><span class="av" style="background:#ff84a8">지</span><div><div class="nm">지은 · 28</div><div class="ds">☕ 강남 · 카페</div></div></div>
   <div class="floaty pcard pR"><span class="av" style="background:#9aa7e8">현</span><div><div class="nm">현우 · 31</div><div class="ds">🎳 성수 · 액티비티</div></div></div>
+  <div class="floaty float f3">💌 새 인연 도착!</div>
+  <div class="floaty float f4">🎉 이번 주 <span class="pct">38명</span> 신청</div>
+  <div class="floaty tile t5">🌷</div>
+  <div class="floaty tile t6">🎬</div>
+  <div class="floaty tile t7">🥂</div>
+  <div class="floaty pcard p3"><span class="av" style="background:#ffb35c">민</span><div><div class="nm">민준 · 29</div><div class="ds">🍷 잠실 · 술</div></div></div>
 
   <!-- 랜딩 -->
   <div class="landing" id="landing">
