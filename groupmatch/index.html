@@ -282,6 +282,7 @@
         <section class="step" data-cap="STEP 2 · 9" data-q="birth_year" data-type="input">
           <div class="q">출생연도를<br>알려주세요</div>
           <div class="field"><input type="text" id="in-birth" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="예: 1996"></div>
+          <div id="birthHint" style="font-size:13px;color:#d6336c;margin-top:8px;min-height:17px"></div>
           <div class="spacer"></div><button class="next">다음</button>
         </section>
         <section class="step" data-cap="STEP 3 · 9" data-q="region" data-type="choice">
@@ -535,6 +536,11 @@ otpInput.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDe
   const el = document.getElementById(id);
   if (el) el.addEventListener('input', () => { el.value = el.value.replace(/[^0-9]/g, ''); });
 });
+// 출생연도 다시 입력하면 경고/테두리 초기화
+document.getElementById('in-birth').addEventListener('input', () => {
+  document.getElementById('in-birth').style.borderColor = '';
+  const h = document.getElementById('birthHint'); if (h) h.textContent = '';
+});
 
 function recordAnswer(qid, value) {
   const isNew = !(qid in answers); answers[qid] = value;
@@ -552,7 +558,20 @@ stepEls.forEach(el => {
 stepEls.forEach(el => {
   if (el.dataset.type !== 'input') return;
   const inp = el.querySelector('input,textarea'), btn = el.querySelector('.next');
-  const go = () => { if (!inp.value.trim()) { inp.focus(); inp.style.borderColor = 'var(--accent)'; return; } recordAnswer(el.dataset.q, inp.value.trim()); nextOf(el); };
+  const go = () => {
+    const v = inp.value.trim();
+    if (!v) { inp.focus(); inp.style.borderColor = 'var(--accent)'; return; }
+    if (el.dataset.q === 'birth_year') {
+      const y = parseInt(v, 10), max = new Date().getFullYear() - 18, hint = document.getElementById('birthHint');
+      if (v.length !== 4 || y < 1950 || y > max) {
+        inp.focus(); inp.style.borderColor = '#d6336c';
+        if (hint) hint.textContent = `1950~${max} 사이의 출생연도를 입력해 주세요`;
+        return;
+      }
+      if (hint) hint.textContent = '';
+    }
+    recordAnswer(el.dataset.q, v); nextOf(el);
+  };
   btn.onclick = go;
   inp.addEventListener('keydown', e => { if (e.key === 'Enter' && inp.tagName !== 'TEXTAREA') { e.preventDefault(); go(); } });
 });
