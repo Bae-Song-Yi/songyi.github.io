@@ -281,7 +281,7 @@
         </section>
         <section class="step" data-cap="STEP 2 · 9" data-q="birth_year" data-type="input">
           <div class="q">출생연도를<br>알려주세요</div>
-          <div class="field"><input type="number" id="in-birth" placeholder="예: 1996" min="1970" max="2007"></div>
+          <div class="field"><input type="text" id="in-birth" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="예: 1996"></div>
           <div class="spacer"></div><button class="next">다음</button>
         </section>
         <section class="step" data-cap="STEP 3 · 9" data-q="region" data-type="choice">
@@ -529,6 +529,12 @@ otpVerifyBtn.onclick = verifyOtp;
 document.getElementById('otpResend').onclick = sendOtp;
 emailInput.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); sendOtp(); } });
 otpInput.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); verifyOtp(); } });
+
+// 숫자 전용 입력칸: 숫자 외 문자는 입력 즉시 제거
+['in-otp', 'in-birth'].forEach(id => {
+  const el = document.getElementById(id);
+  if (el) el.addEventListener('input', () => { el.value = el.value.replace(/[^0-9]/g, ''); });
+});
 
 function recordAnswer(qid, value) {
   const isNew = !(qid in answers); answers[qid] = value;
