@@ -32,8 +32,7 @@
   .brand{position:fixed;top:26px;left:32px;display:flex;align-items:center;gap:10px;z-index:9;transition:opacity .4s}
   .brand .m{width:34px;height:34px;border-radius:10px;background:linear-gradient(140deg,var(--accent2),var(--accent));display:flex;align-items:center;justify-content:center;color:#fff;font-size:19px}
   .brand b{font-size:21px;font-weight:800}.brand b i{color:var(--accent);font-style:normal}
-  .brand .wm{position:relative;display:inline-block;line-height:1}
-  .brand .pulse{position:absolute;left:0;bottom:-9px;width:100%;height:auto;display:block}
+  .brand .mk{display:block;line-height:0;filter:drop-shadow(0 5px 11px rgba(255,61,119,.4))}
 
   /* 랜딩(히어로) — 신청 시작하면 페이드아웃 */
   .landing{position:absolute;inset:0;z-index:4;display:flex;flex-direction:column;align-items:center;
@@ -209,7 +208,7 @@
     <span style="left:92%;animation-duration:18s;animation-delay:1s"></span>
   </div>
   <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
-  <div class="brand"><span class="wm"><b>두<i>근</i></b><svg class="pulse" viewBox="0 0 142 26" fill="none" aria-hidden="true"><path d="M2 14h34l5-9 6 16 4-11 3 6h58" stroke="url(#pulseG)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M132 9c-1.6-2.4-5-1.8-5 1.2 0 2 2.4 3.8 5 5.6 2.6-1.8 5-3.6 5-5.6 0-3-3.4-3.6-5-1.2Z" fill="#ff3d77"/><defs><linearGradient id="pulseG" x1="0" y1="0" x2="142" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#ff84a8"/><stop offset="1" stop-color="#ff3d77"/></linearGradient></defs></svg></span></div>
+  <div class="brand"><svg class="mk" width="36" height="33" viewBox="0 0 48 44" fill="none" aria-hidden="true"><defs><linearGradient id="dgHeart" x1="6" y1="4" x2="40" y2="40" gradientUnits="userSpaceOnUse"><stop stop-color="#ff8fb1"/><stop offset="1" stop-color="#ff3d77"/></linearGradient></defs><path d="M24 39S6 28.5 6 16.8C6 11 10.2 7 15.2 7c3.4 0 6.3 1.9 8.8 4.8C26.5 8.9 29.4 7 32.8 7 37.8 7 42 11 42 16.8 42 28.5 24 39 24 39Z" fill="url(#dgHeart)"/><path d="M10 22h4l2-4 2.5 7 2-9 2.5 11 2-5 1.6 2.5 1.4-1.5h6.5" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><b>두<i>근</i></b></div>
 
   <!-- 좌우 떠다니는 장식 (랜딩 밖 → 폼 진행 중에도 계속 떠 있음) -->
   <div class="floaty tile t1">☕</div><div class="floaty tile t2">🍷</div>
