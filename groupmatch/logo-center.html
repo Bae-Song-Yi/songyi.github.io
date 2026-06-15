@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ko"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>두근 · 펄스 중앙정렬 시안</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<style>
+  :root{--accent:#ff4f82;--accent2:#ff84a8;--ink:#43232f;--muted:#bd8b9c;--rose:#f5326f;--soft:#ffe0ea}
+  *{margin:0;padding:0;box-sizing:border-box;font-family:'Pretendard Variable',Pretendard,system-ui,sans-serif}
+  body{background:linear-gradient(160deg,#ffeef4,#ffe0ea);color:var(--ink);padding:30px 16px 60px;-webkit-font-smoothing:antialiased}
+  h1{text-align:center;font-size:21px;font-weight:800}
+  .sub{text-align:center;color:var(--muted);font-size:13px;margin:6px 0 26px}
+  .grid{max-width:760px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:18px}
+  .card{background:#fff;border-radius:24px;padding:26px 22px 22px;box-shadow:0 18px 44px -22px rgba(150,50,90,.5);text-align:center}
+  .num{display:inline-block;font-size:12px;font-weight:800;color:var(--rose);background:var(--soft);padding:5px 12px;border-radius:20px;margin-bottom:20px}
+  .stage{display:flex;align-items:center;justify-content:center;gap:34px;height:96px;margin-bottom:14px}
+  .desc{font-size:12.5px;color:var(--muted);line-height:1.55}
+  .wm{position:relative;display:inline-block;line-height:1}
+  .wm b{font-weight:800;letter-spacing:-1px}
+  .wm b i{color:var(--accent);font-style:normal}
+  .big b{font-size:48px;letter-spacing:-2px}
+  .sml b{font-size:21px}
+  .pulse{position:absolute;left:0;width:100%;height:auto;display:block}
+  .big .pulse{bottom:-15px}.sml .pulse{bottom:-9px}
+</style></head>
+<body>
+<h1>심장박동 중앙정렬 시안 💗</h1>
+<div class="sub">왼쪽은 크게, 오른쪽은 실제 로고 크기예요. 마음에 드는 번호를 알려주세요.</div>
+<div class="grid">
+
+  <!-- 현재(참고) -->
+  <div class="card">
+    <span class="num">현재 (1A)</span>
+    <div class="stage">
+      <span class="wm big"><b>두<i>근</i></b><svg class="pulse" viewBox="0 0 142 26" fill="none"><path d="M2 14h34l5-9 6 16 4-11 3 6h58" stroke="url(#p0)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M132 9c-1.6-2.4-5-1.8-5 1.2 0 2 2.4 3.8 5 5.6 2.6-1.8 5-3.6 5-5.6 0-3-3.4-3.6-5-1.2Z" fill="#ff3d77"/><defs><linearGradient id="p0" x1="0" y1="0" x2="142" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#ff84a8"/><stop offset="1" stop-color="#ff3d77"/></linearGradient></defs></svg></span>
+      <span class="wm sml"><b>두<i>근</i></b><svg class="pulse" viewBox="0 0 142 26" fill="none"><path d="M2 14h34l5-9 6 16 4-11 3 6h58" stroke="url(#p0)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M132 9c-1.6-2.4-5-1.8-5 1.2 0 2 2.4 3.8 5 5.6 2.6-1.8 5-3.6 5-5.6 0-3-3.4-3.6-5-1.2Z" fill="#ff3d77"/></svg></span>
+    </div>
+    <div class="desc">비트가 왼쪽 + 하트가 오른쪽 (비대칭)</div>
+  </div>
+
+  <!-- 1 중앙 대칭 펄스 -->
+  <div class="card">
+    <span class="num">1 · 중앙 대칭</span>
+    <div class="stage">
+      <span class="wm big"><b>두<i>근</i></b><svg class="pulse" viewBox="0 0 142 26" fill="none"><path d="M4 14H54l5-9 6 18 5-13 4 6H138" stroke="url(#p1)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="p1" x1="0" y1="0" x2="142" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#ff84a8"/><stop offset="1" stop-color="#ff3d77"/></linearGradient></defs></svg></span>
+      <span class="wm sml"><b>두<i>근</i></b><svg class="pulse" viewBox="0 0 142 26" fill="none"><path d="M4 14H54l5-9 6 18 5-13 4 6H138" stroke="url(#p1)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+    </div>
+    <div class="desc"><b style="color:var(--ink)">비트가 가운데</b> · 좌우 대칭 (깔끔)</div>
+  </div>
+
+  <!-- 2 중앙 비트 = 하트 -->
+  <div class="card">
+    <span class="num">2 · 가운데 하트</span>
+    <div class="stage">
+      <span class="wm big"><b>두<i>근</i></b><svg class="pulse" viewBox="0 0 142 26" fill="none"><path d="M4 16H56l4-4" stroke="url(#p2)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M71 8c-2-3-6.4-2.2-6.4 1.6 0 2.7 3.2 5.2 6.4 7.4 3.2-2.2 6.4-4.7 6.4-7.4C77.4 5.8 73 5 71 8Z" fill="#ff3d77"/><path d="M82 12l4 4h52" stroke="url(#p2)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="p2" x1="0" y1="0" x2="142" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#ff84a8"/><stop offset="1" stop-color="#ff3d77"/></linearGradient></defs></svg></span>
+      <span class="wm sml"><b>두<i>근</i></b><svg class="pulse" viewBox="0 0 142 26" fill="none"><path d="M4 16H56l4-4" stroke="url(#p2)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M71 8c-2-3-6.4-2.2-6.4 1.6 0 2.7 3.2 5.2 6.4 7.4 3.2-2.2 6.4-4.7 6.4-7.4C77.4 5.8 73 5 71 8Z" fill="#ff3d77"/><path d="M82 12l4 4h52" stroke="url(#p2)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+    </div>
+    <div class="desc"><b style="color:var(--ink)">가운데 솟구침을 하트로</b> · 좌우 대칭</div>
+  </div>
+
+  <!-- 3 중앙 대칭 + 끝 하트 -->
+  <div class="card">
+    <span class="num">3 · 대칭 + 끝하트</span>
+    <div class="stage">
+      <span class="wm big"><b>두<i>근</i></b><svg class="pulse" viewBox="0 0 142 26" fill="none"><path d="M4 14H50l5-9 6 18 5-13 4 6h36" stroke="url(#p3)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M132 9c-1.6-2.4-5-1.8-5 1.2 0 2 2.4 3.8 5 5.6 2.6-1.8 5-3.6 5-5.6 0-3-3.4-3.6-5-1.2Z" fill="#ff3d77"/><defs><linearGradient id="p3" x1="0" y1="0" x2="142" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#ff84a8"/><stop offset="1" stop-color="#ff3d77"/></linearGradient></defs></svg></span>
+      <span class="wm sml"><b>두<i>근</i></b><svg class="pulse" viewBox="0 0 142 26" fill="none"><path d="M4 14H50l5-9 6 18 5-13 4 6h36" stroke="url(#p3)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M132 9c-1.6-2.4-5-1.8-5 1.2 0 2 2.4 3.8 5 5.6 2.6-1.8 5-3.6 5-5.6 0-3-3.4-3.6-5-1.2Z" fill="#ff3d77"/></svg></span>
+    </div>
+    <div class="desc">비트는 가운데, 하트는 오른쪽 끝</div>
+  </div>
+
+</div>
+</body></html>
