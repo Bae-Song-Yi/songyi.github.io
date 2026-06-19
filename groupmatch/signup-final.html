@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ko"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>두근 · 최종 인증 흐름</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<style>
+  :root{--accent:#ff4f82;--accent2:#ff84a8;--accent-press:#e8366c;--accent-soft:#ffe0ea;--ink:#43232f;--muted:#bd8b9c;--line:#ffd6e1;--rose:#f5326f}
+  *{margin:0;padding:0;box-sizing:border-box;font-family:'Pretendard Variable',Pretendard,system-ui,sans-serif}
+  body{background:linear-gradient(160deg,#ffeef4,#ffe0ea);color:var(--ink);padding:28px 14px 60px;-webkit-font-smoothing:antialiased}
+  h1{text-align:center;font-size:20px;font-weight:800}
+  .sub{text-align:center;color:var(--muted);font-size:13px;margin:6px 0 24px}
+  .row{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;max-width:780px;margin:0 auto}
+  .phone{width:344px;background:#fff;border-radius:34px;box-shadow:0 26px 60px -24px rgba(150,50,90,.55);overflow:hidden;border:1px solid #ffe2ec}
+  .pcap{text-align:center;font-size:11.5px;color:var(--muted);font-weight:700;padding:10px 0 0}
+  .inner{padding:20px 20px 24px}
+  .topbar{font-size:12.5px;color:var(--muted)}
+  .prog{height:6px;background:#ffe1ea;border-radius:99px;margin:14px 0 20px;overflow:hidden}
+  .prog i{display:block;height:100%;background:linear-gradient(90deg,var(--accent2),var(--accent));border-radius:99px}
+  .ministep{font-size:11px;font-weight:800;color:var(--rose);letter-spacing:.5px;margin-bottom:7px}
+  .q{font-size:22px;font-weight:800;letter-spacing:-.5px;line-height:1.3;display:flex;align-items:center;gap:8px}
+  .q .sh{width:23px;height:23px;color:var(--accent);flex:none}
+  .qs{font-size:13px;color:var(--muted);margin:9px 0 18px;line-height:1.55}
+  .kakao{width:100%;background:#FEE500;color:#191600;border:none;border-radius:13px;padding:15px;font-size:15px;font-weight:800;display:flex;align-items:center;justify-content:center;gap:9px;cursor:pointer}
+  .kakao svg{width:20px;height:20px}
+  .req{font-size:11.5px;color:var(--muted);text-align:center;margin-top:8px}
+  .req b{color:var(--accent-press)}
+  .div{display:flex;align-items:center;gap:10px;margin:22px 0 16px;color:#d9b3c0;font-size:11.5px;font-weight:700}
+  .div::before,.div::after{content:"";flex:1;height:1px;background:var(--line)}
+  .vcard{border:1.5px solid var(--line);border-radius:18px;padding:15px;background:#fff7f9}
+  .vhead{display:flex;align-items:center;gap:9px;font-size:14px;font-weight:800;margin-bottom:5px}
+  .ico{width:30px;height:30px;border-radius:9px;background:var(--accent-soft);color:var(--accent);display:flex;align-items:center;justify-content:center;flex:none}
+  .ico svg{width:18px;height:18px}
+  .opt{margin-left:auto;font-size:11px;font-weight:800;color:var(--accent-press);background:#fff;border:1.5px solid var(--line);border-radius:20px;padding:3px 9px}
+  .vdesc{font-size:12px;color:var(--muted);line-height:1.5;margin:6px 0 12px}
+  .tabs{display:flex;gap:6px;margin-bottom:10px}
+  .tab{flex:1;text-align:center;font-size:12.5px;font-weight:700;padding:9px;border-radius:10px;border:1.5px solid var(--line);background:#fff;color:var(--muted);cursor:pointer}
+  .tab.on{border-color:var(--accent);background:var(--accent-soft);color:var(--accent-press)}
+  .row2{display:flex;gap:8px}.row2 input{flex:1;border:1.5px solid var(--line);border-radius:12px;padding:12px 13px;font-size:15px;background:#fff;outline:none}
+  .row2 input::placeholder{color:#cfa9b7}
+  .btn{background:linear-gradient(135deg,var(--accent2),var(--accent));color:#fff;border:none;border-radius:12px;padding:12px 15px;font-size:13.5px;font-weight:800;cursor:pointer;white-space:nowrap}
+  .skip{display:block;width:100%;text-align:center;background:none;border:none;color:var(--muted);font-size:12.5px;text-decoration:underline;margin-top:11px;cursor:pointer}
+  .next{width:100%;margin-top:18px;background:linear-gradient(135deg,var(--accent2),var(--accent));color:#fff;border:none;border-radius:14px;padding:15px;font-size:15px;font-weight:800;cursor:pointer}
+  .next.off{opacity:.4}
+  .bnote{font-size:11.5px;color:var(--muted);line-height:1.55;margin-top:10px;background:#fff4f8;border:1px solid var(--line);border-radius:12px;padding:11px 13px;display:flex;gap:7px;align-items:flex-start}
+  .bnote svg{width:15px;height:15px;color:var(--accent);flex:none;margin-top:1px}
+</style></head>
+<body>
+<h1>최종 신청 인증 흐름</h1>
+<div class="sub">카카오 본인확인(필수) + 직장 인증(선택·뱃지). 왼쪽=로그인 전 / 오른쪽=로그인 후</div>
+
+<svg width="0" height="0" style="position:absolute"><defs>
+  <g id="i-shield"><path d="M12 3l7 2.5v5.2c0 4.4-3 7.6-7 9.3-4-1.7-7-4.9-7-9.3V5.5L12 3z" fill="currentColor"/><path d="M8.5 12l2.3 2.3 4.5-4.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <g id="i-bldg"><path d="M4 21V5a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M14 21V9h4a1 1 0 0 1 1 1v11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M3 21h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M7 8h3M7 12h3M7 16h3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></g>
+  <g id="i-kakao"><path d="M12 3.2C6.9 3.2 2.8 6.5 2.8 10.5c0 2.6 1.7 4.9 4.3 6.2-.2.7-.7 2.5-.8 2.9-.1.5.2.5.4.4.2-.1 2.4-1.6 3.3-2.3.6.1 1.3.1 1.9.1 5.1 0 9.2-3.3 9.2-7.3S17.1 3.2 12 3.2z" fill="#191600"/></g>
+  <g id="i-check"><circle cx="12" cy="12" r="9" fill="#1aa86b"/><path d="M8 12.3l2.6 2.6L16 9.5" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <g id="i-star"><path d="M12 3l1.8 5.4L19 10l-5.2 1.6L12 17l-1.8-5.4L5 10l5.2-1.6L12 3z" fill="currentColor"/></g>
+</defs></svg>
+
+<div class="row">
+
+  <!-- 로그인 전 -->
+  <div class="phone">
+    <div class="pcap">로그인 전</div>
+    <div class="inner">
+      <div class="topbar">✕&nbsp;&nbsp;두근 소개팅 신청</div>
+      <div class="prog"><i style="width:10%"></i></div>
+      <div class="ministep">STEP 0 · 시작</div>
+      <div class="q"><svg class="sh" viewBox="0 0 24 24"><use href="#i-shield"/></svg>3초만에 시작해요</div>
+      <div class="qs">안전한 만남을 위해 카카오로 본인을 확인해요. 번호·정보는 공개되지 않아요.</div>
+
+      <button class="kakao"><svg viewBox="0 0 24 24"><use href="#i-kakao"/></svg>카카오로 시작하기</button>
+      <div class="req"><b>필수</b> · 버튼 한 번이면 끝, 따로 입력 없어요</div>
+    </div>
+  </div>
+
+  <!-- 로그인 후 -->
+  <div class="phone">
+    <div class="pcap">카카오 인증 후</div>
+    <div class="inner">
+      <div class="topbar">✕&nbsp;&nbsp;두근 소개팅 신청</div>
+      <div class="prog"><i style="width:18%"></i></div>
+      <div class="ministep">STEP 0 · 인증</div>
+      <div class="q"><svg class="sh" viewBox="0 0 24 24" style="color:#1aa86b"><use href="#i-check"/></svg>본인확인 완료!</div>
+      <div class="qs">직장 인증은 선택이에요. 하면 매칭 상대에게 신뢰 뱃지가 보여요.</div>
+
+      <div class="vcard">
+        <div class="vhead"><span class="ico"><svg viewBox="0 0 24 24"><use href="#i-bldg"/></svg></span>직장 인증<span class="opt">선택</span></div>
+        <div class="vdesc">회사 이메일 또는 명함으로 직장인 인증을 받을 수 있어요.</div>
+        <div class="tabs"><div class="tab on">회사 이메일</div><div class="tab">명함 사진</div></div>
+        <div class="row2"><input placeholder="you@company.com"><button class="btn">인증코드</button></div>
+        <div class="bnote"><svg viewBox="0 0 24 24"><use href="#i-star"/></svg><span>인증하면 <b>✅ 직장인 인증</b> 뱃지가 붙고, 매칭에서 더 신뢰받아요.</span></div>
+      </div>
+
+      <button class="next">신청 계속하기</button>
+      <button class="skip">직장 인증 나중에 할게요</button>
+    </div>
+  </div>
+
+</div>
+</body></html>
