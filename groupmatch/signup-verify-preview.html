@@ -2,7 +2,7 @@
 <html lang="ko"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>두근 · 신청 인증 단계 시안</title>
+<title>두근 · 신청 인증 (아이콘)</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
 <style>
   :root{--accent:#ff4f82;--accent2:#ff84a8;--accent-press:#e8366c;--accent-soft:#ffe0ea;--ink:#43232f;--muted:#bd8b9c;--line:#ffd6e1;--rose:#f5326f}
@@ -17,55 +17,63 @@
   .topbar{font-size:12.5px;color:var(--muted)}
   .prog{height:6px;background:#ffe1ea;border-radius:99px;margin:14px 0 20px;overflow:hidden}
   .prog i{display:block;height:100%;background:linear-gradient(90deg,var(--accent2),var(--accent));border-radius:99px}
-  .q{font-size:22px;font-weight:800;letter-spacing:-.5px;line-height:1.3}
-  .qs{font-size:13px;color:var(--muted);margin:8px 0 18px;line-height:1.5}
+  .ministep{font-size:11px;font-weight:800;color:var(--rose);letter-spacing:.5px;margin-bottom:7px}
+  .q{font-size:22px;font-weight:800;letter-spacing:-.5px;line-height:1.3;display:flex;align-items:center;gap:8px}
+  .q .sh{width:24px;height:24px;color:var(--accent);flex:none}
+  .qs{font-size:13px;color:var(--muted);margin:9px 0 18px;line-height:1.55}
   .vcard{border:1.5px solid var(--line);border-radius:18px;padding:15px 15px 16px;margin-bottom:14px;background:#fff7f9}
-  .vhead{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:800;margin-bottom:12px}
-  .vhead .em{font-size:17px}
+  .vhead{display:flex;align-items:center;gap:9px;font-size:14px;font-weight:800;margin-bottom:12px}
+  .ico{width:30px;height:30px;border-radius:9px;background:var(--accent-soft);color:var(--accent);display:flex;align-items:center;justify-content:center;flex:none}
+  .ico svg{width:18px;height:18px}
   .vhead .st{margin-left:auto;font-size:11.5px;font-weight:700;color:var(--muted)}
   .vhead .st.ok{color:#1aa86b}
   input{width:100%;border:1.5px solid var(--line);border-radius:12px;padding:13px 14px;font-size:15px;background:#fff;color:var(--ink);outline:none}
   input::placeholder{color:#cfa9b7}
-  .btn{width:100%;margin-top:9px;background:linear-gradient(135deg,var(--accent2),var(--accent));color:#fff;border:none;border-radius:12px;padding:13px;font-size:14.5px;font-weight:800;cursor:pointer}
-  .row2{display:flex;gap:8px}.row2 input{flex:1}.row2 .btn{width:auto;margin-top:0;padding:13px 16px;white-space:nowrap}
+  .row2{display:flex;gap:8px}.row2 input{flex:1}
+  .btn{background:linear-gradient(135deg,var(--accent2),var(--accent));color:#fff;border:none;border-radius:12px;padding:13px 16px;font-size:14px;font-weight:800;cursor:pointer;white-space:nowrap}
   .tabs{display:flex;gap:6px;margin-bottom:11px}
   .tab{flex:1;text-align:center;font-size:12.5px;font-weight:700;padding:9px;border-radius:10px;border:1.5px solid var(--line);background:#fff;color:var(--muted);cursor:pointer}
   .tab.on{border-color:var(--accent);background:var(--accent-soft);color:var(--accent-press)}
-  .drop{border:1.5px dashed #f0bcce;border-radius:14px;background:#fff;color:var(--muted);font-size:12.5px;text-align:center;padding:22px 10px;line-height:1.6}
-  .drop .ic{font-size:24px;display:block;margin-bottom:6px}
-  .okbox{display:flex;align-items:center;gap:8px;font-size:13.5px;font-weight:700;color:#1aa86b;background:#e9faf2;border:1px solid #b9eed3;border-radius:12px;padding:12px 14px}
-  .note{font-size:11.5px;color:var(--muted);line-height:1.6;margin-top:6px;background:#fff4f8;border:1px solid var(--line);border-radius:12px;padding:11px 13px}
+  .note{font-size:11.5px;color:var(--muted);line-height:1.6;margin-top:10px;background:#fff4f8;border:1px solid var(--line);border-radius:12px;padding:11px 13px}
+  .okbox{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:#1aa86b;background:#e9faf2;border:1px solid #b9eed3;border-radius:12px;padding:11px 13px}
+  .okbox svg{width:18px;height:18px;flex:none}
   .badges{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
-  .bdg{font-size:11px;font-weight:800;color:var(--accent-press);background:#fff;border:1.5px solid var(--line);border-radius:20px;padding:5px 10px}
+  .bdg{display:flex;align-items:center;gap:5px;font-size:11px;font-weight:800;color:var(--accent-press);background:#fff;border:1.5px solid var(--line);border-radius:20px;padding:5px 10px}
+  .bdg svg{width:13px;height:13px}
   .next{width:100%;margin-top:6px;background:linear-gradient(135deg,var(--accent2),var(--accent));color:#fff;border:none;border-radius:14px;padding:15px;font-size:15px;font-weight:800;cursor:pointer}
   .next.off{opacity:.4}
-  .ministep{font-size:11px;font-weight:800;color:var(--rose);letter-spacing:.5px;margin-bottom:7px}
 </style></head>
 <body>
-<h1>신청 인증 단계 시안 💗</h1>
-<div class="sub">본인인증(휴대폰) + 직장 인증(회사메일 또는 명함). 왼쪽=입력 / 오른쪽=완료 모습</div>
+<h1>신청 인증 단계 (아이콘 버전)</h1>
+<div class="sub">이모지 → SVG 아이콘으로 교체. 왼쪽=입력 / 오른쪽=완료</div>
+
+<svg width="0" height="0" style="position:absolute"><defs>
+  <g id="i-phone"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10.5 18.6h3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></g>
+  <g id="i-bldg"><path d="M4 21V5a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M14 21V9h4a1 1 0 0 1 1 1v11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M3 21h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M7 8h3M7 12h3M7 16h3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></g>
+  <g id="i-shield"><path d="M12 3l7 2.5v5.2c0 4.4-3 7.6-7 9.3-4-1.7-7-4.9-7-9.3V5.5L12 3z" fill="currentColor"/><path d="M8.5 12l2.3 2.3 4.5-4.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <g id="i-check"><circle cx="12" cy="12" r="9" fill="#1aa86b"/><path d="M8 12.3l2.6 2.6L16 9.5" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <g id="i-checks"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 12.3l2.6 2.6L16 9.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></g>
+</defs></svg>
 
 <div class="row">
 
-  <!-- A 입력 상태 -->
+  <!-- A 입력 -->
   <div class="phone">
     <div class="pcap">입력 화면</div>
     <div class="inner">
       <div class="topbar">✕&nbsp;&nbsp;두근 소개팅 신청</div>
       <div class="prog"><i style="width:12%"></i></div>
       <div class="ministep">STEP 0 · 인증</div>
-      <div class="q">안심 만남을 위해<br>두 가지만 확인해요 🛡️</div>
-      <div class="qs">서로 믿고 만날 수 있도록, 본인과 직장을 가볍게 인증해요. 정보는 매칭·연락에만 쓰여요.</div>
+      <div class="q"><svg class="sh" viewBox="0 0 24 24"><use href="#i-shield"/></svg>안심 만남을 위한 인증</div>
+      <div class="qs">서로 믿고 만날 수 있도록 본인과 직장을 가볍게 인증해요. 번호·메일은 공개되지 않아요.</div>
 
-      <!-- 본인인증 -->
       <div class="vcard">
-        <div class="vhead"><span class="em">📱</span>휴대폰 본인인증<span class="st">미인증</span></div>
+        <div class="vhead"><span class="ico"><svg viewBox="0 0 24 24"><use href="#i-phone"/></svg></span>휴대폰 본인인증<span class="st">미인증</span></div>
         <div class="row2"><input placeholder="010-0000-0000"><button class="btn">인증번호</button></div>
       </div>
 
-      <!-- 직장 인증 -->
       <div class="vcard">
-        <div class="vhead"><span class="em">🏢</span>직장 인증<span class="st">미인증</span></div>
+        <div class="vhead"><span class="ico"><svg viewBox="0 0 24 24"><use href="#i-bldg"/></svg></span>직장 인증<span class="st">미인증</span></div>
         <div class="tabs"><div class="tab on">회사 이메일</div><div class="tab">명함 사진</div></div>
         <div class="row2"><input placeholder="you@company.com"><button class="btn">인증코드</button></div>
         <div class="note">회사 메일이 없으면 <b>명함 사진</b> 탭으로 인증할 수 있어요.</div>
@@ -75,28 +83,28 @@
     </div>
   </div>
 
-  <!-- B 완료 상태 -->
+  <!-- B 완료 -->
   <div class="phone">
     <div class="pcap">완료 화면</div>
     <div class="inner">
       <div class="topbar">✕&nbsp;&nbsp;두근 소개팅 신청</div>
       <div class="prog"><i style="width:12%"></i></div>
       <div class="ministep">STEP 0 · 인증</div>
-      <div class="q">인증 완료!<br>이제 시작해요 💕</div>
-      <div class="qs">상대에게는 아래 인증 뱃지만 보여요 (번호·메일은 공개되지 않아요).</div>
+      <div class="q"><svg class="sh" viewBox="0 0 24 24" style="color:#1aa86b"><use href="#i-check"/></svg>인증 완료!</div>
+      <div class="qs">상대에게는 아래 인증 뱃지만 보여요 (번호·메일 비공개).</div>
 
       <div class="vcard">
-        <div class="vhead"><span class="em">📱</span>휴대폰 본인인증<span class="st ok">✓ 완료</span></div>
-        <div class="okbox">✅ 본인 확인됨 · 010-1234-****</div>
+        <div class="vhead"><span class="ico" style="background:#e9faf2;color:#1aa86b"><svg viewBox="0 0 24 24"><use href="#i-phone"/></svg></span>휴대폰 본인인증<span class="st ok">완료</span></div>
+        <div class="okbox"><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>본인 확인됨 · 010-1234-****</div>
       </div>
 
       <div class="vcard">
-        <div class="vhead"><span class="em">🏢</span>직장 인증<span class="st ok">✓ 완료</span></div>
-        <div class="okbox">✅ 직장인 인증됨 · @company.com</div>
+        <div class="vhead"><span class="ico" style="background:#e9faf2;color:#1aa86b"><svg viewBox="0 0 24 24"><use href="#i-bldg"/></svg></span>직장 인증<span class="st ok">완료</span></div>
+        <div class="okbox"><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>직장인 인증됨 · @company.com</div>
       </div>
 
       <div class="note">매칭 상대에게 이렇게 보여요:
-        <div class="badges"><span class="bdg">✅ 본인 인증</span><span class="bdg">✅ 직장인 인증</span></div>
+        <div class="badges"><span class="bdg"><svg viewBox="0 0 24 24"><use href="#i-checks"/></svg>본인 인증</span><span class="bdg"><svg viewBox="0 0 24 24"><use href="#i-checks"/></svg>직장인 인증</span></div>
       </div>
 
       <button class="next" style="margin-top:14px">신청 시작하기</button>
