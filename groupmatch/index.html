@@ -408,12 +408,26 @@ const SUPABASE_ANON_KEY = 'sb_publishable_Pz-ciZrqsgZErtYOGH-S3g_REY6_In9';
 const sessionId = crypto.randomUUID();
 const params = new URLSearchParams(location.search);
 const utm = { utm_source: params.get('utm_source') || 'direct', utm_campaign: params.get('utm_campaign') || '' };
-const variant = params.get('v') || (Math.random() < 0.5 ? 'A' : 'B');
+const variant = params.get('v') || localStorage.getItem('dg_variant') || (Math.random() < 0.5 ? 'A' : 'B');
+try { localStorage.setItem('dg_variant', variant); } catch (e) {} // 같은 사용자는 같은 버킷 유지(sticky)
 function logEvent(name, props = {}, keep = false) {
   const body = JSON.stringify({ p_event_name: name, p_user_id: null, p_group_id: null, p_session_id: sessionId, p_props: { ...props, variant, ...utm } });
   fetch(`${SUPABASE_URL}/rest/v1/rpc/log_event`, { method: 'POST', headers: { 'Content-Type': 'application/json', 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` }, body, keepalive: keep }).catch(() => {});
 }
 logEvent('landing_viewed', { referrer: document.referrer });
+
+// A/B 카피 실험: variant에 따라 헤드라인·서브·CTA 문구를 다르게 노출 (A=대조군, B=실험군) → 전환율 비교
+const AB_COPY = {
+  A: { h1: '혼자 와도, <em>설렘</em>은 함께.', p: 'AI가 잘 맞는 사람을 찾아,<br>두근거리는 만남으로 이어드려요.', cta: '신청 시작하기 →' },
+  B: { h1: '내 짝은 <em>AI</em>가 찾아줄게요.', p: '직장인 그룹 소개팅 —<br>혼자 신청해도 매칭까지 한 번에.', cta: '1분만에 신청 시작 →' },
+};
+(function applyVariantCopy() {
+  const c = AB_COPY[variant] || AB_COPY.A;
+  const h1 = document.querySelector('.copy h1'), p = document.querySelector('.copy p'), btn = document.getElementById('startBtn');
+  if (h1) h1.innerHTML = c.h1;
+  if (p) p.innerHTML = c.p;
+  if (btn) btn.textContent = c.cta;
+})();
 
 // 신청 시작 → 폰 올라오며 폼 활성화
 let started = false;
