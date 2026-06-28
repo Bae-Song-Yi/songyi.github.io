@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>배과장 · Frontend Developer</title>
+  <title>배송이 · Product Engineer</title>
   <style>
     @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css');
 
@@ -87,7 +87,7 @@
       width: 28px;
       height: 28px;
       border-radius: 8px;
-      background: var(--orange);
+      background: #252525;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -275,11 +275,13 @@
     .main {
       flex: 1;
       margin-left: var(--sb-w);
-      margin-right: var(--toc-w);
+      margin-right: 0;
       padding: 48px 60px 80px;
+      background: #f9f9f9;
     }
 
     .toc {
+      display: none;
       width: var(--toc-w);
       flex-shrink: 0;
       position: fixed;
@@ -850,7 +852,7 @@
     }
 
     .d-card {
-      background: var(--g50);
+      background: #fff;
       border: 1px solid var(--g200);
       border-radius: 10px;
       padding: 18px 20px;
@@ -1297,23 +1299,14 @@
 
   <header class="gnb">
     <a class="gnb-logo" href="#">
-      <div class="logo-icon">배</div>배과장<span class="logo-tag">PF</span>
+      <div class="logo-icon">배</div>배송이<span class="logo-tag">PF</span>
     </a>
     <nav class="gnb-tabs">
       <div class="gnb-tab active" data-tab="about">About</div>
       <div class="gnb-tab" data-tab="projects">Projects</div>
       <div class="gnb-tab" data-tab="skills">Skills</div>
     </nav>
-    <div class="gnb-right">
-      <div class="gnb-chip"><span class="chip-dot"></span> Available</div>
-      <a class="gnb-gh" href="https://github.com/" target="_blank" aria-label="GitHub">
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <path
-            d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.186 6.839 9.504.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.026 2.747-1.026.546 1.378.202 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.578.688.48C19.138 20.203 22 16.447 22 12.021 22 6.484 17.523 2 12 2z" />
-        </svg>
-      </a>
-      <a class="gnb-cta" href="mailto:bae@example.com">연락하기</a>
-    </div>
+    <div class="gnb-right"></div>
   </header>
 
   <div class="layout">
@@ -1325,9 +1318,9 @@
       </div>
       <div id="sb-projects" style="display:none">
         <div class="sb-label">Projects</div>
-        <div class="sb-item active" data-a="p-listbook">Listbook <span class="sb-badge o">대표</span></div>
+        <div class="sb-item active" data-a="p-dugeun">두근 <span class="sb-badge">사이드</span></div>
+        <div class="sb-item" data-a="p-listbook">도록 파이프라인 <span class="sb-badge o">대표</span></div>
         <div class="sb-item" data-a="p-auction">실시간 경매</div>
-        <div class="sb-item" data-a="p-ds">디자인 시스템 <span class="sb-badge">v1.1</span></div>
       </div>
       <div id="sb-skills" style="display:none">
         <div class="sb-label">Skills</div>
@@ -1355,11 +1348,8 @@
           <div class="intro-card">
             <div class="avatar">배</div>
             <div class="intro-text">
-              <p>웹 퍼블리셔로 출발해 <strong>제품을 만드는 프론트엔드 엔지니어</strong>로 성장했습니다.<br />
-                현재 국내 주요 미술 경매사 K-Auction에서 운영팀과 디자이너 사이의
-                업무 병목을 발견하고, 기획 단계부터 참여해 수작업 도록 제작 프로세스를 <strong>웹 기반 협업 에디터로 재설계</strong>하는 등 문제 정의부터 구현·배포·운영까지 전
-                과정을 주도해왔습니다.</p>
-              <p>기술은 문제를 푸는 수단이라고 믿습니다. <strong>통합 테스트 자동화와 AI Agent 기반 워크플로우</strong>로 매달 안정적으로 제품을 개선하는 구조를 만듭니다.</p>
+              <p><strong>모호한 사내 요구에서 진짜 문제를 정의하고</strong>, 기획부터 프론트엔드·서버리스 백엔드·배포·운영까지 <strong>혼자 End-to-End로 제품을 만들어 운영</strong>해 온 엔지니어입니다. 복잡한 UI 상태 관리와 대용량 이미지 처리에 강점이 있으며, 운영 병목을 발견해 수작업 프로세스를 웹 시스템으로 전환한 경험이 있습니다.</p>
+              <p><strong>Claude Code 등 AI 코딩 도구</strong>를 워크플로우로 정착시켜 개발 속도와 코드 일관성을 높이고, <strong>사용자 행동 트래킹·A/B 테스트</strong>로 가설을 검증하며 제품을 개선합니다.</p>
             </div>
           </div>
           <div class="info-row">
@@ -1416,7 +1406,7 @@
           <div class="breadcrumb"><span class="odot"></span><span>포트폴리오 / 02</span></div>
           <h1 class="pg-title">프로젝트</h1>
           <p class="pg-desc">K-Auction 재직 기간 설계·개발에 참여한 주요 프로젝트입니다.<br>카드를 클릭하면 상세 내용을 볼 수 있습니다.</p>
-          <div class="pg-meta"><span>총 <strong style="color:var(--g1000);margin-left:4px">4개</strong>
+          <div class="pg-meta"><span>총 <strong style="color:var(--g1000);margin-left:4px">3개</strong>
               프로젝트</span><span>·</span><span>React · TypeScript</span></div>
 
           <div class="pj-viewbar">
@@ -1431,7 +1421,7 @@
               <span class="pjl-dot"></span>
               <div class="pjl-main">
                 <div class="pjl-title">두근 <span class="pjx-side-tag">사이드 프로젝트</span></div>
-                <div class="pjl-sub">코드 기반 그룹 소개팅 + AI — React · Supabase · Gemini · 2026.06–현재 운영 중</div>
+                <div class="pjl-sub">직장인 그룹 소개팅 + AI 대화 추천 — React · Supabase · Cloudflare · Gemini · 2026.06–현재 운영 중</div>
               </div>
               <span class="pjx-badge bl">FEATURE</span>
               <span class="pjl-arrow">→</span>
@@ -1440,7 +1430,7 @@
               <span class="pjl-dot"></span>
               <div class="pjl-main">
                 <div class="pjl-title">Listbook <span class="pjx-rep">대표</span></div>
-                <div class="pjl-sub">경매 도록 편집 시스템 — 기획·설계·개발 · K-Auction 사내 · 2025.03–현재</div>
+                <div class="pjl-sub">경매 도록 편집 시스템 — 기획·설계·개발 · K-Auction 사내 · 2025.12–현재</div>
               </div>
               <span class="pjx-badge or">SYSTEM</span>
               <span class="pjl-arrow">→</span>
@@ -1448,19 +1438,10 @@
             <div class="pjl-row" onclick="openDetail('auction')">
               <span class="pjl-dot"></span>
               <div class="pjl-main">
-                <div class="pjl-title">경매 플랫폼</div>
-                <div class="pjl-sub">실시간 경매 시스템 — Optimistic Update · 결제 · 대시보드 · K-Auction · 2023.08–2024.10</div>
+                <div class="pjl-title">실시간 경매 플랫폼</div>
+                <div class="pjl-sub">실시간 경매 웹·모바일 리뉴얼 — SignalR · 방문자 65%↑ · K-Auction · 2023.08–2024.10</div>
               </div>
               <span class="pjx-badge bl">FEATURE</span>
-              <span class="pjl-arrow">→</span>
-            </div>
-            <div class="pjl-row" onclick="openDetail('ds')">
-              <span class="pjl-dot"></span>
-              <div class="pjl-main">
-                <div class="pjl-title">디자인 시스템</div>
-                <div class="pjl-sub">K-Auction Design System — 토큰 · 문서 · 자동화 · v1.1</div>
-              </div>
-              <span class="pjx-badge tl">SYSTEM</span>
               <span class="pjl-arrow">→</span>
             </div>
           </div>
@@ -1477,14 +1458,13 @@
               <div class="pjx-body">
                 <div class="pjx-card" onclick="openDetail('dugeun')">
                   <div class="pjx-card-hd">
-                    <div class="pjx-ic pk">💞</div>
                     <span class="pjx-badge bl">FEATURE</span>
                     <span class="pjx-card-title">코드 기반 그룹 소개팅 + AI 대화 추천</span>
                   </div>
                   <ul class="pjx-list">
                     <li class="pjx-item">
-                      <div class="pjx-item-t">GitHub Pages + Supabase 서버리스 풀스택</div>
-                      <div class="pjx-item-d">신청 → 숫자코드 발급 → 코드 입력 시 AI 대화주제 추천까지 단독 구축</div>
+                      <div class="pjx-item-t">Cloudflare Pages + Supabase 서버리스 풀스택</div>
+                      <div class="pjx-item-d">회사 이메일 OTP 인증 → 신청 → 숫자코드 발급 → AI 대화주제 추천까지 단독 구축</div>
                     </li>
                     <li class="pjx-item">
                       <div class="pjx-item-t">행동 트래킹 · 이탈 분석 설계</div>
@@ -1498,7 +1478,6 @@
                 </div>
                 <div class="pjx-card" onclick="openDetail('dugeun')">
                   <div class="pjx-card-hd">
-                    <div class="pjx-ic gr">✦</div>
                     <span class="pjx-badge gr">RESULT</span>
                     <span class="pjx-card-title">라이브 운영 중</span>
                   </div>
@@ -1517,42 +1496,44 @@
             <!-- 01 Listbook -->
             <div class="pjx" id="p-listbook">
               <div class="pjx-side">
-                <div class="pjx-name"><span class="pjx-dot"></span>Listbook <span class="pjx-rep">대표</span></div>
-                <div class="pjx-meta">K-Auction 사내 · 2025.03 – 현재</div>
+                <div class="pjx-name"><span class="pjx-dot"></span>도록 파이프라인 <span class="pjx-rep">대표</span></div>
+                <div class="pjx-meta">K-Auction 사내 · 2025.06 – 현재</div>
                 <div class="pjx-meta sub">기획 · 설계 · 개발</div>
               </div>
               <div class="pjx-body">
                 <div class="pjx-card" onclick="openDetail('listbook')">
                   <div class="pjx-card-hd">
-                    <div class="pjx-ic or">📐</div>
                     <span class="pjx-badge or">SYSTEM</span>
-                    <span class="pjx-card-title">경매 도록 편집 시스템</span>
+                    <span class="pjx-card-title">경매 도록 제작 파이프라인</span>
                   </div>
                   <ul class="pjx-list">
                     <li class="pjx-item">
-                      <div class="pjx-item-t">Single Source of Truth 상태 구조 재설계</div>
-                      <div class="pjx-item-d">인접 페이지 편집 시 다중 상태 충돌 → Context API + Custom Hooks 기반 단일 상태 구조로 해결</div>
+                      <div class="pjx-item-t">작품 그룹핑·배정 → 편집·PDF 출판 전공정 도구화</div>
+                      <div class="pjx-item-d">카드소팅·페이지네이션(②)으로 작품 배정 → 리스트북(①)에서 WYSIWYG 편집·고해상도 PDF 출판까지 단일 파이프라인으로 구현</div>
                     </li>
                     <li class="pjx-item">
-                      <div class="pjx-item-t">px ↔ mm 단위 변환 파이프라인</div>
-                      <div class="pjx-item-d">화면(px)과 인쇄 단위(mm) 동기화로 인쇄 정확도 확보</div>
+                      <div class="pjx-item-t">SSOT 상태 구조 + px ↔ mm 변환</div>
+                      <div class="pjx-item-d">다중 상태 충돌을 단일 상태(Context API)로 해결, 화면(px)·인쇄(mm) 동기화로 인쇄 정확도 확보</div>
                     </li>
                     <li class="pjx-item">
-                      <div class="pjx-item-t">글로벌 여백 · 페이지별 커스텀 여백 혼용 로직</div>
-                      <div class="pjx-item-d">InDesign 수준의 레이아웃 유연성 구현</div>
+                      <div class="pjx-item-t">서버 렌더 PDF 파이프라인 (Puppeteer · S3)</div>
+                      <div class="pjx-item-d">편집 결과를 인쇄용 PDF로 자동 변환, 504 Timeout·대용량 도록 생성 안정성 확보</div>
                     </li>
                   </ul>
                 </div>
                 <div class="pjx-card" onclick="openDetail('listbook')">
                   <div class="pjx-card-hd">
-                    <div class="pjx-ic gr">✦</div>
                     <span class="pjx-badge gr">RESULT</span>
                     <span class="pjx-card-title">성과</span>
                   </div>
                   <ul class="pjx-list">
                     <li class="pjx-item">
+                      <div class="pjx-item-t">도록 1건 작업 시간 하루 → 반나절(약 50%) 단축</div>
+                      <div class="pjx-item-d">운영팀이 수기로 전달하던 작품 배치도를 받아 배치·간격 등 반복 세팅을 자동화</div>
+                    </li>
+                    <li class="pjx-item">
                       <div class="pjx-item-t">수작업 도록 제작 프로세스 디지털 전환</div>
-                      <div class="pjx-item-d">운영팀·디자이너 동시 협업으로 순차 핸드오프 병목 제거</div>
+                      <div class="pjx-item-d">외부 디자인 도구 의존도를 낮춰 사내 내재화, 운영팀·디자이너 순차 핸드오프 병목 제거</div>
                     </li>
                     <li class="pjx-item">
                       <div class="pjx-item-t">15개 시나리오 통합 테스트 구축</div>
@@ -1575,56 +1556,21 @@
               <div class="pjx-body">
                 <div class="pjx-card" onclick="openDetail('auction')">
                   <div class="pjx-card-hd">
-                    <div class="pjx-ic bl">⚡</div>
                     <span class="pjx-badge bl">FEATURE</span>
-                    <span class="pjx-card-title">실시간 경매 시스템</span>
+                    <span class="pjx-card-title">실시간 경매 플랫폼</span>
                   </div>
                   <ul class="pjx-list">
                     <li class="pjx-item">
-                      <div class="pjx-item-t">Optimistic Update 구현</div>
-                      <div class="pjx-item-d">응찰 응답 전 선행 UI 업데이트로 체감 속도 개선</div>
+                      <div class="pjx-item-t">웹·모바일 반응형 리뉴얼 — 방문자 약 65% 증가</div>
+                      <div class="pjx-item-d">웹 전용 서비스를 반응형으로 재구축, 모바일 응찰 환경 확보 후 월 방문자 849 → 1,404명(GA 기준)</div>
                     </li>
                     <li class="pjx-item">
-                      <div class="pjx-item-t">실시간 응찰·낙찰 데이터 처리</div>
-                      <div class="pjx-item-d">경매 참여자 증가 대응 UI 안정성 확보</div>
+                      <div class="pjx-item-t">SignalR 실시간 동기화 · 자동 재연결</div>
+                      <div class="pjx-item-d">현재가·낙찰 상태를 모든 참여자에 즉시 반영, 네트워크 단절 대응으로 다수 동시 참여 환경 안정성 확보</div>
                     </li>
                     <li class="pjx-item">
-                      <div class="pjx-item-t">결제 시스템 · 데이터 대시보드</div>
-                      <div class="pjx-item-d">결제 플로우 연동 및 데이터 시각화</div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div class="pjx-divider"></div>
-
-            <!-- 03 디자인 시스템 -->
-            <div class="pjx" id="p-ds">
-              <div class="pjx-side">
-                <div class="pjx-name"><span class="pjx-dot"></span>디자인 시스템</div>
-                <div class="pjx-meta">K-Auction · v1.1</div>
-                <div class="pjx-meta sub">토큰 설계 · 문서화</div>
-              </div>
-              <div class="pjx-body">
-                <div class="pjx-card" onclick="openDetail('ds')">
-                  <div class="pjx-card-hd">
-                    <div class="pjx-ic tl">🎨</div>
-                    <span class="pjx-badge tl">SYSTEM</span>
-                    <span class="pjx-card-title">K-Auction Design System</span>
-                  </div>
-                  <ul class="pjx-list">
-                    <li class="pjx-item">
-                      <div class="pjx-item-t">Primitive → Semantic 2계층 토큰 체계</div>
-                      <div class="pjx-item-d">Primitive 40개 · Semantic 38개 · WCAG AA 대비 기준</div>
-                    </li>
-                    <li class="pjx-item">
-                      <div class="pjx-item-t"><code>generate.js</code> 토큰 CSS 자동 생성</div>
-                      <div class="pjx-item-d">tokens.js 수정 한 번으로 CSS 동시 생성, 수동 관리 제거</div>
-                    </li>
-                    <li class="pjx-item">
-                      <div class="pjx-item-t">타이포그래피 스케일 18단계</div>
-                      <div class="pjx-item-d">Pretendard Variable 기반, 디자이너·개발자 공통 언어</div>
+                      <div class="pjx-item-t">성능 개선 · Optimistic Update</div>
+                      <div class="pjx-item-d">구독 생명주기 개선으로 푸시당 불필요한 렌더링 3회 → 1회 감소, 응찰 결과 선행 반영으로 체감 속도 개선</div>
                     </li>
                   </ul>
                 </div>
@@ -1641,17 +1587,357 @@
             <div class="d-band or">
               <div class="d-icon">📐</div>
               <div>
-                <div class="d-title">Listbook System</div>
-                <div class="d-sub">InDesign급 웹 기반 경매 도록 편집 도구 · K-Auction 사내 · 2025.03 – 현재 (진행 중)</div>
+                <div class="d-title">경매 도록 제작 파이프라인</div>
+                <div class="d-sub">InDesign급 웹 기반 경매 도록 편집 도구 · K-Auction 사내 · 2025.12 – 현재 (진행 중)</div>
               </div>
             </div>
 
           </div>
-          <!-- Listbook 인터랙티브 데모 -->
+          <!-- 도록 제작 전공정 (카드소팅 → 페이지네이션) -->
           <div class="d-sec">
-            <div class="d-sec-title">인터랙티브 데모 <span
-                style="font-size:11px;font-weight:400;color:var(--g400);margin-left:6px;">실제 도록 142p 중 11개 스프레드 (작품 상세
-                포함) · 스크롤 탐색 · 여백 조정 · 줌 · PDF 내보내기</span></div>
+            <div class="d-sec-title">인터랙티브 데모 <span style="font-size:11px;font-weight:400;color:var(--g400);margin-left:6px;">도록 제작 파이프라인 — 카드소팅(작품 그룹핑) → 페이지네이션(페이지 배정) → 리스트북(편집·PDF 출판) · 탭으로 전환</span></div>
+            <div id="mkPipeline">
+              <style>
+                #mkPipeline{--mko:#F76E33;--mkcream:#F5F3ED;--mk1000:#252525;--mk800:#4E4E4E;--mk600:#868686;--mk500:#A3A3A3;--mk300:#D7D7D7;--mk250:#E2E2E2;--mk200:#EAEAEA;--mk150:#F3F3F3;font-size:14px;color:var(--mk1000)}
+                #mkPipeline .mk-switch{display:flex;gap:6px;margin-bottom:12px}
+                #mkPipeline .mk-switch button{font:inherit;font-size:12.5px;font-weight:600;color:var(--mk600);background:#fff;border:1px solid var(--mk250);padding:7px 16px;border-radius:8px;cursor:pointer}
+                #mkPipeline .mk-switch button.on{background:var(--mk1000);color:#fff;border-color:var(--mk1000)}
+                #mkPipeline .mk-scroll{width:100%;overflow-x:auto;border-radius:12px}
+                #mkPipeline .mk-app{display:flex;width:100%;max-width:1120px;margin:0 auto;height:640px;background:#fff;border:1px solid var(--mk200);border-radius:12px;overflow:hidden}
+                #mkPipeline .mk-rail{width:52px;flex-shrink:0;background:#fff;border-right:1px solid var(--mk250);display:flex;flex-direction:column}
+                #mkPipeline .mk-rail .mk-menu{width:52px;height:52px;display:flex;align-items:center;justify-content:center;padding:6px}
+                #mkPipeline .mk-rail .mk-menu .mk-ico{width:40px;height:40px;border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--mk1000)}
+                #mkPipeline .mk-rail .mk-menu.sel .mk-ico{background:var(--mkcream)}
+                #mkPipeline .mk-content{flex:1;display:flex;flex-direction:column;min-width:0}
+                #mkPipeline .mk-hd{height:52px;flex-shrink:0;border-bottom:1px solid var(--mk200);display:flex;align-items:center;justify-content:space-between;padding:0 16px}
+                #mkPipeline .mk-hd-l{display:flex;align-items:center;gap:10px}
+                #mkPipeline .mk-hd-title{font-size:14px;font-weight:700}
+                #mkPipeline .mk-hd-sub{font-size:12px;color:var(--mk500)}
+                #mkPipeline .mk-hd-r{display:flex;align-items:center;gap:8px}
+                #mkPipeline .mk-hbtn{height:32px;padding:0 12px;border:1px solid var(--mk250);border-radius:7px;background:#fff;font:inherit;font-size:12.5px;font-weight:600;color:var(--mk800);cursor:pointer;display:flex;align-items:center;gap:6px}
+                #mkPipeline .mk-hbtn.primary{background:var(--mko);border-color:var(--mko);color:#fff}
+                #mkPipeline .mk-tabs{height:64px;flex-shrink:0;display:flex;align-items:center;gap:4px;padding:0 16px;border-bottom:1px solid var(--mk200)}
+                #mkPipeline .mk-tab{height:34px;padding:0 14px;border-radius:8px;display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--mk600);cursor:pointer}
+                #mkPipeline .mk-tab .cnt{font-size:11px;color:var(--mk500);font-weight:600}
+                #mkPipeline .mk-tab.on{background:var(--mk150);color:var(--mk1000)}
+                #mkPipeline .mk-tab.on .cnt{color:var(--mko)}
+                #mkPipeline .mk-cs-body{flex:1;display:flex;min-height:0;padding:8px 0}
+                #mkPipeline .mk-cs-col{width:50%;display:flex;flex-direction:column;min-height:0}
+                #mkPipeline .mk-vline{width:1px;background:var(--mk200);margin:8px 0}
+                #mkPipeline .mk-phd{height:60px;flex-shrink:0;display:flex;align-items:center;justify-content:space-between;padding:0 16px}
+                #mkPipeline .mk-phl{display:flex;align-items:center;gap:8px}
+                #mkPipeline .mk-ptitle{font-size:16px;font-weight:700}
+                #mkPipeline .mk-pbadge{min-width:26px;height:24px;padding:0 8px;border-radius:6px;background:var(--mk150);color:var(--mk800);font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center}
+                #mkPipeline .mk-sortbtn{height:26px;padding:0 10px;border:1px solid var(--mk250);border-radius:6px;background:#fff;font:inherit;font-size:12px;font-weight:600;color:var(--mk800);cursor:pointer;display:flex;align-items:center;gap:5px}
+                #mkPipeline .mk-iconbtn{width:36px;height:36px;border-radius:8px;border:1px solid var(--mk250);background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--mk800)}
+                #mkPipeline .mk-iconbtn:hover{background:var(--mk150)}
+                #mkPipeline .mk-grid{flex:1;overflow-y:auto;padding:0 16px 16px;display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:14px;align-content:start}
+                #mkPipeline .mk-art{background:#fff;border:1px solid var(--mk200);border-radius:6px;padding:8px;display:flex;flex-direction:column;gap:6px;cursor:pointer;user-select:none;transition:border-color .12s,box-shadow .12s}
+                #mkPipeline .mk-art:hover{border-color:var(--mk300);box-shadow:0 1px 4px rgba(0,0,0,.05)}
+                #mkPipeline .mk-art.sel{border-color:var(--mko);box-shadow:0 0 0 1px var(--mko)}
+                #mkPipeline .mk-art .mk-thumb{position:relative;width:100%;aspect-ratio:94/82;background:var(--mk150);border-radius:4px;overflow:hidden}
+                #mkPipeline .mk-art .mk-thumb svg{position:absolute;inset:0;width:100%;height:100%}
+                #mkPipeline .mk-art .mk-chk{position:absolute;top:6px;left:6px;width:22px;height:22px;border-radius:4px;border:1px solid var(--mk300);background:rgba(255,255,255,.7);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .1s}
+                #mkPipeline .mk-art:hover .mk-chk{opacity:1}
+                #mkPipeline .mk-art.sel .mk-chk{opacity:1;background:var(--mko);border-color:var(--mko)}
+                #mkPipeline .mk-art.sel .mk-chk svg{display:block}
+                #mkPipeline .mk-art .mk-chk svg{display:none;width:11px;height:8px}
+                #mkPipeline .mk-art .mk-nm{display:flex;flex-direction:column;gap:2px;padding-right:6px}
+                #mkPipeline .mk-art .mk-nm .a{font-size:13px;font-weight:700;line-height:16px;letter-spacing:-.1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+                #mkPipeline .mk-art .mk-nm .p{font-size:12px;color:var(--mk600);line-height:15px;letter-spacing:-.1px}
+                #mkPipeline .mk-gscroll{flex:1;overflow-y:auto;padding:0 0 16px}
+                #mkPipeline .mk-group{border-bottom:1px solid var(--mk150)}
+                #mkPipeline .mk-group .mk-ghd{height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 16px 0 30px}
+                #mkPipeline .mk-group .mk-gempty{padding:8px 0 32px;text-align:center;color:var(--mk500);font-size:14px}
+                #mkPipeline .mk-group .mk-garts{padding:0 16px 16px 30px;display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:12px}
+                #mkPipeline .mk-newgroup{margin:16px 16px 0 30px;height:36px;border:1px dashed var(--mk300);border-radius:8px;background:#fff;color:var(--mk600);font:inherit;font-size:13px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px}
+                #mkPipeline .mk-newgroup:hover{border-color:var(--mko);color:var(--mko)}
+                #mkPipeline .mk-pg-body{flex:1;display:flex;min-height:0}
+                #mkPipeline .mk-pg-left{flex:0 0 clamp(300px,44%,540px);min-width:0;border-right:1px solid var(--mk200);display:flex;flex-direction:column;min-height:0}
+                #mkPipeline .mk-pg-left .mk-tabs{height:auto;padding:12px 16px 0;flex-wrap:wrap;gap:4px;border-bottom:none}
+                #mkPipeline .mk-pg-left .mk-tab.on{position:relative}
+                #mkPipeline .mk-chktab{display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;background:var(--mko);color:#fff;margin-left:2px}
+                #mkPipeline .mk-pg-search{margin:10px 16px;display:flex;align-items:center;gap:8px;height:38px;padding:0 12px;border:1px solid var(--mk250);border-radius:8px;color:var(--mk500);font-size:13px}
+                #mkPipeline .mk-pg-toolbar{margin:0 16px 8px;display:flex;align-items:center;justify-content:flex-end;gap:10px}
+                #mkPipeline .mk-unassigned{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--mk600);font-weight:600;margin-right:auto}
+                #mkPipeline .mk-toggle{width:30px;height:16px;border-radius:10px;background:var(--mk250);position:relative;cursor:pointer}
+                #mkPipeline .mk-toggle::after{content:"";position:absolute;width:12px;height:12px;border-radius:50%;background:#fff;top:2px;left:2px;transition:left .15s}
+                #mkPipeline .mk-toolicon{width:30px;height:30px;border-radius:7px;border:1px solid var(--mk250);background:#fff;display:flex;align-items:center;justify-content:center;color:var(--mk600);cursor:pointer}
+                #mkPipeline .mk-pg-grouplist{flex:1;overflow-y:auto;padding:0 16px 16px}
+                #mkPipeline .mk-pgroup{border:1px solid #f3c9b3;border-radius:10px;margin-bottom:14px;overflow:hidden;background:#fdf0e8}
+                #mkPipeline .mk-pgroup .mk-pghd{height:48px;display:flex;align-items:center;justify-content:space-between;padding:0 14px}
+                #mkPipeline .mk-pgroup .mk-pghd .t{font-size:15px;font-weight:800;color:var(--mko);display:flex;align-items:center;gap:8px}
+                #mkPipeline .mk-pgroup .mk-pghd .gb{min-width:24px;height:22px;padding:0 7px;border-radius:6px;background:var(--mko);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center}
+                #mkPipeline .mk-pgroup .mk-pgarts{padding:4px 14px 14px;display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:10px}
+                #mkPipeline .mk-art{position:relative}
+                #mkPipeline .mk-art .mk-numbadge{position:absolute;top:14px;left:14px;min-width:20px;height:20px;padding:0 5px;border-radius:5px;background:rgba(37,37,37,.78);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;z-index:2}
+                #mkPipeline .mk-art.assigned .mk-thumb{opacity:.5}
+                #mkPipeline .mk-board{flex:1;min-width:0;display:flex;flex-direction:column;background:#fafafa}
+                #mkPipeline .mk-board-top{height:48px;flex-shrink:0;display:flex;align-items:center;justify-content:space-between;padding:0 20px}
+                #mkPipeline .mk-vtoggle{display:flex;border:1px solid var(--mk250);border-radius:8px;overflow:hidden;background:#fff}
+                #mkPipeline .mk-vtoggle button{font:inherit;font-size:12.5px;font-weight:600;color:var(--mk600);background:#fff;border:none;padding:6px 12px;cursor:pointer;display:flex;align-items:center;gap:5px}
+                #mkPipeline .mk-vtoggle button.on{background:var(--mk150);color:var(--mk1000)}
+                #mkPipeline .mk-lotlist{flex:1;overflow-y:auto;padding:8px 20px 16px;display:flex;flex-direction:column;gap:0}
+                #mkPipeline .mk-lot{display:flex;border:1px solid var(--mk200);border-top:none;background:#fff}
+                #mkPipeline .mk-lot:first-child{border-top:1px solid var(--mk200);border-radius:8px 8px 0 0}
+                #mkPipeline .mk-lot:last-of-type{border-radius:0 0 8px 8px}
+                #mkPipeline .mk-lot-info{flex:1;min-width:0;display:flex;gap:12px;padding:14px;border-right:1px dashed var(--mk250)}
+                #mkPipeline .mk-lot-thumb{width:78px;height:96px;flex-shrink:0;border-radius:3px;overflow:hidden;background:var(--mk150)}
+                #mkPipeline .mk-lot-thumb svg{width:100%;height:100%;display:block}
+                #mkPipeline .mk-lot-meta{flex:1;min-width:0;font-size:11.5px;line-height:1.5;color:var(--mk800)}
+                #mkPipeline .mk-lot-meta .id{color:var(--mk500);font-size:11px}
+                #mkPipeline .mk-lot-meta .nm{font-size:13px;font-weight:700;color:var(--mk1000);margin:1px 0 3px}
+                #mkPipeline .mk-except{margin-top:6px;height:24px;padding:0 10px;border:1px solid var(--mk250);border-radius:6px;background:#fff;font:inherit;font-size:11.5px;color:var(--mk600);cursor:pointer}
+                #mkPipeline .mk-lot-slot{flex:1;min-width:0;display:flex;align-items:center;justify-content:center;padding:14px;position:relative}
+                #mkPipeline .mk-lot-slot.empty{flex-direction:column;gap:10px;color:var(--mk500);font-size:13px}
+                #mkPipeline .mk-fillbtn{height:30px;padding:0 14px;border:1px solid var(--mk250);border-radius:7px;background:#fff;font:inherit;font-size:12.5px;font-weight:600;color:var(--mk800);cursor:pointer}
+                #mkPipeline .mk-lot-slot.drop{outline:2px solid var(--mko);outline-offset:-2px;border-radius:4px;background:rgba(247,110,51,.05)}
+                #mkPipeline .mk-art[draggable="true"]{cursor:grab}
+                #mkPipeline .mk-art.mk-dragging{opacity:.4}
+                #mkPipeline .mk-lot-slot.filled{align-items:flex-start;justify-content:flex-start}
+                #mkPipeline .mk-placedcard{display:flex;gap:12px;width:100%;align-items:flex-start}
+                #mkPipeline .mk-placedcard .pc-thumb{position:relative;width:78px;height:96px;flex-shrink:0;border-radius:3px;overflow:hidden;background:var(--mk150)}
+                #mkPipeline .mk-placedcard .pc-thumb svg{width:100%;height:100%;display:block}
+                #mkPipeline .mk-placedcard .pc-num{position:absolute;top:4px;left:4px;min-width:18px;height:18px;padding:0 4px;border-radius:4px;background:rgba(37,37,37,.8);color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center}
+                #mkPipeline .mk-placedcard .pc-meta{font-size:11.5px;color:var(--mk800);line-height:1.5;flex:1;min-width:0}
+                #mkPipeline .mk-placedcard .pc-meta .nm{font-size:13px;font-weight:700;color:var(--mk1000);margin-bottom:2px}
+                #mkPipeline .mk-placedcard .pc-x{width:18px;height:18px;border-radius:50%;background:var(--mk150);color:var(--mk600);font-size:10px;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0}
+                #mkPipeline .mk-placedcard .pc-x:hover{background:var(--mko);color:#fff}
+                #mkPipeline .mk-addpage{align-self:center;margin-top:14px;height:36px;padding:0 18px;border:1px solid var(--mk250);border-radius:8px;background:#fff;color:var(--mk800);font:inherit;font-size:13px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px}
+                #mkPipeline .mk-addpage:hover{border-color:var(--mko);color:var(--mko)}
+                #mkPipeline .mk-prail{width:44px;flex-shrink:0;border-left:1px solid var(--mk200);background:#fff;display:flex;flex-direction:column;align-items:center;gap:6px;padding:10px 0;overflow-y:auto}
+                #mkPipeline .mk-prail .mk-rtop{width:26px;height:26px;border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--mk600);cursor:pointer}
+                #mkPipeline .mk-prail .mk-mini{width:24px;height:30px;border:1px solid var(--mk250);border-radius:3px;background:#fff;font-size:9px;color:var(--mk600);display:flex;align-items:center;justify-content:center}
+                #mkPipeline .mk-prail .mk-mini.on{border-color:var(--mko);color:var(--mko);box-shadow:0 0 0 1px var(--mko)}
+                #mkPipeline .mk-hidden{display:none !important}
+              </style>
+
+              <div class="mk-switch">
+                <button id="mkBtnCS" class="on" onclick="mkShow('cs')">① 카드소팅</button>
+                <button id="mkBtnPG" onclick="mkShow('pg')">② 페이지네이션</button>
+                <button id="mkBtnLB" onclick="mkShow('lb')">③ 리스트북</button>
+              </div>
+
+              <div class="mk-scroll">
+                <div class="mk-app">
+                  <div class="mk-rail" id="mkRail"></div>
+                  <div class="mk-content">
+                    <!-- CARD SORTING -->
+                    <section id="mkScreenCS" style="display:flex;flex-direction:column;flex:1;min-height:0">
+                      <div class="mk-hd">
+                        <div class="mk-hd-l"><span class="mk-hd-title">2025년 6월 메이저 경매</span><span class="mk-hd-sub">카드소팅</span></div>
+                        <div class="mk-hd-r"><button class="mk-hbtn">전체 보기</button><button class="mk-hbtn primary">저장</button></div>
+                      </div>
+                      <div class="mk-tabs">
+                        <div class="mk-tab on">근현대 <span class="cnt">140</span></div>
+                        <div class="mk-tab">고미술 <span class="cnt">86</span></div>
+                        <div class="mk-tab">해외 <span class="cnt">42</span></div>
+                        <div class="mk-tab">미지정 <span class="cnt">12</span></div>
+                      </div>
+                      <div class="mk-cs-body">
+                        <div class="mk-cs-col">
+                          <div class="mk-phd">
+                            <div class="mk-phl"><span class="mk-ptitle">근현대</span><span class="mk-pbadge">140</span></div>
+                            <button class="mk-sortbtn"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 4h8M4 7h6M5 10h4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>추정가순</button>
+                          </div>
+                          <div class="mk-grid" id="mkTotalGrid"></div>
+                        </div>
+                        <div class="mk-vline"></div>
+                        <div class="mk-cs-col">
+                          <div class="mk-gscroll">
+                            <div class="mk-group">
+                              <div class="mk-ghd">
+                                <div class="mk-phl"><span class="mk-ptitle">새 그룹</span><span class="mk-pbadge" id="mkGrpCount">0</span></div>
+                                <div style="display:flex;gap:6px">
+                                  <button class="mk-iconbtn"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 11.5V14h2.5l7-7-2.5-2.5-7 7z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/><path d="M9 4.5L11.5 7" stroke="currentColor" stroke-width="1.3"/></svg></button>
+                                  <button class="mk-iconbtn"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 4.5h10M6 4.5V3h4v1.5M4.5 4.5l.6 8.5h5.8l.6-8.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                                </div>
+                              </div>
+                              <div class="mk-gempty" id="mkGrpBody">작품을 선택해 주세요</div>
+                            </div>
+                            <button class="mk-newgroup">＋ 새 그룹 추가</button>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+
+                    <!-- PAGINATION -->
+                    <section id="mkScreenPG" class="mk-hidden" style="flex-direction:column;flex:1;min-height:0">
+                      <div class="mk-hd">
+                        <div class="mk-hd-l"><span class="mk-hd-title">2025년 6월 25일 메이저 경매</span><span class="mk-hd-sub">/ 페이지네이션</span></div>
+                        <div class="mk-hd-r">
+                          <button class="mk-iconbtn" style="border:none;width:28px;height:28px" title="실행 취소"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M5 4L2 7l3 3M2 7h7a4 4 0 010 8H7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                          <button class="mk-hbtn">경매 담당자</button>
+                          <button class="mk-hbtn">전체 미리보기</button>
+                          <button class="mk-hbtn">홈페이지 미리보기</button>
+                          <button class="mk-hbtn primary">⤴ 오피스로 전송</button>
+                          <div style="width:28px;height:28px;border-radius:50%;background:var(--mk200);display:flex;align-items:center;justify-content:center;color:var(--mk500);font-size:13px">●</div>
+                        </div>
+                      </div>
+                      <div class="mk-pg-body">
+                        <div class="mk-pg-left">
+                          <div class="mk-tabs">
+                            <div class="mk-tab on">근현대 <span class="cnt">167</span><span class="mk-chktab"><svg width="9" height="7" viewBox="0 0 11 8" fill="none"><path d="M1 4l3 3 6-6" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+                            <div class="mk-tab">명품 <span class="cnt">4</span><span class="mk-chktab"><svg width="9" height="7" viewBox="0 0 11 8" fill="none"><path d="M1 4l3 3 6-6" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+                            <div class="mk-tab">한국화/고미술 <span class="cnt">50</span></div>
+                          </div>
+                          <div class="mk-pg-search">
+                            <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.4"/><path d="M11 11l3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+                            검색어를 입력하세요
+                          </div>
+                          <div class="mk-pg-toolbar">
+                            <span class="mk-unassigned">미배정 140 <span class="mk-toggle"></span></span>
+                            <button class="mk-toolicon" title="폴더"><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M2 4.5h4l1.2 1.5H14V12a1 1 0 01-1 1H3a1 1 0 01-1-1V4.5z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg></button>
+                            <button class="mk-toolicon" title="정렬"><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 4h10M4 8h8M6 12h4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></button>
+                          </div>
+                          <div class="mk-pg-grouplist" id="mkPgGroups"></div>
+                        </div>
+                        <div class="mk-board">
+                          <div class="mk-board-top">
+                            <div class="mk-vtoggle">
+                              <button>도록형</button>
+                              <button class="on"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><rect x="2.5" y="2.5" width="4.5" height="4.5" rx="1" fill="currentColor"/><rect x="9" y="2.5" width="4.5" height="4.5" rx="1" fill="currentColor"/><rect x="2.5" y="9" width="4.5" height="4.5" rx="1" fill="currentColor"/><rect x="9" y="9" width="4.5" height="4.5" rx="1" fill="currentColor"/></svg></button>
+                            </div>
+                            <button class="mk-toolicon" title="삭제"><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 4.5h10M6 4.5V3h4v1.5M4.5 4.5l.6 8.5h5.8l.6-8.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                          </div>
+                          <div class="mk-lotlist" id="mkLotList"></div>
+                        </div>
+                        <div class="mk-prail" id="mkPrail"></div>
+                      </div>
+                    </section>
+                  </div>
+                </div>
+              </div>
+
+              <script>
+              (function(){
+                const ARTS=[
+                  '<svg viewBox="0 0 94 82" preserveAspectRatio="xMidYMid slice"><rect width="94" height="82" fill="#ece7df"/><circle cx="34" cy="40" r="20" fill="#d9534f"/><rect x="52" y="44" width="26" height="26" fill="#2b2b2b"/></svg>',
+                  '<svg viewBox="0 0 94 82" preserveAspectRatio="xMidYMid slice"><rect width="94" height="82" fill="#f0eee9"/><rect x="14" y="12" width="30" height="30" fill="#e8623a"/><rect x="50" y="12" width="30" height="30" fill="#f4b942"/><rect x="14" y="46" width="30" height="24" fill="#3b7dd8"/><rect x="50" y="46" width="30" height="24" fill="#4aa564"/></svg>',
+                  '<svg viewBox="0 0 94 82" preserveAspectRatio="xMidYMid slice"><rect width="94" height="82" fill="#0f1f33"/><circle cx="47" cy="41" r="26" fill="none" stroke="#7fb0e0" stroke-width="3"/><circle cx="47" cy="41" r="14" fill="none" stroke="#bcd6ef" stroke-width="3"/><circle cx="47" cy="41" r="5" fill="#e8f1fb"/></svg>',
+                  '<svg viewBox="0 0 94 82" preserveAspectRatio="xMidYMid slice"><rect width="94" height="82" fill="#efe9df"/><path d="M0 60 Q24 30 47 52 T94 44 V82 H0Z" fill="#8a9a5b"/><circle cx="68" cy="22" r="11" fill="#e6b422"/></svg>',
+                  '<svg viewBox="0 0 94 82" preserveAspectRatio="xMidYMid slice"><rect width="94" height="82" fill="#f5f3ee"/><rect x="20" y="10" width="54" height="62" fill="#fff" stroke="#cbb89a" stroke-width="2"/><path d="M30 56 L44 34 L54 50 L62 40 L66 56Z" fill="#5b4632"/></svg>',
+                  '<svg viewBox="0 0 94 82" preserveAspectRatio="xMidYMid slice"><rect width="94" height="82" fill="#1c1c1c"/><rect x="18" y="18" width="58" height="46" fill="none" stroke="#d4af37" stroke-width="2"/><circle cx="47" cy="41" r="12" fill="#d4af37"/></svg>'
+                ];
+                const NAMES=[['이우환','960,000,000'],['김환기','3,200,000,000'],['박서보','450,000,000'],['유영국','780,000,000'],['천경자','1,100,000,000'],['이중섭','2,400,000,000'],['장욱진','320,000,000'],['오지호','540,000,000']];
+                const chk='<svg viewBox="0 0 11 8" fill="none"><path d="M1 4l3 3 6-6" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+                function art(i){const [a,p]=NAMES[i%NAMES.length];return '<div class="mk-art" onclick="this.classList.toggle(\u0027sel\u0027);window.mkUpd()"><div class="mk-thumb">'+ARTS[i%ARTS.length]+'<div class="mk-chk">'+chk+'</div></div><div class="mk-nm"><span class="a">'+a+'</span><span class="p">'+p+'</span></div></div>';}
+                const NAV=[
+                  {svg:'<path d="M3 9l7-6 7 6v8a1 1 0 01-1 1h-3v-5H7v5H4a1 1 0 01-1-1V9z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/>'},
+                  {key:'cs',svg:'<rect x="3" y="3" width="6" height="6" rx="1" fill="currentColor"/><rect x="11" y="3" width="6" height="6" rx="1" fill="currentColor"/><rect x="3" y="11" width="6" height="6" rx="1" fill="currentColor"/><rect x="11" y="11" width="6" height="6" rx="1" fill="currentColor"/>'},
+                  {key:'pg',svg:'<rect x="2" y="3" width="16" height="6" rx="1.6" stroke="currentColor" stroke-width="1.6" fill="none"/><rect x="2" y="11" width="16" height="6" rx="1.6" stroke="currentColor" stroke-width="1.6" fill="none"/>'},
+                  {key:'lb',svg:'<path d="M4 3h9a1 1 0 011 1v13l-5-2.5L5 17V4a1 1 0 011-1z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/>'},
+                  {svg:'<rect x="3" y="3" width="14" height="14" rx="2" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M6.5 13V9M10 13V7M13.5 13v-2.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>'}
+                ];
+                let cur='cs';
+                function rail(){document.getElementById('mkRail').innerHTML=NAV.map(function(m){return '<div class="mk-menu '+(m.key===cur?'sel':'')+'"><div class="mk-ico"><svg width="20" height="20" viewBox="0 0 20 20">'+m.svg+'</svg></div></div>';}).join('');}
+                window.mkUpd=function(){
+                  const sel=document.querySelectorAll('#mkTotalGrid .mk-art.sel');
+                  document.getElementById('mkGrpCount').textContent=sel.length;
+                  const body=document.getElementById('mkGrpBody');
+                  if(sel.length>0){body.className='mk-garts';let h='';sel.forEach(function(el,i){h+=art(i);});body.innerHTML=h;}
+                  else{body.className='mk-gempty';body.textContent='작품을 선택해 주세요';}
+                };
+                document.getElementById('mkTotalGrid').innerHTML=Array.from({length:24},function(_,i){return art(i);}).join('');
+                // 좌측: 작품 그리드(드래그 가능, 일부 배정완료)
+                function pgArt(i,badge,assigned){
+                  var n=NAMES[i%NAMES.length];
+                  var b=badge?'<div class="mk-numbadge">'+badge+'</div>':'';
+                  var drag=assigned?'':' draggable="true"';
+                  return '<div class="mk-art'+(assigned?' assigned':'')+'" data-i="'+i+'"'+drag+'>'+b+'<div class="mk-thumb">'+ARTS[i%ARTS.length]+'</div><div class="mk-nm"><span class="a">'+n[0]+'</span><span class="p">'+n[1]+'</span></div></div>';
+                }
+                function pgroupCard(){
+                  var badges=[null,'1','42',null,'2',null,null,null,null,null,null,null];
+                  var cells='';
+                  for(var i=0;i<12;i++){cells+=pgArt(i,badges[i],badges[i]!=null);}
+                  return '<div class="mk-pgroup"><div class="mk-pghd"><span class="t">국내 1억원 이상 <span class="gb">18</span></span><span style="color:var(--mko);font-size:18px;cursor:pointer">—</span></div><div class="mk-pgarts">'+cells+'</div></div>';
+                }
+                document.getElementById('mkPgGroups').innerHTML=pgroupCard();
+
+                // 우측 보드: 랏별 2단 행(좌 작품정보 / 우 배정슬롯)
+                var META=[
+                  ['169684','1 심문섭','b.1943','The Presentation','캔버스에 아크릴','112.1×162.2cm (100호)','2017','80,000,000','250214-06','배우리'],
+                  ['169684','2 심문섭','b.1943','The Presentation','캔버스에 아크릴','112.1×162.2cm (100호)','2017','80,000,000','250214-06','배우리']
+                ];
+                function lotInfo(m,ti){
+                  return '<div class="mk-lot-info"><div class="mk-lot-thumb">'+ARTS[ti%ARTS.length]+'</div><div class="mk-lot-meta"><span class="id">'+m[0]+'</span><div class="nm">'+m[1]+'</div>'+m[2]+'<br>'+m[3]+'<br>'+m[4]+'<br>'+m[5]+'<br>'+m[6]+'<br>'+m[7]+'<br>'+m[8]+'<br>'+m[9]+'<button class="mk-except">제외</button></div></div>';
+                }
+                var emptySlot='<div class="mk-lot-slot empty">작품을 선택하세요<button class="mk-fillbtn">순번 채우기</button></div>';
+                function lotRow(m,ti){return '<div class="mk-lot">'+lotInfo(m,ti)+emptySlot+'</div>';}
+                document.getElementById('mkLotList').innerHTML=
+                  lotRow(META[0],0)+lotRow(META[1],1)+
+                  '<button class="mk-addpage">새 페이지 추가 ＋</button>';
+
+                // 우측 페이지 레일
+                document.getElementById('mkPrail').innerHTML=
+                  '<div class="mk-rtop">«</div>'+
+                  '<div class="mk-mini on">1</div><div class="mk-mini on">2</div>'+
+                  '<div style="font-size:9px;color:var(--mk500);margin-top:2px">2</div>'+
+                  '<div class="mk-rtop" style="margin-top:auto">⌃</div><div class="mk-rtop">⌄</div>';
+
+                // ── 드래그앤드롭: 그룹 작품 → 보드 빈 슬롯 배치 ──
+                (function(){
+                  var dragged=null;
+                  var groups=document.getElementById('mkPgGroups');
+                  var list=document.getElementById('mkLotList');
+                  groups.addEventListener('dragstart',function(e){
+                    var card=e.target.closest('.mk-art[draggable="true"]'); if(!card)return;
+                    dragged=card; card.classList.add('mk-dragging');
+                    e.dataTransfer.effectAllowed='move';
+                    e.dataTransfer.setData('text/plain',card.getAttribute('data-i'));
+                  });
+                  groups.addEventListener('dragend',function(){ if(dragged)dragged.classList.remove('mk-dragging'); });
+                  list.addEventListener('dragover',function(e){
+                    var slot=e.target.closest('.mk-lot-slot.empty'); if(!slot)return;
+                    e.preventDefault(); e.dataTransfer.dropEffect='move'; slot.classList.add('drop');
+                  });
+                  list.addEventListener('dragleave',function(e){
+                    var slot=e.target.closest('.mk-lot-slot'); if(slot)slot.classList.remove('drop');
+                  });
+                  list.addEventListener('drop',function(e){
+                    var slot=e.target.closest('.mk-lot-slot.empty'); if(!slot||!dragged)return;
+                    e.preventDefault();
+                    var i=parseInt(dragged.getAttribute('data-i'),10);
+                    var n=NAMES[i%NAMES.length];
+                    var allSlots=Array.prototype.slice.call(list.querySelectorAll('.mk-lot-slot'));
+                    var num=allSlots.indexOf(slot)+1;
+                    slot.classList.remove('empty','drop'); slot.classList.add('filled');
+                    slot.setAttribute('data-src',i);
+                    slot.innerHTML='<div class="mk-placedcard"><div class="pc-thumb">'+ARTS[i%ARTS.length]+'<div class="pc-num">'+num+'</div></div><div class="pc-meta"><div class="nm">'+n[0]+'</div>b.1943<br>The Presentation<br>캔버스에 아크릴<br>'+n[1]+'</div><div class="pc-x" title="제거">✕</div></div>';
+                    dragged.classList.add('assigned'); dragged.setAttribute('draggable','false');
+                    if(!dragged.querySelector('.mk-numbadge')){var nb=document.createElement('div');nb.className='mk-numbadge';nb.textContent=num;dragged.appendChild(nb);}
+                    dragged=null;
+                  });
+                  list.addEventListener('click',function(e){
+                    var x=e.target.closest('.pc-x'); if(!x)return;
+                    var slot=x.closest('.mk-lot-slot'); if(!slot)return;
+                    var srcI=slot.getAttribute('data-src'); slot.removeAttribute('data-src');
+                    slot.classList.remove('filled'); slot.classList.add('empty');
+                    slot.innerHTML='작품을 선택하세요<button class="mk-fillbtn">순번 채우기</button>';
+                    if(srcI!=null){var src=document.querySelector('#mkPgGroups .mk-art[data-i="'+srcI+'"]');if(src){src.classList.remove('assigned');src.setAttribute('draggable','true');var nb=src.querySelector('.mk-numbadge');if(nb)nb.remove();}}
+                  });
+                })();
+                window.mkShow=function(s){
+                  cur=s;
+                  var isLb=(s==='lb');
+                  document.getElementById('mkScreenCS').classList.toggle('mk-hidden',s!=='cs');
+                  document.getElementById('mkScreenPG').classList.toggle('mk-hidden',s!=='pg');
+                  var appWrap=document.querySelector('#mkPipeline .mk-scroll');
+                  if(appWrap) appWrap.style.display=isLb?'none':'';
+                  var lbSec=document.getElementById('lbDemoSec');
+                  if(lbSec) lbSec.style.display=isLb?'':'none';
+                  document.getElementById('mkBtnCS').classList.toggle('on',s==='cs');
+                  document.getElementById('mkBtnPG').classList.toggle('on',s==='pg');
+                  document.getElementById('mkBtnLB').classList.toggle('on',isLb);
+                  rail();
+                };
+                rail();
+              })();
+              </script>
+            </div>
+          </div>
+          <!-- Listbook 인터랙티브 데모 -->
+          <div class="d-sec" id="lbDemoSec" style="display:none">
             <div id="lbdemo">
               <style>
                 #lbdemo {
@@ -3562,80 +3848,73 @@
           <div class="d-sec">
             <div class="d-sec-title">프로젝트 개요</div>
             <div class="d-card">
-              <div class="d-card-desc">전시 흐름에 따라 수작업으로 진행되던 경매 도록 편집 프로세스를 웹 기반 에디터로 전환한 사내 도구. 작품 배치·편집·출력 과정을 디지털화하여
-                운영
-                효율을 개선했습니다.</div>
+              <div class="d-card-desc">전시 흐름에 따라 수작업으로 진행되던 경매 도록 편집 프로세스를 웹 기반 에디터로 전환해, 반복 작업·커뮤니케이션 비용을 줄이고 작품 배치·편집·출력을 디지털화한 사내 서비스. <strong>① 리스트북(편집·PDF 출판)</strong>과 <strong>② 페이지네이션·카드소팅(작품 그룹핑·배정)</strong>으로 이어지는 도록 제작 전공정 파이프라인입니다.</div>
+            </div>
+            <div class="d-card">
+              <div class="d-card-title">공통 스택</div>
+              <div class="tags"><span class="tag">React 18</span><span class="tag">Next.js 15</span><span class="tag">TypeScript</span><span class="tag">Context API</span></div>
             </div>
           </div>
+
           <div class="d-sec">
-            <div class="d-sec-title">문제 정의 · 프로세스 재설계</div>
+            <div class="d-sec-title">① 리스트북 <span style="font-size:11px;font-weight:400;color:var(--g400);margin-left:6px;">편집·PDF 출판 · 2025.12 – 현재 · react-moveable · html2canvas · Puppeteer · AWS S3</span></div>
             <div class="d-card">
-              <div class="d-card-title">운영 병목 파악</div>
-              <div class="d-card-desc">운영팀과 디자이너 간 순차적 핸드오프 과정에서 발생하던 업무 병목 현상 파악. 기획 초기 단계부터 참여하여 기존 프로세스의 웹 기반 편집 시스템
-                전환을 주도.</div>
+              <div class="d-card-title">WYSIWYG 편집 환경 구축</div>
+              <div class="d-card-desc">Canvas 기반 편집기로 운영팀·디자이너가 별도 디자인 툴 없이 웹에서 작품 배치·리사이즈·레이어 관리. px → mm 변환으로 편집 중 실제 인쇄 크기 확인.</div>
             </div>
             <div class="d-card">
-              <div class="d-card-title">단일 브라우저 협업 구조</div>
-              <div class="d-card-desc">운영팀과 디자이너가 하나의 브라우저 환경에서 작품 배치부터 번호 부여, 도록 출력까지 동시에 완결할 수 있는 협업 구조 구축. 순차 작업을 병렬
-                협업으로 전환.</div>
+              <div class="d-card-title">편집 데이터 정합성 설계 (SSOT)</div>
+              <div class="d-card-desc">양면 페이지·복합 레이아웃 상태를 단일 상태(Single Source of Truth)로 관리해 시각적 연속성과 데이터 정합성 확보.</div>
+            </div>
+            <div class="d-card">
+              <div class="d-card-title">서버 렌더링 PDF 출판 파이프라인</div>
+              <div class="d-card-desc">Puppeteer 서버 렌더 + AWS S3로 편집 결과를 고해상도 인쇄용 PDF로 자동 변환·관리하는 End-to-End 출판 프로세스 구현.</div>
+            </div>
+            <div class="d-card">
+              <div class="d-card-title">성능 · 안정성 개선</div>
+              <div class="d-card-desc">이미지 저장을 Base64 → URL 참조로 전환해 대량 렌더링 성능·메모리 개선, PDF 생성 시 504 Timeout·렌더링 오류를 해결해 대용량 도록 생성 안정성 확보.</div>
+            </div>
+            <div class="d-card">
+              <div class="d-card-title">회귀 테스트 자동화</div>
+              <div class="d-card-desc">핵심 편집 기능 15개 시나리오 통합 테스트(Vitest·Testing Library)로 월간 릴리즈 전 회귀 검증 자동화.</div>
+            </div>
+            <div class="d-card" style="border-left:3px solid var(--orange);">
+              <div class="d-card-title">성과</div>
+              <div class="d-card-desc">외부 디자인 도구 의존도를 낮춰 도록 제작을 사내 내재화 · 작품 배치도 세팅 자동화로 도록 1건당 작업 시간 <strong>하루 → 반나절(약 50%)</strong> 단축 · AI 도구 활용으로 기능 개발 기간 <strong>4주 → 2~3주</strong>로 단축.</div>
             </div>
           </div>
+
           <div class="d-sec">
-            <div class="d-sec-title">핵심 기술 구현</div>
+            <div class="d-sec-title">② 페이지네이션 + 카드소팅 <span style="font-size:11px;font-weight:400;color:var(--g400);margin-left:6px;">작품 그룹핑·페이지 배정 · 2025.06 – 2026.03 · HTML5 Drag&amp;Drop · localStorage</span></div>
             <div class="d-card">
-              <div class="d-card-title">Context API + Custom Hooks 아키텍처</div>
-              <div class="d-card-desc"><code>ListBookContext</code>로 전역 설정을, <code>usePageProperty</code>로 페이지별 상태를 분리
-                관리. 컴포넌트 간 prop drilling 제거, 재사용성 확보.</div>
+              <div class="d-card-title">파이프라인 출발점</div>
+              <div class="d-card-desc">작품 그룹핑(카드소팅)부터 페이지 배정(페이지네이션)까지 수백 점 출품작을 한 화면에서 드래그로 구성하는 작업을 도구화 — 리스트북 편집으로 이어지는 도록 제작 전공정 구현.</div>
             </div>
             <div class="d-card">
-              <div class="d-card-title">Single Source of Truth 상태 재설계</div>
-              <div class="d-card-desc">인접 페이지 간 이미지 리사이징 시 발생하던 다중 상태 충돌을 SSOT 기반 구조로 재설계. 편집 동기화 오류를 구조적으로 해결.</div>
+              <div class="d-card-title">반복 작업 자동화</div>
+              <div class="d-card-desc">페이지 순서에 따라 작품번호(랏)를 자동 부여해 운영팀이 수기로 번호를 매기던 작업을 제거.</div>
             </div>
             <div class="d-card">
-              <div class="d-card-title">px ↔ mm 단위 변환 파이프라인</div>
-              <div class="d-card-desc">화면 미리보기(px)와 실제 인쇄 단위(mm) 간 양방향 변환. 단위 불일치로 발생하는 인쇄 오차를 원천 차단.</div>
+              <div class="d-card-title">대량 작품 운영 효율화</div>
+              <div class="d-card-desc">검색·다중 필터, 그룹핑/언그룹, 전체 보기로 분류·배정 작업을 시각적·직관적으로 전환.</div>
             </div>
             <div class="d-card">
-              <div class="d-card-title">글로벌·페이지별 여백 혼용 로직</div>
-              <div class="d-card-desc"><code>PageMarginSection</code>에서 전체 기본값을 관리하고, 각 페이지에서 개별 오버라이드 가능. InDesign 마스터
-                페이지 개념을 웹으로 구현.</div>
-            </div>
-          </div>
-          <div class="d-sec">
-            <div class="d-sec-title">기술 선택 · 트레이드오프</div>
-            <div class="d-card">
-              <div class="d-card-title">왜 Context API + Custom Hooks였나</div>
-              <div class="d-card-desc">전역 도큐먼트 설정과 페이지별 편집 상태가 섞이는 구조라, 외부 상태 라이브러리를 도입하기보다 React 기본 기능만으로 단일 소스를
-                만드는 쪽을 택했습니다. 의존성을 늘리지 않고 상태 흐름을 팀이 이해하기 쉽게 유지하는 것을 우선한 판단입니다.</div>
+              <div class="d-card-title">복잡 D&amp;D 상호작용 구현</div>
+              <div class="d-card-desc">자체 정렬 엔진 <code>useGroupDragSort</code>와 제네릭 Undo/Redo 훅 <code>useUndoRedo</code>(past/present/future + localStorage 영속화)를 직접 구현.</div>
             </div>
             <div class="d-card">
-              <div class="d-card-title">범위에서 의도적으로 제외한 것</div>
-              <div class="d-card-desc">여러 명이 같은 도록을 동시에 편집하는 실시간 협업 동기화는 초기 범위에서 제외했습니다. 실제 운영은 한 번에 한 명이 편집하는
-                패턴이 대부분이라, 복잡도 높은 동시 편집보다 단일 사용자 편집의 안정성과 출력 정확도에 집중하는 것이 우선순위에 맞다고 판단했습니다.</div>
+              <div class="d-card-title">운영 안정성</div>
+              <div class="d-card-desc">첫 진입 시 불필요한 저장 API 호출 제거, 작품 이동 복제·빈 칸 미배정 오판정 등 운영 이슈 해결.</div>
+            </div>
+            <div class="d-card" style="border-left:3px solid var(--orange);">
+              <div class="d-card-title">성과</div>
+              <div class="d-card-desc">작품 그룹핑 → 페이지 배정 전공정을 도구화해 리스트북 편집 단계와 연결, 파이프라인 출발점 구현 · 작품번호 자동 부여·시각적 배정으로 수기 분류·배정을 대체해 대량 작품 운영 효율 개선.</div>
             </div>
           </div>
-          <div class="d-sec">
-            <div class="d-sec-title">품질 · 테스트 자동화</div>
-            <div class="d-card">
-              <div class="d-card-title">핵심 편집 기능 15개 시나리오 통합 테스트</div>
-              <div class="d-card-desc">객체 이동·간격 조정·사이즈 변경 등 핵심 편집 기능에 Integration Test 구축. 월간 릴리즈 시 수동 회귀 테스트(Regression
-                Test) 의존도를 낮추고 배포 안정성 확보.</div>
-            </div>
-          </div>
-          <div class="d-sec">
-            <div class="d-sec-title">AI Workflow · 개발 컨벤션</div>
-            <div class="d-card">
-              <div class="d-card-title">AI Agent 기반 Workflow 구축</div>
-              <div class="d-card-desc">반복적인 보일러플레이트 작업을 Custom Command로 자동화하고 프로젝트 아키텍처 규칙을 문서화하여 팀 내 공통 개발 컨벤션 구축. 월간
-                릴리즈 사이클 내 기능 개발과 디버깅을 안정적으로 소화하는 구조 확립.</div>
-            </div>
-          </div>
+
           <div class="d-sec">
             <div class="d-sec-title">기술 스택</div>
-            <div class="tags"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Context
-                API</span><span class="tag">Custom Hooks</span><span class="tag">vitest</span><span class="tag">Testing
-                Library</span><span class="tag">Print CSS</span><span class="tag">mm /
-                px</span><span class="tag">AI Agent Workflow</span></div>
+            <div class="tags"><span class="tag">React 18</span><span class="tag">Next.js 15</span><span class="tag">TypeScript</span><span class="tag">Context API</span><span class="tag">react-moveable</span><span class="tag">html2canvas</span><span class="tag">Puppeteer</span><span class="tag">AWS S3</span><span class="tag">HTML5 D&amp;D</span><span class="tag">Vitest</span><span class="tag">Testing Library</span><span class="tag">AI Agent Workflow</span></div>
           </div>
         </div>
 
@@ -3646,8 +3925,8 @@
             <div class="d-band bl">
               <div class="d-icon">⚡</div>
               <div>
-                <div class="d-title">실시간 경매 플랫폼</div>
-                <div class="d-sub">라이브 응찰·낙찰 · 결제 · 대시보드 · K-Auction · 2023.08 – 2024.10</div>
+                <div class="d-title">실시간 경매 플랫폼 — 웹·모바일 리뉴얼</div>
+                <div class="d-sub">SignalR 실시간 동기화 · 모바일 응찰 환경 · 방문자 65%↑ · K-Auction · 2023.08 – 2024.10</div>
               </div>
             </div>
 
@@ -5208,75 +5487,28 @@
           <div class="d-sec">
             <div class="d-sec-title">프로젝트 개요</div>
             <div class="d-card">
-              <div class="d-card-desc">실시간 응찰·낙찰이 이뤄지는 온라인 경매 플랫폼의 프론트엔드 개발. 빠른 인터랙션 응답성과 결제 플로우, 데이터 대시보드를 포함합니다.</div>
+              <div class="d-card-desc">웹 전용이던 실시간 응찰 서비스를 웹·모바일 반응형으로 리뉴얼. <strong>모바일 환경 구축 후 월 방문자 849 → 1,404명(약 65%↑, GA 기준).</strong></div>
             </div>
           </div>
           <div class="d-sec">
             <div class="d-sec-title">핵심 기술 구현</div>
             <div class="d-card">
-              <div class="d-card-title">Optimistic Update</div>
-              <div class="d-card-desc">응찰 버튼 클릭 시 서버 응답을 기다리지 않고 UI를 선행 업데이트. 실패 시 롤백 처리로 데이터 정합성 유지. 체감 응답 속도가 크게
-                개선됩니다.</div>
+              <div class="d-card-title">SignalR 실시간 상태 동기화 · 자동 재연결</div>
+              <div class="d-card-desc">SignalR 실시간 통신으로 현재가·낙찰 상태를 전 참여자에 즉시 반영, 자동 재연결로 네트워크 단절에 대응.</div>
             </div>
             <div class="d-card">
-              <div class="d-card-title">실시간 데이터 처리</div>
-              <div class="d-card-desc">다수 사용자의 동시 응찰 데이터를 처리하며 UI 안정성을 확보. 낙찰·유찰 상태 변화를 실시간으로 반영.</div>
+              <div class="d-card-title">성능 · 정합성 개선 (렌더링 3회 → 1회)</div>
+              <div class="d-card-desc">구독 생명주기 이슈를 cleanup·함수형 업데이트로 해결(메모리 누수·stale closure), 푸시당 렌더링 3회 → 1회 감소.</div>
             </div>
             <div class="d-card">
-              <div class="d-card-title">결제 · 대시보드</div>
-              <div class="d-card-desc">결제 플로우 연동, 낙찰 데이터 시각화 대시보드 구현.</div>
+              <div class="d-card-title">Optimistic Update · 모바일 응찰 환경</div>
+              <div class="d-card-desc">Optimistic Update로 체감 응답 속도 개선, 모바일 응찰 잠금·반응형 미니플레이어로 오응찰 방지·사용성 향상.</div>
             </div>
           </div>
           <div class="d-sec">
             <div class="d-sec-title">기술 스택</div>
-            <div class="tags"><span class="tag">React</span><span class="tag">TypeScript</span><span
-                class="tag">Optimistic Update</span><span class="tag">WebSocket</span></div>
-          </div>
-        </div>
-
-        <!-- DETAIL: DS -->
-        <div class="dv" id="d-ds">
-          <div class="d-back" onclick="closeDetail()">← 프로젝트 목록</div>
-          <div class="d-hero">
-            <div class="d-band tl">
-              <div class="d-icon">🎨</div>
-              <div>
-                <div class="d-title">K-Auction Design System</div>
-                <div class="d-sub">디자인 토큰 · 컴포넌트 문서 · 자동화 · v1.1</div>
-              </div>
-            </div>
-
-          </div>
-          <div class="d-sec">
-            <div class="d-sec-title">프로젝트 개요</div>
-            <div class="d-card">
-              <div class="d-card-desc">K-Auction 브랜드 기반 디자인 시스템 문서 사이트. 컬러 토큰부터 타이포그래피, 컴포넌트 가이드까지 팀 전체가 참고하는 단일 소스로
-                운영됩니다.</div>
-            </div>
-          </div>
-          <div class="d-sec">
-            <div class="d-sec-title">핵심 기술 구현</div>
-            <div class="d-card">
-              <div class="d-card-title">Primitive → Semantic 2계층 토큰 체계</div>
-              <div class="d-card-desc">40개 Primitive(원색)과 38개 Semantic(의미 기반) 토큰을 분리. WCAG AA 명도 대비 기준을 만족하는 컬러셋 정의.
-              </div>
-            </div>
-            <div class="d-card">
-              <div class="d-card-title"><code>generate.js</code> — 토큰 CSS 자동 생성</div>
-              <div class="d-card-desc"><code>tokens.js</code> 수정 한 번으로
-                <code>tokens.css</code>·<code>typography.css</code>가 동시 생성되는 자동화 파이프라인. 수동 관리 비용 제거.
-              </div>
-            </div>
-            <div class="d-card">
-              <div class="d-card-title">타이포그래피 스케일 18단계</div>
-              <div class="d-card-desc">Pretendard Variable 기반. heading / body / label / caption 카테고리로 체계화, 디자이너·개발자 공통
-                언어 정립.</div>
-            </div>
-          </div>
-          <div class="d-sec">
-            <div class="d-sec-title">기술 스택</div>
-            <div class="tags"><span class="tag">Design Tokens</span><span class="tag">CSS Variables</span><span
-                class="tag">WCAG AA</span><span class="tag">Figma</span><span class="tag">Node.js</span></div>
+            <div class="tags"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Redux · Redux-Saga</span><span
+                class="tag">SignalR</span><span class="tag">WebRTC</span><span class="tag">Optimistic Update</span></div>
           </div>
         </div>
 
@@ -5296,9 +5528,8 @@
           <div class="d-sec">
             <div class="d-sec-title">라이브 데모</div>
             <div class="d-card">
-              <div class="d-card-desc" style="margin-bottom:14px;">실제로 동작하는 서비스입니다. 아래 버튼에서 신청·코드 발급·AI 대화 추천을 직접 사용해볼 수
-                있습니다.</div>
-              <a href="https://bae-song-yi.github.io/songyi.github.io/groupmatch/" target="_blank" rel="noopener"
+              <div class="d-card-desc" style="margin-bottom:14px;">실제 운영 중인 서비스 — 아래 버튼에서 신청·코드 발급·AI 대화 추천을 직접 사용해볼 수 있습니다.</div>
+              <a href="https://dugeunmate.com" target="_blank" rel="noopener"
                 style="display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:#fff;font-weight:700;font-size:13px;padding:11px 20px;border-radius:10px;text-decoration:none;">
                 두근 라이브 사이트 열기 ↗</a>
             </div>
@@ -5307,10 +5538,7 @@
           <div class="d-sec">
             <div class="d-sec-title">프로젝트 개요</div>
             <div class="d-card">
-              <div class="d-card-desc">회사 이메일 인증 후 신청하면 숫자코드를 발급하고, AI가 매칭율이 높은 코드끼리 같은 테이블로 배치합니다. 오프라인에서 만난 뒤 대화 소재가
-                떨어지면
-                AI 토픽 추천이 두 사람의 관심사를 바탕으로 질문을 제안해, 첫 만남의 어색함 없이 대화를 매끄럽게 이어가도록 기획했습니다. 기획·디자인부터 프론트엔드·백엔드·배포·운영까지
-                전 과정을 단독으로 구축해 현재 라이브로 운영 중입니다.</div>
+              <div class="d-card-desc">회사 이메일 인증을 통과한 사용자만 신청 가능(신원 검증) + 신청 시 숫자코드 발급. 첫 만남에서 대화가 끊기면 AI가 주제를 추천.</div>
             </div>
           </div>
 
@@ -5318,10 +5546,7 @@
             <div class="d-sec-title">왜 만들었나</div>
             <div class="d-card">
               <div class="d-card-title">유행하는 다대다 소개팅, 두 가지 불안에서 출발</div>
-              <div class="d-card-desc">다대다 소개팅이 인기를 끌지만, "이상한 사람이 나오면 어쩌나"라는 안전에 대한 불안과 "과연 매칭이 될까"라는 의구심이 공존합니다. 이 두
-                문제를
-                풀기 위해, 회사 이메일 인증을 거친 사용자만 신청할 수 있게 해 신원을 검증하고, 향후 신청 데이터를 활용한 AI 매칭으로 매칭 만족도를 높이는 것을 목표로
-                기획했습니다.</div>
+              <div class="d-card-desc">다대다 소개팅의 두 가지 불안 — "이상한 사람이면?"(안전)과 "매칭이 될까?"(효용) — 을 신원 검증과 AI 추천으로 풀어보려는 시도.</div>
             </div>
           </div>
 
@@ -5329,14 +5554,11 @@
             <div class="d-sec-title">측정 · 가설 검증 설계</div>
             <div class="d-card">
               <div class="d-card-title">처음부터 데이터로 판단할 수 있게 설계</div>
-              <div class="d-card-desc">이전 프로젝트에서 정량 지표를 남기지 못한 아쉬움이 있어, 두근은 출시 단계부터 행동 트래킹(문항별 응답·이탈 지점·세션)을 먼저
-                심었습니다. "어느 문항에서 이탈이 많은가", "코드 발급까지 도달하는 비율은 얼마인가" 같은 질문에 데이터로 답할 수 있는 구조를 마련해 두고 현재 신청 데이터를
-                축적 중입니다.</div>
+              <div class="d-card-desc">정량 지표를 남기지 못한 아쉬움에서, 출시 단계부터 행동 트래킹(문항별 응답·이탈 지점·세션)을 먼저 설계.</div>
             </div>
             <div class="d-card">
               <div class="d-card-title">검증하려는 가설</div>
-              <div class="d-card-desc">① 대화형 단일 페이지 흐름이 이탈을 줄이는가 ② AI 대화 주제가 첫 만남의 어색함 해소에 실제로 쓰이는가. 데이터가 쌓이면 이탈
-                구간을 개선하고, AI 매칭 정확도를 높이는 근거로 활용할 계획입니다.</div>
+              <div class="d-card-desc">검증 가설 — ① 대화형 단일 페이지가 이탈을 줄이는가 ② AI 주제가 어색함 해소에 실제로 쓰이는가. 랜딩 카피 A/B로 측정.</div>
             </div>
           </div>
 
@@ -5344,29 +5566,23 @@
             <div class="d-sec-title">핵심 기술 구현</div>
             <div class="d-card">
               <div class="d-card-title">AI 페어 프로그래밍으로 빠르게, 판단은 직접</div>
-              <div class="d-card-desc">Claude를 페어 프로그래밍 파트너로 활용해 개발 속도를 크게 높였습니다. 다만 전체 아키텍처 설계, Supabase 연동 디버깅(RLS
-                401·CORS), 데이터가 들어오지 않던 문제의 원인 추적, UX 흐름 결정은 직접 판단하고 검증하며 완성했습니다. AI를 레버리지하되 의사결정과 문제 해결의
-                주체는 개발자 본인이라는 방식으로 작업했습니다.</div>
+              <div class="d-card-desc">Claude를 페어 파트너로 개발 속도를 높이되, 아키텍처 설계·연동 디버깅(RLS·CORS)·UX는 직접 판단·검증.</div>
             </div>
             <div class="d-card">
-              <div class="d-card-title">회사 이메일 인증으로 신원 검증</div>
-              <div class="d-card-desc">회사 이메일 도메인 인증을 통과한 사용자만 신청 폼에 접근하도록 가드를 구현. 익명 신청을 차단하는 1차 안전장치입니다.</div>
+              <div class="d-card-title">회사 이메일 OTP 인증으로 신원 검증</div>
+              <div class="d-card-desc">회사 이메일 도메인 인증(6자리 OTP)으로 익명·외부 신청을 차단, Resend 커스텀 도메인 SMTP·SPF/DKIM까지 직접 구성.</div>
             </div>
             <div class="d-card">
-              <div class="d-card-title">GitHub Pages + Supabase 서버리스 풀스택</div>
-              <div class="d-card-desc">정적 호스팅 위에 Supabase(DB·Auth·Storage·Edge Function)를 연동해 별도 서버 없이 신청 데이터 저장, 프로필
-                사진 업로드, 숫자코드 발급을 구현. RLS 권한(401)·CORS(sendBeacon→fetch)·<code>Prefer: return=minimal</code> 등 실제 연동
-                이슈를 직접 디버깅해 해결.</div>
+              <div class="d-card-title">Cloudflare Pages + Supabase 서버리스 풀스택</div>
+              <div class="d-card-desc">Cloudflare Pages + Supabase(DB·Auth·Storage·Edge Function)로 별도 서버 없이 신청·저장·코드 발급·업로드를 구현.</div>
             </div>
             <div class="d-card">
               <div class="d-card-title">Gemini AI · Edge Function 연동</div>
-              <div class="d-card-desc">코드 입력 시 단계별 대화 주제를 생성하는 AI 기능과 FAQ 즉답·자유 답변 챗봇 구현. 신규 신청 발생 시 Edge Function +
-                Webhook으로 슬랙에 실시간 알림 전송.</div>
+              <div class="d-card-desc">단계별 대화 주제 생성 AI + FAQ 챗봇 구현, 신규 신청 시 Edge Function + DB Webhook으로 Slack 실시간 알림.</div>
             </div>
             <div class="d-card">
               <div class="d-card-title">대화형 단일 페이지 UX</div>
-              <div class="d-card-desc">랜딩과 신청 폼을 한 페이지로 통합하고, 폰 목업 안에서 질문에 답하면 이전 질문 위에 쌓이고 다음이 아래에 등장하는 대화형 스택 흐름 구현.
-                아이폰 미니부터 데스크톱·가로모드까지 반응형 대응.</div>
+              <div class="d-card-desc">랜딩·신청 폼을 한 페이지로 통합 — 폰 목업 안에서 답하면 이전 질문 위에 쌓이는 대화형 스택 흐름 구현.</div>
             </div>
           </div>
 
@@ -5374,7 +5590,7 @@
             <div class="d-sec-title">기술 스택</div>
             <div class="tags"><span class="tag">React</span><span class="tag">TypeScript</span><span
                 class="tag">Supabase</span><span class="tag">Edge Function</span><span class="tag">Gemini
-                API</span><span class="tag">GitHub Pages</span><span class="tag">Slack Webhook</span><span
+                API</span><span class="tag">Cloudflare Pages</span><span class="tag">Resend (OTP)</span><span class="tag">Slack Webhook</span><span
                 class="tag">Claude (AI 페어 프로그래밍)</span></div>
           </div>
         </div>
@@ -5445,7 +5661,7 @@
   <script>
     const tocMap = {
       about: [{ id: 'intro', l: '소개' }, { id: 'career', l: '경력' }],
-      projects: [{ id: 'p-listbook', l: '01 Listbook' }, { id: 'p-auction', l: '02 실시간 경매' }, { id: 'p-ds', l: '03 디자인 시스템' }],
+      projects: [{ id: 'p-dugeun', l: '01 두근' }, { id: 'p-listbook', l: '02 도록 파이프라인' }, { id: 'p-auction', l: '03 실시간 경매' }],
       skills: [{ id: 's-fe', l: 'Frontend' }, { id: 's-be', l: 'Backend & AI' }, { id: 's-tools', l: 'Tools' }]
     };
     let currentTab = 'about';
@@ -5466,7 +5682,7 @@
       if (first) first.classList.add('active');
       if (tab === 'projects') {
         document.getElementById('proj-list').style.display = 'block';
-        ['listbook', 'auction', 'ds', 'dugeun'].forEach(id => document.getElementById('d-' + id).classList.remove('on'));
+        ['listbook', 'auction', 'dugeun'].forEach(id => document.getElementById('d-' + id).classList.remove('on'));
       }
       renderToc(tab);
       window.scrollTo(0, 0);
@@ -5500,14 +5716,14 @@
 
     function openDetail(id) {
       document.getElementById('proj-list').style.display = 'none';
-      ['listbook', 'auction', 'ds', 'dugeun'].forEach(did => document.getElementById('d-' + did).classList.toggle('on', did === id));
+      ['listbook', 'auction', 'dugeun'].forEach(did => document.getElementById('d-' + did).classList.toggle('on', did === id));
       document.getElementById('toc-links').innerHTML = '';
       window.scrollTo(0, 0);
     }
 
     function closeDetail() {
       document.getElementById('proj-list').style.display = 'block';
-      ['listbook', 'auction', 'ds'].forEach(id => document.getElementById('d-' + id).classList.remove('on'));
+      ['listbook', 'auction', 'dugeun'].forEach(id => document.getElementById('d-' + id).classList.remove('on'));
       renderToc('projects');
       window.scrollTo(0, 0);
     }
