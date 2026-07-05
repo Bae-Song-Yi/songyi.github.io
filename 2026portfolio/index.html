@@ -1671,8 +1671,9 @@
       </div>
       <div id="sb-skills" style="display:none">
         <div class="sb-label">Skills</div>
-        <div class="sb-item active" data-a="s-fe">Frontend</div>
+        <div class="sb-item active" data-a="s-main">주력</div>
         <div class="sb-item" data-a="s-ai">AI Workflow</div>
+        <div class="sb-item" data-a="s-fe">Frontend</div>
         <div class="sb-item" data-a="s-be">Backend & AI</div>
         <div class="sb-item" data-a="s-tools">Tools</div>
       </div>
@@ -7521,57 +7522,41 @@
         <h1 class="pg-title">기술 스택</h1>
         <p class="pg-desc">주요 기술 스택과 도구입니다. 주황색 강조는 주력 스킬입니다.</p>
         <div class="pg-meta"><span>주력</span><span>·</span><span>React · TypeScript · AI Agent Workflow · Figma</span></div>
-        <div class="cs" id="s-fe">
-          <div class="cs-hd"><span class="cs-num">01 /</span><span class="cs-title">Frontend</span></div>
+        <div class="cs" id="s-main">
+          <div class="cs-hd"><span class="cs-num">01 /</span><span class="cs-title">주력</span></div>
           <div class="sk-group">
-            <div class="sk-label">Language & Framework</div>
             <div class="sk-chips"><span class="chip p">React</span><span class="chip p">TypeScript</span><span
-                class="chip">JavaScript</span><span class="chip">HTML5</span><span class="chip">CSS3 / SCSS</span>
-            </div>
-          </div>
-          <div class="sk-group">
-            <div class="sk-label">Architecture & Pattern</div>
-            <div class="sk-chips"><span class="chip">Context API</span><span class="chip">Custom Hooks</span><span
-                class="chip">Optimistic Update</span></div>
-          </div>
-          <div class="sk-group">
-            <div class="sk-label">Publishing</div>
-            <div class="sk-chips"><span class="chip">반응형 웹</span><span class="chip">크로스브라우징</span><span
-                class="chip">웹 접근성</span></div>
-          </div>
-          <div class="sk-group">
-            <div class="sk-label">Testing</div>
-            <div class="sk-chips"><span class="chip">Vitest</span><span class="chip">Testing Library</span></div>
+                class="chip p">AI Agent Workflow</span><span class="chip p">Figma</span></div>
           </div>
         </div>
         <div class="cs" id="s-ai">
           <div class="cs-hd"><span class="cs-num">02 /</span><span class="cs-title">AI Workflow</span></div>
           <div class="sk-group">
-            <div class="sk-label">AI Native 개발</div>
-            <div class="sk-chips"><span class="chip p">AI Agent Workflow</span><span class="chip">Claude
-                Code</span><span class="chip">Claude Skill 설계</span><span class="chip">Figma MCP</span></div>
+            <div class="sk-chips"><span class="chip">Claude Code</span><span class="chip">Claude Skill
+                설계</span><span class="chip">Figma MCP</span><span class="chip">디자인 토큰 파이프라인 (Figma Variables → Token
+                Studio → Style Dictionary → CSS)</span></div>
           </div>
+        </div>
+        <div class="cs" id="s-fe">
+          <div class="cs-hd"><span class="cs-num">03 /</span><span class="cs-title">Frontend</span></div>
           <div class="sk-group">
-            <div class="sk-label">디자인 토큰 파이프라인</div>
-            <div class="sk-chips"><span class="chip">Figma Variables</span><span class="chip">Token
-                Studio</span><span class="chip">Style Dictionary</span><span class="chip">CSS 자동 반영</span></div>
+            <div class="sk-chips"><span class="chip">JavaScript</span><span class="chip">HTML5</span><span
+                class="chip">CSS3 / SCSS</span><span class="chip">Context API</span><span class="chip">Custom
+                Hooks</span><span class="chip">반응형 웹</span><span class="chip">웹 접근성</span><span
+                class="chip">Vitest</span><span class="chip">Testing Library</span></div>
           </div>
         </div>
         <div class="cs" id="s-be">
-          <div class="cs-hd"><span class="cs-num">03 /</span><span class="cs-title">Backend & AI</span></div>
+          <div class="cs-hd"><span class="cs-num">04 /</span><span class="cs-title">Backend & AI</span></div>
           <div class="sk-group">
-            <div class="sk-label">Backend &amp; Infra <span style="font-weight:400;color:var(--g400);font-size:11px;">·
-                사이드 프로젝트에서 직접 구축</span></div>
             <div class="sk-chips"><span class="chip">Supabase</span><span class="chip">Edge Function</span><span
-                class="chip">Serverless (RLS · Auth · Storage)</span><span class="chip">Gemini API</span></div>
+                class="chip">Serverless</span><span class="chip">Gemini API</span></div>
           </div>
         </div>
         <div class="cs" id="s-tools">
-          <div class="cs-hd"><span class="cs-num">04 /</span><span class="cs-title">Tools</span></div>
+          <div class="cs-hd"><span class="cs-num">05 /</span><span class="cs-title">Tools</span></div>
           <div class="sk-group">
-            <div class="sk-label">Design & Collaboration</div>
-            <div class="sk-chips"><span class="chip p">Figma</span><span class="chip">Git / GitHub</span><span
-                class="chip">Vercel</span></div>
+            <div class="sk-chips"><span class="chip">Git / GitHub</span><span class="chip">Vercel</span></div>
           </div>
         </div>
       </section>
@@ -7588,7 +7573,7 @@
     const tocMap = {
       about: [{ id: 'intro', l: '소개' }, { id: 'career', l: '경력' }, { id: 'edu', l: '학력 및 교육' }],
       projects: [{ id: 'p-dugeun', l: '01 두근' }, { id: 'p-listbook', l: '02 도록 파이프라인' }, { id: 'p-ainative', l: '03 AI Native 개발 환경' }, { id: 'p-auction', l: '04 실시간 경매' }],
-      skills: [{ id: 's-fe', l: 'Frontend' }, { id: 's-ai', l: 'AI Workflow' }, { id: 's-be', l: 'Backend & AI' }, { id: 's-tools', l: 'Tools' }]
+      skills: [{ id: 's-main', l: '주력' }, { id: 's-ai', l: 'AI Workflow' }, { id: 's-fe', l: 'Frontend' }, { id: 's-be', l: 'Backend & AI' }, { id: 's-tools', l: 'Tools' }]
     };
     let currentTab = 'about';
 
