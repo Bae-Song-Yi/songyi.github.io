@@ -492,6 +492,22 @@
       word-break: keep-all;
     }
 
+    .vc-ev {
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px dashed var(--g200);
+      font-size: 12.5px;
+      line-height: 1.6;
+      color: var(--g600);
+      word-break: keep-all;
+    }
+
+    .vc-ev::before {
+      content: '→ ';
+      color: var(--orange);
+      font-weight: 700;
+    }
+
     @media (max-width: 900px) {
       .value-grid {
         grid-template-columns: 1fr;
@@ -1665,8 +1681,8 @@
       <section class="pg on" id="pg-about">
         <div class="breadcrumb"><span class="odot"></span><span>포트폴리오 / 01</span></div>
         <h1 class="pg-title">소개</h1>
-        <p class="pg-desc">K-Auction에서 프론트엔드 개발을 담당하고 있습니다.<br>
-          기획부터 웹 퍼블리싱 React 기반 복잡한 애플리케이션까지 전반을 다룹니다.</p>
+        <p class="pg-desc">K-Auction에서 프로덕트 엔지니어로 일하고 있습니다.<br>
+          문제 정의부터 프론트엔드·서버리스 백엔드, 배포·운영까지 제품의 전 과정을 다룹니다.</p>
         <div class="pg-meta">
           <span>현재 소속 <strong style="color:var(--g1000);margin-left:4px">K-Auction</strong></span><span>·</span>
           <span>경력 <strong style="color:var(--g1000);margin-left:4px">6~7년차</strong></span><span>·</span>
@@ -1686,16 +1702,19 @@
               <div class="vc-num">01</div>
               <div class="vc-title">Why부터 묻는 개발자</div>
               <div class="vc-desc">모호한 요구에서 '진짜 문제'를 정의하고 구현 우선순위를 판단합니다.</div>
+              <div class="vc-ev">수작업 도록 제작의 병목을 정의, 웹 편집 시스템(Listbook)으로 전환</div>
             </div>
             <div class="value-card">
               <div class="vc-num">02</div>
               <div class="vc-title">AI와 자동화의 적극적 활용</div>
-              <div class="vc-desc">사내 파이프라인을 자동화하고, AI 도구를 개발 워크플로우에 통합하여 조직의 생산성을 높입니다.</div>
+              <div class="vc-desc">반복 작업을 자동화하고, AI 도구를 개발 워크플로우에 통합해 조직의 생산성을 높입니다.</div>
+              <div class="vc-ev">Puppeteer 기반 PDF 자동 출판 · Claude Code 팀 워크플로우 정착</div>
             </div>
             <div class="value-card">
               <div class="vc-num">03</div>
               <div class="vc-title">E2E 프로덕트 메이커</div>
-              <div class="vc-desc">프론트엔드부터 서버리스 백엔드, 배포·운영까지 직접 구축하며, 실제 사용 환경을 고려한 안정적인 서비스를 설계하고 운영합니다.</div>
+              <div class="vc-desc">프론트엔드부터 서버리스 백엔드, 배포·운영까지 직접 구축하고 운영합니다.</div>
+              <div class="vc-ev">두근 — React·Supabase·Gemini 단독 구축, 현재 운영 중</div>
             </div>
           </div>
           <div class="info-row">
