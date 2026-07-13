@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1000" font-family="'Pretendard','Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="1920" height="1000" fill="#ffffff"/>
+
+  <!-- 배경 큰 원 2개 (겹침) -->
+  <circle cx="700" cy="450" r="340" fill="#f4f5f7"/>
+  <circle cx="1245" cy="450" r="360" fill="#f1f2f5"/>
+
+  <!-- ===== 상단 노드 ===== -->
+  <!-- 소개팅 앱 -->
+  <circle cx="560" cy="290" r="62" fill="#dfe4ea"/>
+  <text x="560" y="296" text-anchor="middle" font-size="21" fill="#55606d" font-weight="600">소개팅 앱</text>
+
+  <!-- 중앙 하트 (기존: 낯선 1:1 만남) -->
+  <text x="980" y="188" text-anchor="middle" font-size="22" letter-spacing="4" fill="#55606d" font-weight="700">소개팅</text>
+  <path d="M50 88 C 12 60, 12 26, 34 20 C 44 17, 50 25, 50 32 C 50 25, 56 17, 66 20 C 88 26, 88 60, 50 88 Z" transform="translate(922,232) scale(1.15)" fill="#5c6b7b"/>
+
+  <!-- 그룹 소개팅 (이상) -->
+  <circle cx="1445" cy="285" r="76" fill="none" stroke="#aab2bc" stroke-width="1.5"/>
+  <circle cx="1445" cy="285" r="66" fill="none" stroke="#c4cad2" stroke-width="1.5"/>
+  <text x="1445" y="278" text-anchor="middle" font-size="17" fill="#55606d" font-weight="700">이상적인</text>
+  <text x="1445" y="302" text-anchor="middle" font-size="17" fill="#55606d" font-weight="700">그룹 소개팅</text>
+
+  <!-- 상단 수평 연결선 -->
+  <line x1="626" y1="290" x2="905" y2="290" stroke="#c2c9d1" stroke-width="1.4"/>
+  <text x="766" y="278" text-anchor="middle" font-size="16" letter-spacing="3" fill="#8a94a0">/ 프로필 탐색 /</text>
+  <g fill="#b9c0c8">
+    <circle cx="1075" cy="290" r="4"/><circle cx="1110" cy="290" r="4"/><circle cx="1145" cy="290" r="4"/>
+    <circle cx="1180" cy="290" r="4"/><circle cx="1215" cy="290" r="4"/><circle cx="1250" cy="290" r="4"/><circle cx="1285" cy="290" r="4"/>
+  </g>
+  <text x="1195" y="278" text-anchor="middle" font-size="16" letter-spacing="3" fill="#8a94a0">/ 매칭 기대 /</text>
+
+  <!-- 대각선 화살표 -->
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 1 L8 5 L0 9" fill="none" stroke="#8b95a1" stroke-width="1.4"/>
+    </marker>
+  </defs>
+  <line x1="585" y1="352" x2="895" y2="560" stroke="#9aa3ad" stroke-width="1.3" marker-end="url(#arr)"/>
+  <text x="712" y="452" text-anchor="middle" font-size="19" fill="#4b5563" font-weight="700">혼자 신청</text>
+
+  <line x1="1070" y1="548" x2="1400" y2="350" stroke="#9aa3ad" stroke-width="1.3" marker-end="url(#arr)"/>
+  <text x="1245" y="452" text-anchor="middle" font-size="19" fill="#4b5563" font-weight="700">만남 기대</text>
+
+  <!-- 발자국 힌트 + 라벨 -->
+  <g fill="#dfe3e8">
+    <ellipse cx="770" cy="588" rx="7" ry="11" transform="rotate(20 770 588)"/>
+    <ellipse cx="800" cy="600" rx="7" ry="11" transform="rotate(20 800 600)"/>
+  </g>
+  <text x="705" y="600" text-anchor="middle" font-size="15" letter-spacing="3" fill="#9aa3ad">/ 시도 /</text>
+
+  <!-- ===== 하단 액터 라벨 ===== -->
+  <text x="560" y="600" text-anchor="middle" font-size="26" letter-spacing="2" fill="#6b7580" font-weight="500">혼자 신청자</text>
+  <text x="1445" y="600" text-anchor="middle" font-size="26" letter-spacing="2" fill="#6b7580" font-weight="500">낯선 상대</text>
+
+  <!-- 중앙/우측 점선 + 설명 -->
+  <line x1="980" y1="600" x2="980" y2="672" stroke="#c4cad2" stroke-width="1.5" stroke-dasharray="2 7" stroke-linecap="round"/>
+  <path d="M948 686 v-8 h64 v8" fill="none" stroke="#c4cad2" stroke-width="1.3"/>
+  <text x="980" y="716" text-anchor="middle" font-size="15" fill="#828c98">처음 보는 상대와</text>
+  <text x="980" y="737" text-anchor="middle" font-size="15" fill="#828c98">단둘이 마주함</text>
+
+  <line x1="1445" y1="625" x2="1445" y2="672" stroke="#c4cad2" stroke-width="1.5" stroke-dasharray="2 7" stroke-linecap="round"/>
+  <path d="M1413 686 v-8 h64 v8" fill="none" stroke="#c4cad2" stroke-width="1.3"/>
+  <text x="1445" y="716" text-anchor="middle" font-size="15" fill="#828c98">설레는 관계로</text>
+  <text x="1445" y="737" text-anchor="middle" font-size="15" fill="#828c98">이어지길 기대</text>
+
+  <!-- ===== PROBLEM 콜아웃 ===== -->
+  <!-- P1 좌상단 -->
+  <g>
+    <rect x="70" y="360" width="320" height="104" rx="16" fill="#ffffff" stroke="#e5e8ec" stroke-width="1.5"/>
+    <text x="360" y="393" text-anchor="end" font-size="15" letter-spacing="1.5" fill="#6b7684" font-weight="700">PROBLEM ¹</text>
+    <text x="100" y="422" font-size="15.5" fill="#828c98">상대가 실제 어떤 사람인지</text>
+    <text x="100" y="446" font-size="15.5" fill="#828c98">검증되지 않아 불안합니다</text>
+  </g>
+
+  <!-- P2 하단 중앙 -->
+  <g>
+    <rect x="600" y="812" width="330" height="104" rx="16" fill="#ffffff" stroke="#e5e8ec" stroke-width="1.5"/>
+    <text x="900" y="845" text-anchor="end" font-size="15" letter-spacing="1.5" fill="#6b7684" font-weight="700">PROBLEM ²</text>
+    <text x="630" y="874" font-size="15.5" fill="#828c98">친구를 모아야만 나갈 수 있어</text>
+    <text x="630" y="898" font-size="15.5" fill="#828c98">혼자 신청하기 부담됩니다</text>
+  </g>
+
+  <!-- P3 우상단 -->
+  <g>
+    <rect x="1560" y="300" width="330" height="104" rx="16" fill="#ffffff" stroke="#e5e8ec" stroke-width="1.5"/>
+    <text x="1590" y="333" font-size="15" letter-spacing="1.5" fill="#6b7684" font-weight="700">PROBLEM ³</text>
+    <text x="1590" y="362" font-size="15.5" fill="#828c98">나와 맞지 않는 사람과</text>
+    <text x="1590" y="386" font-size="15.5" fill="#828c98">억지로 엮일까 의구심이 듭니다</text>
+  </g>
+
+  <!-- P4 우하단 -->
+  <g>
+    <rect x="1560" y="560" width="330" height="104" rx="16" fill="#ffffff" stroke="#e5e8ec" stroke-width="1.5"/>
+    <text x="1590" y="593" font-size="15" letter-spacing="1.5" fill="#6b7684" font-weight="700">PROBLEM ⁴</text>
+    <text x="1590" y="622" font-size="15.5" fill="#828c98">처음 만난 자리에서</text>
+    <text x="1590" y="646" font-size="15.5" fill="#828c98">무슨 대화를 할지 막막합니다</text>
+  </g>
+</svg>
