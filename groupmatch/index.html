@@ -285,20 +285,20 @@
           </div>
           <div class="emailmsg" id="emailMsg"></div>
         </section>
-        <section class="step" data-cap="STEP 1 · 9" data-q="gender" data-type="choice">
+        <section class="step" data-cap="STEP 1 · 8" data-q="gender" data-type="choice">
           <div class="q">먼저, 어떤 분인지<br>살짝 알려주세요 💗</div>
           <div class="opts">
             <div class="opt" data-v="M"><span class="emo">🙋‍♂️</span><span class="txt">남성</span><span class="rd"></span></div>
             <div class="opt" data-v="F"><span class="emo">🙋‍♀️</span><span class="txt">여성</span><span class="rd"></span></div>
           </div>
         </section>
-        <section class="step" data-cap="STEP 2 · 9" data-q="birth_year" data-type="input">
+        <section class="step" data-cap="STEP 2 · 8" data-q="birth_year" data-type="input">
           <div class="q">출생연도를<br>알려주세요</div>
           <div class="field"><input type="text" id="in-birth" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="예: 1996"></div>
           <div id="birthHint" style="font-size:13px;color:#d6336c;margin-top:8px;min-height:17px"></div>
           <div class="spacer"></div><button class="next">다음</button>
         </section>
-        <section class="step" data-cap="STEP 3 · 9" data-q="region" data-type="choice">
+        <section class="step" data-cap="STEP 3 · 8" data-q="region" data-type="choice">
           <div class="q">주로 활동하는<br>지역은 어디세요?</div>
           <div class="sub">같은 지역끼리 매칭해드려요</div>
           <div class="opts">
@@ -310,13 +310,13 @@
             <div class="opt" data-v="경기/인천"><span class="txt">경기·인천</span><span class="rd"></span></div>
           </div>
         </section>
-        <section class="step" data-cap="STEP 4 · 9" data-q="job" data-type="input">
+        <section class="step" data-cap="STEP 4 · 8" data-q="job" data-type="input">
           <div class="q">직업이나 소속을<br>알려주세요</div>
           <div class="sub">매칭 밸런스를 맞추는 데만 써요</div>
           <div class="field"><input type="text" id="in-job" placeholder="예: IT 회사원, 디자이너, 대학원생"></div>
           <div class="spacer"></div><button class="next">다음</button>
         </section>
-        <section class="step" data-cap="STEP 5 · 9" data-q="meet_style" data-type="choice">
+        <section class="step" data-cap="STEP 5 · 8" data-q="meet_style" data-type="choice">
           <div class="q">어떤 분위기의<br>만남이 설레나요?</div>
           <div class="sub">취향이 맞는 분과 이어드릴게요</div>
           <div class="opts">
@@ -325,7 +325,7 @@
             <div class="opt" data-v="액티비티"><span class="emo">🎳</span><span class="txt">액티비티 즐기며</span><span class="rd"></span></div>
           </div>
         </section>
-        <section class="step" data-cap="STEP 6 · 9" data-q="available" data-type="choice">
+        <section class="step" data-cap="STEP 6 · 8" data-q="available" data-type="choice">
           <div class="q">주로 언제<br>만나기 좋으세요?</div>
           <div class="opts">
             <div class="opt" data-v="평일저녁"><span class="emo">🌆</span><span class="txt">평일 저녁</span><span class="rd"></span></div>
@@ -334,22 +334,13 @@
             <div class="opt" data-v="주말저녁"><span class="emo">🌙</span><span class="txt">주말 저녁</span><span class="rd"></span></div>
           </div>
         </section>
-        <section class="step" data-cap="STEP 7 · 9" data-q="intro" data-type="input">
+        <section class="step" data-cap="STEP 7 · 8" data-q="intro" data-type="input">
           <div class="q">나를 한 줄로<br>소개한다면?</div>
           <div class="sub">매칭된 분에게 보여드려요</div>
           <div class="field"><textarea id="in-intro" placeholder="예: 처음엔 낯가리는데 친해지면 제일 시끄러운 사람"></textarea></div>
           <div class="spacer"></div><button class="next">다음</button>
         </section>
-        <section class="step" data-cap="STEP 8 · 9" data-q="wtp" data-type="choice">
-          <div class="q">매칭되면 참가비<br>1만원, 어떠세요?</div>
-          <div class="sub">솔직할수록 좋은 서비스가 돼요</div>
-          <div class="opts">
-            <div class="opt" data-v="yes"><span class="txt">낼 의향 있어요</span><span class="rd"></span></div>
-            <div class="opt" data-v="maybe"><span class="txt">상황 봐서요</span><span class="rd"></span></div>
-            <div class="opt" data-v="no"><span class="txt">무료면 할래요</span><span class="rd"></span></div>
-          </div>
-        </section>
-        <section class="step" data-cap="STEP 9 · 9" data-q="kakao_id" data-type="input">
+        <section class="step" data-cap="STEP 8 · 8" data-q="kakao_id" data-type="input">
           <div class="q">마지막! 연락받을<br>카카오톡 ID</div>
           <div class="sub">매칭되면 이 ID로 안내드려요</div>
           <div class="field"><input type="text" id="in-kakao" placeholder="카톡 ID 입력"></div>
@@ -647,7 +638,7 @@ submitBtn.onclick = async () => {
       const res = await fetch(`${SUPABASE_URL}/rest/v1/applicants`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}`, 'Prefer': 'return=minimal' },
-        body: JSON.stringify({ session_id: sessionId, code, gender: answers.gender, birth_year: parseInt(answers.birth_year), region: answers.region, job: answers.job || null, meet_style: answers.meet_style || null, available: answers.available || null, intro: answers.intro || null, kakao_id: answers.kakao_id, wtp: answers.wtp || null, photo_url: photoUrl, email: verifiedEmail, utm_source: utm.utm_source, variant }),
+        body: JSON.stringify({ session_id: sessionId, code, gender: answers.gender, birth_year: parseInt(answers.birth_year), region: answers.region, job: answers.job || null, meet_style: answers.meet_style || null, available: answers.available || null, intro: answers.intro || null, kakao_id: answers.kakao_id, photo_url: photoUrl, email: verifiedEmail, utm_source: utm.utm_source, variant }),
       });
       if (res.ok) { myCode = code; break; }
       if (res.status !== 409) { myCode = code; break; }
@@ -670,7 +661,7 @@ document.addEventListener('visibilitychange', () => {
 // 챗봇 (FAQ 버튼 + AI 자유답변)
 // =====================================================
 const FAQ = [
-  { q: '참가비 있어요?', a: '매칭이 성사되면 참가비 1만원이에요 💛 신청 단계에선 지불 의향만 가볍게 물어봐요. 부담 없이 솔직하게 답해 주시면 돼요!' },
+  { q: '참가비 있어요?', a: '매칭이 성사되면 참가비 1만원이에요 💛 부담 없으시면 편하게 신청해 주세요!' },
   { q: '어떻게 매칭되나요?', a: '지역·활동 시간대·만남 취향을 바탕으로 잘 맞는 분을 찾아 연결해 드려요. 혼자 신청해도 운영진이 매칭을 도와드려요 😊' },
   { q: '코드가 뭐예요?', a: '신청을 마치면 받는 나만의 숫자코드예요. 소개팅 당일 그 코드로 자리를 찾고, 코드를 입력하면 AI가 대화 주제도 추천해 줘요 💬' },
   { q: '개인정보 안전한가요?', a: '신청 정보는 매칭과 연락에만 사용하고, 신청자 명단은 외부에 공개되지 않아요. 요청 시 즉시 파기해 드려요 🔒' },
